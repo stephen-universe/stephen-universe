@@ -1,6 +1,6 @@
 import React from "react"
-import Form from "../components/Form"
-import Layout from "../components/Layout"
+import Form from "../components/form"
+import Layout from "../components/layout"
 import Resume from "../components/resume"
 
 export default function Contact() {
@@ -12,7 +12,7 @@ export default function Contact() {
       </figure>
       </div>
     <Layout >
-        <Form />
+    <Form />
         <Resume />
     </Layout>
     </>
