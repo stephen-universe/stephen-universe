@@ -20,14 +20,14 @@ onSubmit="submit">
     <input type="hidden" name="form-name" value="contact v3" />
     <input type="hidden" name="bot-field" />
 
-        <input className="input" type="text" placeHolder="Text input" />
+        <input className="input" type="text" name="Name/Business" placeHolder="Text input" />
     </div>
 </div>
 
 <div className="field">
     <label className="label">Email</label>
     <div className="control">
-        <input className="input" type="email" placeHolder="Email input" />
+        <input className="input" type="email" placeHolder="Email input" name="Email" />
             <span className="icon is-small is-left">
                 <i className="fas fa-envelope"></i>
             </span> 
@@ -38,9 +38,9 @@ onSubmit="submit">
     <label className="label">Subject</label>
     <div className="control">
         <div className="select">
-            <select>
-                <option>Select Dropdown</option>
-                <option>With Option</option>
+            <select name="option">
+                <option>Option #1</option>
+                <option>Option #2</option>
             </select>
         </div>
     </div>
@@ -49,7 +49,7 @@ onSubmit="submit">
 <div className="field">
     <label className="label">Message</label>
     <div className="control">
-        <textarea className="textarea" placeHolder="Textarea"></textarea>
+        <textarea className="textarea" name="Message" placeHolder="Textarea"></textarea>
     </div>
 </div>
 
