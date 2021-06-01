@@ -1,6 +1,6 @@
 import React from "react"
 import Form from "../components/form"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import Resume from "../components/resume"
 
 export default function Contact() {

@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import useSiteMetaData from "../static_queries/useSiteMetadata"
 
 export default function Info() {
