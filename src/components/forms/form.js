@@ -44,18 +44,14 @@ export class UserForm extends Component {
       case 1:
         return (
 
-            <form name="contact v3"
-            method="post" 
-            netlify-honeypot="bot-field" 
-            data-netlify="true" 
-            onSubmit="submit">
+    
     
 
           <FormUserDetails
             nextStep={this.nextStep}
             handleChange={this.handleChange}
             values={values}
-          /> </form> 
+          />
         ); 
       case 2:
         return (
