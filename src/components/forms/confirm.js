@@ -65,7 +65,7 @@ export class Confirm extends Component {
                type="submit"
                 color="primary"
                       variant="contained"
-                      onSubmit="submit"
+                      onClick="submit"
                     >Submit</button>
             </div>
         </div>

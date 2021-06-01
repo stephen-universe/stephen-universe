@@ -12,12 +12,16 @@ export class FormUserDetails extends Component {
     return (
   
         <>
+
+
 <section className="section is-large">
 <div className="columns is-centered">
 <div className="column is-6 ">
     <div className="field">
     <label className="label">Name</label>
     <div className="control">
+        
+    <input type="hidden" name="form-name" value="contact v3" />
     <input type="hidden" name="bot-field" />
 
         <input 

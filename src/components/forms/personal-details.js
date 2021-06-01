@@ -16,6 +16,9 @@ export class FormPersonalDetails extends Component {
     const { values, handleChange } = this.props;
     return (
         <>
+
+        
+
         <section className="section is-large">
         <div className="columns is-centered">
         <div className="column is-6 ">
@@ -23,7 +26,7 @@ export class FormPersonalDetails extends Component {
             <label className="label">Occupation</label>
             <div className="control">
             <input type="hidden" name="bot-field" />
-        
+            <input type="hidden" name="form-name" value="contact v3" />
                 <input 
                 className="input" 
                 type="text" 
@@ -82,7 +85,7 @@ export class FormPersonalDetails extends Component {
                <button  
                className="button is-link"  color="primary"
                       variant="contained"
-                      onClick={this.continue}
+                      onSubmit={this.continue}
                     >Continue</button>
             </div>
            

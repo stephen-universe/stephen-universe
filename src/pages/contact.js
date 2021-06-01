@@ -16,7 +16,7 @@ export default function Contact() {
 method="post" 
 netlify-honeypot="bot-field" 
 data-netlify="true" 
-onSubmit="submit">
+onSubmit="continue">
     <Form /></form>
         <Resume />
     </Layout>
