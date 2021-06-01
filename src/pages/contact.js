@@ -1,5 +1,5 @@
 import React from "react"
-import Form from "../components/form"
+import Form from "../components/forms/form"
 import Layout from "../components/Layout"
 import Resume from "../components/resume"
 
