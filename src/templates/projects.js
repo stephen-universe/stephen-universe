@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import useProjectData from '../static_queries/useProjectData'
-import ScrollApp, { GoBack } from "../components/Buttons"
+import ScrollApp, { GoBack } from "../components/buttons"
 //this component handles the blur img & fade-ins
 
 export default function Projects(props) {

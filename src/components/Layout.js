@@ -1,9 +1,9 @@
 import React from "react"
-import Header from "./Header"
+import Header from "./header"
 import Helmet from "react-helmet"
 import useSiteMetadata from "../static_queries/useSiteMetadata"
-import Footer from "./Footer"
-import ScrollApp from "./Buttons"
+import Footer from "./footer"
+import ScrollApp from "./buttons"
 
 export default function Layout(props) {
   const { title, description } = useSiteMetadata()
