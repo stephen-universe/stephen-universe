@@ -26,7 +26,7 @@ export class FormPersonalDetails extends Component {
             <label className="label">Occupation</label>
             <div className="control">
             <input type="hidden" name="bot-field" />
-            <input type="hidden" name="form-name" value="contact v3" />
+            <input type="hidden" name="form-name" value="contact v4" />
                 <input 
                 className="input" 
                 type="text" 
@@ -43,14 +43,16 @@ export class FormPersonalDetails extends Component {
         <div className="field">
             <label className="label">Bio</label>
             <div className="control">
-                <input className="input" type="bio" 
+                <input className="input" 
+                name="Bio"
+                type="bio" 
                   placeholder="Enter Your Email"
                   label="Bio"
                   onChange={handleChange('bio')}
                   defaultValue={values.bio}
                   margin="normal"
                   fullWidth
-                  name="Bio" />
+                   />
                         
     <input type="hidden" name="bot-field" />
                     <span className="icon is-small is-left">

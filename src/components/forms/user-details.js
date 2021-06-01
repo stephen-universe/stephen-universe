@@ -21,7 +21,7 @@ export class FormUserDetails extends Component {
     <label className="label">Name</label>
     <div className="control">
         
-    <input type="hidden" name="form-name" value="contact v3" />
+    <input type="hidden" name="form-name" value="contact v4" />
     <input type="hidden" name="bot-field" />
 
         <input 
