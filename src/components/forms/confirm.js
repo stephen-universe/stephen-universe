@@ -28,7 +28,7 @@ export class Confirm extends Component {
         method="post" 
         netlify-honeypot="bot-field" 
         data-netlify="true" 
-        onSubmit="submit">
+        onSubmit={this.continue}>
 
       <MuiThemeProvider>
         <>
