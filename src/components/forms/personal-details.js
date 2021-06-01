@@ -22,37 +22,21 @@ export class FormPersonalDetails extends Component {
         <section className="section is-large">
         <div className="columns is-centered">
         <div className="column is-6 ">
+        <input type="hidden" name="bot-field" />
             <div className="field">
             <label className="label">Occupation</label>
             <div className="control">
-            <input type="hidden" name="bot-field" />
             <input type="hidden" name="form-name" value="contact v4" />
-                <input 
-                className="input" 
-                type="text" 
-                name="Occupation" 
-                placeholder="Enter Your Occupation"
-                label="Occupation"
-                onChange={handleChange('occupation')}
-                defaultValue={values.occupation}
-                margin="normal"
-                fullWidth />
+            <input className="input" type="text" placeholder="Enter Your Occupation" name="Occupation"
+                onChange={handleChange('occupation')} defaultValue={values.occupation} margin="normal" />
             </div>
         </div>
         
         <div className="field">
             <label className="label">Bio</label>
             <div className="control">
-                <input className="input" 
-                name="Bio"
-                type="bio" 
-                  placeholder="Enter Your Email"
-                  label="Bio"
-                  onChange={handleChange('bio')}
-                  defaultValue={values.bio}
-                  margin="normal"
-                  fullWidth
-                   />
+                <input className="input" type="bio" placeholder="Enter Your Email" name="Bio"
+                  onChange={handleChange('bio')} defaultValue={values.bio} margin="normal"/>
                         
     <input type="hidden" name="bot-field" />
                     <span className="icon is-small is-left">
@@ -65,7 +49,7 @@ export class FormPersonalDetails extends Component {
             <label className="label">Subject</label>
             <div className="control">
                 <div className="select">
-                    <select name="option">
+                    <select>
                         <option>Option #1</option>
                         <option>Option #2</option>
                     </select>

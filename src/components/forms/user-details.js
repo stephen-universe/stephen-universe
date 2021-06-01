@@ -27,7 +27,6 @@ export class FormUserDetails extends Component {
         <input 
         className="input" 
         type="text" 
-        name="Name/Business" 
         placeholder="Enter Your First Name"
         label="First Name"
         onChange={handleChange('firstName')}
@@ -48,7 +47,7 @@ export class FormUserDetails extends Component {
           defaultValue={values.email}
           margin="normal"
           fullWidth
-          name="Email" />
+         />
             <span className="icon is-small is-left">
                 <i className="fas fa-envelope"></i>
             </span> 
@@ -59,7 +58,7 @@ export class FormUserDetails extends Component {
     <label className="label">Subject</label>
     <div className="control">
         <div className="select">
-            <select name="option">
+            <select >
                 <option>Option #1</option>
                 <option>Option #2</option>
             </select>
@@ -72,7 +71,7 @@ export class FormUserDetails extends Component {
     <label className="label">Message</label>
     <div className="control">
         <textarea className="textarea"  onChange={handleChange('message')}
-          defaultValue={values.message} name="Message" placeHolder="Textarea"></textarea>
+          defaultValue={values.message} placeHolder="Textarea"></textarea>
     </div>
 </div>
 

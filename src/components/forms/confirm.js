@@ -40,10 +40,10 @@ onSubmit="submit">
               <li name="Details">
                 <p name="Name"> {firstName} </p>
               </li>
-              <li>
-              <li>
+              <li name="message">
                 <p name="Message">{message}</p>
               </li>
+              <li name="email">
                 <p name="Email">{email}</p>
               </li>
               <li>
