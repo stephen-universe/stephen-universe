@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import Dialog from '@material-ui/core/Dialog';
-import AppBar from '@material-ui/core/AppBar';
-import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
+
 
 export class FormPersonalDetails extends Component {
   continue = e => {
@@ -19,57 +15,85 @@ export class FormPersonalDetails extends Component {
   render() {
     const { values, handleChange } = this.props;
     return (
-      <MuiThemeProvider>
         <>
-          <Dialog
-            open
-            fullWidth
-            maxWidth='sm'
-          >
-            <AppBar title="Enter Personal Details" />
+        <section className="section is-large">
+        <div className="columns is-centered">
+        <div className="column is-6 ">
+            <div className="field">
+            <label className="label">Occupation</label>
+            <div className="control">
             <input type="hidden" name="bot-field" />
-            <TextField
-              placeholder="Enter Your Occupation"
-              label="Occupation"
-              onChange={handleChange('occupation')}
-              defaultValue={values.occupation}
-              margin="normal"
-              fullWidth
-            />
-            <br />
-            <TextField
-              placeholder="Enter Your City"
-              label="City"
-              onChange={handleChange('city')}
-              defaultValue={values.city}
-              margin="normal"
-              fullWidth
-            />
-            <br />
-            <TextField
-              placeholder="Enter Your Bio"
-              label="Bio"
-              onChange={handleChange('bio')}
-              defaultValue={values.bio}
-              margin="normal"
-              fullWidth
-            />
-            <br />
+        
+                <input 
+                className="input" 
+                type="text" 
+                name="Occupation" 
+                placeholder="Enter Your Occupation"
+                label="Occupation"
+                onChange={handleChange('occupation')}
+                defaultValue={values.occupation}
+                margin="normal"
+                fullWidth />
+            </div>
+        </div>
+        
+        <div className="field">
+            <label className="label">Bio</label>
+            <div className="control">
+                <input className="input" type="bio" 
+                  placeholder="Enter Your Email"
+                  label="Bio"
+                  onChange={handleChange('bio')}
+                  defaultValue={values.bio}
+                  margin="normal"
+                  fullWidth
+                  name="Bio" />
+                        
+    <input type="hidden" name="bot-field" />
+                    <span className="icon is-small is-left">
+                        <i className="fas fa-envelope"></i>
+                    </span> 
+            </div>
+        </div>
+        
+        <div className="field">
+            <label className="label">Subject</label>
+            <div className="control">
+                <div className="select">
+                    <select name="option">
+                        <option>Option #1</option>
+                        <option>Option #2</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div className="field is-grouped is-grouped-centered">
+        <div className="control">
+                <button className="button is-link is-light"  
+                color="secondary"
+                variant="contained"
+                onClick={this.back}
+                >Back</button>
+            </div>
 
-            <Button
-              color="secondary"
-              variant="contained"
-              onClick={this.back}
-            >Back</Button>
+            <div className="control">
+               <button  
+               className="button is-link"  color="primary"
+                      variant="contained"
+                      onClick={this.continue}
+                    >Continue</button>
+            </div>
+           
 
-            <Button
-              color="primary"
-              variant="contained"
-              onClick={this.continue}
-            >Continue</Button>
-          </Dialog>
-        </>
-      </MuiThemeProvider>
+        </div>
+        
+        </div>
+        </div>
+        </section>
+                                          
+                </>
     );
   }
 }

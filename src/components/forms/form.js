@@ -1,17 +1,7 @@
-
-
-
-
-
-
-
-
-
 import React, { Component } from 'react';
 import FormUserDetails from './user-details';
 import FormPersonalDetails from './personal-details';
 import Confirm from './confirm';
-import Success from './success';
 
 export class UserForm extends Component {
   state = {
@@ -54,14 +44,19 @@ export class UserForm extends Component {
       case 1:
         return (
 
-
+            <form name="contact v3"
+            method="post" 
+            netlify-honeypot="bot-field" 
+            data-netlify="true" 
+            onSubmit="submit">
+    
 
           <FormUserDetails
             nextStep={this.nextStep}
             handleChange={this.handleChange}
             values={values}
-          />
-        );
+          /> </form> 
+        ); 
       case 2:
         return (
           <FormPersonalDetails
@@ -74,24 +69,21 @@ export class UserForm extends Component {
       case 3:
         return (
 
-            <form name="contact v3"
-method="post" 
-netlify-honeypot="bot-field" 
-data-netlify="true" 
-onSubmit="submit">
-<>
+    
+
           <Confirm
             nextStep={this.nextStep}
             prevStep={this.prevStep}
             values={values}
-          /> </> </form>
+          />
         );
-      case 4:
-        return <Success />;
       default:
         (console.log('This is a multi-step form built with React.'))
 
-        
+
+
+            
+      
     }
   }
 }

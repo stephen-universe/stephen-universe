@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import Dialog from '@material-ui/core/Dialog';
-import AppBar from '@material-ui/core/AppBar';
-import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
+
 
 export class FormUserDetails extends Component {
   continue = e => {
@@ -14,50 +10,87 @@ export class FormUserDetails extends Component {
   render() {
     const { values, handleChange } = this.props;
     return (
-      <MuiThemeProvider>
+  
         <>
-          <Dialog
-            open
-            fullWidth
-            maxWidth='sm'
-          >
-            <AppBar title="Enter User Details" />
-            <TextField
-              placeholder="Enter Your First Name"
-              label="First Name"
-              onChange={handleChange('firstName')}
-              defaultValue={values.firstName}
-              margin="normal"
-              fullWidth
-            />
-            <br />
-            <input type="hidden" name="bot-field" />
-            <TextField
-              placeholder="Enter Your Last Name"
-              label="Last Name"
-              onChange={handleChange('lastName')}
-              defaultValue={values.lastName}
-              margin="normal"
-              fullWidth
-            />
-            <br />
-            <TextField
-              placeholder="Enter Your Email"
-              label="Email"
-              onChange={handleChange('email')}
-              defaultValue={values.email}
-              margin="normal"
-              fullWidth
-            />
-            <br />
-            <Button
-              color="primary"
+<section className="section is-large">
+<div className="columns is-centered">
+<div className="column is-6 ">
+    <div className="field">
+    <label className="label">Name</label>
+    <div className="control">
+    <input type="hidden" name="bot-field" />
+
+        <input 
+        className="input" 
+        type="text" 
+        name="Name/Business" 
+        placeholder="Enter Your First Name"
+        label="First Name"
+        onChange={handleChange('firstName')}
+        defaultValue={values.firstName}
+        margin="normal"
+        fullWidth />
+    </div>
+</div>
+
+<div className="field">
+    <label className="label">Email</label>
+    <div className="control">
+        <input className="input" type="email" 
+        placeHolder="Email input" 
+          placeholder="Enter Your Email"
+          label="Email"
+          onChange={handleChange('email')}
+          defaultValue={values.email}
+          margin="normal"
+          fullWidth
+          name="Email" />
+            <span className="icon is-small is-left">
+                <i className="fas fa-envelope"></i>
+            </span> 
+    </div>
+</div>
+
+<div className="field">
+    <label className="label">Subject</label>
+    <div className="control">
+        <div className="select">
+            <select name="option">
+                <option>Option #1</option>
+                <option>Option #2</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+
+<div className="field">
+    <label className="label">Message</label>
+    <div className="control">
+        <textarea className="textarea"  onChange={handleChange('message')}
+          defaultValue={values.message} name="Message" placeHolder="Textarea"></textarea>
+    </div>
+</div>
+
+
+<div className="field is-grouped is-grouped-centered">
+    <div className="control">
+       <button className="button is-link"  color="primary"
               variant="contained"
               onClick={this.continue}
-            >Continue</Button>
-          </Dialog>
+            >Continue</button>
+    </div>
+</div>
+
+</div>
+</div>
+</section>
+
+              
+     
+        
         </>
-      </MuiThemeProvider>
+ 
     );
   }
 }
