@@ -35,9 +35,9 @@ onSubmit="submit">
         <input type="hidden" name="form-name" value="contact v4" />
     <input type="hidden" name="bot-field" />
 
-            <label className="label">Confirm User Data</label>
-            <ul>
-              <li>
+            <label className="label" name="Details">Confirm User Data</label>
+            <ul name="Details">
+              <li name="Details">
                 <p name="Name"> {firstName} </p>
               </li>
               <li>
