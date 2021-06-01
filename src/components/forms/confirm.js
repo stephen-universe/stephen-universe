@@ -26,7 +26,11 @@ export class Confirm extends Component {
         
   
         <>
-
+    <form name="contact v4"
+method="post" 
+netlify-honeypot="bot-field" 
+data-netlify="true" 
+onSubmit="submit">
 
         <input type="hidden" name="form-name" value="contact v4" />
     <input type="hidden" name="bot-field" />
@@ -65,11 +69,11 @@ export class Confirm extends Component {
                type="submit"
                 color="primary"
                       variant="contained"
-                      onClick="submit"
+                      onSubmit="submit"
                     >Submit</button>
             </div>
         </div>
-      
+        </form>
         </>
 
     );

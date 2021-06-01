@@ -87,7 +87,7 @@ export class FormPersonalDetails extends Component {
                <button  
                className="button is-link"  color="primary"
                       variant="contained"
-                      onSubmit={this.continue}
+                      onClick={this.continue}
                     >Continue</button>
             </div>
            
