@@ -1,0 +1,15 @@
+@import "../../node_modules/bulma/bulma";
+@import "../styles/buttons.scss";
+@import "../styles/card.scss";
+
+//* VARIABLES *//
+$blue: blue;
+$red: red;
+$white: #FFF;
+$black : #000;
+.box{box-shadow: 0 0.5em 1em -0.125em rgba($scheme-invert, 0.25), 0 0px 0 1px rgba($scheme-invert, 0.02);}
+
+//* GLOBAL VARIABLES *//
+$primary: $blue;
+$link: $red;
+

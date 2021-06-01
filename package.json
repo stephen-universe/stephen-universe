@@ -8,16 +8,17 @@
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop -o",
-    "develop": "yarn dev",
+    "develop": "npm dev",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "yarn dev",
+    "start": "npm dev",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "forestry-preview": "gatsby develop -p 8080 -H 0.0.0.0"
   },
   "dependencies": {
+    "bulma": "^0.9.2",
     "gatsby": "^2.23.12",
-    "gatsby-image": "^2.4.9",
+    "gatsby-image": "^2.11.0",
     "gatsby-plugin-react-helmet": "^3.3.6",
     "gatsby-plugin-sass": "^2.3.7",
     "gatsby-plugin-sharp": "^2.6.14",

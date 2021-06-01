@@ -17,6 +17,9 @@ module.exports = {
     "gatsby-transformer-remark",
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-yaml",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
+
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -24,13 +27,15 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "posts",
-        path: `${__dirname}/content/posts`
+        name: "projects",
+        path: `${__dirname}/content/projects`
       }
     },
+
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -38,6 +43,7 @@ module.exports = {
         path: `${__dirname}/content/data`,
       },
     },
+    
     {
       resolve: `gatsby-source-filesystem`,
       options: {

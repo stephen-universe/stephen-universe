@@ -1,13 +1,11 @@
 import React from "react"
 import Layout from "../components/Layout"
-import BlogList from "../components/BlogList"
 
-export default function IndexPage() {
+
+export default function ProjectPage() {
   return (
     <Layout page="home" bgColor="inherit">
-      <section>
-        <BlogList />
-      </section>
+     
     </Layout>
   )
 }
