@@ -114,7 +114,7 @@ export class FormUserDetails extends Component {
           className="input" 
           type="text" 
           placeholder="Enter Your First Name"
-          name="First Name"
+          name="firstName"
           onChange={handleChange('firstName')}
           defaultValue={values.firstName}
           margin="normal"
@@ -311,7 +311,7 @@ export class Confirm extends Component {
     
           <>
     
-<form name="contact v4"
+<form name="contact v5"
     method="post" 
     netlify-honeypot="bot-field" 
     data-netlify="true" 
@@ -321,10 +321,10 @@ export class Confirm extends Component {
 <div className="field">
       <label className="label">Name</label>
       <div className="control">        
-      <input type="hidden" name="form-name" value="contact v4" />
+      <input type="hidden" name="form-name" value="contact v5" />
       <input type="hidden" name="bot-field" />
 
-        <input className="input" type="text" placeholder="Enter Your First Name" value={firstName} name="FirstName" margin="normal">
+        <input className="input" type="text" placeholder="Enter Your First Name" value={firstName} name="firstName" margin="normal">
         </input>
       </div>
   </div>
@@ -393,12 +393,14 @@ export class Confirm extends Component {
   
               <label className="label" name="Details">Confirm User Data</label>
         
-              <li type="text"  name="firstName"
+              <li type="text"  name="Name"
           placeholder="Enter Your First Name"
           name="First Name">{firstName} </li>
           <li>{message}</li>
           <li>{option}</li>
+          <li>{email}</li>
           <li>{additionalOptions}</li>
+          <li>{bio}</li>
   
               <div className="field is-grouped is-grouped-centered">
           <div className="control">
