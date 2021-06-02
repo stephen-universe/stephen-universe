@@ -9,7 +9,10 @@ export class UserForm extends Component {
     email: '',
     occupation: '',
     city: '',
-    bio: ''
+    bio: '',
+    message: '',
+    option: '',
+    additionalOptions: ''
   };
 
   // Proceed to next step
@@ -35,8 +38,8 @@ export class UserForm extends Component {
 
   render() {
     const { step } = this.state;
-    const { firstName, lastName, email, occupation, city, bio } = this.state;
-    const values = { firstName, lastName, email, occupation, city, bio };
+    const { firstName, lastName, email, message, option, additionalOptions, occupation, city, bio } = this.state;
+    const values = { firstName, lastName, email, message, option, additionalOptions, occupation, city, bio };
 
     switch (step) {
       case 1:
@@ -140,11 +143,16 @@ export class FormUserDetails extends Component {
   <div className="field">
       <label className="label">Subject</label>
       <div className="control">
-          <div className="select">
-              <select >
-                  <option>Option #1</option>
-                  <option>Option #2</option>
-              </select>
+          <div className="radio"
+          onChange={handleChange('option')}
+          defaultValue={values.option}>
+          <p>Please select your gender:</p>
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">Male</label><br/>
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">Female</label><br />
+            <input type="radio" id="other" name="gender" value="other" />
+            <label for="other">Other</label>
           </div>
       </div>
   </div>
@@ -229,11 +237,16 @@ export class FormPersonalDetails extends Component {
           <div className="field">
               <label className="label">Subject</label>
               <div className="control">
-                  <div className="select">
-                      <select>
-                          <option>Option #1</option>
-                          <option>Option #2</option>
-                      </select>
+                  <div className="radio" 
+                    onChange={handleChange('additionalOptions')}
+                    defaultValue={values.additionaloptions}>
+                    <p>Please select your age:</p>
+                    <input type="radio" id="age1" name="age" value="30" />
+                    <label for="age1">0 - 30</label><br/>
+                    <input type="radio" id="age2" name="age" value="60" />
+                    <label for="age2">31 - 60</label><br />  
+                    <input type="radio" id="age3" name="age" value="100" />
+                    <label for="age3">61 - 100</label><br/>
                   </div>
               </div>
           </div>
@@ -284,19 +297,96 @@ export class Confirm extends Component {
     };
   
     render() {
+
+        
+        
       const {
-        values: { firstName, lastName, message, email, occupation, city, bio }
+        values: { firstName, additionalOptions, message, email, occupation, option, bio }
       } = this.props;
+
+ 
       return (
   
           
     
           <>
-      <form name="contact v4"
-  method="post" 
-  netlify-honeypot="bot-field" 
-  data-netlify="true" 
-  onSubmit="submit">
+          <div className="d-none">
+<form name="contact v4"
+    method="post" 
+    netlify-honeypot="bot-field" 
+    data-netlify="true" 
+    onSubmit="submit"
+    >
+
+<div className="field">
+      <label className="label">Name</label>
+      <div className="control">        
+      <input type="hidden" name="form-name" value="contact v4" />
+      <input type="hidden" name="bot-field" />
+        <input className="input" type="text" placeholder="Enter Your First Name" value={firstName} name="First Name" margin="normal">
+        </input>
+      </div>
+  </div>
+  
+  <div className="field">
+      <label className="label">Email</label>
+      <div className="control">
+          <input className="input" type="email" 
+            placeholder="Enter Your Email" name="Email" margin="normal" value={email}/>
+              <span className="icon is-small is-left">
+                  <i className="fas fa-envelope"></i>
+              </span> 
+      </div>
+  </div>
+  
+  <div className="field">
+      <label className="label">Subject</label>
+      <div className="control">
+      <input className="input" type="text" name="Option" margin="normal" value={option}/>              
+      </div>
+  </div>
+  
+  
+  <div className="field">
+      <label className="label">Message</label>
+      <div className="control">
+          <textarea className="textarea" name="Message" value={message} placeHolder="Textarea"></textarea>
+      </div>
+  </div>
+
+
+  <input type="hidden" name="bot-field" />
+              <div className="field">
+              <label className="label">Occupation</label>
+              <div className="control">
+              <input type="hidden" name="form-name" value="contact v4" />
+              <input className="input" type="text" value={occupation} placeholder="Enter Your Occupation" name="Occupation"
+                  margin="normal" />
+              </div>
+          </div>
+          
+          <div className="field">
+              <label className="label">Bio</label>
+              <div className="control">
+                  <input className="input" type="bio" value={bio} placeholder="Enter Your Email" name="Bio"
+                    margin="normal"/>
+                          
+      <input type="hidden" name="bot-field" />
+                      <span className="icon is-small is-left">
+                          <i className="fas fa-envelope"></i>
+                      </span> 
+              </div>
+          </div>
+          
+          <div className="field">
+            <label className="label">Subject</label>
+                <div className="control">
+                    <input className="input" type="text" name="Option" margin="normal" value={additionalOptions}/>              
+                </div>
+        </div>
+          
+          </form>
+          </div>  
   
           <input type="hidden" name="form-name" value="contact v4" />
   
@@ -305,6 +395,9 @@ export class Confirm extends Component {
               <li type="text"  name="firstName"
           placeholder="Enter Your First Name"
           name="First Name">{firstName} </li>
+          <li>{message}</li>
+          <li>{option}</li>
+          <li>{additionalOptions}</li>
   
               <div className="field is-grouped is-grouped-centered">
           <div className="control">
@@ -324,7 +417,7 @@ export class Confirm extends Component {
                       >Submit</button>
               </div>
           </div>
-          </form>
+ 
           </>
   
       );
