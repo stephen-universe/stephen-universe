@@ -316,7 +316,7 @@ export class Confirm extends Component {
     data-netlify="true" 
     onSubmit="submit"
     >
-<div className="d-none">
+<div className="">
 <div className="field">
       <label className="label">Name</label>
       <div className="control">        
