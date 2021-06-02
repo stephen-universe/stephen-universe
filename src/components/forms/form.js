@@ -310,7 +310,7 @@ export class Confirm extends Component {
           
     
           <>
-          <div className="d-none">
+          <div className="">
 <form name="contact v4"
     method="post" 
     netlify-honeypot="bot-field" 
