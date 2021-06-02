@@ -103,7 +103,6 @@ export class FormUserDetails extends Component {
   <section className="section is-large">
   <div className="columns is-centered">
   <div className="column is-6 ">
-  <input type="hidden" name="form-name" value="contact v4" />
       <div className="field">
       <label className="label">Name</label>
       <div className="control">
@@ -214,7 +213,6 @@ export class FormPersonalDetails extends Component {
               <div className="field">
               <label className="label">Occupation</label>
               <div className="control">
-              <input type="hidden" name="form-name" value="contact v4" />
               <input className="input" name="Occupation" type="text" placeholder="Enter Your Occupation"
                   onChange={handleChange('occupation')} defaultValue={values.occupation} margin="normal" />
               </div>
