@@ -13,7 +13,12 @@ export default function Contact() {
       </div>
     <Layout >
 
-    <Form />
+    <form name="Contact Form v1"
+    method="post" 
+    netlify-honeypot="bot-field" 
+    data-netlify="true" 
+    onSubmit="submit"
+    >  <Form /></form>
         <Resume />
     </Layout>
     </>

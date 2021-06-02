@@ -310,22 +310,19 @@ export class Confirm extends Component {
     
           <>
     
-<form name="Initialize Contact Form"
+<form name="Contact Form v1"
     method="post" 
     netlify-honeypot="bot-field" 
     data-netlify="true" 
     onSubmit="submit"
     >  
-<input type="hidden" name="form-name" value="Initialize Contact Form" />    
-<div className="">
+<input type="hidden" name="form-name" value="Contact Form v1" />    
+<div className="d-none">
 <div className="field">
  
       <label className="label">Name</label>
       <div className="control">        
-
-     
-    <input className="input" type="text" name="firstName" placeholder="Enter Your First Name" value={firstName} margin="normal" />
-        
+    <input className="input" type="text" name="firstName" placeholder="Enter Your First Name" value={firstName} margin="normal" />       
       </div>
   </div>
    <input type="hidden" name="bot-field" />
@@ -356,15 +353,6 @@ export class Confirm extends Component {
       </div>
   </div>
 
-  <div className="field">
-      <label className="label">Subject</label>
-      <div className="control">
-      <select>
-          <option value={option}>#</option>
-          <option value={option}>@</option>
-        </select>              
-      </div>
-  </div>
 
   <input type="hidden" name="bot-field" />
               <div className="field">
@@ -380,8 +368,6 @@ export class Confirm extends Component {
               <div className="control">
                   <input className="input" name="Bio" type="bio" value={bio} placeholder="Enter Your Email" 
                     margin="normal"/>
-                          
-      <input type="hidden" name="bot-field" />
                       <span className="icon is-small is-left">
                           <i className="fas fa-envelope"></i>
                       </span> 
