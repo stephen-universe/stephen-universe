@@ -308,13 +308,13 @@ export class Confirm extends Component {
     
           <>
     
-<form name="contact v4"
+<form name="contact v6"
     method="post" 
     netlify-honeypot="bot-field" 
     data-netlify="true" 
     onSubmit="submit"
     >  
-<input type="hidden" name="form-name" value="contact v4" />    
+<input type="hidden" name="form-name" value="contact v6" />    
 <div className="">
 <div className="field">
  
@@ -354,6 +354,15 @@ export class Confirm extends Component {
       </div>
   </div>
 
+  <div className="field">
+      <label className="label">Subject</label>
+      <div className="control">
+      <select>
+          <option value={option}>#</option>
+          <option value={option}>@</option>
+        </select>              
+      </div>
+  </div>
 
   <input type="hidden" name="bot-field" />
               <div className="field">
