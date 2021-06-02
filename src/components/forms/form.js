@@ -98,12 +98,7 @@ export class FormUserDetails extends Component {
       return (
     
           <>
-  
-  <form name="contact v4"
-method="post" 
-netlify-honeypot="bot-field" 
-data-netlify="true" 
-onSubmit="submit">
+
 
   <section className="section is-large">
   <div className="columns is-centered">
@@ -185,7 +180,6 @@ onSubmit="submit">
   </div>
   </section>
 
-  </form>
   
                 
        
@@ -213,13 +207,6 @@ export class FormPersonalDetails extends Component {
       return (
           <>
 
-
-      <form name="contact v4"
-method="post" 
-netlify-honeypot="bot-field" 
-data-netlify="true" 
-onSubmit="submit">
-          
   
           <section className="section is-large">
           <div className="columns is-centered">
@@ -288,7 +275,6 @@ onSubmit="submit">
           </div>
           </div>
           </section>
-          </form>
                                             
                   </>
       );
@@ -337,6 +323,7 @@ export class Confirm extends Component {
       <div className="control">        
       <input type="hidden" name="form-name" value="contact v4" />
       <input type="hidden" name="bot-field" />
+
         <input className="input" type="text" placeholder="Enter Your First Name" value={firstName} name="FirstName" margin="normal">
         </input>
       </div>
@@ -373,8 +360,7 @@ export class Confirm extends Component {
               <div className="field">
               <label className="label">Occupation</label>
               <div className="control">
-              <input type="hidden" name="form-name" value="contact v4" />
-              <input className="input" type="text" value={occupation} placeholder="Enter Your Occupation" name="Occupation"
+              <input className="input" type="text" name="Occupation" value={occupation} placeholder="Enter Your Occupation" 
                   margin="normal" />
               </div>
           </div>
@@ -382,7 +368,7 @@ export class Confirm extends Component {
           <div className="field">
               <label className="label">Bio</label>
               <div className="control">
-                  <input className="input" type="bio" value={bio} placeholder="Enter Your Email" name="Bio"
+                  <input className="input" name="Bio" type="bio" value={bio} placeholder="Enter Your Email" 
                     margin="normal"/>
                           
       <input type="hidden" name="bot-field" />
@@ -402,7 +388,8 @@ export class Confirm extends Component {
           </form>
           </div>  
   
-          <input type="hidden" name="form-name" value="contact v4" />
+
+
   
               <label className="label" name="Details">Confirm User Data</label>
         
