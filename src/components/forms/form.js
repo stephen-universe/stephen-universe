@@ -139,7 +139,7 @@ export class FormUserDetails extends Component {
               </span> 
       </div>
   </div>
-  
+
   <div className="field">
       <label className="label">Please select your gender:</label>
       <div className="control">
@@ -147,11 +147,11 @@ export class FormUserDetails extends Component {
           onChange={handleChange('option')}
           defaultValue={values.option}>
                 <input type="radio" id="male" name="gender" value="male" />
-                Male <br />
+                <label for="male">Male</label><br/>
                 <input type="radio" id="female" name="gender" value="female" />
-                Female<br />
+                <label for="female">Female</label><br/>
                 <input type="radio" id="other" name="gender" value="other" />
-                Other
+                <label for="other">Other</label><br/>
           </div>
       </div>
   </div>
@@ -190,12 +190,11 @@ export class FormUserDetails extends Component {
           </div>
           
           <div className="field">
-              <label className="label">Subject</label>
+              <label className="label">Please select your age:</label>
               <div className="control">
                   <div className="radio" 
                     onChange={handleChange('additionalOptions')}
                     defaultValue={values.additionaloptions}>
-                    <p>Please select your age:</p>
                     <input type="radio" id="age1" name="age" value="30" />
                     <label for="age1">0 - 30</label><br/>
                     <input type="radio" id="age2" name="age" value="60" />
