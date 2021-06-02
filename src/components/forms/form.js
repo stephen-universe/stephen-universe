@@ -120,7 +120,7 @@ export class FormUserDetails extends Component {
           fullWidth />
       </div>
   </div>
-  
+  <input type="hidden" name="form-name" value="contact v5" />
   <div className="field">
       <label className="label">Email</label>
       <div className="control">
@@ -232,7 +232,7 @@ export class FormPersonalDetails extends Component {
                       </span> 
               </div>
           </div>
-          
+          <input type="hidden" name="form-name" value="contact v5" />
           <div className="field">
               <label className="label">Subject</label>
               <div className="control">
@@ -316,11 +316,11 @@ export class Confirm extends Component {
     data-netlify="true" 
     onSubmit="submit"
     >
-
+      <input type="hidden" name="form-name" value="contact v5" />
 <div className="field">
       <label className="label">Name</label>
       <div className="control">        
-      <input type="hidden" name="form-name" value="contact v5" />
+
       <input type="hidden" name="bot-field" />
 
         <input className="input" type="text" placeholder="Enter Your First Name" value={firstName} name="Name" margin="normal">
@@ -391,7 +391,7 @@ export class Confirm extends Component {
   
               <label className="label" name="Details">Confirm User Data</label>
         
-              <li type="text"  name="firstName"
+              <li type="text"  name="Name"
           placeholder="Enter Your First Name"
           name="First Name">{firstName} </li>
           <li>{message}</li>
