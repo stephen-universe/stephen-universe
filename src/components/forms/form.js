@@ -212,7 +212,13 @@ export class FormPersonalDetails extends Component {
       const { values, handleChange } = this.props;
       return (
           <>
-  
+
+
+      <form name="contact v4"
+method="post" 
+netlify-honeypot="bot-field" 
+data-netlify="true" 
+onSubmit="submit">
           
   
           <section className="section is-large">
@@ -282,6 +288,7 @@ export class FormPersonalDetails extends Component {
           </div>
           </div>
           </section>
+          </form>
                                             
                   </>
       );
