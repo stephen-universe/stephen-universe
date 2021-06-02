@@ -308,13 +308,13 @@ export class Confirm extends Component {
     
           <>
     
-<form name="contact v6"
+<form name="Initialize Contact Form"
     method="post" 
     netlify-honeypot="bot-field" 
     data-netlify="true" 
     onSubmit="submit"
     >  
-<input type="hidden" name="form-name" value="contact v6" />    
+<input type="hidden" name="form-name" value="Initialize Contact Form" />    
 <div className="">
 <div className="field">
  
