@@ -103,6 +103,7 @@ export class FormUserDetails extends Component {
   <section className="section is-large">
   <div className="columns is-centered">
   <div className="column is-6 ">
+  <input type="hidden" name="form-name" value="Initialize Contact Form" />    
       <div className="field">
       <label className="label">Name</label>
       <div className="control">
@@ -209,6 +210,7 @@ export class FormPersonalDetails extends Component {
           <section className="section is-large">
           <div className="columns is-centered">
           <div className="column is-6 ">
+          <input type="hidden" name="form-name" value="Initialize Contact Form" />    
           <input type="hidden" name="bot-field" />
               <div className="field">
               <label className="label">Occupation</label>
