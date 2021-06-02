@@ -103,13 +103,12 @@ export class FormUserDetails extends Component {
   <section className="section is-large">
   <div className="columns is-centered">
   <div className="column is-6 ">
+  <input type="hidden" name="form-name" value="contact v4" />
       <div className="field">
       <label className="label">Name</label>
       <div className="control">
           
-      <input type="hidden" name="form-name" value="contact v4" />
-      <input type="hidden" name="bot-field" />
-  
+
           <input 
           className="input" 
           type="text" 
@@ -117,10 +116,11 @@ export class FormUserDetails extends Component {
           name="firstName"
           onChange={handleChange('firstName')}
           defaultValue={values.firstName}
-          margin="normal"
-          fullWidth />
+          margin="normal" />
       </div>
   </div>
+  
+  <input type="hidden" name="bot-field" />
   
   <div className="field">
       <label className="label">Email</label>
@@ -316,19 +316,20 @@ export class Confirm extends Component {
     netlify-honeypot="bot-field" 
     data-netlify="true" 
     onSubmit="submit"
-    >
+    >      
 <div className="d-none">
 <div className="field">
+    <input type="hidden" name="form-name" value="contact v4" />
       <label className="label">Name</label>
       <div className="control">        
-      <input type="hidden" name="form-name" value="contact v4" />
-      <input type="hidden" name="bot-field" />
 
-        <input className="input" type="text" placeholder="Enter Your First Name" value={firstName} name="firstName" margin="normal">
-        </input>
+     
+    <input className="input" type="text" name="firstName" placeholder="Enter Your First Name" value={firstName} margin="normal" />
+        
       </div>
   </div>
-  
+   <input type="hidden" name="bot-field" />
+
   <div className="field">
       <label className="label">Email</label>
       <div className="control">
