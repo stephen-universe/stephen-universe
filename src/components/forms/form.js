@@ -323,7 +323,7 @@ export class Confirm extends Component {
       <div className="control">        
       <input type="hidden" name="form-name" value="contact v4" />
       <input type="hidden" name="bot-field" />
-        <input className="input" type="text" placeholder="Enter Your First Name" value={firstName} name="First Name" margin="normal">
+        <input className="input" type="text" placeholder="Enter Your First Name" value={firstName} name="FirstName" margin="normal">
         </input>
       </div>
   </div>

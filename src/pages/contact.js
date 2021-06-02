@@ -12,12 +12,8 @@ export default function Contact() {
       </figure>
       </div>
     <Layout >
-    <form name="contact v4"
-method="post" 
-netlify-honeypot="bot-field" 
-data-netlify="true" 
-onSubmit="continue">
-    <Form /></form>
+
+    <Form />
         <Resume />
     </Layout>
     </>
