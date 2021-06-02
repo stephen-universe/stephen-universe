@@ -164,7 +164,57 @@ export class FormUserDetails extends Component {
             defaultValue={values.message} placeHolder="Textarea"></textarea>
       </div>
   </div>
+
   
+
+  <div className="d-none">
+  <div className="field">
+              <label className="label">Occupation</label>
+              <div className="control">
+              <input className="input" name="Occupation" type="text" placeholder="Enter Your Occupation"
+                  onChange={handleChange('occupation')} defaultValue={values.occupation} margin="normal" />
+              </div>
+          </div>
+          
+          <div className="field">
+              <label className="label">Bio</label>
+              <div className="control">
+                  <input className="input" type="bio" placeholder="Enter Your Email" name="Bio"
+                    onChange={handleChange('bio')} defaultValue={values.bio} margin="normal"/>
+                          
+      <input type="hidden" name="bot-field" />
+                      <span className="icon is-small is-left">
+                          <i className="fas fa-envelope"></i>
+                      </span> 
+              </div>
+          </div>
+          
+          <div className="field">
+              <label className="label">Subject</label>
+              <div className="control">
+                  <div className="radio" 
+                    onChange={handleChange('additionalOptions')}
+                    defaultValue={values.additionaloptions}>
+                    <p>Please select your age:</p>
+                    <input type="radio" id="age1" name="age" value="30" />
+                    <label for="age1">0 - 30</label><br/>
+                    <input type="radio" id="age2" name="age" value="60" />
+                    <label for="age2">31 - 60</label><br />  
+                    <input type="radio" id="age3" name="age" value="100" />
+                    <label for="age3">61 - 100</label><br/>
+                  </div>
+              </div>
+          </div>
+
+
+
+
+
+
+
+          </div>
+
+
   
   <div className="field is-grouped is-grouped-centered">
       <div className="control">
