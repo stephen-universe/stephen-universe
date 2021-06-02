@@ -171,7 +171,7 @@ export class FormUserDetails extends Component {
       <div className="control">
          <button className="button is-link"  color="primary"
                 variant="contained"
-                onSubmit={this.continue}
+                onClick={this.continue}
               >Continue</button>
       </div>
   </div>
@@ -310,14 +310,14 @@ export class Confirm extends Component {
           
     
           <>
-          <div className="">
+    
 <form name="contact v4"
     method="post" 
     netlify-honeypot="bot-field" 
     data-netlify="true" 
     onSubmit="submit"
     >
-
+<div className="d-none">
 <div className="field">
       <label className="label">Name</label>
       <div className="control">        
@@ -384,9 +384,9 @@ export class Confirm extends Component {
                     <input className="input" type="text" name="Option" margin="normal" value={additionalOptions}/>              
                 </div>
         </div>
-          
-          </form>
-          </div>  
+          </div>
+         
+         
   
 
 
@@ -418,7 +418,7 @@ export class Confirm extends Component {
                       >Submit</button>
               </div>
           </div>
- 
+          </form>
           </>
   
       );
