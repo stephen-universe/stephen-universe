@@ -171,7 +171,7 @@ export class FormUserDetails extends Component {
       <div className="control">
          <button className="button is-link"  color="primary"
                 variant="contained"
-                onSubmit={this.continue}
+                onClick={this.continue}
               >Continue</button>
       </div>
   </div>
