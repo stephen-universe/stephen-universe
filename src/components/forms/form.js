@@ -99,7 +99,12 @@ export class FormUserDetails extends Component {
     
           <>
   
-  
+  <form name="contact v4"
+method="post" 
+netlify-honeypot="bot-field" 
+data-netlify="true" 
+onSubmit="submit">
+
   <section className="section is-large">
   <div className="columns is-centered">
   <div className="column is-6 ">
@@ -161,7 +166,7 @@ export class FormUserDetails extends Component {
   <div className="field">
       <label className="label">Message</label>
       <div className="control">
-          <textarea className="textarea"  onChange={handleChange('message')}
+          <textarea className="textarea" name="Message" onChange={handleChange('message')}
             defaultValue={values.message} placeHolder="Textarea"></textarea>
       </div>
   </div>
@@ -179,6 +184,8 @@ export class FormUserDetails extends Component {
   </div>
   </div>
   </section>
+
+  </form>
   
                 
        
