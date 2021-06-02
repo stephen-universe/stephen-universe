@@ -4,7 +4,7 @@ import React from 'react'
 export function Forms() {
     return(
  
-<form name="contact" method="POST" data-netlify="true" onSubmit="submit">
+<form name="contact v5" method="POST" data-netlify="true" onSubmit="submit">
   <p>
     <label>Your Name: <input type="text" name="name" /></label>   
   </p>
