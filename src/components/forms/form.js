@@ -103,7 +103,7 @@ export class FormUserDetails extends Component {
   <section className="section is-large">
   <div className="columns is-centered">
   <div className="column is-6 ">
-  <input type="hidden" name="form-name" value="contact v4" />
+  <input type="hidden" name="form-name" value="contact v5" />
       <div className="field">
       <label className="label">Name</label>
       <div className="control">
@@ -141,18 +141,17 @@ export class FormUserDetails extends Component {
   </div>
   
   <div className="field">
-      <label className="label">Subject</label>
+      <label className="label">Please select your gender:</label>
       <div className="control">
           <div className="radio"
           onChange={handleChange('option')}
           defaultValue={values.option}>
-          <p>Please select your gender:</p>
-            <input type="radio" id="male" name="gender" value="male" />
-            <label for="male">Male</label><br/>
-            <input type="radio" id="female" name="gender" value="female" />
-            <label for="female">Female</label><br />
-            <input type="radio" id="other" name="gender" value="other" />
-            <label for="other">Other</label>
+                <input type="radio" id="male" name="gender" value="male" />
+                Male <br />
+                <input type="radio" id="female" name="gender" value="female" />
+                Female<br />
+                <input type="radio" id="other" name="gender" value="other" />
+                Other
           </div>
       </div>
   </div>
@@ -215,8 +214,8 @@ export class FormPersonalDetails extends Component {
               <div className="field">
               <label className="label">Occupation</label>
               <div className="control">
-              <input type="hidden" name="form-name" value="contact v4" />
-              <input className="input" type="text" placeholder="Enter Your Occupation" name="Occupation"
+              <input type="hidden" name="form-name" value="contact v5" />
+              <input className="input" name="Occupation" type="text" placeholder="Enter Your Occupation"
                   onChange={handleChange('occupation')} defaultValue={values.occupation} margin="normal" />
               </div>
           </div>
@@ -311,15 +310,15 @@ export class Confirm extends Component {
     
           <>
     
-<form name="contact v4"
+<form name="contact v5"
     method="post" 
     netlify-honeypot="bot-field" 
     data-netlify="true" 
     onSubmit="submit"
     >      
-<div className="d-none">
+<div className="">
 <div className="field">
-    <input type="hidden" name="form-name" value="contact v4" />
+    <input type="hidden" name="form-name" value="contact v5" />
       <label className="label">Name</label>
       <div className="control">        
 
@@ -344,7 +343,7 @@ export class Confirm extends Component {
   <div className="field">
       <label className="label">Subject</label>
       <div className="control">
-      <input className="input" type="text" name="Option" margin="normal" value={option}/>              
+      <input className="input" type="text" margin="normal" value={option}/>              
       </div>
   </div>
   
