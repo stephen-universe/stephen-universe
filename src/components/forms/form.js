@@ -99,7 +99,7 @@ export class FormUserDetails extends Component {
     
           <>
 
-<input type="hidden" name="form-name" value="contact v5" />
+<input type="hidden" name="form-name" value="contact v4" />
   <section className="section is-large">
   <div className="columns is-centered">
   <div className="column is-6 ">
@@ -120,7 +120,7 @@ export class FormUserDetails extends Component {
           fullWidth />
       </div>
   </div>
-  <input type="hidden" name="form-name" value="contact v5" />
+  <input type="hidden" name="form-name" value="contact v4" />
   <div className="field">
       <label className="label">Email</label>
       <div className="control">
