@@ -176,7 +176,7 @@ onSubmit="submit">
       <div className="control">
          <button className="button is-link"  color="primary"
                 variant="contained"
-                onClick={this.continue}
+                onSubmit={this.continue}
               >Continue</button>
       </div>
   </div>
