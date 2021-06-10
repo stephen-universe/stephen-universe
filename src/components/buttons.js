@@ -11,14 +11,6 @@ export function GoBack() {
 )}
 
 
-class ColoredContainer extends React.Component {
-    render () {
-      let containerStyle = {
-        backgroundColor: this.props.color
-      }
-      return <div className="container" style={containerStyle}></div>
-    }
-  }
   
   class ScrollButton extends React.Component {
     constructor() {
@@ -42,29 +34,17 @@ class ColoredContainer extends React.Component {
     }
     
     render () {
-        return <button title='Back to top' className='scroll button' 
-                 onClick={ () => { this.scrollToTop(); }}>
-                  <span style={{color: 'primary'}} className='ti-angle-up'></span>
-                </button>;
+        return <img src="scroll-btn.png" className='scroll button'
+                 onClick={ () => { this.scrollToTop(); }}/>
+                  
      }
   } 
   
   class ScrollApp extends React.Component {
-    constructor() {
-      super();
-      
-      this.state = {
-        colors: ["#044747", "#079191", "#38adad", "#90e3e3", "#d5f7f7"]
-      }
-    }
-    
+
     render () {
       return <div className="long">
-                {
-                  this.state.colors.map(function(color) {
-                      return <ColoredContainer color={color}/>
-                  })
-                }
+               
                 <ScrollButton scrollStepInPx="150" delayInMs="10.66"/>
              </div>
     }

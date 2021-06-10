@@ -5,9 +5,10 @@ import "../styles/style.scss"
 export default function Footer(props) {
       return (
 
-<footer className="footer">
-Footer Area
-</footer>
+
+<img src="footer-bg.png" alt="Space" />
+
+
 
       )
 }

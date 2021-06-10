@@ -4,30 +4,35 @@ import Helmet from "react-helmet"
 import useSiteMetadata from "../static_queries/useSiteMetadata"
 import Footer from "./footer"
 import ScrollApp from "./buttons"
+import { Container } from "@material-ui/core"
 
 export default function Layout(props) {
   const { title, description } = useSiteMetadata()
   return (
     <>
+    <Header page={props.page} title={title} />
+    <img src="background.png" alt="Space" />
     <section
       className="" 
       style={{
         backgroundColor: props.bgColor,
       }}
     >
+      <Container>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
       </Helmet>
-      <Header page={props.page} title={title} />
+      
       <div className="">{props.children}</div>
+      </Container>
     </section>
     <ScrollApp />
-    <section className="">
-      <Footer />
+
+    <Footer />
     
-    </section>
+    
     </>
   )
 }

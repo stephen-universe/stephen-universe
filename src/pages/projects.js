@@ -1,7 +1,8 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { graphql, Link} from "gatsby";
-import Img from 'gatsby-image'
+import Img from 'gatsby-image';
+
 
 
 export default function Projects({ data }) {
@@ -258,7 +259,7 @@ return (
             </div>
             
   </>
-
+ 
 
    </Layout>
 )}
@@ -268,7 +269,6 @@ query myQuery {
   projectOneData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 1}}}) {
     nodes {
       frontmatter {
-        image
         title
         quote
         thumb {
@@ -287,7 +287,6 @@ query myQuery {
   projectTwoData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 2}}}) {
     nodes {
       frontmatter {
-        image
         title
         quote
         thumb {
@@ -306,7 +305,6 @@ query myQuery {
   projectThreeData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 3}}}) {
     nodes {
       frontmatter {
-        image
         title
         quote
         thumb {
@@ -325,7 +323,6 @@ query myQuery {
   projectFourData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 4}}}) {
     nodes {
       frontmatter {
-        image
         title
         quote
         thumb {
@@ -344,7 +341,6 @@ query myQuery {
   projectFiveData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 5}}}) {
     nodes {
       frontmatter {
-        image
         title
         quote
         thumb {
@@ -363,7 +359,6 @@ query myQuery {
   projectSixData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 6}}}) {
     nodes {
       frontmatter {
-        image
         title
         quote
         thumb {
@@ -382,7 +377,6 @@ query myQuery {
   projectSevenData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 7}}}) {
     nodes {
       frontmatter {
-        image
         title
         quote
         thumb {
@@ -401,7 +395,6 @@ query myQuery {
   projectEightData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 8}}}) {
     nodes {
       frontmatter {
-        image
         title
         quote
         thumb {
@@ -420,7 +413,6 @@ query myQuery {
   projectNineData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 9}}}) {
     nodes {
       frontmatter {
-        image
         title
         quote
         thumb {

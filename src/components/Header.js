@@ -4,15 +4,9 @@ import "../styles/style.scss"
 
 export default function Header(props) {
   return (
-    <header className="">
-      <div className="container">
-      <figure className="image is-128x128" style={{margin: '0 auto'}}>
-      <Link to="/"><img src="/avx-studio-black.png" /></Link>
-      </figure>
-      </div>
-
+<header className="">
   <div className="navbar-divider" />
-
+  
         <div className="columns" >
               <div className="column " >
                 <Link to="/"> <h1 className="has-text-centered" style={{fontSize: 2 + "rem"}}>
