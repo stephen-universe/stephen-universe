@@ -10,8 +10,13 @@ export default function Layout(props) {
   const { title, description } = useSiteMetadata()
   return (
     <>
+     <div className="header-top-color"> </div>
+     <div className="background" alt="Space" >
+     <Container>
     <Header page={props.page} title={title} />
-    <img src="background.png" alt="Space" />
+    </Container>
+    </div>
+   
     <section
       className="" 
       style={{

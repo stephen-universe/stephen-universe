@@ -8,6 +8,8 @@ quote: "So all respect to the good spirits that may govern in these historians o
 role: "Designer"
 stack: "MongoDB | Express | React | NodeJS | Snipcart | Simplybook.Me"
 tools: "Adobe Photoshop | Adobe Illustrator | Adobe XD | Visual Studio"
+pixel: ../../src/images/CKC-Home.png
+scroll: ../../src/images/scroll-btn.png
 
 ---
 

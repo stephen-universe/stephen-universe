@@ -5,10 +5,11 @@ import "../styles/style.scss"
 export default function Footer(props) {
       return (
 
+<>
+<div className="footer-bg" alt="Space" />
 
-<img src="footer-bg.png" alt="Space" />
+<div className="footer-bottom-color"> </div>
 
-
-
+</>
       )
 }

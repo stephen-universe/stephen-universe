@@ -1,13 +1,20 @@
 @import "../../node_modules/bulma/bulma";
 @import "../styles/buttons.scss";
 @import "../styles/card.scss";
+@import "../styles/navigation.scss";
+@import "../styles/fonts.scss";
 
 //* VARIABLES *//
 $blue: blue;
 $red: red;
 $white: #FFF;
 $black : #000;
-.box{box-shadow: 0 0.5em 1em -0.125em rgba($scheme-invert, 0.25), 0 0px 0 1px rgba($scheme-invert, 0.02);}
+$orange: #e84834;
+$orange-shadow: #ab3122;
+$title-font: 'Nostromo-Black';
+.box{box-shadow: 2px 2px 3px 2px $orange; border-radius: 3px;}
+.button {background-color: $orange; box-shadow: 1px 2px 4px 1px $black;}
+.title { font-family: $title-font;}
 
 //* GLOBAL VARIABLES *//
 $primary: $blue;
@@ -17,8 +24,26 @@ $link: $red;
     display: none;
 }
 
-.footer-bg {
+.white {
+    color: $white;
+    text-shadow: -1px 2px 3px $orange-shadow;
 
-    background-color: darkblue;
+    &:hover{
+    color: $orange;
+    text-shadow: -1px 2px 6px $orange-shadow;
+    }
+}
+
+.test{
+  z-index: 999;
 
 }
+
+.test:hover {
+  display: none;
+  position: absolute;
+  }
+
+
+
+

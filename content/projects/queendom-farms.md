@@ -8,7 +8,8 @@ quote: "So all respect to the good spirits that may govern in these historians o
 role: "Designer"
 stack: "Adobe CC | AutoCAD"
 tools: "Photoshop | Illustrator | InDesign"
-
+pixel: ../../src/images/CKC-Home.png
+scroll: ../../src/images/scroll-btn.png
 
 ---
 

@@ -3,6 +3,9 @@ import Layout from "../components/Layout"
 import { graphql, Link} from "gatsby";
 import Img from 'gatsby-image';
 
+import { ImagePixelated, ElementPixelated } from "react-pixelate"
+
+
 
 
 export default function Projects({ data }) {
@@ -23,12 +26,9 @@ const projectNine = data.projectNineData.nodes
 
 
 
-
-
-
-
 return (
 <Layout>
+
 
 
 <>
@@ -38,10 +38,17 @@ return (
         <div className="tile is-12 is-parent">
             <div className="tile is-child box">
                 
-             
-                <p className="title"><h2>{project.frontmatter.title}</h2></p>
+           
+                <p className="title">{project.frontmatter.title}</p>
                   <Link to={"/project/" + project.fields.slug}> 
-                      <Img className="project-box"  fluid={project.frontmatter.thumb.childImageSharp.fluid}/> 
+                  <div className="test">
+                  <Img fluid={project.frontmatter.pixel.childImageSharp.fluid} />
+</div>
+		
+        
+<div className="test-hover">
+<Img  fluid={project.frontmatter.thumb.childImageSharp.fluid} />
+</div>
                   </Link>
                 <p>{project.frontmatter.description}</p>
                 <div className="column is-1 is-pulled-right">
@@ -278,6 +285,13 @@ query myQuery {
             }
           }
         }
+        pixel {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
       fields {
         slug
@@ -290,6 +304,13 @@ query myQuery {
         title
         quote
         thumb {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        pixel {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
@@ -314,6 +335,13 @@ query myQuery {
             }
           }
         }
+        pixel {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
       fields {
         slug
@@ -326,6 +354,13 @@ query myQuery {
         title
         quote
         thumb {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        pixel {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid

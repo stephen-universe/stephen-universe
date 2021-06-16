@@ -8,6 +8,7 @@ quote: "So all respect to the good spirits that may govern in these historians o
 role: "Developer | Designer | UX Research"
 stack: "Drupal Commerce | PHPMyAdmin | SQL | XAMPP"
 tools: "Adobe XD | Illustrator | Photoshop"
+scroll: ../../src/images/scroll-btn.png
 
 ---
 

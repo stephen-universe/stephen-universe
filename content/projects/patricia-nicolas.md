@@ -8,6 +8,7 @@ quote: "Test"
 role: "Designer"
 stack: "Adobe CC | AutoCAD"
 tools: "Photoshop | Illustrator | DreamWeaver | AutoCAD Sketch"
+scroll: ../../src/images/scroll-btn.png
 
 ---
 ![](../../src/images/Patricia-Nicolas-main-logo.jpg)

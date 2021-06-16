@@ -8,6 +8,7 @@ quote: "So all respect to the good spirits that may govern in these historians o
 role: "Designer"
 stack: "Wordpress"
 tools: "Photoshop | Illustrator | InDesign"
+scroll: ../../src/images/scroll-btn.png
 
 ---
 

@@ -34,9 +34,6 @@ export default function Projects(props) {
      </ul>
    </nav>
 
-    <figure className= "">
-        <img className="image" src={data.frontmatter.image} alt="" />
-    </figure>
 
         <blockquote className="blockquote">{data.frontmatter.blockquote}</blockquote>
         
@@ -54,7 +51,10 @@ export default function Projects(props) {
          
          <div dangerouslySetInnerHTML={{__html: data.html}}></div>
        
-<ScrollApp />
+
+    <figure className= "">
+        <img className="image" src={data.frontmatter.image} alt="" />
+    </figure>
 
   </>
     
