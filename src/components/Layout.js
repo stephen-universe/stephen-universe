@@ -28,7 +28,7 @@ export default function Layout(props) {
       
       <div className="">{props.children}</div>
       </div>
-    </section>
+    </section> 
     <ScrollApp />
 
     <Footer />
