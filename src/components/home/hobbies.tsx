@@ -58,7 +58,7 @@ render () {
             <div className="tile is-ancestor">
               <VisibilitySensor partialVisibility offset={{ bottom: -400 }}>
           {({ isVisible }) => (
-              <Spring delay={300} from={{opacity: 0}} to={{opacity: isVisible ? 1 : 0,
+              <Spring delay={300} to={{opacity: isVisible ? 1 : 0,
                 transform: isVisible ? "translateY(0)" : "translateY(50vh)"}}> 
               {styles => (
           <animated.div style={{styles, width: 100 + '%' }} >          

@@ -147,7 +147,7 @@ export default function ProjectPage(props) {
                     <div className="has-text-centered">
     <VisibilitySensor partialVisibility offset={{ bottom: -400 }}>
           {({ isVisible }) => (
-              <Spring delay={2000} config={{ mass: 5, tension: 2000, friction: 500 }} from={{opacity: 0}} to={{opacity: isVisible ? 1 : 0}}> 
+              <Spring delay={2000} config={{ mass: 5, tension: 2000, friction: 500 }} to={{opacity: isVisible ? 1 : 0}}> 
               {styles => (
           <animated.div style={styles}>  
 "But you, you're supposed to change.
@@ -164,7 +164,7 @@ export default function ProjectPage(props) {
 <Link to="/">
 <VisibilitySensor partialVisibility offset={{ bottom: -400 }}>
           {({ isVisible }) => (
-              <Spring delay={3500} config={{ mass: 5, tension: 2000, friction: 700 }} from={{opacity: 0}} to={{opacity: isVisible ? 1 : 0}}> 
+              <Spring delay={3500} config={{ mass: 5, tension: 2000, friction: 700 }} to={{opacity: isVisible ? 1 : 0}}> 
               {styles => (
           <animated.div style={styles}>  
 <span><br />--Greg the Babysitter.</span>
@@ -177,7 +177,7 @@ export default function ProjectPage(props) {
 
 <VisibilitySensor partialVisibility offset={{ bottom: -400 }}>
           {({ isVisible }) => (
-              <Spring delay={4000} config={{ mass: 5, tension: 2000, friction: 800 }} from={{opacity: 0}} to={{opacity: isVisible ? 1 : 0}}> 
+              <Spring delay={4000} config={{ mass: 5, tension: 2000, friction: 800 }} to={{opacity: isVisible ? 1 : 0}}> 
               {styles => (
           <animated.div style={styles}>  
 <span>Steven Universe</span>

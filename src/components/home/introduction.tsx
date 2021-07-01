@@ -45,7 +45,7 @@ export default function Introduction() {
 
    <VisibilitySensor partialVisibility offset={{ top: 100 }}>
           {({ isVisible }) => (
-              <Spring delay={100} config={{ mass: isVisible ? 8 : 0, tension: isVisible ? 2000 : 0, friction: isVisible ? 1000 : 0 }} from={{opacity: 0}} to={{opacity: isVisible ? 1 : 0,
+              <Spring delay={100} config={{ mass: isVisible ? 8 : 0, tension: isVisible ? 2000 : 0, friction: isVisible ? 1000 : 0 }} to={{opacity: isVisible ? 1 : 0,
                 }}> 
               {styles => (
           <animated.div style={styles}>  
@@ -70,7 +70,7 @@ export default function Introduction() {
 
 <VisibilitySensor partialVisibility offset={{ bottom: -100 }}>
           {({ isVisible }) => (
-              <Spring delay={300} config={{ mass: 5 , tension:2000, friction: 1000  }} from={{opacity: 0}} to={{opacity: isVisible ? 1 : 0,
+              <Spring delay={300} config={{ mass: 5 , tension:2000, friction: 1000  }} to={{opacity: isVisible ? 1 : 0,
                 transform: isVisible ? "translateY(0)" : "translateY(50vh)"}}> 
               {styles => (
           <animated.div style={styles}>  

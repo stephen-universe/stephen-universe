@@ -11,7 +11,7 @@ export default function Footer(props) {
 <div className="section-divider"></div> 
 <footer className="footer-bg" alt="Space">
 </footer>
-<div className="footer-bottom-color has-text-centered"> All Right Reserved. Stephen-Universe 2021.</div>
+<div className="footer-bottom-color has-text-centered"> All Right Reserved.</div>
 
 </>
       )
