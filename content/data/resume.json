@@ -1,0 +1,71 @@
+{
+
+    "title": "LogoFolio",
+  "author": "Stephen A. Warren, J.R",
+  "email": "Designer",
+  
+  "introduction": "I would like to reintrodue myself",
+  
+  "skill": {
+  "one": "Adobe CC | AutoCAD",
+  "two": "Adobe CC | AutoCAD",
+  "three": "Adobe CC | AutoCAD",
+  "four": "Adobe CC | AutoCAD",
+  "five": "Adobe CC | AutoCAD",
+  "six": "Adobe CC | AutoCAD",
+  "seven": "Adobe CC | AutoCAD",
+  "eight": "Adobe CC | AutoCAD",
+  "nine": "Adobe CC | AutoCAD",
+  "ten": "Adobe CC | AutoCAD",
+  "eleven": "Adobe CC | AutoCAD",
+  "twelve": "Adobe CC | AutoCAD",
+  "thirteen": "Adobe CC | AutoCAD",
+  "fourteen": "Adobe CC | AutoCAD",
+  "fifteen": "Adobe CC | AutoCAD",
+  "sixteen": "Adobe CC | AutoCAD",
+  "seventeen": "Adobe CC | AutoCAD"
+  },
+  
+  "education" : {
+  "one": "Text",
+  "two": "Text"
+  },
+  
+  "position" : {
+  "one": "Text",
+  "two": "Text",
+  "three": "Text"
+  },
+  
+  "certification" : {
+  "one": "Text",
+  "two": "Text",
+  "three": "Text"
+  },
+  
+  "toolbox" : {
+    "one": "Adobe CC | AutoCAD",
+    "two": "Adobe CC | AutoCAD",
+    "three": "Adobe CC | AutoCAD",
+    "four": "Adobe CC | AutoCAD",
+    "five": "Adobe CC | AutoCAD",
+    "six": "Adobe CC | AutoCAD",
+    "seven": "Adobe CC | AutoCAD",
+    "eight": "Adobe CC | AutoCAD",
+    "nine": "Adobe CC | AutoCAD",
+    "ten": "Adobe CC | AutoCAD",
+    "eleven": "Adobe CC | AutoCAD",
+    "twelve": "Adobe CC | AutoCAD"
+  },
+  
+  "hobby": {
+    "one": "Text",
+    "two": "Text",
+    "three": "Text",
+    "four": "Text",
+    "five": "Text"
+  }
+  
+  }
+  
+  

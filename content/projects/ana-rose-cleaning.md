@@ -4,12 +4,10 @@ date: 2019-08-16T22:37:31.000Z
 title: Ana Rose Cleaning
 author: Stephen Warren
 thumb: ../../src/images/Ana-Rose-home.png
-quote: "So all respect to the good spirits that may govern in these historians of morality! But it’s certainly a pity that they lack the historical spirit itself, that they’ve been left in the lurch by all the good spirits of history! "
+pixel: ../../src/images/CKC-Home.png
 role: "Designer"
 stack: "MongoDB | Express | React | NodeJS | Snipcart | Simplybook.Me"
 tools: "Adobe Photoshop | Adobe Illustrator | Adobe XD | Visual Studio"
-pixel: ../../src/images/CKC-Home.png
-scroll: ../../src/images/scroll-btn.png
 
 ---
 

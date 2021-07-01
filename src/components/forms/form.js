@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Container } from '@material-ui/core';
 
 
 export class UserForm extends Component {
@@ -7,9 +8,9 @@ export class UserForm extends Component {
     firstName: '',
     lastName: '',
     email: '',
-    occupation: '',
+    budget: '',
     city: '',
-    bio: '',
+    number: '',
     message: '',
     option: '',
     additionalOptions: ''
@@ -38,8 +39,8 @@ export class UserForm extends Component {
 
   render() {
     const { step } = this.state;
-    const { firstName, lastName, email, message, option, additionalOptions, occupation, city, bio } = this.state;
-    const values = { firstName, lastName, email, message, option, additionalOptions, occupation, city, bio };
+    const { firstName, lastName, email, message, option, additionalOptions, budget, city, number } = this.state;
+    const values = { firstName, lastName, email, message, option, additionalOptions, budget, city, number };
 
     switch (step) {
       case 1:
@@ -112,7 +113,7 @@ export class FormUserDetails extends Component {
           <input 
           className="input" 
           type="text" 
-          placeholder="Enter Your First Name"
+          placeholder="Enter Your Name"
           name="firstName"
           onChange={handleChange('firstName')}
           defaultValue={values.firstName}
@@ -121,8 +122,23 @@ export class FormUserDetails extends Component {
   </div>
   
   <input type="hidden" name="bot-field" />
+
   
+
   <div className="field">
+              <label className="label">Number</label>
+              <div className="control">
+                  <input className="input" type="number" placeholder="Enter Your Phone Number" name="Number"
+                    onChange={handleChange('number')} defaultValue={values.number} margin="normal"/>
+                          
+      <input type="hidden" name="bot-field" />
+                      <span className="icon is-small is-left">
+                          <i className="fas fa-envelope"></i>
+                      </span> 
+              </div>
+          </div>
+  
+<div className="field">
       <label className="label">Email</label>
       <div className="control">
           <input className="input" type="email" 
@@ -139,74 +155,51 @@ export class FormUserDetails extends Component {
               </span> 
       </div>
   </div>
+  
 
+  <div className="d-none">
   <div className="field">
-      <label className="label">Please select your gender:</label>
+              <label className="label">Budget (optional)</label>
+              <div className="control">
+              <input className="input" name="Budget" type="number" placeholder="Enter Your Budget"
+                  onChange={handleChange('budget')} defaultValue={values.budget} margin="normal" />
+              </div>
+          </div>
+          
+
+         
+          <div className="field">
+          <label className="label">Project Type</label>
       <div className="control">
           <div className="radio"
-          onChange={handleChange('option')}
-          defaultValue={values.option}>
-                <input type="radio" id="male" name="gender" value="male" />
-                <label for="male">Male</label><br/>
-                <input type="radio" id="female" name="gender" value="female" />
-                <label for="female">Female</label><br/>
-                <input type="radio" id="other" name="gender" value="other" />
-                <label for="other">Other</label><br/>
+          onChange={handleChange('additionalOptions')}
+          defaultValue={values.additionalOptions}>
+             <label for="cars">Choose A Service:</label> <br/>
+  <select name="services" id="services">
+  <option value="none">Select A Service</option>
+    <option value="general">General Question</option>
+    <option value="ux-design">UX Design</option>
+    <option value="web-development">Web Development</option>
+    <option value="corportate-identity/logo">Corporate Identity/Logo</option>
+    <option value="graphic-design">Graphic Design</option>
+    <option value="print-design">Print Design</option>
+    <option value="typography">Typography</option>
+    <option value="seo">Search Engine Optimization</option>
+    <option value="marketing">Marketing</option>
+  </select>
+               
           </div>
       </div>
-  </div>
-  
-  
-  <div className="field">
+      </div>
+
+          
+      <div className="field">
       <label className="label">Message</label>
       <div className="control">
           <textarea className="textarea" name="Message" onChange={handleChange('message')}
             defaultValue={values.message} placeHolder="Textarea"></textarea>
       </div>
   </div>
-
-  
-
-  <div className="d-none">
-  <div className="field">
-              <label className="label">Occupation</label>
-              <div className="control">
-              <input className="input" name="Occupation" type="text" placeholder="Enter Your Occupation"
-                  onChange={handleChange('occupation')} defaultValue={values.occupation} margin="normal" />
-              </div>
-          </div>
-          
-          <div className="field">
-              <label className="label">Bio</label>
-              <div className="control">
-                  <input className="input" type="bio" placeholder="Enter Your Email" name="Bio"
-                    onChange={handleChange('bio')} defaultValue={values.bio} margin="normal"/>
-                          
-      <input type="hidden" name="bot-field" />
-                      <span className="icon is-small is-left">
-                          <i className="fas fa-envelope"></i>
-                      </span> 
-              </div>
-          </div>
-          
-          <div className="field">
-              <label className="label">Please select your age:</label>
-              <div className="control">
-                  <div className="radio" 
-                    onChange={handleChange('additionalOptions')}
-                    defaultValue={values.additionaloptions}>
-                    <input type="radio" id="age1" name="age" value="30" />
-                    <label for="age1">0 - 30</label><br/>
-                    <input type="radio" id="age2" name="age" value="60" />
-                    <label for="age2">31 - 60</label><br />  
-                    <input type="radio" id="age3" name="age" value="100" />
-                    <label for="age3">61 - 100</label><br/>
-                  </div>
-              </div>
-          </div>
-
-
-
 
 
 
@@ -261,44 +254,48 @@ export class FormPersonalDetails extends Component {
           <div className="column is-6 ">
           <input type="hidden" name="form-name" value="Initialize Contact Form" />    
           <input type="hidden" name="bot-field" />
+
               <div className="field">
-              <label className="label">Occupation</label>
+              <label className="label">Budget</label>
               <div className="control">
-              <input className="input" name="Occupation" type="text" placeholder="Enter Your Occupation"
-                  onChange={handleChange('occupation')} defaultValue={values.occupation} margin="normal" />
+              <input className="input" name="Budget" type="number" placeholder="Enter Your Budget Amount"
+                  onChange={handleChange('budget')} defaultValue={values.budget} margin="normal" />
               </div>
           </div>
           
+         
           <div className="field">
-              <label className="label">Bio</label>
-              <div className="control">
-                  <input className="input" type="bio" placeholder="Enter Your Email" name="Bio"
-                    onChange={handleChange('bio')} defaultValue={values.bio} margin="normal"/>
-                          
-      <input type="hidden" name="bot-field" />
-                      <span className="icon is-small is-left">
-                          <i className="fas fa-envelope"></i>
-                      </span> 
-              </div>
+          <label className="label">Project Type</label>
+      <div className="control">
+          <div className="radio"
+          onChange={handleChange('additionalOptions')}
+          defaultValue={values.additionalOptions}>
+             <label for="cars">Choose A Service:</label> <br/>
+  <select name="services" id="services">
+  <option value="none">Select A Service</option>
+    <option value="ux-design">UX Design</option>
+    <option value="web-development">Web Development</option>
+    <option value="corportate-identity/logo">Corporate Identity/Logo</option>
+    <option value="graphic-design">Graphic Design</option>
+    <option value="print-design">Print Design</option>
+    <option value="typography">Typography</option>
+    <option value="seo">Search Engine Optimization</option>
+    <option value="marketing">Marketing</option>
+  </select>
+               
           </div>
-          
+      </div>
+      </div>
+
+
           <div className="field">
-              <label className="label">Subject</label>
-              <div className="control">
-                  <div className="radio" 
-                    onChange={handleChange('additionalOptions')}
-                    defaultValue={values.additionaloptions}>
-                    <p>Please select your age:</p>
-                    <input type="radio" id="age1" name="age" value="30" />
-                    <label for="age1">0 - 30</label><br/>
-                    <input type="radio" id="age2" name="age" value="60" />
-                    <label for="age2">31 - 60</label><br />  
-                    <input type="radio" id="age3" name="age" value="100" />
-                    <label for="age3">61 - 100</label><br/>
-                  </div>
-              </div>
-          </div>
-          
+      <label className="label">Message</label>
+      <div className="control">
+          <textarea className="textarea" name="Message" onChange={handleChange('message')}
+            defaultValue={values.message} placeHolder="Textarea"></textarea>
+      </div>
+  </div>
+
           
           <div className="field is-grouped is-grouped-centered">
           <div className="control">
@@ -349,7 +346,7 @@ export class Confirm extends Component {
         
         
       const {
-        values: { firstName, additionalOptions, message, email, occupation, option, bio }
+        values: { firstName, additionalOptions, message, email, budget, option, number }
       } = this.props;
 
  
@@ -387,12 +384,7 @@ export class Confirm extends Component {
       </div>
   </div>
   
-  <div className="field">
-      <label className="label">Subject</label>
-      <div className="control">
-      <input className="input" type="text" margin="normal" value={option}/>              
-      </div>
-  </div>
+
   
   
   <div className="field">
@@ -405,17 +397,17 @@ export class Confirm extends Component {
 
   <input type="hidden" name="bot-field" />
               <div className="field">
-              <label className="label">Occupation</label>
+              <label className="label">Budget</label>
               <div className="control">
-              <input className="input" type="text" name="Occupation" value={occupation} placeholder="Enter Your Occupation" 
+              <input className="input" type="text" name="Budget" value={budget} placeholder="Enter Your Budget Amount" 
                   margin="normal" />
               </div>
           </div>
           
           <div className="field">
-              <label className="label">Bio</label>
+              <label className="label">Number</label>
               <div className="control">
-                  <input className="input" name="Bio" type="bio" value={bio} placeholder="Enter Your Email" 
+                  <input className="input" name="Number" type="number" value={number} placeholder="Enter Your Email" 
                     margin="normal"/>
                       <span className="icon is-small is-left">
                           <i className="fas fa-envelope"></i>
@@ -424,7 +416,7 @@ export class Confirm extends Component {
           </div>
           
           <div className="field">
-            <label className="label">Subject</label>
+            <label className="label">Project Type</label>
                 <div className="control">
                     <input className="input" type="text" name="Option" margin="normal" value={additionalOptions}/>              
                 </div>
@@ -434,20 +426,82 @@ export class Confirm extends Component {
          
   
 
+<section className="section">  
+  <div className="columns is-centered">
+  <div className="column is-6">
+<div className="container">
+     <label className="label has-text-centered py-5" name="Details">Please Confirm</label>
 
-  
-              <label className="label" name="Details">Confirm User Data</label>
-        
-              <li type="text"  name="Name"
-          placeholder="Enter Your First Name"
-          name="First Name">{firstName} </li>
-          <li>{message}</li>
-          <li>{option}</li>
-          <li>{email}</li>
-          <li>{additionalOptions}</li>
-          <li>{bio}</li>
-  
-              <div className="field is-grouped is-grouped-centered">
+     <div class="field is-horizontal">
+  <div class="field-label  ">
+    <label class="label">Name</label>
+  </div>
+  <div class="field-body">
+    <div class="field">
+      {firstName}
+    </div>
+  </div>
+</div>
+
+<div class="field is-horizontal">
+  <div class="field-label  ">
+    <label class="label">Email</label>
+  </div>
+  <div class="field-body">
+    <div class="field">
+      {email}
+    </div>
+  </div>
+</div>
+
+<div class="field is-horizontal">
+  <div class="field-label  ">
+    <label class="label">Number</label>
+  </div>
+  <div class="field-body">
+    <div class="field">
+      {number}
+    </div>
+  </div>
+</div>
+
+
+<div class="field is-horizontal">
+  <div class="field-label  ">
+    <label class="label">Budget</label>
+  </div>
+  <div class="field-body">
+    <div class="field">
+      {budget}
+    </div>
+  </div>
+</div>
+
+
+<div class="field is-horizontal">
+  <div class="field-label  ">
+    <label class="label">Service</label>
+  </div>
+  <div class="field-body">
+    <div class="field">
+      {additionalOptions}
+    </div>
+  </div>
+</div>
+
+<div class="field is-horizontal">
+  <div class="field-label  ">
+    <label class="label">Message</label>
+  </div>
+  <div class="field-body">
+    <div class="field">
+    {message}
+    </div>
+  </div>
+</div>
+    
+
+              <div className="field is-grouped is-grouped-centered py-5">
           <div className="control">
                   <button className="button is-link is-light"  
                   color="secondary"
@@ -465,6 +519,11 @@ export class Confirm extends Component {
                       >Submit</button>
               </div>
           </div>
+          </div>
+          </div>
+          </div>
+          </section>
+
           </form>
           </>
   

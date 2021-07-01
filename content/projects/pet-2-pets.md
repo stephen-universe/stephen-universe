@@ -4,11 +4,10 @@ date: 2019-07-22T22:44:38Z
 title: Pet2Pets
 author: Stephen A. Warren, J.R
 thumb: ../../src/images/Pet2Pets-Home.jpg
-quote: "So all respect to the good spirits that may govern in these historians of morality! But it’s certainly a pity that they lack the historical spirit itself, that they’ve been left in the lurch by all the good spirits of history! "
+pixel: ../../src/images/P2P-home-pixel.jpg
 role: "Developer | Designer | UX Research"
 stack: "Drupal Commerce | PHPMyAdmin | SQL | XAMPP"
 tools: "Adobe XD | Illustrator | Photoshop"
-scroll: ../../src/images/scroll-btn.png
 
 ---
 

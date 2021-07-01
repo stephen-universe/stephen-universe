@@ -1,29 +1,26 @@
 import React from "react"
-import Header from "./Header"
+import Resume from "../components/resume"
+import Navigation from "./navigation"
 import Helmet from "react-helmet"
-import useSiteMetadata from "../static_queries/useSiteMetadata"
+import useResumeData from "../static_queries/useResumeData"
 import Footer from "./footer"
 import ScrollApp from "./buttons"
 import { Container } from "@material-ui/core"
 
 export default function Layout(props) {
-  const { title, description } = useSiteMetadata()
+  const { title, description } = useResumeData()
   return (
     <>
-     <div className="header-top-color"> </div>
+     <div className="header-top-color"> <Resume /> </div>
      <div className="background" alt="Space" >
-     <Container>
-    <Header page={props.page} title={title} />
-    </Container>
+     <div className="section-divider"></div> 
+     <div className="container">
+    <Navigation page={props.page} title={title} />
+    </div>
     </div>
    
-    <section
-      className="" 
-      style={{
-        backgroundColor: props.bgColor,
-      }}
-    >
-      <Container>
+    <section className="" >
+      <div className="container">
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -31,7 +28,7 @@ export default function Layout(props) {
       </Helmet>
       
       <div className="">{props.children}</div>
-      </Container>
+      </div>
     </section>
     <ScrollApp />
 

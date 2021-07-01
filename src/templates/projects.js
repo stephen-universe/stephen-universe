@@ -1,13 +1,15 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import useProjectData from '../static_queries/useProjectData'
 import ScrollApp, { GoBack } from "../components/buttons"
+import Resume from "../components/resume"
+import Footer from "../components/footer"
 //this component handles the blur img & fade-ins
 
 export default function Projects(props) {
   const data = props.data.markdownRemark
   const allProjectData = useProjectData()
-  const nextSlug = getNextSlug(data.fields.slug)
+
 
 
   function getNextSlug(slug) {
@@ -22,21 +24,22 @@ export default function Projects(props) {
     }
   }
 
+
+
+
   return (
    <>
+ <div className="header-top-color"> <Resume /> </div>
+  <div className="section-divider"></div> 
 
+
+   <section className="main-body-bg">
+<div className="container">
+<section className="section">
    <GoBack />
+   </section>
 
-   <nav className="breadcrumb" aria-label="breadcrumbs">
-     <ul>
-     <li><Link to="/">Home</Link></li>
-       <li><Link to="/projects">Projects</Link></li>
-     </ul>
-   </nav>
-
-
-        <blockquote className="blockquote">{data.frontmatter.blockquote}</blockquote>
-        
+   <section className="section">
         <div className= "title is-medium">
           <h1>{data.frontmatter.title}</h1></div> 
             <h3>Project Date: {data.frontmatter.date}</h3>
@@ -55,7 +58,11 @@ export default function Projects(props) {
     <figure className= "">
         <img className="image" src={data.frontmatter.image} alt="" />
     </figure>
-
+    </section>
+    </div>
+</section>
+<Footer />
+<ScrollApp />
   </>
     
   )
@@ -74,7 +81,6 @@ export const getPostData = graphql`
         title
         author
         date(formatString: "MMMM Do, YYYY")
-        quote
         role
         stack
         tools

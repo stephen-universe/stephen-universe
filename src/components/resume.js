@@ -5,10 +5,11 @@ import "../styles/style.scss"
 
 export default function Resume(props) {
       return (
+        <>
 
-<footer className="footer">
+<div className="container">
 <h1>
-<Link to={
+<Link className="resume-link" style={{paddingLeft: 30 + "px", paddingRight: 30 + "px", float: "right"}} to={
     props.page === 'resume'
       ? "/"
       : "/resume"
@@ -20,7 +21,9 @@ export default function Resume(props) {
     : "resume"}
 </Link>
 </h1>
-</footer>
+</div>
+
+</>
 
       )
 }

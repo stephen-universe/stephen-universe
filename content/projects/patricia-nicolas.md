@@ -3,12 +3,11 @@ id: 8
 date: 2019-08-13T22:40:32Z
 title: Patricia Nicolas
 author: Stephen A. Warren, J.R
-thumb: ../../src/images/Patricia-Nicolas-home.png
-quote: "Test"
+thumb: ../../src/images/Patricia-Nicolas-main-logo.jpg
+pixel: ../../src/images/Patricia-Nicolas-main-logo-pixel.jpg
 role: "Designer"
 stack: "Adobe CC | AutoCAD"
 tools: "Photoshop | Illustrator | DreamWeaver | AutoCAD Sketch"
-scroll: ../../src/images/scroll-btn.png
 
 ---
 ![](../../src/images/Patricia-Nicolas-main-logo.jpg)
