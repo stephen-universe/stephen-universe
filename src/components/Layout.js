@@ -5,7 +5,6 @@ import Helmet from "react-helmet"
 import useResumeData from "../static_queries/useResumeData"
 import Footer from "./footer"
 import ScrollApp from "./buttons"
-import { Container } from "@material-ui/core"
 
 export default function Layout(props) {
   const { title, description } = useResumeData()
