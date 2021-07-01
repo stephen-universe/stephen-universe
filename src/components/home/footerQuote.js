@@ -6,6 +6,7 @@ import { Link } from "gatsby"
 export default function FooterQuote () {
   return (
 
+    
     <>
     <div className="has-text-centered">
     <VisibilitySensor partialVisibility offset={{ bottom: -400 }}>
