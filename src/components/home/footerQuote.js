@@ -11,7 +11,7 @@ export default function FooterQuote () {
     <div className="has-text-centered">
     <VisibilitySensor partialVisibility offset={{ bottom: -400 }}>
           {({ isVisible }) => (
-              <Spring delay={2000} config={{ mass: 5, tension: 2000, friction: 500 }} to={{opacity: isVisible ? 1 : 0}}> 
+              <Spring > 
               {styles => (
           <animated.div style={styles}>  
 "But you, you're supposed to change.
