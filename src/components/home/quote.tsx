@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import {Spring, animated, useTrail, a} from 'react-spring'
-import VisibilitySensor from "react-visibility-sensor"
+import VisibilitySensor from '../VisibilitySensor'
 
 
 
@@ -11,7 +11,7 @@ export default function Quote () {
     <div className="mt-6 orange bold has-text-centered">
     <VisibilitySensor partialVisibility offset={{ bottom: -400 }}>
           {({ isVisible }) => (
-              <Spring delay={800} config={{ mass: 5, tension: 2000, friction: 500 }} from={{opacity: 0}} to={{opacity: 1 }}> 
+              <Spring delay={800} config={{ mass: 5, tension: 2000, friction: 500 }} to={{opacity: isVisible ? 1 : 0}}> 
               {styles => (
           <animated.div style={styles}>  
 <span>When a Gem is made, it's for a reason.</span>
