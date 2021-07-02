@@ -1,10 +1,11 @@
-import React from "react"
+import React, {Component} from "react"
 import {Spring, animated} from '@react-spring/web'
 import VisibilitySensor from "../VisibilitySensor"
 
 
 
-export default function Quote () {
+class Quote extends Component {
+    render () {
   return (
 
     <>
@@ -67,13 +68,30 @@ export default function Quote () {
 </VisibilitySensor>
 </div>
 
+<ChainExample />
 </>
     )
 }
+}
 
+export default Quote
 
-
-
-
+class ChainExample extends Component {
+    render() {
+      return (
+        <Spring
+          loop
+          from={{ opacity: 0, color: 'red' }}
+          to={[
+            { opacity: 1, color: '#ffaaee' },
+            { opacity: 0, color: 'rgb(14,26,19)' },
+          ]}>
+          {styles => (
+            <animated.div style={styles}>I will fade in and out</animated.div>
+          )}
+        </Spring>
+      )
+    }
+  }
     
 
