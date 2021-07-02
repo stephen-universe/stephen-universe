@@ -8,7 +8,7 @@ const Trail: React.FC<{ open: boolean }> = ({ open, children }) => {
   const items = React.Children.toArray(children)
   const trail = useTrail(items.length, {
     config: { mass: 5, tension: 2000, friction: 500 },
-    opacity: open ? 1 : 0,
+    opacity: open ? 1 : 0 ,
     x: open ? 0 : 20,
     height: open ? 110 : 0,
     from: { opacity: 0, x: 20, height: 0 },
@@ -36,16 +36,8 @@ export default function Introduction() {
   <>
 
 
-<div className="is-horizontal-center">
-  <div className="container">
-    <img src=" "/>
-  </div>
-</div>
 
-
-   <VisibilitySensor partialVisibility offset={{ top: 100 }}>
-          {({ isVisible }) => (
-              <Spring delay={100} config={{ mass: isVisible ? 8 : 0, tension: isVisible ? 2000 : 0, friction: isVisible ? 1000 : 0 }} to={{opacity: isVisible ? 1 : 0,
+              <Spring delay={100} config={{ mass: 8 , tension: 2000 , friction: 1000  }} to={{opacity: 1 ,
                 }}> 
               {styles => (
           <animated.div style={styles}>  
@@ -62,16 +54,14 @@ export default function Introduction() {
 </animated.div>
               )}
               </Spring>
-)}
-</VisibilitySensor>
 
 
 
 
 <VisibilitySensor partialVisibility offset={{ bottom: -100 }}>
           {({ isVisible }) => (
-              <Spring delay={300} config={{ mass: 5 , tension:2000, friction: 1000  }} to={{opacity: isVisible ? 1 : 0,
-                transform: isVisible ? "translateY(0)" : "translateY(50vh)"}}> 
+              <Spring delay={300} config={{ mass: 5 , tension:2000, friction: 1000  }} to={{opacity: 1,
+                transform: "translateY(50vh)"}}> 
               {styles => (
           <animated.div style={styles}>  
 <div className="orange" style={{textAlign: 'right', fontSize: 1.1 + 'rem'}}>
