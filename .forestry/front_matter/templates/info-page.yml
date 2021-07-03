@@ -52,8 +52,56 @@ fields:
     schema:
       format: markdown
   label: introduction
-- name: skill
+- name: educationOne
   type: field_group_list
+  fields:
+  - name: school
+    type: text
+    config:
+      required: false
+    label: school
+  - name: location
+    type: text
+    config:
+      required: false
+    label: location
+  - name: degree
+    type: text
+    config:
+      required: false
+    label: degree
+  - name: date
+    type: datetime
+    label: date
+    description: ''
+    config:
+      required: false
+      date_format: 
+      time_format: 
+      display_utc: false
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: educationOne
+- name: toolbox
+  type: field_group
+  config: {}
+  fields:
+  - name: one
+    type: text
+    config:
+      required: false
+    label: one
+  - name: two
+    type: text
+    config:
+      required: false
+    label: two
+  label: toolbox
+- name: skill
+  type: field_group
+  config: {}
   fields:
   - name: one
     type: text
@@ -115,82 +163,6 @@ fields:
     config:
       required: false
     label: twelve
-  - name: thirteen
-    type: text
-    config:
-      required: false
-    label: thirteen
-  - name: fourteen
-    type: text
-    config:
-      required: false
-    label: fourteen
-  - name: fifteen
-    type: text
-    config:
-      required: false
-    label: fifteen
-  - name: sixteen
-    type: text
-    config:
-      required: false
-    label: sixteen
-  - name: seventeen
-    type: text
-    config:
-      required: false
-    label: seventeen
-  config:
-    min: 
-    max: 
-    labelField: 
   label: skill
-- name: educationOne
-  type: field_group_list
-  fields:
-  - name: school
-    type: text
-    config:
-      required: false
-    label: school
-  - name: location
-    type: text
-    config:
-      required: false
-    label: location
-  - name: degree
-    type: text
-    config:
-      required: false
-    label: degree
-  - name: date
-    type: datetime
-    label: date
-    description: ''
-    config:
-      required: false
-      date_format: 
-      time_format: 
-      display_utc: false
-  config:
-    min: 
-    max: 
-    labelField: 
-  label: educationOne
-- name: toolbox
-  type: field_group
-  config: {}
-  fields:
-  - name: one
-    type: text
-    config:
-      required: false
-    label: one
-  - name: two
-    type: text
-    config:
-      required: false
-    label: two
-  label: toolbox
 pages:
 - content/data/info.json
