@@ -142,21 +142,6 @@ fields:
       required: false
     label: year
   label: educationOne
-- name: toolbox
-  type: field_group
-  config: {}
-  fields:
-  - name: one
-    type: text
-    config:
-      required: false
-    label: one
-  - name: two
-    type: text
-    config:
-      required: false
-    label: two
-  label: toolbox
 - name: educationTwo
   type: field_group_list
   fields:
@@ -185,5 +170,55 @@ fields:
     max: 
     labelField: 
   label: educationTwo
+- name: toolbox
+  type: field_group
+  config: {}
+  fields:
+  - name: one
+    type: text
+    config:
+      required: false
+    label: one
+  - name: two
+    type: text
+    config:
+      required: false
+    label: two
+  label: toolbox
+- name: certification
+  type: field_group
+  config: {}
+  fields:
+  - name: certificationOne
+    type: field_group
+    config: {}
+    fields:
+    - name: title
+      type: text
+      config:
+        required: false
+      label: title
+    - name: completion
+      type: text
+      config:
+        required: false
+      label: completion
+    label: certificationOne
+  - name: certificationTwo
+    type: field_group
+    config: {}
+    fields:
+    - name: title
+      type: text
+      config:
+        required: false
+      label: title
+    - name: completion
+      type: text
+      config:
+        required: false
+      label: completion
+    label: certificationTwo
+  label: certification
 pages:
 - content/data/info.json
