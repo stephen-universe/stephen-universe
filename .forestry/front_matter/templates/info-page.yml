@@ -75,6 +75,71 @@ fields:
     config:
       required: false
     label: four
+  - name: five
+    type: text
+    config:
+      required: false
+    label: five
+  - name: six
+    type: text
+    config:
+      required: false
+    label: six
+  - name: seven
+    type: text
+    config:
+      required: false
+    label: seven
+  - name: eight
+    type: text
+    config:
+      required: false
+    label: eight
+  - name: nine
+    type: text
+    config:
+      required: false
+    label: nine
+  - name: ten
+    type: text
+    config:
+      required: false
+    label: ten
+  - name: eleven
+    type: text
+    config:
+      required: false
+    label: eleven
+  - name: twelve
+    type: text
+    config:
+      required: false
+    label: twelve
+  - name: thirteen
+    type: text
+    config:
+      required: false
+    label: thirteen
+  - name: fourteen
+    type: text
+    config:
+      required: false
+    label: fourteen
+  - name: fifteen
+    type: text
+    config:
+      required: false
+    label: fifteen
+  - name: sixteen
+    type: text
+    config:
+      required: false
+    label: sixteen
+  - name: seventeen
+    type: text
+    config:
+      required: false
+    label: seventeen
   config:
     min: 
     max: 
