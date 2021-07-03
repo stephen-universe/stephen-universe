@@ -6,27 +6,25 @@
     "email": "info@stephen-universe.com",
     "github": "jayareX7"
   },
-  
   "introduction": "HIGHLY SKILLED DEVELOPER, WITH TALENTS IN CREATING CONTENT MANAGEMENT SYSTEMS & WEB BASED APPLICATIONS -- SPENDING MORE THAN 10 YEARS ASSISTING CLIENTS IN A VARIETY OF MULTIMEDIA PROJECTS WITH THE PURPOSE OF INCREASING USER INTERACTIONS AND OVERALL SALES.",
-  
   "skill": {
-  "one": "Brand Identity",
-  "two": "Color Theory",
-  "three": "Typography",
-  "four": "Illustration",
-  "five": "Animation",
-  "six": "Cinematography",
-  "seven": "HTML5",
-  "eight": "CSS3",
-  "nine": "JavaScript",
-  "ten": "SCSS",
-  "eleven": "JQuery*",
-  "twelve": "User Stories",
-  "thirteen": "Wireframing",
-  "fourteen": "Prototyping",
-  "fifteen": "Usability",
-  "sixteen": "Analytics",
-  "seventeen": "Marketing"
+    "one": "Brand Identity",
+    "two": "Color Theory",
+    "three": "Typography",
+    "four": "Illustration",
+    "five": "Animation",
+    "six": "Cinematography",
+    "seven": "HTML5",
+    "eight": "CSS3",
+    "nine": "JavaScript",
+    "ten": "SCSS",
+    "eleven": "JQuery*",
+    "twelve": "User Stories",
+    "thirteen": "Wireframing",
+    "fourteen": "Prototyping",
+    "fifteen": "Usability",
+    "sixteen": "Analytics",
+    "seventeen": "Marketing"
   },
   
 "education" : {
@@ -54,8 +52,7 @@
     "descriptionTwo": "~ MAINTAINED WEEKLY TASK THAT INCLUDED WEB MANAGEMENT, MARKETING, SEO, GRAPHIC DESIGN, VIDEO EDITING, AND ILLUSTRATIONS. ~ OVERSAW ALL GRAPHIC & PRINT DESIGN ~ INCREASED BRAND RECOGNITION AND SALES THROUGH SOCIAL MEDIA MARKETING. RESEARCHED, PLANNED AND DESIGNED A FULLY FUNCTIONAL WEB APPLICATION. ~ DEVELOPED A SERVERLESS CMS FOR CONTENT MANAGEMENT ON BOTH WEB AND MOBILE APPLICATIONS.",
     "descriptionThree": "~ CREATED MONTHLY DATA REPORTS. ~ ESTABLISHED A BETTER USER EXPERIENCE BY COLLECTING ANALYTIC DATA FROM AD IMPRESSIONS, REACH, AND SESSIONS. ~ VERBALIZED AND REPORTED ALL TECHNICAL REQUIREMENTS TO STAKEHOLDERS, OWNERS, AND/OR MANAGEMENT."
   },
-
-  "jobTwo" : {
+  "jobTwo": {
     "title": "Jen & Co",
     "location": "Atlanta, Ga",
     "position": "Web Administrator",
@@ -66,11 +63,11 @@
 
   "certification" : {
   "certificationOne": {
-    "title" : "Google AdWords",
+    "title": "Google AdWords",
     "completion": "2019; 2020; 2021"
   },
   "certificationTwo": {
-    "title" : "Google Analytics",
+    "title": "Google Analytics",
     "completion": "2019; 2020; 2021"
     },
     "certificationThree": {
@@ -98,7 +95,6 @@
     "fifteen": "ExpressJS",
     "sixteen": "NodeJS"
   },
-  
   "hobby": {
     "one": "Drawing",
     "two": "Editing",
@@ -107,7 +103,4 @@
     "five": "Reading",
     "six" : "Investing"
   }
-  
-  }
-  
-
+}

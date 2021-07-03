@@ -1,7 +1,7 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: ''
+admin_path: "/admin"
 webhook_url: 
 sections:
 - type: heading
@@ -25,8 +25,8 @@ sections:
 - type: document
   path: config.json
   label: Site Info
-upload_dir: content/images
-public_path: "/content/images"
+upload_dir: src/images
+public_path: "/src/images"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
