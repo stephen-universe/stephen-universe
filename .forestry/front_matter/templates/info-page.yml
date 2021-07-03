@@ -52,38 +52,6 @@ fields:
     schema:
       format: markdown
   label: introduction
-- name: educationOne
-  type: field_group_list
-  fields:
-  - name: school
-    type: text
-    config:
-      required: false
-    label: school
-  - name: location
-    type: text
-    config:
-      required: false
-    label: location
-  - name: degree
-    type: text
-    config:
-      required: false
-    label: degree
-  - name: date
-    type: datetime
-    label: date
-    description: ''
-    config:
-      required: false
-      date_format: 
-      time_format: 
-      display_utc: false
-  config:
-    min: 
-    max: 
-    labelField: 
-  label: educationOne
 - name: toolbox
   type: field_group
   config: {}
@@ -164,5 +132,30 @@ fields:
       required: false
     label: twelve
   label: skill
+- name: educationone
+  type: field_group
+  config: {}
+  fields:
+  - name: school
+    type: text
+    config:
+      required: false
+    label: school
+  - name: location
+    type: text
+    config:
+      required: false
+    label: location
+  - name: degree
+    type: text
+    config:
+      required: false
+    label: degree
+  - name: year
+    type: text
+    config:
+      required: false
+    label: year
+  label: educationOne
 pages:
 - content/data/info.json
