@@ -28,7 +28,7 @@ export default function Info({ data }) {
           </li>
           <li>
             <p>
-              <a href={`https://github.com/${infoData.contact.github_handle}`}>Github: {infoData.contact.github_handle}</a>
+              <a href={`https://github.com/${infoData.contact.github}`}>Github: www.github.com/{infoData.contact.github}</a>
             </p>
           </li>
         </ul>
@@ -112,24 +112,24 @@ export default function Info({ data }) {
           <div className="tile is-parent">
               <div className="tile is-child ">
                 <p className="title">Education</p>
-                  <span className="pt-5 bold subtitle">{infoData.educationOne.school}</span>
+                  <span className="pt-5 bold subtitle">{infoData.education.educationOne.school}</span>
                     <span className="right bold italicize">
-                      {infoData.educationOne.location}</span>
+                      {infoData.education.educationOne.location}</span>
 
-                  <span className="pt-5 orange">{infoData.educationOne.degree}</span>
+                  <span className="pt-5 orange">{infoData.education.educationOne.degree}</span>
                     <span className="right orange italicize">
-                      {infoData.educationOne.year}</span>
+                      {infoData.education.educationOne.year}</span>
 
                       <br />
                       <br />
 
-                  <span className="pt-5 bold subtitle">{infoData.educationTwo.school}</span>
+                  <span className="pt-5 bold subtitle">{infoData.education.educationTwo.school}</span>
                     <span className="right bold italicize">
-                      {infoData.educationTwo.location}</span>
+                      {infoData.education.educationTwo.location}</span>
 
-                  <span className="pt-5 orange">{infoData.educationTwo.degree}</span>
+                  <span className="pt-5 orange">{infoData.education.educationTwo.degree}</span>
                     <span className="right orange italicize">
-                      {infoData.educationTwo.year}</span>
+                      {infoData.education.educationTwo.year}</span>
               </div>
           </div>
       </div>
@@ -141,10 +141,10 @@ export default function Info({ data }) {
           <div className="tile is-parent">
               <div className="tile is-child ">
                 <p className="title">Certification</p>
-                <p className="bold">{infoData.certificationOne.title} 
-                  <span className="right orange italicize">{infoData.certificationOne.completion}</span></p>
-                  <p className="bold">{infoData.certificationTwo.title} 
-                  <span className="right orange italicize">{infoData.certificationTwo.completion}</span></p>
+                <p className="bold">{infoData.certification.certificationOne.title} 
+                  <span className="right orange italicize">{infoData.certification.certificationOne.completion}</span></p>
+                  <p className="bold">{infoData.certification.certificationTwo.title} 
+                  <span className="right orange italicize">{infoData.certification.certificationTwo.completion}</span></p>
               </div>
           </div>
         </div>
@@ -168,35 +168,35 @@ export default function Info({ data }) {
           <div className="tile is-parent">
               <div className="tile is-child ">
               <p className="title">Experience</p>
-                  <span className="pt-5 bold subtitle">{infoData.jobOne.title}</span>
+                  <span className="pt-5 bold subtitle">{infoData.employer.jobOne.title}</span>
                     <span className="right bold italicize">
-                      {infoData.jobOne.location}</span>
+                      {infoData.employer.jobOne.location}</span>
                       <br/>
-                    <span className="pt-5 orange subtitle">{infoData.jobOne.position}</span>
-                      <span className="right orange italicize">{infoData.jobOne.date}</span>
+                    <span className="pt-5 orange subtitle">{infoData.employer.jobOne.position}</span>
+                      <span className="right orange italicize">{infoData.employer.jobOne.date}</span>
                       <br/>
                       <br/>
                       <ul className="justify">
-                        <li>{infoData.jobOne.descriptionOne}</li>
+                        <li>{infoData.employer.jobOne.descriptionOne}</li>
                         <br/>
-                        <li>{infoData.jobOne.descriptionTwo}</li>
+                        <li>{infoData.employer.jobOne.descriptionTwo}</li>
                         <br/>
-                        <li>{infoData.jobOne.descriptionThree}</li>
+                        <li>{infoData.employer.jobOne.descriptionThree}</li>
                       </ul>
 
                     <br />
                     <br />
 
-                  <span className="pt-5 bold subtitle">{infoData.jobTwo.title}</span>
+                  <span className="pt-5 bold subtitle">{infoData.employer.jobTwo.title}</span>
                     <span className="right bold italicize">
-                      {infoData.jobTwo.location}</span>
+                      {infoData.employer.jobTwo.location}</span>
                       <br/>
-                    <span className="pt-5 subtitle orange">{infoData.jobTwo.position}</span>
-                      <span className="right italicize orange">{infoData.jobTwo.date}</span>
+                    <span className="pt-5 subtitle orange">{infoData.employer.jobTwo.position}</span>
+                      <span className="right italicize orange">{infoData.employer.jobTwo.date}</span>
                       <br/>
                       <br/>
                       <ul className="justify">
-                        <li>{infoData.jobTwo.description}</li>
+                        <li>{infoData.employer.jobTwo.description}</li>
                       </ul>
                    
               </div>
@@ -212,73 +212,73 @@ export default function Info({ data }) {
                   <p className="title">Tools</p>
                 <div className="pt-5 bold subtitle">Graphic Design</div>
                   <div class="item">
-                      <img className="centered" src="src\images\francesco-mazzoli-0xh3QPqcfKM-unsplash.jpg"/>
+                      <img className="centered" src="autocad-sketch.png"/>
                       <span class="caption">{infoData.toolbox.one}</span>
                   </div>
                   <div class="item">
-                      <img className="centered" src="src\images\francesco-mazzoli-0xh3QPqcfKM-unsplash.jpg"/>
+                      <img className="centered" src="photoshop.png"/>
                       <span class="caption">{infoData.toolbox.two}</span>
                   </div>
                   <div class="item">
-                      <img className="centered" src="src\images\francesco-mazzoli-0xh3QPqcfKM-unsplash.jpg"/>
+                      <img className="centered" src="in-design.png"/>
                       <span class="caption">{infoData.toolbox.three}</span>
                   </div>
                   <div class="item">
-                      <img className="centered" src="src\images\francesco-mazzoli-0xh3QPqcfKM-unsplash.jpg"/>
+                      <img className="centered" src="illustrator.png"/>
                       <span class="caption">{infoData.toolbox.four}</span>
                   </div>
                  
                   <div className="pt-5 bold subtitle">Animation</div>
                   <div class="item">
-                      <img className="centered" src="src\images\francesco-mazzoli-0xh3QPqcfKM-unsplash.jpg"/>
+                      <img className="centered" src="premiere.png"/>
                       <span class="caption">{infoData.toolbox.five}</span>
                   </div>
                   <div class="item">
-                      <img className="centered" src="src\images\francesco-mazzoli-0xh3QPqcfKM-unsplash.jpg"/>
+                      <img className="centered" src="autocad-maya.png"/>
                       <span class="caption">{infoData.toolbox.six}</span>
                   </div>
                   <div class="item">
-                      <img className="centered" src="src\images\francesco-mazzoli-0xh3QPqcfKM-unsplash.jpg"/>
+                      <img className="centered" src="after-effects.png"/>
                       <span class="caption">{infoData.toolbox.seven}</span>
                   </div>
                   <div class="item">
-                      <img className="centered" src="src\images\francesco-mazzoli-0xh3QPqcfKM-unsplash.jpg"/>
+                      <img className="centered" src="animate.png"/>
                       <span class="caption">{infoData.toolbox.eight}</span>
                   </div>
 
                   <div className="pt-5 bold subtitle">Web Design</div>
                   <div class="item">
-                      <img className="centered" src="src\images\francesco-mazzoli-0xh3QPqcfKM-unsplash.jpg"/>
+                      <img className="centered" src="sketch.png"/>
                       <span class="caption">{infoData.toolbox.nine}</span>
                   </div>
                   <div class="item">
-                      <img className="centered" src="src\images\francesco-mazzoli-0xh3QPqcfKM-unsplash.jpg"/>
+                      <img className="centered" src="xd.png"/>
                       <span class="caption">{infoData.toolbox.ten}</span>
                   </div>
                   <div class="item">
-                      <img className="centered" src="src\images\francesco-mazzoli-0xh3QPqcfKM-unsplash.jpg"/>
+                      <img className="centered" src="invision.png"/>
                       <span class="caption">{infoData.toolbox.eleven}</span>
                   </div>
                   <div class="item">
-                      <img className="centered" src="src\images\francesco-mazzoli-0xh3QPqcfKM-unsplash.jpg"/>
+                      <img className="centered" src="webflow.png"/>
                       <span class="caption">{infoData.toolbox.twelve}</span>
                   </div>
 
                   <div className="pt-5 bold subtitle">Web Development</div>
                   <div class="item">
-                      <img className="centered" src="src\images\francesco-mazzoli-0xh3QPqcfKM-unsplash.jpg"/>
+                      <img className="centered" src="angular.png"/>
                       <span class="caption">{infoData.toolbox.thirteen}</span>
                   </div>
                   <div class="item">
-                      <img className="centered" src="src\images\francesco-mazzoli-0xh3QPqcfKM-unsplash.jpg"/>
+                      <img className="centered" src="react.png"/>
                       <span class="caption">{infoData.toolbox.fourteen}</span>
                   </div>
                   <div class="item">
-                      <img className="centered" src="src\images\francesco-mazzoli-0xh3QPqcfKM-unsplash.jpg"/>
+                      <img className="centered" src="express.png"/>
                       <span class="caption">{infoData.toolbox.fifteen}</span>
                   </div>
                   <div class="item">
-                      <img className="centered" src="src\images\francesco-mazzoli-0xh3QPqcfKM-unsplash.jpg"/>
+                      <img className="centered" src="node-js.png"/>
                       <span class="caption">{infoData.toolbox.sixteen}</span>
                   </div>
 
@@ -293,24 +293,28 @@ export default function Info({ data }) {
               <div className="tile is-child">
                   <p className="title">Hobbies</p>
                   <div class="hobby-item">
-                      <img className="centered" src="src\images\francesco-mazzoli-0xh3QPqcfKM-unsplash.jpg"/>
+                      <img className="centered" style={{width: 20 + '%'}} src="drawing.png"/>
                       <span class="caption">{infoData.hobby.one}</span>
                   </div>
                   <div class="hobby-item">
-                      <img className="centered" src="src\images\francesco-mazzoli-0xh3QPqcfKM-unsplash.jpg"/>
+                      <img className="centered" style={{width: 20 + '%'}} src="editing.png"/>
                       <span class="caption">{infoData.hobby.two}</span>
                   </div>
                   <div class="hobby-item">
-                      <img className="centered" src="src\images\francesco-mazzoli-0xh3QPqcfKM-unsplash.jpg"/>
+                      <img className="centered" style={{width: 20 + '%'}} src="photography.png"/>
                       <span class="caption">{infoData.hobby.three}</span>
                   </div>
                   <div class="hobby-item">
-                      <img className="centered" src="src\images\francesco-mazzoli-0xh3QPqcfKM-unsplash.jpg"/>
+                      <img className="centered" style={{width: 20 + '%'}} src="cooking.png"/>
                       <span class="caption">{infoData.hobby.four}</span>
                   </div>
                   <div class="hobby-item">
-                      <img className="centered" src="src\images\francesco-mazzoli-0xh3QPqcfKM-unsplash.jpg"/>
+                      <img className="centered" style={{width: 20 + '%'}} src="reading.png"/>
                       <span class="caption">{infoData.hobby.five}</span>
+                  </div>
+                  <div class="hobby-item">
+                      <img className="centered" style={{width: 20 + '%'}} src="investing.png"/>
+                      <span class="caption">{infoData.hobby.six}</span>
                   </div>
               </div>
           </div>

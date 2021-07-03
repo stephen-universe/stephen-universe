@@ -31,6 +31,9 @@ $title-font: 'Nostromo-Black';
 .caption {display: block; font-weight: bold;}
 .resume-link {color: $orange; padding-top: 0.2rem; text-shadow: -1px 2px 3px $orange-shadow; font-family: Nostromo-Medium;
   &:hover{color: $white; text-shadow: -1px 2px 6px $orange-shadow;}}
+.resume-link a {color: $white; padding-top: 0.2rem; text-shadow: -1px 2px 3px $orange-shadow; font-family: Nostromo-Medium;
+    &:hover{color: $white; text-shadow: -1px 2px 6px $orange-shadow;}}
+
 
 //* GLOBAL VARIABLES *//
 $primary: $blue;
@@ -88,20 +91,7 @@ $link: $red;
 
 
 
-  .trailsText {
-    position: relative;
-    width: 100%;
-    height: 80px;
-    line-height: 80px;
-    color: black;
-    font-size: 6em;
-    font-weight: 800;
-    letter-spacing: -0.05em;
-    will-change: transform, opacity;
-    overflow: hidden;
-  }
-  
-  .trailsText > div {
-    padding-right: 0.05em;
-    overflow: hidden;
-  }
+.vertical-divider{
+  border-left: 6px solid green;
+  height: 500px;
+}

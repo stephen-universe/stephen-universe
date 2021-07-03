@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import { graphql, Link} from "gatsby";
 import Img from 'gatsby-image';
+import Fade from 'react-reveal/Fade'
 
 
 
@@ -29,9 +30,9 @@ return (
 <Layout>
 
 
-
 <>
  
+<Fade cascade duration={1500}> 
 {projectOne.map( project => (    
     <div className="tile is-ancestor">
         <div className="tile is-12 is-parent">
@@ -320,7 +321,7 @@ return (
                 </div>
                 ))}
             </div>
-
+</Fade>
         <div className="padding-top-bottom"></div>    
      
   </>

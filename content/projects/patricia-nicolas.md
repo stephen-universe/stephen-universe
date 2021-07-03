@@ -19,6 +19,6 @@ tools: "Photoshop | Illustrator | DreamWeaver | AutoCAD Sketch"
 ![](../../src/images/Patricia-Nicolas-mock-six.png)
 ![](../../src/images/Patricia-Nicolas-mock-final.png)
 ![](../../src/images/Patricia-Nicolas-final.jpg)
-![](../../src/images/Patricia-Nicolas-material.jpg)
+![](../../src/images/Patricia-Nicolas-material.png)
 ![](../../src/images/Patricia-Nicolas-home.png)
-![](../../src/images/Patricia-Nicolas-thanks.jpg)
+![](../../src/images/Patricia-Nicolas-thanks.png)

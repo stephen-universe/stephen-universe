@@ -5,12 +5,14 @@ import Helmet from "react-helmet"
 import useResumeData from "../static_queries/useResumeData"
 import Footer from "./footer"
 import ScrollApp from "./buttons"
+import Link from 'gatsby'
+import AdditionalWork from "../components/additionalWork"
 
 export default function Layout(props) {
   const { title, description } = useResumeData()
   return (
     <>
-     <div className="header-top-color"> <Resume /> </div>
+     <div className="header-top-color"><Resume/>  <AdditionalWork/> </div>
      <div className="background" alt="Space" >
      <div className="section-divider"></div> 
      <div className="container">

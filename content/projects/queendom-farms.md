@@ -11,7 +11,7 @@ tools: "Photoshop | Illustrator | InDesign"
 
 ---
 
-![](../../src/images/Queendom-Farms-home.jpg)
+![](../../src/images/Queendom-Farms-Home.jpg)
 ![](../../src/images/Queendom-Farms-brief.jpg)
 ![](../../src/images/Queendom-Farms-user.jpg)
 ![](../../src/images/Queendom-Farms-persona.jpg)
@@ -28,5 +28,5 @@ tools: "Photoshop | Illustrator | InDesign"
 ![](../../src/images/Queendom-Farms-package.jpg)
 ![](../../src/images/Queendom-Farms-variants.jpg)
 ![](../../src/images/Queendom-Farms-thanks.jpg)
-![](../../src/images/Queendom-Farms-thanks.jpg)
+
 

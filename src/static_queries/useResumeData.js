@@ -32,6 +32,7 @@ export default function useSiteMetadata() {
               sixteen
               seventeen
             }
+            education {
             educationOne {
                   school
                   location
@@ -44,6 +45,8 @@ export default function useSiteMetadata() {
                   degree
                   year
                 }
+              }
+            employer {
             jobOne {
                 title
                 location
@@ -60,6 +63,8 @@ export default function useSiteMetadata() {
                 date
                 description
               }
+            }
+            certification {
             certificationOne {
                 title
                 completion
@@ -72,6 +77,7 @@ export default function useSiteMetadata() {
                 title
                 completion
               }
+            }
             toolbox {
                 one
                 two 
@@ -95,7 +101,8 @@ export default function useSiteMetadata() {
                 two 
                 three
                 four 
-                five 
+                five
+                six 
             }
  
           }

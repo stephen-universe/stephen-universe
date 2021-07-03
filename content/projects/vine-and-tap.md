@@ -11,11 +11,11 @@ tools: "Photoshop | Illustrator | InDesign"
 
 ---
 
-![](../../src/images/VT-Home.jpg)
+
 ![](../../src/images/VT-Home.png)
 ![](../../src/images/VT-bottle.jpg)
 ![](../../src/images/VT-menu.png)
 ![](../../src/images/VT-course-menu.png)
 ![](../../src/images/VT-drink-menu.png)
-![](../../src/images/VT-footer.jpg)
+![](../../src/images/VT-Home.jpg)
 ![](../../src/images/VT-thanks.jpg)
