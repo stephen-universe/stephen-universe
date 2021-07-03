@@ -52,5 +52,33 @@ fields:
     schema:
       format: markdown
   label: introduction
+- name: skill
+  type: field_group_list
+  fields:
+  - name: one
+    type: text
+    config:
+      required: false
+    label: one
+  - name: two
+    type: text
+    config:
+      required: false
+    label: two
+  - name: three
+    type: text
+    config:
+      required: false
+    label: three
+  - name: four
+    type: text
+    config:
+      required: false
+    label: four
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: skill
 pages:
 - content/data/info.json
