@@ -145,5 +145,37 @@ fields:
     max: 
     labelField: 
   label: skill
+- name: educationOne
+  type: field_group_list
+  fields:
+  - name: school
+    type: text
+    config:
+      required: false
+    label: school
+  - name: location
+    type: text
+    config:
+      required: false
+    label: location
+  - name: degree
+    type: text
+    config:
+      required: false
+    label: degree
+  - name: date
+    type: datetime
+    label: date
+    description: ''
+    config:
+      required: false
+      date_format: 
+      time_format: 
+      display_utc: false
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: educationOne
 pages:
 - content/data/info.json
