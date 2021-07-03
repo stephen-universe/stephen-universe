@@ -117,7 +117,7 @@ fields:
       required: false
     label: twelve
   label: skill
-- name: educationone
+- name: educationOne
   type: field_group
   config: {}
   fields:
@@ -157,5 +157,33 @@ fields:
       required: false
     label: two
   label: toolbox
+- name: educationTwo
+  type: field_group_list
+  fields:
+  - name: school
+    type: text
+    config:
+      required: false
+    label: school
+  - name: location
+    type: text
+    config:
+      required: false
+    label: location
+  - name: degree
+    type: text
+    config:
+      required: false
+    label: degree
+  - name: year
+    type: text
+    config:
+      required: false
+    label: year
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: educationTwo
 pages:
 - content/data/info.json
