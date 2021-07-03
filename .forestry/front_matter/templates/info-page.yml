@@ -177,5 +177,20 @@ fields:
     max: 
     labelField: 
   label: educationOne
+- name: toolbox
+  type: field_group
+  config: {}
+  fields:
+  - name: one
+    type: text
+    config:
+      required: false
+    label: one
+  - name: two
+    type: text
+    config:
+      required: false
+    label: two
+  label: toolbox
 pages:
 - content/data/info.json
