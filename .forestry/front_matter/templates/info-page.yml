@@ -43,5 +43,14 @@ fields:
     color_format: Hex
   description: Enter info page background color
   default: "#B1BCBC"
+- name: introduction
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: introduction
 pages:
 - content/data/info.json
