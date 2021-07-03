@@ -103,5 +103,11 @@
   },
   "description": "",
   "cta": "",
-  "background_color": ""
+  "background_color": "",
+  "educationone": {
+    "school": "Georgia State University",
+    "location": "Atlanta, Ga",
+    "degree": "Bachelor's in Communication",
+    "year": "2013-2016"
+  }
 }
