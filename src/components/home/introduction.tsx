@@ -10,7 +10,7 @@ export default function Introduction() {
   <>
 
 
-<div className="trailsText">
+<div className="trailsText" style={{ marginTop: 6 + "rem"}}>
     <Fade cascade duration={2000} delay={800}><span>Hi</span></Fade> <br/>
     <Fade cascade duration={1500} delay={1400}><span>I'm Stephen</span></Fade><br/>
     <Fade cascade duration={2000} delay={2300}><span>And I am A Solver</span></Fade><br/>
@@ -20,7 +20,7 @@ export default function Introduction() {
 
 
     <Fade bottom duration={1500} delay={4000}> 
-    <div className="orange mt-3" style={{textAlign: 'right', fontSize: 1.1 + 'rem'}}>
+    <div className="orange" style={{textAlign: 'right', fontSize: 1.1 + 'rem', marginTop: 4 + "rem"}}>
   Using my Quantitative Knowledge in Research & my Methodical Approach in Design 
 <br/> I landed a career as a Product Designer & Developer!
 <br/>

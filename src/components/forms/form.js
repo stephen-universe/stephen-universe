@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Container } from "@material-ui/core"
+import { Link } from "gatsby"
 
 export class UserForm extends Component {
   state = {
@@ -103,7 +103,12 @@ export class FormUserDetails extends Component {
     const { values, handleChange } = this.props
     return (
       <>
-        <h1>Fill Out The Form!</h1>
+      <div className="column is-8 ">
+        <h1 className="title" style={{fontSize: 2.7 + "rem"}}>Have Questions?</h1>
+        <h1 className="contact-subtitle">Let's Talk Design.</h1>
+        <h1 className="contact-p">I'd Love To Hear From You</h1>
+        <p className="" style={{fontSize: 0.7 + "rem" }}>Please Fill Out The Form Below</p>
+        </div>
         <section className="section is-medium">
           <div className="columns">
             <div className="column is-6 ">
@@ -241,7 +246,13 @@ export class FormUserDetails extends Component {
             </div>
           <div className="column is-1"></div>
           <div className="column is-1"><div className="vertical-divider"></div></div>
-          <div className="column is-5"><img src="" /><p className="">THis Is Some Text</p></div>
+          <div className="column is-4 has-text-centered"><img src="" />
+          <p className="">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Tellus molestie nunc non blandit. Nunc sed id semper risus.</p>
+            <div className="mt-6"> <Link to="/">Downloadable Link</Link></div>
+          </div>
           </div>
         </section>
       </>
@@ -264,7 +275,12 @@ export class FormPersonalDetails extends Component {
     const { values, handleChange } = this.props
     return (
       <>
-        <h1>Fill Out The Form!</h1>
+       <div className="column is-8 ">
+        <h1 className="title" style={{fontSize: 2.7 + "rem"}}>Have Questions?</h1>
+        <h1 className="contact-subtitle">Let's Talk Design.</h1>
+        <h1 className="contact-p">I'd Love To Hear From You</h1>
+        <p className="" style={{fontSize: 0.7 + "rem" }}>Please Fill Out The Form Below</p>
+        </div>
         <section className="section is-medium">
           <div className="columns ">
             <div className="column is-6 ">
@@ -358,7 +374,13 @@ export class FormPersonalDetails extends Component {
             </div>
           <div className="column is-1"></div>
           <div className="column is-1"><div className="vertical-divider"></div></div>
-          <div className="column is-5"><img src="" /><p className="">THis Is Some Text</p></div>
+          <div className="column is-4 has-text-centered"><img src="" />
+          <p className="">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Tellus molestie nunc non blandit. Nunc sed id semper risus.</p>
+            <div className="mt-6"> <Link to="/">Downloadable Link</Link></div>
+          </div>
           </div>
         </section>
       </>

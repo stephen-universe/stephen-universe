@@ -11,7 +11,7 @@ export default function FooterQuote () {
 
 
         <Fade cascade duration={2000} delay={1500}>
-        <div className="has-text-centered orange">
+        <div className="has-text-centered orange" style={{marginTop: 24.5 + "rem"}}>
                 "But you, you're supposed to change. <br />
                  You're never the same even moment to moment <br />
                  You're allowed and expected to invent who you are. <br />

@@ -12,7 +12,7 @@ export default function Layout(props) {
   const { title, description } = useResumeData()
   return (
     <>
-     <div className="header-top-color"><Resume/>  <AdditionalWork/> </div>
+     <div className="header-top-color"><Resume/> </div>
      <div className="background" alt="Space" >
      <div className="section-divider"></div> 
      <div className="container">

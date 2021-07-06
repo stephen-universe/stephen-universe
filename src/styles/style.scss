@@ -20,7 +20,6 @@ $title-font: 'Nostromo-Black';
 .title { font-family: $title-font; color: $orange; text-shadow: 2px 2px 1px $orange-shadow;}
 .footer {background-color: transparent;}
 .pl-9 {padding-left: 6rem !important;}
-
 .subtitle{ line-height: 0.5rem;}
 .right {float: right;}
 .orange {color: $orange;}
@@ -43,7 +42,10 @@ $link: $red;
 .d-block {display: block;}
 .d-flex {display: flex;}
 
-
+.quote-p {
+  color: $white;
+  text-shadow: -1px 2px 3px $orange-shadow;
+}
 .white {
     color: $white;
     text-shadow: -1px 2px 3px $orange-shadow;
@@ -88,10 +90,11 @@ $link: $red;
     opacity: 1;
   }
 
+.contact-subtitle {font-size: 2rem; font-weight: bold; margin-top: -1.55rem; font-style: italic;}
 
-
+.contact-p {font-size: 1.39rem; font-weight: bold; margin-top: 2.55rem;}
 
 .vertical-divider{
-  border-left: 6px solid green;
+  border-left: 6px solid #020921;
   height: 500px;
 }

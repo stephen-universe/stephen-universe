@@ -5,7 +5,7 @@ import {
   useChain,
   config,
   animated,
-} from '@react-spring/web'
+} from 'react-spring'
 
 const Modal = ({ handleClose, show, children }) => {
     

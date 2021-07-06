@@ -8,7 +8,7 @@ export default function InitializeContact() {
     return (
 
       <>
-    <div className="mt-6 orange bold has-text-centered">
+    <div className=" orange bold has-text-centered" style={{marginTop: 24.5 + "rem"}}>
 
     <div className="">
         <Fade cascade duration={2000} delay={800}><span>Feel Free To Explore Around</span></Fade> <br/>

@@ -79,5 +79,15 @@
   &:focus{
     border: none;
   }
-  }
+}
 
+.button.is-link {
+  background-color: #020821;
+  border-color: transparent;
+  color: #fff;
+
+
+&:hover{
+  background-color: #020821dc;
+}
+}

@@ -1,10 +1,7 @@
 
 import React, { Component } from "react";
 import Modal from './modal';
-import { Spring, animated } from 'react-spring';
-import VisibilitySensor from "react-visibility-sensor";
-
-
+import Fade from 'react-reveal/Fade';
 
 
 
@@ -56,13 +53,9 @@ render () {
                     When I'm not creating products or brand identites
                 </div>
             <div className="tile is-ancestor">
-              <VisibilitySensor partialVisibility offset={{ bottom: -400 }}>
-          {({ isVisible }) => (
-              <Spring delay={300} to={{opacity: isVisible ? 1 : 0,
-                transform: isVisible ? "translateY(0)" : "translateY(50vh)"}}> 
-              {styles => (
-          <animated.div style={{styles, width: 100 + '%' }} >          
-                
+        
+              <Fade delay={300}>
+         
                 <div className="tile is-12 has-text-centered">
                     <div className="tile">
                         <div className="tile is-parent">
@@ -79,11 +72,8 @@ render () {
                       </div>
                 </div>
                 
-                  </animated.div> 
-              )}
-                </Spring>
-                          )}
-                          </VisibilitySensor>
+           </Fade>
+                         
             </div>
  
           </>
