@@ -43,7 +43,7 @@ export default function ProjectPage(props) {
                   
                   
                 
-        <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#805E73', zIndex: -1 }}> <Hobbies/>  <Introduction/></ParallaxLayer>
+        <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#805E73', zIndex: -1 }}> </ParallaxLayer>
         <ParallaxLayer offset={3.1} speed={1} style={{ backgroundColor: '#87BCDE' }} />
             
            
