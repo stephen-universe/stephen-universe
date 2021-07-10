@@ -1,0 +1,459 @@
+@font-face {
+    font-family: Nostromo-Oblique-Black;
+    src: url(../styles/fonts/nostromo/Oblique/NostromoOblique-Black.otf);
+  }
+
+  @font-face {
+    font-family: Nostromo-Oblique-Bold;
+    src: url(../styles/fonts/nostromo/Oblique/NostromoOblique-Bold.otf);
+  }
+
+  @font-face {
+    font-family: Nostromo-Oblique-Heavy;
+    src: url(../styles/fonts/nostromo/Oblique/NostromoOblique-Heavy.otf);
+  }
+
+  @font-face {
+    font-family: Nostromo-Oblique-Light;
+    src: url(../styles/fonts/nostromo/Oblique/NostromoOblique-Light.otf);
+  }
+
+  @font-face {
+    font-family: Nostromo-Oblique-Medium;
+    src: url(../styles/fonts/nostromo/Oblique/NostromoOblique-Medium.otf);
+  }
+
+
+  @font-face {
+    font-family: Nostromo-Black;
+    src: url(../styles/fonts/nostromo/Regular/NostromoRegular-Black.otf);
+  }
+
+  @font-face {
+    font-family: Nostromo-Bold;
+    src: url(../styles/fonts/nostromo/Regular/NostromoRegular-Bold.otf);
+  }
+
+  @font-face {
+    font-family: Nostromo-Heavy;
+    src: url(../styles/fonts/nostromo/Regular/NostromoRegular-Heavy.otf);
+  }
+
+  @font-face {
+    font-family: Nostromo-Light;
+    src: url(../styles/fonts/nostromo/Regular/NostromoRegular-Light.otf);
+  }
+
+  @font-face {
+    font-family: Nostromo-Medium;
+    src: url(../styles/fonts/nostromo/Regular/NostromoRegular-Medium.otf);
+  }
+
+
+  @font-face {
+    font-family: Nostromo-Outline-Black;
+    src: url(../styles/fonts/nostromo/Outline/NostromoOutline-Black.otf);
+  }
+
+  
+  @font-face {
+    font-family: Nostromo-Outline-Black-Oblique;
+    src: url(../styles/fonts/nostromo/Outline/NostromoOutline-BlackOblique.otf);
+  }
+
+  
+  @font-face {
+    font-family: Nostromo-Outline-Black-Rough;
+    src: url(../styles/fonts/nostromo/Outline/NostromoOutline-BlackRough.otf);
+  }
+  
+  @font-face {
+    font-family: Nostromo-Outline-Black-Oblique-Rough;
+    src: url(../styles/fonts/nostromo/Outline/NostromoOutline-BlackObliqueRough.otf);
+  }
+
+    
+  @font-face {
+    font-family: Nostromo-Outline-Bold;
+    src: url(../styles/fonts/nostromo/Outline/NostromoOutline-Bold.otf);
+  }
+
+  @font-face {
+    font-family: Nostromo-Outline-Bold-Rough;
+    src: url(../styles/fonts/nostromo/Outline/NostromoOutline-BoldRough.otf);
+  }
+
+  @font-face {
+    font-family: Nostromo-Outline-Heavy;
+    src: url(../styles/fonts/nostromo/Outline/NostromoOutline-Heavy.otf);
+  }
+
+  @font-face {
+    font-family: Nostromo-Outline-Heavy-Rough;
+    src: url(../styles/fonts/nostromo/Outline/NostromoOutline-HeavyRough.otf);
+  }
+
+  @font-face {
+    font-family: Nostromo-Outline-Light;
+    src: url(../styles/fonts/nostromo/Outline/NostromoOutline-Light.otf);
+  }
+
+
+  @font-face {
+    font-family: Nostromo-Outline-Medium;
+    src: url(../styles/fonts/nostromo/Outline/NostromoOutline-Medium.otf);
+  }
+
+
+body, button, input, optgroup, select, textarea {font-family: Nostromo-Medium;}
+.bold {font-weight: bold;}
+.italicize {font-style: italic;}
+
+$blue: blue;
+$red: red;
+$white: #FFF;
+$black : #000;
+$orange: #e84834;
+$orange-shadow: #ab3122;
+$title-font: 'Nostromo-Black';
+
+
+
+
+      .trailsText {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        line-height: 80px;
+        font-size: 5.6rem;
+        color: black;
+        font-weight: 800;
+        letter-spacing: -0.05em;
+        will-change: transform, opacity;
+        overflow: hidden;
+      }
+      
+      .trailsText > div {
+        padding-right: 0.05em;
+        overflow: hidden;
+      }
+      
+
+
+
+
+
+.introText {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  color: black;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  will-change: transform, opacity;
+  overflow: hidden;
+}
+
+.introText > div {
+  padding-right: 0.05em;
+  overflow: hidden;
+}
+                
+@media only screen and (max-width: 2407px) {
+  .trailsText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 80px;
+    font-size: 6rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .trailsText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+
+
+  .introText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 1.1rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .introText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+  .vertical-divider{ border-left: 6px solid #020921; height: 500px; }
+  .contact-title { font-family: $title-font; color: $orange; text-shadow: 2px 2px 1px $orange-shadow; font-size: 5rem}
+                            }
+
+
+@media only screen and (max-width: 1407px) {
+  .trailsText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 80px;
+    font-size: 6rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .trailsText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+
+
+  .introText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 1.1rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .introText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+  .vertical-divider{ border-left: 6px solid #020921; height: 500px; }
+  .contact-title { font-family: $title-font; color: $orange; text-shadow: 2px 2px 1px $orange-shadow; font-size: 3.9rem}
+                            }
+                    
+@media only screen and (max-width: 1215px) {
+  .trailsText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 80px;
+    font-size: 5.6rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .trailsText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+
+
+  .introText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 1.0rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .introText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+  .vertical-divider{ border-left: 6px solid #020921; height: 500px; }
+  .contact-title { font-family: $title-font; color: $orange; text-shadow: 2px 2px 1px $orange-shadow; font-size: 3.5rem}
+
+                              }
+                    
+ @media only screen and (max-width: 1023px) {
+  .trailsText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 80px;
+    font-size: 3rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .trailsText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+  
+  .introText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 0.9rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .introText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+  .vertical-divider{border-left: 6px solid #020921;height: 500px;}
+  .contact-title { font-family: $title-font; color: $orange; text-shadow: 2px 2px 1px $orange-shadow; font-size: 3.5rem}
+
+                                }
+                    
+@media only screen and (max-width: 768px) {
+  .trailsText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    font-size: 3rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .trailsText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+
+
+  .introText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 0.9rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .introText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+  .vertical-divider{
+    border-top: 6px solid #020921;
+    width: 100%;
+    height: 5px;
+  }
+  .contact-title { font-family: $title-font; color: $orange; text-shadow: 2px 2px 1px $orange-shadow; font-size: 2.6rem}
+                                  }
+                    
+@media only screen and (max-width: 426px) {
+
+  .trailsText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 30px;
+    font-size: 1.75rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .trailsText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+
+  .introText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 0.75rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .introText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+  .vertical-divider{
+    border-top: 6px solid #020921;
+    width: 100%;
+    height: 5px;
+  }
+  .contact-title { font-family: $title-font; color: $orange; text-shadow: 2px 2px 1px $orange-shadow; font-size: 2rem}
+                                  
+}
+
+@media only screen and (max-width: 366px) {
+  .trailsText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 80px;
+    font-size: 6rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .trailsText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+
+
+  .introText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 1.1rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .introText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+  .vertical-divider{
+    border-top: 6px solid #020921;
+    width: 100%;
+    height: 5px;
+  }
+  .contact-title { font-family: $title-font; color: $orange; text-shadow: 2px 2px 1px $orange-shadow; font-size: 1.6rem}
+                            }
+.quote-p {color: $white; text-shadow: -1px 2px 3px $orange-shadow;}
+.contact-subtitle {font-size: 2rem; font-weight: bold; margin-top: -1.55rem; font-style: italic;}
+.contact-p {font-size: 1.39rem; font-weight: bold; margin-top: 2.55rem;}

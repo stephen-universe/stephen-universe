@@ -1,0 +1,358 @@
+---
+label: Info Page
+hide_body: true
+fields:
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: description
+  description: Enter description here
+- name: cta
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: cta
+  description: Enter call to action here
+- type: field_group
+  name: contact
+  label: contact
+  fields:
+  - type: text
+    name: email
+    label: email
+  - type: text
+    name: twitter_handle
+    label: twitter_handle
+  - type: text
+    name: github_handle
+    label: github_handle
+- name: background_color
+  type: color
+  label: background_color
+  config:
+    required: false
+    color_format: Hex
+  description: Enter info page background color
+  default: "#B1BCBC"
+- name: introduction
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: introduction
+- name: skill
+  type: field_group
+  config: {}
+  fields:
+  - name: one
+    type: text
+    config:
+      required: false
+    label: one
+  - name: two
+    type: text
+    config:
+      required: false
+    label: two
+  - name: three
+    type: text
+    config:
+      required: false
+    label: three
+  - name: four
+    type: text
+    config:
+      required: false
+    label: four
+  - name: five
+    type: text
+    config:
+      required: false
+    label: five
+  - name: six
+    type: text
+    config:
+      required: false
+    label: six
+  - name: seven
+    type: text
+    config:
+      required: false
+    label: seven
+  - name: eight
+    type: text
+    config:
+      required: false
+    label: eight
+  - name: nine
+    type: text
+    config:
+      required: false
+    label: nine
+  - name: ten
+    type: text
+    config:
+      required: false
+    label: ten
+  - name: eleven
+    type: text
+    config:
+      required: false
+    label: eleven
+  - name: twelve
+    type: text
+    config:
+      required: false
+    label: twelve
+  label: skill
+- name: education
+  type: field_group_list
+  fields:
+  - name: educationOne
+    type: field_group
+    config: {}
+    fields:
+    - name: school
+      type: text
+      config:
+        required: false
+      label: school
+    - name: location
+      type: text
+      config:
+        required: false
+      label: location
+    - name: degree
+      type: text
+      config:
+        required: false
+      label: degree
+    - name: year
+      type: text
+      config:
+        required: false
+      label: year
+    label: educationOne
+  - name: educationTwo
+    type: field_group
+    config: {}
+    fields:
+    - name: school
+      type: text
+      config:
+        required: false
+      label: school
+    - name: location
+      type: text
+      config:
+        required: false
+      label: location
+    - name: degree
+      type: text
+      config:
+        required: false
+      label: degree
+    - name: year
+      type: text
+      config:
+        required: false
+      label: year
+    label: educationTwo
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: education
+- name: certification
+  type: field_group
+  config: {}
+  fields:
+  - name: certificationOne
+    type: field_group
+    config: {}
+    fields:
+    - name: title
+      type: text
+      config:
+        required: false
+      label: title
+    - name: completion
+      type: text
+      config:
+        required: false
+      label: completion
+    label: certificationOne
+  - name: certificationTwo
+    type: field_group
+    config: {}
+    fields:
+    - name: title
+      type: text
+      config:
+        required: false
+      label: title
+    - name: completion
+      type: text
+      config:
+        required: false
+      label: completion
+    label: certificationTwo
+  label: certification
+- name: toolbox
+  type: field_group
+  config: {}
+  fields:
+  - name: one
+    type: text
+    config:
+      required: false
+    label: one
+  - name: two
+    type: text
+    config:
+      required: false
+    label: two
+  label: toolbox
+- name: employer
+  type: field_group_list
+  fields:
+  - name: jobOne
+    type: field_group
+    config: {}
+    fields:
+    - name: title
+      type: text
+      config:
+        required: false
+      label: title
+    - name: position
+      type: text
+      config:
+        required: false
+      label: position
+    - name: location
+      type: text
+      config:
+        required: false
+      label: location
+    - name: date
+      type: text
+      config:
+        required: false
+      label: date
+    - name: descriptionOne
+      type: textarea
+      default: ''
+      config:
+        required: false
+        wysiwyg: false
+        schema:
+          format: markdown
+      label: descriptionOne
+    - name: descriptionTwo
+      type: textarea
+      default: ''
+      config:
+        required: false
+        wysiwyg: false
+        schema:
+          format: markdown
+      label: descriptionTwo
+    - name: descriptionThree
+      type: textarea
+      default: ''
+      config:
+        required: false
+        wysiwyg: false
+        schema:
+          format: markdown
+      label: descriptionThree
+    label: jobOne
+  - name: jobTwo
+    type: field_group
+    config: {}
+    fields:
+    - name: title
+      type: text
+      config:
+        required: false
+      label: title
+    - name: position
+      type: text
+      config:
+        required: false
+      label: position
+    - name: location
+      type: text
+      config:
+        required: false
+      label: location
+    - name: date_
+      type: text
+      config:
+        required: false
+      label: date.
+    - name: description
+      type: textarea
+      default: ''
+      config:
+        required: false
+        wysiwyg: false
+        schema:
+          format: markdown
+      label: description
+    label: jobTwo
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: employer
+- name: hobby
+  type: field_group
+  config: {}
+  fields:
+  - name: one
+    type: text
+    config:
+      required: false
+    label: one
+  - name: two
+    type: text
+    config:
+      required: false
+    label: two
+  - name: three
+    type: text
+    config:
+      required: false
+    label: three
+  - name: four
+    type: text
+    config:
+      required: false
+    label: four
+  - name: five
+    type: text
+    config:
+      required: false
+    label: five
+  - name: six
+    type: text
+    config:
+      required: false
+    label: six
+  label: hobby
+pages:
+- content/data/info.json

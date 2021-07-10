@@ -1,0 +1,93 @@
+@import "../../node_modules/bulma/bulma";
+@import "../styles/scss/card.scss";
+@import "../styles/scss/navigation.scss";
+@import "../styles/scss/fonts.scss";
+@import "../styles/scss/buttons.scss";
+@import "../styles/scss/modal.scss";
+
+
+
+//* VARIABLES *//
+$blue: blue;
+$red: red;
+$white: #FFF;
+$black : #000;
+$orange: #e84834;
+$orange-shadow: #ab3122;
+$title-font: 'Nostromo-Black';
+.box{box-shadow: 2px 2px 3px 2px $orange; border-radius: 3px;}
+.button {background-color: $orange; box-shadow: 1px 2px 4px 1px $black; color: $white;}
+.button:hover {color: $white;}
+.title { font-family: $title-font; color: $orange; text-shadow: 2px 2px 1px $orange-shadow;}
+.footer {background-color: transparent;}
+.pl-9 {padding-left: 6rem !important;}
+.subtitle{ line-height: 0.5rem;}
+.right {float: right;}
+.orange {color: $orange;}
+.justify {text-align: justify;}
+.text-center {text-align: center;}
+.item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:7.1rem; padding: 2rem;}
+.hobby-item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; padding: 0.9rem;}
+.caption {display: block; font-weight: bold;}
+.resume-link {color: $orange; padding-top: 0.2rem; text-shadow: -1px 2px 3px $orange-shadow; font-family: Nostromo-Medium;
+  &:hover{color: $white; text-shadow: -1px 2px 6px $orange-shadow;}}
+.resume-link a {color: $white; padding-top: 0.2rem; text-shadow: -1px 2px 3px $orange-shadow; font-family: Nostromo-Medium;
+    &:hover{color: $white; text-shadow: -1px 2px 6px $orange-shadow;}}
+
+
+//* GLOBAL VARIABLES *//
+$primary: $blue;
+$link: $red;
+
+.d-none {display: none;}
+.d-block {display: block;}
+.d-flex {display: flex;}
+
+
+
+.white {
+    color: $white;
+    text-shadow: -1px 2px 3px $orange-shadow;
+
+    &:hover{
+    color: $orange;
+    text-shadow: -1px 2px 6px $orange-shadow;
+    }
+}
+
+.padding-top-bottom{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.section-divider{
+  border: $orange;
+  border-style: dashed;
+  border-width: 1px;
+}
+
+.test:hover img {
+  visibility: hidden;
+  }
+
+
+  .relative {
+    position: relative;
+  }
+  
+  .test-hover {
+    position: absolute; 
+    bottom: 0; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    width: 100%;
+    transition: .5s ease-in-out;
+    opacity:0;
+  }
+  
+  .relative:hover .test-hover {
+    opacity: 1;
+  }
+
+
+.line-height{line-height: 20%}
