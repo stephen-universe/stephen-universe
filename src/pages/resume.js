@@ -295,30 +295,43 @@ export default function Info({ data }) {
               <div className="tile is-child">
                   <p className="title">Hobbies</p>
                   <div className="tile is-3">
-                  <div className="item ">
-                      <img className="centered" style={{width: 100 + '%'}} src="drawing.png"/>
+
+                  <div className="hobby-item">
+                      <img className="centered" src="drawing.png"/>
                       <span className="caption">{infoData.hobby.one}</span>
                   </div>
-                  <div className="item">
-                      <img className="centered" style={{width: 100 + '%'}} src="editing.png"/>
+
+                  <div className="hobby-item">
+                      <img className="centered" src="editing.png"/>
                       <span className="caption">{infoData.hobby.two}</span>
                   </div>
-                  <div className="item">
-                      <img className="centered" style={{width: 100 + '%'}} src="photography.png"/>
+
+                  <div className="hobby-item">
+                      <img className="centered" src="photography.png"/>
                       <span className="caption">{infoData.hobby.three}</span>
-                  </div>  
                   </div>
-                  <div className="item">
-                      <img className="centered" style={{width: 100 + '%'}} src="cooking.png"/>
+
+                  
+            
+                  <div className="hobby-item">
+                      <img className="centered" src="cooking.png"/>
                       <span className="caption">{infoData.hobby.four}</span>
                   </div>
-                  <div className="item">
-                      <img className="centered" style={{width: 100 + '%'}} src="reading.png"/>
+
+
+
+                  <div className="hobby-item">
+                      <img className="centered" src="reading.png"/>
                       <span className="caption">{infoData.hobby.five}</span>
                   </div>
-                  <div className="item">
-                      <img className="centered" style={{width: 100 + '%'}} src="investing.png"/>
+
+
+                  <div className="hobby-item">
+                      <img className="centered" src="investing.png"/>
                       <span className="caption">{infoData.hobby.six}</span>
+                  </div>
+
+          
                   </div>
               </div>
           </div>
