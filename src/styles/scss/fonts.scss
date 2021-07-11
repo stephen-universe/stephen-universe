@@ -161,6 +161,8 @@ $title-font: 'Nostromo-Black';
 }
                 
 @media only screen and (max-width: 2407px) {
+  .item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:7.1rem; padding: 2rem;}
+
   .trailsText {
     position: relative;
     width: 100%;
@@ -202,6 +204,7 @@ $title-font: 'Nostromo-Black';
 
 
 @media only screen and (max-width: 1407px) {
+  .item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:7.1rem; padding: 2rem;}
   .trailsText {
     position: relative;
     width: 100%;
@@ -242,6 +245,8 @@ $title-font: 'Nostromo-Black';
                             }
                     
 @media only screen and (max-width: 1215px) {
+  .item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:5.7rem; padding: 2rem;}
+
   .trailsText {
     position: relative;
     width: 100%;
@@ -283,6 +288,8 @@ $title-font: 'Nostromo-Black';
                               }
                     
  @media only screen and (max-width: 1023px) {
+  .item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:5.7rem; padding: 2rem;}
+
   .trailsText {
     position: relative;
     width: 100%;
@@ -323,6 +330,7 @@ $title-font: 'Nostromo-Black';
                                 }
                     
 @media only screen and (max-width: 768px) {
+  .item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:7.1rem; padding: 2rem;}
   .trailsText {
     position: relative;
     width: 100%;
@@ -367,6 +375,7 @@ $title-font: 'Nostromo-Black';
                                   }
                     
 @media only screen and (max-width: 426px) {
+  .item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:5.7rem; padding: 2rem;}
 
   .trailsText {
     position: relative;
@@ -412,6 +421,7 @@ $title-font: 'Nostromo-Black';
 }
 
 @media only screen and (max-width: 366px) {
+  .item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:7.1rem; padding: 2rem;}
   .trailsText {
     position: relative;
     width: 100%;

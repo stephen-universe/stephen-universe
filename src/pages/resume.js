@@ -15,7 +15,7 @@ export default function Info({ data }) {
 <section className="main-body-bg">
     <Layout page="info">
       <section className="">
-        <h1 className="subtitle bold pt-3 is-size-5-mobile is-size-1-tablet is-size-1-desktop is-size-1-widescreen is-size-1-fullhd line-height">
+        <h1 className="subtitle bold pt-3 is-size-5-mobile is-size-2-tablet is-size-1-desktop is-size-1-widescreen is-size-1-fullhd line-height">
           <div dangerouslySetInnerHTML={{__html: infoData.author}}></div> </h1>
         <h2 className="title mt-1 is-size-5-mobile is-size-3-tablet is-size-4-desktop is-size-4-widescreen is-size-4-fullhd">
           <div dangerouslySetInnerHTML={{__html: infoData.title}}></div></h2>
@@ -142,7 +142,7 @@ export default function Info({ data }) {
       <div className="tile">
           <div className="tile is-parent">
               <div className="tile is-child ">
-                <p className="title">Certification</p>
+                <p className="title ">Certification</p>
                 <p className="bold">{infoData.certification.certificationOne.title} 
                   <span className="right orange italicize">{infoData.certification.certificationOne.completion}</span></p>
                   <p className="bold">{infoData.certification.certificationTwo.title} 
@@ -213,75 +213,75 @@ export default function Info({ data }) {
               <div className="tile is-child ">
                   <p className="title">Tools</p>
                 <div className="pt-5 bold subtitle">Graphic Design</div>
-                  <div class="item">
+                  <div className="item">
                       <img className="centered" src="autocad-sketch.png"/>
-                      <span class="caption">{infoData.toolbox.one}</span>
+                      <span className="caption">{infoData.toolbox.one}</span>
                   </div>
-                  <div class="item">
+                  <div className="item">
                       <img className="centered" src="photoshop.png"/>
-                      <span class="caption">{infoData.toolbox.two}</span>
+                      <span className="caption">{infoData.toolbox.two}</span>
                   </div>
-                  <div class="item">
+                  <div className="item">
                       <img className="centered" src="in-design.png"/>
-                      <span class="caption">{infoData.toolbox.three}</span>
+                      <span className="caption">{infoData.toolbox.three}</span>
                   </div>
-                  <div class="item">
+                  <div className="item">
                       <img className="centered" src="illustrator.png"/>
-                      <span class="caption">{infoData.toolbox.four}</span>
+                      <span className="caption">{infoData.toolbox.four}</span>
                   </div>
                  
                   <div className="pt-5 bold subtitle">Animation</div>
-                  <div class="item">
+                  <div className="item">
                       <img className="centered" src="premiere.png"/>
-                      <span class="caption">{infoData.toolbox.five}</span>
+                      <span className="caption">{infoData.toolbox.five}</span>
                   </div>
-                  <div class="item">
+                  <div className="item">
                       <img className="centered" src="autocad-maya.png"/>
-                      <span class="caption">{infoData.toolbox.six}</span>
+                      <span className="caption">{infoData.toolbox.six}</span>
                   </div>
-                  <div class="item">
+                  <div className="item">
                       <img className="centered" src="after-effects.png"/>
-                      <span class="caption">{infoData.toolbox.seven}</span>
+                      <span className="caption">{infoData.toolbox.seven}</span>
                   </div>
-                  <div class="item">
+                  <div className="item">
                       <img className="centered" src="animate.png"/>
-                      <span class="caption">{infoData.toolbox.eight}</span>
+                      <span className="caption">{infoData.toolbox.eight}</span>
                   </div>
 
                   <div className="pt-5 bold subtitle">Web Design</div>
-                  <div class="item">
+                  <div className="item">
                       <img className="centered" src="sketch.png"/>
-                      <span class="caption">{infoData.toolbox.nine}</span>
+                      <span className="caption">{infoData.toolbox.nine}</span>
                   </div>
-                  <div class="item">
+                  <div className="item">
                       <img className="centered" src="xd.png"/>
-                      <span class="caption">{infoData.toolbox.ten}</span>
+                      <span className="caption">{infoData.toolbox.ten}</span>
                   </div>
-                  <div class="item">
+                  <div className="item">
                       <img className="centered" src="invision.png"/>
-                      <span class="caption">{infoData.toolbox.eleven}</span>
+                      <span className="caption">{infoData.toolbox.eleven}</span>
                   </div>
-                  <div class="item">
+                  <div className="item">
                       <img className="centered" src="webflow.png"/>
-                      <span class="caption">{infoData.toolbox.twelve}</span>
+                      <span className="caption">{infoData.toolbox.twelve}</span>
                   </div>
 
                   <div className="pt-5 bold subtitle">Web Development</div>
-                  <div class="item">
+                  <div className="item">
                       <img className="centered" src="angular.png"/>
-                      <span class="caption">{infoData.toolbox.thirteen}</span>
+                      <span className="caption">{infoData.toolbox.thirteen}</span>
                   </div>
-                  <div class="item">
+                  <div className="item">
                       <img className="centered" src="react.png"/>
-                      <span class="caption">{infoData.toolbox.fourteen}</span>
+                      <span className="caption">{infoData.toolbox.fourteen}</span>
                   </div>
-                  <div class="item">
+                  <div className="item">
                       <img className="centered" src="express.png"/>
-                      <span class="caption">{infoData.toolbox.fifteen}</span>
+                      <span className="caption">{infoData.toolbox.fifteen}</span>
                   </div>
-                  <div class="item">
+                  <div className="item">
                       <img className="centered" src="node-js.png"/>
-                      <span class="caption">{infoData.toolbox.sixteen}</span>
+                      <span className="caption">{infoData.toolbox.sixteen}</span>
                   </div>
 
                       
@@ -294,29 +294,31 @@ export default function Info({ data }) {
           <div className="tile is-parent">
               <div className="tile is-child">
                   <p className="title">Hobbies</p>
-                  <div class="hobby-item">
-                      <img className="centered" style={{width: 20 + '%'}} src="drawing.png"/>
-                      <span class="caption">{infoData.hobby.one}</span>
+                  <div className="tile is-3">
+                  <div className="item ">
+                      <img className="centered" style={{width: 100 + '%'}} src="drawing.png"/>
+                      <span className="caption">{infoData.hobby.one}</span>
                   </div>
-                  <div class="hobby-item">
-                      <img className="centered" style={{width: 20 + '%'}} src="editing.png"/>
-                      <span class="caption">{infoData.hobby.two}</span>
+                  <div className="item">
+                      <img className="centered" style={{width: 100 + '%'}} src="editing.png"/>
+                      <span className="caption">{infoData.hobby.two}</span>
                   </div>
-                  <div class="hobby-item">
-                      <img className="centered" style={{width: 20 + '%'}} src="photography.png"/>
-                      <span class="caption">{infoData.hobby.three}</span>
-                  </div>  <br/>
-                  <div class="hobby-item">
-                      <img className="centered" style={{width: 20 + '%'}} src="cooking.png"/>
-                      <span class="caption">{infoData.hobby.four}</span>
+                  <div className="item">
+                      <img className="centered" style={{width: 100 + '%'}} src="photography.png"/>
+                      <span className="caption">{infoData.hobby.three}</span>
+                  </div>  
                   </div>
-                  <div class="hobby-item">
-                      <img className="centered" style={{width: 20 + '%'}} src="reading.png"/>
-                      <span class="caption">{infoData.hobby.five}</span>
+                  <div className="item">
+                      <img className="centered" style={{width: 100 + '%'}} src="cooking.png"/>
+                      <span className="caption">{infoData.hobby.four}</span>
                   </div>
-                  <div class="hobby-item">
-                      <img className="centered" style={{width: 20 + '%'}} src="investing.png"/>
-                      <span class="caption">{infoData.hobby.six}</span>
+                  <div className="item">
+                      <img className="centered" style={{width: 100 + '%'}} src="reading.png"/>
+                      <span className="caption">{infoData.hobby.five}</span>
+                  </div>
+                  <div className="item">
+                      <img className="centered" style={{width: 100 + '%'}} src="investing.png"/>
+                      <span className="caption">{infoData.hobby.six}</span>
                   </div>
               </div>
           </div>
