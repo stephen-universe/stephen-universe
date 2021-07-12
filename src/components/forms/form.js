@@ -248,10 +248,11 @@ export class FormUserDetails extends Component {
           <div className="column is-1"><div className="vertical-divider"></div></div>
           <div className="column is-4 has-text-centered"><img src="" />
           <p className="">
+            <img className="" src="make-contact.png" /> <br />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             Tellus molestie nunc non blandit. Nunc sed id semper risus.</p>
-            <div className="mt-6"> <Link to="/">Downloadable Link</Link></div>
+            <div className="mt-6"> <Link to="/">2021 Style Guide</Link></div>
           </div>
           </div>
         </section>
@@ -376,10 +377,11 @@ export class FormPersonalDetails extends Component {
           <div className="column is-1"><div className="vertical-divider"></div></div>
           <div className="column is-4 has-text-centered"><img src="" />
           <p className="">
+            <img className="" src="make-contact.png" /> <br />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             Tellus molestie nunc non blandit. Nunc sed id semper risus.</p>
-            <div className="mt-6"> <Link to="/">Downloadable Link</Link></div>
+            <div className="mt-6"> <Link to="/">2021 Style Guide</Link></div>
           </div>
           </div>
         </section>

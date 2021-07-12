@@ -13,6 +13,14 @@ module.exports = {
     infoData: infoData
   },
   plugins: [
+        {
+          resolve: `gatsby-plugin-google-analytics`,
+          options: {
+            trackingId: "UA-201949004-1 ",
+            head: true,
+            anonymize: true,
+      },
+    },
     "gatsby-plugin-sass",
     "gatsby-transformer-remark",
     "gatsby-plugin-react-helmet",
