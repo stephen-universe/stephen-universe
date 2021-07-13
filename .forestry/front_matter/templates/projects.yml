@@ -22,9 +22,8 @@ fields:
     required: false
   label: title
 - name: author
-  type: text
-  config:
-    required: false
+  type: tag_list
+  default: []
   label: author
 - name: thumb
   type: file
