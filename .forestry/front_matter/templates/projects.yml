@@ -1,4 +1,53 @@
 ---
 label: Projects
 hide_body: false
-fields: []
+fields:
+- name: id
+  type: text
+  config:
+    required: false
+  label: id
+- name: date
+  type: datetime
+  label: date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- name: title
+  type: text
+  config:
+    required: false
+  label: title
+- name: author
+  type: text
+  config:
+    required: false
+  label: author
+- name: thumb
+  type: file
+  config:
+    maxSize: 64
+  label: thumb
+- name: pixel
+  type: file
+  config:
+    maxSize: 64
+  label: pixel
+- name: role
+  type: text
+  config:
+    required: false
+  label: role
+- name: stack
+  type: text
+  config:
+    required: false
+  label: stack
+- name: tools
+  type: text
+  config:
+    required: false
+  label: tools
