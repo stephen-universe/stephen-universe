@@ -117,7 +117,7 @@ fields:
       required: false
     label: twelve
   label: skill
-- name: education
+  - name: education
   type: field_group_list
   fields:
   - name: educationOne
@@ -174,7 +174,7 @@ fields:
     min: 
     max: 
     labelField: 
-  label: education
+     label: education
 - name: certification
   type: field_group
   config: {}
@@ -225,10 +225,10 @@ fields:
       required: false
     label: two
   label: toolbox
-- name: employer
+  - name: employer
   type: field_group_list
   fields:
-  - name: jobOne
+   - name: jobOne
     type: field_group
     config: {}
     fields:
@@ -237,11 +237,11 @@ fields:
       config:
         required: false
       label: title
-    - name: position
+         - name: position
       type: text
       config:
         required: false
-      label: position
+            label: position
     - name: location
       type: text
       config:
@@ -289,11 +289,11 @@ fields:
       config:
         required: false
       label: title
-    - name: position
+        - name: position
       type: text
       config:
         required: false
-      label: position
+             label: position
     - name: location
       type: text
       config:
