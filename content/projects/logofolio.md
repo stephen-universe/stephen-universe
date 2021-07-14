@@ -16,7 +16,7 @@ pixel: "../../src/images/LogoFolio-pixel.png"
 
 <br/>
 
-![]()  ALERT: JULY 12TH, 2021
+![]()  ALERT: JULY 14TH, 2021
 
 ![]() CURRENTLY UPDATING..
 ![]()PLEASE CHECK BACK IN 24-48 HOURS.
