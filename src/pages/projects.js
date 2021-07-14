@@ -330,7 +330,7 @@ return (
 
 export const query = graphql`
 query myQuery {
-  projectOneData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 1}}}) {
+  projectOneData: allMarkdownRemark(filter: {id: {eq: "1"}}) {
     nodes {
       frontmatter {
         title 
@@ -354,7 +354,7 @@ query myQuery {
       }
     }
   }
-  projectTwoData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 2}}}) {
+  projectTwoData: allMarkdownRemark(filter: {id: {eq: "2"}}) {
     nodes {
       frontmatter {
         title 
@@ -378,7 +378,7 @@ query myQuery {
       }
     }
   }
-  projectThreeData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 3}}}) {
+  projectThreeData: allMarkdownRemark(filter: {id: {eq: "3"}}) {
     nodes {
       frontmatter {
         title 
@@ -402,7 +402,7 @@ query myQuery {
       }
     }
   }
-  projectFourData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 4}}}) {
+  projectFourData: allMarkdownRemark(filter: {id: {eq: "4"}}) {
     nodes {
       frontmatter {
         title 
@@ -426,7 +426,7 @@ query myQuery {
       }
     }
   }
-  projectFiveData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 5}}}) {
+  projectFiveData: allMarkdownRemark(filter: {id: {eq: "5"}}) {
     nodes {
       frontmatter {
         title 
@@ -450,7 +450,7 @@ query myQuery {
       }
     }
   }
-  projectSixData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 6}}}) {
+  projectSixData: allMarkdownRemark(filter: {id: {eq: "6"}}) {
     nodes {
       frontmatter {
         title 
@@ -474,7 +474,7 @@ query myQuery {
       }
     }
   }
-  projectSevenData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 7}}}) {
+  projectSevenData: allMarkdownRemark(filter: {id: {eq: "7"}}) {
     nodes {
       frontmatter {
         title 
@@ -505,7 +505,7 @@ query myQuery {
       }
     }
   }
-  projectEightData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 8}}}) {
+  projectEightData: allMarkdownRemark(filter: {id: {eq: "8"}}) {
     nodes {
       frontmatter {
         title 
@@ -529,7 +529,7 @@ query myQuery {
       }
     }
   }
-  projectNineData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 9}}}) {
+  projectNineData: allMarkdownRemark(filter: {id: {eq: "9"}}) {
     nodes {
       frontmatter {
         title 
