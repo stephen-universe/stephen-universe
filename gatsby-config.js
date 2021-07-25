@@ -19,7 +19,14 @@ module.exports = {
     "gatsby-transformer-yaml",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
-
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-201949004-1 ",
+        head: true,
+        anonymize: true,
+  },
+},
     {
       resolve: "gatsby-source-filesystem",
       options: {

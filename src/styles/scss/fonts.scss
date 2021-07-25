@@ -109,21 +109,375 @@ body, button, input, optgroup, select, textarea {font-family: Nostromo-Medium;}
 .bold {font-weight: bold;}
 .italicize {font-style: italic;}
 
+$blue: blue;
+$red: red;
+$white: #FFF;
+$black : #000;
+$orange: #e84834;
+$orange-shadow: #ab3122;
+$title-font: 'Nostromo-Black';
 
-.trailsText {
+
+
+
+      .trailsText {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        line-height: 80px;
+        font-size: 5.6rem;
+        color: black;
+        font-weight: 800;
+        letter-spacing: -0.05em;
+        will-change: transform, opacity;
+        overflow: hidden;
+      }
+      
+      .trailsText > div {
+        padding-right: 0.05em;
+        overflow: hidden;
+      }
+      
+
+
+
+
+
+.introText {
   position: relative;
   width: 100%;
   height: 100%;
-  line-height: 80px;
+  font-size: 1.5rem;
   color: black;
-  font-size: 6em;
   font-weight: 800;
   letter-spacing: -0.05em;
   will-change: transform, opacity;
   overflow: hidden;
 }
 
-.trailsText > div {
+.introText > div {
   padding-right: 0.05em;
   overflow: hidden;
 }
+                
+@media only screen and (max-width: 2407px) {
+  .hobby-item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:4.8rem; padding: 2rem;}
+  .item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:7.3rem; padding: 2rem;}
+
+  .trailsText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 80px;
+    font-size: 6rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .trailsText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+
+
+  .introText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 1.1rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .introText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+  .vertical-divider{ border-left: 6px solid #020921; height: 500px; }
+  .contact-subtitle {font-size: 2rem; font-weight: bold; margin-top: 1.55rem; font-style: italic;}
+  .contact-title { line-height: 65px;font-family: $title-font; color: $orange; text-shadow: 2px 2px 1px $orange-shadow; font-size: 5rem}
+                            }
+
+
+@media only screen and (max-width: 1407px) {
+  .hobby-item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:7.5rem; padding: 2rem;}
+  .item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:7.5rem; padding: 2rem;}
+ 
+  .trailsText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 80px;
+    font-size: 6rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .trailsText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+
+
+  .introText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 1.1rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .introText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+  .vertical-divider{ border-left: 6px solid #020921; height: 500px; }
+  .contact-subtitle {font-size: 2rem; font-weight: bold; margin-top: 1.55rem; font-style: italic;}
+  .contact-title {line-height: 50px; font-family: $title-font; color: $orange; text-shadow: 2px 2px 1px $orange-shadow; font-size: 3.9rem}
+                            }
+                    
+@media only screen and (max-width: 1215px) {
+  .hobby-item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:7.5rem; padding: 2rem;}
+  .item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:7.5rem; padding: 2rem;}
+
+  .trailsText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 80px;
+    font-size: 5.6rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .trailsText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+
+
+  .introText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 1.0rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .introText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+  .vertical-divider{ border-left: 6px solid #020921; height: 500px; }
+  .contact-title {line-height: 50px; font-family: $title-font; color: $orange; text-shadow: 2px 2px 1px $orange-shadow; font-size: 3.5rem}
+
+                              }
+                    
+ @media only screen and (max-width: 1024px) {
+  .hobby-item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:4.2rem; padding: 2rem;}
+  .item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:5.7rem; padding: 2rem;}
+
+  .trailsText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 80px;
+    font-size: 3rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .trailsText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+  
+  .introText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 0.9rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .introText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+  .vertical-divider{border-left: 6px solid #020921;height: 500px;}
+  .contact-subtitle {font-size: 2rem; font-weight: bold; margin-top: 1.55rem; font-style: italic;}
+  .contact-title {line-height: 50px; font-family: $title-font; color: $orange; text-shadow: 2px 2px 1px $orange-shadow; font-size: 3.5rem}
+
+                                }
+                    
+@media only screen and (max-width: 768px) {
+  .hobby-item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:5.5rem; padding: 2rem;}
+  .item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:6.5rem; padding: 2rem;}
+  .trailsText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    font-size: 3rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .trailsText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+
+
+  .introText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 0.9rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .introText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+  .vertical-divider{
+    border-top: 6px solid #020921;
+    width: 100%;
+    height: 5px;
+  }
+  .contact-subtitle {font-size: 2rem; font-weight: bold; margin-top: 1.55rem; font-style: italic;}
+  .contact-title {line-height: 30px; font-family: $title-font; color: $orange; text-shadow: 2px 2px 1px $orange-shadow; font-size: 2.6rem}
+                                  }
+                    
+@media only screen and (max-width: 426px) {
+  .hobby-item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:6.2rem; padding: 2rem;}
+  .item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:8.2rem; padding: 2rem;}
+  .trailsText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 30px;
+    font-size: 1.75rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .trailsText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+
+  .introText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 0.75rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .introText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+  .vertical-divider{
+    border-top: 6px solid #020921;
+    width: 100%;
+    height: 5px;
+  }
+  .contact-subtitle {font-size: 1.2rem; font-weight: bold; margin-top: 1.55rem; font-style: italic;}
+  .contact-title { line-height: 30px; font-family: $title-font; color: $orange; text-shadow: 2px 2px 1px $orange-shadow; font-size: 2rem}
+                                  
+}
+
+@media only screen and (max-width: 366px) {
+  .hobby-item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:7.1rem; padding: 2rem;}
+  .item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:8.2rem; padding: 2rem;}
+ 
+  .trailsText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 80px;
+    font-size: 6rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .trailsText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+
+
+  .introText {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 1.1rem;
+    color: black;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
+  
+  .introText > div {
+    padding-right: 0.05em;
+    overflow: hidden;
+  }
+  .vertical-divider{
+    border-top: 6px solid #020921;
+    width: 100%;
+    height: 5px;
+  }
+  .contact-subtitle {font-size: 0.8rem; font-weight: bold; margin-top: 1.55rem; font-style: italic;}
+  .contact-title { line-height: 25px; font-family: $title-font; color: $orange; text-shadow: 2px 2px 1px $orange-shadow; font-size: 1.6rem}
+                            }
+.quote-p {color: $white; text-shadow: -1px 2px 3px $orange-shadow;}
+
+.contact-p {font-size: 1.39rem; font-weight: bold; margin-top: 2.55rem;}

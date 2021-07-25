@@ -15,7 +15,7 @@ export default function Quote () {
 <VisibilitySensor partialVisibility offset={{ bottom: -400 }}>
           {({ isVisible }) => (
             <Fade duration={2000} delay={200}> 
-<span style={{fontSize: 2.1 + 'rem'}}>When a Gem is made, it's for a reason.</span>
+<span>When a Gem is made, it's for a reason.</span>
 </Fade>
 )}
 </VisibilitySensor>
@@ -24,7 +24,7 @@ export default function Quote () {
 <VisibilitySensor partialVisibility offset={{ bottom: -400 }}>
           {({ isVisible }) => (
             <Fade duration={2000} delay={2400}> 
-<span style={{fontSize: 2.1 + 'rem', fontStyle: 'justify'}}>They burst out of the ground</span>
+<span>They burst out of the ground</span>
 </Fade>
 )}
 </VisibilitySensor>
@@ -32,7 +32,7 @@ export default function Quote () {
 <VisibilitySensor partialVisibility offset={{ bottom: -400 }}>
           {({ isVisible }) => (
             <Fade duration={2000} delay={4600}> 
-<span style={{fontSize: 2 + 'rem', fontStyle: 'justify'}}>already knowing what they're supposed to be,</span>
+<span>already knowing what they're supposed to be,</span>
 </Fade>
 )}
 </VisibilitySensor>

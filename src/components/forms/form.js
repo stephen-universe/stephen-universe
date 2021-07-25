@@ -104,7 +104,7 @@ export class FormUserDetails extends Component {
     return (
       <>
       <div className="column is-8 ">
-        <h1 className="title" style={{fontSize: 2.7 + "rem"}}>Have Questions?</h1>
+        <h1 className="contact-title">Have Questions?</h1>
         <h1 className="contact-subtitle">Let's Talk Design.</h1>
         <h1 className="contact-p">I'd Love To Hear From You</h1>
         <p className="" style={{fontSize: 0.7 + "rem" }}>Please Fill Out The Form Below</p>
@@ -248,10 +248,11 @@ export class FormUserDetails extends Component {
           <div className="column is-1"><div className="vertical-divider"></div></div>
           <div className="column is-4 has-text-centered"><img src="" />
           <p className="">
+            <img className="" src="make-contact.png" /> <br />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             Tellus molestie nunc non blandit. Nunc sed id semper risus.</p>
-            <div className="mt-6"> <Link to="/">Downloadable Link</Link></div>
+            <div className="mt-6"> <Link to="/">2021 Style Guide</Link></div>
           </div>
           </div>
         </section>
@@ -276,7 +277,7 @@ export class FormPersonalDetails extends Component {
     return (
       <>
        <div className="column is-8 ">
-        <h1 className="title" style={{fontSize: 2.7 + "rem"}}>Have Questions?</h1>
+        <h1 className="contact-title">Have Questions?</h1>
         <h1 className="contact-subtitle">Let's Talk Design.</h1>
         <h1 className="contact-p">I'd Love To Hear From You</h1>
         <p className="" style={{fontSize: 0.7 + "rem" }}>Please Fill Out The Form Below</p>
@@ -376,10 +377,11 @@ export class FormPersonalDetails extends Component {
           <div className="column is-1"><div className="vertical-divider"></div></div>
           <div className="column is-4 has-text-centered"><img src="" />
           <p className="">
+            <img className="" src="make-contact.png" /> <br />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             Tellus molestie nunc non blandit. Nunc sed id semper risus.</p>
-            <div className="mt-6"> <Link to="/">Downloadable Link</Link></div>
+            <div className="mt-6"> <Link to="/">2021 Style Guide</Link></div>
           </div>
           </div>
         </section>

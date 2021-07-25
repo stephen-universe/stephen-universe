@@ -1,5 +1,5 @@
 ---
-id: 6
+id: "6"
 date: 2019-08-16T22:37:31.000Z
 title: Epic Future
 author: Stephen A. Warren, J.R

@@ -1,5 +1,5 @@
 ---
-id: 3
+id: "3"
 date: 2019-03-15T22:42:09.000+00:00
 title: CKC Charackters
 author: Stephen A. Warren, J,R

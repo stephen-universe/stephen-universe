@@ -52,13 +52,13 @@ return (
               </div>
 
                   </Link>
-                <div className="column is-1 is-pulled-right">
+               
                     <Link to={"/project/" + project.fields.slug}>
-                          <div className="buttons  has-addons is-right">
+                          <div className="buttons mt-4 has-addons is-right">
                               <button className="button">View</button>
                                     </div>
                                 </Link>
-                </div>
+               
             </div>
         </div>
         </div>
@@ -87,13 +87,13 @@ return (
                                   </div>
                                 </Link>
                                 
-                                <div className="column is-1 is-pulled-right">
+                             
                                 <Link to={"/project/" + project.fields.slug}>
-                                    <div className="buttons  has-addons is-right">
+                                    <div className="buttons mt-4 has-addons is-right">
                                       <button className="button">View</button>
                                     </div>
                                 </Link>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -119,13 +119,13 @@ return (
                                   </div>
                                 </Link>
                                 
-                                 <div className="column is-1 is-pulled-right">
+                                
                                  <Link to={"/project/" + project.fields.slug}>
-                                    <div className="buttons  has-addons is-right">
+                                    <div className="buttons mt-4 has-addons is-right">
                                       <button className="button">View</button>
                                     </div>
                                 </Link>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -156,13 +156,13 @@ return (
                                   </div>
                                 </Link>
                                 
-                                 <div className="column is-1 is-pulled-right">
+                                
                                  <Link to={"/project/" + project.fields.slug}>
-                                    <div className="buttons  has-addons is-right">
+                                    <div className="buttons mt-4 has-addons is-right">
                                       <button className="button">View</button>
                                     </div>
                                 </Link>
-                                </div>
+                              
                             </div>
                         </div>
                     </div>
@@ -188,13 +188,13 @@ return (
                                   </div>
                                 </Link>
                                 
-                                 <div className="column is-1 is-pulled-right">
+                                
                                  <Link to={"/project/" + project.fields.slug}>
-                                    <div className="buttons  has-addons is-right">
+                                    <div className="buttons mt-4 has-addons is-right">
                                       <button className="button">View</button>
                                     </div>
                                 </Link>
-                                </div>
+                              
                             </div>
                         </div>
                     </div>
@@ -223,13 +223,12 @@ return (
                                   </div>
                                 </Link>
                                 
-                                 <div className="column is-1 is-pulled-right">
+                                
                                  <Link to={"/project/" + project.fields.slug}>
-                                    <div className="buttons  has-addons is-right">
+                                    <div className="buttons mt-4 has-addons is-right">
                                       <button className="button">View</button>
                                     </div>
                                 </Link>
-                                </div>
                             </div>
                         </div>
                     ))}
@@ -250,13 +249,12 @@ return (
                                   </div>
                                 </Link>
                                 
-                                 <div className="column is-1 is-pulled-right">
+                                
                                  <Link to={"/project/" + project.fields.slug}>
-                                    <div className="buttons  has-addons is-right">
+                                    <div className="buttons mt-4 has-addons is-right">
                                       <button className="button">View</button>
                                     </div>
                                 </Link>
-                                </div>
                             </div>
                         </div>
                         ))}
@@ -278,13 +276,12 @@ return (
                                   </div>
                                 </Link>
                                 
-                                 <div className="column is-1 is-pulled-right">
+                                
                                  <Link to={"/project/" + project.fields.slug}>
-                                    <div className="buttons  has-addons is-right">
+                                    <div className="buttons mt-4 has-addons is-right">
                                       <button className="button">View</button>
                                     </div>
                                 </Link>
-                                </div>
                             </div>
                         </div>
                     ))}
@@ -308,13 +305,13 @@ return (
                                   </div>
                                 </Link>
                                 
-                                 <div className="column is-1 is-pulled-right">
+                                
                                  <Link to={"/project/" + project.fields.slug}>
-                                    <div className="buttons  has-addons is-right">
+                                    <div className="buttons mt-4 has-addons is-right">
                                       <button className="button">View</button>
                                     </div>
                                 </Link>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -333,7 +330,31 @@ return (
 
 export const query = graphql`
 query myQuery {
-  projectOneData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 1}}}) {
+  projectOneData: allMarkdownRemark (filter: {frontmatter: {id: {eq: "1"}}}) {
+    nodes {
+      frontmatter {
+        title 
+        thumb {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        pixel {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+      fields {
+        slug
+      }
+    }
+  }                                      
+  projectTwoData: allMarkdownRemark (filter: {frontmatter: {id: {eq: "2"}}}) {
     nodes {
       frontmatter {
         title 
@@ -357,7 +378,7 @@ query myQuery {
       }
     }
   }
-  projectTwoData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 2}}}) {
+  projectThreeData: allMarkdownRemark (filter: {frontmatter: {id: {eq: "3"}}}) {
     nodes {
       frontmatter {
         title 
@@ -381,7 +402,7 @@ query myQuery {
       }
     }
   }
-  projectThreeData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 3}}}) {
+  projectFourData: allMarkdownRemark (filter: {frontmatter: {id: {eq: "4"}}}) {
     nodes {
       frontmatter {
         title 
@@ -405,7 +426,7 @@ query myQuery {
       }
     }
   }
-  projectFourData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 4}}}) {
+  projectFiveData: allMarkdownRemark (filter: {frontmatter: {id: {eq: "5"}}}) {
     nodes {
       frontmatter {
         title 
@@ -429,7 +450,7 @@ query myQuery {
       }
     }
   }
-  projectFiveData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 5}}}) {
+  projectSixData: allMarkdownRemark (filter: {frontmatter: {id: {eq: "6"}}}) {
     nodes {
       frontmatter {
         title 
@@ -453,31 +474,7 @@ query myQuery {
       }
     }
   }
-  projectSixData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 6}}}) {
-    nodes {
-      frontmatter {
-        title 
-        thumb {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        pixel {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-      fields {
-        slug
-      }
-    }
-  }
-  projectSevenData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 7}}}) {
+  projectSevenData: allMarkdownRemark (filter: {frontmatter: {id: {eq: "7"}}}) {
     nodes {
       frontmatter {
         title 
@@ -508,7 +505,7 @@ query myQuery {
       }
     }
   }
-  projectEightData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 8}}}) {
+  projectEightData: allMarkdownRemark (filter: {frontmatter: {id: {eq: "8"}}}) {
     nodes {
       frontmatter {
         title 
@@ -532,7 +529,7 @@ query myQuery {
       }
     }
   }
-  projectNineData: allMarkdownRemark(filter: {frontmatter: {id: {eq: 9}}}) {
+  projectNineData: allMarkdownRemark (filter: {frontmatter: {id: {eq: "9"}}}) {
     nodes {
       frontmatter {
         title 
