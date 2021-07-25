@@ -43,8 +43,8 @@ export default function ProjectPage(props) {
                   
                   
                 
-        <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#805E73', zIndex: -1 }}> </ParallaxLayer>
-        <ParallaxLayer offset={3.1} speed={1} style={{ backgroundColor: '#87BCDE' }} />
+        <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#021f7c', zIndex: -1 }}> </ParallaxLayer>
+        <ParallaxLayer offset={3.1} speed={1} style={{ backgroundColor: '#0071fd' }} />
             
            
 
@@ -128,7 +128,7 @@ export default function ProjectPage(props) {
             backgroundPosition: 'center',
           }}
         >
-          <Hobbies/>
+       
             </ParallaxLayer>
 
         <ParallaxLayer
@@ -152,7 +152,11 @@ export default function ProjectPage(props) {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-                  <InitializeContact />
+        
+        <div className="container">  <Hobbies /> </div> 
+          <br/>
+          <br/>
+                  
 
         </ParallaxLayer>
 
