@@ -1,6 +1,5 @@
 import React from "react"
 import "../styles/style.scss"
-import Hobbies from "./home/hobbies"
 
 
 export default function Footer(props) {

@@ -10,19 +10,23 @@ export default function FooterQuote () {
 
 
 
-        <Fade cascade duration={2000} delay={1500}>
-        <div className="has-text-centered orange" style={{marginTop: 24.5 + "rem"}}>
-                "But you, you're supposed to change. <br />
-                 You're never the same even moment to moment <br />
+        
+        <div className="quote-p bold has-text-centered" style={{fontFamily: 'Nostromo-Oblique-Black'}}> 
+       <Fade cascade duration={2000} delay={5500}>
+          <span> "But you, you're supposed to change. <br />
+                 You're never the same even moment to moment  <br />
                  You're allowed and expected to invent who you are. <br />
                  What an incredible power -- the ability to 'grow up'." <br /> <br />
-                
-        <span><Link to=""><Fade cascade duration={2000} delay={3500}><br/><span className="has-text-centered orange">--Greg The Babysitter</span></Fade><br/>
-        <Fade cascade duration={2000} delay={4000}><br/><span className="has-text-centered orange">Steven Universe</span></Fade><br/></Link></span>
-        
-        
-        </div>
+          </span>
         </Fade>
+      
+                
+        <span><Link to=""><Fade cascade duration={2000} delay={5500}><br/><span className="has-text-centered white">--Greg The Babysitter</span></Fade> <br/>
+        <Fade cascade duration={2000} delay={6000}><br/><span className="has-text-centered white">Steven Universe</span></Fade><br/></Link></span>
+        
+          
+        </div>
+      
 
 </>
     )

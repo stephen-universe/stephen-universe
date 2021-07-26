@@ -21,7 +21,7 @@ export default function ProjectPage(props) {
   const parallax = useRef<IParallax>(null!)
 
   return (
-     <div style={{ width: '100%', height: '100%', background: '#253237' }}>
+       <div className="body-bg">
           <Parallax ref={parallax} pages={5}>
           <div className="header-top-color"> <Resume /> </div>
       
@@ -38,14 +38,9 @@ export default function ProjectPage(props) {
           </div>
       </div>
 
-
-                  
-                  
-                
-        <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#021f7c', zIndex: -1 }}> </ParallaxLayer>
-        <ParallaxLayer offset={3.1} speed={1} style={{ backgroundColor: '#0071fd' }} />
-            
-           
+      
+        <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#021f7c', zIndex: -1 }} />
+        <ParallaxLayer offset={4.1} speed={1} style={{ backgroundColor: '#0071fd' }} />
 
         <ParallaxLayer
           offset={1}
@@ -55,34 +50,74 @@ export default function ProjectPage(props) {
             backgroundImage: url('stars', true),
             backgroundSize: 'cover',
           }}
-        >    <section className="main-body-bg"><div className="container"><Introduction /></div></section>
+        >   <div className="container"><Introduction /></div>
         </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={4}
+          speed={0}
+          factor={3}
+          style={{
+            backgroundImage: url('stars', true),
+            backgroundSize: 'cover',
+          }} />
+
 
 
         <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.1 }}>
-          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '55%' }} />
-          <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '15%' }} />
+          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '55%', zIndex: 1  }} />
+          <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '15%', zIndex: 1  }} />
         </ParallaxLayer>
 
         <ParallaxLayer offset={1.75} speed={0.5} style={{ opacity: 0.1 }}>
-          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '70%' }} />
-          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '40%' }} />
+          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '70%', zIndex: 1  }} />
+          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '40%', zIndex: 1  }} />
         </ParallaxLayer>
 
         <ParallaxLayer offset={1} speed={0.2} style={{ opacity: 0.2 }}>
-          <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '10%' }} />
-          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '75%' }} />
+          <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '10%', zIndex: 1  }} />
+          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '75%', zIndex: 1  }} />
         </ParallaxLayer>
 
         <ParallaxLayer offset={1.6} speed={-0.1} style={{ opacity: 0.4 }}>
-          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '60%' }} />
-          <img src={url('cloud')} style={{ display: 'block', width: '25%', marginLeft: '30%' }} />
-          <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '80%' }} />
+          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '60%', zIndex: 1  }} />
+          <img src={url('cloud')} style={{ display: 'block', width: '25%', marginLeft: '30%', zIndex: 1 }} />
+          <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '80%', zIndex: 1  }} />
         </ParallaxLayer>
 
         <ParallaxLayer offset={2.6} speed={0.4} style={{ opacity: 0.6 }}>
-          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '5%' }} />
-          <img src={url('cloud')} style={{ display: 'block', width: '15%', marginLeft: '75%' }} />
+          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '5%', zIndex: 1  }} />
+          <img src={url('cloud')} style={{ display: 'block', width: '15%', marginLeft: '75%', zIndex: 1  }} />
+        </ParallaxLayer>
+        <ParallaxLayer offset={3.4} speed={0.8} style={{ opacity: 0.1 }}>
+          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '55%', zIndex: 1  }} />
+          <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '15%', zIndex: 1  }} />
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={3.75} speed={0.5} style={{ opacity: 0.1 }}>
+          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '70%', zIndex: 1  }} />
+          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '40%', zIndex: 1  }} />
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={3.1} speed={0.2} style={{ opacity: 0.2 }}>
+          <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '10%', zIndex: 1  }} />
+          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '75%', zIndex: 1  }} />
+        </ParallaxLayer>
+
+
+        <ParallaxLayer offset={4.2} speed={0.4} style={{ opacity: 0.6 }}>
+        <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '60%', zIndex: 1  }} />
+          <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '80%', zIndex: 1  }} />
+        </ParallaxLayer>    
+
+        <ParallaxLayer offset={4.5} speed={0.4} style={{ opacity: 0.6 }}>
+          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '5%', zIndex: 1  }} />
+          
+        </ParallaxLayer> 
+
+        <ParallaxLayer offset={2.999} speed={0.4} style={{ opacity: 0.6 }}>
+          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '5%', zIndex: 1  }} />
+          <img src={url('cloud')} style={{ display: 'block', width: '15%', marginLeft: '75%', zIndex: 1  }} />
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -103,10 +138,8 @@ export default function ProjectPage(props) {
           style={{
             backgroundSize: '80%',
             backgroundPosition: 'center',
-          }}
-        >
-       
-            </ParallaxLayer>
+          }} />
+
 
         <ParallaxLayer
           offset={1}
@@ -127,12 +160,8 @@ export default function ProjectPage(props) {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-        
-        <div className="container">  <Hobbies /> </div> 
-          <br/>
-          <br/>
-                  
-
+            <div className="container"> <InitializeContact /></div>
+            
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -157,6 +186,6 @@ export default function ProjectPage(props) {
            <ScrollApp/>
         </ParallaxLayer>
       </Parallax>
-    </div>
+      </div>
   )
 }

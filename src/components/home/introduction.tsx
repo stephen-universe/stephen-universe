@@ -6,12 +6,11 @@ export default function Introduction() {
  return (
   <>
 
-
+<div className="is-size-5-mobile has-text-centered-mobile is-size-2-tablet has-text-left-tablet is-size-3-desktop has-text-left-desktop is-size-2-widescreen  has-text-left-widescreen is-size-4-fullhd  has-text-left-fullhd" style={{ marginTop: 6 + "rem"}}>   
         <div className="tile is-10 is-ancestor">
             <div className="tile is-12">
                 <div className="tile">
                       <div className="tile is-parent">
-                      <div className="is-size-5-mobile has-text-centered-mobile is-size-2-tablet has-text-left-tablet is-size-4-desktop has-text-left-desktop is-size-3-widescreen  has-text-left-widescreen is-size-4-fullhd  has-text-left-fullhd" style={{ marginTop: 6 + "rem"}}>
                         <div className="trailsText" style={{ marginTop: 6 + "rem"}}>
                             <Fade cascade duration={2000} delay={800}><span>Hi</span></Fade> <br/>
                             <Fade cascade duration={1500} delay={1400}><span>I'm Stephen</span></Fade><br/>
@@ -23,7 +22,7 @@ export default function Introduction() {
                 </div>
             </div>
             
-                          <img src="/stephen-universe.png" style={{width: 35 + '%', maxHeight: 235 + 'px', marginTop: 12 + 'rem'}}/><br/>
+                          <img src="/stephen-universe.png" className="self-image"/><br/>
         </div>
         </div>
 
