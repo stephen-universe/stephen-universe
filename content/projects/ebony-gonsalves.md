@@ -5,7 +5,7 @@ title: Ebony Gonsalves
 author: Stephen A. Warren, J.R
 thumb: "../../src/images/EG-home.png"
 pixel: "../../src/images/EG-pixel.png"
-role: Designer
+role: Graphic Designer
 stack: Adobe CC
 tools: Adobe XD | Illustrator | Photoshop
 
