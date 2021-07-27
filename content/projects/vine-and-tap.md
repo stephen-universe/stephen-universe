@@ -14,7 +14,7 @@ tools: Photoshop | Illustrator | InDesign
 
 I worked on this project as a team and my role consisted of layout design and creating graphic elements to be used within the UI Design.
 
-This project was started and completed in 2013. I included this project in my portfolio, not to be seen as my best work but to show my progression as a designer over the years.
+* This project was started and completed in 2013. I included this project in my portfolio, not to be seen as my best work but to show my progression as a designer over the years.
 
  ![](../../src/images/VT-bottle.jpg)
 ![](../../src/images/VT-menu.png)
