@@ -10,6 +10,9 @@ stack: Adobe CC | AutoCAD
 tools: Photoshop | Illustrator | DreamWeaver | Pencil & Pad
 
 ---
+
+![](../../src/images/Patricia-Nicolas-main-logo.jpg)
+
 ### **Highlight:**
 
 _My very first **graphic design** and **landing page** that I created after changing majors in college to focus more on the vast world of communication._
@@ -42,8 +45,6 @@ Increase the overall brand presence so that the company may professionally estab
 
 1. Create a well thought out logo design that will capture and represent the industry of choice.
 2. Provide a professional landing page where visitors may sign up for newsletters, updates, and more.
-
-![](../../src/images/Patricia-Nicolas-main-logo.jpg)
 
 ![](../../src/images/Patricia-Nicolas-mock-two.png)
 ![](../../src/images/Patricia-Nicolas-mock-three.png)

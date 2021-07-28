@@ -10,6 +10,7 @@ stack: MongoDB | Express | React | NodeJS | Next.js
 tools: Photoshop | Illustrator | Visual Studio
 
 ---
+
 ![](../../src/images/Perfectly-Different-note.jpg)
 ![](../../src/images/Perfectly-Different-home.jpg)
 ![](../../src/images/Perfectly-Different-brief.jpg)
