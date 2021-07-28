@@ -10,13 +10,13 @@ stack: Wordpress
 tools: Photoshop | Illustrator | InDesign
 
 ---
-
 ### **Highlight:**
 
 _I worked on this project as part of a team and my role consisted of **layout design** and **creating visual elements** to be used within the UI Design._
 
-* _This project was started and completed in 2013. I included this project in my portfolio, not to be seen as my best work but to show my progression as a designer over the years._
-* _I also worked for the company as a **server and barback** but used the opportunity to take a leap of faith into a new career path._
+_I included this project in my portfolio, not to be seen as my best work but to show my progression as a designer over the years. I also worked for the company as a **server and barback** but used the opportunity to take a leap of faith into a new career path._
+
+* _This project was started and completed in 2013._
 
 #### **Brief:**
 
@@ -29,7 +29,7 @@ Create and redesign the company website so that it provides a more professional 
 #### **Company Goals:**
 
 * Gain more online exposure
-* Increase reservations 
+* Increase reservations
 
 #### **Pain Points:**
 
@@ -42,8 +42,9 @@ Create and redesign the company website so that it provides a more professional 
 1. Provide a more user-centered web design that allows guests to learn more about the establishment, new items added to the menu, chef's specials and more.
 2. Design reusable menu's that can be modified and altered easily.
 
-####   
-![](../../src/images/VT-Home.png) 
+#### 
+
+![](../../src/images/VT-Home.png)
 
 * _added depth to logo through shadows and highlights_
 
@@ -52,11 +53,10 @@ Create and redesign the company website so that it provides a more professional 
 
 * _redesigned menu to add more character to the previous layout_
 
- ![](../../src/images/VT-course-menu.png)
+![](../../src/images/VT-course-menu.png)
 ![](../../src/images/VT-drink-menu.png)
 
-* redesigned wine info & 
-
+* redesigned wine info &
 
 ![](../../src/images/VT-Home.jpg)
 ![](../../src/images/VT-thanks.jpg)
