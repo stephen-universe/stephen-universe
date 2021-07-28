@@ -10,6 +10,11 @@ stack: Wordpress
 tools: Photoshop | Illustrator | InDesign
 
 ---
+
+![](../../src/images/VT-Home.png)
+
+* _added depth to logo through shadows and highlights_
+
 ### **Highlight:**
 
 _I worked on this project as part of a team and my role consisted of **layout design** and **creating visual elements** to be used within the UI Design._
@@ -42,12 +47,6 @@ Create and redesign the company website so that it provides a more professional 
 1. Provide a more user-centered web design that allows guests to learn more about the establishment, new items added to the menu, chef's specials and more.
 2. Design reusable menu's that can be modified and altered easily.
 
-#### 
-
-![](../../src/images/VT-Home.png)
-
-* _added depth to logo through shadows and highlights_
-
 ![](../../src/images/VT-bottle.jpg)
 ![](../../src/images/VT-menu.png)
 
@@ -56,7 +55,7 @@ Create and redesign the company website so that it provides a more professional 
 ![](../../src/images/VT-course-menu.png)
 ![](../../src/images/VT-drink-menu.png)
 
-* redesigned wine info &
+* redesigned wine info & placecard
 
 ![](../../src/images/VT-Home.jpg)
 ![](../../src/images/VT-thanks.jpg)
