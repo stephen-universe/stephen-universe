@@ -14,7 +14,7 @@ tools: Photoshop | Illustrator | InDesign
 
 * _added depth to logo through shadows and highlights_
 
-<center>
+
 
 ### **Highlight:**
 
@@ -49,7 +49,6 @@ Create and redesign the company website so that it provides a more professional 
 1. Provide a more user-centered web design that allows guests to learn more about the establishment, new items added to the menu, chef's specials and more.
 2. Design reusable menu's that can be modified and altered easily. 
 
-</center>
 
 ![](../../src/images/VT-bottle.jpg)
 ![](../../src/images/VT-menu.png)
