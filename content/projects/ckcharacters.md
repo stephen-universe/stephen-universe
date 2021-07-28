@@ -10,9 +10,10 @@ stack: 'Drupal 7 | SQL '
 tools: Photoshop | Illustrator | Visual Studio
 
 ---
+
 ![](../../src/images/CKC-Home.jpg)
 
- ![](../../src/images/CKC-Brief.jpg)
+![](../../src/images/CKC-Brief.jpg)
 ![](../../src/images/CKC-research.jpg)
 ![](../../src/images/CKC-competition.jpg)
 ![](../../src/images/CKC-buyer.jpg)

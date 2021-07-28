@@ -10,6 +10,7 @@ stack: MongoDB | Express | React | NodeJS | Snipcart | Simplybook.Me
 tools: Adobe Photoshop | Adobe Illustrator | Adobe XD | Visual Studio
 
 ---
+
 ![](../../src/images/Ana-Rose-home.jpg)
 ![](../../src/images/Ana-Rose-home.png)
 ![](../../src/images/Ana-Rose-sign-in.png)
