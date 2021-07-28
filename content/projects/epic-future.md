@@ -10,6 +10,9 @@ stack: Adobe CC
 tools: Auto CAD Sketch | Illustrator | Photoshop  | InDesign
 
 ---
+
+![](../../src/images/EpicFuture-Four.png)  
+
 ### **Highlight:**
 
 _In this short but fun **freelance** project I interviewed both owners and went through a discovery phase to learn about their target audience, as well as, establish their **brand identity.**_
@@ -46,7 +49,7 @@ Create a brand identity that needs to establish some brand awareness -- that may
 ![](../../src/images/EpicFuture-One.png)
 ![](../../src/images/EpicFuture-Two.png)
 ![](../../src/images/EpicFuture-Three.png)
-![](../../src/images/EpicFuture-Four.png)
+
 ![](../../src/images/EpicFuture-Five.png)
 ![](../../src/images/EpicFuture-Six.png)
 ![](../../src/images/EpicFuture-Seven.png)
