@@ -10,12 +10,11 @@ stack: Adobe CC
 tools: Auto CAD Sketch | Illustrator | Photoshop  | InDesign
 
 ---
-
 ### **Highlight:**
 
-_In this short but fun freelance project I interviewed both owners and went through a discovery phase to learn about their target audience, as well as, establish their brand identity._ 
+_In this short but fun **freelance** project I interviewed both owners and went through a discovery phase to learn about their target audience, as well as, establish their **brand identity.**_
 
-_The owners are originally from Haiti so I wanted to establish a brand that would make them feel prideful and full of joy. I focused in on the Haitian national flag and used those exact colors to provide that experience._ 
+_The owners are originally from Haiti so I wanted to establish a brand that would make them feel prideful and full of joy. I focused in on the Haitian national flag and used those exact colors to provide that experience._
 
 * _This project was started and completed in 2020._
 * _I used 1:1 interviews, qualitative research, and color theories_
@@ -36,13 +35,13 @@ Create a brand identity that needs to establish some brand awareness -- that may
 
 #### **Pain Points:**
 
-1. Does not have a target audience. 
+1. Does not have a target audience.
 2. Does not have a brand identity.
 3. Needs advertisement.
 
 #### **Solution:**
 
-1. Design a well-polished logo that will increase cognitive awareness using color theories to produce specific emotions and gain the trust of its audience.  
+1. Design a well-polished logo that will increase cognitive awareness using color theories to produce specific emotions and gain the trust of its audience.
 
 ![](../../src/images/EpicFuture-One.png)
 ![](../../src/images/EpicFuture-Two.png)
