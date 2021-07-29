@@ -1,14 +1,13 @@
 ---
 id: "5"
-date: 2019-07-22T22:44:38Z
+date: 2021-01-01T23:44:38Z
 title: Perfectly Different
 author: Stephen A. Warren, J.R
-thumb: ../../src/images/Perfectly-Different-app-home.jpg 
-pixel: ../../src/images/Perfectly-Different-app-home-pixel.jpg 
-role: "Designer | Developer"
-stack: "MongoDB | Express | React | NodeJS | Next.js"
-tools: "Photoshop | Illustrator | Visual Studio"
-
+thumb: "../../src/images/Perfectly-Different-app-home.jpg"
+pixel: "../../src/images/Perfectly-Different-app-home-pixel.jpg"
+role: UI Designer | UX Research | React Developer
+stack: MongoDB | Express | React | NodeJS | Next.js
+tools: Photoshop | Illustrator | Visual Studio
 
 ---
 

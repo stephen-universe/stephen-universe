@@ -1,17 +1,18 @@
 ---
 id: "3"
-date: 2019-03-15T22:42:09.000+00:00
+date: 2017-05-01T04:00:00Z
 title: CKC Charackters
 author: Stephen A. Warren, J,R
-thumb: ../../src/images/CKC-Home.jpg
-pixel: ../../src/images/CKC-Home.png
-role: "Designer | Developer"
-stack: "MongoDB | Express | React | NodeJS | Next.js"
-tools: "Photoshop | Illustrator | Visual Studio"
-
+thumb: "../../src/images/CKC-Home.jpg"
+pixel: "../../src/images/CKC-Home.png"
+role: UI Designer | Developer | Visual Artist | UX Researcher
+stack: 'Drupal 7 | SQL '
+tools: Photoshop | Illustrator | Visual Studio
 
 ---
+
 ![](../../src/images/CKC-Home.jpg)
+
 ![](../../src/images/CKC-Brief.jpg)
 ![](../../src/images/CKC-research.jpg)
 ![](../../src/images/CKC-competition.jpg)

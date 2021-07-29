@@ -1,13 +1,13 @@
 ---
 id: "4"
-date: 2019-07-22T22:44:38Z
+date: 2019-08-01T22:44:38Z
 title: Queendom Farms
 author: Stephen A. Warren, J.R
-thumb: ../../src/images/Queendom-Farms-Home.jpg
-pixel: ../../src/images/Queendom-Farms-Home-pixel.jpg
-role: "Designer"
-stack: "Adobe CC | AutoCAD"
-tools: "Photoshop | Illustrator | InDesign"
+thumb: "../../src/images/Queendom-Farms-Home.jpg"
+pixel: "../../src/images/Queendom-Farms-Home-pixel.jpg"
+role: Graphic Designer
+stack: Adobe CC | AutoCAD
+tools: Photoshop | Illustrator | InDesign
 
 ---
 
