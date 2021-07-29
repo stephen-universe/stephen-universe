@@ -52,8 +52,13 @@ export default function Projects(props) {
               <h2>Tools: {data.frontmatter.tools}<i></i></h2>
         </div>
          
+        <div className="tile is-ancestor">
+        <div className="tile is-2 "> </div>
+        <div className="tile is-8">
          <div dangerouslySetInnerHTML={{__html: data.html}}></div>
-       
+         </div>
+         </div>
+         <div className="tile is-2 is-parent"> </div>
 
     <figure className= "">
         <img className="image" src={data.frontmatter.image} alt="" />
