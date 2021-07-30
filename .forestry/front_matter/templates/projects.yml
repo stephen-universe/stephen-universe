@@ -1,6 +1,6 @@
 ---
 label: Projects
-hide_body: true
+hide_body: false
 fields:
 - name: id
   type: text
