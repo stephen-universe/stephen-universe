@@ -29,8 +29,16 @@ company-goals: |-
   _<p><em>Gain more online exposure</em> </p> <br/>_
 
   _<p><em>Increase reservations</em> </p>_
-pain-points: "1. Web Design does not mimic the culture of the establishment.\n2. Can
-  not make reservation directly from site. \n3. Needs to provide a full user experience."
+pain-points: |-
+  <ol>
+
+  <li>Web Design does not mimic the culture of the establishment.</li>
+
+  <li>Can not make reservation directly from site.</li>
+
+  <li>Needs to provide a full user experience. </li>
+
+  </ol>
 solutions: "1. Provide a more user-centered web design that allows guests to learn
   more about the establishment, new items added to the menu, chef's specials and more.
   \n2. Design reusable menu's that can be modified and altered easily."
