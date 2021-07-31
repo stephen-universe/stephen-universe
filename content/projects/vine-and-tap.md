@@ -18,10 +18,10 @@ img-7: "../../src/images/VT-thanks.jpg"
 highlights: "<h2><strong>Highlights: </strong></h2><p>I worked on this project as
   part of a team and my role consisted of **layout design** and **creating visual
   elements** to be used within the UI Design.</p>"
-brief: "<h2><strong>NEVER GOING TO WORK</strong></h2><p>Vine &amp; Tap is an exciting
-  gastropub &amp; wine bar located in the heart of the Buckhead district in Atlanta,
-  Georgia. The winery offers small bites along with main course dishes paired well
-  with their huge lists of wines to indulge.</p>"
+brief: |-
+  ## **NEVER GOING TO WORK**
+
+  Vine & Tap is an exciting gastropub & wine bar located in the heart of the Buckhead district in Atlanta, Georgia. The winery offers small bites along with main course dishes paired well with their huge lists of wines to indulge.</p>
 challenge: "<h2><strong>Challenge:</strong> </h2><p>Create and redesign the company
   website so that it provides a more professional user experience and provide well
   designed reusable templates for print.</p>"
