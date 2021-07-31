@@ -26,12 +26,13 @@ const projectNine = data.projectNineData.nodes
 
 
 return ( 
-<section className="body-bg">
+<section className="body-bg ">
 <Layout>
 
 
 <>
  
+ <section className="section">
 <Fade cascade duration={1500}> 
 {projectOne.map( project => (    
     <div className="tile is-ancestor">
@@ -319,6 +320,7 @@ return (
                 ))}
             </div>
 </Fade>
+</section>
         <div className="padding-top-bottom"></div>    
      
   </>

@@ -8,15 +8,32 @@ role: Designer
 stack: Adobe CC | AutoCAD
 tools: Photoshop | Illustrator | InDesign
 pixel: "../../src/images/LogoFolio-pixel.png"
+img-1: "../../src/images/CKC-Home.jpg"
+img-2: "../../src/images/CKC-research.jpg"
+img-3: ""
+img-4: ""
+img-5: ""
+img-6: ""
+img-7: ""
+img-8: ""
+img-9: ""
+img-10: ""
+img-11: ""
+img-12: ""
+img-13: ""
+img-14: ""
+img-15: ""
+img-16: ""
+img-17: ""
+img-18: ""
+img-19: ""
+img-20: ""
+highlights: "JULY 27TH, 2021 CURRENTLY UPDATING.. PLEASE CHECK BACK IN 24-48 HOURS."
+brief: ""
+challenge: ""
+company-goals: ""
+pain-points: ""
+solutions: ""
 
 ---
-<br/>
-<br/>
-<br/>
 
-<br/>
-
-![]() ALERT: JULY 27TH, 2021
-
-![]() CURRENTLY UPDATING..
-![]()PLEASE CHECK BACK IN 24-48 HOURS.

@@ -14,7 +14,7 @@ export default function Info({ data }) {
     <>
 <section className="main-body-bg">
     <Layout page="info">
-      <section className="">
+      <section className="section">
         <h1 className="subtitle bold pt-3 is-size-5-mobile is-size-2-tablet is-size-1-desktop is-size-1-widescreen is-size-1-fullhd line-height">
           <div dangerouslySetInnerHTML={{__html: infoData.author}}></div> </h1>
         <h2 className="title mt-1 is-size-5-mobile is-size-3-tablet is-size-4-desktop is-size-4-widescreen is-size-4-fullhd">

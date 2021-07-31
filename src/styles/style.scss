@@ -16,6 +16,8 @@ $orange: #e84834;
 $orange-shadow: #ab3122;
 $title-font: 'Nostromo-Black';
 .box{box-shadow: 2px 2px 3px 2px $orange; border-radius: 3px;}
+body{height: 654px;}
+.body{height: 654px;}
 .button {background-color: $orange; box-shadow: 1px 2px 4px 1px $black; color: $white;}
 .button:hover {color: $white;}
 .title { font-family: $title-font; color: $orange; text-shadow: 2px 2px 1px $orange-shadow;}

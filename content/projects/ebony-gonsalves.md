@@ -8,12 +8,21 @@ pixel: "../../src/images/EG-pixel.png"
 role: Graphic Designer
 stack: Adobe CC
 tools: Adobe XD | Illustrator | Photoshop
-
+img-1: "../../src/images/EG-One.png"
+img-2: "../../src/images/EG-Two.png"
+img-3: "../../src/images/EG-Three.png"
+img-4: "../../src/images/EG-Four.png"
+img-5: "../../src/images/EG-Five.png"
+img-6: "../../src/images/EG-Six.png"
+img-7: "../../src/images/EG-Seven.png"
+img-8: "../../src/images/EG-Eight.png"
+img-9: "../../src/images/EG-Nine.png"
+img-10: "../../src/images/EG-Ten.png"
+highlights: I worked on this project as part of a team and my role consisted of **layout design** and **creating visual elements** to be used within the UI Design.
+brief:
+challenge:
+company-goals:
+pain-points:
+solutions: 
 ---
 
-![](../../src/images/EG-One.png)
-![](../../src/images/EG-Two.png)
-![](../../src/images/EG-Three.png)
-
-* In order to establish a logo, I first took steps to interview the owners to have them define their brand characteristics.  
-  ![](../../src/images/EG-Four.png) ![](../../src/images/EG-Five.png) ![](../../src/images/EG-Six.png) ![](../../src/images/EG-Seven.png) ![](../../src/images/EG-Eight.png) ![](../../src/images/EG-Nine.png) ![](../../src/images/EG-Ten.png)

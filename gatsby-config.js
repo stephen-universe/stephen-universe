@@ -65,10 +65,20 @@ module.exports = {
       }
     },
     `gatsby-transformer-sharp`,
-    {
+    { 
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
+          {
+            resolve: `gatsby-remark-classes`,
+            options: {
+              classMap: {
+                "heading[depth=1]": "title",
+                "heading[depth=2]": "subtitle",
+                paragraph: "para",
+              },
+            },
+          },
           "gatsby-remark-relative-images",
           "gatsby-remark-normalize-paths",
           {
@@ -78,6 +88,7 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
+         
         ],
       },
     },
