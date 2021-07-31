@@ -22,17 +22,16 @@ brief: "<p>Vine & Tap is an exciting gastropub & wine bar located in the heart o
   the Buckhead district in <strong>Atlanta, Georgia.</strong> The winery offers small
   bites along with main course dishes paired well with their huge lists of wines to
   indulge.</p>"
-challenge: '<p>Create and redesign the company website  so that it provides a more
-  </p><h3 style={{fontSize: 14 + "rem">professional user experience </h3><p>and provide
-  well designed reusable templates for print.</p>'
+challenge: "<p>Create and redesign the company website  so that it provides a more
+  professional user experience and also provide well designed reusable templates for
+  print.</p>"
 company-goals: |-
-  _<p><em>_Gain more online exposure_</em> </p> <br/>_
+  <p><em>Gain more online exposure</em> </p> <br/>
 
-  _<p><em>_Increase reservations_</em> </p>_
-pain-points: |-
-  1. Web Design does not mimic the culture of the establishment.
-  2. Can not make reservation directly from site.
-  3. Needs to provide a full user experience.
+  <p><em>Increase reservations</em> </p>
+pain-points: "1. Web Design does not mimic the culture of the establishment. <br/>\n2.
+  Can not make reservation directly from site. <br/>\n3. Needs to provide a full user
+  experience. "
 solutions: |-
   1. Provide a more user-centered web design that allows guests to learn more about the establishment, new items added to the menu, chef's specials and more. <br/>
   2. Design reusable menu's that can be modified and altered easily.
