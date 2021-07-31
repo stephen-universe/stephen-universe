@@ -77,7 +77,7 @@ fields:
     schema:
       format: html
   label: Challenge
-- name: company_goals
+- name: company-goals
   type: textarea
   default: ''
   config:
@@ -86,7 +86,7 @@ fields:
     schema:
       format: html-blocks
   label: Company Goals
-- name: pain_points
+- name: pain-points
   type: textarea
   default: ''
   config:
