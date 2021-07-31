@@ -75,7 +75,7 @@ fields:
     required: false
     wysiwyg: true
     schema:
-      format: markdown
+      format: html-blocks
   label: Challenge
 - name: company-goals
   type: textarea
