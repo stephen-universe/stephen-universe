@@ -50,3 +50,21 @@ fields:
   config:
     required: false
   label: tools
+- name: brief
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Brief
+- name: highlights
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Highlights
