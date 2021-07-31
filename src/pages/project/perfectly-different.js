@@ -60,7 +60,8 @@ return (
         <Img fluid={project.frontmatter.img_14.childImageSharp.fluid} />
         <Img fluid={project.frontmatter.img_15.childImageSharp.fluid} />
         <Img fluid={project.frontmatter.img_16.childImageSharp.fluid} />
-        <Img fluid={project.frontmatter.img_17.childImageSharp.fluid} />
+        <Img fluid={project.frontmatter.img17.childImageSharp.fluid} />
+
 
       
      
@@ -203,7 +204,7 @@ query perfectlyDifferent {
             }
           }
         }
-        img_17 {
+        img17 {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid

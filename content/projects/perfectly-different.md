@@ -24,7 +24,11 @@ img-13: "../../src/images/Perfectly-Different-scenarios.jpg"
 img-14: "../../src/images/Perfectly-Different-app-layout.jpg"
 img-15: "../../src/images/Perfectly-Different-app-pages.jpg"
 img-16: "../../src/images/Perfectly-Different-app-preview.jpg"
-img_17: "../../src/images/Perfectly-Different-thanks.jpg"
-body: ""
+img17: "../../src/images/Perfectly-Different-thanks.jpg"
+
 
 ---
+
+
+
+
