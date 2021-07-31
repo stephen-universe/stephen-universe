@@ -4,7 +4,7 @@ import "../styles/style.scss"
 
 export default function Navigation(props) {
   return (
-    <header className="header" style={{paddingTop: 4 + "rem"}}>
+    <header className="header" style={{paddingTop: 7.5 + "rem"}}>
         <div className="columns" >
               <div className="column " >
                 <Link to="/"> <h1 className="has-text-centered white" style={{fontSize: 3 + "rem"}}>
