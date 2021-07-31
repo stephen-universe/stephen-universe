@@ -1,6 +1,6 @@
 ---
 id: "9"
-date: 2013-05-01T22:40:32Z
+date: 2013-05-01T22:40:32.000+00:00
 title: Vine & Tap
 author: Stephen A. Warren, J.R
 thumb: "../../src/images/VT-Home.jpg"
@@ -15,16 +15,24 @@ img-4: "../../src/images/VT-course-menu.png"
 img-5: "../../src/images/VT-drink-menu.png"
 img-6: "../../src/images/VT-Home.jpg"
 img-7: "../../src/images/VT-thanks.jpg"
-highlights: "I worked on this project as part of a team and my role consisted of **layout design** and **creating visual elements** to be used within the UI Design."
-brief: "Brief:
-Vine & Tap is an exciting gastropub & wine bar located in the heart of the Buckhead district in Atlanta, Georgia. The winery offers small bites along with main course dishes paired well with their huge lists of wines to indulge."
-challenge: "Challenge: Create and redesign the company website so that it provides a more professional user experience and provide well designed reusable templates for print."
-company-goals: "Company Goals: * Gain more online exposure * Increase reservations"
-pain-points: "Pain Points: 1. Web Design does not mimic the culture of the establishment. 2. Can not make reservation directly from site. 3. Needs to provide a full user experience."
-solutions: "Solutions: 1. Provide a more user-centered web design that allows guests to learn more about the establishment, new items added to the menu, chef's specials and more. 2. Design reusable menu's that can be modified and altered easily."
-
+highlights: "<h2><strong>Highlights: </strong></h2><p>I worked on this project as
+  part of a team and my role consisted of **layout design** and **creating visual
+  elements** to be used within the UI Design.</p>"
+brief: "<h2><strong>Brief: </strong></h2><p>Vine &amp; Tap is an exciting gastropub
+  &amp; wine bar located in the heart of the Buckhead district in Atlanta, Georgia.
+  The winery offers small bites along with main course dishes paired well with their
+  huge lists of wines to indulge.</p>"
+challenge: "<h2><strong>Challenge:</strong> </h2><p>Create and redesign the company
+  website so that it provides a more professional user experience and provide well
+  designed reusable templates for print.</p>"
+company-goals: "<h2><strong>Company Goals:</strong> </h2><p>* Gain more online exposure
+  * Increase reservations</p>"
+pain-points: "<h2><strong>Pain Points: </strong></h2><p>1. Web Design does not mimic
+  the culture of the establishment.</p><p>2. Can not make reservation directly from
+  site. </p><p>3. Needs to provide a full user experience.</p>"
+solutions: "<h2><strong>Solutions:</strong></h2><p> 1. Provide a more user-centered
+  web design that allows guests to learn more about the establishment, new items added
+  to the menu, chef's specials and more. </p><p>2. Design reusable menu's that can
+  be modified and altered easily.</p>"
 
 ---
-
-
-
