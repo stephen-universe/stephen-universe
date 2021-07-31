@@ -109,7 +109,7 @@ export class FormUserDetails extends Component {
         <h1 className="contact-p">I'd Love To Hear From You</h1>
         <p className="" style={{fontSize: 0.7 + "rem" }}>Please Fill Out The Form Below</p>
         </div>
-        <section className="section is-medium">
+        <section className="section is-small">
           <div className="columns">
             <div className="column is-6 ">
               <input
@@ -282,7 +282,7 @@ export class FormPersonalDetails extends Component {
         <h1 className="contact-p">I'd Love To Hear From You</h1>
         <p className="" style={{fontSize: 0.7 + "rem" }}>Please Fill Out The Form Below</p>
         </div>
-        <section className="section is-medium">
+        <section className="section is-small">
           <div className="columns ">
             <div className="column is-6 ">
               <input

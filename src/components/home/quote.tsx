@@ -9,7 +9,7 @@ export default function Quote () {
   return (
 
     <>
-    <div className="mt-6 quote-p bold has-text-justified" style={{fontFamily: 'Nostromo-Oblique-Black'}}>
+    <div className=" quote-p bold has-text-justified" style={{fontFamily: 'Nostromo-Oblique-Black', marginTop: 8 + "rem"}}>
 
 
 <VisibilitySensor partialVisibility offset={{ bottom: -400 }}>
