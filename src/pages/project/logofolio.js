@@ -45,12 +45,8 @@ return (
         </div>
         <br/>
         <br/>
-        {project.frontmatter.highlights}
-        {project.frontmatter.brief}
-        {project.frontmatter.challenge}
-        {project.frontmatter.company_goals}
-        {project.frontmatter.pain_points}
-        {project.frontmatter.solutions}
+
+
 
         
      

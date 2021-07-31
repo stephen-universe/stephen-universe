@@ -44,14 +44,25 @@ return (
         </div>
         <br/>
         <br/>
-        <Img fluid={project.frontmatter.img_1.childImageSharp.fluid} />
-        <h2>Highlights:</h2>{project.frontmatter.highlights} <br/> <br/>
-        <h2>Brief:</h2>{project.frontmatter.brief} <br/> <br/>
-        <h2>Challenge</h2>{project.frontmatter.challenge} <br/> <br/>
-        <h2>Company Goals:</h2>{project.frontmatter.company_goals} <br/> <br/>
-        <h2>Pain Points:</h2>{project.frontmatter.pain_points} <br/> <br/>
-        <h2>Solutions:</h2>{project.frontmatter.solutions} <br/> <br/>
+        <Img fluid={project.frontmatter.img_1.childImageSharp.fluid} /> <br/> <br/>
+        <h2 style={{fontSize: 2.5 + "rem"}}>Highlights:</h2>         
+         <div dangerouslySetInnerHTML={{__html: project.frontmatter.highlights}}></div> <br/> <br/>
 
+        <h2 style={{fontSize: 2.5 + "rem"}}>Brief:</h2>
+        <div dangerouslySetInnerHTML={{__html: project.frontmatter.brief}}></div> <br/> <br/>
+ 
+        <h2 style={{fontSize: 2.5 + "rem"}}>Challenge:</h2>
+        <div dangerouslySetInnerHTML={{__html: project.frontmatter.challenge}}></div> <br/> <br/>
+ 
+        <h2 style={{fontSize: 2.5 + "rem"}}>Company Goals:</h2>
+        <div dangerouslySetInnerHTML={{__html: project.frontmatter.company_goals}}></div> <br/> <br/>
+ 
+        <h2 style={{fontSize: 2.5 + "rem"}}>Pain Points:</h2>
+        <div dangerouslySetInnerHTML={{__html: project.frontmatter.pain_points}}></div> <br/> <br/>
+ 
+        <h2 style={{fontSize: 2.5 + "rem"}}>Solutions:</h2>
+        <div dangerouslySetInnerHTML={{__html: project.frontmatter.solutions}}></div> <br/> <br/>
+ 
         <Img fluid={project.frontmatter.img_2.childImageSharp.fluid} />
         <Img fluid={project.frontmatter.img_3.childImageSharp.fluid} />
         <Img fluid={project.frontmatter.img_4.childImageSharp.fluid} />
