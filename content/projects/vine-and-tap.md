@@ -15,7 +15,7 @@ img-4: "../../src/images/VT-course-menu.png"
 img-5: "../../src/images/VT-drink-menu.png"
 img-6: "../../src/images/VT-Home.jpg"
 img-7: "../../src/images/VT-thanks.jpg"
-highlights: "<h2><strong>Highlights: </strong></h2><p>I worked on this project as
+highlights: "Highlights:<p>I worked on this project as
   part of a team and my role consisted of **layout design** and **creating visual
   elements** to be used within the UI Design.</p>"
 brief: "<h2><strong>NEVER GOING TO WORK</strong></h2><p>Vine &amp; Tap is an exciting
