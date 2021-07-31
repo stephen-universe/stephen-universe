@@ -57,7 +57,7 @@ fields:
     required: false
     wysiwyg: true
     schema:
-      format: markdown
+      format: html-blocks
   label: Highlights
 - name: brief
   type: textarea
