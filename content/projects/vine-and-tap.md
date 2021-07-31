@@ -19,10 +19,12 @@ highlights: "<p><em>I worked on this project as part of a team and my role consi
   of </em><strong><em>layout design</em></strong><em> and </em><strong><em>creating
   visual elements</em></strong><em> to be used within the UI Design.</em></p> "
 brief: "**Vine & Tap** is an exciting gastropub & wine bar located in the heart of
-  the Buckhead district in <em>Atlanta, Georgia.</em> The winery offers small bites
-  along with main course dishes paired well with their huge lists of wines to indulge."
-challenge: Create and redesign the company website so that it provides a more professional
-  user experience and provide well designed reusable templates for print.
+  the Buckhead district in <strong>Atlanta, Georgia.</strong> The winery offers small
+  bites along with main course dishes paired well with their huge lists of wines to
+  indulge."
+challenge: "<p>&lt;strong&gt;Create and redesign the company website &lt;/strong&gt;
+  &lt;br/&gt; so that it provides a more </p><h3>professional user experience </h3><p>and
+  provide well designed reusable templates for print.</p>"
 company-goals: "_Gain more online exposure_ \n\n_Increase reservations_"
 pain-points: "1. Web Design does not mimic the culture of the establishment.\n2. Can
   not make reservation directly from site. \n3. Needs to provide a full user experience."
