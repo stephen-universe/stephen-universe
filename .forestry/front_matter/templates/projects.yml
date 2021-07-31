@@ -57,7 +57,7 @@ fields:
     required: false
     wysiwyg: true
     schema:
-      format: html-blocks
+      format: markdown
   label: Brief
 - name: highlights
   type: textarea
@@ -75,7 +75,7 @@ fields:
     required: false
     wysiwyg: true
     schema:
-      format: html-blocks
+      format: markdown
   label: Challenge
 - name: company-goals
   type: textarea
