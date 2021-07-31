@@ -57,7 +57,7 @@ fields:
     required: false
     wysiwyg: true
     schema:
-      format: html-blocks
+      format: markdown
   label: Brief
 - name: highlights
   type: textarea
@@ -66,7 +66,7 @@ fields:
     required: false
     wysiwyg: true
     schema:
-      format: html-blocks
+      format: markdown
   label: Highlights
 - name: challenge
   type: textarea
@@ -75,7 +75,7 @@ fields:
     required: false
     wysiwyg: true
     schema:
-      format: html-blocks
+      format: markdown
   label: Challenge
 - name: company-goals
   type: textarea
@@ -84,7 +84,7 @@ fields:
     required: false
     wysiwyg: true
     schema:
-      format: html-blocks
+      format: markdown
   label: Company Goals
 - name: pain-points
   type: textarea
@@ -93,7 +93,7 @@ fields:
     required: false
     wysiwyg: true
     schema:
-      format: html-blocks
+      format: markdown
   label: Pain Points
 - name: solutions
   type: textarea
@@ -102,5 +102,5 @@ fields:
     required: false
     wysiwyg: true
     schema:
-      format: html-blocks
+      format: markdown
   label: Solutions
