@@ -50,15 +50,6 @@ fields:
   config:
     required: false
   label: tools
-- name: brief
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: true
-    schema:
-      format: markdown
-  label: Brief
 - name: highlights
   type: textarea
   default: ''
@@ -68,6 +59,15 @@ fields:
     schema:
       format: markdown
   label: Highlights
+- name: brief
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Brief
 - name: challenge
   type: textarea
   default: ''
