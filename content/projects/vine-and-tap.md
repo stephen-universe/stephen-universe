@@ -15,27 +15,18 @@ img-4: "../../src/images/VT-course-menu.png"
 img-5: "../../src/images/VT-drink-menu.png"
 img-6: "../../src/images/VT-Home.jpg"
 img-7: "../../src/images/VT-thanks.jpg"
-highlights: "Highlights:
-<p>I worked on this project as
-  part of a team and my role consisted of **layout design** and **creating visual
-  elements** to be used within the UI Design.</p>"
-brief: "<h2><strong>NEVER GOING TO WORK</strong></h2>
-
-<p>Vine &amp; Tap is an exciting
-  gastropub &amp; wine bar located in the heart of the Buckhead district in Atlanta,
-  Georgia. The winery offers small bites along with main course dishes paired well
-  with their huge lists of wines to indulge.</p>"
-challenge: "<h2><strong>Challenge:</strong> </h2><p>Create and redesign the company
-  website so that it provides a more professional user experience and provide well
-  designed reusable templates for print.</p>"
-company-goals: "<h2><strong>Company Goals:</strong> </h2><p>* Gain more online exposure
-  * Increase reservations</p>"
-pain-points: "<h2><strong>Pain Points: </strong></h2><p>1. Web Design does not mimic
-  the culture of the establishment.</p><p>2. Can not make reservation directly from
-  site. </p><p>3. Needs to provide a full user experience.</p>"
-solutions: "<h2><strong>Solutions:</strong></h2><p> 1. Provide a more user-centered
-  web design that allows guests to learn more about the establishment, new items added
-  to the menu, chef's specials and more. </p><p>2. Design reusable menu's that can
-  be modified and altered easily.</p>"
+highlights: I worked on this project as part of a team and my role consisted of **layout
+  design** and **creating visual elements** to be used within the UI Design.
+brief: Vine & Tap is an exciting gastropub & wine bar located in the heart of the
+  Buckhead district in Atlanta, Georgia. The winery offers small bites along with
+  main course dishes paired well with their huge lists of wines to indulge.
+challenge: Create and redesign the company website so that it provides a more professional
+  user experience and provide well designed reusable templates for print.
+company-goals: "_Gain more online exposure_ \n\n_Increase reservations_"
+pain-points: "1. Web Design does not mimic the culture of the establishment.\n2. Can
+  not make reservation directly from site. \n3. Needs to provide a full user experience."
+solutions: "1. Provide a more user-centered web design that allows guests to learn
+  more about the establishment, new items added to the menu, chef's specials and more.
+  \n2. Design reusable menu's that can be modified and altered easily."
 
 ---
