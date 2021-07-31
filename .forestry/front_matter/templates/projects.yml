@@ -84,7 +84,7 @@ fields:
     required: false
     wysiwyg: true
     schema:
-      format: markdown
+      format: html-blocks
   label: Company Goals
 - name: pain-points
   type: textarea
@@ -93,7 +93,7 @@ fields:
     required: false
     wysiwyg: true
     schema:
-      format: markdown
+      format: html-blocks
   label: Pain Points
 - name: solutions
   type: textarea
