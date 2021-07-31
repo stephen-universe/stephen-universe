@@ -19,13 +19,14 @@ img-8: "../../src/images/Patricia-Nicolas-final.jpg"
 img-9: "../../src/images/Patricia-Nicolas-material.png"
 img-10: "../../src/images/Patricia-Nicolas-home.png"
 img-11: "../../src/images/Patricia-Nicolas-thanks.png"
-highlights: My very first **graphic design** and **landing page** that I created after
-  changing majors in college to focus more on the vast world of communication. Though
-  the work can be improved (and in most cases would not be included in a portfolio)
+highlights: "_My very first **graphic design** and **landing page** that I created
+  after changing majors in college to focus more on the vast world of communication.
+  Though the work can be improved (and in most cases would not be included in a portfolio)
   I remained strong on my decision to include this project because of its sentimental
   value it holds on me. This was a my very first real paying client & the start of
-  my journey of becoming a solid product designer. * This project was started and
-  completed in 2011. * I used basic google searches & YouTube tutorials. (=
+  my journey of becoming a solid product designer._ \n\n_* This project was started
+  and completed in 2011._ \n\n_* I used basic google searches & YouTube tutorials.
+  (=_"
 brief: Patricia Nicolas (on the air) is a media & journalism brand that dedicates
   itself on providing media content from various industries, lifestyle tips, and wellness.
 challenge: Increase the overall brand presence so that the company may professionally
