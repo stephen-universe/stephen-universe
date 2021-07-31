@@ -17,7 +17,7 @@ img-6: "../../src/images/VT-Home.jpg"
 img-7: "../../src/images/VT-thanks.jpg"
 highlights: "<p><em>I worked on this project as part of a team and my role consisted
   of </em><strong><em>layout design</em></strong><em> and </em><strong><em>creating
-  visual elements</em></strong><em> to be used within the UI Design.</em></p>"
+  visual elements</em></strong><em> to be used within the UI Design.</em></p> "
 brief: Vine & Tap is an exciting gastropub & wine bar located in the heart of the
   Buckhead district in Atlanta, Georgia. The winery offers small bites along with
   main course dishes paired well with their huge lists of wines to indulge.
