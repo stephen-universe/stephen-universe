@@ -249,7 +249,7 @@ export default function Info({ data }) {
                   <div className="item">
                       <img className="centered" src="invision.png"/>
                       <span className="caption">{infoData.toolbox.eleven}</span>
-                  </div>
+                  </div> 
                   <div className="item">
                       <img className="centered" src="webflow.png"/>
                       <span className="caption">{infoData.toolbox.twelve}</span>
