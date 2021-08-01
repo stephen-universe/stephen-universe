@@ -121,7 +121,7 @@ fields:
   type: field_group
   config: {}
   fields:
-  - name: educationone
+  - name: educationOne
     type: field_group
     config: {}
     fields:
@@ -146,7 +146,7 @@ fields:
         required: false
       label: Year
     label: Universtiy
-  - name: educationtwo
+  - name: educationTwo
     type: field_group
     config: {}
     fields:
