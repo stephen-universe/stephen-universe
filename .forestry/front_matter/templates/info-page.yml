@@ -118,7 +118,8 @@ fields:
     label: twelve
   label: skill
 - name: education
-  type: field_group_list
+  type: field_group
+  config: {}
   fields:
   - name: educationOne
     type: field_group
@@ -128,23 +129,23 @@ fields:
       type: text
       config:
         required: false
-      label: school
+      label: School
     - name: location
       type: text
       config:
         required: false
-      label: location
+      label: Location
     - name: degree
       type: text
       config:
         required: false
-      label: degree
+      label: Degree
     - name: year
       type: text
       config:
         required: false
-      label: year
-    label: educationOne
+      label: Year
+    label: Universtiy
   - name: educationTwo
     type: field_group
     config: {}
@@ -153,28 +154,24 @@ fields:
       type: text
       config:
         required: false
-      label: school
+      label: School
     - name: location
       type: text
       config:
         required: false
-      label: location
+      label: Location
     - name: degree
       type: text
       config:
         required: false
-      label: degree
+      label: Degree
     - name: year
       type: text
       config:
         required: false
-      label: year
-    label: educationTwo
-  config:
-    min: 
-    max: 
-    labelField: 
-  label: education
+      label: Year
+    label: Universtiy
+  label: Education
 - name: certification
   type: field_group
   config: {}
@@ -210,6 +207,85 @@ fields:
       label: completion
     label: certificationTwo
   label: certification
+- name: employer
+  type: field_group
+  config: {}
+  fields:
+  - name: jobOne
+    type: field_group
+    config: {}
+    fields:
+    - name: title
+      type: text
+      config:
+        required: false
+      label: Title
+    - name: location
+      type: text
+      config:
+        required: false
+      label: Location
+    - name: position
+      type: text
+      config:
+        required: false
+      label: Position
+    - name: date
+      type: datetime
+      label: Date
+      description: ''
+      config:
+        required: false
+        date_format: 
+        time_format: 
+        display_utc: false
+    - name: descriptionOne
+      type: textarea
+      default: ''
+      config:
+        required: false
+        wysiwyg: false
+        schema:
+          format: markdown
+      label: Job Duties
+    - name: descriptionTwo
+      type: textarea
+      default: ''
+      config:
+        required: false
+        wysiwyg: false
+        schema:
+          format: markdown
+      label: Job Duties
+    - name: descriptionThree
+      type: textarea
+      default: ''
+      config:
+        required: false
+        wysiwyg: false
+        schema:
+          format: markdown
+      label: Job Duties
+    - name: descriptionFour
+      type: textarea
+      default: ''
+      config:
+        required: false
+        wysiwyg: false
+        schema:
+          format: markdown
+      label: Job Duties
+    - name: descriptionFive
+      type: textarea
+      default: ''
+      config:
+        required: false
+        wysiwyg: false
+        schema:
+          format: markdown
+      label: Job Duties
+    label: Work Description
+  label: Employer
 - name: toolbox
   type: field_group
   config: {}
@@ -225,100 +301,6 @@ fields:
       required: false
     label: two
   label: toolbox
-- name: employer
-  type: field_group_list
-  fields:
-  - name: jobOne
-    type: field_group
-    config: {}
-    fields:
-    - name: title
-      type: text
-      config:
-        required: false
-      label: title
-    - name: position
-      type: text
-      config:
-        required: false
-      label: position
-    - name: location
-      type: text
-      config:
-        required: false
-      label: location
-    - name: date
-      type: text
-      config:
-        required: false
-      label: date
-    - name: descriptionOne
-      type: textarea
-      default: ''
-      config:
-        required: false
-        wysiwyg: false
-        schema:
-          format: markdown
-      label: descriptionOne
-    - name: descriptionTwo
-      type: textarea
-      default: ''
-      config:
-        required: false
-        wysiwyg: false
-        schema:
-          format: markdown
-      label: descriptionTwo
-    - name: descriptionThree
-      type: textarea
-      default: ''
-      config:
-        required: false
-        wysiwyg: false
-        schema:
-          format: markdown
-      label: descriptionThree
-    label: jobOne
-  - name: jobTwo
-    type: field_group
-    config: {}
-    fields:
-    - name: title
-      type: text
-      config:
-        required: false
-      label: title
-    - name: position
-      type: text
-      config:
-        required: false
-      label: position
-    - name: location
-      type: text
-      config:
-        required: false
-      label: location
-    - name: date_
-      type: text
-      config:
-        required: false
-      label: date.
-    - name: description
-      type: textarea
-      default: ''
-      config:
-        required: false
-        wysiwyg: false
-        schema:
-          format: markdown
-      label: description
-    label: jobTwo
-  config:
-    min: 
-    max: 
-    labelField: 
-  label: employer
 - name: hobby
   type: field_group
   config: {}
