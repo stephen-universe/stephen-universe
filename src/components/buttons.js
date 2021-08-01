@@ -34,7 +34,7 @@ export function GoBack() {
     }
     
     render () {
-        return <img src="../public/scroll-btn.png" style={{backgroundColor: 'transparent', boxShadow: 'none'}} className='scroll button'
+        return <img src="scroll-btn.png" style={{backgroundColor: 'transparent', boxShadow: 'none'}} className='scroll button'
                  onClick={ () => { this.scrollToTop(); }}/>
                   
      }
