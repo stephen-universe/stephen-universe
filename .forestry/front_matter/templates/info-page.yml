@@ -121,7 +121,7 @@ fields:
   type: field_group
   config: {}
   fields:
-  - name: educationOne
+  - name: educationone
     type: field_group
     config: {}
     fields:
@@ -146,7 +146,7 @@ fields:
         required: false
       label: Year
     label: Universtiy
-  - name: educationTwo
+  - name: educationtwo
     type: field_group
     config: {}
     fields:
@@ -190,7 +190,7 @@ fields:
       config:
         required: false
       label: completion
-    label: certificationOne
+    label: Google Adwords
   - name: certificationTwo
     type: field_group
     config: {}
@@ -205,7 +205,7 @@ fields:
       config:
         required: false
       label: completion
-    label: certificationTwo
+    label: Google Analytics
   label: certification
 - name: employer
   type: field_group
