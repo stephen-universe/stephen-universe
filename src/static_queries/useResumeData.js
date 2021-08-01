@@ -55,13 +55,8 @@ export default function useSiteMetadata() {
                 descriptionOne
                 descriptionTwo
                 descriptionThree
-              }
-            jobTwo {
-                title
-                location
-                position
-                date
-                description
+                descriptionFour
+                descriptionFive
               }
             }
             certification {

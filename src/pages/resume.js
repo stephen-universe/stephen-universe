@@ -184,23 +184,12 @@ export default function Info({ data }) {
                         <li>{infoData.employer.jobOne.descriptionTwo}</li>
                         <br/>
                         <li>{infoData.employer.jobOne.descriptionThree}</li>
-                      </ul>
+                        <br/>
+                        <li>{infoData.employer.jobOne.descriptionFour}</li>
+                        <br/>
+                        <li>{infoData.employer.jobOne.descriptionFive}</li>
+                      </ul> 
 
-                    <br />
-                    <br />
-
-                  <span className="pt-5 bold subtitle">{infoData.employer.jobTwo.title}</span>
-                    <span className="right bold italicize">
-                      {infoData.employer.jobTwo.location}</span>
-                      <br/>
-                    <span className="pt-5 subtitle orange">{infoData.employer.jobTwo.position}</span> <br/>
-                      <span className="italicize orange" style={{fontSize: 0.75 + "rem"}}>{infoData.employer.jobTwo.date}</span>
-                      <br/>
-                      <br/>
-                      <ul className="justify">
-                        <li>{infoData.employer.jobTwo.description}</li>
-                      </ul>
-                   
               </div>
           </div>
       </div>
@@ -260,11 +249,11 @@ export default function Info({ data }) {
                   <div className="item">
                       <img className="centered" src="invision.png"/>
                       <span className="caption">{infoData.toolbox.eleven}</span>
-                  </div>
+                  </div> 
                   <div className="item">
                       <img className="centered" src="webflow.png"/>
                       <span className="caption">{infoData.toolbox.twelve}</span>
-                  </div>
+                  </div> 
 
                   <div className="pt-5 bold subtitle">Web Development</div>
                   <div className="item">
