@@ -189,7 +189,7 @@ export default function Info({ data }) {
                         <br/>
                         <li>{infoData.employer.jobOne.descriptionFive}</li>
                       </ul> 
-                      
+
               </div>
           </div>
       </div>
@@ -253,7 +253,7 @@ export default function Info({ data }) {
                   <div className="item">
                       <img className="centered" src="webflow.png"/>
                       <span className="caption">{infoData.toolbox.twelve}</span>
-                  </div>
+                  </div> 
 
                   <div className="pt-5 bold subtitle">Web Development</div>
                   <div className="item">
