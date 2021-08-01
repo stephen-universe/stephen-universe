@@ -43,10 +43,144 @@ return (
               <h2>Tools: {project.frontmatter.tools}<i></i></h2>
               
         </div>
-        <br/>
-        <br/>
+
+       <section className="section is-medium">
+        <div className="columns">
+        <div className="column is-6">   <Img fluid={project.frontmatter.img_1.childImageSharp.fluid} /> </div>
+         
+          <div className="column is-6">   <Img fluid={project.frontmatter.img_2.childImageSharp.fluid} /> </div>
+        </div>
+      </section>
 
 
+       <section className="section is-medium">
+        <div className="columns">
+          <div className="column is-6">   <Img fluid={project.frontmatter.img_3.childImageSharp.fluid} /> </div>
+         
+          <div className="column is-6">   <Img fluid={project.frontmatter.img_4.childImageSharp.fluid} /> </div>
+        </div>
+    </section>
+
+       <section className="section is-medium">
+           <div className="columns">
+          <div className="column is-6">   <Img fluid={project.frontmatter.img_5.childImageSharp.fluid} /> </div>
+         
+          <div className="column is-6">   <Img fluid={project.frontmatter.img_6.childImageSharp.fluid} /> </div>
+        </div>
+    </section>
+
+   <section className="section is-medium">
+    <div className="columns">
+           <div className="column is-6">   <Img fluid={project.frontmatter.img_7.childImageSharp.fluid} /> </div>
+         
+           <div className="column is-6">   <Img fluid={project.frontmatter.img_8.childImageSharp.fluid} /> </div>
+        </div>
+    </section>
+
+
+   <section className="section is-medium">
+    <div className="columns">
+           <div className="column is-6">   <Img fluid={project.frontmatter.img_13.childImageSharp.fluid} /> </div>
+         
+           <div className="column is-6">   <Img fluid={project.frontmatter.img_14.childImageSharp.fluid} /> </div>
+        </div>
+    </section>
+
+   <section className="section is-medium">
+    <div className="columns">
+           <div className="column is-6">   <Img fluid={project.frontmatter.img_15.childImageSharp.fluid} /> </div>
+         
+           <div className="column is-6">   <Img fluid={project.frontmatter.img_16.childImageSharp.fluid} /> </div>
+        </div>
+    </section>
+
+   <section className="section is-medium">
+    <div className="columns">
+           <div className="column is-6">   <Img fluid={project.frontmatter.img17.childImageSharp.fluid} /> </div>
+         
+           <div className="column is-6">   <Img fluid={project.frontmatter.img18.childImageSharp.fluid} /> </div>
+        </div>
+    </section>
+
+   <section className="section is-medium">
+    <div className="columns">
+           <div className="column is-6">   <Img fluid={project.frontmatter.img_19.childImageSharp.fluid} /> </div>
+         
+           <div className="column is-6">   <Img fluid={project.frontmatter.img_20.childImageSharp.fluid} /> </div>
+        </div>
+    </section>
+
+   <section className="section is-medium">
+    <div className="columns">
+           <div className="column is-6">   <Img fluid={project.frontmatter.img_21.childImageSharp.fluid} /> </div>
+         
+           <div className="column is-6">   <Img fluid={project.frontmatter.img_22.childImageSharp.fluid} /> </div>
+        </div>
+    </section>
+
+   <section className="section is-medium">
+    <div className="columns">
+           <div className="column is-6">   <Img fluid={project.frontmatter.img_23.childImageSharp.fluid} /> </div>
+         
+           <div className="column is-6">   <Img fluid={project.frontmatter.img_24.childImageSharp.fluid} /> </div>
+        </div>
+    </section>
+
+   <section className="section is-medium">
+    <div className="columns">
+           <div className="column is-6">   <Img fluid={project.frontmatter.img_25.childImageSharp.fluid} /> </div>
+         
+           <div className="column is-6">   <Img fluid={project.frontmatter.img_26.childImageSharp.fluid} /> </div>
+        </div>
+    </section>
+
+   <section className="section is-medium">
+    <div className="columns">
+           <div className="column is-6">   <Img fluid={project.frontmatter.img_27.childImageSharp.fluid} /> </div>
+         
+           <div className="column is-6">   <Img fluid={project.frontmatter.img_28.childImageSharp.fluid} /> </div>
+        </div>
+    </section>
+        
+   <section className="section is-medium">
+    <div className="columns">
+           <div className="column is-6">   <Img fluid={project.frontmatter.img_29.childImageSharp.fluid} /> </div>
+         
+           <div className="column is-6">   <Img fluid={project.frontmatter.img_30.childImageSharp.fluid} /> </div>
+        </div>
+    </section>
+
+   <section className="section is-medium">
+    <div className="columns">
+           <div className="column is-6">   <Img fluid={project.frontmatter.img_31.childImageSharp.fluid} /> </div>
+         
+           <div className="column is-6">   <Img fluid={project.frontmatter.img_32.childImageSharp.fluid} /> </div>
+        </div>
+    </section>
+
+   <section className="section is-medium">
+    <div className="columns">
+           <div className="column is-6">   <Img fluid={project.frontmatter.img_33.childImageSharp.fluid} /> </div>
+         
+           <div className="column is-6">   <Img fluid={project.frontmatter.img_34.childImageSharp.fluid} /> </div>
+        </div>
+    </section>
+
+   <section className="section is-medium">
+    <div className="columns">
+           <div className="column is-6">   <Img fluid={project.frontmatter.img_35.childImageSharp.fluid} /> </div>
+         
+           <div className="column is-6">   <Img fluid={project.frontmatter.img_36.childImageSharp.fluid} /> </div>
+        </div>
+    </section>
+
+   <section className="section is-medium">
+    <div className="columns">
+           <div className="column is-6">   <Img fluid={project.frontmatter.img_37.childImageSharp.fluid} /> </div>
+         
+           <div className="column is-6">   <Img fluid={project.frontmatter.img_38.childImageSharp.fluid} /> </div>
+        </div>
+    </section>
 
         
      
@@ -195,22 +329,162 @@ query logoFolio {
             }
           }
         }
-        img_17 {
+        img17 {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        img_18 {
+        img18 {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
             }
           }
         }
-    } 
+        img_19 {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        img_20 {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        img_21 {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        img_22 {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        img_23 {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        img_24 {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        img_25 {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        img_26 {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        img_27 {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        img_28 {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        img_29 {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        img_30 {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        img_31 {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        img_32 {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        img_33 {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        img_34 {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        img_35 {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        img_36 {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        img_37 {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        img_38 {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      } 
+    }
   }
-}
-  } 
+} 
 `

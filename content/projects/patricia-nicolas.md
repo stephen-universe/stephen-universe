@@ -20,7 +20,7 @@ img-9: "../../src/images/Patricia-Nicolas-material.png"
 img-10: "../../src/images/Patricia-Nicolas-home.png"
 img-11: "../../src/images/Patricia-Nicolas-thanks.png"
 highlights: |-
-  <p><em> My very first <strong>**graphic design**</strong> and <strong>**landing page** </strong>that I created after changing majors in college to focus more on the vast world of communication. Though the work can be improved (and in most cases would not be included in a portfolio) I remained strong on my decision to include this project because of its sentimental value it holds on me. This was a my very first real paying client & the start of my journey of becoming a solid product designer. </em> </p>
+  <p><em> My very first <strong>**graphic design**</strong> and <strong>**landing page** </strong>that I created after changing majors in college to focus more on the vast world of communication. Though the work can be improved (and in most cases would not be included in a portfolio) I remained strong on my decision to include this project because of its sentimental value it holds on me. This was a my very first real paying client & the start of my journey of becoming a solid product designer. </em> </p> <br> <br>
 
   <p><em> * This project was started and completed in 2011. </em> <br/>
 

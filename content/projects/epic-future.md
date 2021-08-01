@@ -20,10 +20,10 @@ highlights: |-
   <p><em>In this short but fun <strong>**freelance** </strong>project I interviewed both owners and went through a discovery phase to learn about their target audience, as well as, establish their brand identity. </em><p>
 
   <p><em>The owners are originally from Haiti so I wanted to establish a brand that would make them feel prideful and full of joy. I focused in on the Haitian national flag and used those exact colors to provide that experience. </em><p>
-
+  <br> <br>
   <p><em>* This project was started and completed in 2020. <br/>
 
-  \* I used 1:1 interviews, qualitative research, and color theories. </em><p>
+  * I used 1:1 interviews, qualitative research, and color theories. </em><p>
 brief: "<p>Epic Future Entertainment is a mass-media powerhouse that focuses on cross-brand
   management for the music, film, & sports industries. </p>"
 challenge: "<p>Create a brand identity that needs to establish some brand awareness
