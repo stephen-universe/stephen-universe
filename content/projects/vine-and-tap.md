@@ -16,6 +16,7 @@ img-4: "../../src/images/VT-course-menu.png"
 img-5: "../../src/images/VT-drink-menu.png"
 img-6: "../../src/images/VT-Home.jpg"
 img-7: "../../src/images/VT-thanks.jpg"
+
 highlights: "<p><em>I worked on this project as part of a team and my role consisted
   of </em><strong><em>layout design</em></strong><em> and </em><strong><em>creating
   visual elements</em></strong><em> to be used within the UI Design.</em></p> "
@@ -36,5 +37,6 @@ pain-points: "1. Web Design does not mimic the culture of the establishment. <br
 solutions: |-
   1. Provide a more user-centered web design that allows guests to learn more about the establishment, new items added to the menu, chef's specials and more. <br/>
   2. Design reusable menu's that can be modified and altered easily.
+
 
 ---
