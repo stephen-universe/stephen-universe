@@ -1,5 +1,6 @@
 ---
 id: "7"
+catSlug: "graphic-design"
 date: 2020-04-01T22:44:38.000+00:00
 title: Ebony Gonsalves
 author: Stephen A. Warren, J.R

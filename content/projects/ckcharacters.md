@@ -1,5 +1,6 @@
 ---
 id: "3"
+catSlug: "product-design"
 date: 2017-05-01T04:00:00Z
 title: CKC Charackters
 author: Stephen A. Warren, J,R

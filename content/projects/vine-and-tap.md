@@ -1,5 +1,6 @@
 ---
 id: "9"
+catSlug: "web-development"
 date: 2013-05-01T22:40:32.000+00:00
 title: Vine & Tap
 author: Stephen A. Warren, J.R

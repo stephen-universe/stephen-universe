@@ -121,7 +121,7 @@ export default function ProjectPage(props) {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={5.0}
+          offset={5.2}
           speed={-0.4}
           style={{
             display: 'flex',
@@ -152,7 +152,7 @@ export default function ProjectPage(props) {
           }}/>
 
         <ParallaxLayer
-          offset={2.8}
+          offset={2.7}
           speed={0.1}
           onClick={() => parallax.current.scrollTo(2)}
           style={{
@@ -165,7 +165,7 @@ export default function ProjectPage(props) {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={4}
+          offset={4.1}
           speed={-0}
           style={{
             display: 'flex',

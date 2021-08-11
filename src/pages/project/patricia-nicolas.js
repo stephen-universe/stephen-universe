@@ -62,9 +62,11 @@ return (
  
         <h2 style={{fontSize: 2.5 + "rem"}}>Solutions:</h2>
         <div dangerouslySetInnerHTML={{__html: project.frontmatter.solutions}}></div> <br/> <br/>
-        <Img fluid={project.frontmatter.img_2.childImageSharp.fluid} />
-        <Img fluid={project.frontmatter.img_3.childImageSharp.fluid} />
-        <Img fluid={project.frontmatter.img_4.childImageSharp.fluid} />
+        <div className="columns has-flex">
+        <div className="column is-4"><Img fluid={project.frontmatter.img_2.childImageSharp.fluid} /></div>
+        <div className="column is-4"><Img fluid={project.frontmatter.img_3.childImageSharp.fluid} /></div>
+        <div className="column is-4"><Img fluid={project.frontmatter.img_4.childImageSharp.fluid} /></div>
+        </div>
         <Img fluid={project.frontmatter.img_5.childImageSharp.fluid} />
         <Img fluid={project.frontmatter.img_6.childImageSharp.fluid} />
         <Img fluid={project.frontmatter.img_7.childImageSharp.fluid} />
