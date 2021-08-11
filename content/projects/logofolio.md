@@ -1,5 +1,7 @@
 ---
+
 id: "1"
+catSlug: "graphic-design"
 date: 2019-07-31T22:43:31.000+00:00
 title: LogoFolio
 author: Stephen A. Warren, J.R
