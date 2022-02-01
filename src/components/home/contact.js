@@ -128,7 +128,16 @@ export default function InitializeContact() {
                             <g fill="currentColor">
                               <path d="M8 3l5 5l-5 5l-5-5l5-5z" />
                             </g>
-                        </svg> Test
+                        </svg> Test our data <br/>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="1em"
+                          height="1em"
+                          viewBox="0 0 16 16">
+                            <g fill="currentColor">
+                              <path d="M8 3l5 5l-5 5l-5-5l5-5z" />
+                            </g>
+                        </svg> Interview and or survey users <br/>
                       </div>
 
                       <br />
@@ -166,6 +175,24 @@ export default function InitializeContact() {
                               <path d="M8 3l5 5l-5 5l-5-5l5-5z" />
                             </g>
                         </svg> Provide Illustrations & Mock-Ups <br />
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="1em"
+                          height="1em"
+                          viewBox="0 0 16 16">
+                            <g fill="currentColor">
+                              <path d="M8 3l5 5l-5 5l-5-5l5-5z" />
+                            </g>
+                        </svg> Test Design on application <br />
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="1em"
+                          height="1em"
+                          viewBox="0 0 16 16">
+                            <g fill="currentColor">
+                              <path d="M8 3l5 5l-5 5l-5-5l5-5z" />
+                            </g>
+                        </svg> Check for errors <br />
                       </div>
                       <br />
                     </div>
