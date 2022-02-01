@@ -22,20 +22,20 @@ export default function Introduction() {
                 </div>
             </div>
             
-                          <img src="/stephen-universe.png" className="self-image"/><br/>
+                          <img src="/stephen-universe.png" style={{ marginTop: 6 + "rem"}} className="self-image"/><br/>
         </div>
         </div>
 
 
 
   <Fade bottom duration={1500} delay={4000}> 
-    <div className="is-size-5-mobile has-text-centered-mobile is-size-2-tablet has-text-right-tablet is-size-4-desktop has-text-right-desktop is-size-3-widescreen  has-text-right-widescreen is-size-4-fullhd  has-text-right-fullhd" style={{ marginTop: 6 + "rem"}}>
+    <div className="is-size-5-mobile has-text-centered-mobile is-size-2-tablet has-text-right-tablet is-size-4-desktop has-text-right-desktop is-size-3-widescreen  has-text-right-widescreen is-size-4-fullhd  has-text-right-fullhd" style={{ marginBottom: 6 + "rem", marginTop: 6 + "rem"}}>
     <div className="orange introText ">
-  Using my Quantitative Knowledge in Research & my Methodical Approach in Design 
-<br/> I landed a career as a Product Designer & Developer!
+  Using my Quantitative Knowledge in Research <br/> & my Methodical Approach in Design 
+<br/> I landed a career as a Product Designer!
 <br/>
-<br/> Originally from the Lone Star State, by way of Houston -- I now reside in Atlanta, Georgia
-<br/> Where I currently work for AVX Studios as an UX Astronaut!
+<br/> Originally from the Lone Star State <br/> by way of Houston, Texas I now reside in Atlanta, Georgia 
+<br/> where I currently work for AVX Studios as an UX Astronaut!
 </div>
       </div>
 </Fade>

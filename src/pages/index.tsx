@@ -21,7 +21,7 @@ export default function ProjectPage(props) {
   const parallax = useRef<IParallax>(null!)
 
   return (
-       <div className="body-bg">
+       <div className="body-bg" style={{ position: "sticky"}}>
           <Parallax ref={parallax} pages={5}>
           <div className="header-top-color"> <Resume /> </div>
       
@@ -187,5 +187,6 @@ export default function ProjectPage(props) {
         </ParallaxLayer>
       </Parallax>
       </div>
+    
   )
 }

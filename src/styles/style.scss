@@ -34,6 +34,9 @@ body{height: 654px;}
   &:hover{color: $white; text-shadow: -1px 2px 6px $orange-shadow;}}
 .resume-link a {color: $white; padding-top: 0.2rem; text-shadow: -1px 2px 3px $orange-shadow; font-family: Nostromo-Medium;
     &:hover{color: $white; text-shadow: -1px 2px 6px $orange-shadow;}}
+.is-size-7-desktop {font-size: 0.8125rem !important;}
+.home-icons {color: $black; text-shadow: -1px 2px 3px $orange-shadow;    
+    &:hover {color: $orange; text-shadow: -1px 2px 6px $orange-shadow;}}
 
 
 //* GLOBAL VARIABLES *//
@@ -67,27 +70,35 @@ $link: $red;
   border-width: 1px;
 }
 
-.test:hover img {
-  visibility: hidden;
-  }
-
 
   .relative {
     position: relative;
   }
-  
-  .test-hover {
-    position: absolute; 
-    bottom: 0; 
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+ 
+
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
     width: 100%;
-    transition: .5s ease-in-out;
-    opacity:0;
+    opacity: 0;
+    transition: .5s ease;
+    background: rgba(0, 0, 0, 0.8); /* Black see-through */
   }
   
-  .relative:hover .test-hover {
-    opacity: 1;
+  .relative:hover .overlay {
+    opacity: 0.9;
+    transform: scale(1.03);
+    transition: .5s ease-in;
+  }
+
+  .relative:hover .test {
+    transform: scale(1.03);
+    transition: .5s ease-in;
   }
 
 

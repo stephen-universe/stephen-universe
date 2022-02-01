@@ -45,11 +45,10 @@ return (
 
               <div className="relative">
                   <div className="test">
-                    <Img fluid={project.frontmatter.pixel.childImageSharp.fluid} /> 
+                    <Img fluid={project.frontmatter.thumb.childImageSharp.fluid} /> 
                   </div>
-                  <div className="test-hover">
-                  <Img fluid={project.frontmatter.thumb.childImageSharp.fluid} />
-                  </div>
+                  <div className="overlay"></div>
+                
               </div>
 
                   </Link>
@@ -80,11 +79,9 @@ return (
                                 <Link to={"/project/" + project.fields.slug}> 
                                   <div className="relative">
                                     <div className="test">
-                                      <Img fluid={project.frontmatter.pixel.childImageSharp.fluid} /> 
+                                      <Img fluid={project.frontmatter.thumb.childImageSharp.fluid} /> 
                                     </div>
-                                    <div className="test-hover">
-                                      <Img fluid={project.frontmatter.thumb.childImageSharp.fluid} />
-                                    </div>
+                                    <div className="overlay"></div>
                                   </div>
                                 </Link>
                                 
@@ -112,11 +109,9 @@ return (
                                 <Link to={"/project/" + project.fields.slug}> 
                                 <div className="relative">
                                     <div className="test">
-                                      <Img fluid={project.frontmatter.pixel.childImageSharp.fluid} /> 
+                                      <Img fluid={project.frontmatter.thumb.childImageSharp.fluid} /> 
                                     </div>
-                                    <div className="test-hover">
-                                      <Img fluid={project.frontmatter.thumb.childImageSharp.fluid} />
-                                    </div>
+                                    <div className="overlay"></div>
                                   </div>
                                 </Link>
                                 
@@ -149,11 +144,9 @@ return (
                                 <Link to={"/project/" + project.fields.slug}> 
                                 <div className="relative">
                                     <div className="test">
-                                      <Img fluid={project.frontmatter.pixel.childImageSharp.fluid} /> 
+                                      <Img fluid={project.frontmatter.thumb.childImageSharp.fluid} /> 
                                     </div>
-                                    <div className="test-hover">
-                                      <Img fluid={project.frontmatter.thumb.childImageSharp.fluid} />
-                                    </div>
+                                    <div className="overlay"></div>
                                   </div>
                                 </Link>
                                 
@@ -181,11 +174,9 @@ return (
                                 <Link to={"/project/" + project.fields.slug}> 
                                 <div className="relative">
                                     <div className="test">
-                                      <Img fluid={project.frontmatter.pixel.childImageSharp.fluid} /> 
+                                      <Img fluid={project.frontmatter.thumb.childImageSharp.fluid} /> 
                                     </div>
-                                    <div className="test-hover">
-                                      <Img fluid={project.frontmatter.thumb.childImageSharp.fluid} />
-                                    </div>
+                                    <div className="overlay"></div>
                                   </div>
                                 </Link>
                                 
@@ -216,11 +207,9 @@ return (
                                 <Link to={"/project/" + project.fields.slug}> 
                                 <div className="relative">
                                     <div className="test">
-                                      <Img fluid={project.frontmatter.pixel.childImageSharp.fluid} /> 
+                                      <Img fluid={project.frontmatter.thumb.childImageSharp.fluid} /> 
                                     </div>
-                                    <div className="test-hover">
-                                      <Img fluid={project.frontmatter.thumb.childImageSharp.fluid} />
-                                    </div>
+                                    <div className="overlay"></div>
                                   </div>
                                 </Link>
                                 
@@ -242,11 +231,9 @@ return (
                                 <Link to={"/project/" + project.fields.slug}> 
                                 <div className="relative">
                                     <div className="test">
-                                      <Img fluid={project.frontmatter.pixel.childImageSharp.fluid} /> 
+                                      <Img fluid={project.frontmatter.thumb.childImageSharp.fluid} /> 
                                     </div>
-                                    <div className="test-hover">
-                                      <Img fluid={project.frontmatter.thumb.childImageSharp.fluid} />
-                                    </div>
+                                    <div className="overlay"></div>
                                   </div>
                                 </Link>
                                 
@@ -269,11 +256,9 @@ return (
                                 <Link to={"/project/" + project.fields.slug}> 
                                 <div className="relative">
                                     <div className="test">
-                                      <Img fluid={project.frontmatter.pixel.childImageSharp.fluid} /> 
+                                      <Img fluid={project.frontmatter.thumb.childImageSharp.fluid} /> 
                                     </div>
-                                    <div className="test-hover">
-                                      <Img fluid={project.frontmatter.thumb.childImageSharp.fluid} />
-                                    </div>
+                                    <div className="overlay"></div>
                                   </div>
                                 </Link>
                                 
@@ -298,11 +283,9 @@ return (
                                 <Link to={"/project/" + project.fields.slug}> 
                                 <div className="relative">
                                     <div className="test">
-                                      <Img fluid={project.frontmatter.pixel.childImageSharp.fluid} /> 
+                                      <Img fluid={project.frontmatter.thumb.childImageSharp.fluid} /> 
                                     </div>
-                                    <div className="test-hover">
-                                      <Img fluid={project.frontmatter.thumb.childImageSharp.fluid} />
-                                    </div>
+                                    <div className="overlay"></div>
                                   </div>
                                 </Link>
                                 
