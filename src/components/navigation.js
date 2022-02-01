@@ -7,10 +7,12 @@ export default function Navigation(props) {
     <header className="header" style={{paddingTop: 7.5 + "rem"}}>
         <div className="columns" >
               <div className="column " >
-                <Link to="/"> <h1 className="has-text-centered white" style={{fontSize: 3 + "rem"}}>
-                  <span>
+                <Link to="/"> 
+                  <h1 className="has-text-centered white" style={{fontSize: 3 + "rem"}}>
+                    <span>
                     <h5 className="has-text-centered white" style={{fontSize: 1.5 + "rem" , lineHeight: 0.1 + "rem"}}>Stephen</h5> 
-                    </span>Universe</h1> 
+                    </span>Universe
+                  </h1> 
                 </Link>
               </div>
 
