@@ -300,7 +300,7 @@ export default function Info({ data }) {
                       <span className="caption">{infoData.hobby.three}</span>
                   </div>
 
-                  
+                  <br/>
             
                   <div className="hobby-item">
                       <img className="centered" src="cooking.png"/>

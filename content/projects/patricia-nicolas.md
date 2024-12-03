@@ -1,5 +1,6 @@
 ---
 id: "8"
+catSlug: "graphic-design"
 date: 2011-09-01T22:40:32.000+00:00
 title: Patricia Nicolas
 author: Stephen A. Warren, J.R

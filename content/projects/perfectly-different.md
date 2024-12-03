@@ -1,5 +1,6 @@
 ---
 id: "5"
+catSlug: "product-design"
 date: 2021-01-01T23:44:38Z
 title: Perfectly Different
 author: Stephen A. Warren, J.R

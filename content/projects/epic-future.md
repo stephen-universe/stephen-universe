@@ -1,5 +1,6 @@
 ---
 id: "6"
+catSlug: "graphic-design"
 date: 2020-07-01T22:37:31.000+00:00
 title: Epic Future
 author: Stephen A. Warren, J.R

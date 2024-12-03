@@ -1,5 +1,6 @@
 ---
 id: "2"
+catSlug: "product-design"
 date: 2020-08-01T22:37:31Z
 title: Ana Rose Cleaning
 author: Stephen Warren

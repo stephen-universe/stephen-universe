@@ -1,5 +1,6 @@
 ---
 id: "4"
+catSlug: "graphic-design"
 date: 2019-08-01T22:44:38Z
 title: Queendom Farms
 author: Stephen A. Warren, J.R
