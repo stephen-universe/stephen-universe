@@ -1,11 +1,10 @@
 import { useEffect } from "react";
-import scrollAnimation from "../common/scrollAnims";
+import { scrollAnimation } from "../common/scrollAnims";
 import React from "react";
-import Helmet from "react-helmet"
+import { Helmet } from "react-helmet"
 import useResumeData from "../static_queries/useResumeData";
-import Footer from "./footer";
-import ScrollApp from "./buttons";
 import DigitalMenu from "./layouts/headers/digitalMenu";
+import ScrollApp from "../components/buttons";
 import Preloader from "./Preloader";
 
 const Layout = ({
