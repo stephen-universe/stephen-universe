@@ -2,11 +2,8 @@ import React, { useRef, Component } from "react";
 import Helmet from "react-helmet";
 import useResumeData from "../static_queries/useResumeData";
 
-
-import FooterQuote from "../components/home/footerQuote";
-
 import Layout from "../components/Layout";
-import Cards from "../components/cards";
+
 
 export default function ProjectPage(props) {
   // Little helpers ...
@@ -32,14 +29,14 @@ export default function ProjectPage(props) {
                 <title>{title}</title>
                 <meta name="description" content={description} />
               </Helmet>
-              <Quote />
+            
             </div>
           </div>
           
-     <ScrollApp/>
+    
      
         
-        <InitializeContact />
+     
         </div>
          </>
  </Layout>
