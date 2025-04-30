@@ -15,7 +15,7 @@ module.exports = {
     infoData: infoData
   },
   plugins: [
-    "gatsby-plugin-netlify-cms", 
+    
     "gatsby-plugin-sass", 
     "gatsby-plugin-image", 
     "gatsby-plugin-sitemap", 
