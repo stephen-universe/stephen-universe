@@ -157,7 +157,7 @@ export default function Index({ menuIsActive, setMenuIsActive }) {
 
               <div className="blog-nav-link desktop-menu">
               <div className="blog-nav-text">
-               <Link to='/contact'>Hire Me</Link>
+               <Link to='/contact'style={{color: '#FFF'}}>Hire Me</Link>
               </div>
             </div>
 
