@@ -1,0 +1,141 @@
+.main{
+
+    display: flex;
+
+    height: 100vh;
+
+}
+
+.pixel-menu{
+
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 100%;
+    z-index: 3;
+
+    p{
+
+        font-size: 5vw;
+        margin: 5px;
+
+    }
+
+}
+
+
+.pixel-header{
+
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 4;
+    top: 0;
+    padding: 40px;
+
+    .burger{
+
+        position: relative;
+
+        display: flex;
+
+        flex-direction: column;
+
+        position: relative;
+
+        cursor: pointer;
+
+        &::before, &::after{
+
+            display: block;
+            content: "";
+            width: 30px;
+            height: 2px;
+            background-color: black;
+            position: relative;
+            transition: transform 0.3s;
+
+        }
+
+        &::after{
+
+            top: -5px;
+
+        }
+
+
+        &::before{
+
+            top: 5px;
+
+        }
+
+    }
+
+    .burgerActive{
+
+        &::after{
+
+            transform: rotate(45deg);
+
+            top: -1px;
+
+        }
+
+        &::before{
+
+            transform: rotate(-45deg);
+
+            top: 0px;
+
+        }
+
+    }
+
+}
+
+.pixelBackground{
+
+    display: flex;
+
+    height: 100vh;
+
+    overflow: hidden;
+
+    position: relative;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    .column{
+
+        width: 5vw;
+
+        height: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        
+
+        .block{
+
+            width: 100%;
+
+            height: 5vw;
+
+            background-color: #ff6a00;
+
+        }
+
+    }
+
+}

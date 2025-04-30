@@ -1,9 +1,22 @@
-@import "../../node_modules/bulma/bulma";
-@import "../styles/scss/card.scss";
-@import "../styles/scss/navigation.scss";
-@import "../styles/scss/fonts.scss";
-@import "../styles/scss/buttons.scss";
-@import "../styles/scss/modal.scss";
+/* -------------------------------------------
+
+Name: 		Builty
+Version:    1.0
+Author:		bslthemes
+Author URL: https://bslthemes.com/
+Email: beshleyua@gmail.com
+
+------------------------------------------- */
+@use "../../node_modules/bulma/bulma";
+@use "../styles/scss/card.scss";
+@use "../styles/scss/navigation.scss";
+@use "../styles/scss/fonts.scss";
+@use "../styles/scss/buttons.scss";
+@use "../styles/scss/modal.scss";
+@use "../styles/scss/pixelMenu.scss";
+@use '../styles/scss/basic.scss';
+@use '../styles/scss/responsive.scss';
+
 
 
 
@@ -15,7 +28,15 @@ $black : #000;
 $orange: #e84834;
 $orange-shadow: #ab3122;
 $title-font: 'Nostromo-Black';
-.box{box-shadow: 2px 2px 3px 2px $orange; border-radius: 3px;}
+
+.box{box-shadow: 2px 2px 3px 2px $orange; border-radius: 3px;     
+  background-image: url("/background-2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;  
+  min-height: 920px;}
+
 body{height: 654px;}
 .body{height: 654px;}
 .button {background-color: $orange; box-shadow: 1px 2px 4px 1px $black; color: $white;}
@@ -37,9 +58,10 @@ body{height: 654px;}
 
 
 //* GLOBAL VARIABLES *//
-$primary: $blue;
+$primary: $orange;
 $link: $red;
-
+.primary { color: $orange;
+}
 .d-none {display: none;}
 .d-block {display: block;}
 .d-flex {display: flex;}
@@ -67,6 +89,11 @@ $link: $red;
   border-width: 1px;
 }
 
+.title-divider {
+
+  border-bottom: 2px dashed #e84834;
+}
+
 .test:hover img {
   visibility: hidden;
   }
@@ -83,11 +110,13 @@ $link: $red;
     background: rgba(0, 0, 0, 0.5); /* Black see-through */
     width: 100%;
     transition: .5s ease-in-out;
-    opacity:0;
+    opacity:1;
   }
   
   .relative:hover .test-hover {
     opacity: 1;
+    width: 100%;
+    transition: .5s ease-in-out;
   }
 
 

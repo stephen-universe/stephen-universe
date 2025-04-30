@@ -1,41 +1,64 @@
-import React from "react"
-import Resume from "../components/resume"
-import Navigation from "./navigation"
-import Helmet from "react-helmet"
-import useResumeData from "../static_queries/useResumeData"
-import Footer from "./footer"
-import ScrollApp from "./buttons"
-import Link from 'gatsby'
-import AdditionalWork from "../components/additionalWork"
+import { useEffect } from "react";
+import { scrollAnimation } from "../common/scrollAnims";
+import React from "react";
+import { Helmet } from "react-helmet"
+import useResumeData from "../static_queries/useResumeData";
+import DigitalMenu from "./layouts/headers/digitalMenu";
+import ScrollApp from "../components/buttons";
+import Preloader from "./Preloader";
 
-export default function Layout(props) {
-  const { title, description } = useResumeData()
+const Layout = ({
+  children,
+  header,
+  footer,
+  noHeader,
+  noFooter,
+  contactButton,
+  cartButton
+}) => {
+  useEffect(() => {
+    scrollAnimation();
+
+    // preloader
+    if (typeof window !== 'undefined') {
+      const loader = document.getElementsByClassName('preloader');
+      if (loader[0]) loader[0].classList.add('loaded');
+    }
+  }, []);
+
+
+
+    const { title, description } = useResumeData();
   return (
     <>
-     <div className="header-top-color"><Resume/> </div>
-     <div className="background" alt="Space" >
-     <div className="section-divider"></div> 
-     <div className="container">
-    <Navigation page={props.page} title={title} />
-    </div>
-    </div>
-   
-    <section className="" >
-      <div className="container">
-      <Helmet>
-        <html lang="en" />
-        <title>{title}</title>
-        <meta name="description" content={description} />
-      </Helmet>
-      
-      <div className="">{props.children}</div>
-      </div>
-    </section> 
-    <ScrollApp />
+   <section className="" >
+            <div className="container">
+            <Helmet>
+              <html lang="en" />
+              <title>{title}</title>
+              <meta name="description" content={description} />
+            </Helmet>
+            
+            </div>
+          </section> 
+<Preloader/>
+   {!noHeader && (
+        <DigitalMenu
+        />
+      )}
 
-    <Footer />
+  
+           {children}
+           <ScrollApp/>   
+        
+
+
     
-    
+      
+     
+
+ 
     </>
-  )
-}
+  );
+};
+export default Layout;

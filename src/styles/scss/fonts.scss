@@ -201,9 +201,10 @@ $title-font: 'Nostromo-Black';
     overflow: hidden;
   }
   .self-image {max-height: 235px; margin-top: 12rem;}
-  .vertical-divider{ border-left: 6px solid #020921; height: 500px; }
-  .contact-subtitle {font-size: 2rem; font-weight: bold; margin-top: 1.55rem; font-style: italic;}
-  .contact-title { line-height: 65px;font-family: $title-font; color: $orange; text-shadow: 2px 2px 1px $orange-shadow; font-size: 5rem}
+  .vertical-divider{ border-left: 6px solid $orange; height: 500px; }
+  .contact-subtitle {color: $white;font-size: 2rem; font-weight: bold; margin-top: 1.55rem; font-style: italic; text-shadow: 4px 1px #000;}
+  .contact-title { line-height: 65px;font-family: $title-font; color: $white; text-shadow: 2px 2px 1px $orange-shadow; font-size: 5rem}
+  .under-construction-title { line-height: 65px;font-family: Nostromo-Oblique-Black; color: $orange; text-shadow: 2px 2px 1px $white; font-size: 5rem}
                             }
 
 
@@ -247,10 +248,11 @@ $title-font: 'Nostromo-Black';
     overflow: hidden;
   }
   .self-image {max-height: 235px; margin-top: 12rem;}
-  .vertical-divider{ border-left: 6px solid #020921; height: 500px; }
-  .contact-subtitle {font-size: 2rem; font-weight: bold; margin-top: 1.55rem; font-style: italic;}
-  .contact-title {line-height: 50px; font-family: $title-font; color: $orange; text-shadow: 2px 2px 1px $orange-shadow; font-size: 3.9rem}
-                            }
+  .vertical-divider{ border-left: 6px solid $orange; height: 500px; }
+  .contact-subtitle {color: $white;font-size: 2rem; font-weight: bold; margin-top: 1.55rem; font-style: italic;text-shadow: 4px 1px #000;}
+  .contact-title {line-height: 50px; font-family: $title-font; color: $white; text-shadow: 2px 2px 1px $orange-shadow; font-size: 3.9rem}
+  .under-construction-title {line-height: 50px; font-family: Nostromo-Oblique-Black; color: $orange; text-shadow: 2px 2px 1px $white; font-size: 3.9rem}
+}
                     
 @media only screen and (max-width: 1216px) {
   .hobby-item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:7.5rem; padding: 2rem;}
@@ -292,10 +294,10 @@ $title-font: 'Nostromo-Black';
     overflow: hidden;
   }
   .self-image {max-height: 175px; margin-top: 15rem;}
-  .vertical-divider{ border-left: 6px solid #020921; height: 500px; }
-  .contact-title {line-height: 50px; font-family: $title-font; color: $orange; text-shadow: 2px 2px 1px $orange-shadow; font-size: 3.5rem}
-
-                              }
+  .vertical-divider{ border-left: 6px solid $orange; height: 500px; }
+  .contact-title {line-height: 50px; font-family: $title-font; color: $white; text-shadow: 2px 2px 1px $orange-shadow; font-size: 3.5rem}
+  .under-construction-title {line-height: 50px; font-family: Nostromo-Oblique-Black; color: $orange; text-shadow: 2px 2px 1px $white; font-size: 3.5rem}
+}
                     
  @media only screen and (max-width: 1025px) {
   .hobby-item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:4.2rem; padding: 2rem;}
@@ -336,11 +338,11 @@ $title-font: 'Nostromo-Black';
     overflow: hidden;
   }
   .self-image {max-height: 235px; margin-top: 12rem;}
-  .vertical-divider{border-left: 6px solid #020921;height: 500px;}
-  .contact-subtitle {font-size: 2rem; font-weight: bold; margin-top: 1.55rem; font-style: italic;}
-  .contact-title {line-height: 50px; font-family: $title-font; color: $orange; text-shadow: 2px 2px 1px $orange-shadow; font-size: 3.5rem}
-
-                                }
+  .vertical-divider{border-left: 6px solid $orange; height: 500px;}
+  .contact-subtitle {color: $white;font-size: 2rem; font-weight: bold; margin-top: 1.55rem; font-style: italic;text-shadow: 4px 1px #000;}
+  .contact-title {line-height: 50px; font-family: $title-font; color: $white; text-shadow: 2px 2px 1px $orange-shadow; font-size: 3.5rem}
+  .under-construction-title {line-height: 50px; font-family: Nostromo-Oblique-Black; color: $orange; text-shadow: 2px 2px 1px $white; font-size: 3.5rem}
+}
                     
 @media only screen and (max-width: 769px) {
   .hobby-item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:5.5rem; padding: 2rem;}
@@ -381,13 +383,14 @@ $title-font: 'Nostromo-Black';
     overflow: hidden;
   }
   .vertical-divider{
-    border-top: 6px solid #020921;
+    border-top: 6px solid $orange;
     width: 100%;
     height: 5px;
   }
-  .contact-subtitle {font-size: 2rem; font-weight: bold; margin-top: 1.55rem; font-style: italic;}
-  .contact-title {line-height: 30px; font-family: $title-font; color: $orange; text-shadow: 2px 2px 1px $orange-shadow; font-size: 2.6rem}
-                                  }
+  .contact-subtitle {color: $white;font-size: 2rem; font-weight: bold; margin-top: 1.55rem; font-style: italic;text-shadow: 4px 1px #000;}
+  .contact-title {line-height: 30px; font-family: $title-font; color: $white; text-shadow: 2px 2px 1px $orange-shadow; font-size: 2.6rem}
+  .under-construction-title {line-height: 30px; font-family: Nostromo-Oblique-Black; color: $orange; text-shadow: 2px 2px 1px $white; font-size: 2.6rem}
+}
                     
 @media only screen and (max-width: 428px) {
   .hobby-item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:6.2rem; padding: 2rem;}
@@ -427,13 +430,13 @@ $title-font: 'Nostromo-Black';
     overflow: hidden;
   }
   .vertical-divider{
-    border-top: 6px solid #020921;
+    border-top: 6px solid $orange;
     width: 100%;
     height: 5px;
   }
-  .contact-subtitle {font-size: 1.2rem; font-weight: bold; margin-top: 1.55rem; font-style: italic;}
-  .contact-title { line-height: 30px; font-family: $title-font; color: $orange; text-shadow: 2px 2px 1px $orange-shadow; font-size: 2rem}
-                                  
+  .contact-subtitle {color: $white;font-size: 1.2rem; font-weight: bold; margin-top: 1.55rem; font-style: italic;text-shadow: 4px 1px #000;}
+  .contact-title { line-height: 30px; font-family: $title-font; color: $white; text-shadow: 2px 2px 1px $orange-shadow; font-size: 2rem}
+  .under-construction-title { line-height: 30px; font-family: Nostromo-Oblique-Black; color: $orange; text-shadow: 2px 2px 1px $white; font-size: 2rem}
 }
 
 @media only screen and (max-width: 320px) {
@@ -476,13 +479,14 @@ $title-font: 'Nostromo-Black';
     overflow: hidden;
   }
   .vertical-divider{
-    border-top: 6px solid #020921;
+    border-top: 6px solid $orange;
     width: 100%;
     height: 5px;
   }
-  .contact-subtitle {font-size: 0.8rem; font-weight: bold; margin-top: 1.55rem; font-style: italic;}
-  .contact-title { line-height: 25px; font-family: $title-font; color: $orange; text-shadow: 2px 2px 1px $orange-shadow; font-size: 1.6rem}
-                            }
+  .contact-subtitle {color: $white;font-size: 0.8rem; font-weight: bold; margin-top: 1.55rem; font-style: italic;text-shadow: 4px 1px #000;}
+  .contact-title { line-height: 25px; font-family: $title-font; color: $white; text-shadow: 2px 2px 1px $orange-shadow; font-size: 1.6rem}
+  .under-construction-title { line-height: 25px; font-family: Nostromo-Oblique-Black; color: $orange; text-shadow: 2px 2px 1px $white; font-size: 1.6rem}
+}
 .quote-p {color: $white; text-shadow: -1px 2px 3px $orange-shadow;}
 
-.contact-p {font-size: 1.39rem; font-weight: bold; margin-top: 2.55rem;}
+.contact-p {font-size: 1.39rem; color: $white; font-weight: bold; margin-top: 2.55rem; text-shadow: 3px 1px #000;}

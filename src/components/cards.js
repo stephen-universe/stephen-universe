@@ -25,11 +25,11 @@ export default props =>  (
     render={data => (
         <>
         <div className="tile is-ancestor">
-        <div className="tile is-12 is-parent">
+        <div className="tile is-6 is-parent">
             <div className="tile is-child box">
                 
              
-                <p className="title"><h2>{data.frontmatter.title}</h2></p>
+                <p className="title"><h2>Title</h2></p>
                 <Link to="/project/on-the-geneology-of-morals">
                         <img className="project-box" src="/assets/background-1.jpg" />
                 </Link>

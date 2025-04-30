@@ -1,12 +1,16 @@
 import React from "react"
 import Form from "../components/forms/form"
-import Layout from "../components/Layout"
+import Layouts from "../components/Layouts"
 
 export default function Contact() {
+
+
+
   return (
     <>
 <section className="main-body-bg">
-<Layout >
+<Layouts>
+         
   <section className="section">
       <form name="Contact Form v1"
           method="post" 
@@ -28,7 +32,7 @@ export default function Contact() {
         </div>
       </form>
   </section>
-</Layout>
+</Layouts>
 </section>
     </>
   )

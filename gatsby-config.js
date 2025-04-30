@@ -1,5 +1,7 @@
+
 const config = require("./config.json")
 const infoData = require("./content/data/info.json")
+
 
 module.exports = {
   //this makes the site config available to forestry cms
@@ -13,12 +15,16 @@ module.exports = {
     infoData: infoData
   },
   plugins: [
-    "gatsby-plugin-sass",
-    "gatsby-transformer-remark",
+    "gatsby-plugin-netlify-cms", 
+    "gatsby-plugin-sass", 
+    "gatsby-plugin-image", 
+    "gatsby-plugin-sitemap", 
+    "gatsby-plugin-mdx", 
+    "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
+    "gatsby-transformer-remark",
     "gatsby-transformer-yaml",
     "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -92,5 +98,7 @@ module.exports = {
         ],
       },
     },
-  ],
-}
+  ]
+};
+
+

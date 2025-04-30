@@ -104,7 +104,10 @@ export class FormUserDetails extends Component {
     return (
       <>
       <div className="column is-8 ">
-        <h1 className="contact-title">Have Questions?</h1>
+      <h1 className="under-construction-title">Site Under Construction</h1>
+      <br/>
+
+      <h1 className="contact-title">Still Have Questions?</h1>
         <h1 className="contact-subtitle">Let's Talk Design.</h1>
         <h1 className="contact-p">I'd Love To Hear From You</h1>
         <p className="" style={{fontSize: 0.7 + "rem" }}>Please Fill Out The Form Below</p>
@@ -247,12 +250,12 @@ export class FormUserDetails extends Component {
           <div className="column is-1"></div>
           <div className="column is-1"><div className="vertical-divider"></div></div>
           <div className="column is-4 has-text-centered"><img src="" />
-          <p className="">
-          <img className="" src="make-contact.png" /> <br />
+          <p className="" style={{color: "#FFF"}}>
+          <img className="" src="/make-contact.png" /> <br />
             Not Sure Where To Start.. <br/>
             I've Got You Covered. <br/> <br/>
             Check Out This Guide To Learn About New Design Techniques, Trends, & More</p>
-            <div className="mt-2"> <Link to="/">2021 Style Guide</Link></div>
+            <div className="mt-2"  > <Link to="/" style={{color: "#FFF", fontFamily: 'Nostromo-Black', textShadow: '-1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), 1px 1px 0 rgb(0, 0, 0),', textDecoration:'underline dashed', textDecorationColor: '#E84834', textDecorationThickness: '1.6px' }}>Style Guide</Link></div>
           </div>
           </div>
         </section>
@@ -277,7 +280,8 @@ export class FormPersonalDetails extends Component {
     return (
       <>
        <div className="column is-8 ">
-        <h1 className="contact-title">Have Questions?</h1>
+        <h1 className="contact-title">Site Under Construction</h1>
+<h1 className="contact-title">Still Have Questions?</h1>
         <h1 className="contact-subtitle">Let's Talk Design.</h1>
         <h1 className="contact-p">I'd Love To Hear From You</h1>
         <p className="" style={{fontSize: 0.7 + "rem" }}>Please Fill Out The Form Below</p>
@@ -376,12 +380,12 @@ export class FormPersonalDetails extends Component {
           <div className="column is-1"></div>
           <div className="column is-1"><div className="vertical-divider"></div></div>
           <div className="column is-4 has-text-centered"><img src="" />
-          <p className="">
-          <img className="" src="make-contact.png" /> <br />
+          <p className="" style={{color: "#FFF"}}>
+          <img className="" src="/make-contact.png" /> <br />
             Not Sure Where To Start.. <br/>
             I've Got You Covered. <br/> <br/>
             Check Out This Guide To Learn About New Design Techniques, Trends, & More</p>
-            <div className="mt-2"> <Link to="/">2021 Style Guide</Link></div>
+            <div className="mt-2"  > <Link to="/" style={{color: "#FFF", fontFamily: 'Nostromo-Black', textShadow: '-1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), 1px 1px 0 rgb(0, 0, 0)', textDecoration:'underline dashed', textDecorationColor: '#E84834', textDecorationThickness: '1.6px'}}>Style Guide</Link></div>
           </div>
           </div>
         </section>
