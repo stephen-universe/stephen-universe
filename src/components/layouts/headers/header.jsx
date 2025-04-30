@@ -1,6 +1,5 @@
-import React from "react";
 import { Link } from "gatsby";
-import { useState } from "react";
+import React, { useState } from "react";
 import appData from "../../../../content/settings/setting.json";
 
 export default function Index({ menuIsActive, setMenuIsActive }) {

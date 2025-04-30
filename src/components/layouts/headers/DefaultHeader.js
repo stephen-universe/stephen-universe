@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
-import { useState } from "react";
+import  React, { useState } from "react";
 import appData from "../../../content/settings/setting.json";
-import React from "react";
+
 
 
 

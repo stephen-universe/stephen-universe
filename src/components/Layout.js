@@ -1,6 +1,5 @@
-import { useEffect } from "react";
+import  React, { useEffect } from "react";
 import { scrollAnimation } from "../common/scrollAnims";
-import React from "react";
 import { Helmet } from "react-helmet"
 import useResumeData from "../static_queries/useResumeData";
 import DigitalMenu from "./layouts/headers/digitalMenu";
