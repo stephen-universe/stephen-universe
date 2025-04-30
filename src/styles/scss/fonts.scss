@@ -389,7 +389,7 @@ $title-font: 'Nostromo-Black';
   }
   .contact-subtitle {color: $white;font-size: 2rem; font-weight: bold; margin-top: 1.55rem; font-style: italic;text-shadow: 4px 1px #000;}
   .contact-title {line-height: 30px; font-family: $title-font; color: $white; text-shadow: 2px 2px 1px $orange-shadow; font-size: 2.6rem}
-  .under-construction-title {line-height: 30px; font-family: Nostromo-Oblique-Black; color: $orange; text-shadow: 2px 2px 1px $white; font-size: 2.6rem}
+  .under-construction-title {line-height: 30px; font-family: Nostromo-Oblique-Black; color: $orange; text-shadow: 2px 2px 1px $white; font-size: 2.1rem}
 }
                     
 @media only screen and (max-width: 428px) {
@@ -436,10 +436,10 @@ $title-font: 'Nostromo-Black';
   }
   .contact-subtitle {color: $white;font-size: 1.2rem; font-weight: bold; margin-top: 1.55rem; font-style: italic;text-shadow: 4px 1px #000;}
   .contact-title { line-height: 30px; font-family: $title-font; color: $white; text-shadow: 2px 2px 1px $orange-shadow; font-size: 2rem}
-  .under-construction-title { line-height: 30px; font-family: Nostromo-Oblique-Black; color: $orange; text-shadow: 2px 2px 1px $white; font-size: 2rem}
+  .under-construction-title { line-height: 30px; font-family: Nostromo-Oblique-Black; color: $orange; text-shadow: 2px 2px 1px $white; font-size: 1.7rem}
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 360px) {
   .hobby-item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:7.1rem; padding: 2rem;}
   .item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:8.2rem; padding: 2rem;}
  
@@ -485,7 +485,7 @@ $title-font: 'Nostromo-Black';
   }
   .contact-subtitle {color: $white;font-size: 0.8rem; font-weight: bold; margin-top: 1.55rem; font-style: italic;text-shadow: 4px 1px #000;}
   .contact-title { line-height: 25px; font-family: $title-font; color: $white; text-shadow: 2px 2px 1px $orange-shadow; font-size: 1.6rem}
-  .under-construction-title { line-height: 25px; font-family: Nostromo-Oblique-Black; color: $orange; text-shadow: 2px 2px 1px $white; font-size: 1.6rem}
+  .under-construction-title { line-height: 25px; font-family: Nostromo-Oblique-Black; color: $orange; text-shadow: 2px 2px 1px $white; font-size: 1.3rem}
 }
 .quote-p {color: $white; text-shadow: -1px 2px 3px $orange-shadow;}
 
