@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { scrollAnimation } from "../common/scrollAnims";
+import scrollAnimation from "../common/scrollAnims";
 import React from "react";
-import { Helmet } from "react-helmet"
+import Helmet from "react-helmet"
 import useResumeData from "../static_queries/useResumeData";
 import Footer from "./footer";
 import ScrollApp from "./buttons";

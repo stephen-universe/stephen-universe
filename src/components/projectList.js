@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import Link from "gatsby"
 import useProjectData from "../static_queries/useProjectData"
 
 
