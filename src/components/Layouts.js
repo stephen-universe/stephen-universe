@@ -1,7 +1,6 @@
 import  React, { useEffect } from "react";
 import { scrollAnimation } from "../common/scrollAnims";
 import { Helmet } from "react-helmet"
-import useResumeData from "../static_queries/useResumeData";
 import Footer from "./footer";
 import ScrollApp from "./buttons";
 import DigitalMenu from "./layouts/headers/digitalMenu";
@@ -26,16 +25,16 @@ const Layouts = ({
     }
   }, []);
 
-    const { title, description } = useResumeData();
+
   return (
     <>
    <section className="" >
             <div className="container">
-            <Helmet>
-              <html lang="en" />
-              <title>{title}</title>
-              <meta name="description" content={description} />
-            </Helmet>
+             <Helmet>
+                            <html lang="en" />
+                            <title>Stephen-Universe</title>
+                            <meta name="description" content="Portfolio" />
+                          </Helmet>
             
             </div>
           </section> 
