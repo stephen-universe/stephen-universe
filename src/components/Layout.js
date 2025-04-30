@@ -1,10 +1,9 @@
-import  React, { useEffect } from "react";
-import { scrollAnimation } from "../common/scrollAnims";
+import  React from "react";
+
 import { Helmet } from "react-helmet"
 import useResumeData from "../static_queries/useResumeData";
-import DigitalMenu from "./layouts/headers/digitalMenu";
-import ScrollApp from "../components/buttons";
-import Preloader from "./Preloader";
+
+
 
 const Layout = ({
   children,
@@ -15,15 +14,6 @@ const Layout = ({
   contactButton,
   cartButton
 }) => {
-  useEffect(() => {
-    scrollAnimation();
-
-    // preloader
-    if (typeof window !== 'undefined') {
-      const loader = document.getElementsByClassName('preloader');
-      if (loader[0]) loader[0].classList.add('loaded');
-    }
-  }, []);
 
 
 
@@ -40,15 +30,10 @@ const Layout = ({
             
             </div>
           </section> 
-<Preloader/>
-   {!noHeader && (
-        <DigitalMenu
-        />
-      )}
 
   
            {children}
-           <ScrollApp/>   
+           
         
 
 

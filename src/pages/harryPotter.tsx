@@ -1,10 +1,7 @@
 import React, { useRef, Component } from "react";
 import Helmet from "react-helmet";
 import useResumeData from "../static_queries/useResumeData";
-import ScrollApp from "../components/buttons";
-import Quote from "../components/home/quote";
-import Introduction from "../components/home/introduction";
-import InitializeContact from "../components/home/contact";
+
 
 import FooterQuote from "../components/home/footerQuote";
 
