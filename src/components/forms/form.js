@@ -152,7 +152,7 @@ export class FormUserDetails extends Component {
 
                   <input type="hidden" name="bot-field" />
                   <span className="icon is-small is-left">
-                    <i className="fas fa-envelope"></i>
+                   
                   </span>
                 </div>
               </div>
@@ -172,7 +172,7 @@ export class FormUserDetails extends Component {
                     fullWidth
                   />
                   <span className="icon is-small is-left">
-                    <i className="fas fa-envelope"></i>
+                   
                   </span>
                 </div>
               </div>
@@ -457,7 +457,7 @@ export class Confirm extends Component {
                   value={email}
                 />
                 <span className="icon is-small is-left">
-                  <i className="fas fa-envelope"></i>
+                 
                 </span>
               </div>
             </div>
@@ -501,7 +501,7 @@ export class Confirm extends Component {
                   margin="normal"
                 />
                 <span className="icon is-small is-left">
-                  <i className="fas fa-envelope"></i>
+                 
                 </span>
               </div>
             </div>
