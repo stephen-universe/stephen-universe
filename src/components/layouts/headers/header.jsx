@@ -153,7 +153,15 @@ export default function Index({ menuIsActive, setMenuIsActive }) {
                   </h1>
                 </Link>
               </ul>
-      
+
+
+              <div className="blog-nav-link desktop-menu">
+              <div className="blog-nav-text">
+               <Link to='/contact'>Hire Me</Link>
+              </div>
+            </div>
+
+            
               <a href="#" id="res-cross" onClick={(e) => clickedMobileMenu(e)}></a>
             </div>
       

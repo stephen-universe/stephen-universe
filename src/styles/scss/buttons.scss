@@ -42,6 +42,27 @@ $defaultTransition: 0.3s ease-in-out;
     accentColor: $accent-1;
 }
 
+
+.blog-nav-link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: $orange;
+    width: 55%;
+    height: 13%;
+    
+    .blog-nav-text {
+        color: $white;
+        text-align: center;
+        padding-top: 1rem;
+        font-size: 1.5rem;
+        font-family: $title-font;
+    }
+    &:hover{
+        background-color: $orange-shadow;
+
+    }
+}
 .text-link {
     color: $orange;
     text-decoration: underline;
