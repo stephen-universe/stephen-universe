@@ -80,26 +80,31 @@ export class UserForm extends Component {
                           prevStep={this.prevStep}            
                           handleFinalSubmit={this.handleFinalSubmit}           
                           
-                          isSubmitting={isSubmitting}            
-                          error={submissionError}            
+                          isSubmitting={this.state.isSubmitting}            
+                          error={this.state.submissionError}            
                           values={values}/>        
                           );      
                           
-                          case 4:        
-                          return (          
-                          <div className="section">            
-                          <div className="container has-text-centered">              
-                            <h1 className="title">Thank You!</h1>              
-                            <p>Your submission has been received.</p>              
-                            
-                            {submissionError && (                
-                              <div className="notification is-danger">                  
-                              {submissionError}                
-                              </div>             
-                              )}            
-                              </div>          
-                              </div>        
-                              );      
+                          case 4:  
+                          return (    
+                          
+                          <div className="section">      
+                          <div className="container has-text-centered">        
+                            <h1 className="title">Thank You!</h1>        
+                            <p>We've received your submission.</p>        
+                            <button           
+                            className="button is-link mt-5"          
+                            onClick={() => this.setState({             
+                              step: 1,             
+                              firstName: "",            
+                              email: "",            
+                              })}        
+                              >          
+                              Start New Submission        
+                              </button>      
+                              </div>    
+                              </div>  
+                              );     
                               
                               default:        
                               return <div>Form Error</div>;    
@@ -475,8 +480,6 @@ export class Confirm extends Component {
   
     
         <form
-          name="Contact Form v1"
-          method="post"
           onSubmit= {(e) => {
             e.preventDefault()
             this.props.handleFinalSubmit()}
@@ -653,20 +656,20 @@ export class Confirm extends Component {
 
                     <div className="control">
                       <button
-                        className="button is-link $ {isSubmitting ? 'is-loading' : ''}"
-                        disabled={isSubmitting}
+                        className={"button is-link $ {this.props.isSubmitting ? 'is-loading' : ''}"}
+                        disabled={this.props.isSubmitting}
                         type="submit"
                         color="primary"
                         variant="contained"
                         onSubmit="submit"
                       >
-                        {isSubmitting ? 'Submitting...' : 'Submit'}
+                        {this.props.isSubmitting ? 'Submitting...' : 'Submit'}
                       </button>
-                    </div>
+                    </div>  
                   </div>
-                  {submissionError && (
+                  {this.props.error && (
                     <div className="notification is-danger">
-                      {submissionError}
+                      {this.props.error}
                     </div>
                   )}
                 </div>
