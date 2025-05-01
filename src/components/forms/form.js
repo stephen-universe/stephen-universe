@@ -1,97 +1,112 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
 
-export class UserForm extends Component {
-  state = {
-    step: 1,
-    firstName: "",
-    lastName: "",
-    email: "",
-    budget: "",
-    city: "",
-    number: "",
-    message: "",
-    option: "",
-    additionalOptions: "",
-  }
+export class UserForm extends Component {  
+  state = {    
+    step: 1,    
+    firstName: "",    
+    lastName: "",    
+    email: "",    
+    budget: "",    
+    city: "",    
+    number: "",    
+    message: "",    
+    option: "",    
+    additionalOptions: "",    
+    
+    isSubmitting: false,    
+    submissionError: null  };  
+    
+    nextStep = () => {    
+      const { step } = this.state;   
+      this.setState({ step: step + 1 });  };    
+      
+      prevStep = () => {    
+        const { step } = this.state;    
+        this.setState({ step: step - 1 });  };  
 
-  // Proceed to next step
-  nextStep = () => {
-    const { step } = this.state
-    this.setState({
-      step: step + 1,
-    })
-  }
-
-  // Go back to prev step
-  prevStep = () => {
-    const { step } = this.state
-    this.setState({
-      step: step - 1,
-    })
-  }
-
-  // Handle fields change
-  handleChange = (input) => (e) => {
-    this.setState({ [input]: e.target.value })
-  }
-
-  render() {
-    const { step } = this.state
-    const {
-      firstName,
-      lastName,
-      email,
-      message,
-      option,
-      additionalOptions,
-      budget,
-      city,
-      number,
-    } = this.state
-    const values = {
-      firstName,
-      lastName,
-      email,
-      message,
-      option,
-      additionalOptions,
-      budget,
-      city,
-      number,
-    }
-
-    switch (step) {
-      case 1:
-        return (
-          <FormUserDetails
-            nextStep={this.nextStep}
-            handleChange={this.handleChange}
-            values={values}
-          />
-        )
-      case 2:
-        return (
-          <FormPersonalDetails
-            nextStep={this.nextStep}
-            prevStep={this.prevStep}
-            handleChange={this.handleChange}
-            values={values}
-          />
-        )
-      case 3:
-        return (
-          <Confirm
-            nextStep={this.nextStep}
-            prevStep={this.prevStep}
-            values={values}
-          />
-        )
-      default:
-        console.log("This is a multi-step form built with React.")
-    }
-  }
-}
+        handleChange = (input) => (e) => {    
+          this.setState({ [input]: e.target.value });  }; 
+          
+          handleFinalSubmit = async () => {    
+            this.setState({ isSubmitting: true, submissionError: null });        
+            
+            try {      
+                const response = await fetch('/api/submit-form', {        
+                method: 'POST',       
+                headers: { 'Content-Type': 'application/json' },        
+                body: JSON.stringify({          
+                  ...this.state })
+                });
+                  
+                if (!response.ok) throw new Error('Submission failed');      
+                this.nextStep(); 
+                
+              }catch (error) {      
+                  this.setState({ submissionError: error.message });    
+                } finally {      
+                  this.setState({ isSubmitting: false });   
+                }  
+              };  
+                
+                      render() {    
+                        
+                        const { step, isSubmitting, submissionError } = this.state;    
+                        const values = { ...this.state };    
+                        
+                        switch (step) {      
+                          case 1:       
+                          return (          
+                          
+                          <FormUserDetails           
+                          nextStep={this.nextStep}            
+                          handleChange={this.handleChange}            
+                          values={values}/>        
+                          );      
+                          
+                          case 2:        
+                          return (          
+                          <FormPersonalDetails            
+                          nextStep={this.nextStep}            
+                          prevStep={this.prevStep}            
+                          handleChange={this.handleChange}            
+                          values={values}/>        
+                        );      
+                        
+                          case 3:        
+                          return (          
+                          <Confirm           
+                          nextStep={this.nextStep}            
+                          prevStep={this.prevStep}            
+                          handleFinalSubmit={this.handleFinalSubmit}           
+                          
+                          isSubmitting={isSubmitting}            
+                          error={submissionError}            
+                          values={values}/>        
+                          );      
+                          
+                          case 4:        
+                          return (          
+                          <div className="section">            
+                          <div className="container has-text-centered">              
+                            <h1 className="title">Thank You!</h1>              
+                            <p>Your submission has been received.</p>              
+                            
+                            {submissionError && (                
+                              <div className="notification is-danger">                  
+                              {submissionError}                
+                              </div>             
+                              )}            
+                              </div>          
+                              </div>        
+                              );      
+                              
+                              default:        
+                              return <div>Form Error</div>;    
+                            }  
+                          }
+                     
+                }
 
 export class FormUserDetails extends Component {
   continue = (e) => {
@@ -394,39 +409,78 @@ export class FormPersonalDetails extends Component {
   }
 }
 
-export class Confirm extends Component {
-  continue = (e) => {
-    e.preventDefault()
-    // PROCESS FORM //
-    this.props.nextStep()
-  }
+export class Confirm extends Component { 
+   
+    state = { isSubmitting: false, 
+    submissionError: null };  
 
-  back = (e) => {
-    e.preventDefault()
-    this.props.prevStep()
-  }
-
-  render() {
-    const {
-      values: {
-        firstName,
+    handleSubmit = async (e) => {    
+      e.preventDefault();    
+      this.setState({ isSubmitting: true, 
+      submissionError: null });    
+      
+      const { 
+        firstName, 
+        email, 
+        number, 
+        budget, 
         additionalOptions,
-        message,
-        email,
-        budget,
-        option,
-        number,
-      },
-    } = this.props
+        option, 
+        message } = this.props.values;    
+        try {      
+          
+          const response = await fetch('/api/submit-form', {        
+            method: 'POST',        
+            headers: { 'Content-Type': 'application/json' },        
+            
+            body: JSON.stringify({          
+              firstName,          
+              email,          
+              phone: number,          
+              budget,          
+              service: additionalOptions,          
+              message, 
+              option,
+              timestamp: new Date().toISOString()       
+            }),      
+          });      
+          
+          if (!response.ok) throw new Error('Submission failed');      
+          this.props.nextStep();
+          } 
+          
+          catch (error) {       
+          this.setState({ submissionError: 'Failed to submit. Please try again.' });    
+            } finally {      
+              this.setState({ isSubmitting: false });    
+              }  
+              };  
+              
+              render() {    
+                const {
+                  values: {
+                  firstName, 
+                  email, 
+                  number, 
+                  budget, 
+                  additionalOptions,
+                  option, 
+                  message }, prevStep, isSubmitting, submissionError
+                   } = this.props;    
+                return (      
+                
 
-    return (
-      <>
+      
+ 
+  
+    
         <form
           name="Contact Form v1"
           method="post"
-          netlify-honeypot="bot-field"
-          data-netlify="true"
-          onSubmit="submit"
+          onSubmit= {(e) => {
+            e.preventDefault()
+            this.props.handleFinalSubmit()}
+          }
         >
           <input type="hidden" name="form-name" value="Contact Form v1" />
           <div className="d-none">
@@ -599,24 +653,28 @@ export class Confirm extends Component {
 
                     <div className="control">
                       <button
-                        className="button is-link"
+                        className="button is-link $ {isSubmitting ? 'is-loading' : ''}"
+                        disabled={isSubmitting}
                         type="submit"
                         color="primary"
                         variant="contained"
                         onSubmit="submit"
                       >
-                        Submit
+                        {isSubmitting ? 'Submitting...' : 'Submit'}
                       </button>
                     </div>
                   </div>
+                  {submissionError && (
+                    <div className="notification is-danger">
+                      {submissionError}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
           </section>
         </form>
-      </>
     )
-  }
+  };
 }
-
 export default UserForm
