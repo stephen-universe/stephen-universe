@@ -36,18 +36,35 @@ export class UserForm extends Component {
     this.setState({ isSubmitting: true, submissionError: null });
 
     try {
-      const response = await fetch("/api/submit-form", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...this.state,
-        }),
-      });
+      const cleanData = {
+        ...this.state,
+        fullName: this.state.fullName,
+        email: this.state.email,
+        budget: this.state.budget.replace(/[^\d.]/g, ""),
+        number: this.state.number.replace(/\D/g, ""),
+        additionalOptions: this.state.additionalOptions,
+        message: this.state.message,
+      };
 
-      if (!response.ok) throw new Error("Submission failed");
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbx9V7CRSdi6PDGrDfRLi__86Pxw7PeK7oGAMa2BYtqbwavvahXkCUlt6VPqz1hdeaOS/exec",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(cleanData),
+        }
+      );
+
+      const result = await response.json();
+
+      if (!response.ok || result.error) {
+        throw new Error(result.error || "Submission failed");
+      }
       this.nextStep();
     } catch (error) {
-      this.setState({ submissionError: error.message });
+      this.setState({
+        submissionError: error.message || "Failed to submit. Please try again.",
+      });
     } finally {
       this.setState({ isSubmitting: false });
     }
@@ -122,6 +139,20 @@ export class UserForm extends Component {
 }
 
 export class FormUserDetails extends Component {
+  formatBudgetInput = (value) => {
+    return value.replace(/[^\d.,]/g, "");
+  };
+
+  formatPhoneInput = (value) => {
+    const cleaned = value.replace(/\D/g, "");
+    const match = cleaned.match(/^(\d{0,3})(\d{0,3})(\d{0,4})$/);
+    return match
+      ? !match[2]
+        ? match[1]
+        : `(${match[1]}) ${match[2]}` + (match[3] ? `-${match[3]}` : "")
+      : value;
+  };
+
   continue = (e) => {
     e.preventDefault();
     this.props.nextStep();
@@ -172,14 +203,18 @@ export class FormUserDetails extends Component {
                 <div className="control">
                   <input
                     className="input"
-                    type="number"
-                    placeholder="Enter Your Phone Number"
-                    name="Number"
-                    onChange={handleChange("number")}
-                    defaultValue={values.number}
-                    margin="normal"
+                    type="tel"
+                    placeholder="(123) 456-7890"
+                    onChange={(e) => {
+                      const formattedValue = this.formatPhoneInput(
+                        e.target.value
+                      );
+                      this.props.handleChange("number")({
+                        target: { value: formattedValue },
+                      });
+                    }}
+                    defaultValue={this.props.values.number}
                   />
-
                   <input type="hidden" name="bot-field" />
                   <span className="icon is-small is-left"></span>
                 </div>
@@ -210,11 +245,17 @@ export class FormUserDetails extends Component {
                     <input
                       className="input"
                       name="Budget"
-                      type="number"
-                      placeholder="Enter Your Budget"
-                      onChange={handleChange("budget")}
-                      defaultValue={values.budget}
-                      margin="normal"
+                      type="text"
+                      placeholder="$10,000.00"
+                      onChange={(e) => {
+                        const formattedValue = this.formatBudgetInput(
+                          e.target.value
+                        );
+                        this.props.handleChange("budget")({
+                          target: { value: formattedValue },
+                        });
+                      }}
+                      defaultValue={this.props.values.budget}
                     />
                   </div>
                 </div>
@@ -312,6 +353,20 @@ export class FormUserDetails extends Component {
 }
 
 export class FormPersonalDetails extends Component {
+  formatBudgetInput = (value) => {
+    return value.replace(/[^\d.,]/g, "");
+  };
+
+  formatPhoneInput = (value) => {
+    const cleaned = value.replace(/\D/g, "");
+    const match = cleaned.match(/^(\d{0,3})(\d{0,3})(\d{0,4})$/);
+    return match
+      ? !match[2]
+        ? match[1]
+        : `(${match[1]}) ${match[2]}` + (match[3] ? `-${match[3]}` : "")
+      : value;
+  };
+
   continue = (e) => {
     e.preventDefault();
     this.props.nextStep();
@@ -351,11 +406,17 @@ export class FormPersonalDetails extends Component {
                   <input
                     className="input"
                     name="Budget"
-                    type="number"
-                    placeholder=" Enter Your Budget Amount"
-                    onChange={handleChange("budget")}
-                    defaultValue={values.budget}
-                    margin="normal"
+                    type="text"
+                    placeholder="$10,000.00"
+                    onChange={(e) => {
+                      const formattedValue = this.formatBudgetInput(
+                        e.target.value
+                      );
+                      this.props.handleChange("budget")({
+                        target: { value: formattedValue },
+                      });
+                    }}
+                    defaultValue={this.props.values.budget}
                   />
                 </div>
               </div>
@@ -479,7 +540,12 @@ export class Confirm extends Component {
     } = this.props;
 
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          this.handleSubmit();
+        }}
+      >
         <input type="hidden" name="form-name" value="Contact Form v1" />
         <div className="d-none">
           <div className="field">
