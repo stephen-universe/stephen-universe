@@ -36,8 +36,7 @@ export class UserForm extends Component {
     this.setState({ isSubmitting: true, submissionError: null });
 
     try {
-      const cleanData = {
-        ...this.state,
+      const submissionData = {
         fullName: this.state.fullName,
         email: this.state.email,
         budget: this.state.budget.replace(/[^\d.]/g, ""),
@@ -46,22 +45,27 @@ export class UserForm extends Component {
         message: this.state.message,
       };
 
+      console.log("Submitting:", submissionData);
+
       const response = await fetch(
         "https://script.google.com/macros/s/AKfycbx9V7CRSdi6PDGrDfRLi__86Pxw7PeK7oGAMa2BYtqbwavvahXkCUlt6VPqz1hdeaOS/exec",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(cleanData),
+          body: JSON.stringify(submissionData),
         }
       );
 
       const result = await response.json();
+      console.log("Response:", result);
 
-      if (!response.ok || result.error) {
+      if (!response.ok || !result.success) {
         throw new Error(result.error || "Submission failed");
       }
-      this.nextStep();
+
+      this.setState({ step: 4 });
     } catch (error) {
+      console.error("submissionError:", error);
       this.setState({
         submissionError: error.message || "Failed to submit. Please try again.",
       });
@@ -526,25 +530,19 @@ export class FormPersonalDetails extends Component {
 }
 
 export class Confirm extends Component {
-  handleSubmit = async (e) => {
+  handleSubmit = (e) => {
     e.preventDefault();
     this.props.handleFinalSubmit();
   };
 
   render() {
-    const {
-      values: { fullName, email, number, budget, additionalOptions, message },
-      prevStep,
-      isSubmitting,
-      error,
-    } = this.props;
+
 
     return (
       <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          this.handleSubmit();
-        }}
+        onSubmit={
+          this.handleSubmit
+        }
       >
         <input type="hidden" name="form-name" value="Contact Form v1" />
         <div className="d-none">
@@ -706,13 +704,13 @@ export class Confirm extends Component {
 
                   <div className="control">
                     <button
-                      className={`button is-link ${
-                        isSubmitting ? "is-loading" : ""
+                      className={`button is-link 
+                        ${this.props.isSubmitting ? "is-loading" : ""
                       }`}
                       type="submit"
-                      disabled={isSubmitting}
+                      disabled={this.props.isSubmitting}
                     >
-                      {isSubmitting ? "Submitting..." : "Submit"}
+                      this.props.isSubmitting ? "Submitting..." : "Submit"
                     </button>
                   </div>
                 </div>
