@@ -537,7 +537,13 @@ export class Confirm extends Component {
 
   render() {
 
-
+    const {
+      values: { fullName, email, number, budget, additionalOptions, message },
+      prevStep,
+      isSubmitting,
+      error,
+    } = this.props;
+    
     return (
       <form
         onSubmit={
