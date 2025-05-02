@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 export class UserForm extends Component {  
   state = {    
     step: 1,    
-    firstName: "",    
+    fullName: "",    
     lastName: "",    
     email: "",    
     budget: "",    
@@ -96,8 +96,12 @@ export class UserForm extends Component {
                             className="button is-link mt-5"          
                             onClick={() => this.setState({             
                               step: 1,             
-                              firstName: "",            
-                              email: "",            
+                              fullName: "",     
+                              email: "",    
+                              budget: "",    
+                              number: "",    
+                              message: "",        
+                              additionalOptions: "",            
                               })}        
                               >          
                               Start New Submission        
@@ -147,9 +151,9 @@ export class FormUserDetails extends Component {
                     className="input"
                     type="text"
                     placeholder="Enter Your Name"
-                    name="firstName"
-                    onChange={handleChange("firstName")}
-                    defaultValue={values.firstName}
+                    name="fullName"
+                    onChange={handleChange("fullName")}
+                    defaultValue={values.fullName}
                     margin="normal"
                   />
                 </div>
@@ -425,7 +429,7 @@ export class Confirm extends Component {
       submissionError: null });    
       
       const { 
-        firstName, 
+        fullName, 
         email, 
         number, 
         budget, 
@@ -434,12 +438,12 @@ export class Confirm extends Component {
         message } = this.props.values;    
         try {      
           
-          const response = await fetch('/api/submit-form', {        
+          const response = await fetch('https://script.google.com/macros/s/AKfycbwrTF1MIXXxjSVCWgvmfuMbTd6rcM68UcxuicNLmPs4qPl9OANXZeV7ytW2MhXndFHr/exec', {        
             method: 'POST',        
             headers: { 'Content-Type': 'application/json' },        
             
             body: JSON.stringify({          
-              firstName,          
+              fullName,          
               email,          
               phone: number,          
               budget,          
@@ -464,7 +468,7 @@ export class Confirm extends Component {
               render() {    
                 const {
                   values: {
-                  firstName, 
+                  fullName, 
                   email, 
                   number, 
                   budget, 
@@ -493,9 +497,9 @@ export class Confirm extends Component {
                 <input
                   className="input"
                   type="text"
-                  name="firstName"
-                  placeholder="Enter Your First Name"
-                  value={firstName}
+                  name="fullName"
+                  placeholder="Enter Your Full Name"
+                  value={fullName}
                   margin="normal"
                 />
               </div>
@@ -593,7 +597,7 @@ export class Confirm extends Component {
                       <label class="label">Name</label>
                     </div>
                     <div class="field-body">
-                      <div class="field">{firstName}</div>
+                      <div class="field">{fullName}</div>
                     </div>
                   </div>
 
