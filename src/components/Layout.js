@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet"
 import DigitalMenu from "./layouts/headers/digitalMenu";
 import ScrollApp from "../components/buttons";
 import Preloader from "./Preloader";
+import CookieBanner from "./cookie-banner";
 
 const Layout = ({
   children,
@@ -46,7 +47,8 @@ const Layout = ({
 
   
            {children}
-           <ScrollApp/>   
+           <ScrollApp/>
+           <CookieBanner/>   
         
 
 

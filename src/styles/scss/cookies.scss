@@ -1,0 +1,30 @@
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+.cookie-buttons {
+  display: flex;
+  gap: 1rem;
+}
+.cookie-banner button {
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+.cookie-banner button:first-child {
+  background: #4caf50;
+  color: white;
+}
+.cookie-banner button:last-child {
+  background: #f44336;
+  color: white;
+}

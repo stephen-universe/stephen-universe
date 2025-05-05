@@ -5,6 +5,7 @@ import Footer from "./footer";
 import ScrollApp from "./buttons";
 import DigitalMenu from "./layouts/headers/digitalMenu";
 import Preloader from "./Preloader";
+import CookieBanner from "./cookie-banner";
 
 const Layouts = ({
   children,
@@ -47,7 +48,8 @@ const Layouts = ({
 
   
            {children}
-           <ScrollApp/>   
+           <ScrollApp/>  
+           <CookieBanner/> 
         
        <Footer />
 
