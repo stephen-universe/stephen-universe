@@ -146,8 +146,25 @@ $title-font: 'Nostromo-Black';
       .react-made {
         text-align: center;
       }
+      .text-animation-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20vw;
+      }
+      
+      .text-animation-body{
+        font-size: 5vw;
+      }
 
+.lineMask{
+  overflow: hidden;
+}
 
+.lineMask p{
+  margin: 0px;
+  font-weight: 700;
+}
 
 .introText {
   position: relative;
