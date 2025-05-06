@@ -12,14 +12,14 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
             window.dataLayer = window.dataLayer || [];          
             function gtag(){dataLayer.push(arguments);}           
             gtag('js', new Date());          
-            gtag('config', 'GA4_MEASUREMENT_ID');          
+            gtag('config', 'GATSBY_GA4_MEASUREMENT_ID');          
           `,
         }}
       />
       <script
         key="ga-src"
         async
-        src={`https://www.googletagmanager.com/gtag/js?id=GA4_MEASUREMENT_ID`}
+        src={`https://www.googletagmanager.com/gtag/js?id=GATSBY_GA4_MEASUREMENT_ID`}
       />
       <script
         key="fb-pixel"
@@ -40,7 +40,7 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
               s=b.getElementsByTagName(e)[0]; 
               s.parentNode.insertBefore(t,s)
             }(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); 
-            fbq('init', 'FB_PIXEL_ID'); 
+            fbq('init', 'GATSBY_FB_PIXEL_ID'); 
             fbq('track', 'PageView');`,
         }}
       />
@@ -55,7 +55,7 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
             u.src='//static.ads-twitter.com/uwt.js',
             a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))
           }(window,document,'script');
-          twq('init','TWITTER_PIXEL_ID');
+          twq('init','GATSBY_TWITTER_PIXEL_ID');
           twq('track','PageView');`,
         }}
       />
@@ -67,7 +67,7 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)}; 
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i; 
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y); 
-          })(window, document, "clarity", "script", "CLARITY_PROJECT_ID");`,
+          })(window, document, "clarity", "script", "GATSBY_CLARITY_PROJECT_ID");`,
         }}
       />
       {/* LinkedIn Insight Tag */}
@@ -75,7 +75,7 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
         key="linkedin"
         dangerouslySetInnerHTML={{
           __html: `
-            _linkedin_partner_id = "YOUR_LINKEDIN_PARTNER_ID";
+            _linkedin_partner_id = "GATSBY_LINKEDIN_PARTNER_ID";
             window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
             window._linkedin_data_partner_ids.push(_linkedin_partner_id);
           `,
@@ -101,7 +101,7 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
           width="1"
           style={{ display: "none" }}
           alt=""
-          src="https://px.ads.linkedin.com/collect/?pid=LINKEDIN_PARTNER_ID&fmt=gif"
+          src="https://px.ads.linkedin.com/collect/?pid=GATSBY_LINKEDIN_PARTNER_ID&fmt=gif"
         />
       </noscript>
     </>
