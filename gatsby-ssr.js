@@ -9,39 +9,39 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
         key="ga-tag"
         dangerouslySetInnerHTML={{
           __html: `            
-        window.dataLayer = window.dataLayer || [];          
-        function gtag(){dataLayer.push(arguments);}           
-        gtag('js', new Date());          
-        gtag('config', 'G-DRJLCRQ1P3');          
-        `,
+            window.dataLayer = window.dataLayer || [];          
+            function gtag(){dataLayer.push(arguments);}           
+            gtag('js', new Date());          
+            gtag('config', 'GA4_MEASUREMENT_ID');          
+          `,
         }}
       />
       <script
         key="ga-src"
         async
-        src={`https://www.googletagmanager.com/gtag/js?id=G-DRJLCRQ1P3`}
+        src={`https://www.googletagmanager.com/gtag/js?id=GA4_MEASUREMENT_ID`}
       />
       <script
         key="fb-pixel"
         dangerouslySetInnerHTML={{
           __html: `            
-          !function(f,b,e,v,n,t,s) { 
-            if(f.fbq)return; 
-            n=f.fbq=function(){n.callMethod? 
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)}; 
-            if(!f._fbq)f._fbq=n; 
-            n.push=n; 
-            n.loaded=!0; 
-            n.version='2.0'; 
-            n.queue=[]; 
-            t=b.createElement(e); 
-            t.async=!0; 
-            t.src=v; 
-            s=b.getElementsByTagName(e)[0]; 
-            s.parentNode.insertBefore(t,s)
-          }(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); 
-          fbq('init', '455867946463533'); 
-          fbq('track', 'PageView');`,
+            !function(f,b,e,v,n,t,s) { 
+              if(f.fbq)return; 
+              n=f.fbq=function(){n.callMethod? 
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)}; 
+              if(!f._fbq)f._fbq=n; 
+              n.push=n; 
+              n.loaded=!0; 
+              n.version='2.0'; 
+              n.queue=[]; 
+              t=b.createElement(e); 
+              t.async=!0; 
+              t.src=v; 
+              s=b.getElementsByTagName(e)[0]; 
+              s.parentNode.insertBefore(t,s)
+            }(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); 
+            fbq('init', 'FB_PIXEL_ID'); 
+            fbq('track', 'PageView');`,
         }}
       />
       <script
@@ -55,7 +55,7 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
             u.src='//static.ads-twitter.com/uwt.js',
             a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))
           }(window,document,'script');
-          twq('init','porr8');
+          twq('init','TWITTER_PIXEL_ID');
           twq('track','PageView');`,
         }}
       />
@@ -67,9 +67,43 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)}; 
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i; 
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y); 
-          })(window, document, "clarity", "script", "rf1j4qelk0");`,
+          })(window, document, "clarity", "script", "CLARITY_PROJECT_ID");`,
         }}
       />
+      {/* LinkedIn Insight Tag */}
+      <script
+        key="linkedin"
+        dangerouslySetInnerHTML={{
+          __html: `
+            _linkedin_partner_id = "YOUR_LINKEDIN_PARTNER_ID";
+            window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+            window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+          `,
+        }}
+      />
+      <script
+        key="linkedin-loader"
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function(){
+              var s = document.getElementsByTagName("script")[0];
+              var b = document.createElement("script");
+              b.type = "text/javascript";b.async = true;
+              b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+              s.parentNode.insertBefore(b, s);
+            })();
+          `,
+        }}
+      />
+      <noscript>
+        <img
+          height="1"
+          width="1"
+          style={{ display: "none" }}
+          alt=""
+          src="https://px.ads.linkedin.com/collect/?pid=LINKEDIN_PARTNER_ID&fmt=gif"
+        />
+      </noscript>
     </>
   );
 
