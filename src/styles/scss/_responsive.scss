@@ -1524,7 +1524,7 @@ $defaultTransition: 0.3s ease-in-out;
         width: 100%;
         height: auto;
     }
-    .blog-style-three .blog-posts .boxx {
+    .blog-style-three .blog-posts .box {
         margin-right: 0;
     }
     .team-detail .team-data .t-tel .theme-btn:after {
@@ -1566,6 +1566,20 @@ $defaultTransition: 0.3s ease-in-out;
         min-height: 920px;
     }
     .box input {
+        height: 60px;
+    }
+
+    .portfolio-box {
+        box-shadow: 2px 2px 3px 2px #e84834;
+        border-radius: 3px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: #000;
+        min-height: 250px;
+    }
+    .portfolio-box input {
         height: 60px;
     }
     .mobile-nav {
@@ -2364,6 +2378,17 @@ $defaultTransition: 0.3s ease-in-out;
     .box input {
         height: 55px;
     }
+    .portfolio-box {
+        padding: 35px 30px;
+    }
+    .portfolio-box h3,
+    .question h3 {
+        font-size: 22px;
+    }
+    .portfolio-box input {
+        height: 55px;
+    }
+
     .mobile-nav {
         width: 100%;
     }
@@ -2938,6 +2963,9 @@ $defaultTransition: 0.3s ease-in-out;
         right: 22px;
     }
     .box form .remember {
+        flex-wrap: wrap;
+    }
+    .portfolio-box form .remember {
         flex-wrap: wrap;
     }
     .team-detail .team-data h3 {
