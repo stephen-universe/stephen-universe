@@ -14,9 +14,7 @@ export default function About() {
   return (
     <div className='text-animation-container'>
       <MaskText/>
-      <MaskText/>
-      <MaskText/>
-      <MaskText/>
+  
     </div>
   )
 }
