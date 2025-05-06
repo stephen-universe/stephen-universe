@@ -45,7 +45,7 @@ const Layout = ({
         <DigitalMenu
         />
       )}
-     <FloatingShapes/>
+  
 
 
   
