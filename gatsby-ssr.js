@@ -40,7 +40,7 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
             s=b.getElementsByTagName(e)[0]; 
             s.parentNode.insertBefore(t,s)
           }(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); 
-          fbq('init', 'YOUR_FB_PIXEL_ID'); 
+          fbq('init', '455867946463533'); 
           fbq('track', 'PageView');`,
         }}
       />
@@ -55,7 +55,7 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
             u.src='//static.ads-twitter.com/uwt.js',
             a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))
           }(window,document,'script');
-          twq('init','YOUR_TWITTER_PIXEL_ID');
+          twq('init','porr8');
           twq('track','PageView');`,
         }}
       />
@@ -67,7 +67,7 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)}; 
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i; 
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y); 
-          })(window, document, "clarity", "script", "YOUR_CLARITY_PROJECT_ID");`,
+          })(window, document, "clarity", "script", "rf1j4qelk0");`,
         }}
       />
     </>
