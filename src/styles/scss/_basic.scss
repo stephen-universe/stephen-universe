@@ -44,6 +44,47 @@ $defaultTransition: 0.3s ease-in-out;
     accentColor: $accent-1;
 }
 
+.absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.relative {
+    position: relative;
+}
+.flex {
+    display: flex;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-row {
+    flex-direction: row;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+.flex-column-reverse {
+    flex-direction: column-reverse;
+}
+.flex-justify-center {
+    justify-content: center;
+}
 
 
 /* 58. Preloader Start */
