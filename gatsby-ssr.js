@@ -12,14 +12,14 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
         window.dataLayer = window.dataLayer || [];          
         function gtag(){dataLayer.push(arguments);}           
         gtag('js', new Date());          
-        gtag('config', 'YOUR_GA4_MEASUREMENT_ID');          
+        gtag('config', 'G-DRJLCRQ1P3');          
         `,
         }}
       />
       <script
         key="ga-src"
         async
-        src={`https://www.googletagmanager.com/gtag/js?id=YOUR_GA4_MEASUREMENT_ID`}
+        src={`https://www.googletagmanager.com/gtag/js?id=G-DRJLCRQ1P3`}
       />
       <script
         key="fb-pixel"
