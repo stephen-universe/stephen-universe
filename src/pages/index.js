@@ -2,7 +2,9 @@
 import React from "react";
 import Helmet from "react-helmet";
 import About from "../components/home/about";
-import Layouts from "../components/Layouts";
+import Layout from "../components/Layout";
+import InitializeContact from "../components/home/contact";
+import FooterScroll from "../components/home/footerScroll";
 
 
 export default function ProjectPage() {
@@ -10,7 +12,7 @@ export default function ProjectPage() {
  
 
   return (
-   <Layouts>
+   <Layout>
       <> 
         
           <div className="background">
@@ -33,8 +35,11 @@ export default function ProjectPage() {
         
         <div className="body-bg">
          <About />
-         </div>   
+         <InitializeContact/> 
+         <FooterScroll/>
+         </div>  
+         
          </>
- </Layouts>
+ </Layout>
   );
 }
