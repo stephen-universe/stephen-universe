@@ -3,8 +3,9 @@ import React from "react";
 import Helmet from "react-helmet";
 import About from "../components/home/about";
 import Layout from "../components/Layout";
-import InitializeContact from "../components/home/contact";
+import InitializeContact from "../components/home/pastWorks";
 import FooterScroll from "../components/home/footerScroll";
+import ThreeShape from "../components/floatingShapes";
 
 
 export default function ProjectPage() {
@@ -15,9 +16,11 @@ export default function ProjectPage() {
    <Layout>
       <> 
         
-          <div className="background">
-            <div className="section-divider"></div>
-            <div className="container">
+          <div className="background section-divider">
+           
+             <ThreeShape />
+         
+            <div className="container">   
               <Helmet>
                 <html lang="en" />
                 <title>Stephen-Universe</title>

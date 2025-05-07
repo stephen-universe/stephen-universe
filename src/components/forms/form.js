@@ -543,7 +543,7 @@ export class Confirm extends Component {
       isSubmitting,
       error,
     } = this.props;
-    
+
     return (
       <form
         onSubmit={
@@ -731,3 +731,6 @@ export class Confirm extends Component {
   }
 }
 export default UserForm;
+
+
+

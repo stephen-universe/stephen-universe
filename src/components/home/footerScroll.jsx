@@ -18,17 +18,23 @@ export default function FooterScroll() {
   }, [])
 
   const animate = () => {
+    if (!stickyMask.current) return; // Prevent runtime error if ref is not yet available
+  
     const maskSizeProgress = targetMaskSize * getScrollProgress();
     stickyMask.current.style.webkitMaskSize = (initialMaskSize + maskSizeProgress) * 100 + "%";
-    requestAnimationFrame(animate)
-  }
+    requestAnimationFrame(animate);
+  };
+
 
   const getScrollProgress = () => {
-    const scrollProgress = stickyMask.current.offsetTop / (stickyContainer.current.getBoundingClientRect().height - window.innerHeight)
+    if (!stickyMask.current || !stickyContainer.current) return easedScrollProgress;
+  
+    const containerHeight = stickyContainer.current.getBoundingClientRect().height;
+    const scrollProgress = stickyMask.current.offsetTop / (containerHeight - window.innerHeight);
     const delta = scrollProgress - easedScrollProgress;
     easedScrollProgress += delta * easing;
-    return easedScrollProgress
-  }
+    return easedScrollProgress;
+  };
 
   return (
     <main className="sticky-main">

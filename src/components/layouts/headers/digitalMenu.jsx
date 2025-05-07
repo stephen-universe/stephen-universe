@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Header from "./header";
+import ThreeShape from "../../floatingShapes";
 
 
 
@@ -26,6 +27,7 @@ export default function DigitalMenu() {
   return (
     <main className="">
       <Header menuIsActive={menuIsActive} setMenuIsActive={setMenuIsActive} />
+      
 
 
 
