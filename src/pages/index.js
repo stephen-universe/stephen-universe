@@ -1,48 +1,39 @@
+import React from "react"
+import Form from "../components/forms/form"
+import Layouts from "../components/Layouts"
 
-import React from "react";
-import Helmet from "react-helmet";
-import About from "../components/home/about";
-import Layout from "../components/Layout";
-import InitializeContact from "../components/home/pastWorks";
-import FooterScroll from "../components/home/footerScroll";
-import ThreeShape from "../components/floatingShapes";
+export default function Contact() {
 
 
-export default function ProjectPage() {
-  // Little helpers ...
- 
 
   return (
-   <Layout>
-      <> 
-        
-          <div className="background section-divider">
-           
-             <ThreeShape />
+    <>
+<section className="main-body-bg">
+<Layouts>
          
-            <div className="container">   
-              <Helmet>
-                <html lang="en" />
-                <title>Stephen-Universe</title>
-                <meta name="description" content="Portfolio" />
-              </Helmet>
-
-             
+  <section className="section">
+      <form name="Contact Form v1"
+          method="post" 
+          netlify-honeypot="bot-field" 
+          data-netlify="true" 
+          onSubmit="submit"
+          > 
+        <div className="tile is-ancestor">
+          <div className="tile is-12">
+            <div className="tile">
+              <div className="tile is-parent">
+                <div className="tile is-child box">
+                  
+                  <Form />
+                </div>
+              </div>
             </div>
           </div>
-          
-    
-     
-        
-     
-        
-        <div className="body-bg">
-         <About />
-         <InitializeContact/> 
-         <FooterScroll/>
-         </div>  
-         
-         </>
- </Layout>
-  );
+        </div>
+      </form>
+  </section>
+</Layouts>
+</section>
+    </>
+  )
 }
