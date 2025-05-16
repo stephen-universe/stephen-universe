@@ -8,7 +8,7 @@ export default function InitializeContact() {
     <div className="container">
       <div
         className="has-text-centered title"
-        style={{ marginTop: "15rem", marginBottom: "3rem" }}
+        style={{  marginBottom: "3rem" }}
       >
         My Creative Process:
       </div>
