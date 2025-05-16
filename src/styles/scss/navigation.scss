@@ -55,3 +55,26 @@ $title-font: 'Nostromo-Black';
     height: 25px;
 }
 
+
+.gem-line {
+    display: block;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+  }
+  
+  .gem-cta {
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 15px rgba(162, 77, 233, 0.6);
+  }
+  
+  .gem-cta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(162, 77, 233, 0.9);
+    animation: gem-pulse 1.5s infinite;
+  }
+  
+  @keyframes gem-pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+  }
