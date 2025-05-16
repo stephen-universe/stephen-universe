@@ -6,9 +6,12 @@ const CookieBanner = () => {
          if (localStorage.getItem('tracking-consent') === null) {      
             setVisible(true)    }  }, [])  
             
-    const handleAccept = () => {   
-         window.__trackingConsent?.grant()    
-            setVisible(false)  }  
+            const handleAccept = () => {
+                localStorage.setItem('tracking-consent', 'true');
+                window.__trackingConsent?.grant?.(); // Optional, depends on your tracking logic
+                window.dispatchEvent(new Event("cookie-consent-given")); // <-- ✅ THIS triggers the trackers
+                setVisible(false);
+              };
             
     const handleReject = () => {    
             localStorage.setItem('tracking-consent', 'false')   
