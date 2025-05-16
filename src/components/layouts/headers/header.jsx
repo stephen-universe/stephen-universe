@@ -82,7 +82,9 @@ export default function Index({ menuIsActive, setMenuIsActive }) {
                               }
                               onClick={(e) => clickedDesktopMenu(e)}
                             >
-                              <svg id="ham-menue" viewBox="0 0 100 100">
+                              <div onClick={() => {setMenuIsActive(!menuIsActive)}} 
+                         className={`${"burger"} ${menuIsActive ? "burgerActive" : ""}`}></div>
+                              <svg id="ham-menu" viewBox="0 0 100 100">
                                 {" "}
                                 <path
                                   className="line line1"
