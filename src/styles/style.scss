@@ -18,6 +18,17 @@ Email: beshleyua@gmail.com
 @use "../styles/scss/responsive.scss";
 @use "../styles/scss/cookies.scss";
 
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.react-photo-gallery--gallery div {
+  flex-flow: nowrap !important;
+}
+
+
+
 //* VARIABLES *//
 $blue: blue;
 $red: red;
@@ -49,6 +60,10 @@ $title-font: "Nostromo-Black";
   min-height: 250px;
   transition: transform 0.3s ease;
   cursor: pointer;
+}
+
+html, body {
+  overscroll-behavior-x: none;
 }
 
 
