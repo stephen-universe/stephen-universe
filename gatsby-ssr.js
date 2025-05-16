@@ -1,131 +1,136 @@
 import React from "react";
 
-export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
+export const onRenderBody = ({ setPostBodyComponents }) => {
   if (process.env.NODE_ENV !== "production") return;
-
-  const trackingScripts = (
-    <>
-      <script
-        key="ga-tag"
-        dangerouslySetInnerHTML={{
-          __html: `            
-            window.dataLayer = window.dataLayer || [];          
-            function gtag(){dataLayer.push(arguments);}           
-            gtag('js', new Date());          
-            gtag('config', 'G-DRJLCRQ1P3');          
-          `,
-        }}
-      />
-      <script
-        key="ga-src"
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=G-DRJLCRQ1P3`}
-      />
-      <script
-        key="fb-pixel"
-        dangerouslySetInnerHTML={{
-          __html: `!function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '582586296321978');
-            fbq('track', 'PageView');
-            `,
-        }}
-      />
-      <noscript>
-        <img
-          height="1"
-          width="1"
-          style="display:none"
-          src="https://www.facebook.com/tr?id=582586296321978&ev=PageView&noscript=1"
-        />
-      </noscript>
-      <script
-        key="twitter-pixel"
-        dangerouslySetInnerHTML={{
-          __html: `!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
-            },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='https://static.ads-twitter.com/uwt.js',
-            a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
-            twq('config','porr8');`,
-        }}
-      />
-
-      {/* Microsoft Clarity */}
-      <script
-        key="clarity"
-        dangerouslySetInnerHTML={{
-          __html: `(function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-          })(window, document, "clarity", "script", "rf1j4qelk0");`,
-        }}
-      />
-      {/* LinkedIn Insight Tag */}
-      <script
-        key="linkedin"
-        dangerouslySetInnerHTML={{
-          __html: `(function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-          })(window, document, "clarity", "script", "rf1j4qelk0");
-          `,
-        }}
-      />
-      <script
-        key="linkedin-loader"
-        dangerouslySetInnerHTML={{
-          __html: `
-            (function(l) { if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])}; window.lintrk.q=[]} var s = document.getElementsByTagName("script")[0]; var b = document.createElement("script"); b.type = "text/javascript";b.async = true; b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js"; s.parentNode.insertBefore(b, s);})(window.lintrk); 
-          `,
-        }}
-      />
-      <noscript>
-        {" "}
-        <img
-          height="1"
-          width="1"
-          style="display:none;"
-          alt=""
-          src="https://px.ads.linkedin.com/collect/?pid=8354993&fmt=gif"
-        />{" "}
-      </noscript>
-    </>
-  );
 
   const consentLogic = (
     <script
       key="consent-handler"
       dangerouslySetInnerHTML={{
         __html: `
-        function hasConsent() {
-          return localStorage.getItem('cookies-accepted') === 'true';
-        }
+          (function() {
+            const GA_ID = "${process.env.GATSBY_GA4_MEASUREMENT_ID}";
+            const FB_ID = "${process.env.GATSBY_FB_PIXEL_ID}";
+            const TWITTER_ID = "${process.env.GATSBY_TWITTER_PIXEL_ID}";
+            const LINKEDIN_ID = "${process.env.GATSBY_LINKEDIN_PARTNER_ID}";
+            const CLARITY_ID = "${process.env.GATSBY_CLARITY_PROJECT_ID}";
 
-        window.addEventListener('cookie-consent-given', function () {
-          localStorage.setItem('cookies-accepted', 'true');
-          loadTrackers();
-        });
+            function hasConsent() {
+              return localStorage.getItem('cookies-accepted') === 'true';
+            }
 
-        if (hasConsent()) {
-          loadTrackers();
-        }
+            window.addEventListener('cookie-consent-given', function () {
+              localStorage.setItem('cookies-accepted', 'true');
+              loadTrackers();
+            });
 
-        function loadTrackers() {
-          const fragment = document.createRange().createContextualFragment(\`
-            ${trackingScripts.props.children
-              .filter((script) => script.props?.dangerouslySetInnerHTML)
-              .map((script) => script.props.dangerouslySetInnerHTML.__html)
-              .join("")}
-          \`);
-          document.body.appendChild(fragment);
-        }
+            if (hasConsent()) {
+              loadTrackers();
+            }
+
+            function loadScript({ src, async = true, textContent }) {
+              const s = document.createElement('script');
+              if (src) {
+                s.src = src;
+                s.async = async;
+              }
+              if (textContent) {
+                s.text = textContent;
+              }
+              document.body.appendChild(s);
+            }
+
+            function loadTrackers() {
+              // Google Analytics
+              if (GA_ID) {
+                loadScript({ src: "https://www.googletagmanager.com/gtag/js?id=" + GA_ID });
+                loadScript({
+                  textContent: \`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '\${GA_ID}');
+                  \`
+                });
+              }
+
+              // Facebook Pixel
+              if (FB_ID) {
+                loadScript({
+                  textContent: \`!function(f,b,e,v,n,t,s)
+                    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                    n.queue=[];t=b.createElement(e);t.async=!0;
+                    t.src=v;s=b.getElementsByTagName(e)[0];
+                    s.parentNode.insertBefore(t,s)}(window, document,'script',
+                    'https://connect.facebook.net/en_US/fbevents.js');
+                    fbq('init', '\${FB_ID}');
+                    fbq('track', 'PageView');\`
+                });
+              }
+
+              // Twitter Pixel
+              if (TWITTER_ID) {
+                loadScript({
+                  textContent: \`!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+                  },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='https://static.ads-twitter.com/uwt.js',
+                  a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+                  twq('config','\${TWITTER_ID}');\`
+                });
+              }
+
+              // Microsoft Clarity
+              if (CLARITY_ID) {
+                loadScript({
+                  textContent: \`(function(c,l,a,r,i,t,y){
+                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                  })(window, document, "clarity", "script", "\${CLARITY_ID}");\`
+                });
+              }
+
+              // LinkedIn Insight
+              if (LINKEDIN_ID) {
+                loadScript({
+                  textContent: \`(function(l) {
+                    if (!l) {
+                      window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+                      window.lintrk.q = [];
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    var b = document.createElement("script");
+                    b.type = "text/javascript";
+                    b.async = true;
+                    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+                    s.parentNode.insertBefore(b, s);
+                  })(window.lintrk);\`
+                });
+              }
+
+              // Add <noscript> fallback pixels
+              setTimeout(() => {
+                if (FB_ID) {
+                  const fbImg = document.createElement("img");
+                  fbImg.src = "https://www.facebook.com/tr?id=" + FB_ID + "&ev=PageView&noscript=1";
+                  fbImg.height = 1;
+                  fbImg.width = 1;
+                  fbImg.style.display = "none";
+                  document.body.appendChild(fbImg);
+                }
+
+                if (LINKEDIN_ID) {
+                  const liImg = document.createElement("img");
+                  liImg.src = "https://px.ads.linkedin.com/collect/?pid=" + LINKEDIN_ID + "&fmt=gif";
+                  liImg.height = 1;
+                  liImg.width = 1;
+                  liImg.style.display = "none";
+                  document.body.appendChild(liImg);
+                }
+              }, 1000);
+            }
+          })();
         `,
       }}
     />
