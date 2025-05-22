@@ -26,3 +26,165 @@
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
   }
+
+  .project-spacing {
+    padding: 30vh 15vh 15vh 15vh;
+  }
+ 
+  .tilt-card {
+    position: relative;
+    border-radius: 20rem;
+    padding: 2rem;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transform-style: preserve-3d;
+    background-color: #111; /* fallback background */
+  }
+
+  .tilt-card-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .tilt-card-subtitle {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  /* Gradient border effect only on hover */
+  .tilt-card::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: inherit;
+    background: linear-gradient(
+      90deg,
+      #ff00cc,
+      #3333ff,
+      #00ffcc,
+      #ff00cc
+    );
+    background-size: 400% 400%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+    pointer-events: none;
+    padding: 3px;
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+  }
+ 
+  .tilt-card:hover::before {
+    opacity: 1;
+    animation: gradientBorderMove 4s linear infinite;
+  }
+  
+  @keyframes gradientBorderMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 400% 50%;
+    }
+  }
+
+  .titles{
+    width: 100%;
+    border-top: 1px solid rgba(183, 171, 152, 0.25);
+    .title{
+        border-bottom: 1px solid rgba(183, 171, 152, 0.25);
+        cursor: default;
+        position: relative;
+        z-index: 2;
+        .wrapper{
+            display: inline-block;
+            padding-left: 10%;
+
+            p{
+                display: inline-block;
+                color: #b7ab98;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 5vw;
+                line-height: 7.5vw;
+                margin: 0px;
+                position: relative;
+                z-index: 2;
+                &:nth-of-type(2){
+                    display: block;
+                    position: absolute;
+                    color: #1c1c1c;
+                    top: 0;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+    
+}
+
+.title-link {
+    color: #1c1c1c;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+
+  
+
+.descriptions{
+    position: absolute;
+    top: 3px;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    pointer-events: none;
+    .description{
+        background-color: #ec4e39;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 10%;
+        padding-right: 10%;
+        clip-path: inset(50% 0 50%);
+        transition: clip-path .4s;
+        p{
+            &:nth-of-type(1){
+                color: #010101;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 5vw;
+                line-height: 7.5vw;
+                margin: 0px;
+                position: relative;
+                z-index: 1;
+            }
+            &:nth-of-type(2){
+                width: 40%;
+                font-size: 1vw;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+  
+
+  
+
+  
+
+  

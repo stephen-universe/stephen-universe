@@ -65,6 +65,10 @@ $defaultTransition: 0.3s ease-in-out;
     border-bottom: 3px dotted #e84834;
 }
 
+.column.is-half, .column.is-half-tablet,  .is-half-tablet, .is-half-desktop, .is-half-widescreen, .is-half-fullhd {
+    flex: none;
+    width: 49%;
+  }
 
 @media(max-width: 1800px) {
     .text-animation-border-right {
@@ -98,6 +102,14 @@ $defaultTransition: 0.3s ease-in-out;
 }
 @media(max-width: 1600px) {
 
+    .door-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        z-index: 1;
+    }
+
+  
     .text-animation-border-right {
         border-right: 0.35vw solid $orange; 
         height: 18vw;
@@ -120,6 +132,14 @@ $defaultTransition: 0.3s ease-in-out;
         height: 18vw;
       }
 
+      .door-wrapper {
+        position: relative;
+        width: 100%;
+        height: 75vh;
+        z-index: 1;
+    }
+
+  
     .cart-popup {
         right: 15%;
     }
@@ -169,6 +189,14 @@ $defaultTransition: 0.3s ease-in-out;
 }
 @media(max-width: 1400px) {
 
+    .door-wrapper {
+        position: relative;
+        width: 100%;
+        height: 75vh;
+        z-index: 1;
+    }
+
+  
     .text-animation-border-right {
         border-right: 0.35vw solid $orange; 
         height: 18vw;
@@ -293,6 +321,14 @@ $defaultTransition: 0.3s ease-in-out;
         height: 18vw;
       }
 
+      .door-wrapper {
+        position: relative;
+        width: 100%;
+        height: 75vh;
+        z-index: 1;
+    }
+
+  
     img#theme-icon{
         margin-left: 40px;
     }
@@ -440,6 +476,14 @@ $defaultTransition: 0.3s ease-in-out;
 }
 @media(max-width: 1200px) {
 
+    .door-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        z-index: 1;
+    }
+
+  
     .text-animation-border-right {
         border-right: 0.35vw solid $orange; 
         height: 18vw;
@@ -741,9 +785,22 @@ $defaultTransition: 0.3s ease-in-out;
 }
 @media(max-width: 1030px) {
 
+    .door-wrapper {
+        position: relative;
+        width: 100%;
+        height: 60vh;
+        z-index: 1;
+    }
+
+  
     .text-animation-border-right {
         border-right: 0.35vw solid $orange; 
         height: 18vw;
+      }
+
+      .column.is-half, .column.is-half-tablet {
+        flex: none;
+        width: 49%;
       }
 
     .where-we-work .second .des {
@@ -936,9 +993,21 @@ $defaultTransition: 0.3s ease-in-out;
 }
 @media(max-width: 992px) {
 
+    .door-wrapper {
+        position: relative;
+        width: 100%;
+        height: 30vh;
+        z-index: 1;
+    }
+
+  
     .text-animation-border-right {
         border-right: 0.35vw solid $orange; 
         height: 18vw;
+      }
+
+      .project-spacing {
+        padding: 10vh 3vh 10vh 3vh;
       }
 
     .blog-detail figure {
@@ -1573,12 +1642,25 @@ $defaultTransition: 0.3s ease-in-out;
     }
 }
 @media(max-width: 767px) {
-
-    .text-animation-border-right {
-        border-right: 0.35vw solid $orange; 
-        height: 18vw;
+    .column.is-half, .column.is-half-tablet {
+        flex: none;
+        width: 100%;
       }
+    .text-animation-border-right {
+        border-bottom: 0.35vw solid $orange;
+        border-right: none ; 
+        width: 100%;
+        height: 0vw;
 
+        .door-wrapper {
+            position: relative;
+            width: 100%;
+            height: 30vh;
+            z-index: 1;
+        }
+    
+            }
+      
     .blog-style-three .blog-posts img {
         width: 100%;
         height: auto;
@@ -1999,6 +2081,14 @@ $defaultTransition: 0.3s ease-in-out;
         height: 0vw;
       }
 
+      .door-wrapper {
+        position: relative;
+        width: 100%;
+        height: 25vh;
+        z-index: 1;
+    }
+
+  
     .project-completed.our-projects-one .data {
         padding-bottom: 15px;
     }
@@ -2255,6 +2345,14 @@ $defaultTransition: 0.3s ease-in-out;
 }
 @media(max-width: 480px) {
 
+    .door-wrapper {
+        position: relative;
+        width: 100%;
+        height: 25vh;
+        z-index: 1;
+    }
+
+  
     .text-animation-border-right {
         border-bottom: 0.35vw solid $orange;
 border-right: none ;
@@ -2739,6 +2837,13 @@ height: 0vw;
 }
 @media(max-width: 425px) {
 
+    .door-wrapper {
+        position: relative;
+        width: 100%;
+        height: 20vh;
+        z-index: 1;
+    }
+
     .text-animation-border-right {
         border-bottom: 0.35vw solid $orange;
 border-right: none ;
@@ -2975,8 +3080,8 @@ height: 0vw;
         height: 50px;
     }
     img.scrollTopStick {
-        width: 35px;
-        height: 35px;
+        width: 60px;
+        height: 65px;
         bottom: 20px;
         right: 20px;
     }
