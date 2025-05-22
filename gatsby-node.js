@@ -1,5 +1,21 @@
 const path = require("path")
 
+
+const detailContent = require("./src/data/detailContent");
+
+exports.createPages = async ({ actions }) => {
+  const { createPage } = actions;
+
+  Object.keys(detailContent).forEach((slug) => {
+    createPage({
+      path: `/project/${slug}`,
+      component: path.resolve("./src/templates/project.js"),
+      context: { slug },
+    });
+  });
+};
+
+
 module.exports.onCreateNode = ({ node, actions }) => {
   // Transform the new node here and create a new node or
   // create a new node field.
