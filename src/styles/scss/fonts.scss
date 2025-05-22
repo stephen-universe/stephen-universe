@@ -150,18 +150,15 @@ $title-font: 'Nostromo-Black';
         text-align: center;
       }
       .text-animation-container {
-        display: flex;
         align-items: center;
         flex-direction: column;
-        padding: 10vw;
-      }
- 
-     
-      .text-animation-container {
+        padding: 10vw 10vw 0 10vw;
         position: relative;
         overflow: hidden;
       }
-      
+ 
+     
+      /* Only the DOOR AREA is this size */
       /* Only the DOOR AREA is this size */
       .door-wrapper {
         position: relative;
@@ -169,7 +166,7 @@ $title-font: 'Nostromo-Black';
         height: 100vh;
         z-index: 1;
       }
-      
+
       /* Background image ONLY behind the doors */
       .door-background {
         position: absolute;
@@ -180,7 +177,8 @@ $title-font: 'Nostromo-Black';
         background-image: url("/open-door.png");
         background-size: cover;
         background-position: center;
-        z-index: 0;
+        z-index: -1;
+        will-change: transform;
       }
       
       .scroll-lock {
@@ -188,6 +186,55 @@ $title-font: 'Nostromo-Black';
         overflow: hidden;
       }
       
+      .horizontal-layout {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem; /* spacing between date and text */
+        width: 100%;
+        padding: 2rem 1rem;
+        position: relative;
+      }
+      
+      .vertical-text-container {
+        writing-mode: vertical-rl; /* vertical text flow */
+        transform: rotate(180deg); /* read from bottom to top */
+        white-space: nowrap;
+        font-family: monospace;
+        font-size: 0.85rem;
+        line-height: 1.5;
+        color: #888;
+      }
+     
+      .masked-text-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      
+      
+      .text-animation-clock {
+        float: right;
+        white-space: nowrap;
+        font-family: monospace;
+        font-size: 0.85rem;
+        line-height: 1.5;
+        color: #888;
+        padding-bottom: 3vw;
+        padding-top: 1vw;
+      }
+      
+      .text-animation-text {
+        float: left;
+        white-space: nowrap;
+        font-family: monospace;
+        font-size: 0.85rem;
+        line-height: 1.5;
+        color: #888;
+        padding-bottom: 3vw;
+        padding-top: 1vw;
+      }
+
       /* Style both doors */
       .parallax-door {
         position: absolute;
@@ -195,14 +242,12 @@ $title-font: 'Nostromo-Black';
         height: 42.5vw;
         top: 22px;
         z-index: 10;
+        will-change: transform;
         transition: transform 0.3s ease-out;
       }
-      
 
       .text-animation-border-top {
         border-top: 0.35vw solid $orange;
-        padding-bottom: 3vw;
-        padding-top: 3vw;
         width: 100%;
 
       }
@@ -219,6 +264,7 @@ $title-font: 'Nostromo-Black';
       
       .text-animation-body{
         font-size: 2vw;
+        padding-top: 10vw;
       }
 
 .lineMask{
@@ -521,6 +567,11 @@ $title-font: 'Nostromo-Black';
     width: 100%;
     height: 5px;
   }
+
+  .project-spacing {
+    padding: 6vh 3vh 6vh 3vh;
+  }
+
   .contact-subtitle {color: $white;font-size: 1.2rem; font-weight: bold; margin-top: 1.55rem; font-style: italic;text-shadow: 4px 1px #000;}
   .contact-title { line-height: 30px; font-family: $title-font; color: $white; text-shadow: 2px 2px 1px $orange-shadow; font-size: 2rem}
   .under-construction-title { line-height: 30px; font-family: Nostromo-Oblique-Black; color: $orange; text-shadow: 2px 2px 1px $white; font-size: 1.7rem}
