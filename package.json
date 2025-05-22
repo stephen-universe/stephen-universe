@@ -26,6 +26,7 @@
     "@mdx-js/react": "^3.1.0",
     "@react-three/drei": "^10.0.7",
     "@react-three/fiber": "^9.1.2",
+    "@studio-freight/lenis": "^1.0.42",
     "bulma": "^1.0.4",
     "framer-motion": "^12.9.2",
     "framer-motion-3d": "^12.4.13",
