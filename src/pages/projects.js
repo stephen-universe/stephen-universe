@@ -1,41 +1,30 @@
-import React from "react"
-import Form from "../components/forms/form"
+import React from "react";
+import SmoothScroll from "../components/projects/smoothScroll";
+import Projects from "../components/projects/projects";
+import EarthWrapper from "../components/projects/EarthWrapper"; // ✅ updated import
 import Layouts from "../components/Layouts"
 
-export default function Contact() {
 
 
+const ProjectsPage = () => {
 
   return (
     <>
-<section className="main-body-bg">
+
 <Layouts>
 
   
-         
-  <section className="section">
-      <form name="Contact Form v1"
-          method="post" 
-          netlify-honeypot="bot-field" 
-          data-netlify="true" 
-          onSubmit="submit"
-          > 
-        <div className="tile is-ancestor">
-          <div className="tile is-12">
-            <div className="tile">
-              <div className="tile is-parent">
-                <div className="tile is-child box">
-                  
-                  <Form />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </form>
-  </section>
+
+    <SmoothScroll>
+      <EarthWrapper /> {/* ✅ safe for client-side only */}
+      <Projects />
+    </SmoothScroll>
+
+
 </Layouts>
-</section>
+
     </>
-  )
-}
+  )  
+};
+
+export default ProjectsPage;
