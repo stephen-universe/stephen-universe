@@ -1,38 +1,47 @@
 import React, { useRef } from "react";
-import { motion, useMotionTemplate, useMotionValue, useSpring } from "framer-motion";
+import {
+  motion,
+  useMotionValue,
+  useSpring,
+  useMotionTemplate,
+} from "framer-motion";
 import { navigate } from "gatsby";
 
-const ROTATION_RANGE = 32.5;
-const HALF_ROTATION_RANGE = ROTATION_RANGE / 2;
+const ROTATION_RANGE = 30;
 
 export const TiltCard = ({ title, subtitles, image }) => {
   const ref = useRef(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
-  const xSpring = useSpring(x, { stiffness: 300, damping: 20 });
-  const ySpring = useSpring(y, { stiffness: 300, damping: 20 });
+  // Softer motion
+  const xSpring = useSpring(x, { stiffness: 180, damping: 22 });
+  const ySpring = useSpring(y, { stiffness: 180, damping: 22 });
 
   const transform = useMotionTemplate`rotateX(${xSpring}deg) rotateY(${ySpring}deg)`;
 
-  const handleMouseMove = (e) => {
+  const handleMove = (clientX, clientY) => {
     if (!ref.current) return;
 
     const rect = ref.current.getBoundingClientRect();
-    const width = rect.width;
-    const height = rect.height;
+    const offsetX = clientX - rect.left;
+    const offsetY = clientY - rect.top;
 
-    const mouseX = (e.clientX - rect.left) * ROTATION_RANGE;
-    const mouseY = (e.clientY - rect.top) * ROTATION_RANGE;
-
-    const rX = (mouseY / height - HALF_ROTATION_RANGE) * -1;
-    const rY = mouseX / width - HALF_ROTATION_RANGE;
+    const rX = ((offsetY / rect.height) - 0.5) * -ROTATION_RANGE;
+    const rY = ((offsetX / rect.width) - 0.5) * ROTATION_RANGE;
 
     x.set(rX);
     y.set(rY);
   };
 
-  const handleMouseLeave = () => {
+  const handleMouseMove = (e) => handleMove(e.clientX, e.clientY);
+  const handleTouchMove = (e) => {
+    if (e.touches.length > 0) {
+      handleMove(e.touches[0].clientX, e.touches[0].clientY);
+    }
+  };
+
+  const resetTilt = () => {
     x.set(0);
     y.set(0);
   };
@@ -44,46 +53,43 @@ export const TiltCard = ({ title, subtitles, image }) => {
     }
 
     setTimeout(() => {
-      navigate("");
-    }, 300); // Zoom effect duration
+      navigate(""); // update route
+    }, 300);
   };
 
   return (
     <motion.div
-    ref={ref}
-    onMouseMove={handleMouseMove}
-    onMouseLeave={handleMouseLeave}
-    style={{
-      transformStyle: "preserve-3d",
-      transform,
-      cursor: "pointer",
-      backgroundImage: `url(${image})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      borderRadius: "1rem",
-      padding: "2rem",
-      color: "#fff",
-      minHeight: "300px",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "flex-end",
-      boxShadow: "0 15px 30px rgba(0,0,0,0.2)",
-      overflow: "hidden",
-    }}
-    className="portfolio-box"
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6, ease: "easeOut" }}
-    whileTap={{ scale: 1.05 }}
-    whileHover={{ scale: 1.02 }}
-  >
-    <h2 className="title" style={{ fontSize: "1.8rem", marginBottom: "0.5rem" }}>{title}</h2>
-    {subtitles.map((sub, index) => (
-      <div key={index} className="subtitle" style={{ fontSize: "1rem", marginBottom: "0.3rem" }}>
-        {sub}
-      </div>
-    ))}
-  </motion.div>
+      ref={ref}
+      onMouseMove={handleMouseMove}
+      onTouchMove={handleTouchMove}
+      onMouseLeave={resetTilt}
+      onTouchEnd={resetTilt}
+      onClick={handleClick}
+      style={{ transform }}
+      className="portfolio-box tilt-card"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      whileTap={{ scale: 1.05 }}
+      whileHover={{ scale: 1.02 }}
+   
+    >
+      <h2
+        className="title"
+        style={{ fontSize: "1.8rem", marginBottom: "0.5rem" }}
+      >
+        {title}
+      </h2>
+      {subtitles.map((sub, index) => (
+        <div
+          key={index}
+          className="subtitle"
+          style={{ fontSize: "1rem", marginBottom: "0.3rem" }}
+        >
+          {sub}
+        </div>
+      ))}
+    </motion.div>
   );
 };
 
