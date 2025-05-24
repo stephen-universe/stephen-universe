@@ -1,16 +1,25 @@
 import React, { useRef, useEffect } from "react"
 import * as THREE from "three"
-import Fade from 'react-reveal/Fade'
-import VisibilitySensor from "react-visibility-sensor"
-import {Link} from "gatsby"
+import FooterQuote from "../home/footerQuote"
 
 export default function ThreeShape() {
   const mountRef = useRef(null)
+const boxRef = useRef(null)
+
+  const handleMouseMove = (e) => {
+    const box = boxRef.current
+    if (box) {
+      const rect = box.getBoundingClientRect()
+      const x = ((e.clientX - rect.left) / rect.width) * 100
+      const y = ((e.clientY - rect.top) / rect.height) * 100
+      box.style.backgroundPosition = `${x}% ${y}%`
+    }
+  }
 
   useEffect(() => {
     const scene = new THREE.Scene()
     const width = mountRef.current.clientWidth
-    const height = 1000
+    const height = 920
 
     scene.fog = new THREE.Fog(0x0b001a, 10, 30)
 
@@ -183,16 +192,49 @@ mesh.position.z += Math.sin(Date.now() * 0.0015 + i) * 0.001 * speed
 
   return (
     <div
-      ref={mountRef}
       style={{
-        width: "100%",
-        height: "100%x",
         position: "relative",
-        overflow: "hidden",
-        
+        width: "100vw",
+        height: "100vh",
+
       }}
     >
-      
+      <div
+        ref={mountRef}
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100vw",
+          height: "100vh",
+          zIndex: 1,
+        }}
+      />
+      <div
+        ref={boxRef}
+        onMouseMove={handleMouseMove}
+        style={{
+          position: "relative",
+          zIndex: 2,
+          background:
+            "radial-gradient(circle at center, rgba(171, 49, 34, 0.75), rgba(4, 12, 40, 0.95), rgba(136, 136, 136, 0.9))",
+          backgroundSize: "300% 300%",
+          backgroundPosition: "50% 50%",
+          padding: "2rem 3rem",
+          borderRadius: "1rem",
+          maxWidth: "800px",
+          width: "90%",
+          margin: "0 auto",
+          boxShadow: "0 10px 40px rgba(0,0,0,0.4)",
+          textAlign: "center",
+          transition: "background-position 0.2s ease-out",
+          animation: "gradientShift 15s ease infinite",
+          top: "100%",
+          transform: "translateY(-50%)",
+        }}
+      >
+        <FooterQuote />
+      </div>
     </div>
   )
 }
