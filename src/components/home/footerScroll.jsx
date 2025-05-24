@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import Quote from './quote';
 
 export default function FooterScroll() {
   const stickyContainer = useRef(null);
@@ -36,18 +37,24 @@ export default function FooterScroll() {
 
   return (
     <>
+    
     <div className='text-animation-container'>
-    <div className="text-animation-border-top"></div>
+      <div className="text-animation-border-top"></div></div>
     <main className="sticky-main">
       <div ref={stickyContainer} className="stickyContainer">
-        <div ref={stickyMask} className="stickyMask">
-          <video autoPlay muted loop playsInline>
-            <source src="/nature.mp4" type="video/mp4" />
-          </video>
-        </div>
+       <div ref={stickyMask} className="stickyMask">
+  <div className="quote-overlay">
+    <Quote />
+  </div>
+  <video autoPlay muted loop playsInline>
+    <source src="/nature.mp4" type="video/mp4" />
+  </video>
+</div>
+
+
       </div>
     </main>
-    </div>
+   
     </>
   );
 }

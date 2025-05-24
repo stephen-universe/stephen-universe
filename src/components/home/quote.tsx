@@ -1,79 +1,82 @@
-import React, {useState} from "react"
-import Fade from 'react-reveal/Fade'
-import VisibilitySensor from "react-visibility-sensor"
-import {Link} from "gatsby"
+import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Link } from "gatsby";
 
+const fadeVariant = {
+  hidden: { opacity: 0, y: 10 },
+  visible: (delay = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1.5,
+      delay: delay / 1000, // convert ms to seconds
+    },
+  }),
+};
 
+const quoteLines = [
+  { text: "When a Gem is made, it's for a reason.", delay: 200 },
+  { text: "They burst out of the ground", delay: 2400 },
+  { text: "already knowing what they're supposed to be,", delay: 4600 },
+  { text: "And then...", delay: 6900 },
+  { text: "That's what they are. Forever.", delay: 8400 },
+];
 
-export default function Quote () {
+export default function Quote() {
   return (
+    <div
+      className="quote-p bold has-text-justified"
+      style={{
+        fontFamily: "Nostromo-Oblique-Black",
+        marginTop: "8rem",
+        textAlign: "center",
+      }}
+    >
+      {quoteLines.map(({ text, delay }, index) => {
+        const [ref, inView] = useInView({
+          triggerOnce: false,
+          threshold: 0.2,
+        });
 
-    <>
-    <div className=" quote-p bold has-text-justified" style={{fontFamily: 'Nostromo-Oblique-Black', marginTop: 8 + "rem"}}>
+        return (
+          <motion.div
+            ref={ref}
+            key={index}
+            custom={delay}
+            variants={fadeVariant}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+          >
+            <span>{text}</span>
+            <br />
+          </motion.div>
+        );
+      })}
 
-
-<VisibilitySensor partialVisibility offset={{ bottom: -400 }}>
-          {({ isVisible }) => (
-            <Fade duration={2000} delay={200}> 
-<span>When a Gem is made, it's for a reason.</span>
-</Fade>
-)}
-</VisibilitySensor>
-<br/>
-
-<VisibilitySensor partialVisibility offset={{ bottom: -400 }}>
-          {({ isVisible }) => (
-            <Fade duration={2000} delay={2400}> 
-<span>They burst out of the ground</span>
-</Fade>
-)}
-</VisibilitySensor>
-<br/>
-<VisibilitySensor partialVisibility offset={{ bottom: -400 }}>
-          {({ isVisible }) => (
-            <Fade duration={2000} delay={4600}> 
-<span>already knowing what they're supposed to be,</span>
-</Fade>
-)}
-</VisibilitySensor>
-
-<br/>
-<VisibilitySensor partialVisibility offset={{ bottom: -400 }}>
-          {({ isVisible }) => (
-            <Fade duration={2000} delay={6900}> 
-<span>And then...</span>
-</Fade>
-)}
-</VisibilitySensor>
-<br/>
-<VisibilitySensor partialVisibility offset={{ bottom: -400 }}>
-          {({ isVisible }) => (
-            <Fade duration={2000} delay={8400}> 
-<span>That's what they are. Forever.</span>
-</Fade>
-)}
-</VisibilitySensor>
-<br/>
-
-<VisibilitySensor partialVisibility offset={{ bottom: -400 }}>
-          {({ isVisible }) => (
-            <Fade duration={2000} delay={10900}> 
-<Link to="/contact"><div className="button mt-4">Let's Talk</div></Link>
-</Fade>
-)}
-</VisibilitySensor>
-
-
-
-</div>
-
-</>
-    )
+      {/* CTA Button */}
+      <CTA />
+    </div>
+  );
 }
 
+function CTA() {
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
 
-
-
-
-    
-
+  return (
+    <motion.div
+      ref={ref}
+      custom={10.9 * 1000} // 10900ms
+      variants={fadeVariant}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+    >
+      <Link to="/contact">
+        <div className="button mt-4">Let's Talk</div>
+      </Link>
+    </motion.div>
+  );
+}
