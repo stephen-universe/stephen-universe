@@ -74,21 +74,21 @@ export const TiltCard = ({ title, subtitles, image }) => {
       whileHover={{ scale: 1.02 }}
    
     >
-      <h2
-        className="title"
-        style={{ fontSize: "1.8rem", marginBottom: "0.5rem" }}
-      >
-        {title}
-      </h2>
-      {subtitles.map((sub, index) => (
-        <div
-          key={index}
-          className="subtitle"
-          style={{ fontSize: "1rem", marginBottom: "0.3rem" }}
-        >
-          {sub}
-        </div>
-      ))}
+      {image && (
+  <div className="image-container" >
+    <img
+      src={image}
+      alt={title}
+      style={{
+        width: "100%",
+        height: "auto",
+        borderRadius: "0.75rem",
+        objectFit: "cover",
+      }}
+    />
+  </div>
+)}
+
     </motion.div>
   );
 };
