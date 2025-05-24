@@ -145,7 +145,7 @@
     }
 
 }
-.stick-main{
+.sticky-main{
     margin-bottom: 100vh;
   }
   
@@ -173,3 +173,49 @@
     width: 100%;
     object-fit: cover;
   }
+
+  .stickyMask {
+  display: flex;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  mask-image: url('/mask.svg');
+  mask-position: 43.35% center;
+  mask-repeat: no-repeat;
+  mask-size: 80%;
+
+}
+
+.stickyMask video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute; /* <-- overlay behavior */
+  top: 0;
+  left: 0;
+  z-index: 0; /* <-- behind everything */
+}
+
+.quote-overlay {
+  position: relative; /* <-- or absolute if you want to fine-tune position */
+  z-index: 1; /* <-- sits on top of the video */
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  max-width: 90%;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

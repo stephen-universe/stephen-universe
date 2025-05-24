@@ -109,8 +109,8 @@ body, button, input, optgroup, select, textarea {font-family: Nostromo-Medium;}
 .bold {font-weight: bold;}
 .italicize {font-style: italic;}
 
-$blue: blue;
-$red: red;
+$blue: #040c28;
+$grey: #888;
 $white: #FFF;
 $black : #000;
 $orange: #e84834;
@@ -139,7 +139,13 @@ $title-font: 'Nostromo-Black';
       }
    
 
-  
+      .rotating-text {
+        font-size: 2rem;
+  color: rgb(136, 136, 136);
+  font-family: Nostromo-Black;
+  font-weight: bold;
+  margin-top: 9rem;
+      }
       
 
       .reserved-rights {
@@ -152,7 +158,7 @@ $title-font: 'Nostromo-Black';
       .text-animation-container {
         align-items: center;
         flex-direction: column;
-        padding: 10vw 10vw 0 10vw;
+        padding: 10vw 5vw 0 5vw;
         position: relative;
         overflow: hidden;
       }
@@ -267,8 +273,11 @@ $title-font: 'Nostromo-Black';
         padding-top: 10vw;
       }
 
-.lineMask{
+
+.lineMask {
   overflow: hidden;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
 }
 
 .lineMask p{
@@ -293,7 +302,73 @@ $title-font: 'Nostromo-Black';
   overflow: hidden;
 }
 .self-image {max-height: 235px; margin-top: 12rem;}
-                
+
+.my-process-p{
+  font-size: 1rem;
+  line-height: 0.95rem;
+  font-family: monospace;
+  padding-bottom: 1rem;
+  color: $grey;
+}
+
+.my-process-text {
+  position: relative;
+  display: inline-block;
+  padding: 0.3rem 0.5rem;
+  background: $blue;
+  color: #FFF;
+  border-radius: 4px;
+  cursor: default;
+  overflow: hidden;
+  font-family: Nostromo-Medium;
+  transition: background 0.3s ease;
+  z-index: 0;
+}
+
+.my-process-text:hover {
+background: #020f2f;
+  box-shadow: 0 0 12px 3px rgba(255, 255, 255, 0.3);
+  z-index: 1;
+  color: $orange;
+  border: solid 1px $orange-shadow;
+}
+
+/* Container holding stars */
+.starfield {
+  pointer-events: none;
+  position: absolute;
+  inset: 0; /* top:0; bottom:0; left:0; right:0 */
+  overflow: visible;
+  z-index: 0;
+}
+
+/* Single star */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 2;
+  filter: drop-shadow(0 0 2px white);
+  animation-name: twinkle;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* Twinkle effect */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+}
+
+
 @media only screen and (max-width: 2412px) {
   .hobby-item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:4.8rem; padding: 2rem;}
   .item {vertical-align: top; font-size: 0.7rem; display: inline-block; text-align: center; width:7.3rem; padding: 2rem;}
@@ -625,6 +700,6 @@ $title-font: 'Nostromo-Black';
   .contact-title { line-height: 25px; font-family: $title-font; color: $white; text-shadow: 2px 2px 1px $orange-shadow; font-size: 1.6rem}
   .under-construction-title { line-height: 25px; font-family: Nostromo-Oblique-Black; color: $orange; text-shadow: 2px 2px 1px $white; font-size: 1.3rem}
 }
-.quote-p {color: $white; text-shadow: -1px 2px 3px $orange-shadow;}
+.quote-p {color: $white; font-size: 1.15rem; }
 
 .contact-p {font-size: 1.39rem; color: $white; font-weight: bold; margin-top: 2.55rem; text-shadow: 3px 1px #000;}
