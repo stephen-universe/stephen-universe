@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import { Link } from "gatsby";
 
 const fadeVariant = {
@@ -20,33 +19,26 @@ const quoteLines = [
   { text: "They burst out of the ground", delay: 2400 },
   { text: "already knowing what they're supposed to be,", delay: 4600 },
   { text: "And then...", delay: 6900 },
-  { text: "That's what they are. Forever.", delay: 8400 },
+  { text: "That's what they are... Forever.", delay: 8400 },
+  { text: "--Rose Quartz", delay: 10000 },
+  { text: "Steven Universe", delay: 10000 },
 ];
 
-export default function Quote() {
+export default function Quote({ shouldAnimate }) {
   return (
-    <div
-      className="quote-p bold has-text-justified"
-      style={{
-        fontFamily: "Nostromo-Oblique-Black",
-        marginTop: "8rem",
-        textAlign: "center",
-      }}
-    >
+    <div className="quote-p bold has-text-justified">
       {quoteLines.map(({ text, delay }, index) => {
-        const [ref, inView] = useInView({
-          triggerOnce: false,
-          threshold: 0.2,
-        });
+        const isSecondToLast = index === quoteLines.length - 2;
+        const isLast = index === quoteLines.length - 1;
 
         return (
           <motion.div
-            ref={ref}
             key={index}
             custom={delay}
             variants={fadeVariant}
             initial="hidden"
-            animate={inView ? "visible" : "hidden"}
+            animate={shouldAnimate ? "visible" : "hidden"}
+            className={`${isSecondToLast ? "has-text-right is-italic mt-4" : ""} ${isLast ? "has-text-right" : ""}`}
           >
             <span>{text}</span>
             <br />
@@ -54,25 +46,18 @@ export default function Quote() {
         );
       })}
 
-      {/* CTA Button */}
-      <CTA />
+      <CTA shouldAnimate={shouldAnimate} />
     </div>
   );
 }
 
-function CTA() {
-  const [ref, inView] = useInView({
-    triggerOnce: false,
-    threshold: 0.2,
-  });
-
+function CTA({ shouldAnimate }) {
   return (
     <motion.div
-      ref={ref}
       custom={10.9 * 1000} // 10900ms
       variants={fadeVariant}
       initial="hidden"
-      animate={inView ? "visible" : "hidden"}
+      animate={shouldAnimate ? "visible" : "hidden"}
     >
       <Link to="/contact">
         <div className="button mt-4">Let's Talk</div>

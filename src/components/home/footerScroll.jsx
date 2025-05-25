@@ -1,9 +1,10 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Quote from './quote';
 
 export default function FooterScroll() {
   const stickyContainer = useRef(null);
   const stickyMask = useRef(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   const initialMaskSize = 0.8;
   const targetMaskSize = 30;
@@ -19,6 +20,8 @@ export default function FooterScroll() {
       stickyMask.current.style.webkitMaskSize = `${maskSize}%`;
       stickyMask.current.style.maskSize = `${maskSize}%`;
 
+      setScrollProgress(progress); // <-- Update state to trigger re-render
+
       requestAnimationFrame(animate);
     };
 
@@ -26,8 +29,8 @@ export default function FooterScroll() {
       if (!stickyContainer.current) return easedScrollProgress;
 
       const rect = stickyContainer.current.getBoundingClientRect();
-      const scrollProgress = Math.min(Math.max(-rect.top / window.innerHeight, 0), 1);
-      const delta = scrollProgress - easedScrollProgress;
+      const rawProgress = Math.min(Math.max(-rect.top / window.innerHeight, 0), 1);
+      const delta = rawProgress - easedScrollProgress;
       easedScrollProgress += delta * easing;
       return easedScrollProgress;
     };
@@ -37,24 +40,26 @@ export default function FooterScroll() {
 
   return (
     <>
-    
-    <div className='text-animation-container'>
-      <div className="text-animation-border-top"></div></div>
-    <main className="sticky-main">
-      <div ref={stickyContainer} className="stickyContainer">
-       <div ref={stickyMask} className="stickyMask">
-  <div className="quote-overlay">
-    <Quote />
-  </div>
-  <video autoPlay muted loop playsInline>
-    <source src="/nature.mp4" type="video/mp4" />
-  </video>
+      <div className="text-animation-container">
+        <div className="text-animation-border-top"></div>
+      </div>
+
+      <main className="sticky-main">
+        <div ref={stickyContainer} className="stickyContainer">
+          <div ref={stickyMask} className="stickyMask">
+            <div
+  className={`quote-overlay ${scrollProgress >= 0.85 ? "visible" : "hidden"}`}
+>
+  <p className="emoji has-text-centered">✨</p>
+  <Quote shouldAnimate={scrollProgress >= 0.85} />
 </div>
 
-
-      </div>
-    </main>
-   
+            <video autoPlay muted loop playsInline>
+              <source src="/nature.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </main>
     </>
   );
 }
