@@ -49,43 +49,54 @@ const [scale, setScale] = useState(1);
         </div>
 
           <div className="project-spacing">
+            <div
+        className="has-text-centered title"
+        style={{  marginBottom: "3rem", marginTop: "1rem" }}
+      >
+        Featured Projects
+      </div>
           <div className="columns is-multiline is-12 is-desktop is-mobile">
-            <div className="column is-full-mobile is-half-tablet is-half-desktop is-half-widescreen is-half-fullhd has-text-centered">
-            <Link to="/project/logofolio">
+            <div className="column is-12-mobile is-6-tablet is-6-desktop has-text-centered">
               <TiltCard
                 image="/Queendom-Farms-Home.jpg"
+                link="/project/logofolio"
               />
-              </Link>
+            
             </div>
-            <div className="column is-full-mobile is-half-tablet is-half-desktop is-half-widescreen is-half-fullhd has-text-centered">
-            <Link to="/project/logofolio">
+            <div className="column is-12-mobile is-6-tablet is-6-desktop has-text-centered">
               <TiltCard
                 image="/CCS.png"
+                link="/project/logofolio"
               />
-              </Link>
+            
             </div>
-          </div>
+   
+            <div className="column is-12-mobile is-6-tablet is-6-desktop has-text-centered">
 
-          <div className="columns is-multiline is-12 is-desktop is-mobile">
-            <div className="column is-full-mobile is-half-tablet is-half-desktop is-half-widescreen is-half-fullhd has-text-centered">
-              <Link to="/project/logofolio">
               <TiltCard
                 image="/Ana-Rose-home.jpg"
+                link="/project/logofolio"
               />
-              </Link>
+            
             </div>
-            <div className="column is-full-mobile is-half-tablet is-half-desktop is-half-widescreen is-half-fullhd has-text-centered">
-            <Link to="/project/logofolio">
+            <div className="column is-12-mobile is-6-tablet is-6-desktop has-text-centered">
               <TiltCard
   image="/perfectly-different.png"
+  link="/project/logofolio"
 />
-              </Link>
+            
             </div>
+            <div className="column is-12-mobile is-12-tablet is-12-deskto has-text-centered">
+              <button className="button white is-link has-text-centered is-primary">
+                <Link to="/projects">
+                  View All Projects
+                </Link>
+              </button>
           </div>
           </div> 
         </div>  
       </div>
-   
+   </div>
 
     </>
   );
