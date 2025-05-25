@@ -1,15 +1,17 @@
 import React, { useRef } from 'react'
-import { Link } from 'gatsby';
 import { useScroll, motion, useTransform, useMotionTemplate } from 'framer-motion';
+import { Link } from 'gatsby';
 
 export default function Index({data, setSelectedProject}) {
   return (
-    <div className='titles'>
+    <div className='portfolio-spacing '>
+        <div className='portfolio-titles'>
         {
             data.map( (project, i) => {
                 return <Title key={i} data={{...project, i}} setSelectedProject={setSelectedProject}/>
             })
         }
+    </div>
     </div>
   )
 }
@@ -28,17 +30,17 @@ function Title({data, setSelectedProject}) {
     const clip = useMotionTemplate`inset(0 ${clipProgress}% 0 0)`;
     
     return (
-        <div ref={container} className='title'>
+        <div ref={container} className='portfolio-title'>
             <div 
                 className='wrapper'
                 onMouseOver={() => {setSelectedProject(i)}}
                 onMouseLeave={() => {setSelectedProject(null)}}
             >
                 <motion.p style={{clipPath: clip}}>
-                <Link to={url} className='title-link'> {title}</Link>
+               <Link to={url}>{title}</Link>
                 </motion.p>
-                <p>
-                <Link to={url} className='title-link'> {title}</Link>
+               <p>
+                 {title}
                 </p>
             </div>
         </div>
