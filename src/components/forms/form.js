@@ -167,10 +167,9 @@ export class FormUserDetails extends Component {
     return (
       <>
         <div className="column is-8 ">
-          <h1 className="under-construction-title">Site Under Construction</h1>
           <br />
 
-          <h1 className="contact-title">Still Have Questions?</h1>
+          <h1 className="contact-title">Questions?</h1>
           <h1 className="contact-subtitle">Let's Talk Design.</h1>
           <h1 className="contact-p">I'd Love To Hear From You</h1>
           <p className="" style={{ fontSize: 0.7 + "rem" }}>
@@ -386,8 +385,7 @@ export class FormPersonalDetails extends Component {
     return (
       <>
         <div className="column is-8 ">
-          <h1 className="contact-title">Site Under Construction</h1>
-          <h1 className="contact-title">Still Have Questions?</h1>
+          <h1 className="contact-title">Questions?</h1>
           <h1 className="contact-subtitle">Let's Talk Design.</h1>
           <h1 className="contact-p">I'd Love To Hear From You</h1>
           <p className="" style={{ fontSize: 0.7 + "rem" }}>
