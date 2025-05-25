@@ -63,13 +63,12 @@ const containerVariants = {
         </motion.div>
       ))}
 
-      <motion.div className="has-text-centered white" variants={lineVariants}>
+      <motion.div className="has-text-centered nav-link" variants={lineVariants}>
         <br />
         {signature}
       </motion.div>
 
-      <motion.div className="has-text-centered white" variants={lineVariants}>
-        <br />
+      <motion.div className="has-text-centered nav-link" variants={lineVariants}>
         {source}
       </motion.div>
 
