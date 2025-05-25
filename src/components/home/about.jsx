@@ -10,63 +10,164 @@ const parallaxImages = [
   { src: "left-door.png", alt: "Left Door", initialX: "120%", initialY: "0%" },
 ];
 
-const ParallaxImage = ({
-  src,
-  alt,
-  initialX,
-  initialY,
-  index,
-  containerRef,
-}) => {
-  const [ref, inView] = useInView({ threshold: 0.00, triggerOnce: false });
-  const imageRef = useRef(null);
 
+
+// Date/Time Helper
+function getCurrentDateTime() {
+  const now = new Date();
+  const days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  return {
+    dateString: `${days[now.getDay()]}, ${months[now.getMonth()]} ${now.getFullYear()}`,
+    timeString: `${String(now.getHours()).padStart(2, "0")}:${String(
+      now.getMinutes()
+    ).padStart(2, "0")}:${String(now.getSeconds()).padStart(2, "0")}`,
+  };
+}
+
+
+
+// Masked Intro Text
+const MaskText = ({ dateString }) => {
+  const [scrollDirection, setScrollDirection] = useState("down");
+
+  // Detect scroll direction
   useEffect(() => {
-    const handleScroll = () => {
-      if (!containerRef.current || !imageRef.current) return;
+    let lastScrollY = window.scrollY;
 
-      const containerRect = containerRef.current.getBoundingClientRect();
-      const viewportHeight = window.innerHeight;
-      const start = viewportHeight;
-      const end = -containerRect.height;
-
-      const progress = Math.min(
-        Math.max((start - containerRect.top) / (start - end), 0),
-        1
-      );
-      const maxMove = 250; // ← Increase this number to control how far doors open
-      const moveAmount = maxMove * progress;
-
-
-      const moveX =
-        index === 0
-          ? `calc(${initialX} + ${moveAmount}%)`
-          : `calc(${initialX} - ${moveAmount}%)`;
-
-      imageRef.current.style.transform = `translateX(${moveX}) translateY(${initialY})`;
+    const updateDirection = () => {
+      const currentY = window.scrollY;
+      if (currentY > lastScrollY) {
+        setScrollDirection("down");
+      } else if (currentY < lastScrollY) {
+        setScrollDirection("up");
+      }
+      lastScrollY = currentY;
     };
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [initialX, initialY, containerRef, index]);
+    window.addEventListener("scroll", updateDirection);
+    return () => window.removeEventListener("scroll", updateDirection);
+  }, []);
+
+  const { ref, inView } = useInView({ threshold: 0.1 });
+
+  const animationVariants = {
+    initial: {
+      y: scrollDirection === "down" ? "-100%" : "100%",
+      opacity: 0,
+    },
+    animate: (i) => ({
+      y: "0%",
+      opacity: 1,
+      transition: {
+        duration: 0.75,
+        ease: [0.33, 1, 0.68, 1],
+        delay: 0.1 * i,
+      },
+    }),
+    exit: {
+      y: scrollDirection === "down" ? "100%" : "-100%",
+      opacity: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
+  };
 
   return (
-    <motion.img
-      ref={(el) => {
-        ref(el);
-        imageRef.current = el;
-      }}
-      src={src}
-      alt={alt}
-      className="parallax-door"
-      initial={{ opacity: 0 }}
-      animate={inView ? { opacity: 1 } : { opacity: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      style={{ willChange: "transform" }}
-    />
+    <div
+      ref={ref}
+      className="text-animation-body"
+    >
+      <div
+        className="vertical-text-container"
+      >
+        <p className="vertical-text">{dateString}</p>
+      </div>
+
+      <div className="lineMask" style={{ overflow: "hidden" }}>
+        <div className="columns is-multiline is-12 is-desktop is-mobile">
+          <div className="column is-6-desktop is-12-mobile is-6-tablet">
+            <motion.p
+              custom={0}
+              initial="initial"
+              animate={inView ? "animate" : ""}
+              variants={animationVariants}
+            >
+              <span className="about-title">Hi</span> <br />
+              <span className="about-subtitle">My name is</span>
+              <br />
+              <span className="about-title">Stephen A. Warren</span>
+              <br />
+              <span className="about-subtitle is-italic">
+                A multi-disciplinary designer & developer.
+              </span>
+            </motion.p>
+          </div>
+
+<div className="rotating-text has-text-centered column is-5-desktop is-5-tablet is-12-mobile">
+  <motion.p
+    custom={1}
+    initial="initial"
+    animate={inView ? "animate" : ""}
+    variants={animationVariants}
+  >
+    And I <RotatingWord inView={inView} />{" "}
+    <span className="rotating-centered-text">experiences!</span>
+  </motion.p>
+</div>
+
+<motion.div
+  className="orb has-text-centered column is-3-desktop is-3-tablet is-0-mobile"
+  role="presentation"
+  aria-hidden="true"
+  animate={{
+    boxShadow: [
+      '0 0 25px rgba(0, 174, 255, 0.4)',
+      '0 0 35px rgba(0, 174, 255, 0.6)',
+      '0 0 25px rgba(0, 174, 255, 0.4)'
+    ]
+  }}
+  transition={{
+    duration: 6,
+    repeat: Infinity,
+    ease: "easeInOut"
+  }}
+>
+  {/* Floating "moon" element */}
+
+</motion.div>
+
+
+        </div>
+      </div>
+    </div>
   );
 };
+
+
 
 // RotatingWords Component
 const RotatingWord = ({ inView }) => {
@@ -133,39 +234,69 @@ const RotatingWord = ({ inView }) => {
   );
 };
 
-// Date/Time Helper
-function getCurrentDateTime() {
-  const now = new Date();
-  const days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-  return {
-    dateString: `${days[now.getDay()]}, ${months[now.getMonth()]} ${now.getFullYear()}`,
-    timeString: `${String(now.getHours()).padStart(2, "0")}:${String(
-      now.getMinutes()
-    ).padStart(2, "0")}:${String(now.getSeconds()).padStart(2, "0")}`,
-  };
-}
+
+
+
+const ParallaxImage = ({
+  src,
+  alt,
+  initialX,
+  initialY,
+  index,
+  containerRef,
+}) => {
+  const [ref, inView] = useInView({ threshold: 0.00, triggerOnce: false });
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!containerRef.current || !imageRef.current) return;
+
+      const containerRect = containerRef.current.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+      const start = viewportHeight;
+      const end = -containerRect.height;
+
+      const progress = Math.min(
+        Math.max((start - containerRect.top) / (start - end), 0),
+        1
+      );
+      const maxMove = 250; // ← Increase this number to control how far doors open
+      const moveAmount = maxMove * progress;
+
+
+      const moveX =
+        index === 0
+          ? `calc(${initialX} + ${moveAmount}%)`
+          : `calc(${initialX} - ${moveAmount}%)`;
+
+      imageRef.current.style.transform = `translateX(${moveX}) translateY(${initialY})`;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [initialX, initialY, containerRef, index]);
+
+  return (
+    <motion.img
+      ref={(el) => {
+        ref(el);
+        imageRef.current = el;
+      }}
+      src={src}
+      alt={alt}
+      className="parallax-door"
+      initial={{ opacity: 0 }}
+      animate={inView ? { opacity: 1 } : { opacity: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      style={{ willChange: "transform" }}
+    />
+  );
+};
+
+
+
 
 // Starfield Animation
 const Starfield = () => {
@@ -190,136 +321,7 @@ const StarCode = ({ children }) => (
   </code>
 );
 
-// Masked Intro Text
-const MaskText = ({ dateString }) => {
-  const [scrollDirection, setScrollDirection] = useState("down");
 
-  // Detect scroll direction
-  useEffect(() => {
-    let lastScrollY = window.scrollY;
-
-    const updateDirection = () => {
-      const currentY = window.scrollY;
-      if (currentY > lastScrollY) {
-        setScrollDirection("down");
-      } else if (currentY < lastScrollY) {
-        setScrollDirection("up");
-      }
-      lastScrollY = currentY;
-    };
-
-    window.addEventListener("scroll", updateDirection);
-    return () => window.removeEventListener("scroll", updateDirection);
-  }, []);
-
-  const { ref, inView } = useInView({ threshold: 0.1 });
-
-  const animationVariants = {
-    initial: {
-      y: scrollDirection === "down" ? "-100%" : "100%",
-      opacity: 0,
-    },
-    animate: (i) => ({
-      y: "0%",
-      opacity: 1,
-      transition: {
-        duration: 0.75,
-        ease: [0.33, 1, 0.68, 1],
-        delay: 0.1 * i,
-      },
-    }),
-    exit: {
-      y: scrollDirection === "down" ? "100%" : "-100%",
-      opacity: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeInOut",
-      },
-    },
-  };
-
-  return (
-    <div
-      ref={ref}
-      className="text-animation-body"
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        minHeight: "100vh",
-        overflow: "hidden",
-      }}
-    >
-      <div
-        className="vertical-text-container"
-        style={{
-          writingMode: "vertical-rl",
-          textOrientation: "mixed",
-          marginRight: "2rem",
-        }}
-      >
-        <p className="vertical-text">{dateString}</p>
-      </div>
-
-      <div className="lineMask" style={{ overflow: "hidden" }}>
-        <div className="columns is-multiline is-12 is-desktop is-mobile">
-          <div className="column is-6-desktop is-12-mobile is-6-tablet">
-            <motion.p
-              custom={0}
-              initial="initial"
-              animate={inView ? "animate" : ""}
-              variants={animationVariants}
-            >
-              <span className="about-title">Hi</span> <br />
-              <span className="about-subtitle">My name is</span>
-              <br />
-              <span className="about-title">Stephen A. Warren</span>
-              <br />
-              <span className="about-subtitle is-italic">
-                A multi-disciplinary designer & developer.
-              </span>
-            </motion.p>
-          </div>
-
-<div className="rotating-text has-text-centered column is-5-desktop is-5-tablet is-12-mobile">
-  <motion.p
-    custom={1}
-    initial="initial"
-    animate={inView ? "animate" : ""}
-    variants={animationVariants}
-  >
-    And I <RotatingWord inView={inView} />{" "}
-    <span className="rotating-centered-text">experiences!</span>
-  </motion.p>
-</div>
-
-<motion.div
-  className="orb has-text-centered column is-3-desktop is-3-tablet is-0-mobile"
-  role="presentation"
-  aria-hidden="true"
-  animate={{
-    boxShadow: [
-      '0 0 25px rgba(0, 174, 255, 0.4)',
-      '0 0 35px rgba(0, 174, 255, 0.6)',
-      '0 0 25px rgba(0, 174, 255, 0.4)'
-    ]
-  }}
-  transition={{
-    duration: 6,
-    repeat: Infinity,
-    ease: "easeInOut"
-  }}
->
-  {/* Floating "moon" element */}
-
-</motion.div>
-
-
-        </div>
-      </div>
-    </div>
-  );
-};
 
 
 
