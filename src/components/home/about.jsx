@@ -1,12 +1,13 @@
 import React, { useRef, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Link } from "gatsby";
 
 
 
 const parallaxImages = [
-  { src: "right-door.png", alt: "Right Door", initialX: "55%", initialY: "0%" },
-  { src: "left-door.png", alt: "Left Door", initialX: "90%", initialY: "0%" },
+  { src: "right-door.png", alt: "Right Door", initialX: "25%", initialY: "0%" },
+  { src: "left-door.png", alt: "Left Door", initialX: "120%", initialY: "0%" },
 ];
 
 const ParallaxImage = ({
@@ -33,7 +34,7 @@ const ParallaxImage = ({
         Math.max((start - containerRect.top) / (start - end), 0),
         1
       );
-      const maxMove = 200; // ← Increase this number to control how far doors open
+      const maxMove = 250; // ← Increase this number to control how far doors open
       const moveAmount = maxMove * progress;
 
 
@@ -69,7 +70,7 @@ const ParallaxImage = ({
 
 // RotatingWords Component
 const RotatingWord = ({ inView }) => {
-  const words = ["build", "create", "design"];
+  const words = [ "create", "design", "build"];
   const wordDuration = 1000;
 
   const wordVariants = {
@@ -105,7 +106,7 @@ const RotatingWord = ({ inView }) => {
       style={{
         position: "relative",
         display: "inline-block",
-        width: "100px",
+        width: "135px",
         verticalAlign: "bottom",
         height: "1.2em",
       }}
@@ -191,21 +192,51 @@ const StarCode = ({ children }) => (
 
 // Masked Intro Text
 const MaskText = ({ dateString }) => {
-  const animation = {
-    initial: { y: "100%" },
+  const [scrollDirection, setScrollDirection] = useState("down");
+
+  // Detect scroll direction
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const updateDirection = () => {
+      const currentY = window.scrollY;
+      if (currentY > lastScrollY) {
+        setScrollDirection("down");
+      } else if (currentY < lastScrollY) {
+        setScrollDirection("up");
+      }
+      lastScrollY = currentY;
+    };
+
+    window.addEventListener("scroll", updateDirection);
+    return () => window.removeEventListener("scroll", updateDirection);
+  }, []);
+
+  const { ref, inView } = useInView({ threshold: 0.1 });
+
+  const animationVariants = {
+    initial: {
+      y: scrollDirection === "down" ? "-100%" : "100%",
+      opacity: 0,
+    },
     animate: (i) => ({
       y: "0%",
+      opacity: 1,
       transition: {
         duration: 0.75,
         ease: [0.33, 1, 0.68, 1],
-        delay: 0.075 * i,
+        delay: 0.1 * i,
       },
     }),
+    exit: {
+      y: scrollDirection === "down" ? "100%" : "-100%",
+      opacity: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
   };
-
-  const { ref, inView } = useInView({
-    threshold: 0.5,
-  });
 
   return (
     <div
@@ -215,9 +246,8 @@ const MaskText = ({ dateString }) => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        padding: "5rem 0rem",
-        minHeight: "100vh", // ensures enough scrollable space
-        overflow: "hidden", // optional: prevents masking overflow
+        minHeight: "100vh",
+        overflow: "hidden",
       }}
     >
       <div
@@ -233,48 +263,64 @@ const MaskText = ({ dateString }) => {
 
       <div className="lineMask" style={{ overflow: "hidden" }}>
         <div className="columns is-multiline is-12 is-desktop is-mobile">
-          <div
-            className="column is-full-mobile is-7-tablet is-7-desktop is-7-widescreen is-7-fullhd"
-            style={{
-              fontSize: "1.5rem",
-              color: "#ffffff",
-              fontFamily: "monospace",
-            }}
-          >
+          <div className="column is-6-desktop is-12-mobile is-6-tablet">
             <motion.p
               custom={0}
               initial="initial"
               animate={inView ? "animate" : ""}
-              variants={animation}
+              variants={animationVariants}
             >
-              <span className="title" style={{ fontSize: "2rem" }}>Hi</span> <br />
-              <span style={{ fontSize: "1rem", color: "#888" }}>My name is</span>
+              <span className="about-title">Hi</span> <br />
+              <span className="about-subtitle">My name is</span>
               <br />
-              <span className="title" style={{ fontSize: "2rem" }}>Stephen A. Warren</span>
+              <span className="about-title">Stephen A. Warren</span>
               <br />
-              <span className="is-italic" style={{ fontSize: "1rem", color: "#888" }}>
+              <span className="about-subtitle is-italic">
                 A multi-disciplinary designer & developer.
               </span>
             </motion.p>
           </div>
-          <div
-            className="rotating-text column is-full-mobile is-5-tablet is-5-desktop is-5-widescreen is-5-fullhd"
-          >
-            <motion.p
-              custom={1}
-              initial="initial"
-              animate={inView ? "animate" : ""}
-              variants={animation}
-            >
 
-              And I <RotatingWord inView={inView} /> experiences!
-            </motion.p>
-          </div>
+<div className="rotating-text has-text-centered column is-5-desktop is-5-tablet is-12-mobile">
+  <motion.p
+    custom={1}
+    initial="initial"
+    animate={inView ? "animate" : ""}
+    variants={animationVariants}
+  >
+    And I <RotatingWord inView={inView} />{" "}
+    <span className="rotating-centered-text">experiences!</span>
+  </motion.p>
+</div>
+
+<motion.div
+  className="orb has-text-centered column is-3-desktop is-3-tablet is-0-mobile"
+  role="presentation"
+  aria-hidden="true"
+  animate={{
+    boxShadow: [
+      '0 0 25px rgba(0, 174, 255, 0.4)',
+      '0 0 35px rgba(0, 174, 255, 0.6)',
+      '0 0 25px rgba(0, 174, 255, 0.4)'
+    ]
+  }}
+  transition={{
+    duration: 6,
+    repeat: Infinity,
+    ease: "easeInOut"
+  }}
+>
+  {/* Floating "moon" element */}
+
+</motion.div>
+
+
         </div>
       </div>
     </div>
   );
 };
+
 
 
 
@@ -287,26 +333,37 @@ export default function About() {
   const [scale, setScale] = useState(1);
 
   
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!containerRef.current) return;
+ useEffect(() => {
+  const handleScroll = () => {
+    if (!containerRef.current) return;
 
-      const containerRect = containerRef.current.getBoundingClientRect();
-      const viewportHeight = window.innerHeight;
-      const start = viewportHeight;
-      const end = -containerRect.height;
+    const containerRect = containerRef.current.getBoundingClientRect();
+    const viewportHeight = window.innerHeight;
+    const start = viewportHeight;
+    const end = -containerRect.height;
 
-      const progress = Math.min(
-        Math.max((start - containerRect.top) / (start - end), 0),
-        1
-      );
-      setScale(1 - progress * 0.40);
-    };
+    const progress = Math.min(
+      Math.max((start - containerRect.top) / (start - end), 0),
+      1
+    );
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    // Start scaling *after* 75% progress
+    const zoomOutStart = 0.05;
+
+    if (progress < zoomOutStart) {
+      setScale(0.6); // fully zoomed in
+    } else {
+      // progress between 0.75 and 1 maps to scale 1 → 0.6
+      const adjustedProgress = (progress - zoomOutStart) / (0.6 - zoomOutStart);
+      const minScale = 0.4;
+      setScale(1 - adjustedProgress * (0.6 - minScale));
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  handleScroll();
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
 
 
   useEffect(() => {
@@ -340,38 +397,50 @@ export default function About() {
 
       <MaskText dateString={dateTime.dateString} />
 
-      <div ref={containerRef} style={{ marginBottom: "3rem", position: "relative" }}/>
+      <div ref={containerRef} />
 
 
     
-  <div
-className="door-wrapper"
-ref={wrapperRef}
-style={{
-  transform: `scale(${scale})`,
-  transformOrigin: "center center",
-}}
->
-<div className="door-background" />
-{parallaxImages.map((img, index) => (
-  <ParallaxImage
-    key={index}
-    src={img.src}
-    alt={img.alt}
-    initialX={img.initialX}
-    initialY={img.initialY}
-    index={index}
-    containerRef={containerRef}
-  />
-))}
-
-</div>   
  <div
-        className="has-text-centered title"
-        style={{  marginBottom: "3rem", marginTop: "1rem" }}
-      >
-        Take A Step Into My World
-      </div>
+  className="door-wrapper"
+  ref={wrapperRef}
+  style={{
+    transform: `scale(${scale})`,
+    transformOrigin: "center center",
+    position: "relative",
+  }}
+>
+  {/* Background image */}
+  <div className="door-background" style={{ zIndex: 0 }} />
+
+  {/* Text behind doors */}
+  <div
+    className="door-text"
+  >
+    <p className="title">Take A Step</p>
+    <p className="title">Into My World</p>
+    <Link to="/contact">
+    <button className="mission-start is-primary is-rounded">
+      Start Mission
+      </button>
+      </Link>
+  </div>
+
+  {/* Doors */}
+  {parallaxImages.map((img, index) => (
+    <ParallaxImage
+      key={index}
+      src={img.src}
+      alt={img.alt}
+      initialX={img.initialX}
+      initialY={img.initialY}
+      index={index}
+      containerRef={containerRef}
+    />
+  ))}
+</div>
+
+
       <div
   className="columns is-multiline is-desktop is-mobile is-flex is-justify-content-center has-text-centered"
   style={{
