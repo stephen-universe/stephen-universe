@@ -43,7 +43,7 @@ $title-font: 'Nostromo-Black';
  
   .tilt-card {
     position: relative;
-    border-radius: 20rem;
+    border-radius: 20px;
     padding: 2rem;
     background-size: cover;
     background-position: center;
@@ -52,9 +52,8 @@ $title-font: 'Nostromo-Black';
     flex-direction: column;
     justify-content: flex-end;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
     transform-style: preserve-3d;
-    background-color: #111; /* fallback background */
+    background-color: #ffffff; /* fallback background */
   }
 
   .tilt-card-title {
@@ -87,7 +86,7 @@ $title-font: 'Nostromo-Black';
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: -1;
-    pointer-events: none;
+
     padding: 3px;
     -webkit-mask:
       linear-gradient(#fff 0 0) content-box,
@@ -95,7 +94,48 @@ $title-font: 'Nostromo-Black';
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
   }
- 
+
+ .tilt-overlay {
+  position: absolute;
+  inset: 0;
+  background:rgb(4, 12, 40, 0.85); /* dark transparent overlay */
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+
+.tilt-card:hover .tilt-overlay {
+  opacity: 0;
+}
+
+.stars {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  filter: drop-shadow(0 0 2px white);
+  animation-name: twinkle;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+}
+
   .tilt-card:hover::before {
     opacity: 1;
     animation: gradientBorderMove 4s linear infinite;
@@ -110,10 +150,39 @@ $title-font: 'Nostromo-Black';
     }
   }
 
-  .titles{
+.image-container {
+  overflow: hidden;
+  border-radius: 0.75rem;
+  transition: transform 0.4s ease;
+}
+
+.image-container img {
+  transition: transform 0.4s ease;
+}
+
+.tilt-card:hover .image-container img {
+  transform: scale(1.25);
+}
+
+.image-fallback {
+  width: 100%;
+  padding-top: 66%;
+  background-color: #f0f0f0;
+  border-radius: 0.75rem;
+}
+
+
+.portfolio-spacing {
+  margin-top: 20rem;
+  margin-bottom: 20rem;
+}
+
+
+
+  .portfolio-titles{
     width: 100%;
     border-top: 1px solid rgba(183, 171, 152, 0.25);
-    .title{
+    .portfolio-title{
         border-bottom: 1px solid rgba(183, 171, 152, 0.25);
         cursor: default;
         position: relative;
@@ -124,7 +193,7 @@ $title-font: 'Nostromo-Black';
 
             p{
                 display: inline-block;
-                color: #b7ab98;
+                color: $orange;
                 text-transform: uppercase;
                 font-weight: 700;
                 font-size: 5vw;
@@ -139,19 +208,15 @@ $title-font: 'Nostromo-Black';
                     top: 0;
                     z-index: 1;
                 }
+                a {
+                  color: $orange;
+                }
             }
         }
     }
     
 }
 
-.title-link {
-    color: #1c1c1c;
-    text-decoration: none;
-    position: relative;
-    transition: color 0.3s ease;
-  }
-  
 
   
 
@@ -163,7 +228,7 @@ $title-font: 'Nostromo-Black';
     z-index: 2;
     pointer-events: none;
     .description{
-        background-color: #ec4e39;
+        background-color: $blue;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -173,10 +238,10 @@ $title-font: 'Nostromo-Black';
         transition: clip-path .4s;
         p{
             &:nth-of-type(1){
-                color: #010101;
+                color: $white;
                 text-transform: uppercase;
                 font-weight: 700;
-                font-size: 5vw;
+                font-size: 3vw;
                 line-height: 7.5vw;
                 margin: 0px;
                 position: relative;
@@ -186,6 +251,7 @@ $title-font: 'Nostromo-Black';
                 width: 40%;
                 font-size: 1vw;
                 font-weight: 700;
+                color: $white;
             }
         }
     }
