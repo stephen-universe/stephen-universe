@@ -122,12 +122,12 @@ export default function Index({ menuIsActive, setMenuIsActive }) {
                 <Link to="/projects">
                   {" "}
                   <h1
-                    className="has-text-centered white"
+                    className="has-text-centered nav-link"
                     style={{ fontSize: 3 + "rem" }}
                   >
                     <span>
                       <h5
-                        className="has-text-centered white is-12"
+                        className="has-text-centered nav-link is-12"
                         style={{ paddingTop: 25 + "px", fontSize: 1.5 + "rem", lineHeight: 0.1 + "rem" }}
                       >
                         Global
@@ -140,12 +140,12 @@ export default function Index({ menuIsActive, setMenuIsActive }) {
                 <Link to="/contact">
                   {" "}
                   <h1
-                    className="has-text-centered white"
+                    className="has-text-centered nav-link"
                     style={{ fontSize: 3 + "rem" }}
                   >
                     <span>
                       <h5
-                        className="has-text-centered white"
+                        className="has-text-centered nav-link"
                         style={{ paddingTop: 45 + "px", fontSize: 1.5 + "rem", lineHeight: 0.1 + "rem" }}
                       >
                         Initialize
@@ -159,7 +159,7 @@ export default function Index({ menuIsActive, setMenuIsActive }) {
 
               <div className="blog-nav-link desktop-menu">
               <div className="blog-nav-text">
-               <Link to='/contact'style={{color: '#FFF'}}>Hire Me</Link>
+               <Link to="mailto:launch@stephen-universe.com" style={{color: '#FFF'}}>Hire Me</Link>
               </div>
             </div>
 
