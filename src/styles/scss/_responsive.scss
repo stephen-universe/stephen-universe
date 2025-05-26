@@ -97,16 +97,16 @@
 
 @media only screen and (max-width: 1281px) {
   .background {
-    min-height: 800px;
+    min-height: 920px;
 }   
   
   .quote-background {
     padding: 2rem 3rem;
-    top: 50%;
+    top: 100%;
   }
   
   .door-wrapper {
-    height: 130vh;
+    height: 100vh;
   }
   .text-animation-border-right {
     border-right: 0.35vw solid $orange;
@@ -164,7 +164,7 @@
     height: 30vh;
   }
   .project-spacing {
-    padding: 10vh 3vh;
+    padding: 12vh 3vh;
   }
   input,
   select {
@@ -330,4 +330,8 @@
   }
 }
 
-
+@media only screen and (max-width: 360px){
+.text-animation-body {
+    min-height: 45vh;
+  }
+}
