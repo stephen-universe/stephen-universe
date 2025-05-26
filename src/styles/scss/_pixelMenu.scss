@@ -1,0 +1,246 @@
+@use 'variables' as *;
+
+.main{
+    height: 60vw;
+    background-color: #0f0f0f;
+    margin-top: 100vh;
+    margin-bottom: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img{
+        height: 100%;
+    }
+}
+.pixel-menu{
+
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 100%;
+    z-index: 3;
+
+    p{
+
+        font-size: 5vw;
+        margin: 5px;
+
+    }
+
+}
+
+
+.pixel-header{
+
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 4;
+    top: 0;
+    padding: 40px;
+
+    .burger{
+
+        position: relative;
+
+        display: flex;
+
+        flex-direction: column;
+
+        position: relative;
+
+        cursor: pointer;
+
+        &::before, &::after{
+
+            display: block;
+            content: "";
+            width: 30px;
+            height: 2px;
+            background-color: black;
+            position: relative;
+            transition: transform 0.3s;
+
+        }
+
+        &::after{
+
+            top: -5px;
+
+        }
+
+
+        &::before{
+
+            top: 5px;
+
+        }
+
+    }
+
+    .burgerActive{
+
+        &::after{
+
+            transform: rotate(45deg);
+
+            top: -1px;
+
+        }
+
+        &::before{
+
+            transform: rotate(-45deg);
+
+            top: 0px;
+
+        }
+
+    }
+
+}
+
+.pixelBackground{
+
+    display: flex;
+
+    height: 100vh;
+
+    overflow: hidden;
+
+    position: relative;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    .column{
+
+        width: 5vw;
+
+        height: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        
+
+        .block{
+
+            width: 100%;
+
+            height: 5vw;
+
+            background-color: #ff6a00;
+
+        }
+
+    }
+
+}
+.sticky-main{
+    margin-bottom: 100vh;
+  }
+  
+  .stickyContainer{
+    position: relative;
+    height: 200vh;
+  }
+
+.stickyMask{
+    display: flex;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    mask-image: url('/mask.svg');
+    mask-position: 43.35% center;
+    mask-repeat: no-repeat;
+    mask-size: 80%;
+  }
+  
+  .stickyMask video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .stickyMask {
+  display: flex;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  mask-image: url('/mask.svg');
+  mask-position: 43.35% center;
+  mask-repeat: no-repeat;
+  mask-size: 80%;
+
+}
+
+.stickyMask video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute; /* <-- overlay behavior */
+  top: 0;
+  left: 0;
+  z-index: 0; /* <-- behind everything */
+}
+
+.quote-overlay {
+  position: relative; /* <-- or absolute if you want to fine-tune position */
+  z-index: 1; /* <-- sits on top of the video */
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  max-width: 90%;
+  background-color: #040c2894;
+  border-radius: 20px;
+}
+
+.quote-overlay.hidden {
+  display: none;
+}
+
+.quote-overlay.visible {
+  display: block;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

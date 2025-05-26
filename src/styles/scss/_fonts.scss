@@ -1,0 +1,914 @@
+@use 'variables' as *;
+
+
+
+
+.quote-p {
+  color: $white;
+  font-size: 1.19rem;
+  font-family: Nostromo-Black;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.vertical-text-container {
+  writing-mode: vertical-rl; /* vertical text flow */
+  transform: rotate(180deg); /* read from bottom to top */
+  white-space: nowrap;
+  font-family: monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #888;
+          text-orientation: mixed;
+          margin-right: 2rem;
+}
+
+.title {
+  font-family: $title-font;
+  color: $orange;
+  text-shadow: 2px 2px 1px #fff;
+}
+
+.portfolio-title {
+  font-family: $title-font;
+  color: $orange;
+  text-shadow: 2px 2px 1px #fff;
+}
+
+.contact-p {
+  font-size: 1.39rem;
+  color: $white;
+  font-weight: bold;
+  margin-top: 2.55rem;
+  text-shadow: 3px 1px #000;
+}
+
+.about-title {
+  font-family: $title-font;
+  color: $orange;
+  text-shadow: 2px 2px 1px #fff;
+  font-size: 1.83rem;
+}
+
+.about-subtitle {
+  line-height: 0.5rem;
+  font-size: 1rem;
+  color: $grey;
+  font-family: monospace;
+}
+
+.rotating-centered-text {
+  font-size: 2rem;
+}
+
+// --- Orb Planet ---
+// --- Rotating Planet-like Text Bubble ---
+.rotating-text {
+  font-size: 1.83rem;
+  color: $white;
+  font-family: Nostromo-Black;
+  font-weight: bold;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgb(230, 37, 21),
+    rgb(0, 0, 0)
+  );
+  padding: 12vw 2vw;
+  border-radius: 50%;
+  margin: 3vw;
+  box-shadow: inset -10px -10px 20px rgba(255, 255, 255, 0.61),
+    inset 10px 10px 20px rgba(0, 0, 0, 0.61), 0 0 21px rgba(232, 72, 52, 0.7),
+    0 0 80px rgba(232, 72, 52, 0);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.15),
+      transparent 70%
+    );
+    border-radius: 50%;
+    filter: blur(12px);
+    pointer-events: none;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: -75px;
+    background-image: url("/assets/crater-pattern.svg"); // your texture pattern
+    background-size: cover;
+    opacity: 0.4;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 2;
+  }
+}
+
+.rotating-word {
+        position: relative;
+        display: inline-block;
+        width: 135px;
+        vertical-align: bottom;
+        height: 1.2em;
+}
+
+.door-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1.5;
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  pointer-events: auto;
+  font-family: "Nostromo-Black";
+  color: #e84834;
+  text-shadow: 2px 2px 1px #fff;
+}
+
+.mission-start {
+  margin-top: 1rem;
+  color: white;
+  border-color: white;
+  border-width: max(1px, 0.0625em);
+  background-color: transparent;
+  box-shadow: 1px 2px 4px 1px $orange-shadow;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(0.5em - 1px);
+  padding-top: calc(0.5em - 1px);
+  text-align: center;
+  white-space: nowrap;
+  font-size: 1.2rem;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  padding-right: 2.5em; // space for arrow
+  padding-left: 2.5em;
+
+  &::after {
+    content: "→";
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%) translateX(-0.5em);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    font-size: 1.2rem;
+    color: $orange;
+  }
+
+  &:hover {
+    transform: scale(1.1); // zoom effect
+    color: $orange;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0.2em);
+  }
+}
+
+.mission-start.is-rounded {
+  border-radius: var(--bulma-radius-rounded);
+}
+
+.mission-start.is-primary {
+  --bulma-button-h: var(--bulma-primary-h);
+  --bulma-button-s: var(--bulma-primary-s);
+  --bulma-button-l: var(--bulma-primary-l);
+  --bulma-button-background-l: var(--bulma-primary-l);
+  --bulma-button-border-l: var(--bulma-primary-l);
+  --bulma-button-border-width: 0px;
+  --bulma-button-color-l: var(--bulma-primary-invert-l);
+  --bulma-button-outer-shadow-a: 0;
+}
+
+.reserved-rights {
+  text-align: center;
+}
+
+.react-made {
+  text-align: center;
+}
+.text-animation-container {
+  align-items: center;
+  flex-direction: column;
+  padding: 10vw 5vw;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Only the DOOR AREA is this size */
+/* Only the DOOR AREA is this size */
+.door-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+
+/* Background image ONLY behind the doors */
+.door-background {
+  position: absolute;
+  top: 22px;
+  left: 10%;
+  width: 80%;
+  height: 42.5vw;
+  background-image: url("/open-door.png");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  will-change: transform;
+}
+
+.scroll-lock {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.horizontal-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem; /* spacing between date and text */
+  width: 100%;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+
+
+.masked-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.text-animation-clock {
+  float: right;
+  white-space: nowrap;
+  font-family: monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #888;
+  padding-bottom: 3vw;
+  padding-top: 1vw;
+}
+
+.text-animation-text {
+  float: left;
+  white-space: nowrap;
+  font-family: monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #888;
+  padding-bottom: 3vw;
+  padding-top: 1vw;
+}
+
+/* Style both doors */
+.parallax-door {
+  position: absolute;
+  width: 40%;
+  height: 42.5vw;
+  top: 22px;
+  z-index: 10;
+  will-change: transform;
+  transition: transform 0.3s ease-out;
+}
+
+.text-animation-border-top {
+  border-top: 0.35vw solid $orange;
+  width: 100%;
+}
+
+.text-animation-border-bottom {
+  border-bottom: 0.35vw solid $orange;
+  padding-bottom: 3vw;
+  padding-top: 3vw;
+  width: 100%;
+}
+
+.text-animation-body {
+  font-size: 2vw;
+  margin-top: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.emoji {
+  font-size: 3rem;
+}
+
+.lineMask {
+  overflow: hidden;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.lineMask p {
+  margin: 0px;
+  font-weight: 700;
+}
+
+.my-process-p {
+  font-size: 1rem;
+  line-height: 0.95rem;
+  font-family: monospace;
+  padding-bottom: 1rem;
+  color: $grey;
+}
+
+.my-process-text {
+  position: relative;
+  display: inline-block;
+  padding: 0.3rem 0.5rem;
+  background: $blue;
+  color: #fff;
+  border-radius: 4px;
+  cursor: default;
+  overflow: hidden;
+  font-family: Nostromo-Medium;
+  transition: background 0.3s ease;
+  z-index: 0;
+}
+
+.my-process-text:hover {
+  background: #020f2f;
+  box-shadow: 0 0 12px 3px rgba(255, 255, 255, 0.3);
+  z-index: 1;
+  color: $orange;
+  border: solid 1px $orange-shadow;
+}
+
+/* Container holding stars */
+.starfield {
+  pointer-events: none;
+  position: absolute;
+  inset: 0; /* top:0; bottom:0; left:0; right:0 */
+  overflow: visible;
+  z-index: 0;
+}
+
+/* Single star */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #ffffff70; /* semi-transparent white */
+  border-radius: 50%;
+  opacity: 2;
+  filter: drop-shadow(0 0 2px white);
+  animation-name: twinkle;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* Twinkle effect */
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+}
+
+
+@media only screen and (max-width: 3970px) {}
+
+@media only screen and (max-width: 1941px) {
+      .text-animation-clock, .text-animation-text, .vertical-text-container{
+    font-size: 1rem;
+  }
+    .about-title {
+  font-size: 3.83rem;
+  white-space: nowrap;
+}
+.about-subtitle {
+  font-size: 2rem;
+}
+.rotating-text {
+   margin: 13vw 1vw;
+  font-size: 2.34rem;
+  padding: 12vw 2vw;
+
+  &::before {
+  
+  }
+  &::after {
+    inset: -150px;
+  }
+}
+.rotating-centered-text {
+    font-size: 2.5rem;
+  }
+
+.rotating-word {
+        width: 168px;
+}
+.door-text {
+  font-size: 4rem;
+  margin: 2vw 0;
+}
+
+.mission-start {
+  font-size: 2.2rem;
+}
+
+}
+
+@media only screen and (max-width: 1450px) {
+  .text-animation-clock, .text-animation-text, .vertical-text-container{
+    font-size: 1.3rem;
+  }
+        .quote-p {
+  font-size: 1.19rem;
+}
+ .about-title {
+  font-size: 3rem;
+  white-space: nowrap;
+}
+.about-subtitle {
+  font-size: 1.29rem;
+}
+.rotating-text {
+   margin: 12vw 3vw;
+  font-size: 2.34rem;
+  padding: 12vw 2vw;
+
+  &::before {
+  
+  }
+  &::after {
+    inset: -102px;
+  }
+}
+
+.rotating-centered-text {
+    font-size: 2.5rem;
+  }
+
+.rotating-word {
+        width: 168px;
+}
+.door-text {
+  font-size: 2.8rem;
+  margin: 2vw 0;
+}
+
+  .vertical-divider {
+    border-left: 6px solid $orange;
+    height: 500px;
+  }
+  .contact-subtitle {
+    color: $white;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1.55rem;
+    font-style: italic;
+    text-shadow: 4px 1px #000;
+  }
+  .contact-title {
+    line-height: 65px;
+    font-family: $title-font;
+    color: $orange;
+    text-shadow: 2px 2px 1px $white;
+    font-size: 5rem;
+  }
+}
+
+@media only screen and (max-width: 1281px) {
+    .text-animation-clock, .text-animation-text, .vertical-text-container{
+    font-size: 1rem;
+  }
+      .quote-p {
+  font-size: 1.19rem;
+}
+.about-title {
+  font-size: 2.83rem;
+  white-space: nowrap;
+}
+.about-subtitle {
+  font-size: 1.16rem;
+  white-space: nowrap;
+}
+.rotating-text {
+   margin: 15vw 2vw;
+  font-size: 1.9rem;
+  padding: 10vw 2vw;
+
+  &::before {
+  
+  }
+  &::after {
+    inset: -90px;
+  }
+}
+
+.rotating-centered-text {
+    font-size: 2rem;
+  }
+
+.rotating-word {
+        width: 141px;
+}
+.door-text {
+  font-size: 2.1rem;
+  margin: 2vw 0;
+}
+
+.mission-start {
+  font-size: 1.2rem;
+  padding-right: 1em; // space for arrow
+  padding-left: 1em;
+}
+  .vertical-divider {
+    border-left: 6px solid $orange;
+    height: 500px;
+  }
+  .contact-subtitle {
+    color: $white;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1.55rem;
+    font-style: italic;
+    text-shadow: 4px 1px #000;
+  }
+  .contact-title {
+    line-height: 50px;
+    font-family: $title-font;
+    color: $orange;
+    text-shadow: 2px 2px 1px $white;
+    font-size: 3.9rem;
+  }
+}
+
+@media only screen and (max-width: 1081px) {
+  .text-animation-clock, .text-animation-text, .vertical-text-container{
+    font-size: 1rem;
+  }
+    .quote-p {
+  font-size: 1.19rem;
+}
+.about-title {
+  font-size: 2.83rem;
+  white-space: nowrap;
+}
+.about-subtitle {
+  font-size: 1.16rem;
+  white-space: nowrap;
+}
+
+.rotating-text {
+  margin: 15vw 2vw;
+  font-size: 1.6rem;
+  padding: 11vw 2vw;
+
+}
+
+
+
+.rotating-centered-text {
+    font-size: 1.8rem;
+  }
+
+.rotating-word {
+        width: 113px;
+}
+.door-text {
+    font-size: 2rem;
+    margin: 2vw 0;
+  }
+  .vertical-divider {
+    border-left: 6px solid $orange;
+    height: 500px;
+  }
+  .contact-title {
+    line-height: 50px;
+    font-family: $title-font;
+    color: $orange;
+    text-shadow: 2px 2px 1px $white;
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 929px) {
+
+  .text-animation-clock, .text-animation-text, .vertical-text-container{
+    font-size: 0.95rem;
+  }
+  .quote-p {
+  font-size: 1rem;
+}
+  .about-title {
+  font-size: 2.25rem;
+}
+
+.about-subtitle {
+  font-size: 0.82rem;
+  white-space: break-spaces;
+}
+
+
+.rotating-text {
+  margin: 15vw 2vw;
+  font-size: 1.2rem;
+  padding: 11vw 2vw;
+
+}
+
+
+
+.rotating-centered-text {
+    font-size: 1.3rem;
+  }
+
+.rotating-word {
+        width: 90px;
+}
+.door-text {
+  font-size: 1.6rem;
+  margin: 2vw 0;
+}
+
+.mission-start {
+  font-size: 1rem;
+  padding-right: 1em; // space for arrow
+  padding-left: 1em;
+}
+
+
+  .vertical-divider {
+    border-left: 6px solid $orange;
+    height: 500px;
+  }
+  .contact-subtitle {
+    color: $white;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1.55rem;
+    font-style: italic;
+    text-shadow: 4px 1px #000;
+  }
+  .contact-title {
+    line-height: 50px;
+    font-family: $title-font;
+    color: $orange;
+    text-shadow: 2px 2px 1px $white;
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+.text-animation-clock, .text-animation-text, .vertical-text-container{
+    font-size: 0.95rem;
+  }
+  .quote-p {
+    color: $white;
+    font-size: 1rem;
+    font-family: Nostromo-Black;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+
+   .text-animation-body {
+    min-height: 70vh;
+  }
+
+
+.about-title {
+  font-size: 2.1rem;
+}
+
+.about-subtitle {
+  font-size: 1.15rem;
+}
+
+
+.rotating-text {
+   margin: 6vw;
+  font-size: 2.4rem;
+  padding: 20vw 2vw;
+
+  &::before {
+  
+  }
+  &::after {
+    inset: -104px;
+  }
+}
+
+
+
+.rotating-centered-text {
+    font-size: 2.5rem;
+  }
+
+.rotating-word {
+        width: 180px;
+}
+
+.door-text {
+  font-size: 1.6rem;
+  margin: 2vw 0;
+}
+
+.mission-start {
+  font-size: 0.75rem;
+  padding-right: 1em; // space for arrow
+  padding-left: 1em;
+}
+
+  .contact-subtitle {
+    color: $white;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1.55rem;
+    font-style: italic;
+    text-shadow: 4px 1px #000;
+  }
+  .contact-title {
+    line-height: 30px;
+    font-family: $title-font;
+    color: $orange;
+    text-shadow: 2px 2px 1px $white;
+    font-size: 2.1rem;
+  }
+}
+
+@media only screen and (max-width: 428px) {
+.text-animation-clock, .text-animation-text, .vertical-text-container{
+    font-size: 0.85rem;
+  }
+  .quote-p {
+    color: $white;
+    font-size: 0.55rem;
+    font-family: Nostromo-Black;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .text-animation-body {
+    min-height: 70vh;
+  }
+
+  .vertical-text-container {
+  display: none; /* Hide vertical text on small screens */
+}
+
+.about-title {
+  font-size: 1.9rem;
+  white-space: break-spaces;
+}
+
+.about-subtitle {
+  line-height: 1.2rem;
+  font-size: 1rem;
+  white-space: break-spaces;
+}
+
+.rotating-text {
+  margin: 6vw;
+  font-size: 1rem;
+  padding: 19vw 2vw;
+}
+
+
+
+.rotating-centered-text {
+  font-size: 1rem;
+}
+
+.rotating-word {
+        width: 76px;
+}
+
+.door-text {
+  font-size: 0.75rem;
+  margin: 2vw 0;
+}
+
+.mission-start {
+  font-size: 0.55rem;
+  padding-right: 1em; // space for arrow
+  padding-left: 1em;
+}
+
+  .vertical-divider {
+    border-top: 6px solid $orange;
+    width: 100%;
+    height: 5px;
+  }
+  .contact-subtitle {
+    color: $white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 1.55rem;
+    font-style: italic;
+    text-shadow: 4px 1px #000;
+  }
+  .contact-title {
+    line-height: 25px;
+    font-family: $title-font;
+    color: $orange;
+    text-shadow: 2px 2px 1px $white;
+    font-size: 1.3rem;
+  }
+}
+
+
+@media only screen and (max-width: 377px) {
+.text-animation-clock, .text-animation-text, .vertical-text-container{
+    font-size: 0.85rem;
+  }
+  .quote-p {
+    color: $white;
+    font-size: 0.55rem;
+    font-family: Nostromo-Black;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .text-animation-body {
+    min-height: 70vh;
+  }
+
+  .vertical-text-container {
+  display: none; /* Hide vertical text on small screens */
+}
+
+.about-title {
+  font-size: 1.8rem;
+  white-space: break-spaces;
+}
+
+.about-subtitle {
+  line-height: 1.2rem;
+  font-size: 1rem;
+}
+
+.rotating-text {
+  margin: 6vw;
+  font-size: 1rem;
+  padding: 19vw 2vw;
+}
+
+
+
+.rotating-centered-text {
+  font-size: 1rem;
+}
+
+.rotating-word {
+        width: 76px;
+}
+
+.door-text {
+  font-size: 0.55rem;
+  margin: 2vw 0;
+}
+
+.mission-start {
+  font-size: 0.55rem;
+  padding-right: 1em; // space for arrow
+  padding-left: 1em;
+}
+
+  .vertical-divider {
+    border-top: 6px solid $orange;
+    width: 100%;
+    height: 5px;
+  }
+  .contact-subtitle {
+    color: $white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 1.55rem;
+    font-style: italic;
+    text-shadow: 4px 1px #000;
+  }
+  .contact-title {
+    line-height: 25px;
+    font-family: $title-font;
+    color: $orange;
+    text-shadow: 2px 2px 1px $white;
+    font-size: 1.3rem;
+  }
+}

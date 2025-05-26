@@ -1,14 +1,15 @@
 
 @use "../../node_modules/bulma/bulma";
-@use "../styles/scss/card.scss";
-@use "../styles/scss/navigation.scss";
-@use "../styles/scss/fonts.scss";
-@use "../styles/scss/buttons.scss";
-@use "../styles/scss/modal.scss";
-@use "../styles/scss/pixelMenu.scss";
-@use "../styles/scss/basic.scss";
-@use "../styles/scss/responsive.scss";
-@use "../styles/scss/cookies.scss";
+@use "../styles/scss/_layout.scss";
+@use "../styles/scss/_navigation.scss";
+@use "../styles/scss/_fonts.scss";
+@use "../styles/scss/_buttons.scss";
+@use "../styles/scss/_modal.scss";
+@use "../styles/scss/_pixelMenu.scss";
+@use "../styles/scss/_basic.scss";
+@use "../styles/scss/_responsive.scss";
+@use "../styles/scss/_cookies.scss";
+@use '../styles/scss/_variables.scss';
 
 
 .App {
@@ -16,16 +17,6 @@
   text-align: center;
 }
 
-
-
-//* VARIABLES *//
-$blue: blue;
-$red: red;
-$white: #fff;
-$black: #000;
-$orange: #e84834;
-$orange-shadow: #ab3122;
-$title-font: "Nostromo-Black";
 
 
 

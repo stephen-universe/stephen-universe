@@ -1,0 +1,11 @@
+@use 'variables' as *;
+
+
+
+  .play-button{
+    margin-top: 2rem;
+  }
+
+  .play-button:hover{
+    color: $orange;
+  }
