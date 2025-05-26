@@ -127,7 +127,7 @@ const MaskText = ({ dateString }) => {
             </motion.p>
           </div>
 
-<div className="rotating-text has-text-centered column is-5-desktop is-5-tablet is-12-mobile">
+<div className="rotating-text has-text-centered column is-5-desktop is-5-tablet is-10-mobile">
   <motion.p
     custom={1}
     initial="initial"
@@ -204,13 +204,7 @@ const RotatingWord = ({ inView }) => {
 
   return (
     <span
-      style={{
-        position: "relative",
-        display: "inline-block",
-        width: "135px",
-        verticalAlign: "bottom",
-        height: "1.2em",
-      }}
+  className="rotating-word"
     >
       <AnimatePresence mode="wait">
         {inView && (
@@ -402,7 +396,7 @@ export default function About() {
       <div ref={containerRef} />
 
 
-    
+  <div className="text-animation-container">  
  <div
   className="door-wrapper"
   ref={wrapperRef}
@@ -419,8 +413,8 @@ export default function About() {
   <div
     className="door-text"
   >
-    <p className="title">Take A Step</p>
-    <p className="title">Into My World</p>
+    <p>Take A Step</p>
+    <p>Into My World</p>
     <Link to="/contact">
     <button className="mission-start is-primary is-rounded">
       Start Mission
@@ -441,19 +435,18 @@ export default function About() {
     />
   ))}
 </div>
-
+</div>
 
       <div
-  className="columns is-multiline is-desktop is-mobile is-flex is-justify-content-center has-text-centered"
+  className=" columns is-multiline is-desktop is-mobile is-flex is-justify-content-center has-text-centered"
   style={{
-    width: "100%",
-    paddingTop: "3vw",
+    paddingTop: "10vw",
     position: "relative",
     zIndex: 1,
   }}
 >
   <div className="column is-full-mobile is-5-tablet is-5-desktop">
-    <h2 className="title" style={{ textShadow: "none" }}>🚀</h2>
+    <h2 className="emoji" style={{ textShadow: "none" }}>🚀</h2>
     <h2 className="title">Core Systems</h2>
     <p className="my-process-p">
       These are the main modules I bring on every mission — from creative
