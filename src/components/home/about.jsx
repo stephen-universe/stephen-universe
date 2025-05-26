@@ -462,7 +462,7 @@ export default function About() {
   <div className="text-animation-border-right"></div>
 
   <div className="column is-full-mobile is-5-tablet is-5-desktop">
-    <h2 className="title" style={{ textShadow: "none" }}>👨🏾‍🚀</h2>
+    <h2 className="emoji" style={{ textShadow: "none" }}>👨🏾‍🚀</h2>
     <h2 className="title">Field Systems</h2>
     <p className="my-process-p">
       Specialized tools & skills deployed across terrain—strategic, technical, creative.
