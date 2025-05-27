@@ -450,6 +450,42 @@
 .desktop-nav .nav-bar .extras .theme-btn:hover svg {
     fill: $black;
 }
+
+.desktop-nav .nav-bar .extras .menu-start svg {
+    margin-right: 0px;
+}
+.desktop-nav .nav-bar .extras .menu-start {
+    display: flex;
+    float: right;
+}
+.desktop-nav .nav-bar .extras #desktop-menu {
+    display: none;
+}
+.desktop-nav .nav-bar > ul,
+.desktop-nav .nav-bar .extras .theme-color {
+    display:block;
+    width: 100%;
+    float: right;
+}
+.desktop-nav .nav-bar > ul,
+.desktop-nav .nav-bar .extras .theme-btn {
+    display:none
+}
+ .desktop-nav {
+    background-color: #040c28;
+    padding: 20px 0;
+    border-bottom: 3px dotted #e84834;
+}
+   .mobile-nav.desktop-menu {
+        padding: 30px;
+    }
+    .mobile-nav {
+        padding: 40px 30px 15px;
+        background-color: #040c28;
+        border-right-style: dotted;
+    border-bottom-style: dotted;
+    border-color: $orange;
+  }
 .mobile-nav {
     position: fixed;
     top: 0;
