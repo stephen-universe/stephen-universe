@@ -23,7 +23,7 @@ function Title({data, setSelectedProject}) {
 
     const { scrollYProgress } = useScroll({
         target: container,
-        offset: ['start end', `${25 / speed}vw end`]
+        offset: ['start end', `${75 / speed}vw end`]
     })
 
     const clipProgress = useTransform(scrollYProgress, [0,1], [100, 0]);
