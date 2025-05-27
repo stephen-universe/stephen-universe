@@ -17,6 +17,7 @@ export default function FooterScroll() {
 
       const progress = getScrollProgress();
       const maskSize = (initialMaskSize + targetMaskSize * progress) * 135;
+stickyMask.current.style.setProperty("--mask-size", `${maskSize}%`);
       stickyMask.current.style.webkitMaskSize = `${maskSize}%`;
       stickyMask.current.style.maskSize = `${maskSize}%`;
 
@@ -25,15 +26,16 @@ export default function FooterScroll() {
       requestAnimationFrame(animate);
     };
 
-    const getScrollProgress = () => {
-      if (!stickyContainer.current) return easedScrollProgress;
+   const getScrollProgress = () => {
+  if (!stickyContainer.current) return easedScrollProgress;
 
-      const rect = stickyContainer.current.getBoundingClientRect();
-      const rawProgress = Math.min(Math.max(-rect.top / window.innerHeight, 0), 1);
-      const delta = rawProgress - easedScrollProgress;
-      easedScrollProgress += delta * easing;
-      return easedScrollProgress;
-    };
+  const rect = stickyContainer.current.getBoundingClientRect();
+  const viewportHeight = window.visualViewport?.height || window.innerHeight;
+  const rawProgress = Math.min(Math.max(-rect.top / viewportHeight, 0), 1);
+  const delta = rawProgress - easedScrollProgress;
+  easedScrollProgress += delta * easing;
+  return easedScrollProgress;
+};
 
     requestAnimationFrame(animate);
   }, []);
