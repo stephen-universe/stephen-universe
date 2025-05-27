@@ -40,7 +40,7 @@ function Title({ data, setSelectedProject, selectedProject }) {
       >
         <div className='title-container'>
           <motion.p style={{ clipPath: clip }}>
-            <Link to={url}>{title}</Link>
+           {title}
           </motion.p>
           <p className='background-title'>{title}</p>
         </div>
@@ -55,7 +55,7 @@ function Title({ data, setSelectedProject, selectedProject }) {
                 : 'inset(50% 0 50% 0)',
             }}
           >
-            <p className='description-title'>{title}</p>
+            <p className='description-title'> <Link to={url}>{title}</Link></p>
             <p className='description-p'>{description}</p>
           </div>
         </div>
