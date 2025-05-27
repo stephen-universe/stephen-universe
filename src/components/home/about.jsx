@@ -145,9 +145,9 @@ const MaskText = ({ dateString }) => {
   aria-hidden="true"
   animate={{
     boxShadow: [
-      '0 0 25px rgba(0, 174, 255, 0.4)',
-      '0 0 35px rgba(0, 174, 255, 0.6)',
-      '0 0 25px rgba(0, 174, 255, 0.4)'
+      '0 0 25px rgba(0, 174, 255, 0.2)',
+      '0 0 35px rgba(0, 174, 255, 0.2)',
+      '0 0 25px rgba(0, 174, 255, 0.2)'
     ]
   }}
   transition={{
