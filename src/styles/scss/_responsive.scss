@@ -255,8 +255,8 @@
     top: 45%;
   }
 
-  .door-wrapper {
-    height: 20vh;
+   .door-wrapper {
+    display: none;
   }
 
     .orb {
@@ -282,9 +282,8 @@
     width: 100%;
   }
 
-
-  .door-wrapper {
-    height: 20vh;
+   .door-wrapper {
+    display: none;
   }
   .text-animation-border-right {
     border-bottom: 0.35vw solid $orange;
