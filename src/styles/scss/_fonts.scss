@@ -97,7 +97,7 @@
     border-radius: 50%;
     filter: blur(12px);
     pointer-events: none;
-  }
+  }}
   &::after {
     content: "";
     position: absolute;
@@ -109,7 +109,7 @@
     pointer-events: none;
     z-index: 2;
   }
-}
+
 
 .rotating-word {
         position: relative;

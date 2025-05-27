@@ -51,7 +51,7 @@ const [scale, setScale] = useState(1);
           <div className="project-spacing">
             <div
         className="has-text-centered title"
-        style={{  marginBottom: "3rem", marginTop: "1rem" }}
+        style={{  marginBottom: "3rem", marginTop: "3rem" }}
       >
         Featured Projects
       </div>
