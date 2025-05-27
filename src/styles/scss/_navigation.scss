@@ -481,7 +481,7 @@
     }
     .mobile-nav {
         padding: 40px 30px 15px;
-        background-color: #040c28;
+        background-color: $blue;
         border-right-style: dotted;
     border-bottom-style: dotted;
     border-color: $orange;
@@ -501,7 +501,7 @@
     -moz-transform: translateX(-101%);
     -o-transform: translateX(-101%);
     overflow-y: auto;
-    background: $black;
+    background: $blue;
 }
 .mobile-nav.desktop-menu {
     width: 400px;
