@@ -235,6 +235,7 @@
   .mobile-nav {
     width: 55%;
   }
+
   .form form > .row > .form-group input {
     margin-bottom: 10px;
   }
@@ -245,13 +246,26 @@
   .gap {
     padding: 60px 0;
   }
+  .portfolio-titles .portfolio-title .wrapper p {
+    font-size: 6vw;
+    line-height: 10.5vw;
+}
 }
 
 @media only screen and (max-width: 428px) {
   .mobile-nav {
-    width: 75%;
+    width: 100%;
   }
-
+.mobile-nav a#res-cross:before {
+    content: "";
+    width: 35px;
+    height: 35px;
+    background-image: url('/remove.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
     .quote-background {
     padding: 2rem 3rem;
     top: 100%;
@@ -277,12 +291,27 @@
     .project-spacing {
     padding: 10vh 0vh 10vh 0vh;
   }
+.portfolio-titles .portfolio-title .wrapper p {
+    font-size: 9vw;
+    line-height: 17.5vw;
+}
+
 }
 
 @media only screen and (max-width: 377px){
   .mobile-nav {
     width: 100%;
   }
+  .mobile-nav a#res-cross:before {
+    content: "";
+    width: 35px;
+    height: 35px;
+    background-image: url('/remove.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
     .quote-background {
     padding: 2rem 3rem;
     top: 100%;
@@ -332,9 +361,27 @@
     padding: 2rem 0rem;
     top: 45%;
   }
+  .portfolio-titles .portfolio-title .wrapper p {
+    font-size: 9vw;
+    line-height: 17.5vw;
+}
 }
 
 @media only screen and (max-width: 360px){
+  .mobile-nav {
+    width: 100%;
+  }
+  .orb {
+    padding: 9vw 9vw;
+    bottom: 1rem;
+    left: -1rem;
+  }
+  .text-animation-border-right {
+    border-bottom: 0.35vw solid $orange;
+    border-right: none;
+    width: 100%;
+    height: 0;
+  }
 .text-animation-body {
     min-height: 45vh;
   }
@@ -345,4 +392,8 @@
    .door-wrapper {
     display: none;
   }
+.portfolio-titles .portfolio-title .wrapper p {
+    font-size: 9vw;
+    line-height: 17.5vw;
+}
 }
