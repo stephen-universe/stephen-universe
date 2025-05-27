@@ -242,7 +242,7 @@
         z-index: 2;
         .wrapper{
             display: inline-block;
-            padding-left: 10%;
+            padding-left: 5%;
 
             p{
                 display: inline-block;
@@ -285,7 +285,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-left: 10%;
+        padding-left: 5%;
         padding-right: 10%;
         clip-path: inset(50% 0 50%);
         transition: clip-path .4s;

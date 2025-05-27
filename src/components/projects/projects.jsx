@@ -37,7 +37,7 @@ const data = [
     {
         title: "Perfectly Different",
         description: "Explored the Future of Fantasy Football while being in a country where football means a total different sport.",
-        speed: 0.8,
+        speed: 1.2,
         url: "/project/perfectlyDifferent"
     }
 ]
