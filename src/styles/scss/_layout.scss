@@ -369,17 +369,20 @@
     font-size: 2vw;
         font-family: monospace;
         text-shadow: none;
+        line-height: 0.6rem;
   }
 
   @media (max-width: 377px) {
     font-size: 2vw;
         font-family: monospace;
         text-shadow: none;
+        line-height: 0.5rem;
   }
 
   @media (max-width: 360px) {
     font-size: 2vw;
         font-family: monospace;
         text-shadow: none;
+        line-height: 0.5rem;
   }
 }
