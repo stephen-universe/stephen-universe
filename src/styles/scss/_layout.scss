@@ -236,35 +236,45 @@
     width: 100%;
     border-top: 1px solid rgba(183, 171, 152, 0.25);
     .portfolio-title{
-        border-bottom: 1px solid rgba(183, 171, 152, 0.25);
-        cursor: default;
+  border-bottom: 1px solid rgba(183, 171, 152, 0.25);
+  cursor: default;
+  position: relative;
+  z-index: 2;
+        .wrapper{
+    display: inline-block;
+    padding-left: 5%;
+
+   .title-container {
+      position: relative;
+          margin-bottom: 1rem;
+    margin-top: 1rem;
+
+      p {
+        display: inline-block;
+        color: $orange;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 5vw;
+        line-height: 7.5vw;
+        margin: 0px;
         position: relative;
         z-index: 2;
-        .wrapper{
-            display: inline-block;
-            padding-left: 5%;
 
-            p{
-                display: inline-block;
-                color: $orange;
-                text-transform: uppercase;
-                font-weight: 700;
-                font-size: 5vw;
-                line-height: 7.5vw;
-                margin: 0px;
-                position: relative;
-                z-index: 2;
-                &:nth-of-type(2){
-                    display: block;
-                    position: absolute;
-                    color: #1c1c1c;
-                    top: 0;
-                    z-index: 1;
-                }
-                a {
-                  color: $orange;
-                }
-            }
+        a {
+          color: $orange;
+        }
+
+        &.background-title {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: #1c1c1c;
+          z-index: 1;
+          pointer-events: none;
+        }
+      }
+    }
         }
     }
     
@@ -272,15 +282,16 @@
 
 
   
+.descriptions {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3; // make sure it sits above both title layers
+      pointer-events: none;
 
-.descriptions{
-    position: absolute;
-    top: 3px;
-    height: 100%;
-    width: 100%;
-    z-index: 2;
-    pointer-events: none;
-    .description{
+      .description {
         background-color: $blue;
         display: flex;
         justify-content: space-between;
@@ -288,32 +299,87 @@
         padding-left: 5%;
         padding-right: 10%;
         clip-path: inset(50% 0 50%);
-        transition: clip-path .4s;
-        p{
-            &:nth-of-type(1){
-                color: $white;
-                text-transform: uppercase;
-                font-weight: 700;
-                font-size: 3vw;
-                line-height: 7.5vw;
-                margin: 0px;
-                position: relative;
-                z-index: 1;
-            }
-            &:nth-of-type(2){
-                width: 40%;
-                font-size: 1vw;
-                font-weight: 700;
-                color: $white;
-            }
+        transition: clip-path 0.4s ease;
+        height: 100%;
+
+        p {
+          &:nth-of-type(1) {
+            color: $white;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin: 0;
+            z-index: 1;
+          }
+
+          &:nth-of-type(2) {
+            width: 40%;
+            font-weight: 700;
+            color: $white;
+          }
         }
+      }
+      
     }
+.description-title {
+  color: $white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 3vw;
+  line-height: 7.5vw;
+  margin: 0;
+
+  @media (max-width: 769px) {
+    font-size: 4vw;
+    line-height: 8vw;
+  }
+
+  @media (max-width: 428px) {
+    font-size: 5vw;
+    line-height: 9vw;
+  }
+
+  @media (max-width: 377px) {
+    font-size: 6vw;
+    line-height: 10vw;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 6.5vw;
+    line-height: 11vw;
+  }
 }
 
-  
+.description-p {
+  width: 40%;
+  font-size: 1.2vw;
+  font-weight: 700;
+  color: $white;
+  font-family: monospace;
+  text-shadow: none;
 
-  
+  @media (max-width: 769px) {
+    width: 100%;
+    font-size: 2vw;
+        font-family: monospace;
+        text-shadow: none;
+        line-height: 1rem;
+  }
 
-  
+  @media (max-width: 428px) {
+    font-size: 2vw;
+        font-family: monospace;
+        text-shadow: none;
+  }
 
-  
+  @media (max-width: 377px) {
+    font-size: 2vw;
+        font-family: monospace;
+        text-shadow: none;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 2vw;
+        font-family: monospace;
+        text-shadow: none;
+  }
+}
