@@ -2,7 +2,6 @@
 
 
 
-@media only screen and (max-width: 3970px) {
 .quote-p {
   color: $white;
   font-size: 1.19rem;
@@ -77,7 +76,7 @@
   border-radius: 50%;
   margin: 3vw;
   box-shadow: inset -10px -10px 20px rgba(255, 255, 255, 0.61),
-    inset 10px 10px 20px rgba(0, 0, 0, 0.61), 0 0 21px rgba(232, 72, 52, 0.7),
+    inset 10px 10px 20px rgba(0, 0, 0, 0.61), 0 0 21px rgb(230, 37, 21, 0.26),
     0 0 80px rgba(232, 72, 52, 0);
   position: relative;
   overflow: hidden;
@@ -390,6 +389,8 @@
 }
 
 
+
+@media only screen and (max-width: 3970px) {
 }
 
 @media only screen and (max-width: 1941px) {
@@ -511,7 +512,7 @@
 .rotating-text {
    margin: 15vw 2vw;
   font-size: 1.9rem;
-  padding: 10vw 2vw;
+  padding: 12vw 2vw;
 
   &::before {
   
@@ -535,8 +536,8 @@
 
 .mission-start {
   font-size: 1.2rem;
-  padding-right: 1em; // space for arrow
-  padding-left: 1em;
+  padding-right: 2.5em; // space for arrow
+  padding-left: 2.5em;
 }
   .vertical-divider {
     border-left: 6px solid $orange;
@@ -759,7 +760,7 @@
   }
   .quote-p {
     color: $white;
-    font-size: 0.55rem;
+
     font-family: Nostromo-Black;
     margin-top: 2rem;
     text-align: center;
@@ -840,7 +841,7 @@
   }
   .quote-p {
     color: $white;
-    font-size: 0.55rem;
+
     font-family: Nostromo-Black;
     margin-top: 2rem;
     text-align: center;
@@ -919,7 +920,7 @@
   }
   .quote-p {
     color: $white;
-    font-size: 0.55rem;
+
     font-family: Nostromo-Black;
     margin-top: 2rem;
     text-align: center;
@@ -934,7 +935,7 @@
 }
 
 .about-title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   white-space: break-spaces;
 }
 

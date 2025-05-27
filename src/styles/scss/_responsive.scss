@@ -2,6 +2,8 @@
 
 
 
+
+
 .background {
     background-image: url("/background.png");
     background-position: center;
@@ -53,12 +55,6 @@
     padding: 2rem 3rem;
     top: 55%;
   }
-
-  .text-animation-border-right {
-    border-right: 0.35vw solid $orange;
-    height: 40vw;
-  }
-}
 .orb {
 
   &::before {
@@ -68,6 +64,12 @@
     inset: -90px;
   }
 }
+  .text-animation-border-right {
+    border-right: 0.35vw solid $orange;
+    height: 40vw;
+  }
+}
+
 @media only screen and (max-width: 1450px) {
     .background {
     min-height: 900px;
@@ -251,8 +253,8 @@
   }
 
     .quote-background {
-    padding: 2rem 0rem;
-    top: 45%;
+    padding: 2rem 3rem;
+    top: 100%;
   }
 
    .door-wrapper {
@@ -281,7 +283,10 @@
   .mobile-nav {
     width: 100%;
   }
-
+    .quote-background {
+    padding: 2rem 3rem;
+    top: 100%;
+  }
    .door-wrapper {
     display: none;
   }
@@ -333,7 +338,10 @@
 .text-animation-body {
     min-height: 45vh;
   }
-
+    .quote-background {
+    padding: 2rem 3rem;
+    top: 100%;
+  }
    .door-wrapper {
     display: none;
   }
