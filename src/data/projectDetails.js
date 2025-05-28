@@ -37,22 +37,16 @@ const projectDetails = {
         image2: "/images/logofolio/aayd-color.png",
       },
           {
-        title: "C.A.S.T",
+        title: "AVX Studios",
         text: "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-         image: "/images/logofolio/cast-bw.png",
-        image2: "/images/logofolio/cast-color.png",
+         image: "/images/logofolio/AVX-Studios-black.png",
+        image2: "/images/logofolio/AVX-Studios-white.png",
       },
                 {
         title: "Patricia Nicolas",
         text: "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-         image: "/images/logofolio/cast-bw.png",
-        image2: "/images/logofolio/cast-color.png",
-      },
-                      {
-        title: "Pet2Pets",
-        text: "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-        image: "/images/logofolio/cast-bw.png",
-        image2: "/images/logofolio/cast-color.png",
+         image: "/images/logofolio/PN-black.png",
+        image2: "/images/logofolio/PN-white.png",
       },
     ],
     anaRose: [
@@ -192,27 +186,33 @@ const projectDetails = {
       {
         title: "Project Discovery",
         text: "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
-        image: "/images/discovery.png",
+        image: "/images/CCS-Imagery.png",
+      },      
+      {
+        title: "Design Execution",
+        text: "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
+        image: "/images/CCS-Logo.png",
       },
       {
         title: "Concept Development",
         text: "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy.",
-        image: "/images/concepts.png",
+        image: "/images/CCS-Identity_.png",
       },
-      {
-        title: "Design Execution",
-        text: "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
-        image: "/images/design.png",
-      },
+
       {
         title: "Client Collaboration",
         text: "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations.",
-        image: "/images/collab.png",
+        image: "/images/CCS-kit.png",
       },
       {
         title: "Brand Application",
         text: "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-        image: "/images/mockups.png",
+        image: "/images/CCS-Mocks.png",
+      },
+      {
+        title: "Brand Application",
+        text: "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
+        image: "/images/CCS-Mocks.png",
       },
     ],
     perfectlyDifferent: [
