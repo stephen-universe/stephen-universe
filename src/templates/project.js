@@ -2,12 +2,11 @@ import * as React from "react";
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { navigate } from "gatsby";
-import detailContent from "../data/detailContent"; // adjust if needed
+import projectDetails from "../data/projectDetails"; // adjust if needed
 
-
-export default function DetailPage({ pageContext }) {
+export default function ProjectDetails({ pageContext }) {
   const { slug } = pageContext;
-  const content = detailContent[slug] || [];
+  const content = projectDetails[slug] || [];
 
   const scrollRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -63,9 +62,15 @@ export default function DetailPage({ pageContext }) {
   }, []);
 
   useEffect(() => {
+    const originalBodyStyle = document.body.style.overflow;
+    const originalHtmlStyle = document.documentElement.style.overflow;
+
     document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
+
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = originalBodyStyle;
+      document.documentElement.style.overflow = originalHtmlStyle;
     };
   }, []);
 
@@ -106,8 +111,8 @@ export default function DetailPage({ pageContext }) {
             top: "50%",
             left: "20px",
             transform: "translateY(-50%)",
-            background: "rgba(0,0,0,0.7)",
-            color: "white",
+            background: "rgba(0,0,0,0.1)",
+            color: "#e84834",
             border: "none",
             borderRadius: "50%",
             width: "50px",
@@ -134,8 +139,8 @@ export default function DetailPage({ pageContext }) {
             top: "50%",
             right: "20px",
             transform: "translateY(-50%)",
-            background: "rgba(0,0,0,0.7)",
-            color: "white",
+            background: "rgba(0,0,0,0.1)",
+            color: "#e84834",
             border: "none",
             borderRadius: "50%",
             width: "50px",
@@ -163,71 +168,128 @@ export default function DetailPage({ pageContext }) {
         style={{
           display: "flex",
           overflowX: "scroll",
+          overflowY: "hidden", // ✅ vertical scroll off
           scrollSnapType: "mandatory",
           height: "100vh",
           width: "100vw",
         }}
       >
-        {content.map((section, i) => (
-          <section
-            key={i}
-            style={{
-              flex: "0 0 100vw",
-              height: "100vh",
-              scrollSnapAlign: "start",
-              background: "#f9f9f9",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              padding: "2rem",
-              boxSizing: "border-box",
-              position: "relative",
-            }}
-          >
-            <h2 style={{ fontSize: "2.2rem", marginBottom: "1rem" }}>{section.title}</h2>
-            <p style={{ maxWidth: "600px", textAlign: "center" }}>{section.text}</p>
-            {section.image && (
-              <img
-                src={section.image}
-                alt={section.title}
-                style={{
-                  marginTop: "2rem",
-                  maxWidth: "80%",
-                  maxHeight: "50vh",
-                  objectFit: "cover",
-                  borderRadius: "12px",
-                  boxShadow: "0 4px 20px rgba(0,0,0,0.2)",
-                }}
-              />
-            )}
+       {content.map((section, i) => {
+  const isLogofolio = slug === "logofolio";
 
-            {i === 0 && showInstruction && (
-              <div
-                style={{
-                  position: "absolute",
-                  bottom: "30px",
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  background: "rgba(0,0,0,0.6)",
-                  color: "white",
-                  padding: "8px 16px",
-                  borderRadius: "20px",
-                  fontSize: "14px",
-                  animation: "fadeIn 2s ease-in-out",
-                }}
-              >
-                Click arrows or scroll horizontally →
-                <style>{`
-                  @keyframes fadeIn {
-                    0% { opacity: 0; }
-                    100% { opacity: 1; }
-                  }
-                `}</style>
-              </div>
-            )}
-          </section>
-        ))}
+  return (
+    <section
+      key={i}
+      style={{
+        flex: "0 0 100vw",
+        height: "100vh",
+        scrollSnapAlign: "start",
+        background: "#f9f9f9",
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        padding: "2rem",
+        boxSizing: "border-box",
+        gap: "2rem",
+      }}
+    >
+      {/* Column 1: Title + Text (20%) */}
+      <div
+        style={{
+          width: "20%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          textAlign: "left",
+          minWidth: "180px",
+        }}
+      >
+        <h2 style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>{section.title}</h2>
+        <p style={{ fontSize: "0.65rem", lineHeight: "1.5" }}>{section.text}</p>
+      </div>
+
+      {/* Column 2: First image */}
+      {section.image && (
+        <div
+          style={{
+            width: isLogofolio ? "40%" : "80%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <img
+            src={section.image}
+            alt={section.title}
+            style={{
+              width: "100%",
+              height: "auto",
+              maxHeight: "70vh",
+              objectFit: "contain",
+              borderRadius: "12px",
+              boxShadow: "0 4px 20px rgba(0,0,0,1)",
+              backgroundColor: "#fff",
+            }}
+          />
+        </div>
+      )}
+
+      {/* Column 3: Second image (only for logofolio) */}
+      {isLogofolio && section.image2 && (
+        <div
+          style={{
+            width: "40%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <img
+            src={section.image2}
+            alt={`${section.title} (Alt)`}
+            style={{
+              width: "100%",
+              height: "auto",
+              maxHeight: "70vh",
+              objectFit: "contain",
+              borderRadius: "12px",
+              boxShadow: "0 4px 20px rgba(0,0,0,1)",
+               backgroundColor: "#000",
+            }}
+          />
+        </div>
+      )}
+
+      {/* Instruction Overlay (First Slide Only) */}
+      {i === 0 && showInstruction && (
+        <div
+          style={{
+            position: "absolute",
+            bottom: "20px",
+            left: "50%",
+            transform: "translateX(-50%)",
+            background: "rgba(0,0,0,0.6)",
+            color: "white",
+            padding: "8px 16px",
+            borderRadius: "20px",
+            fontSize: "14px",
+            animation: "fadeIn 2s ease-in-out",
+          }}
+        >
+          Click arrows or scroll horizontally →
+          <style>{`
+            @keyframes fadeIn {
+              0% { opacity: 0; }
+              100% { opacity: 1; }
+            }
+          `}</style>
+        </div>
+      )}
+    </section>
+  );
+})}
+
       </motion.div>
     </div>
   );
