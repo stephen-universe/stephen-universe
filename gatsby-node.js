@@ -1,12 +1,12 @@
 const path = require("path")
 
 
-const detailContent = require("./src/data/detailContent");
+const projectDetails = require("./src/data/projectDetails");
 
 exports.createPages = async ({ actions }) => {
   const { createPage } = actions;
 
-  Object.keys(detailContent).forEach((slug) => {
+  Object.keys(projectDetails).forEach((slug) => {
     createPage({
       path: `/project/${slug}`,
       component: path.resolve("./src/templates/project.js"),
