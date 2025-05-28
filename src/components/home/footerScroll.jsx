@@ -46,14 +46,14 @@ stickyMask.current.style.setProperty("--mask-size", `${maskSize}%`);
         <div className="text-animation-border-top"></div>
       </div>
 
-      <main className="sticky-main">
+      <main className="sticky-main" style={{ height: '100vh' }}>
         <div ref={stickyContainer} className="stickyContainer">
           <div ref={stickyMask} className="stickyMask">
             <div
-  className={`quote-overlay ${scrollProgress >= 0.85 ? "visible" : "hidden"}`}
+  className={`quote-overlay ${scrollProgress >= 0.80 ? "visible" : "hidden"}`}
 >
   <p className="emoji has-text-centered">✨</p>
-  <Quote shouldAnimate={scrollProgress >= 0.85} />
+  <Quote shouldAnimate={scrollProgress >= 0.80} />
 </div>
 
             <video autoPlay muted loop playsInline>
