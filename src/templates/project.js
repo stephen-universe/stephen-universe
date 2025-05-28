@@ -214,6 +214,7 @@ export default function ProjectDetails({ pageContext }) {
         <div
           style={{
             width: isLogofolio ? "40%" : "80%",
+            height: isLogofolio ? "75vh" : "93vh",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -225,8 +226,8 @@ export default function ProjectDetails({ pageContext }) {
             style={{
               width: "100%",
               height: "auto",
-              maxHeight: "70vh",
-              objectFit: "contain",
+              maxHeight: "100%",
+              objectFit: "cover",
               borderRadius: "12px",
               boxShadow: "0 4px 20px rgba(0,0,0,1)",
               backgroundColor: "#fff",
@@ -240,6 +241,7 @@ export default function ProjectDetails({ pageContext }) {
         <div
           style={{
             width: "40%",
+            height: "75vh",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -251,8 +253,8 @@ export default function ProjectDetails({ pageContext }) {
             style={{
               width: "100%",
               height: "auto",
-              maxHeight: "70vh",
-              objectFit: "contain",
+              maxHeight: "100%",
+              objectFit: "cover",
               borderRadius: "12px",
               boxShadow: "0 4px 20px rgba(0,0,0,1)",
                backgroundColor: "#000",
