@@ -393,7 +393,7 @@ export default function About() {
 
       <MaskText dateString={dateTime.dateString} />
 
-      <div ref={containerRef} />
+      
 
 
   <div className="text-animation-container">  
