@@ -1,0 +1,22 @@
+{
+  "navigationLinks": [
+    {
+      "link": "/projects",
+      "heading": {
+        "mainText": "Projects",
+        "subText": "Global"
+      }
+    },
+    {
+      "link": "/contact",
+      "heading": {
+        "mainText": "Contact",
+        "subText": "Initialize"
+      }
+    },
+    {
+      "link": "mailto:launch@stephen-universe.com",
+      "text": "Hire Me"
+    }
+  ]
+}

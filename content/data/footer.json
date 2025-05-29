@@ -1,0 +1,15 @@
+{
+  "footerLinks": [
+    {
+      "text": "React",
+      "url": "https://react.dev",
+      "className": "text-link"
+    }
+  ],
+  "footerText": [
+    {
+      "text1": "Made with ❤ Using",
+      "text2": "All Right Reserved."
+    }
+  ]
+}

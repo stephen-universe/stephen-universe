@@ -1,0 +1,35 @@
+{
+
+  "siteSettings": {
+    "siteName": "Stephen-Universe",
+    "siteOwner": "Stephen A. Warren, J.R"
+  },
+  "preloader": {
+    "image": "/scroll-btn.png",
+    "alt": "logo"
+  },
+  "companyLogo": {
+    "logo": {
+      "image": "/logo-icon.png",
+      "alt": "logo"
+    }
+  },
+  "social": {
+    "fb": {
+      "title": "Facebook",
+      "link": "https://facebook.com"
+    },
+    "ig": {
+      "title": "Instagram",
+      "link": "https://instagram.com"
+    },
+    "github": {
+      "title": "GitHub",
+      "link": "https://github.com"
+    },
+    "linkedin": {
+      "title": "Linkedin",
+      "link": "https://linkedin.com"
+    }
+  }
+}
