@@ -26,15 +26,15 @@ export default function ProjectDetails({ pageContext }) {
     };
   }, []);
 
-  const goToSlide = (index) => {
-    setShowInstruction(false);
-    if (scrollRef.current) {
-      scrollRef.current.scrollTo({
-        left: window.innerWidth * index,
-        behavior: "smooth",
-      });
-    }
-  };
+const goToSlide = (index) => {
+  setShowInstruction(false);
+  if (scrollRef.current && typeof window !== 'undefined') {
+    scrollRef.current.scrollTo({
+      left: window.innerWidth * index,
+      behavior: "smooth",
+    });
+  }
+};
 
   const nextSlide = () => {
     if (currentSlide < content.length - 1) {
@@ -52,11 +52,12 @@ export default function ProjectDetails({ pageContext }) {
     const container = scrollRef.current;
     if (!container) return;
 
-    const handleScroll = () => {
-      const slideIndex = Math.round(container.scrollLeft / window.innerWidth);
-      setCurrentSlide(slideIndex);
-    };
-
+const handleScroll = () => {
+  if (typeof window !== 'undefined' && scrollRef.current) {
+    const slideIndex = Math.round(scrollRef.current.scrollLeft / window.innerWidth);
+    setCurrentSlide(slideIndex);
+  }
+};
     container.addEventListener("scroll", handleScroll);
     return () => container.removeEventListener("scroll", handleScroll);
   }, []);
@@ -88,13 +89,15 @@ export default function ProjectDetails({ pageContext }) {
     };
   }, []);
 
-  const goBack = () => {
+const goBack = () => {
+  if (typeof window !== 'undefined') {
     if (window.history.length > 1) {
       window.history.back();
     } else {
       navigate("/");
     }
-  };
+  }
+};
 
   return (
     <div style={{ position: "relative", height: "100vh", width: "100vw" }}>
