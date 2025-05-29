@@ -155,26 +155,26 @@ const projectDetails = {
         image: "/images/Queendom-Farms-Home.jpg",
       },
     ],
-    purpleSociety: [
+    epicFuture: [
       {
         title: "Project Discovery",
         text: "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
-        image: "/images/discovery.png",
+        image: "/images/EpicFuture-bw.png",
       },
       {
         title: "Concept Development",
         text: "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy.",
-        image: "/images/concepts.png",
+        image: "/images/EpicFuture-home.png",
       },
       {
         title: "Design Execution",
         text: "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
-        image: "/images/design.png",
+        image: "/images/EpicFuture-cities.png",
       },
       {
         title: "Client Collaboration",
         text: "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations.",
-        image: "/images/collab.png",
+        image: "/images/EpicFuture-Eight.png",
       },
       {
         title: "Brand Application",
@@ -219,27 +219,82 @@ const projectDetails = {
       {
         title: "Project Discovery",
         text: "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
-        image: "/images/discovery.png",
+        image: "/images/PerfectlyDifferent-screens.png",
       },
       {
         title: "Concept Development",
         text: "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy.",
-        image: "/images/concepts.png",
+        image: "/images/PerfectlyDifferent-brief.png",
       },
       {
         title: "Design Execution",
         text: "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
-        image: "/images/design.png",
+        image: "/images/Perfectly-Different-quote.png",
       },
       {
         title: "Client Collaboration",
         text: "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations.",
-        image: "/images/collab.png",
+        image: "/images/Perfectly-Different-requirements.png",
       },
       {
         title: "Brand Application",
         text: "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-        image: "/images/mockups.png",
+        image: "/images/Perfectly-Different-needs.png",
+      },
+            {
+        title: "Project Discovery",
+        text: "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
+        image: "/images/Perfectly-Different-research.png",
+      },
+      {
+        title: "Concept Development",
+        text: "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy.",
+        image: "/images/Perfectly-Different-interviews.png",
+      },
+      {
+        title: "Design Execution",
+        text: "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
+        image: "/images/Perfectly-Different-user-needs.jpg",
+      },
+      {
+        title: "Client Collaboration",
+        text: "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations.",
+        image: "/images/Perfectly-Different-user-type-1.png",
+      },
+      {
+        title: "Brand Application",
+        text: "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
+        image: "/images/Perfectly-Different-user-type-2.png",
+      },
+            {
+        title: "Design Execution",
+        text: "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
+        image: "/images/Perfectly-Different-scenarios.png",
+      },
+      {
+        title: "Client Collaboration",
+        text: "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations.",
+        image: "/images/Perfectly-Different-compare.png",
+      },
+      {
+        title: "Brand Application",
+        text: "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
+        image: "/images/Perfectly-Different-app-preview.png",
+      },
+            {
+        title: "Project Discovery",
+        text: "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
+        image: "/images/Perfectly-Different-app-layout.png",
+      },
+      {
+        title: "Concept Development",
+        text: "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy.",
+        image: "/images/Perfectly-Different-app-pages.png",
+      },
+      {
+        title: "Design Execution",
+        text: "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
+        image: "/images/perfectly-different-thanks.png",
       },
     ],
   };
