@@ -382,21 +382,19 @@ export default function About() {
       style={{ position: "relative" }}
     >
       <div className="text-animation-border-top"></div>
-      <div className="row">
         <div className="text-animation-text">
           <p>// About</p>
         </div>
         <div className="text-animation-clock">
           <i className="fa-solid fa-earth-americas"></i> {dateTime.timeString}
         </div>
-      </div>
 
       <MaskText dateString={dateTime.dateString} />
 
       
 
 
-  <div className="text-animation-container">  
+
  <div
   className="door-wrapper"
   ref={wrapperRef}
@@ -435,7 +433,7 @@ export default function About() {
     />
   ))}
 </div>
-</div>
+
 
       <div
   className=" columns is-multiline is-desktop is-mobile is-flex is-justify-content-center has-text-centered"
