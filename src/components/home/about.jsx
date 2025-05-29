@@ -119,7 +119,7 @@ const MaskText = ({ dateString }) => {
               <span className="about-title">Hi</span> <br />
               <span className="about-subtitle">My name is</span>
               <br />
-              <span className="about-title">Stephen A. Warren</span>
+              <span className="about-title">Stephen Warren</span>
               <br />
               <span className="about-subtitle is-italic">
                 A multi-disciplinary designer & developer.
