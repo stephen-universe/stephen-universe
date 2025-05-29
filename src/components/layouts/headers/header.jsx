@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import React, { useState } from "react";
-import appData from "../../../../content/settings/setting.json";
+import appData from "../../../../content/data/setting.json";
 
 export default function Index({ menuIsActive, setMenuIsActive }) {
   const navItems = [];

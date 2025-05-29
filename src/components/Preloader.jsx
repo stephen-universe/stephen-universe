@@ -1,4 +1,4 @@
-import appData from "../../content/settings/setting.json";
+import appData from "../../content/data/setting.json";
 import React from "react";
 
 const Preloader = () => {
