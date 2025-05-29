@@ -53,27 +53,28 @@ const projectDetails = {
       {
         title: "Project Discovery",
         text: "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
-        image: "/Ana-Rose-residential.png",
+        image: "/images/Ana-Rose-residential.png",
+      },
+            {
+        title: "Client Collaboration",
+        text: "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations.",
+        image: "/images/Ana-Rose-booking.png",
       },
       {
         title: "Concept Development",
         text: "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy.",
-        image: "/images/concepts.png",
+        image: "/images/Ana-Rose-faqs.png",
       },
       {
         title: "Design Execution",
         text: "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
-        image: "/images/design.png",
+        image: "/images/Ana-Rose-modal-two.png",
       },
-      {
-        title: "Client Collaboration",
-        text: "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations.",
-        image: "/images/collab.png",
-      },
+
       {
         title: "Brand Application",
         text: "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-        image: "/images/mockups.png",
+        image: "/images/Ana-Rose-reviews.png",
       },
     ],
     queendomFarms: [
@@ -179,7 +180,13 @@ const projectDetails = {
       {
         title: "Brand Application",
         text: "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-        image: "/images/mockups.png",
+        image: "/images/EpicFuture-styles.png",
+      },
+            {
+        title: "Brand Application",
+        text: "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
+        image: "/images/EpicFuture-clip.mp4",
+        video: "/videos/EpicFuture-clip.mp4",
       },
     ],
     consolidatedConstructionSolutions: [
@@ -212,7 +219,7 @@ const projectDetails = {
       {
         title: "Brand Application",
         text: "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-        image: "/images/CCS-Mocks.png",
+        image: "/images/CCS-website.png",
       },
     ],
     perfectlyDifferent: [
