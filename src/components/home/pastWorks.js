@@ -59,14 +59,14 @@ const [scale, setScale] = useState(1);
             <div className="column is-12-mobile is-6-tablet is-6-desktop has-text-centered">
               <TiltCard
                 image="/Queendom-Farms-Home.jpg"
-                link="/project/logofolio"
+                link="/project/queendomFarms"
               />
             
             </div>
             <div className="column is-12-mobile is-6-tablet is-6-desktop has-text-centered">
               <TiltCard
                 image="/CCS.png"
-                link="/project/logofolio"
+                link="/project/consolidatedConstructionSolutions"
               />
             
             </div>
@@ -75,14 +75,14 @@ const [scale, setScale] = useState(1);
 
               <TiltCard
                 image="/Ana-Rose-home.jpg"
-                link="/project/logofolio"
+                link="/project/anaRose"
               />
             
             </div>
             <div className="column is-12-mobile is-6-tablet is-6-desktop has-text-centered">
               <TiltCard
   image="/perfectly-different.png"
-  link="/project/logofolio"
+  link="/project/perfectlyDifferent"
 />
             
             </div>
