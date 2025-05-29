@@ -11,6 +11,20 @@ export default function ProjectDetails({ pageContext }) {
   const scrollRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showInstruction, setShowInstruction] = useState(true);
+  const [isLandscape, setIsLandscape] = useState(window.innerWidth > window.innerHeight); // ⭐ NEW
+
+  // ⭐ NEW: Check orientation on resize or rotation
+  useEffect(() => {
+    const checkOrientation = () => {
+      setIsLandscape(window.innerWidth > window.innerHeight);
+    };
+    window.addEventListener("resize", checkOrientation);
+    window.addEventListener("orientationchange", checkOrientation);
+    return () => {
+      window.removeEventListener("resize", checkOrientation);
+      window.removeEventListener("orientationchange", checkOrientation);
+    };
+  }, []);
 
   const goToSlide = (index) => {
     setShowInstruction(false);
@@ -84,245 +98,266 @@ export default function ProjectDetails({ pageContext }) {
 
   return (
     <div style={{ position: "relative", height: "100vh", width: "100vw" }}>
-      <button
-        onClick={goBack}
-        style={{
-          position: "absolute",
-          zIndex: 20,
-          top: 20,
-          left: 20,
-          padding: "0.5rem 1rem",
-          background: "#111",
-          color: "#fff",
-          border: "none",
-          borderRadius: "6px",
-          cursor: "pointer",
-        }}
-      >
-        ← Back
-      </button>
-
-      {currentSlide > 0 && (
-        <button
-          onClick={prevSlide}
-          style={{
-            position: "absolute",
-            zIndex: 15,
-            top: "50%",
-            left: "20px",
-            transform: "translateY(-50%)",
-            background: "rgba(0,0,0,0.1)",
-            color: "#e84834",
-            border: "none",
-            borderRadius: "50%",
-            width: "50px",
-            height: "50px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            cursor: "pointer",
-            fontSize: "24px",
-            boxShadow: "0 2px 10px rgba(0,0,0,0.2)",
-          }}
-          aria-label="Previous slide"
-        >
-          ←
-        </button>
-      )}
-
-      {currentSlide < content.length - 1 && (
-        <button
-          onClick={nextSlide}
-          style={{
-            position: "absolute",
-            zIndex: 15,
-            top: "50%",
-            right: "20px",
-            transform: "translateY(-50%)",
-            background: "rgba(0,0,0,0.1)",
-            color: "#e84834",
-            border: "none",
-            borderRadius: "50%",
-            width: "50px",
-            height: "50px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            cursor: "pointer",
-            fontSize: "24px",
-            boxShadow: "0 2px 10px rgba(0,0,0,0.2)",
-          }}
-          aria-label="Next slide"
-        >
-          →
-        </button>
-      )}
-
-      <motion.div
-        ref={scrollRef}
-        initial={{ scale: 0.95, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.9, opacity: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className="project-slider"
-        style={{
-          display: "flex",
-          overflowX: "scroll",
-          overflowY: "hidden", // ✅ vertical scroll off
-          scrollSnapType: "mandatory",
-          height: "100vh",
-          width: "100vw",
-        }}
-      >
-       {content.map((section, i) => {
-  const isLogofolio = slug === "logofolio";
-
-  return (
-    <section
-      key={i}
-      style={{
-        flex: "0 0 100vw",
-        height: "100vh",
-        scrollSnapAlign: "start",
-        background: "#f9f9f9",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: "2rem",
-        boxSizing: "border-box",
-        gap: "2rem",
-      }}
-    >
-      {/* Column 1: Title + Text (20%) */}
-      <div
-        style={{
-          width: "20%",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          textAlign: "left",
-          minWidth: "180px",
-        }}
-      >
-        <h2 style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>{section.title}</h2>
-        <p style={{ fontSize: "0.65rem", lineHeight: "1.5" }}>{section.text}</p>
-      </div>
-
-      {/* Column 2: First image */}
-     {/* Column 2: Video or Image */}
-{section.video ? (
-  <div
-    style={{
-      width: "80%",
-      height: "93vh",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-    }}
-  >
-    <video
-      controls
-      muted
-      loop
-      playsInline
-      style={{
-        width: "100%",
-        height: "auto",
-        maxHeight: "100%",
-        borderRadius: "12px",
-        boxShadow: "0 4px 20px rgba(0,0,0,1)",
-        backgroundColor: "#000",
-      }}
-    >
-      <source src={section.video} type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  </div>
-) : section.image && (
-  <div
-    style={{
-      width: isLogofolio ? "40%" : "80%",
-      height: isLogofolio ? "75vh" : "93vh",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-    }}
-  >
-    <img
-      src={section.image}
-      alt={section.title}
-      style={{
-        width: "100%",
-        height: "auto",
-        maxHeight: "100%",
-        objectFit: "cover",
-        borderRadius: "12px",
-        boxShadow: "0 4px 20px rgba(0,0,0,1)",
-        backgroundColor: "#fff",
-      }}
-    />
-  </div>
-)}
-
-
-      {/* Column 3: Second image (only for logofolio) */}
-      {isLogofolio && section.image2 && (
+      {/* ⭐ NEW: Orientation warning */}
+      {!isLandscape && (
         <div
           style={{
-            width: "40%",
-            height: "75vh",
+            position: "fixed",
+            zIndex: 9999,
+            top: 0,
+            left: 0,
+            width: "100vw",
+            height: "100vh",
+            background: "#000",
+            color: "#fff",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            textAlign: "center",
+            padding: "2rem",
+            fontSize: "1.25rem",
           }}
         >
-          <img
-            src={section.image2}
-            alt={`${section.title} (Alt)`}
+          Please rotate your device to <strong>landscape</strong> to view this project properly.
+        </div>
+      )}
+
+      {isLandscape && (
+        <>
+          <button
+            onClick={goBack}
             style={{
-              width: "100%",
-              height: "auto",
-              maxHeight: "100%",
-              objectFit: "cover",
-              borderRadius: "12px",
-              boxShadow: "0 4px 20px rgba(0,0,0,1)",
-               backgroundColor: "#000",
+              position: "absolute",
+              zIndex: 20,
+              top: 20,
+              left: 20,
+              padding: "0.5rem 1rem",
+              background: "#111",
+              color: "#fff",
+              border: "none",
+              borderRadius: "6px",
+              cursor: "pointer",
             }}
-          />
-        </div>
-      )}
+          >
+            ← Back
+          </button>
 
-      {/* Instruction Overlay (First Slide Only) */}
-      {i === 0 && showInstruction && (
-        <div
-          style={{
-            position: "absolute",
-            bottom: "20px",
-            left: "50%",
-            transform: "translateX(-50%)",
-            background: "rgba(0,0,0,0.6)",
-            color: "white",
-            padding: "8px 16px",
-            borderRadius: "20px",
-            fontSize: "14px",
-            animation: "fadeIn 2s ease-in-out",
-          }}
-        >
-          Click arrows or scroll horizontally →
-          <style>{`
-            @keyframes fadeIn {
-              0% { opacity: 0; }
-              100% { opacity: 1; }
-            }
-          `}</style>
-        </div>
-      )}
-    </section>
-  );
-})}
+          {currentSlide > 0 && (
+            <button
+              onClick={prevSlide}
+              style={{
+                position: "absolute",
+                zIndex: 15,
+                top: "50%",
+                left: "20px",
+                transform: "translateY(-50%)",
+                background: "rgba(0,0,0,0.1)",
+                color: "#e84834",
+                border: "none",
+                borderRadius: "50%",
+                width: "50px",
+                height: "50px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+                fontSize: "24px",
+                boxShadow: "0 2px 10px rgba(0,0,0,0.2)",
+              }}
+              aria-label="Previous slide"
+            >
+              ←
+            </button>
+          )}
 
-      </motion.div>
+          {currentSlide < content.length - 1 && (
+            <button
+              onClick={nextSlide}
+              style={{
+                position: "absolute",
+                zIndex: 15,
+                top: "50%",
+                right: "20px",
+                transform: "translateY(-50%)",
+                background: "rgba(0,0,0,0.1)",
+                color: "#e84834",
+                border: "none",
+                borderRadius: "50%",
+                width: "50px",
+                height: "50px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+                fontSize: "24px",
+                boxShadow: "0 2px 10px rgba(0,0,0,0.2)",
+              }}
+              aria-label="Next slide"
+            >
+              →
+            </button>
+          )}
+
+          <motion.div
+            ref={scrollRef}
+            initial={{ scale: 0.95, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.9, opacity: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="project-slider"
+            style={{
+              display: "flex",
+              overflowX: "scroll",
+              overflowY: "hidden",
+              scrollSnapType: "mandatory",
+              height: "100vh",
+              width: "100vw",
+            }}
+          >
+            {content.map((section, i) => {
+              const isLogofolio = slug === "logofolio";
+
+              return (
+                <section
+                  key={i}
+                  style={{
+                    flex: "0 0 100vw",
+                    height: "100vh",
+                    scrollSnapAlign: "start",
+                    background: "#f9f9f9",
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    padding: "2rem",
+                    boxSizing: "border-box",
+                    gap: "2rem",
+                  }}
+                >
+                  <div
+                    style={{
+                      width: "20%",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      textAlign: "left",
+                      minWidth: "180px",
+                    }}
+                  >
+                    <h2 style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>{section.title}</h2>
+                    <p style={{ fontSize: "0.65rem", lineHeight: "1.5" }}>{section.text}</p>
+                  </div>
+
+                  {section.video ? (
+                    <div
+                      style={{
+                        width: "80%",
+                        height: "93vh",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <video
+                        controls
+                        muted
+                        loop
+                        playsInline
+                        style={{
+                          width: "100%",
+                          height: "auto",
+                          maxHeight: "100%",
+                          borderRadius: "12px",
+                          boxShadow: "0 4px 20px rgba(0,0,0,1)",
+                          backgroundColor: "#000",
+                        }}
+                      >
+                        <source src={section.video} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  ) : section.image && (
+                    <div
+                      style={{
+                        width: isLogofolio ? "40%" : "80%",
+                        height: isLogofolio ? "75vh" : "93vh",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <img
+                        src={section.image}
+                        alt={section.title}
+                        style={{
+                          width: "100%",
+                          height: "auto",
+                          maxHeight: "100%",
+                          objectFit: "cover",
+                          borderRadius: "12px",
+                          boxShadow: "0 4px 20px rgba(0,0,0,1)",
+                          backgroundColor: "#fff",
+                        }}
+                      />
+                    </div>
+                  )}
+
+                  {isLogofolio && section.image2 && (
+                    <div
+                      style={{
+                        width: "40%",
+                        height: "75vh",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <img
+                        src={section.image2}
+                        alt={`${section.title} (Alt)`}
+                        style={{
+                          width: "100%",
+                          height: "auto",
+                          maxHeight: "100%",
+                          objectFit: "cover",
+                          borderRadius: "12px",
+                          boxShadow: "0 4px 20px rgba(0,0,0,1)",
+                          backgroundColor: "#000",
+                        }}
+                      />
+                    </div>
+                  )}
+
+                  {i === 0 && showInstruction && (
+                    <div
+                      style={{
+                        position: "absolute",
+                        bottom: "20px",
+                        left: "50%",
+                        transform: "translateX(-50%)",
+                        background: "rgba(0,0,0,0.6)",
+                        color: "white",
+                        padding: "8px 16px",
+                        borderRadius: "20px",
+                        fontSize: "14px",
+                        animation: "fadeIn 2s ease-in-out",
+                      }}
+                    >
+                      Click arrows or scroll horizontally →
+                      <style>{`
+                        @keyframes fadeIn {
+                          0% { opacity: 0; }
+                          100% { opacity: 1; }
+                        }
+                      `}</style>
+                    </div>
+                  )}
+                </section>
+              );
+            })}
+          </motion.div>
+        </>
+      )}
     </div>
   );
 }
