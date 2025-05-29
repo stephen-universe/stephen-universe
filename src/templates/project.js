@@ -121,8 +121,8 @@ export default function ProjectDetails({ pageContext }) {
           }}
         >
           <div>
-            <h2 style={{ marginBottom: "1rem" }}>Rotate your device</h2>
-            <p>This page looks better in landscape mode.</p>
+            <h2 style={{ marginBottom: "1rem" }}>For A Better Viewing Experience</h2>
+            <p>Please rotate your device to landscape mode.</p>
           </div>
         </div>
       )}
