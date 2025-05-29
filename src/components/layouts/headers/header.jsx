@@ -5,16 +5,6 @@ import appData from "../../../../content/data/setting.json";
 export default function Index({ menuIsActive, setMenuIsActive }) {
   const navItems = [];
 
-  appData.header.menu.forEach((item, index) => {
-    let s_class1 = "";
-
-    if (item.children != 0) {
-      s_class1 = "menu-item-has-children";
-    }
-    let newobj = Object.assign({}, item, { classes: s_class1 });
-    navItems.push(newobj);
-  });
-
   const [desktopMenu, desktopMenuToggle] = useState(false);
   const [mobileMenu, mobileMenuToggle] = useState(false);
 
