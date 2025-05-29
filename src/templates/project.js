@@ -210,31 +210,61 @@ export default function ProjectDetails({ pageContext }) {
       </div>
 
       {/* Column 2: First image */}
-      {section.image && (
-        <div
-          style={{
-            width: isLogofolio ? "40%" : "80%",
-            height: isLogofolio ? "75vh" : "93vh",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <img
-            src={section.image}
-            alt={section.title}
-            style={{
-              width: "100%",
-              height: "auto",
-              maxHeight: "100%",
-              objectFit: "cover",
-              borderRadius: "12px",
-              boxShadow: "0 4px 20px rgba(0,0,0,1)",
-              backgroundColor: "#fff",
-            }}
-          />
-        </div>
-      )}
+     {/* Column 2: Video or Image */}
+{section.video ? (
+  <div
+    style={{
+      width: "80%",
+      height: "93vh",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    }}
+  >
+    <video
+      controls
+      muted
+      loop
+      playsInline
+      style={{
+        width: "100%",
+        height: "auto",
+        maxHeight: "100%",
+        borderRadius: "12px",
+        boxShadow: "0 4px 20px rgba(0,0,0,1)",
+        backgroundColor: "#000",
+      }}
+    >
+      <source src={section.video} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+) : section.image && (
+  <div
+    style={{
+      width: isLogofolio ? "40%" : "80%",
+      height: isLogofolio ? "75vh" : "93vh",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    }}
+  >
+    <img
+      src={section.image}
+      alt={section.title}
+      style={{
+        width: "100%",
+        height: "auto",
+        maxHeight: "100%",
+        objectFit: "cover",
+        borderRadius: "12px",
+        boxShadow: "0 4px 20px rgba(0,0,0,1)",
+        backgroundColor: "#fff",
+      }}
+    />
+  </div>
+)}
+
 
       {/* Column 3: Second image (only for logofolio) */}
       {isLogofolio && section.image2 && (
