@@ -1,7 +1,7 @@
 const path = require("path")
 
 
-const projectDetails = require("./src/data/projectDetails");
+const projectDetails = require("./content/data/projects.json");
 
 exports.createPages = async ({ actions }) => {
   const { createPage } = actions;
