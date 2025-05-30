@@ -2,15 +2,12 @@ import React, { useRef, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Link } from "gatsby";
-
-
+import appData from "../../../content/data/home.json";
 
 const parallaxImages = [
   { src: "right-door.png", alt: "Right Door", initialX: "25%", initialY: "0%" },
   { src: "left-door.png", alt: "Left Door", initialX: "120%", initialY: "0%" },
 ];
-
-
 
 // Date/Time Helper
 function getCurrentDateTime() {
@@ -46,13 +43,9 @@ function getCurrentDateTime() {
   };
 }
 
-
-
-// Masked Intro Text
 const MaskText = ({ dateString }) => {
   const [scrollDirection, setScrollDirection] = useState("down");
 
-  // Detect scroll direction
   useEffect(() => {
     let lastScrollY = window.scrollY;
 
@@ -97,13 +90,8 @@ const MaskText = ({ dateString }) => {
   };
 
   return (
-    <div
-      ref={ref}
-      className="text-animation-body"
-    >
-      <div
-        className="vertical-text-container"
-      >
+    <div ref={ref} className="text-animation-body">
+      <div className="vertical-text-container">
         <p className="vertical-text">{dateString}</p>
       </div>
 
@@ -116,64 +104,55 @@ const MaskText = ({ dateString }) => {
               animate={inView ? "animate" : ""}
               variants={animationVariants}
             >
-              <span className="about-title">Hi</span> <br />
-              <span className="about-subtitle">My name is</span>
+              <span className="about-title">{appData.introLines.line1}</span> <br />
+              <span className="about-subtitle">{appData.introLines.line2}</span>
               <br />
-              <span className="about-title">Stephen Warren</span>
+              <span className="about-title">{appData.introLines.line3}</span>
               <br />
               <span className="about-subtitle is-italic">
-                A multi-disciplinary designer & developer.
+                {appData.introLines.line4}
               </span>
             </motion.p>
           </div>
 
-<div className="rotating-text has-text-centered column is-5-desktop is-5-tablet is-10-mobile">
-  <motion.p
-    custom={1}
-    initial="initial"
-    animate={inView ? "animate" : ""}
-    variants={animationVariants}
-  >
-    And I <RotatingWord inView={inView} />{" "}
-    <span className="rotating-centered-text">experiences!</span>
-  </motion.p>
-</div>
+          <div className="rotating-text has-text-centered column is-5-desktop is-5-tablet is-10-mobile">
+            <motion.p
+              custom={1}
+              initial="initial"
+              animate={inView ? "animate" : ""}
+              variants={animationVariants}
+            >
+              {appData.combinedStatement.statement1} <RotatingWord inView={inView} />{" "}
+              <span className="rotating-centered-text">
+                {appData.combinedStatement.statement2}
+              </span>
+            </motion.p>
+          </div>
 
-<motion.div
-  className="orb has-text-centered column is-3-desktop is-3-tablet is-0-mobile"
-  role="presentation"
-  aria-hidden="true"
-  animate={{
-    boxShadow: [
-      '0 0 25px rgba(0, 174, 255, 0.2)',
-      '0 0 35px rgba(0, 174, 255, 0.2)',
-      '0 0 25px rgba(0, 174, 255, 0.2)'
-    ]
-  }}
-  transition={{
-    duration: 6,
-    repeat: Infinity,
-    ease: "easeInOut"
-  }}
->
-  {/* Floating "moon" element */}
-
-</motion.div>
-
-
+          <motion.div
+            className="orb has-text-centered column is-3-desktop is-3-tablet is-0-mobile"
+            role="presentation"
+            aria-hidden="true"
+            animate={{
+              boxShadow: [
+                '0 0 25px rgba(0, 174, 255, 0.2)',
+                '0 0 35px rgba(0, 174, 255, 0.2)',
+                '0 0 25px rgba(0, 174, 255, 0.2)'
+              ]
+            }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
         </div>
       </div>
     </div>
   );
 };
 
-
-
-// RotatingWords Component
 const RotatingWord = ({ inView }) => {
-  const words = [ "create", "design", "build"];
-  const wordDuration = 1000;
-
   const wordVariants = {
     enter: {
       y: 20,
@@ -197,19 +176,17 @@ const RotatingWord = ({ inView }) => {
   useEffect(() => {
     if (!inView) return;
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % words.length);
-    }, wordDuration);
+      setCurrentIndex((prev) => (prev + 1) % appData.rotatingWords.length);
+    }, 1000);
     return () => clearInterval(interval);
   }, [inView]);
 
   return (
-    <span
-  className="rotating-word"
-    >
+    <span className="rotating-word">
       <AnimatePresence mode="wait">
         {inView && (
           <motion.span
-            key={words[currentIndex]}
+            key={appData.rotatingWords[currentIndex]}
             initial="enter"
             animate="center"
             exit="exit"
@@ -220,7 +197,7 @@ const RotatingWord = ({ inView }) => {
               whiteSpace: "nowrap",
             }}
           >
-            {words[currentIndex]}
+            {appData.rotatingWords[currentIndex]}
           </motion.span>
         )}
       </AnimatePresence>
@@ -228,17 +205,7 @@ const RotatingWord = ({ inView }) => {
   );
 };
 
-
-
-
-const ParallaxImage = ({
-  src,
-  alt,
-  initialX,
-  initialY,
-  index,
-  containerRef,
-}) => {
+const ParallaxImage = ({ src, alt, initialX, initialY, index, containerRef }) => {
   const [ref, inView] = useInView({ threshold: 0.00, triggerOnce: false });
   const imageRef = useRef(null);
 
@@ -255,9 +222,8 @@ const ParallaxImage = ({
         Math.max((start - containerRect.top) / (start - end), 0),
         1
       );
-      const maxMove = 250; // ← Increase this number to control how far doors open
+      const maxMove = 250;
       const moveAmount = maxMove * progress;
-
 
       const moveX =
         index === 0
@@ -289,10 +255,6 @@ const ParallaxImage = ({
   );
 };
 
-
-
-
-// Starfield Animation
 const Starfield = () => {
   const starCount = 20;
   const stars = Array.from({ length: starCount }).map((_, i) => {
@@ -307,7 +269,6 @@ const Starfield = () => {
   return <div className="starfield">{stars}</div>;
 };
 
-// StarCode Wrapper
 const StarCode = ({ children }) => (
   <code className="my-process-text">
     {children}
@@ -315,52 +276,41 @@ const StarCode = ({ children }) => (
   </code>
 );
 
-
-
-
-
-
-
-// Main About Component
 export default function About() {
   const containerRef = useRef(null);
   const [dateTime, setDateTime] = useState(getCurrentDateTime());
   const wrapperRef = useRef(null);
   const [scale, setScale] = useState(1);
 
-  
- useEffect(() => {
-  const handleScroll = () => {
-    if (!containerRef.current) return;
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!containerRef.current) return;
 
-    const containerRect = containerRef.current.getBoundingClientRect();
-    const viewportHeight = window.innerHeight;
-    const start = viewportHeight;
-    const end = -containerRect.height;
+      const containerRect = containerRef.current.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+      const start = viewportHeight;
+      const end = -containerRect.height;
 
-    const progress = Math.min(
-      Math.max((start - containerRect.top) / (start - end), 0),
-      1
-    );
+      const progress = Math.min(
+        Math.max((start - containerRect.top) / (start - end), 0),
+        1
+      );
 
-    // Start scaling *after* 75% progress
-    const zoomOutStart = 0.05;
+      const zoomOutStart = 0.05;
 
-    if (progress < zoomOutStart) {
-      setScale(0.6); // fully zoomed in
-    } else {
-      // progress between 0.75 and 1 maps to scale 1 → 0.6
-      const adjustedProgress = (progress - zoomOutStart) / (0.6 - zoomOutStart);
-      const minScale = 0.4;
-      setScale(1 - adjustedProgress * (0.6 - minScale));
-    }
-  };
+      if (progress < zoomOutStart) {
+        setScale(0.6);
+      } else {
+        const adjustedProgress = (progress - zoomOutStart) / (0.6 - zoomOutStart);
+        const minScale = 0.4;
+        setScale(1 - adjustedProgress * (0.6 - minScale));
+      }
+    };
 
-  window.addEventListener("scroll", handleScroll);
-  handleScroll();
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
-
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -370,18 +320,13 @@ export default function About() {
   }, []);
 
   return (
-
-<>
-
- 
- 
-
-    <div
-      className="text-animation-container"
-      ref={containerRef}
-      style={{ position: "relative" }}
-    >
-      <div className="text-animation-border-top"></div>
+    <>
+      <div
+        className="text-animation-container"
+        ref={containerRef}
+        style={{ position: "relative" }}
+      >
+        <div className="text-animation-border-top"></div>
         <div className="text-animation-text">
           <p>// About</p>
         </div>
@@ -389,92 +334,79 @@ export default function About() {
           <i className="fa-solid fa-earth-americas"></i> {dateTime.timeString}
         </div>
 
-      <MaskText dateString={dateTime.dateString} />
+        <MaskText dateString={dateTime.dateString} />
 
-      
+        <div
+          className="door-wrapper"
+          ref={wrapperRef}
+          style={{
+            transform: `scale(${scale})`,
+            transformOrigin: "center center",
+            position: "relative",
+          }}
+        >
+          <div className="door-background" style={{ zIndex: 0 }} />
 
+          <div className="door-text">
+            <p>{appData.doorMessages.message1}</p>
+            <p>{appData.doorMessages.message2}</p>
+            <Link to={appData.contact.link}>
+              <button className="mission-start is-primary is-rounded">
+                {appData.doorMessages.message3}
+              </button>
+            </Link>
+          </div>
 
+          {parallaxImages.map((img, index) => (
+            <ParallaxImage
+              key={index}
+              src={img.src}
+              alt={img.alt}
+              initialX={img.initialX}
+              initialY={img.initialY}
+              index={index}
+              containerRef={containerRef}
+            />
+          ))}
+        </div>
 
- <div
-  className="door-wrapper"
-  ref={wrapperRef}
-  style={{
-    transform: `scale(${scale})`,
-    transformOrigin: "center center",
-    position: "relative",
-  }}
->
-  {/* Background image */}
-  <div className="door-background" style={{ zIndex: 0 }} />
+        <div
+          className="columns is-multiline is-desktop is-mobile is-flex is-justify-content-center has-text-centered"
+          style={{
+            paddingTop: "10vw",
+            position: "relative",
+            zIndex: 1,
+          }}
+        >
+          <div className="column is-full-mobile is-5-tablet is-5-desktop">
+            <h2 className="emoji" style={{ textShadow: "none" }}>🚀</h2>
+            <h2 className="title">{appData.coreSystems.title}</h2>
+            <p className="my-process-p">
+              {appData.coreSystems.desc}
+            </p>
+            {Object.values(appData.coreSystems.skills).map((skill, index) => (
+              <React.Fragment key={index}>
+                <StarCode>{skill}</StarCode><br />
+              </React.Fragment>
+            ))}
+          </div>
 
-  {/* Text behind doors */}
-  <div
-    className="door-text"
-  >
-    <p>Take A Step</p>
-    <p>Into My World</p>
-    <Link to="/contact">
-    <button className="mission-start is-primary is-rounded">
-      Start Mission
-      </button>
-      </Link>
-  </div>
+          <div className="text-animation-border-right"></div>
 
-  {/* Doors */}
-  {parallaxImages.map((img, index) => (
-    <ParallaxImage
-      key={index}
-      src={img.src}
-      alt={img.alt}
-      initialX={img.initialX}
-      initialY={img.initialY}
-      index={index}
-      containerRef={containerRef}
-    />
-  ))}
-</div>
-
-
-      <div
-  className=" columns is-multiline is-desktop is-mobile is-flex is-justify-content-center has-text-centered"
-  style={{
-    paddingTop: "10vw",
-    position: "relative",
-    zIndex: 1,
-  }}
->
-  <div className="column is-full-mobile is-5-tablet is-5-desktop">
-    <h2 className="emoji" style={{ textShadow: "none" }}>🚀</h2>
-    <h2 className="title">Core Systems</h2>
-    <p className="my-process-p">
-      These are the main modules I bring on every mission — from creative
-      launches to technical deep space dives.
-    </p>
-    <StarCode>Graphic & Brand Design</StarCode><br />
-    <StarCode>Product Research & Design</StarCode><br />
-    <StarCode>Digital Marketing & Strategy</StarCode><br />
-    <StarCode>Web Design & Development</StarCode><br />
-    <StarCode>Video Editing & Production</StarCode>
-  </div>
-
-  <div className="text-animation-border-right"></div>
-
-  <div className="column is-full-mobile is-5-tablet is-5-desktop">
-    <h2 className="emoji" style={{ textShadow: "none" }}>👨🏾‍🚀</h2>
-    <h2 className="title">Field Systems</h2>
-    <p className="my-process-p">
-      Specialized tools & skills deployed across terrain—strategic, technical, creative.
-    </p>
-    <StarCode>Creative Direction & Art Systems</StarCode><br />
-    <StarCode>UI/UX & Design Systems</StarCode><br />
-    <StarCode>Client-Facing Documentation</StarCode><br />
-    <StarCode>Frontend Development</StarCode><br />
-    <StarCode>Motion Design & Prototyping</StarCode>
-  </div>
-</div>
-
-    </div>
-
+          <div className="column is-full-mobile is-5-tablet is-5-desktop">
+            <h2 className="emoji" style={{ textShadow: "none" }}>👨🏾‍🚀</h2>
+            <h2 className="title">{appData.fieldSystems.title}</h2>
+            <p className="my-process-p">
+              {appData.fieldSystems.desc}
+            </p>
+            {Object.values(appData.fieldSystems.skills).map((skill, index) => (
+              <React.Fragment key={index}>
+                <StarCode>{skill}</StarCode><br />
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
+      </div>
     </>
   );
 }

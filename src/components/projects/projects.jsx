@@ -1,44 +1,14 @@
 import React, { useState } from 'react';
 import Titles from './titles';
+import appData from '../../../content/data/projects.json';
 
-const data = [
-  {
-    title: "Logofolio",
-    description: "Working on the Next-Generation HMI Experience without no driving experience.",
-    speed: 0.5,
-    url: "/project/logofolio"
-  },
-  {
-    title: "Ana Rose",
-    description: "Developed the Future of UFC Sports Ecosystem despite not being a sports fan.",
-    speed: 0.5,
-    url: "/project/anaRose"
-  },
-  {
-    title: "Queendom Farms",
-    description: "Defined the visual concept and design language for the Lincoln Zephyr 2022 but never seen it in real life.",
-    speed: 0.67,
-    url: "/project/queendomFarms"
-  },
-  {
-    title: "Epic Future",
-    description: "I was just one person on a massive team that created an entire Royal Caribbean eco-system.",
-    speed: 0.8,
-    url: "/project/epicFuture"
-  },
-  {
-    title: "Consolidated Construction",
-    description: "Designed a 1M+ users product utilizing my best personal experience: sleeping.",
-    speed: 0.8,
-    url: "/project/consolidatedConstructionSolutions"
-  },
-  {
-    title: "Perfectly Different",
-    description: "Explored the Future of Fantasy Football while being in a country where football means a total different sport.",
-    speed: 1.2,
-    url: "/project/perfectlyDifferent"
-  }
-];
+// Dynamically transform all projects from the JSON
+const data = Object.keys(appData.projects).map(projectKey => ({
+  title: appData.projects[projectKey].meta.title,
+  description: appData.projects[projectKey].meta.description,
+  speed: appData.projects[projectKey].meta.speed,
+  url: appData.projects[projectKey].meta.url
+}));
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);

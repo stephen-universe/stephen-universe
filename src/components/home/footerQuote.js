@@ -2,11 +2,12 @@ import React, { useEffect, useRef } from "react"
 import { motion, useAnimation, useInView } from "framer-motion"
 import { Link } from "gatsby"
 import VideoModal from "./videoModal"
+import appData from "../../../content/data/home.json"
 
 export default function FooterQuote() {
   const controls = useAnimation()
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "0px 0px -100px 0px" }) // start before fully in view
+  const isInView = useInView(ref, { once: true, margin: "0px 0px -100px 0px" })
 
   useEffect(() => {
     if (isInView) {
@@ -14,38 +15,27 @@ export default function FooterQuote() {
     }
   }, [isInView, controls])
 
-const lineVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1.5,
-      ease: [0.42, 0, 0.2, 1] // Dramatic easing
+  const lineVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1.5,
+        ease: [0.42, 0, 0.2, 1] // Dramatic easing
+      }
     }
   }
-}
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.4,
-      delayChildren: 0.3,
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.4,
+        delayChildren: 0.3,
+      },
     },
-  },
-}
-
-
-  const lines = [
-    `"But you, you're supposed to change.`,
-    `You're never the same even moment to moment`,
-    `You're allowed and expected to invent who you are.`,
-    `What an incredible power -- the ability to 'grow up'."`,
-  ]
-
-  const signature = "--Rose Quartz"
-  const source = "Steven Universe"
+  }
 
   return (
     <motion.div
@@ -56,7 +46,7 @@ const containerVariants = {
       initial="hidden"
       animate={controls}
     >
-      {lines.map((line, index) => (
+      {appData.quote.lines.map((line, index) => (
         <motion.div key={index} variants={lineVariants}>
           {line}
           <br />
@@ -65,19 +55,14 @@ const containerVariants = {
 
       <motion.div className="has-text-centered nav-link" variants={lineVariants}>
         <br />
-        {signature}
+        {appData.quote.attribution.signature}
       </motion.div>
 
       <motion.div className="has-text-centered nav-link" variants={lineVariants}>
-        {source}
+        {appData.quote.attribution.source}
       </motion.div>
 
       <VideoModal />
     </motion.div>
   )
 }
-
-
-
-    
-

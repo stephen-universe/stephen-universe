@@ -2,11 +2,12 @@ import * as React from "react";
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { navigate } from "gatsby";
-import projectDetails from "../data/projectDetails"; // adjust if needed
+import projectDetails from "../../content/data/projects.json";
 
 export default function ProjectDetails({ pageContext }) {
   const { slug } = pageContext;
-  const content = projectDetails[slug] || [];
+  // Access the project items from the JSON structure
+  const content = projectDetails.projects[slug]?.project || [];
 
   const scrollRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -223,6 +224,8 @@ export default function ProjectDetails({ pageContext }) {
       >
         {content.map((section, i) => {
           const isLogofolio = slug === "logofolio";
+          const hasImages = isLogofolio && section.images;
+          const hasSingleImage = !isLogofolio && section.image;
 
           return (
             <section
@@ -243,7 +246,7 @@ export default function ProjectDetails({ pageContext }) {
             >
               <div style={{ width: "20%", minWidth: "180px" }}>
                 <h2 style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>{section.title}</h2>
-                <p style={{ fontSize: "0.65rem", lineHeight: "1.5" }}>{section.text}</p>
+                <p style={{ fontSize: "0.65rem", lineHeight: "1.5" }}>{section.description}</p>
               </div>
 
               {/* Media */}
@@ -267,11 +270,11 @@ export default function ProjectDetails({ pageContext }) {
                     Your browser does not support the video tag.
                   </video>
                 </div>
-              ) : section.image && (
+              ) : hasSingleImage ? (
                 <div
                   style={{
-                    width: isLogofolio ? "40%" : "80%",
-                    height: isLogofolio ? "75vh" : "93vh",
+                    width: "80%",
+                    height: "93vh",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
@@ -291,34 +294,59 @@ export default function ProjectDetails({ pageContext }) {
                     }}
                   />
                 </div>
-              )}
-
-              {/* Second image for logofolio */}
-              {isLogofolio && section.image2 && (
-                <div
-                  style={{
-                    width: "40%",
-                    height: "75vh",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <img
-                    src={section.image2}
-                    alt={`${section.title} (Alt)`}
+              ) : hasImages ? (
+                <>
+                  {/* First image for logofolio */}
+                  <div
                     style={{
-                      width: "100%",
-                      height: "auto",
-                      maxHeight: "100%",
-                      objectFit: "cover",
-                      borderRadius: "12px",
-                      boxShadow: "0 4px 20px rgba(0,0,0,1)",
-                      backgroundColor: "#000",
+                      width: "40%",
+                      height: "75vh",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
                     }}
-                  />
-                </div>
-              )}
+                  >
+                    <img
+                      src={section.images.white}
+                      alt={`${section.title} (White)`}
+                      style={{
+                        width: "100%",
+                        height: "auto",
+                        maxHeight: "100%",
+                        objectFit: "cover",
+                        borderRadius: "12px",
+                        boxShadow: "0 4px 20px rgba(0,0,0,1)",
+                        backgroundColor: "#fff",
+                      }}
+                    />
+                  </div>
+
+                  {/* Second image for logofolio */}
+                  <div
+                    style={{
+                      width: "40%",
+                      height: "75vh",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <img
+                      src={section.images.black}
+                      alt={`${section.title} (Black)`}
+                      style={{
+                        width: "100%",
+                        height: "auto",
+                        maxHeight: "100%",
+                        objectFit: "cover",
+                        borderRadius: "12px",
+                        boxShadow: "0 4px 20px rgba(0,0,0,1)",
+                        backgroundColor: "#000",
+                      }}
+                    />
+                  </div>
+                </>
+              ) : null}
 
               {/* Instruction Overlay */}
               {i === 0 && showInstruction && (
