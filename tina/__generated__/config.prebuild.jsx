@@ -644,435 +644,428 @@ var config_default = defineConfig({
         fields: [
           {
             type: "object",
-            name: "projects",
-            label: "Projects",
+            name: "logofolio",
+            label: "Logofolio",
             fields: [
               {
                 type: "object",
-                name: "logofolio",
-                label: "Logofolio",
+                name: "meta",
+                label: "Metadata",
                 fields: [
                   {
-                    type: "object",
-                    name: "meta",
-                    label: "Metadata",
-                    fields: [
-                      {
-                        type: "string",
-                        name: "title",
-                        label: "Title"
-                      },
-                      {
-                        type: "string",
-                        name: "description",
-                        label: "Description",
-                        ui: {
-                          component: "textarea"
-                        }
-                      },
-                      {
-                        type: "number",
-                        name: "speed",
-                        label: "Speed"
-                      },
-                      {
-                        type: "string",
-                        name: "url",
-                        label: "URL"
-                      }
-                    ]
+                    type: "string",
+                    name: "title",
+                    label: "Title"
                   },
                   {
-                    type: "object",
-                    name: "project",
-                    label: "Project Items",
-                    list: true,
+                    type: "string",
+                    name: "description",
+                    label: "Description",
                     ui: {
-                      itemProps: (item) => ({
-                        label: item?.title || "New Project Item"
-                      })
-                    },
-                    fields: [
-                      {
-                        type: "string",
-                        name: "title",
-                        label: "Title"
-                      },
-                      {
-                        type: "string",
-                        name: "description",
-                        label: "Description",
-                        ui: {
-                          component: "textarea"
-                        }
-                      },
-                      {
-                        type: "object",
-                        name: "images",
-                        label: "Images",
-                        fields: [
-                          {
-                            type: "image",
-                            name: "white",
-                            label: "White Version"
-                          },
-                          {
-                            type: "image",
-                            name: "black",
-                            label: "Black Version"
-                          }
-                        ]
-                      },
-                      {
-                        type: "image",
-                        name: "image",
-                        label: "Single Image"
-                      }
-                    ]
+                      component: "textarea"
+                    }
+                  },
+                  {
+                    type: "number",
+                    name: "speed",
+                    label: "Speed"
+                  },
+                  {
+                    type: "string",
+                    name: "url",
+                    label: "URL"
                   }
                 ]
               },
               {
                 type: "object",
-                name: "anaRose",
-                label: "Ana Rose",
+                name: "project",
+                label: "Project Items",
+                list: true,
+                ui: {
+                  itemProps: (item) => ({
+                    label: item?.title || "New Project Item"
+                  })
+                },
                 fields: [
                   {
+                    type: "string",
+                    name: "title",
+                    label: "Title"
+                  },
+                  {
+                    type: "string",
+                    name: "description",
+                    label: "Description",
+                    ui: {
+                      component: "textarea"
+                    }
+                  },
+                  {
                     type: "object",
-                    name: "meta",
-                    label: "Metadata",
+                    name: "images",
+                    label: "Images",
                     fields: [
                       {
-                        type: "string",
-                        name: "title",
-                        label: "Title"
+                        type: "image",
+                        name: "white",
+                        label: "White Version"
                       },
                       {
-                        type: "string",
-                        name: "description",
-                        label: "Description",
-                        ui: {
-                          component: "textarea"
-                        }
-                      },
-                      {
-                        type: "number",
-                        name: "speed",
-                        label: "Speed"
-                      },
-                      {
-                        type: "string",
-                        name: "url",
-                        label: "URL"
+                        type: "image",
+                        name: "black",
+                        label: "Black Version"
                       }
                     ]
                   },
                   {
-                    type: "object",
-                    name: "project",
-                    label: "Project Items",
-                    list: true,
+                    type: "image",
+                    name: "image",
+                    label: "Single Image"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            type: "object",
+            name: "anaRose",
+            label: "Ana Rose",
+            fields: [
+              {
+                type: "object",
+                name: "meta",
+                label: "Metadata",
+                fields: [
+                  {
+                    type: "string",
+                    name: "title",
+                    label: "Title"
+                  },
+                  {
+                    type: "string",
+                    name: "description",
+                    label: "Description",
                     ui: {
-                      itemProps: (item) => ({
-                        label: item?.title || "New Project Item"
-                      })
-                    },
-                    fields: [
-                      {
-                        type: "string",
-                        name: "title",
-                        label: "Title"
-                      },
-                      {
-                        type: "string",
-                        name: "description",
-                        label: "Description",
-                        ui: {
-                          component: "textarea"
-                        }
-                      },
-                      {
-                        type: "image",
-                        name: "image",
-                        label: "Image"
-                      }
-                    ]
+                      component: "textarea"
+                    }
+                  },
+                  {
+                    type: "number",
+                    name: "speed",
+                    label: "Speed"
+                  },
+                  {
+                    type: "string",
+                    name: "url",
+                    label: "URL"
                   }
                 ]
               },
-              // Add similar configurations for other projects
               {
                 type: "object",
-                name: "queendomFarms",
-                label: "Queendom Farms",
+                name: "project",
+                label: "Project Items",
+                list: true,
+                ui: {
+                  itemProps: (item) => ({
+                    label: item?.title || "New Project Item"
+                  })
+                },
                 fields: [
                   {
-                    type: "object",
-                    name: "meta",
-                    label: "Metadata",
-                    fields: [
-                      {
-                        type: "string",
-                        name: "title",
-                        label: "Title"
-                      },
-                      {
-                        type: "string",
-                        name: "description",
-                        label: "Description",
-                        ui: {
-                          component: "textarea"
-                        }
-                      },
-                      {
-                        type: "number",
-                        name: "speed",
-                        label: "Speed"
-                      },
-                      {
-                        type: "string",
-                        name: "url",
-                        label: "URL"
-                      }
-                    ]
+                    type: "string",
+                    name: "title",
+                    label: "Title"
                   },
                   {
-                    type: "object",
-                    name: "project",
-                    label: "Project Items",
-                    list: true,
+                    type: "string",
+                    name: "description",
+                    label: "Description",
                     ui: {
-                      itemProps: (item) => ({
-                        label: item?.title || "New Project Item"
-                      })
-                    },
-                    fields: [
-                      {
-                        type: "string",
-                        name: "title",
-                        label: "Title"
-                      },
-                      {
-                        type: "string",
-                        name: "description",
-                        label: "Description",
-                        ui: {
-                          component: "textarea"
-                        }
-                      },
-                      {
-                        type: "image",
-                        name: "image",
-                        label: "Image"
-                      }
-                    ]
+                      component: "textarea"
+                    }
+                  },
+                  {
+                    type: "image",
+                    name: "image",
+                    label: "Image"
+                  }
+                ]
+              }
+            ]
+          },
+          // Add similar configurations for other projects
+          {
+            type: "object",
+            name: "queendomFarms",
+            label: "Queendom Farms",
+            fields: [
+              {
+                type: "object",
+                name: "meta",
+                label: "Metadata",
+                fields: [
+                  {
+                    type: "string",
+                    name: "title",
+                    label: "Title"
+                  },
+                  {
+                    type: "string",
+                    name: "description",
+                    label: "Description",
+                    ui: {
+                      component: "textarea"
+                    }
+                  },
+                  {
+                    type: "number",
+                    name: "speed",
+                    label: "Speed"
+                  },
+                  {
+                    type: "string",
+                    name: "url",
+                    label: "URL"
                   }
                 ]
               },
-              // Add similar configurations for other projects
               {
                 type: "object",
-                name: "epicFuture",
-                label: "Epic Future",
+                name: "project",
+                label: "Project Items",
+                list: true,
+                ui: {
+                  itemProps: (item) => ({
+                    label: item?.title || "New Project Item"
+                  })
+                },
                 fields: [
                   {
-                    type: "object",
-                    name: "meta",
-                    label: "Metadata",
-                    fields: [
-                      {
-                        type: "string",
-                        name: "title",
-                        label: "Title"
-                      },
-                      {
-                        type: "string",
-                        name: "description",
-                        label: "Description",
-                        ui: {
-                          component: "textarea"
-                        }
-                      },
-                      {
-                        type: "number",
-                        name: "speed",
-                        label: "Speed"
-                      },
-                      {
-                        type: "string",
-                        name: "url",
-                        label: "URL"
-                      }
-                    ]
+                    type: "string",
+                    name: "title",
+                    label: "Title"
                   },
                   {
-                    type: "object",
-                    name: "project",
-                    label: "Project Items",
-                    list: true,
+                    type: "string",
+                    name: "description",
+                    label: "Description",
                     ui: {
-                      itemProps: (item) => ({
-                        label: item?.title || "New Project Item"
-                      })
-                    },
-                    fields: [
-                      {
-                        type: "string",
-                        name: "title",
-                        label: "Title"
-                      },
-                      {
-                        type: "string",
-                        name: "description",
-                        label: "Description",
-                        ui: {
-                          component: "textarea"
-                        }
-                      },
-                      {
-                        type: "image",
-                        name: "image",
-                        label: "Image"
-                      }
-                    ]
+                      component: "textarea"
+                    }
+                  },
+                  {
+                    type: "image",
+                    name: "image",
+                    label: "Image"
+                  }
+                ]
+              }
+            ]
+          },
+          // Add similar configurations for other projects
+          {
+            type: "object",
+            name: "epicFuture",
+            label: "Epic Future",
+            fields: [
+              {
+                type: "object",
+                name: "meta",
+                label: "Metadata",
+                fields: [
+                  {
+                    type: "string",
+                    name: "title",
+                    label: "Title"
+                  },
+                  {
+                    type: "string",
+                    name: "description",
+                    label: "Description",
+                    ui: {
+                      component: "textarea"
+                    }
+                  },
+                  {
+                    type: "number",
+                    name: "speed",
+                    label: "Speed"
+                  },
+                  {
+                    type: "string",
+                    name: "url",
+                    label: "URL"
                   }
                 ]
               },
-              // Add similar configurations for other projects
               {
                 type: "object",
-                name: "consolidatedConstructionSolutions",
-                label: "Consolidated Construction Solutions",
+                name: "project",
+                label: "Project Items",
+                list: true,
+                ui: {
+                  itemProps: (item) => ({
+                    label: item?.title || "New Project Item"
+                  })
+                },
                 fields: [
                   {
-                    type: "object",
-                    name: "meta",
-                    label: "Metadata",
-                    fields: [
-                      {
-                        type: "string",
-                        name: "title",
-                        label: "Title"
-                      },
-                      {
-                        type: "string",
-                        name: "description",
-                        label: "Description",
-                        ui: {
-                          component: "textarea"
-                        }
-                      },
-                      {
-                        type: "number",
-                        name: "speed",
-                        label: "Speed"
-                      },
-                      {
-                        type: "string",
-                        name: "url",
-                        label: "URL"
-                      }
-                    ]
+                    type: "string",
+                    name: "title",
+                    label: "Title"
                   },
                   {
-                    type: "object",
-                    name: "project",
-                    label: "Project Items",
-                    list: true,
+                    type: "string",
+                    name: "description",
+                    label: "Description",
                     ui: {
-                      itemProps: (item) => ({
-                        label: item?.title || "New Project Item"
-                      })
-                    },
-                    fields: [
-                      {
-                        type: "string",
-                        name: "title",
-                        label: "Title"
-                      },
-                      {
-                        type: "string",
-                        name: "description",
-                        label: "Description",
-                        ui: {
-                          component: "textarea"
-                        }
-                      },
-                      {
-                        type: "image",
-                        name: "image",
-                        label: "Image"
-                      }
-                    ]
+                      component: "textarea"
+                    }
+                  },
+                  {
+                    type: "image",
+                    name: "image",
+                    label: "Image"
+                  }
+                ]
+              }
+            ]
+          },
+          // Add similar configurations for other projects
+          {
+            type: "object",
+            name: "consolidatedConstructionSolutions",
+            label: "Consolidated Construction Solutions",
+            fields: [
+              {
+                type: "object",
+                name: "meta",
+                label: "Metadata",
+                fields: [
+                  {
+                    type: "string",
+                    name: "title",
+                    label: "Title"
+                  },
+                  {
+                    type: "string",
+                    name: "description",
+                    label: "Description",
+                    ui: {
+                      component: "textarea"
+                    }
+                  },
+                  {
+                    type: "number",
+                    name: "speed",
+                    label: "Speed"
+                  },
+                  {
+                    type: "string",
+                    name: "url",
+                    label: "URL"
                   }
                 ]
               },
-              // Add similar configurations for other projects
               {
                 type: "object",
-                name: "perfectlyDifferent",
-                label: "Perfectly Different",
+                name: "project",
+                label: "Project Items",
+                list: true,
+                ui: {
+                  itemProps: (item) => ({
+                    label: item?.title || "New Project Item"
+                  })
+                },
                 fields: [
                   {
-                    type: "object",
-                    name: "meta",
-                    label: "Metadata",
-                    fields: [
-                      {
-                        type: "string",
-                        name: "title",
-                        label: "Title"
-                      },
-                      {
-                        type: "string",
-                        name: "description",
-                        label: "Description",
-                        ui: {
-                          component: "textarea"
-                        }
-                      },
-                      {
-                        type: "number",
-                        name: "speed",
-                        label: "Speed"
-                      },
-                      {
-                        type: "string",
-                        name: "url",
-                        label: "URL"
-                      }
-                    ]
+                    type: "string",
+                    name: "title",
+                    label: "Title"
                   },
                   {
-                    type: "object",
-                    name: "project",
-                    label: "Project Items",
-                    list: true,
+                    type: "string",
+                    name: "description",
+                    label: "Description",
                     ui: {
-                      itemProps: (item) => ({
-                        label: item?.title || "New Project Item"
-                      })
-                    },
-                    fields: [
-                      {
-                        type: "string",
-                        name: "title",
-                        label: "Title"
-                      },
-                      {
-                        type: "string",
-                        name: "description",
-                        label: "Description",
-                        ui: {
-                          component: "textarea"
-                        }
-                      },
-                      {
-                        type: "image",
-                        name: "image",
-                        label: "Image"
-                      }
-                    ]
+                      component: "textarea"
+                    }
+                  },
+                  {
+                    type: "image",
+                    name: "image",
+                    label: "Image"
+                  }
+                ]
+              }
+            ]
+          },
+          // Add similar configurations for other projects
+          {
+            type: "object",
+            name: "perfectlyDifferent",
+            label: "Perfectly Different",
+            fields: [
+              {
+                type: "object",
+                name: "meta",
+                label: "Metadata",
+                fields: [
+                  {
+                    type: "string",
+                    name: "title",
+                    label: "Title"
+                  },
+                  {
+                    type: "string",
+                    name: "description",
+                    label: "Description",
+                    ui: {
+                      component: "textarea"
+                    }
+                  },
+                  {
+                    type: "number",
+                    name: "speed",
+                    label: "Speed"
+                  },
+                  {
+                    type: "string",
+                    name: "url",
+                    label: "URL"
+                  }
+                ]
+              },
+              {
+                type: "object",
+                name: "project",
+                label: "Project Items",
+                list: true,
+                ui: {
+                  itemProps: (item) => ({
+                    label: item?.title || "New Project Item"
+                  })
+                },
+                fields: [
+                  {
+                    type: "string",
+                    name: "title",
+                    label: "Title"
+                  },
+                  {
+                    type: "string",
+                    name: "description",
+                    label: "Description",
+                    ui: {
+                      component: "textarea"
+                    }
+                  },
+                  {
+                    type: "image",
+                    name: "image",
+                    label: "Image"
                   }
                 ]
               }

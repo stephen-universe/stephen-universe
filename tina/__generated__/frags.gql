@@ -160,108 +160,105 @@ fragment HomeParts on Home {
 
 fragment ProjectsParts on Projects {
   __typename
-  projects {
+  logofolio {
     __typename
-    logofolio {
+    meta {
       __typename
-      meta {
-        __typename
-        title
-        description
-        speed
-        url
-      }
-      project {
-        __typename
-        title
-        description
-        images {
-          __typename
-          white
-          black
-        }
-        image
-      }
+      title
+      description
+      speed
+      url
     }
-    anaRose {
+    project {
       __typename
-      meta {
+      title
+      description
+      images {
         __typename
-        title
-        description
-        speed
-        url
+        white
+        black
       }
-      project {
-        __typename
-        title
-        description
-        image
-      }
+      image
     }
-    queendomFarms {
+  }
+  anaRose {
+    __typename
+    meta {
       __typename
-      meta {
-        __typename
-        title
-        description
-        speed
-        url
-      }
-      project {
-        __typename
-        title
-        description
-        image
-      }
+      title
+      description
+      speed
+      url
     }
-    epicFuture {
+    project {
       __typename
-      meta {
-        __typename
-        title
-        description
-        speed
-        url
-      }
-      project {
-        __typename
-        title
-        description
-        image
-      }
+      title
+      description
+      image
     }
-    consolidatedConstructionSolutions {
+  }
+  queendomFarms {
+    __typename
+    meta {
       __typename
-      meta {
-        __typename
-        title
-        description
-        speed
-        url
-      }
-      project {
-        __typename
-        title
-        description
-        image
-      }
+      title
+      description
+      speed
+      url
     }
-    perfectlyDifferent {
+    project {
       __typename
-      meta {
-        __typename
-        title
-        description
-        speed
-        url
-      }
-      project {
-        __typename
-        title
-        description
-        image
-      }
+      title
+      description
+      image
+    }
+  }
+  epicFuture {
+    __typename
+    meta {
+      __typename
+      title
+      description
+      speed
+      url
+    }
+    project {
+      __typename
+      title
+      description
+      image
+    }
+  }
+  consolidatedConstructionSolutions {
+    __typename
+    meta {
+      __typename
+      title
+      description
+      speed
+      url
+    }
+    project {
+      __typename
+      title
+      description
+      image
+    }
+  }
+  perfectlyDifferent {
+    __typename
+    meta {
+      __typename
+      title
+      description
+      speed
+      url
+    }
+    project {
+      __typename
+      title
+      description
+      image
     }
   }
 }

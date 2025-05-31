@@ -532,261 +532,253 @@ type HomeConnection implements Connection {
   edges: [HomeConnectionEdges]
 }
 
-type ProjectsProjectsLogofolioMeta {
+type ProjectsLogofolioMeta {
   title: String
   description: String
   speed: Float
   url: String
 }
 
-type ProjectsProjectsLogofolioProjectImages {
+type ProjectsLogofolioProjectImages {
   white: String
   black: String
 }
 
-type ProjectsProjectsLogofolioProject {
+type ProjectsLogofolioProject {
   title: String
   description: String
-  images: ProjectsProjectsLogofolioProjectImages
+  images: ProjectsLogofolioProjectImages
   image: String
 }
 
-type ProjectsProjectsLogofolio {
-  meta: ProjectsProjectsLogofolioMeta
-  project: [ProjectsProjectsLogofolioProject]
+type ProjectsLogofolio {
+  meta: ProjectsLogofolioMeta
+  project: [ProjectsLogofolioProject]
 }
 
-type ProjectsProjectsAnaRoseMeta {
+type ProjectsAnaRoseMeta {
   title: String
   description: String
   speed: Float
   url: String
 }
 
-type ProjectsProjectsAnaRoseProject {
+type ProjectsAnaRoseProject {
   title: String
   description: String
   image: String
 }
 
-type ProjectsProjectsAnaRose {
-  meta: ProjectsProjectsAnaRoseMeta
-  project: [ProjectsProjectsAnaRoseProject]
+type ProjectsAnaRose {
+  meta: ProjectsAnaRoseMeta
+  project: [ProjectsAnaRoseProject]
 }
 
-type ProjectsProjectsQueendomFarmsMeta {
+type ProjectsQueendomFarmsMeta {
   title: String
   description: String
   speed: Float
   url: String
 }
 
-type ProjectsProjectsQueendomFarmsProject {
+type ProjectsQueendomFarmsProject {
   title: String
   description: String
   image: String
 }
 
-type ProjectsProjectsQueendomFarms {
-  meta: ProjectsProjectsQueendomFarmsMeta
-  project: [ProjectsProjectsQueendomFarmsProject]
+type ProjectsQueendomFarms {
+  meta: ProjectsQueendomFarmsMeta
+  project: [ProjectsQueendomFarmsProject]
 }
 
-type ProjectsProjectsEpicFutureMeta {
+type ProjectsEpicFutureMeta {
   title: String
   description: String
   speed: Float
   url: String
 }
 
-type ProjectsProjectsEpicFutureProject {
+type ProjectsEpicFutureProject {
   title: String
   description: String
   image: String
 }
 
-type ProjectsProjectsEpicFuture {
-  meta: ProjectsProjectsEpicFutureMeta
-  project: [ProjectsProjectsEpicFutureProject]
+type ProjectsEpicFuture {
+  meta: ProjectsEpicFutureMeta
+  project: [ProjectsEpicFutureProject]
 }
 
-type ProjectsProjectsConsolidatedConstructionSolutionsMeta {
+type ProjectsConsolidatedConstructionSolutionsMeta {
   title: String
   description: String
   speed: Float
   url: String
 }
 
-type ProjectsProjectsConsolidatedConstructionSolutionsProject {
+type ProjectsConsolidatedConstructionSolutionsProject {
   title: String
   description: String
   image: String
 }
 
-type ProjectsProjectsConsolidatedConstructionSolutions {
-  meta: ProjectsProjectsConsolidatedConstructionSolutionsMeta
-  project: [ProjectsProjectsConsolidatedConstructionSolutionsProject]
+type ProjectsConsolidatedConstructionSolutions {
+  meta: ProjectsConsolidatedConstructionSolutionsMeta
+  project: [ProjectsConsolidatedConstructionSolutionsProject]
 }
 
-type ProjectsProjectsPerfectlyDifferentMeta {
+type ProjectsPerfectlyDifferentMeta {
   title: String
   description: String
   speed: Float
   url: String
 }
 
-type ProjectsProjectsPerfectlyDifferentProject {
+type ProjectsPerfectlyDifferentProject {
   title: String
   description: String
   image: String
 }
 
-type ProjectsProjectsPerfectlyDifferent {
-  meta: ProjectsProjectsPerfectlyDifferentMeta
-  project: [ProjectsProjectsPerfectlyDifferentProject]
-}
-
-type ProjectsProjects {
-  logofolio: ProjectsProjectsLogofolio
-  anaRose: ProjectsProjectsAnaRose
-  queendomFarms: ProjectsProjectsQueendomFarms
-  epicFuture: ProjectsProjectsEpicFuture
-  consolidatedConstructionSolutions: ProjectsProjectsConsolidatedConstructionSolutions
-  perfectlyDifferent: ProjectsProjectsPerfectlyDifferent
+type ProjectsPerfectlyDifferent {
+  meta: ProjectsPerfectlyDifferentMeta
+  project: [ProjectsPerfectlyDifferentProject]
 }
 
 type Projects implements Node & Document {
-  projects: ProjectsProjects
+  logofolio: ProjectsLogofolio
+  anaRose: ProjectsAnaRose
+  queendomFarms: ProjectsQueendomFarms
+  epicFuture: ProjectsEpicFuture
+  consolidatedConstructionSolutions: ProjectsConsolidatedConstructionSolutions
+  perfectlyDifferent: ProjectsPerfectlyDifferent
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
 }
 
-input ProjectsProjectsLogofolioMetaFilter {
+input ProjectsLogofolioMetaFilter {
   title: StringFilter
   description: StringFilter
   speed: NumberFilter
   url: StringFilter
 }
 
-input ProjectsProjectsLogofolioProjectImagesFilter {
+input ProjectsLogofolioProjectImagesFilter {
   white: ImageFilter
   black: ImageFilter
 }
 
-input ProjectsProjectsLogofolioProjectFilter {
+input ProjectsLogofolioProjectFilter {
   title: StringFilter
   description: StringFilter
-  images: ProjectsProjectsLogofolioProjectImagesFilter
+  images: ProjectsLogofolioProjectImagesFilter
   image: ImageFilter
 }
 
-input ProjectsProjectsLogofolioFilter {
-  meta: ProjectsProjectsLogofolioMetaFilter
-  project: ProjectsProjectsLogofolioProjectFilter
+input ProjectsLogofolioFilter {
+  meta: ProjectsLogofolioMetaFilter
+  project: ProjectsLogofolioProjectFilter
 }
 
-input ProjectsProjectsAnaRoseMetaFilter {
+input ProjectsAnaRoseMetaFilter {
   title: StringFilter
   description: StringFilter
   speed: NumberFilter
   url: StringFilter
 }
 
-input ProjectsProjectsAnaRoseProjectFilter {
+input ProjectsAnaRoseProjectFilter {
   title: StringFilter
   description: StringFilter
   image: ImageFilter
 }
 
-input ProjectsProjectsAnaRoseFilter {
-  meta: ProjectsProjectsAnaRoseMetaFilter
-  project: ProjectsProjectsAnaRoseProjectFilter
+input ProjectsAnaRoseFilter {
+  meta: ProjectsAnaRoseMetaFilter
+  project: ProjectsAnaRoseProjectFilter
 }
 
-input ProjectsProjectsQueendomFarmsMetaFilter {
+input ProjectsQueendomFarmsMetaFilter {
   title: StringFilter
   description: StringFilter
   speed: NumberFilter
   url: StringFilter
 }
 
-input ProjectsProjectsQueendomFarmsProjectFilter {
+input ProjectsQueendomFarmsProjectFilter {
   title: StringFilter
   description: StringFilter
   image: ImageFilter
 }
 
-input ProjectsProjectsQueendomFarmsFilter {
-  meta: ProjectsProjectsQueendomFarmsMetaFilter
-  project: ProjectsProjectsQueendomFarmsProjectFilter
+input ProjectsQueendomFarmsFilter {
+  meta: ProjectsQueendomFarmsMetaFilter
+  project: ProjectsQueendomFarmsProjectFilter
 }
 
-input ProjectsProjectsEpicFutureMetaFilter {
+input ProjectsEpicFutureMetaFilter {
   title: StringFilter
   description: StringFilter
   speed: NumberFilter
   url: StringFilter
 }
 
-input ProjectsProjectsEpicFutureProjectFilter {
+input ProjectsEpicFutureProjectFilter {
   title: StringFilter
   description: StringFilter
   image: ImageFilter
 }
 
-input ProjectsProjectsEpicFutureFilter {
-  meta: ProjectsProjectsEpicFutureMetaFilter
-  project: ProjectsProjectsEpicFutureProjectFilter
+input ProjectsEpicFutureFilter {
+  meta: ProjectsEpicFutureMetaFilter
+  project: ProjectsEpicFutureProjectFilter
 }
 
-input ProjectsProjectsConsolidatedConstructionSolutionsMetaFilter {
+input ProjectsConsolidatedConstructionSolutionsMetaFilter {
   title: StringFilter
   description: StringFilter
   speed: NumberFilter
   url: StringFilter
 }
 
-input ProjectsProjectsConsolidatedConstructionSolutionsProjectFilter {
+input ProjectsConsolidatedConstructionSolutionsProjectFilter {
   title: StringFilter
   description: StringFilter
   image: ImageFilter
 }
 
-input ProjectsProjectsConsolidatedConstructionSolutionsFilter {
-  meta: ProjectsProjectsConsolidatedConstructionSolutionsMetaFilter
-  project: ProjectsProjectsConsolidatedConstructionSolutionsProjectFilter
+input ProjectsConsolidatedConstructionSolutionsFilter {
+  meta: ProjectsConsolidatedConstructionSolutionsMetaFilter
+  project: ProjectsConsolidatedConstructionSolutionsProjectFilter
 }
 
-input ProjectsProjectsPerfectlyDifferentMetaFilter {
+input ProjectsPerfectlyDifferentMetaFilter {
   title: StringFilter
   description: StringFilter
   speed: NumberFilter
   url: StringFilter
 }
 
-input ProjectsProjectsPerfectlyDifferentProjectFilter {
+input ProjectsPerfectlyDifferentProjectFilter {
   title: StringFilter
   description: StringFilter
   image: ImageFilter
 }
 
-input ProjectsProjectsPerfectlyDifferentFilter {
-  meta: ProjectsProjectsPerfectlyDifferentMetaFilter
-  project: ProjectsProjectsPerfectlyDifferentProjectFilter
-}
-
-input ProjectsProjectsFilter {
-  logofolio: ProjectsProjectsLogofolioFilter
-  anaRose: ProjectsProjectsAnaRoseFilter
-  queendomFarms: ProjectsProjectsQueendomFarmsFilter
-  epicFuture: ProjectsProjectsEpicFutureFilter
-  consolidatedConstructionSolutions: ProjectsProjectsConsolidatedConstructionSolutionsFilter
-  perfectlyDifferent: ProjectsProjectsPerfectlyDifferentFilter
+input ProjectsPerfectlyDifferentFilter {
+  meta: ProjectsPerfectlyDifferentMetaFilter
+  project: ProjectsPerfectlyDifferentProjectFilter
 }
 
 input ProjectsFilter {
-  projects: ProjectsProjectsFilter
+  logofolio: ProjectsLogofolioFilter
+  anaRose: ProjectsAnaRoseFilter
+  queendomFarms: ProjectsQueendomFarmsFilter
+  epicFuture: ProjectsEpicFutureFilter
+  consolidatedConstructionSolutions: ProjectsConsolidatedConstructionSolutionsFilter
+  perfectlyDifferent: ProjectsPerfectlyDifferentFilter
 }
 
 type ProjectsConnectionEdges {
@@ -1016,131 +1008,127 @@ input HomeMutation {
   contact: HomeContactMutation
 }
 
-input ProjectsProjectsLogofolioMetaMutation {
+input ProjectsLogofolioMetaMutation {
   title: String
   description: String
   speed: Float
   url: String
 }
 
-input ProjectsProjectsLogofolioProjectImagesMutation {
+input ProjectsLogofolioProjectImagesMutation {
   white: String
   black: String
 }
 
-input ProjectsProjectsLogofolioProjectMutation {
+input ProjectsLogofolioProjectMutation {
   title: String
   description: String
-  images: ProjectsProjectsLogofolioProjectImagesMutation
+  images: ProjectsLogofolioProjectImagesMutation
   image: String
 }
 
-input ProjectsProjectsLogofolioMutation {
-  meta: ProjectsProjectsLogofolioMetaMutation
-  project: [ProjectsProjectsLogofolioProjectMutation]
+input ProjectsLogofolioMutation {
+  meta: ProjectsLogofolioMetaMutation
+  project: [ProjectsLogofolioProjectMutation]
 }
 
-input ProjectsProjectsAnaRoseMetaMutation {
+input ProjectsAnaRoseMetaMutation {
   title: String
   description: String
   speed: Float
   url: String
 }
 
-input ProjectsProjectsAnaRoseProjectMutation {
+input ProjectsAnaRoseProjectMutation {
   title: String
   description: String
   image: String
 }
 
-input ProjectsProjectsAnaRoseMutation {
-  meta: ProjectsProjectsAnaRoseMetaMutation
-  project: [ProjectsProjectsAnaRoseProjectMutation]
+input ProjectsAnaRoseMutation {
+  meta: ProjectsAnaRoseMetaMutation
+  project: [ProjectsAnaRoseProjectMutation]
 }
 
-input ProjectsProjectsQueendomFarmsMetaMutation {
+input ProjectsQueendomFarmsMetaMutation {
   title: String
   description: String
   speed: Float
   url: String
 }
 
-input ProjectsProjectsQueendomFarmsProjectMutation {
+input ProjectsQueendomFarmsProjectMutation {
   title: String
   description: String
   image: String
 }
 
-input ProjectsProjectsQueendomFarmsMutation {
-  meta: ProjectsProjectsQueendomFarmsMetaMutation
-  project: [ProjectsProjectsQueendomFarmsProjectMutation]
+input ProjectsQueendomFarmsMutation {
+  meta: ProjectsQueendomFarmsMetaMutation
+  project: [ProjectsQueendomFarmsProjectMutation]
 }
 
-input ProjectsProjectsEpicFutureMetaMutation {
+input ProjectsEpicFutureMetaMutation {
   title: String
   description: String
   speed: Float
   url: String
 }
 
-input ProjectsProjectsEpicFutureProjectMutation {
+input ProjectsEpicFutureProjectMutation {
   title: String
   description: String
   image: String
 }
 
-input ProjectsProjectsEpicFutureMutation {
-  meta: ProjectsProjectsEpicFutureMetaMutation
-  project: [ProjectsProjectsEpicFutureProjectMutation]
+input ProjectsEpicFutureMutation {
+  meta: ProjectsEpicFutureMetaMutation
+  project: [ProjectsEpicFutureProjectMutation]
 }
 
-input ProjectsProjectsConsolidatedConstructionSolutionsMetaMutation {
+input ProjectsConsolidatedConstructionSolutionsMetaMutation {
   title: String
   description: String
   speed: Float
   url: String
 }
 
-input ProjectsProjectsConsolidatedConstructionSolutionsProjectMutation {
+input ProjectsConsolidatedConstructionSolutionsProjectMutation {
   title: String
   description: String
   image: String
 }
 
-input ProjectsProjectsConsolidatedConstructionSolutionsMutation {
-  meta: ProjectsProjectsConsolidatedConstructionSolutionsMetaMutation
-  project: [ProjectsProjectsConsolidatedConstructionSolutionsProjectMutation]
+input ProjectsConsolidatedConstructionSolutionsMutation {
+  meta: ProjectsConsolidatedConstructionSolutionsMetaMutation
+  project: [ProjectsConsolidatedConstructionSolutionsProjectMutation]
 }
 
-input ProjectsProjectsPerfectlyDifferentMetaMutation {
+input ProjectsPerfectlyDifferentMetaMutation {
   title: String
   description: String
   speed: Float
   url: String
 }
 
-input ProjectsProjectsPerfectlyDifferentProjectMutation {
+input ProjectsPerfectlyDifferentProjectMutation {
   title: String
   description: String
   image: String
 }
 
-input ProjectsProjectsPerfectlyDifferentMutation {
-  meta: ProjectsProjectsPerfectlyDifferentMetaMutation
-  project: [ProjectsProjectsPerfectlyDifferentProjectMutation]
-}
-
-input ProjectsProjectsMutation {
-  logofolio: ProjectsProjectsLogofolioMutation
-  anaRose: ProjectsProjectsAnaRoseMutation
-  queendomFarms: ProjectsProjectsQueendomFarmsMutation
-  epicFuture: ProjectsProjectsEpicFutureMutation
-  consolidatedConstructionSolutions: ProjectsProjectsConsolidatedConstructionSolutionsMutation
-  perfectlyDifferent: ProjectsProjectsPerfectlyDifferentMutation
+input ProjectsPerfectlyDifferentMutation {
+  meta: ProjectsPerfectlyDifferentMetaMutation
+  project: [ProjectsPerfectlyDifferentProjectMutation]
 }
 
 input ProjectsMutation {
-  projects: ProjectsProjectsMutation
+  logofolio: ProjectsLogofolioMutation
+  anaRose: ProjectsAnaRoseMutation
+  queendomFarms: ProjectsQueendomFarmsMutation
+  epicFuture: ProjectsEpicFutureMutation
+  consolidatedConstructionSolutions: ProjectsConsolidatedConstructionSolutionsMutation
+  perfectlyDifferent: ProjectsPerfectlyDifferentMutation
 }
 
 schema {
