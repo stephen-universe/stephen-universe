@@ -20,9 +20,9 @@ class MyDocument extends Document {
           {/* meta end */}
 
           {/* favicon begin */}
-          <link rel="apple-touch-icon" sizes="76x76" href="/favicon.ico" />
-          <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
-          <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico" />
+          <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon.ico" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico" />
           <link rel="manifest" href="/favicon/manifest.json" />
           {/* favicon */}
  {/* public assets begin */}

@@ -57,7 +57,7 @@ stickyMask.current.style.setProperty("--mask-size", `${maskSize}%`);
 </div>
 
             <video autoPlay muted loop playsInline>
-              <source src="/nature.mp4" type="video/mp4" />
+              <source src="/images/videos/nature.mp4" type="video/mp4" />
             </video>
           </div>
         </div>

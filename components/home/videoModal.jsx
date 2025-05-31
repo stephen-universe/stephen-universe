@@ -5,7 +5,7 @@ const VideoModal = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   // Google Drive MP4 file URL (make sure it's shared publicly)
-  const videoUrl = "/Steven-Universe.mp4";
+  const videoUrl = "/images/videos/Steven-Universe.mp4";
 
 
   const toggleModal = () => {

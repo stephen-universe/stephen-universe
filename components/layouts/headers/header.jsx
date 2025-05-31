@@ -48,7 +48,7 @@ const clickedMobileMenu = (e) => {
                         style={{ paddingTop: "15px", float: "left" }}
                       >
                         <Image 
-                          src="/logo-icon.png" 
+                          src="/images/logo-icon.png" 
                           width={300} 
                           height={300} 
                           alt="Logo"

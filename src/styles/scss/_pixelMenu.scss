@@ -164,7 +164,7 @@
     height: 100vh;
     align-items: center;
     justify-content: center;
-    mask-image: url('/mask.svg');
+    mask-image: url('/images/mask.svg');
     mask-position: 43.35% center;
     mask-repeat: no-repeat;
     mask-size: 80%;
@@ -184,7 +184,7 @@
   height: 100vh;
   align-items: center;
   justify-content: center;
-  mask-image: url('/mask.svg');
+  mask-image: url('/images/mask.svg');
   mask-position: 43.35% center;
   mask-repeat: no-repeat;
   mask-size: var(--mask-size, 80%);

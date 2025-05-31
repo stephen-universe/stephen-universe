@@ -323,7 +323,7 @@ export class FormUserDetails extends Component {
             </div>
             <div className="column is-4 has-text-centered">
               <Image 
-                src="/make-contact.png" 
+                src="/images/make-contact.png" 
                 alt="Contact illustration"
                 width={300}
                 height={200}
@@ -499,7 +499,7 @@ export class FormPersonalDetails extends Component {
             </div>
             <div className="column is-4 has-text-centered">
               <Image 
-                src="/make-contact.png" 
+                src="/images/make-contact.png" 
                 alt="Contact illustration"
                 width={300}
                 height={200}

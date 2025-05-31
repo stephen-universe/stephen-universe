@@ -47,19 +47,19 @@
     "title": "Featured Projects",
     "projects": [
       {
-        "image1": "/Queendom-Farms-Home.jpg",
+        "image1": "/images/Queendom-Farms-Home.jpg",
         "url1": "/project/queendomfarms"
       },
       {
-        "image2": "/CCS.png",
+        "image2": "/images/CCS.png",
         "url2": "/project/consolidatedconstructionsolutions"
       },
       {
-        "image3": "/Ana-Rose-home.jpg",
+        "image3": "/images/Ana-Rose-home.jpg",
         "url3": "/project/anarose"
       },
       {
-        "image4": "/perfectly-different.png",
+        "image4": "/images/perfectly-different.png",
         "url4": "/project/perfectlydifferent"
       }
     ],

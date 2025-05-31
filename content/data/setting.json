@@ -4,11 +4,11 @@
     "siteOwner": "Stephen A. Warren"
   },
   "preloader": {
-    "image": "/scroll-btn.png",
+    "image": "/images/scroll-btn.png",
     "alt": "logo"
   },
   "companyLogo": {    
-    "image": "/logo-icon.png",
+    "image": "/images/logo-icon.png",
     "alt": "company logo"
   },
   "social": {
