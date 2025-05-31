@@ -11,7 +11,7 @@ var config_default = defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "",
+      mediaRoot: "public",
       publicFolder: "public"
     }
   },
@@ -642,11 +642,6 @@ var config_default = defineConfig({
           }
         },
         fields: [
-          {
-            type: "object",
-            name: "projects",
-            label: "Projects",
-            fields: [
               {
                 type: "object",
                 name: "logofolio",
@@ -734,7 +729,7 @@ var config_default = defineConfig({
               },
               {
                 type: "object",
-                name: "anaRose",
+                name: "anarose",
                 label: "Ana Rose",
                 fields: [
                   {
@@ -803,7 +798,7 @@ var config_default = defineConfig({
               // Add similar configurations for other projects
               {
                 type: "object",
-                name: "queendomFarms",
+                name: "queendomfarms",
                 label: "Queendom Farms",
                 fields: [
                   {
@@ -872,7 +867,7 @@ var config_default = defineConfig({
               // Add similar configurations for other projects
               {
                 type: "object",
-                name: "epicFuture",
+                name: "epicfuture",
                 label: "Epic Future",
                 fields: [
                   {
@@ -941,7 +936,7 @@ var config_default = defineConfig({
               // Add similar configurations for other projects
               {
                 type: "object",
-                name: "consolidatedConstructionSolutions",
+                name: "consolidatedconstructionsolutions",
                 label: "Consolidated Construction Solutions",
                 fields: [
                   {
@@ -1010,7 +1005,7 @@ var config_default = defineConfig({
               // Add similar configurations for other projects
               {
                 type: "object",
-                name: "perfectlyDifferent",
+                name: "perfectlydifferent",
                 label: "Perfectly Different",
                 fields: [
                   {
@@ -1077,8 +1072,6 @@ var config_default = defineConfig({
                 ]
               }
               // Add similar configurations for other projects
-            ]
-          }
         ]
       }
     ]
