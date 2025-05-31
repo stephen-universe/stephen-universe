@@ -7,12 +7,7 @@ import CookieBanner from "./cookie-banner";
 
 const Layouts = ({
   children,
-  header,
-  footer,
   noHeader,
-  noFooter,
-  contactButton,
-  cartButton
 }) => {
   useEffect(() => {
     scrollAnimation();

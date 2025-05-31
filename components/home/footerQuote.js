@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
-import Link from "next/link";
 import VideoModal from "./videoModal";
 import appData from "../../content/data/home.json";
 

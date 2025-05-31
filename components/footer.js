@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import appData from "../content/data/footer.json";
 
-export default function Footer(props) {
+export default function Footer() {
   return (
     <>
       <div className="section-divider"></div> 

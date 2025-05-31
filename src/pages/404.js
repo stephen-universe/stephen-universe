@@ -9,7 +9,7 @@ export default function NotFound() {
         <Layout page="404" bgColor="inherit">
             <div className="">
                 <Link to="/">
-                    <h1>Sorry, couldn't find that page.</h1>
+                    <h1>Sorry, page does not exist.</h1>
                 </Link>
             </div>
         </Layout>
