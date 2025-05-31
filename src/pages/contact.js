@@ -1,6 +1,7 @@
 
 import Form from "../../components/forms/form"
-import Layouts from "../../components/layouts"
+import dynamic from 'next/dynamic';
+const Layouts = dynamic(() => import('../../components/layouts'), { ssr: false });
 
 export default function Contact() {
 

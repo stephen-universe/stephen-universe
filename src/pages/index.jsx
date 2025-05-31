@@ -3,7 +3,10 @@ import About from "../../components/home/about";
 import InitializeContact from "../../components/home/pastWorks";
 import FooterScroll from "../../components/home/footerScroll";
 import ThreeShape from "../../components/home/floatingShapes";
-import Layout from "../../components/Layout";
+import dynamic from 'next/dynamic';
+
+const Layout = dynamic(() => import('../../components/layout'), { ssr: false });
+
 
 
 export default function ProjectPage() {

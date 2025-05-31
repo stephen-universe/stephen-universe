@@ -1,7 +1,10 @@
 import SmoothScroll from "../../components/projects/smoothScroll";
 import Projects from "../../components/projects/projects";
 import EarthWrapper from "../../components/projects/EarthWrapper";
-import Layouts from "../../components/layouts";
+import dynamic from 'next/dynamic';
+
+const Layouts = dynamic(() => import('../../components/layouts'), { ssr: false });
+
 
 
 const ProjectsPage = () => {
