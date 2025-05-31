@@ -9,8 +9,8 @@ import dynamic from "next/dynamic";
 const Clock = dynamic(() => import("../clock"), { ssr: false });
 
 const parallaxImages = [
-  { src: "/right-door.png", alt: "Right Door", initialX: "-40.5%", initialY: "0%" },
-  { src: "/left-door.png", alt: "Left Door", initialX: "100%", initialY: "0%" },
+  { src: "/images/right-door.png", alt: "Right Door", initialX: "-40.5%", initialY: "0%" },
+  { src: "/images/left-door.png", alt: "Left Door", initialX: "100%", initialY: "0%" },
 ];
 
 // Date/Time Helper
