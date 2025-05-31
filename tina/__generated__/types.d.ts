@@ -692,282 +692,273 @@ export type HomeConnection = Connection & {
   edges?: Maybe<Array<Maybe<HomeConnectionEdges>>>;
 };
 
-export type ProjectsProjectsLogofolioMeta = {
-  __typename?: 'ProjectsProjectsLogofolioMeta';
+export type ProjectsLogofolioMeta = {
+  __typename?: 'ProjectsLogofolioMeta';
   title?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
   speed?: Maybe<Scalars['Float']['output']>;
   url?: Maybe<Scalars['String']['output']>;
 };
 
-export type ProjectsProjectsLogofolioProjectImages = {
-  __typename?: 'ProjectsProjectsLogofolioProjectImages';
+export type ProjectsLogofolioProjectImages = {
+  __typename?: 'ProjectsLogofolioProjectImages';
   white?: Maybe<Scalars['String']['output']>;
   black?: Maybe<Scalars['String']['output']>;
 };
 
-export type ProjectsProjectsLogofolioProject = {
-  __typename?: 'ProjectsProjectsLogofolioProject';
+export type ProjectsLogofolioProject = {
+  __typename?: 'ProjectsLogofolioProject';
   title?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
-  images?: Maybe<ProjectsProjectsLogofolioProjectImages>;
+  images?: Maybe<ProjectsLogofolioProjectImages>;
   image?: Maybe<Scalars['String']['output']>;
 };
 
-export type ProjectsProjectsLogofolio = {
-  __typename?: 'ProjectsProjectsLogofolio';
-  meta?: Maybe<ProjectsProjectsLogofolioMeta>;
-  project?: Maybe<Array<Maybe<ProjectsProjectsLogofolioProject>>>;
+export type ProjectsLogofolio = {
+  __typename?: 'ProjectsLogofolio';
+  meta?: Maybe<ProjectsLogofolioMeta>;
+  project?: Maybe<Array<Maybe<ProjectsLogofolioProject>>>;
 };
 
-export type ProjectsProjectsAnaRoseMeta = {
-  __typename?: 'ProjectsProjectsAnaRoseMeta';
+export type ProjectsAnaroseMeta = {
+  __typename?: 'ProjectsAnaroseMeta';
   title?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
   speed?: Maybe<Scalars['Float']['output']>;
   url?: Maybe<Scalars['String']['output']>;
 };
 
-export type ProjectsProjectsAnaRoseProject = {
-  __typename?: 'ProjectsProjectsAnaRoseProject';
+export type ProjectsAnaroseProject = {
+  __typename?: 'ProjectsAnaroseProject';
   title?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
   image?: Maybe<Scalars['String']['output']>;
 };
 
-export type ProjectsProjectsAnaRose = {
-  __typename?: 'ProjectsProjectsAnaRose';
-  meta?: Maybe<ProjectsProjectsAnaRoseMeta>;
-  project?: Maybe<Array<Maybe<ProjectsProjectsAnaRoseProject>>>;
+export type ProjectsAnarose = {
+  __typename?: 'ProjectsAnarose';
+  meta?: Maybe<ProjectsAnaroseMeta>;
+  project?: Maybe<Array<Maybe<ProjectsAnaroseProject>>>;
 };
 
-export type ProjectsProjectsQueendomFarmsMeta = {
-  __typename?: 'ProjectsProjectsQueendomFarmsMeta';
+export type ProjectsQueendomfarmsMeta = {
+  __typename?: 'ProjectsQueendomfarmsMeta';
   title?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
   speed?: Maybe<Scalars['Float']['output']>;
   url?: Maybe<Scalars['String']['output']>;
 };
 
-export type ProjectsProjectsQueendomFarmsProject = {
-  __typename?: 'ProjectsProjectsQueendomFarmsProject';
+export type ProjectsQueendomfarmsProject = {
+  __typename?: 'ProjectsQueendomfarmsProject';
   title?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
   image?: Maybe<Scalars['String']['output']>;
 };
 
-export type ProjectsProjectsQueendomFarms = {
-  __typename?: 'ProjectsProjectsQueendomFarms';
-  meta?: Maybe<ProjectsProjectsQueendomFarmsMeta>;
-  project?: Maybe<Array<Maybe<ProjectsProjectsQueendomFarmsProject>>>;
+export type ProjectsQueendomfarms = {
+  __typename?: 'ProjectsQueendomfarms';
+  meta?: Maybe<ProjectsQueendomfarmsMeta>;
+  project?: Maybe<Array<Maybe<ProjectsQueendomfarmsProject>>>;
 };
 
-export type ProjectsProjectsEpicFutureMeta = {
-  __typename?: 'ProjectsProjectsEpicFutureMeta';
+export type ProjectsEpicfutureMeta = {
+  __typename?: 'ProjectsEpicfutureMeta';
   title?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
   speed?: Maybe<Scalars['Float']['output']>;
   url?: Maybe<Scalars['String']['output']>;
 };
 
-export type ProjectsProjectsEpicFutureProject = {
-  __typename?: 'ProjectsProjectsEpicFutureProject';
+export type ProjectsEpicfutureProject = {
+  __typename?: 'ProjectsEpicfutureProject';
   title?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
   image?: Maybe<Scalars['String']['output']>;
 };
 
-export type ProjectsProjectsEpicFuture = {
-  __typename?: 'ProjectsProjectsEpicFuture';
-  meta?: Maybe<ProjectsProjectsEpicFutureMeta>;
-  project?: Maybe<Array<Maybe<ProjectsProjectsEpicFutureProject>>>;
+export type ProjectsEpicfuture = {
+  __typename?: 'ProjectsEpicfuture';
+  meta?: Maybe<ProjectsEpicfutureMeta>;
+  project?: Maybe<Array<Maybe<ProjectsEpicfutureProject>>>;
 };
 
-export type ProjectsProjectsConsolidatedConstructionSolutionsMeta = {
-  __typename?: 'ProjectsProjectsConsolidatedConstructionSolutionsMeta';
+export type ProjectsConsolidatedconstructionsolutionsMeta = {
+  __typename?: 'ProjectsConsolidatedconstructionsolutionsMeta';
   title?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
   speed?: Maybe<Scalars['Float']['output']>;
   url?: Maybe<Scalars['String']['output']>;
 };
 
-export type ProjectsProjectsConsolidatedConstructionSolutionsProject = {
-  __typename?: 'ProjectsProjectsConsolidatedConstructionSolutionsProject';
+export type ProjectsConsolidatedconstructionsolutionsProject = {
+  __typename?: 'ProjectsConsolidatedconstructionsolutionsProject';
   title?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
   image?: Maybe<Scalars['String']['output']>;
 };
 
-export type ProjectsProjectsConsolidatedConstructionSolutions = {
-  __typename?: 'ProjectsProjectsConsolidatedConstructionSolutions';
-  meta?: Maybe<ProjectsProjectsConsolidatedConstructionSolutionsMeta>;
-  project?: Maybe<Array<Maybe<ProjectsProjectsConsolidatedConstructionSolutionsProject>>>;
+export type ProjectsConsolidatedconstructionsolutions = {
+  __typename?: 'ProjectsConsolidatedconstructionsolutions';
+  meta?: Maybe<ProjectsConsolidatedconstructionsolutionsMeta>;
+  project?: Maybe<Array<Maybe<ProjectsConsolidatedconstructionsolutionsProject>>>;
 };
 
-export type ProjectsProjectsPerfectlyDifferentMeta = {
-  __typename?: 'ProjectsProjectsPerfectlyDifferentMeta';
+export type ProjectsPerfectlydifferentMeta = {
+  __typename?: 'ProjectsPerfectlydifferentMeta';
   title?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
   speed?: Maybe<Scalars['Float']['output']>;
   url?: Maybe<Scalars['String']['output']>;
 };
 
-export type ProjectsProjectsPerfectlyDifferentProject = {
-  __typename?: 'ProjectsProjectsPerfectlyDifferentProject';
+export type ProjectsPerfectlydifferentProject = {
+  __typename?: 'ProjectsPerfectlydifferentProject';
   title?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
   image?: Maybe<Scalars['String']['output']>;
 };
 
-export type ProjectsProjectsPerfectlyDifferent = {
-  __typename?: 'ProjectsProjectsPerfectlyDifferent';
-  meta?: Maybe<ProjectsProjectsPerfectlyDifferentMeta>;
-  project?: Maybe<Array<Maybe<ProjectsProjectsPerfectlyDifferentProject>>>;
-};
-
-export type ProjectsProjects = {
-  __typename?: 'ProjectsProjects';
-  logofolio?: Maybe<ProjectsProjectsLogofolio>;
-  anaRose?: Maybe<ProjectsProjectsAnaRose>;
-  queendomFarms?: Maybe<ProjectsProjectsQueendomFarms>;
-  epicFuture?: Maybe<ProjectsProjectsEpicFuture>;
-  consolidatedConstructionSolutions?: Maybe<ProjectsProjectsConsolidatedConstructionSolutions>;
-  perfectlyDifferent?: Maybe<ProjectsProjectsPerfectlyDifferent>;
+export type ProjectsPerfectlydifferent = {
+  __typename?: 'ProjectsPerfectlydifferent';
+  meta?: Maybe<ProjectsPerfectlydifferentMeta>;
+  project?: Maybe<Array<Maybe<ProjectsPerfectlydifferentProject>>>;
 };
 
 export type Projects = Node & Document & {
   __typename?: 'Projects';
-  projects?: Maybe<ProjectsProjects>;
+  logofolio?: Maybe<ProjectsLogofolio>;
+  anarose?: Maybe<ProjectsAnarose>;
+  queendomfarms?: Maybe<ProjectsQueendomfarms>;
+  epicfuture?: Maybe<ProjectsEpicfuture>;
+  consolidatedconstructionsolutions?: Maybe<ProjectsConsolidatedconstructionsolutions>;
+  perfectlydifferent?: Maybe<ProjectsPerfectlydifferent>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
 };
 
-export type ProjectsProjectsLogofolioMetaFilter = {
+export type ProjectsLogofolioMetaFilter = {
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
   speed?: InputMaybe<NumberFilter>;
   url?: InputMaybe<StringFilter>;
 };
 
-export type ProjectsProjectsLogofolioProjectImagesFilter = {
+export type ProjectsLogofolioProjectImagesFilter = {
   white?: InputMaybe<ImageFilter>;
   black?: InputMaybe<ImageFilter>;
 };
 
-export type ProjectsProjectsLogofolioProjectFilter = {
+export type ProjectsLogofolioProjectFilter = {
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
-  images?: InputMaybe<ProjectsProjectsLogofolioProjectImagesFilter>;
+  images?: InputMaybe<ProjectsLogofolioProjectImagesFilter>;
   image?: InputMaybe<ImageFilter>;
 };
 
-export type ProjectsProjectsLogofolioFilter = {
-  meta?: InputMaybe<ProjectsProjectsLogofolioMetaFilter>;
-  project?: InputMaybe<ProjectsProjectsLogofolioProjectFilter>;
+export type ProjectsLogofolioFilter = {
+  meta?: InputMaybe<ProjectsLogofolioMetaFilter>;
+  project?: InputMaybe<ProjectsLogofolioProjectFilter>;
 };
 
-export type ProjectsProjectsAnaRoseMetaFilter = {
+export type ProjectsAnaroseMetaFilter = {
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
   speed?: InputMaybe<NumberFilter>;
   url?: InputMaybe<StringFilter>;
 };
 
-export type ProjectsProjectsAnaRoseProjectFilter = {
+export type ProjectsAnaroseProjectFilter = {
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
   image?: InputMaybe<ImageFilter>;
 };
 
-export type ProjectsProjectsAnaRoseFilter = {
-  meta?: InputMaybe<ProjectsProjectsAnaRoseMetaFilter>;
-  project?: InputMaybe<ProjectsProjectsAnaRoseProjectFilter>;
+export type ProjectsAnaroseFilter = {
+  meta?: InputMaybe<ProjectsAnaroseMetaFilter>;
+  project?: InputMaybe<ProjectsAnaroseProjectFilter>;
 };
 
-export type ProjectsProjectsQueendomFarmsMetaFilter = {
+export type ProjectsQueendomfarmsMetaFilter = {
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
   speed?: InputMaybe<NumberFilter>;
   url?: InputMaybe<StringFilter>;
 };
 
-export type ProjectsProjectsQueendomFarmsProjectFilter = {
+export type ProjectsQueendomfarmsProjectFilter = {
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
   image?: InputMaybe<ImageFilter>;
 };
 
-export type ProjectsProjectsQueendomFarmsFilter = {
-  meta?: InputMaybe<ProjectsProjectsQueendomFarmsMetaFilter>;
-  project?: InputMaybe<ProjectsProjectsQueendomFarmsProjectFilter>;
+export type ProjectsQueendomfarmsFilter = {
+  meta?: InputMaybe<ProjectsQueendomfarmsMetaFilter>;
+  project?: InputMaybe<ProjectsQueendomfarmsProjectFilter>;
 };
 
-export type ProjectsProjectsEpicFutureMetaFilter = {
+export type ProjectsEpicfutureMetaFilter = {
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
   speed?: InputMaybe<NumberFilter>;
   url?: InputMaybe<StringFilter>;
 };
 
-export type ProjectsProjectsEpicFutureProjectFilter = {
+export type ProjectsEpicfutureProjectFilter = {
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
   image?: InputMaybe<ImageFilter>;
 };
 
-export type ProjectsProjectsEpicFutureFilter = {
-  meta?: InputMaybe<ProjectsProjectsEpicFutureMetaFilter>;
-  project?: InputMaybe<ProjectsProjectsEpicFutureProjectFilter>;
+export type ProjectsEpicfutureFilter = {
+  meta?: InputMaybe<ProjectsEpicfutureMetaFilter>;
+  project?: InputMaybe<ProjectsEpicfutureProjectFilter>;
 };
 
-export type ProjectsProjectsConsolidatedConstructionSolutionsMetaFilter = {
+export type ProjectsConsolidatedconstructionsolutionsMetaFilter = {
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
   speed?: InputMaybe<NumberFilter>;
   url?: InputMaybe<StringFilter>;
 };
 
-export type ProjectsProjectsConsolidatedConstructionSolutionsProjectFilter = {
+export type ProjectsConsolidatedconstructionsolutionsProjectFilter = {
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
   image?: InputMaybe<ImageFilter>;
 };
 
-export type ProjectsProjectsConsolidatedConstructionSolutionsFilter = {
-  meta?: InputMaybe<ProjectsProjectsConsolidatedConstructionSolutionsMetaFilter>;
-  project?: InputMaybe<ProjectsProjectsConsolidatedConstructionSolutionsProjectFilter>;
+export type ProjectsConsolidatedconstructionsolutionsFilter = {
+  meta?: InputMaybe<ProjectsConsolidatedconstructionsolutionsMetaFilter>;
+  project?: InputMaybe<ProjectsConsolidatedconstructionsolutionsProjectFilter>;
 };
 
-export type ProjectsProjectsPerfectlyDifferentMetaFilter = {
+export type ProjectsPerfectlydifferentMetaFilter = {
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
   speed?: InputMaybe<NumberFilter>;
   url?: InputMaybe<StringFilter>;
 };
 
-export type ProjectsProjectsPerfectlyDifferentProjectFilter = {
+export type ProjectsPerfectlydifferentProjectFilter = {
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
   image?: InputMaybe<ImageFilter>;
 };
 
-export type ProjectsProjectsPerfectlyDifferentFilter = {
-  meta?: InputMaybe<ProjectsProjectsPerfectlyDifferentMetaFilter>;
-  project?: InputMaybe<ProjectsProjectsPerfectlyDifferentProjectFilter>;
-};
-
-export type ProjectsProjectsFilter = {
-  logofolio?: InputMaybe<ProjectsProjectsLogofolioFilter>;
-  anaRose?: InputMaybe<ProjectsProjectsAnaRoseFilter>;
-  queendomFarms?: InputMaybe<ProjectsProjectsQueendomFarmsFilter>;
-  epicFuture?: InputMaybe<ProjectsProjectsEpicFutureFilter>;
-  consolidatedConstructionSolutions?: InputMaybe<ProjectsProjectsConsolidatedConstructionSolutionsFilter>;
-  perfectlyDifferent?: InputMaybe<ProjectsProjectsPerfectlyDifferentFilter>;
+export type ProjectsPerfectlydifferentFilter = {
+  meta?: InputMaybe<ProjectsPerfectlydifferentMetaFilter>;
+  project?: InputMaybe<ProjectsPerfectlydifferentProjectFilter>;
 };
 
 export type ProjectsFilter = {
-  projects?: InputMaybe<ProjectsProjectsFilter>;
+  logofolio?: InputMaybe<ProjectsLogofolioFilter>;
+  anarose?: InputMaybe<ProjectsAnaroseFilter>;
+  queendomfarms?: InputMaybe<ProjectsQueendomfarmsFilter>;
+  epicfuture?: InputMaybe<ProjectsEpicfutureFilter>;
+  consolidatedconstructionsolutions?: InputMaybe<ProjectsConsolidatedconstructionsolutionsFilter>;
+  perfectlydifferent?: InputMaybe<ProjectsPerfectlydifferentFilter>;
 };
 
 export type ProjectsConnectionEdges = {
@@ -1281,131 +1272,127 @@ export type HomeMutation = {
   contact?: InputMaybe<HomeContactMutation>;
 };
 
-export type ProjectsProjectsLogofolioMetaMutation = {
+export type ProjectsLogofolioMetaMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
   speed?: InputMaybe<Scalars['Float']['input']>;
   url?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type ProjectsProjectsLogofolioProjectImagesMutation = {
+export type ProjectsLogofolioProjectImagesMutation = {
   white?: InputMaybe<Scalars['String']['input']>;
   black?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type ProjectsProjectsLogofolioProjectMutation = {
+export type ProjectsLogofolioProjectMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
-  images?: InputMaybe<ProjectsProjectsLogofolioProjectImagesMutation>;
+  images?: InputMaybe<ProjectsLogofolioProjectImagesMutation>;
   image?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type ProjectsProjectsLogofolioMutation = {
-  meta?: InputMaybe<ProjectsProjectsLogofolioMetaMutation>;
-  project?: InputMaybe<Array<InputMaybe<ProjectsProjectsLogofolioProjectMutation>>>;
+export type ProjectsLogofolioMutation = {
+  meta?: InputMaybe<ProjectsLogofolioMetaMutation>;
+  project?: InputMaybe<Array<InputMaybe<ProjectsLogofolioProjectMutation>>>;
 };
 
-export type ProjectsProjectsAnaRoseMetaMutation = {
+export type ProjectsAnaroseMetaMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
   speed?: InputMaybe<Scalars['Float']['input']>;
   url?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type ProjectsProjectsAnaRoseProjectMutation = {
+export type ProjectsAnaroseProjectMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
   image?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type ProjectsProjectsAnaRoseMutation = {
-  meta?: InputMaybe<ProjectsProjectsAnaRoseMetaMutation>;
-  project?: InputMaybe<Array<InputMaybe<ProjectsProjectsAnaRoseProjectMutation>>>;
+export type ProjectsAnaroseMutation = {
+  meta?: InputMaybe<ProjectsAnaroseMetaMutation>;
+  project?: InputMaybe<Array<InputMaybe<ProjectsAnaroseProjectMutation>>>;
 };
 
-export type ProjectsProjectsQueendomFarmsMetaMutation = {
+export type ProjectsQueendomfarmsMetaMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
   speed?: InputMaybe<Scalars['Float']['input']>;
   url?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type ProjectsProjectsQueendomFarmsProjectMutation = {
+export type ProjectsQueendomfarmsProjectMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
   image?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type ProjectsProjectsQueendomFarmsMutation = {
-  meta?: InputMaybe<ProjectsProjectsQueendomFarmsMetaMutation>;
-  project?: InputMaybe<Array<InputMaybe<ProjectsProjectsQueendomFarmsProjectMutation>>>;
+export type ProjectsQueendomfarmsMutation = {
+  meta?: InputMaybe<ProjectsQueendomfarmsMetaMutation>;
+  project?: InputMaybe<Array<InputMaybe<ProjectsQueendomfarmsProjectMutation>>>;
 };
 
-export type ProjectsProjectsEpicFutureMetaMutation = {
+export type ProjectsEpicfutureMetaMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
   speed?: InputMaybe<Scalars['Float']['input']>;
   url?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type ProjectsProjectsEpicFutureProjectMutation = {
+export type ProjectsEpicfutureProjectMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
   image?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type ProjectsProjectsEpicFutureMutation = {
-  meta?: InputMaybe<ProjectsProjectsEpicFutureMetaMutation>;
-  project?: InputMaybe<Array<InputMaybe<ProjectsProjectsEpicFutureProjectMutation>>>;
+export type ProjectsEpicfutureMutation = {
+  meta?: InputMaybe<ProjectsEpicfutureMetaMutation>;
+  project?: InputMaybe<Array<InputMaybe<ProjectsEpicfutureProjectMutation>>>;
 };
 
-export type ProjectsProjectsConsolidatedConstructionSolutionsMetaMutation = {
+export type ProjectsConsolidatedconstructionsolutionsMetaMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
   speed?: InputMaybe<Scalars['Float']['input']>;
   url?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type ProjectsProjectsConsolidatedConstructionSolutionsProjectMutation = {
+export type ProjectsConsolidatedconstructionsolutionsProjectMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
   image?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type ProjectsProjectsConsolidatedConstructionSolutionsMutation = {
-  meta?: InputMaybe<ProjectsProjectsConsolidatedConstructionSolutionsMetaMutation>;
-  project?: InputMaybe<Array<InputMaybe<ProjectsProjectsConsolidatedConstructionSolutionsProjectMutation>>>;
+export type ProjectsConsolidatedconstructionsolutionsMutation = {
+  meta?: InputMaybe<ProjectsConsolidatedconstructionsolutionsMetaMutation>;
+  project?: InputMaybe<Array<InputMaybe<ProjectsConsolidatedconstructionsolutionsProjectMutation>>>;
 };
 
-export type ProjectsProjectsPerfectlyDifferentMetaMutation = {
+export type ProjectsPerfectlydifferentMetaMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
   speed?: InputMaybe<Scalars['Float']['input']>;
   url?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type ProjectsProjectsPerfectlyDifferentProjectMutation = {
+export type ProjectsPerfectlydifferentProjectMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
   image?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type ProjectsProjectsPerfectlyDifferentMutation = {
-  meta?: InputMaybe<ProjectsProjectsPerfectlyDifferentMetaMutation>;
-  project?: InputMaybe<Array<InputMaybe<ProjectsProjectsPerfectlyDifferentProjectMutation>>>;
-};
-
-export type ProjectsProjectsMutation = {
-  logofolio?: InputMaybe<ProjectsProjectsLogofolioMutation>;
-  anaRose?: InputMaybe<ProjectsProjectsAnaRoseMutation>;
-  queendomFarms?: InputMaybe<ProjectsProjectsQueendomFarmsMutation>;
-  epicFuture?: InputMaybe<ProjectsProjectsEpicFutureMutation>;
-  consolidatedConstructionSolutions?: InputMaybe<ProjectsProjectsConsolidatedConstructionSolutionsMutation>;
-  perfectlyDifferent?: InputMaybe<ProjectsProjectsPerfectlyDifferentMutation>;
+export type ProjectsPerfectlydifferentMutation = {
+  meta?: InputMaybe<ProjectsPerfectlydifferentMetaMutation>;
+  project?: InputMaybe<Array<InputMaybe<ProjectsPerfectlydifferentProjectMutation>>>;
 };
 
 export type ProjectsMutation = {
-  projects?: InputMaybe<ProjectsProjectsMutation>;
+  logofolio?: InputMaybe<ProjectsLogofolioMutation>;
+  anarose?: InputMaybe<ProjectsAnaroseMutation>;
+  queendomfarms?: InputMaybe<ProjectsQueendomfarmsMutation>;
+  epicfuture?: InputMaybe<ProjectsEpicfutureMutation>;
+  consolidatedconstructionsolutions?: InputMaybe<ProjectsConsolidatedconstructionsolutionsMutation>;
+  perfectlydifferent?: InputMaybe<ProjectsPerfectlydifferentMutation>;
 };
 
 export type SettingPartsFragment = { __typename: 'Setting', siteSettings?: { __typename: 'SettingSiteSettings', siteName?: string | null, siteOwner?: string | null } | null, preloader?: { __typename: 'SettingPreloader', image?: string | null, alt?: string | null } | null, companyLogo?: { __typename: 'SettingCompanyLogo', image?: string | null, alt?: string | null } | null, social?: { __typename: 'SettingSocial', fb?: { __typename: 'SettingSocialFb', title?: string | null, link?: string | null } | null, ig?: { __typename: 'SettingSocialIg', title?: string | null, link?: string | null } | null, github?: { __typename: 'SettingSocialGithub', title?: string | null, link?: string | null } | null, linkedin?: { __typename: 'SettingSocialLinkedin', title?: string | null, link?: string | null } | null } | null };
@@ -1414,7 +1401,7 @@ export type NavigationPartsFragment = { __typename: 'Navigation', navigationLink
 
 export type HomePartsFragment = { __typename: 'Home', rotatingWords?: Array<string | null> | null, introLines?: { __typename: 'HomeIntroLines', line1?: string | null, line2?: string | null, line3?: string | null, line4?: string | null } | null, doorMessages?: { __typename: 'HomeDoorMessages', message1?: string | null, message2?: string | null, message3?: string | null } | null, coreSystems?: { __typename: 'HomeCoreSystems', title?: string | null, desc?: string | null, skills?: { __typename: 'HomeCoreSystemsSkills', skill1?: string | null, skill2?: string | null, skill3?: string | null, skill4?: string | null, skill5?: string | null } | null } | null, fieldSystems?: { __typename: 'HomeFieldSystems', title?: string | null, desc?: string | null, skills?: { __typename: 'HomeFieldSystemsSkills', skill1?: string | null, skill2?: string | null, skill3?: string | null, skill4?: string | null, skill5?: string | null } | null } | null, combinedStatement?: { __typename: 'HomeCombinedStatement', statement1?: string | null, statement2?: string | null } | null, projectSection?: { __typename: 'HomeProjectSection', title?: string | null, projects?: Array<{ __typename: 'HomeProjectSectionProjects', image1?: string | null, url1?: string | null, image2?: string | null, url2?: string | null, image3?: string | null, url3?: string | null, image4?: string | null, url4?: string | null } | null> | null, viewAllLink?: { __typename: 'HomeProjectSectionViewAllLink', text?: string | null, url?: string | null } | null } | null, quote?: { __typename: 'HomeQuote', lines?: { __typename: 'HomeQuoteLines', line?: string | null } | null, attribution?: { __typename: 'HomeQuoteAttribution', signature?: string | null, source?: string | null } | null } | null, timedQuote?: { __typename: 'HomeTimedQuote', quoteParts?: Array<{ __typename: 'HomeTimedQuoteQuoteParts', text?: string | null, delay?: number | null } | null> | null } | null, contact?: { __typename: 'HomeContact', link?: string | null, buttonText?: string | null } | null };
 
-export type ProjectsPartsFragment = { __typename: 'Projects', projects?: { __typename: 'ProjectsProjects', logofolio?: { __typename: 'ProjectsProjectsLogofolio', meta?: { __typename: 'ProjectsProjectsLogofolioMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsLogofolioProject', title?: string | null, description?: string | null, image?: string | null, images?: { __typename: 'ProjectsProjectsLogofolioProjectImages', white?: string | null, black?: string | null } | null } | null> | null } | null, anaRose?: { __typename: 'ProjectsProjectsAnaRose', meta?: { __typename: 'ProjectsProjectsAnaRoseMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsAnaRoseProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, queendomFarms?: { __typename: 'ProjectsProjectsQueendomFarms', meta?: { __typename: 'ProjectsProjectsQueendomFarmsMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsQueendomFarmsProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, epicFuture?: { __typename: 'ProjectsProjectsEpicFuture', meta?: { __typename: 'ProjectsProjectsEpicFutureMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsEpicFutureProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, consolidatedConstructionSolutions?: { __typename: 'ProjectsProjectsConsolidatedConstructionSolutions', meta?: { __typename: 'ProjectsProjectsConsolidatedConstructionSolutionsMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsConsolidatedConstructionSolutionsProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, perfectlyDifferent?: { __typename: 'ProjectsProjectsPerfectlyDifferent', meta?: { __typename: 'ProjectsProjectsPerfectlyDifferentMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsPerfectlyDifferentProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null } | null };
+export type ProjectsPartsFragment = { __typename: 'Projects', logofolio?: { __typename: 'ProjectsLogofolio', meta?: { __typename: 'ProjectsLogofolioMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsLogofolioProject', title?: string | null, description?: string | null, image?: string | null, images?: { __typename: 'ProjectsLogofolioProjectImages', white?: string | null, black?: string | null } | null } | null> | null } | null, anarose?: { __typename: 'ProjectsAnarose', meta?: { __typename: 'ProjectsAnaroseMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsAnaroseProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, queendomfarms?: { __typename: 'ProjectsQueendomfarms', meta?: { __typename: 'ProjectsQueendomfarmsMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsQueendomfarmsProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, epicfuture?: { __typename: 'ProjectsEpicfuture', meta?: { __typename: 'ProjectsEpicfutureMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsEpicfutureProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, consolidatedconstructionsolutions?: { __typename: 'ProjectsConsolidatedconstructionsolutions', meta?: { __typename: 'ProjectsConsolidatedconstructionsolutionsMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsConsolidatedconstructionsolutionsProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, perfectlydifferent?: { __typename: 'ProjectsPerfectlydifferent', meta?: { __typename: 'ProjectsPerfectlydifferentMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsPerfectlydifferentProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null };
 
 export type SettingQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -1478,7 +1465,7 @@ export type ProjectsQueryVariables = Exact<{
 }>;
 
 
-export type ProjectsQuery = { __typename?: 'Query', projects: { __typename: 'Projects', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, projects?: { __typename: 'ProjectsProjects', logofolio?: { __typename: 'ProjectsProjectsLogofolio', meta?: { __typename: 'ProjectsProjectsLogofolioMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsLogofolioProject', title?: string | null, description?: string | null, image?: string | null, images?: { __typename: 'ProjectsProjectsLogofolioProjectImages', white?: string | null, black?: string | null } | null } | null> | null } | null, anaRose?: { __typename: 'ProjectsProjectsAnaRose', meta?: { __typename: 'ProjectsProjectsAnaRoseMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsAnaRoseProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, queendomFarms?: { __typename: 'ProjectsProjectsQueendomFarms', meta?: { __typename: 'ProjectsProjectsQueendomFarmsMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsQueendomFarmsProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, epicFuture?: { __typename: 'ProjectsProjectsEpicFuture', meta?: { __typename: 'ProjectsProjectsEpicFutureMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsEpicFutureProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, consolidatedConstructionSolutions?: { __typename: 'ProjectsProjectsConsolidatedConstructionSolutions', meta?: { __typename: 'ProjectsProjectsConsolidatedConstructionSolutionsMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsConsolidatedConstructionSolutionsProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, perfectlyDifferent?: { __typename: 'ProjectsProjectsPerfectlyDifferent', meta?: { __typename: 'ProjectsProjectsPerfectlyDifferentMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsPerfectlyDifferentProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null } | null } };
+export type ProjectsQuery = { __typename?: 'Query', projects: { __typename: 'Projects', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, logofolio?: { __typename: 'ProjectsLogofolio', meta?: { __typename: 'ProjectsLogofolioMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsLogofolioProject', title?: string | null, description?: string | null, image?: string | null, images?: { __typename: 'ProjectsLogofolioProjectImages', white?: string | null, black?: string | null } | null } | null> | null } | null, anarose?: { __typename: 'ProjectsAnarose', meta?: { __typename: 'ProjectsAnaroseMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsAnaroseProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, queendomfarms?: { __typename: 'ProjectsQueendomfarms', meta?: { __typename: 'ProjectsQueendomfarmsMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsQueendomfarmsProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, epicfuture?: { __typename: 'ProjectsEpicfuture', meta?: { __typename: 'ProjectsEpicfutureMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsEpicfutureProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, consolidatedconstructionsolutions?: { __typename: 'ProjectsConsolidatedconstructionsolutions', meta?: { __typename: 'ProjectsConsolidatedconstructionsolutionsMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsConsolidatedconstructionsolutionsProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, perfectlydifferent?: { __typename: 'ProjectsPerfectlydifferent', meta?: { __typename: 'ProjectsPerfectlydifferentMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsPerfectlydifferentProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null } };
 
 export type ProjectsConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -1490,7 +1477,7 @@ export type ProjectsConnectionQueryVariables = Exact<{
 }>;
 
 
-export type ProjectsConnectionQuery = { __typename?: 'Query', projectsConnection: { __typename?: 'ProjectsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'ProjectsConnectionEdges', cursor: string, node?: { __typename: 'Projects', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, projects?: { __typename: 'ProjectsProjects', logofolio?: { __typename: 'ProjectsProjectsLogofolio', meta?: { __typename: 'ProjectsProjectsLogofolioMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsLogofolioProject', title?: string | null, description?: string | null, image?: string | null, images?: { __typename: 'ProjectsProjectsLogofolioProjectImages', white?: string | null, black?: string | null } | null } | null> | null } | null, anaRose?: { __typename: 'ProjectsProjectsAnaRose', meta?: { __typename: 'ProjectsProjectsAnaRoseMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsAnaRoseProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, queendomFarms?: { __typename: 'ProjectsProjectsQueendomFarms', meta?: { __typename: 'ProjectsProjectsQueendomFarmsMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsQueendomFarmsProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, epicFuture?: { __typename: 'ProjectsProjectsEpicFuture', meta?: { __typename: 'ProjectsProjectsEpicFutureMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsEpicFutureProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, consolidatedConstructionSolutions?: { __typename: 'ProjectsProjectsConsolidatedConstructionSolutions', meta?: { __typename: 'ProjectsProjectsConsolidatedConstructionSolutionsMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsConsolidatedConstructionSolutionsProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, perfectlyDifferent?: { __typename: 'ProjectsProjectsPerfectlyDifferent', meta?: { __typename: 'ProjectsProjectsPerfectlyDifferentMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsPerfectlyDifferentProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null } | null } | null } | null> | null } };
+export type ProjectsConnectionQuery = { __typename?: 'Query', projectsConnection: { __typename?: 'ProjectsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'ProjectsConnectionEdges', cursor: string, node?: { __typename: 'Projects', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, logofolio?: { __typename: 'ProjectsLogofolio', meta?: { __typename: 'ProjectsLogofolioMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsLogofolioProject', title?: string | null, description?: string | null, image?: string | null, images?: { __typename: 'ProjectsLogofolioProjectImages', white?: string | null, black?: string | null } | null } | null> | null } | null, anarose?: { __typename: 'ProjectsAnarose', meta?: { __typename: 'ProjectsAnaroseMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsAnaroseProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, queendomfarms?: { __typename: 'ProjectsQueendomfarms', meta?: { __typename: 'ProjectsQueendomfarmsMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsQueendomfarmsProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, epicfuture?: { __typename: 'ProjectsEpicfuture', meta?: { __typename: 'ProjectsEpicfutureMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsEpicfutureProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, consolidatedconstructionsolutions?: { __typename: 'ProjectsConsolidatedconstructionsolutions', meta?: { __typename: 'ProjectsConsolidatedconstructionsolutionsMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsConsolidatedconstructionsolutionsProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, perfectlydifferent?: { __typename: 'ProjectsPerfectlydifferent', meta?: { __typename: 'ProjectsPerfectlydifferentMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsPerfectlydifferentProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null } | null } | null> | null } };
 
 export const SettingPartsFragmentDoc = gql`
     fragment SettingParts on Setting {
@@ -1658,108 +1645,105 @@ export const HomePartsFragmentDoc = gql`
 export const ProjectsPartsFragmentDoc = gql`
     fragment ProjectsParts on Projects {
   __typename
-  projects {
+  logofolio {
     __typename
-    logofolio {
+    meta {
       __typename
-      meta {
-        __typename
-        title
-        description
-        speed
-        url
-      }
-      project {
-        __typename
-        title
-        description
-        images {
-          __typename
-          white
-          black
-        }
-        image
-      }
+      title
+      description
+      speed
+      url
     }
-    anaRose {
+    project {
       __typename
-      meta {
+      title
+      description
+      images {
         __typename
-        title
-        description
-        speed
-        url
+        white
+        black
       }
-      project {
-        __typename
-        title
-        description
-        image
-      }
+      image
     }
-    queendomFarms {
+  }
+  anarose {
+    __typename
+    meta {
       __typename
-      meta {
-        __typename
-        title
-        description
-        speed
-        url
-      }
-      project {
-        __typename
-        title
-        description
-        image
-      }
+      title
+      description
+      speed
+      url
     }
-    epicFuture {
+    project {
       __typename
-      meta {
-        __typename
-        title
-        description
-        speed
-        url
-      }
-      project {
-        __typename
-        title
-        description
-        image
-      }
+      title
+      description
+      image
     }
-    consolidatedConstructionSolutions {
+  }
+  queendomfarms {
+    __typename
+    meta {
       __typename
-      meta {
-        __typename
-        title
-        description
-        speed
-        url
-      }
-      project {
-        __typename
-        title
-        description
-        image
-      }
+      title
+      description
+      speed
+      url
     }
-    perfectlyDifferent {
+    project {
       __typename
-      meta {
-        __typename
-        title
-        description
-        speed
-        url
-      }
-      project {
-        __typename
-        title
-        description
-        image
-      }
+      title
+      description
+      image
+    }
+  }
+  epicfuture {
+    __typename
+    meta {
+      __typename
+      title
+      description
+      speed
+      url
+    }
+    project {
+      __typename
+      title
+      description
+      image
+    }
+  }
+  consolidatedconstructionsolutions {
+    __typename
+    meta {
+      __typename
+      title
+      description
+      speed
+      url
+    }
+    project {
+      __typename
+      title
+      description
+      image
+    }
+  }
+  perfectlydifferent {
+    __typename
+    meta {
+      __typename
+      title
+      description
+      speed
+      url
+    }
+    project {
+      __typename
+      title
+      description
+      image
     }
   }
 }
