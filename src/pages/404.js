@@ -1,18 +1,17 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import Layout from "../../components/Layout"
+import Link from 'next/link'
+import Layouts from "../../components/layouts"
 
 
 export default function NotFound() {
     return (
         <section className="main-body-bg">
-        <Layout page="404" bgColor="inherit">
+        <Layouts page="404" bgColor="inherit">
             <div className="">
-                <Link to="/">
+                <Link href="/">
                     <h1>Sorry, page does not exist.</h1>
                 </Link>
             </div>
-        </Layout>
+        </Layouts>
         </section>
     )
 }

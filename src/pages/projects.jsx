@@ -1,7 +1,7 @@
 import SmoothScroll from "../../components/projects/smoothScroll";
 import Projects from "../../components/projects/projects";
 import EarthWrapper from "../../components/projects/EarthWrapper";
-import Layouts from "../../components/Layouts";
+import Layouts from "../../components/layouts";
 
 
 const ProjectsPage = () => {

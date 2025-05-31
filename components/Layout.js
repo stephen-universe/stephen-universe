@@ -2,10 +2,10 @@ import { useEffect } from "react";
 import { scrollAnimation } from "../common/scrollAnims";
 import ScrollApp from "./buttons";
 import DigitalMenu from "./layouts/headers/digitalMenu";
-import Preloader from "./Preloader";
+import Preloader from "./preloader";
 import CookieBanner from "./cookie-banner";
 
-const Layouts = ({
+const Layout = ({
   children,
   noHeader,
 }) => {
@@ -42,4 +42,4 @@ const Layouts = ({
     </>
   );
 };
-export default Layouts;
+export default Layout;

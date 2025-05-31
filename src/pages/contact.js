@@ -1,6 +1,6 @@
 
 import Form from "../../components/forms/form"
-import Layouts from "../../components/Layouts"
+import Layouts from "../../components/layouts"
 
 export default function Contact() {
 
