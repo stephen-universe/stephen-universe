@@ -10,12 +10,9 @@
       "project": [
         {
           "title": "Visionz & Vibez",
-
           "description": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
-
           "images": {
             "white": "/images/logofolio/visionz-bw.png",
-
             "black": "/images/logofolio/visionz-color.png"
           }
         },
