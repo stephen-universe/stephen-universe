@@ -1082,7 +1082,8 @@ var config_default = defineConfig({
                 ]
               }
               // Add similar configurations for other projects
-            ]
+            ],
+            create: true
           }
         ]
       }

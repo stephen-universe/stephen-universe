@@ -1078,11 +1078,12 @@ var config_default = defineConfig({
                         label: "Image"
                       }
                     ]
-                  }
-                ]
+                  },
+                ] 
               }
               // Add similar configurations for other projects
-            ]
+            ],
+            create: true,
           }
         ]
       }
