@@ -3,7 +3,7 @@ import About from "../../components/home/about";
 import InitializeContact from "../../components/home/pastWorks";
 import FooterScroll from "../../components/home/footerScroll";
 import ThreeShape from "../../components/home/floatingShapes";
-import Layout from "../../components/layout";
+import Layout from "../../components/Layout";
 
 
 export default function ProjectPage() {

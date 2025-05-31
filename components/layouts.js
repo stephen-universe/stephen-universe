@@ -3,7 +3,7 @@ import { scrollAnimation } from "../common/scrollAnims";
 import Footer from "./footer";
 import ScrollApp from "./buttons";
 import DigitalMenu from "./layouts/headers/digitalMenu";
-import Preloader from "./preloader";
+import Preloader from "./Preloader";
 import CookieBanner from "./cookie-banner";
 
 const Layouts = ({
