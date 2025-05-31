@@ -1,6 +1,6 @@
 import SmoothScroll from "../../components/projects/smoothScroll";
 import Projects from "../../components/projects/projects";
-import EarthWrapper from "../../components/projects/EarthWrapper";
+import EarthWrapper from "../../components/projects/earthWrapper";
 import Layouts from "../../components/layouts";
 
 
