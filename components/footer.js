@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import appData from "../content/data/footer.json";
+import appData from "../content/data/navigation.json";
 
 export default function Footer() {
   return (

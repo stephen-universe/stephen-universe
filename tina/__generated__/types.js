@@ -5,8 +5,8 @@ export function gql(strings, ...args) {
   });
   return str;
 }
-export const SettingsPartsFragmentDoc = gql`
-    fragment SettingsParts on Settings {
+export const SettingPartsFragmentDoc = gql`
+    fragment SettingParts on Setting {
   __typename
   siteSettings {
     __typename
@@ -61,16 +61,10 @@ export const NavigationPartsFragmentDoc = gql`
     }
     text
   }
-}
-    `;
-export const FooterPartsFragmentDoc = gql`
-    fragment FooterParts on Footer {
-  __typename
   footerLinks {
     __typename
     text
     url
-    className
   }
   footerText {
     __typename
@@ -79,8 +73,8 @@ export const FooterPartsFragmentDoc = gql`
   }
 }
     `;
-export const ContentPartsFragmentDoc = gql`
-    fragment ContentParts on Content {
+export const HomePartsFragmentDoc = gql`
+    fragment HomeParts on Home {
   __typename
   rotatingWords
   introLines {
@@ -283,9 +277,9 @@ export const ProjectsPartsFragmentDoc = gql`
   }
 }
     `;
-export const SettingsDocument = gql`
-    query settings($relativePath: String!) {
-  settings(relativePath: $relativePath) {
+export const SettingDocument = gql`
+    query setting($relativePath: String!) {
+  setting(relativePath: $relativePath) {
     ... on Document {
       _sys {
         filename
@@ -298,13 +292,13 @@ export const SettingsDocument = gql`
       }
       id
     }
-    ...SettingsParts
+    ...SettingParts
   }
 }
-    ${SettingsPartsFragmentDoc}`;
-export const SettingsConnectionDocument = gql`
-    query settingsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: SettingsFilter) {
-  settingsConnection(
+    ${SettingPartsFragmentDoc}`;
+export const SettingConnectionDocument = gql`
+    query settingConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: SettingFilter) {
+  settingConnection(
     before: $before
     after: $after
     first: $first
@@ -334,12 +328,12 @@ export const SettingsConnectionDocument = gql`
           }
           id
         }
-        ...SettingsParts
+        ...SettingParts
       }
     }
   }
 }
-    ${SettingsPartsFragmentDoc}`;
+    ${SettingPartsFragmentDoc}`;
 export const NavigationDocument = gql`
     query navigation($relativePath: String!) {
   navigation(relativePath: $relativePath) {
@@ -397,9 +391,9 @@ export const NavigationConnectionDocument = gql`
   }
 }
     ${NavigationPartsFragmentDoc}`;
-export const FooterDocument = gql`
-    query footer($relativePath: String!) {
-  footer(relativePath: $relativePath) {
+export const HomeDocument = gql`
+    query home($relativePath: String!) {
+  home(relativePath: $relativePath) {
     ... on Document {
       _sys {
         filename
@@ -412,13 +406,13 @@ export const FooterDocument = gql`
       }
       id
     }
-    ...FooterParts
+    ...HomeParts
   }
 }
-    ${FooterPartsFragmentDoc}`;
-export const FooterConnectionDocument = gql`
-    query footerConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: FooterFilter) {
-  footerConnection(
+    ${HomePartsFragmentDoc}`;
+export const HomeConnectionDocument = gql`
+    query homeConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: HomeFilter) {
+  homeConnection(
     before: $before
     after: $after
     first: $first
@@ -448,69 +442,12 @@ export const FooterConnectionDocument = gql`
           }
           id
         }
-        ...FooterParts
+        ...HomeParts
       }
     }
   }
 }
-    ${FooterPartsFragmentDoc}`;
-export const ContentDocument = gql`
-    query content($relativePath: String!) {
-  content(relativePath: $relativePath) {
-    ... on Document {
-      _sys {
-        filename
-        basename
-        hasReferences
-        breadcrumbs
-        path
-        relativePath
-        extension
-      }
-      id
-    }
-    ...ContentParts
-  }
-}
-    ${ContentPartsFragmentDoc}`;
-export const ContentConnectionDocument = gql`
-    query contentConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: ContentFilter) {
-  contentConnection(
-    before: $before
-    after: $after
-    first: $first
-    last: $last
-    sort: $sort
-    filter: $filter
-  ) {
-    pageInfo {
-      hasPreviousPage
-      hasNextPage
-      startCursor
-      endCursor
-    }
-    totalCount
-    edges {
-      cursor
-      node {
-        ... on Document {
-          _sys {
-            filename
-            basename
-            hasReferences
-            breadcrumbs
-            path
-            relativePath
-            extension
-          }
-          id
-        }
-        ...ContentParts
-      }
-    }
-  }
-}
-    ${ContentPartsFragmentDoc}`;
+    ${HomePartsFragmentDoc}`;
 export const ProjectsDocument = gql`
     query projects($relativePath: String!) {
   projects(relativePath: $relativePath) {
@@ -570,11 +507,11 @@ export const ProjectsConnectionDocument = gql`
     ${ProjectsPartsFragmentDoc}`;
 export function getSdk(requester) {
   return {
-    settings(variables, options) {
-      return requester(SettingsDocument, variables, options);
+    setting(variables, options) {
+      return requester(SettingDocument, variables, options);
     },
-    settingsConnection(variables, options) {
-      return requester(SettingsConnectionDocument, variables, options);
+    settingConnection(variables, options) {
+      return requester(SettingConnectionDocument, variables, options);
     },
     navigation(variables, options) {
       return requester(NavigationDocument, variables, options);
@@ -582,17 +519,11 @@ export function getSdk(requester) {
     navigationConnection(variables, options) {
       return requester(NavigationConnectionDocument, variables, options);
     },
-    footer(variables, options) {
-      return requester(FooterDocument, variables, options);
+    home(variables, options) {
+      return requester(HomeDocument, variables, options);
     },
-    footerConnection(variables, options) {
-      return requester(FooterConnectionDocument, variables, options);
-    },
-    content(variables, options) {
-      return requester(ContentDocument, variables, options);
-    },
-    contentConnection(variables, options) {
-      return requester(ContentConnectionDocument, variables, options);
+    homeConnection(variables, options) {
+      return requester(HomeConnectionDocument, variables, options);
     },
     projects(variables, options) {
       return requester(ProjectsDocument, variables, options);

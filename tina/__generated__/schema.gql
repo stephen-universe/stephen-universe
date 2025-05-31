@@ -54,23 +54,20 @@ type Query {
   collections: [Collection!]!
   node(id: String): Node!
   document(collection: String, relativePath: String): DocumentNode!
-  settings(relativePath: String): Settings!
-  settingsConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: SettingsFilter): SettingsConnection!
+  setting(relativePath: String): Setting!
+  settingConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: SettingFilter): SettingConnection!
   navigation(relativePath: String): Navigation!
   navigationConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: NavigationFilter): NavigationConnection!
-  footer(relativePath: String): Footer!
-  footerConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: FooterFilter): FooterConnection!
-  content(relativePath: String): Content!
-  contentConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: ContentFilter): ContentConnection!
+  home(relativePath: String): Home!
+  homeConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: HomeFilter): HomeConnection!
   projects(relativePath: String): Projects!
   projectsConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: ProjectsFilter): ProjectsConnection!
 }
 
 input DocumentFilter {
-  settings: SettingsFilter
+  setting: SettingFilter
   navigation: NavigationFilter
-  footer: FooterFilter
-  content: ContentFilter
+  home: HomeFilter
   projects: ProjectsFilter
 }
 
@@ -97,55 +94,55 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = Settings | Navigation | Footer | Content | Projects | Folder
+union DocumentNode = Setting | Navigation | Home | Projects | Folder
 
-type SettingsSiteSettings {
+type SettingSiteSettings {
   siteName: String
   siteOwner: String
 }
 
-type SettingsPreloader {
+type SettingPreloader {
   image: String
   alt: String
 }
 
-type SettingsCompanyLogo {
+type SettingCompanyLogo {
   image: String
   alt: String
 }
 
-type SettingsSocialFb {
+type SettingSocialFb {
   title: String
   link: String
 }
 
-type SettingsSocialIg {
+type SettingSocialIg {
   title: String
   link: String
 }
 
-type SettingsSocialGithub {
+type SettingSocialGithub {
   title: String
   link: String
 }
 
-type SettingsSocialLinkedin {
+type SettingSocialLinkedin {
   title: String
   link: String
 }
 
-type SettingsSocial {
-  fb: SettingsSocialFb
-  ig: SettingsSocialIg
-  github: SettingsSocialGithub
-  linkedin: SettingsSocialLinkedin
+type SettingSocial {
+  fb: SettingSocialFb
+  ig: SettingSocialIg
+  github: SettingSocialGithub
+  linkedin: SettingSocialLinkedin
 }
 
-type Settings implements Node & Document {
-  siteSettings: SettingsSiteSettings
-  preloader: SettingsPreloader
-  companyLogo: SettingsCompanyLogo
-  social: SettingsSocial
+type Setting implements Node & Document {
+  siteSettings: SettingSiteSettings
+  preloader: SettingPreloader
+  companyLogo: SettingCompanyLogo
+  social: SettingSocial
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
@@ -158,7 +155,7 @@ input StringFilter {
   in: [String]
 }
 
-input SettingsSiteSettingsFilter {
+input SettingSiteSettingsFilter {
   siteName: StringFilter
   siteOwner: StringFilter
 }
@@ -170,59 +167,59 @@ input ImageFilter {
   in: [String]
 }
 
-input SettingsPreloaderFilter {
+input SettingPreloaderFilter {
   image: ImageFilter
   alt: StringFilter
 }
 
-input SettingsCompanyLogoFilter {
+input SettingCompanyLogoFilter {
   image: ImageFilter
   alt: StringFilter
 }
 
-input SettingsSocialFbFilter {
+input SettingSocialFbFilter {
   title: StringFilter
   link: StringFilter
 }
 
-input SettingsSocialIgFilter {
+input SettingSocialIgFilter {
   title: StringFilter
   link: StringFilter
 }
 
-input SettingsSocialGithubFilter {
+input SettingSocialGithubFilter {
   title: StringFilter
   link: StringFilter
 }
 
-input SettingsSocialLinkedinFilter {
+input SettingSocialLinkedinFilter {
   title: StringFilter
   link: StringFilter
 }
 
-input SettingsSocialFilter {
-  fb: SettingsSocialFbFilter
-  ig: SettingsSocialIgFilter
-  github: SettingsSocialGithubFilter
-  linkedin: SettingsSocialLinkedinFilter
+input SettingSocialFilter {
+  fb: SettingSocialFbFilter
+  ig: SettingSocialIgFilter
+  github: SettingSocialGithubFilter
+  linkedin: SettingSocialLinkedinFilter
 }
 
-input SettingsFilter {
-  siteSettings: SettingsSiteSettingsFilter
-  preloader: SettingsPreloaderFilter
-  companyLogo: SettingsCompanyLogoFilter
-  social: SettingsSocialFilter
+input SettingFilter {
+  siteSettings: SettingSiteSettingsFilter
+  preloader: SettingPreloaderFilter
+  companyLogo: SettingCompanyLogoFilter
+  social: SettingSocialFilter
 }
 
-type SettingsConnectionEdges {
+type SettingConnectionEdges {
   cursor: String!
-  node: Settings
+  node: Setting
 }
 
-type SettingsConnection implements Connection {
+type SettingConnection implements Connection {
   pageInfo: PageInfo!
   totalCount: Float!
-  edges: [SettingsConnectionEdges]
+  edges: [SettingConnectionEdges]
 }
 
 type NavigationNavigationLinksHeading {
@@ -236,8 +233,20 @@ type NavigationNavigationLinks {
   text: String
 }
 
+type NavigationFooterLinks {
+  text: String
+  url: String
+}
+
+type NavigationFooterText {
+  text1: String
+  text2: String
+}
+
 type Navigation implements Node & Document {
   navigationLinks: [NavigationNavigationLinks]
+  footerLinks: [NavigationFooterLinks]
+  footerText: [NavigationFooterText]
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
@@ -254,8 +263,20 @@ input NavigationNavigationLinksFilter {
   text: StringFilter
 }
 
+input NavigationFooterLinksFilter {
+  text: StringFilter
+  url: StringFilter
+}
+
+input NavigationFooterTextFilter {
+  text1: StringFilter
+  text2: StringFilter
+}
+
 input NavigationFilter {
   navigationLinks: NavigationNavigationLinksFilter
+  footerLinks: NavigationFooterLinksFilter
+  footerText: NavigationFooterTextFilter
 }
 
 type NavigationConnectionEdges {
@@ -269,66 +290,20 @@ type NavigationConnection implements Connection {
   edges: [NavigationConnectionEdges]
 }
 
-type FooterFooterLinks {
-  text: String
-  url: String
-  className: String
-}
-
-type FooterFooterText {
-  text1: String
-  text2: String
-}
-
-type Footer implements Node & Document {
-  footerLinks: [FooterFooterLinks]
-  footerText: [FooterFooterText]
-  id: ID!
-  _sys: SystemInfo!
-  _values: JSON!
-}
-
-input FooterFooterLinksFilter {
-  text: StringFilter
-  url: StringFilter
-  className: StringFilter
-}
-
-input FooterFooterTextFilter {
-  text1: StringFilter
-  text2: StringFilter
-}
-
-input FooterFilter {
-  footerLinks: FooterFooterLinksFilter
-  footerText: FooterFooterTextFilter
-}
-
-type FooterConnectionEdges {
-  cursor: String!
-  node: Footer
-}
-
-type FooterConnection implements Connection {
-  pageInfo: PageInfo!
-  totalCount: Float!
-  edges: [FooterConnectionEdges]
-}
-
-type ContentIntroLines {
+type HomeIntroLines {
   line1: String
   line2: String
   line3: String
   line4: String
 }
 
-type ContentDoorMessages {
+type HomeDoorMessages {
   message1: String
   message2: String
   message3: String
 }
 
-type ContentCoreSystemsSkills {
+type HomeCoreSystemsSkills {
   skill1: String
   skill2: String
   skill3: String
@@ -336,13 +311,13 @@ type ContentCoreSystemsSkills {
   skill5: String
 }
 
-type ContentCoreSystems {
+type HomeCoreSystems {
   title: String
   desc: String
-  skills: ContentCoreSystemsSkills
+  skills: HomeCoreSystemsSkills
 }
 
-type ContentFieldSystemsSkills {
+type HomeFieldSystemsSkills {
   skill1: String
   skill2: String
   skill3: String
@@ -350,18 +325,18 @@ type ContentFieldSystemsSkills {
   skill5: String
 }
 
-type ContentFieldSystems {
+type HomeFieldSystems {
   title: String
   desc: String
-  skills: ContentFieldSystemsSkills
+  skills: HomeFieldSystemsSkills
 }
 
-type ContentCombinedStatement {
+type HomeCombinedStatement {
   statement1: String
   statement2: String
 }
 
-type ContentProjectSectionProjects {
+type HomeProjectSectionProjects {
   image1: String
   url1: String
   image2: String
@@ -372,75 +347,75 @@ type ContentProjectSectionProjects {
   url4: String
 }
 
-type ContentProjectSectionViewAllLink {
+type HomeProjectSectionViewAllLink {
   text: String
   url: String
 }
 
-type ContentProjectSection {
+type HomeProjectSection {
   title: String
-  projects: [ContentProjectSectionProjects]
-  viewAllLink: ContentProjectSectionViewAllLink
+  projects: [HomeProjectSectionProjects]
+  viewAllLink: HomeProjectSectionViewAllLink
 }
 
-type ContentQuoteLines {
+type HomeQuoteLines {
   line: String
 }
 
-type ContentQuoteAttribution {
+type HomeQuoteAttribution {
   signature: String
   source: String
 }
 
-type ContentQuote {
-  lines: [ContentQuoteLines]
-  attribution: ContentQuoteAttribution
+type HomeQuote {
+  lines: HomeQuoteLines
+  attribution: HomeQuoteAttribution
 }
 
-type ContentTimedQuoteQuoteParts {
+type HomeTimedQuoteQuoteParts {
   text: String
   delay: Float
 }
 
-type ContentTimedQuote {
-  quoteParts: [ContentTimedQuoteQuoteParts]
+type HomeTimedQuote {
+  quoteParts: [HomeTimedQuoteQuoteParts]
 }
 
-type ContentContact {
+type HomeContact {
   link: String
   buttonText: String
 }
 
-type Content implements Node & Document {
+type Home implements Node & Document {
   rotatingWords: [String]
-  introLines: ContentIntroLines
-  doorMessages: ContentDoorMessages
-  coreSystems: ContentCoreSystems
-  fieldSystems: ContentFieldSystems
-  combinedStatement: ContentCombinedStatement
-  projectSection: ContentProjectSection
-  quote: ContentQuote
-  timedQuote: ContentTimedQuote
-  contact: ContentContact
+  introLines: HomeIntroLines
+  doorMessages: HomeDoorMessages
+  coreSystems: HomeCoreSystems
+  fieldSystems: HomeFieldSystems
+  combinedStatement: HomeCombinedStatement
+  projectSection: HomeProjectSection
+  quote: HomeQuote
+  timedQuote: HomeTimedQuote
+  contact: HomeContact
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
 }
 
-input ContentIntroLinesFilter {
+input HomeIntroLinesFilter {
   line1: StringFilter
   line2: StringFilter
   line3: StringFilter
   line4: StringFilter
 }
 
-input ContentDoorMessagesFilter {
+input HomeDoorMessagesFilter {
   message1: StringFilter
   message2: StringFilter
   message3: StringFilter
 }
 
-input ContentCoreSystemsSkillsFilter {
+input HomeCoreSystemsSkillsFilter {
   skill1: StringFilter
   skill2: StringFilter
   skill3: StringFilter
@@ -448,13 +423,13 @@ input ContentCoreSystemsSkillsFilter {
   skill5: StringFilter
 }
 
-input ContentCoreSystemsFilter {
+input HomeCoreSystemsFilter {
   title: StringFilter
   desc: StringFilter
-  skills: ContentCoreSystemsSkillsFilter
+  skills: HomeCoreSystemsSkillsFilter
 }
 
-input ContentFieldSystemsSkillsFilter {
+input HomeFieldSystemsSkillsFilter {
   skill1: StringFilter
   skill2: StringFilter
   skill3: StringFilter
@@ -462,18 +437,18 @@ input ContentFieldSystemsSkillsFilter {
   skill5: StringFilter
 }
 
-input ContentFieldSystemsFilter {
+input HomeFieldSystemsFilter {
   title: StringFilter
   desc: StringFilter
-  skills: ContentFieldSystemsSkillsFilter
+  skills: HomeFieldSystemsSkillsFilter
 }
 
-input ContentCombinedStatementFilter {
+input HomeCombinedStatementFilter {
   statement1: StringFilter
   statement2: StringFilter
 }
 
-input ContentProjectSectionProjectsFilter {
+input HomeProjectSectionProjectsFilter {
   image1: ImageFilter
   url1: StringFilter
   image2: ImageFilter
@@ -484,29 +459,29 @@ input ContentProjectSectionProjectsFilter {
   url4: StringFilter
 }
 
-input ContentProjectSectionViewAllLinkFilter {
+input HomeProjectSectionViewAllLinkFilter {
   text: StringFilter
   url: StringFilter
 }
 
-input ContentProjectSectionFilter {
+input HomeProjectSectionFilter {
   title: StringFilter
-  projects: ContentProjectSectionProjectsFilter
-  viewAllLink: ContentProjectSectionViewAllLinkFilter
+  projects: HomeProjectSectionProjectsFilter
+  viewAllLink: HomeProjectSectionViewAllLinkFilter
 }
 
-input ContentQuoteLinesFilter {
+input HomeQuoteLinesFilter {
   line: StringFilter
 }
 
-input ContentQuoteAttributionFilter {
+input HomeQuoteAttributionFilter {
   signature: StringFilter
   source: StringFilter
 }
 
-input ContentQuoteFilter {
-  lines: ContentQuoteLinesFilter
-  attribution: ContentQuoteAttributionFilter
+input HomeQuoteFilter {
+  lines: HomeQuoteLinesFilter
+  attribution: HomeQuoteAttributionFilter
 }
 
 input NumberFilter {
@@ -519,42 +494,42 @@ input NumberFilter {
   in: [Float]
 }
 
-input ContentTimedQuoteQuotePartsFilter {
+input HomeTimedQuoteQuotePartsFilter {
   text: StringFilter
   delay: NumberFilter
 }
 
-input ContentTimedQuoteFilter {
-  quoteParts: ContentTimedQuoteQuotePartsFilter
+input HomeTimedQuoteFilter {
+  quoteParts: HomeTimedQuoteQuotePartsFilter
 }
 
-input ContentContactFilter {
+input HomeContactFilter {
   link: StringFilter
   buttonText: StringFilter
 }
 
-input ContentFilter {
+input HomeFilter {
   rotatingWords: StringFilter
-  introLines: ContentIntroLinesFilter
-  doorMessages: ContentDoorMessagesFilter
-  coreSystems: ContentCoreSystemsFilter
-  fieldSystems: ContentFieldSystemsFilter
-  combinedStatement: ContentCombinedStatementFilter
-  projectSection: ContentProjectSectionFilter
-  quote: ContentQuoteFilter
-  timedQuote: ContentTimedQuoteFilter
-  contact: ContentContactFilter
+  introLines: HomeIntroLinesFilter
+  doorMessages: HomeDoorMessagesFilter
+  coreSystems: HomeCoreSystemsFilter
+  fieldSystems: HomeFieldSystemsFilter
+  combinedStatement: HomeCombinedStatementFilter
+  projectSection: HomeProjectSectionFilter
+  quote: HomeQuoteFilter
+  timedQuote: HomeTimedQuoteFilter
+  contact: HomeContactFilter
 }
 
-type ContentConnectionEdges {
+type HomeConnectionEdges {
   cursor: String!
-  node: Content
+  node: Home
 }
 
-type ContentConnection implements Connection {
+type HomeConnection implements Connection {
   pageInfo: PageInfo!
   totalCount: Float!
-  edges: [ContentConnectionEdges]
+  edges: [HomeConnectionEdges]
 }
 
 type ProjectsProjectsLogofolioMeta {
@@ -831,82 +806,78 @@ type Mutation {
   deleteDocument(collection: String, relativePath: String!): DocumentNode!
   createDocument(collection: String, relativePath: String!, params: DocumentMutation!): DocumentNode!
   createFolder(collection: String, relativePath: String!): DocumentNode!
-  updateSettings(relativePath: String!, params: SettingsMutation!): Settings!
-  createSettings(relativePath: String!, params: SettingsMutation!): Settings!
+  updateSetting(relativePath: String!, params: SettingMutation!): Setting!
+  createSetting(relativePath: String!, params: SettingMutation!): Setting!
   updateNavigation(relativePath: String!, params: NavigationMutation!): Navigation!
   createNavigation(relativePath: String!, params: NavigationMutation!): Navigation!
-  updateFooter(relativePath: String!, params: FooterMutation!): Footer!
-  createFooter(relativePath: String!, params: FooterMutation!): Footer!
-  updateContent(relativePath: String!, params: ContentMutation!): Content!
-  createContent(relativePath: String!, params: ContentMutation!): Content!
+  updateHome(relativePath: String!, params: HomeMutation!): Home!
+  createHome(relativePath: String!, params: HomeMutation!): Home!
   updateProjects(relativePath: String!, params: ProjectsMutation!): Projects!
   createProjects(relativePath: String!, params: ProjectsMutation!): Projects!
 }
 
 input DocumentUpdateMutation {
-  settings: SettingsMutation
+  setting: SettingMutation
   navigation: NavigationMutation
-  footer: FooterMutation
-  content: ContentMutation
+  home: HomeMutation
   projects: ProjectsMutation
   relativePath: String
 }
 
 input DocumentMutation {
-  settings: SettingsMutation
+  setting: SettingMutation
   navigation: NavigationMutation
-  footer: FooterMutation
-  content: ContentMutation
+  home: HomeMutation
   projects: ProjectsMutation
 }
 
-input SettingsSiteSettingsMutation {
+input SettingSiteSettingsMutation {
   siteName: String
   siteOwner: String
 }
 
-input SettingsPreloaderMutation {
+input SettingPreloaderMutation {
   image: String
   alt: String
 }
 
-input SettingsCompanyLogoMutation {
+input SettingCompanyLogoMutation {
   image: String
   alt: String
 }
 
-input SettingsSocialFbMutation {
+input SettingSocialFbMutation {
   title: String
   link: String
 }
 
-input SettingsSocialIgMutation {
+input SettingSocialIgMutation {
   title: String
   link: String
 }
 
-input SettingsSocialGithubMutation {
+input SettingSocialGithubMutation {
   title: String
   link: String
 }
 
-input SettingsSocialLinkedinMutation {
+input SettingSocialLinkedinMutation {
   title: String
   link: String
 }
 
-input SettingsSocialMutation {
-  fb: SettingsSocialFbMutation
-  ig: SettingsSocialIgMutation
-  github: SettingsSocialGithubMutation
-  linkedin: SettingsSocialLinkedinMutation
+input SettingSocialMutation {
+  fb: SettingSocialFbMutation
+  ig: SettingSocialIgMutation
+  github: SettingSocialGithubMutation
+  linkedin: SettingSocialLinkedinMutation
 }
 
-input SettingsMutation {
-  siteSettings: SettingsSiteSettingsMutation
-  preloader: SettingsPreloaderMutation
-  companyLogo: SettingsCompanyLogoMutation
-  social: SettingsSocialMutation
+input SettingMutation {
+  siteSettings: SettingSiteSettingsMutation
+  preloader: SettingPreloaderMutation
+  companyLogo: SettingCompanyLogoMutation
+  social: SettingSocialMutation
 }
 
 input NavigationNavigationLinksHeadingMutation {
@@ -920,40 +891,36 @@ input NavigationNavigationLinksMutation {
   text: String
 }
 
-input NavigationMutation {
-  navigationLinks: [NavigationNavigationLinksMutation]
-}
-
-input FooterFooterLinksMutation {
+input NavigationFooterLinksMutation {
   text: String
   url: String
-  className: String
 }
 
-input FooterFooterTextMutation {
+input NavigationFooterTextMutation {
   text1: String
   text2: String
 }
 
-input FooterMutation {
-  footerLinks: [FooterFooterLinksMutation]
-  footerText: [FooterFooterTextMutation]
+input NavigationMutation {
+  navigationLinks: [NavigationNavigationLinksMutation]
+  footerLinks: [NavigationFooterLinksMutation]
+  footerText: [NavigationFooterTextMutation]
 }
 
-input ContentIntroLinesMutation {
+input HomeIntroLinesMutation {
   line1: String
   line2: String
   line3: String
   line4: String
 }
 
-input ContentDoorMessagesMutation {
+input HomeDoorMessagesMutation {
   message1: String
   message2: String
   message3: String
 }
 
-input ContentCoreSystemsSkillsMutation {
+input HomeCoreSystemsSkillsMutation {
   skill1: String
   skill2: String
   skill3: String
@@ -961,13 +928,13 @@ input ContentCoreSystemsSkillsMutation {
   skill5: String
 }
 
-input ContentCoreSystemsMutation {
+input HomeCoreSystemsMutation {
   title: String
   desc: String
-  skills: ContentCoreSystemsSkillsMutation
+  skills: HomeCoreSystemsSkillsMutation
 }
 
-input ContentFieldSystemsSkillsMutation {
+input HomeFieldSystemsSkillsMutation {
   skill1: String
   skill2: String
   skill3: String
@@ -975,18 +942,18 @@ input ContentFieldSystemsSkillsMutation {
   skill5: String
 }
 
-input ContentFieldSystemsMutation {
+input HomeFieldSystemsMutation {
   title: String
   desc: String
-  skills: ContentFieldSystemsSkillsMutation
+  skills: HomeFieldSystemsSkillsMutation
 }
 
-input ContentCombinedStatementMutation {
+input HomeCombinedStatementMutation {
   statement1: String
   statement2: String
 }
 
-input ContentProjectSectionProjectsMutation {
+input HomeProjectSectionProjectsMutation {
   image1: String
   url1: String
   image2: String
@@ -997,56 +964,56 @@ input ContentProjectSectionProjectsMutation {
   url4: String
 }
 
-input ContentProjectSectionViewAllLinkMutation {
+input HomeProjectSectionViewAllLinkMutation {
   text: String
   url: String
 }
 
-input ContentProjectSectionMutation {
+input HomeProjectSectionMutation {
   title: String
-  projects: [ContentProjectSectionProjectsMutation]
-  viewAllLink: ContentProjectSectionViewAllLinkMutation
+  projects: [HomeProjectSectionProjectsMutation]
+  viewAllLink: HomeProjectSectionViewAllLinkMutation
 }
 
-input ContentQuoteLinesMutation {
+input HomeQuoteLinesMutation {
   line: String
 }
 
-input ContentQuoteAttributionMutation {
+input HomeQuoteAttributionMutation {
   signature: String
   source: String
 }
 
-input ContentQuoteMutation {
-  lines: [ContentQuoteLinesMutation]
-  attribution: ContentQuoteAttributionMutation
+input HomeQuoteMutation {
+  lines: HomeQuoteLinesMutation
+  attribution: HomeQuoteAttributionMutation
 }
 
-input ContentTimedQuoteQuotePartsMutation {
+input HomeTimedQuoteQuotePartsMutation {
   text: String
   delay: Float
 }
 
-input ContentTimedQuoteMutation {
-  quoteParts: [ContentTimedQuoteQuotePartsMutation]
+input HomeTimedQuoteMutation {
+  quoteParts: [HomeTimedQuoteQuotePartsMutation]
 }
 
-input ContentContactMutation {
+input HomeContactMutation {
   link: String
   buttonText: String
 }
 
-input ContentMutation {
+input HomeMutation {
   rotatingWords: [String]
-  introLines: ContentIntroLinesMutation
-  doorMessages: ContentDoorMessagesMutation
-  coreSystems: ContentCoreSystemsMutation
-  fieldSystems: ContentFieldSystemsMutation
-  combinedStatement: ContentCombinedStatementMutation
-  projectSection: ContentProjectSectionMutation
-  quote: ContentQuoteMutation
-  timedQuote: ContentTimedQuoteMutation
-  contact: ContentContactMutation
+  introLines: HomeIntroLinesMutation
+  doorMessages: HomeDoorMessagesMutation
+  coreSystems: HomeCoreSystemsMutation
+  fieldSystems: HomeFieldSystemsMutation
+  combinedStatement: HomeCombinedStatementMutation
+  projectSection: HomeProjectSectionMutation
+  quote: HomeQuoteMutation
+  timedQuote: HomeTimedQuoteMutation
+  contact: HomeContactMutation
 }
 
 input ProjectsProjectsLogofolioMetaMutation {

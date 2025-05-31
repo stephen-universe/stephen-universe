@@ -1,4 +1,4 @@
-fragment SettingsParts on Settings {
+fragment SettingParts on Setting {
   __typename
   siteSettings {
     __typename
@@ -52,15 +52,10 @@ fragment NavigationParts on Navigation {
     }
     text
   }
-}
-
-fragment FooterParts on Footer {
-  __typename
   footerLinks {
     __typename
     text
     url
-    className
   }
   footerText {
     __typename
@@ -69,7 +64,7 @@ fragment FooterParts on Footer {
   }
 }
 
-fragment ContentParts on Content {
+fragment HomeParts on Home {
   __typename
   rotatingWords
   introLines {

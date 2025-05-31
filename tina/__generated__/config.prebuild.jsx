@@ -19,12 +19,12 @@ var config_default = defineConfig({
     collections: [
       // Site Settings Collection
       {
-        name: "settings",
+        name: "setting",
         label: "Site Config",
         path: "content/data",
         format: "json",
         match: {
-          include: "settings"
+          include: "setting"
         },
         ui: {
           allowedActions: {
@@ -32,7 +32,7 @@ var config_default = defineConfig({
             delete: false
           },
           filename: {
-            slugify: () => "settings",
+            slugify: () => "setting",
             readonly: true
           }
         },
@@ -224,29 +224,7 @@ var config_default = defineConfig({
                 label: "Simple Text"
               }
             ]
-          }
-        ]
-      },
-      // Footer Collection
-      {
-        name: "footer",
-        label: "Footer",
-        path: "content/data",
-        format: "json",
-        match: {
-          include: "footer"
-        },
-        ui: {
-          allowedActions: {
-            create: false,
-            delete: false
           },
-          filename: {
-            slugify: () => "footer",
-            readonly: true
-          }
-        },
-        fields: [
           {
             type: "object",
             name: "footerLinks",
@@ -262,11 +240,6 @@ var config_default = defineConfig({
                 type: "string",
                 name: "url",
                 label: "Link URL"
-              },
-              {
-                type: "string",
-                name: "className",
-                label: "CSS Class"
               }
             ]
           },
@@ -292,12 +265,12 @@ var config_default = defineConfig({
       },
       // Content Collection
       {
-        name: "content",
-        label: "Content",
+        name: "home",
+        label: "Home Page",
         path: "content/data",
         format: "json",
         match: {
-          include: "content"
+          include: "home"
         },
         ui: {
           allowedActions: {
@@ -305,7 +278,7 @@ var config_default = defineConfig({
             delete: false
           },
           filename: {
-            slugify: () => "content",
+            slugify: () => "home",
             readonly: true
           }
         },
@@ -575,7 +548,6 @@ var config_default = defineConfig({
                 type: "object",
                 name: "lines",
                 label: "Lines",
-                list: true,
                 fields: [
                   {
                     type: "string",

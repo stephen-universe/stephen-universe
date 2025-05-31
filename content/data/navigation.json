@@ -18,5 +18,17 @@
       "link": "mailto:launch@stephen-universe.com",
       "text": "Hire Me"
     }
+  ],
+  "footerLinks": [
+    {
+      "text": "React",
+      "url": "https://react.dev"
+    }
+  ],
+  "footerText": [
+    {
+      "text1": "Made with ❤ Using",
+      "text2": "All Right Reserved."
+    }
   ]
 }
