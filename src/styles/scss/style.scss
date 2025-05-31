@@ -1,0 +1,18 @@
+
+@use "../../../node_modules/bulma/bulma.scss";
+@use "./_layout";
+@use "./_navigation.scss";
+@use "./_fonts.scss";
+@use "./_buttons.scss";
+@use "./_modal.scss";
+@use "./_pixelMenu.scss";
+@use "./_basic.scss";
+@use "./_responsive.scss";
+@use "./_cookies.scss";
+@use './_variables.scss' as *;
+
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}

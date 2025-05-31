@@ -1,6 +1,6 @@
-import React from "react"
-import Form from "../components/forms/form"
-import Layouts from "../components/Layouts"
+
+import Form from "../../components/forms/form"
+import Layouts from "../../components/Layouts"
 
 export default function Contact() {
 

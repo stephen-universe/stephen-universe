@@ -1,13 +1,14 @@
 @use 'variables' as *;
+@use "sass:color";
 
 
 // --- Orb Planet ---
 .orb {
-  background: radial-gradient(
-    circle at 40% 40%,
-    lighten(rgba(4, 12, 40), 15%),
-    darken(rgba(4, 12, 40), 20%)
-  );
+background: radial-gradient(
+  circle at 40% 40%,
+  color.adjust(rgba(4, 12, 40), $lightness: 15%),
+  color.adjust(rgba(4, 12, 40), $lightness: -20%)
+);
   padding: 9vw 2vw;
   border-radius: 50%;
   margin: 3vw 10vw;
@@ -235,6 +236,7 @@
   .portfolio-titles{
     width: 100%;
     border-top: 1px solid rgba(183, 171, 152, 0.25);
+    margin: 10rem 0rem;
     .portfolio-title{
   border-bottom: 1px solid rgba(183, 171, 152, 0.25);
   cursor: default;
