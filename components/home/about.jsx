@@ -4,6 +4,9 @@ import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 import Image from "next/image";
 import appData from "../../content/data/home.json";
+import dynamic from "next/dynamic";
+
+const Clock = dynamic(() => import("../clock"), { ssr: false });
 
 const parallaxImages = [
   { src: "/right-door.png", alt: "Right Door", initialX: "-40.5%", initialY: "0%" },
@@ -37,7 +40,7 @@ function getCurrentDateTime() {
     "December",
   ];
   return {
-    dateString: `${days[now.getDay()]}, ${months[now.getMonth()]} ${now.getFullYear()}`,
+dateString: `${days[now.getDay()]}, ${months[now.getMonth()]} ${now.getDate()}, ${now.getFullYear()}`,
     timeString: `${String(now.getHours()).padStart(2, "0")}:${String(
       now.getMinutes()
     ).padStart(2, "0")}:${String(now.getSeconds()).padStart(2, "0")}`,
@@ -337,9 +340,7 @@ export default function About() {
         <div className="text-animation-text">
           <p>// About</p>
         </div>
-        <div className="text-animation-clock">
-          <i className="fa-solid fa-earth-americas"></i> {dateTime.timeString}
-        </div>
+<Clock />
 
         <MaskText dateString={dateTime.dateString} />
 
