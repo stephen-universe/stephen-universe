@@ -33,7 +33,6 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          {isProduction && (
             <script
               dangerouslySetInnerHTML={{
                 __html: `
@@ -157,7 +156,6 @@ class MyDocument extends Document {
               `,
               }}
             />
-          )}
         </body>
       </Html>
     );
