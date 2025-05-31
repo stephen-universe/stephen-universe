@@ -126,8 +126,8 @@ const clickedMobileMenu = (e) => {
         <div className="res-log">
           <Link href="/">
             <Image
-              src={appData.companyLogo.logo.image}
-              alt={appData.companyLogo.logo.alt}
+              src={appData.companyLogo.image}
+              alt={appData.companyLogo.alt}
               width={300} // You should adjust these values
               height={100} // You should adjust these values
             />
