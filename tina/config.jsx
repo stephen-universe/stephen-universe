@@ -933,6 +933,11 @@ var config_default = defineConfig({
                         type: "image",
                         name: "image",
                         label: "Image"
+                      },
+                      {
+                        type: "string",
+                        name: "video",
+                        label: "Video",
                       }
                     ]
                   }

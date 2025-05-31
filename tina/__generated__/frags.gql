@@ -229,6 +229,7 @@ fragment ProjectsParts on Projects {
         title
         description
         image
+        video
       }
     }
     consolidatedconstructionsolutions {

@@ -603,6 +603,7 @@ type ProjectsProjectsEpicfutureProject {
   title: String
   description: String
   image: String
+  video: String
 }
 
 type ProjectsProjectsEpicfuture {
@@ -733,6 +734,7 @@ input ProjectsProjectsEpicfutureProjectFilter {
   title: StringFilter
   description: StringFilter
   image: ImageFilter
+  video: StringFilter
 }
 
 input ProjectsProjectsEpicfutureFilter {
@@ -1087,6 +1089,7 @@ input ProjectsProjectsEpicfutureProjectMutation {
   title: String
   description: String
   image: String
+  video: String
 }
 
 input ProjectsProjectsEpicfutureMutation {

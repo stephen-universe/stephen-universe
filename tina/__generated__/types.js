@@ -240,6 +240,7 @@ export const ProjectsPartsFragmentDoc = gql`
         title
         description
         image
+        video
       }
     }
     consolidatedconstructionsolutions {
