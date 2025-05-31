@@ -1,5 +1,7 @@
 import Link from 'next/link'
-import Layouts from "../../components/layouts"
+import dynamic from 'next/dynamic';
+
+const Layouts = dynamic(() => import("../../components/layouts"), { ssr: false });
 
 
 export default function NotFound() {
