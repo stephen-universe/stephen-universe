@@ -7,7 +7,10 @@
     "image": "/scroll-btn.png",
     "alt": "logo"
   },
-  "companyLogo": {},
+  "companyLogo": {    
+    "image": "/logo-icon.png",
+    "alt": "company logo"
+  },
   "social": {
     "fb": {
       "title": "Facebook",
