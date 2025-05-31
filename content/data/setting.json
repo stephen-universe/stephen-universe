@@ -1,19 +1,13 @@
 {
-
   "siteSettings": {
     "siteName": "Stephen-Universe",
-    "siteOwner": "Stephen A. Warren, J.R"
+    "siteOwner": "Stephen A. Warren"
   },
   "preloader": {
     "image": "/scroll-btn.png",
     "alt": "logo"
   },
-  "companyLogo": {
-    "logo": {
-      "image": "/logo-icon.png",
-      "alt": "logo"
-    }
-  },
+  "companyLogo": {},
   "social": {
     "fb": {
       "title": "Facebook",
