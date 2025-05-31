@@ -5,7 +5,7 @@ import FooterScroll from "../../components/home/footerScroll";
 import ThreeShape from "../../components/home/floatingShapes";
 import dynamic from 'next/dynamic';
 
-const Layout = dynamic(() => import('../../components/layout'), { ssr: false });
+const Layout = dynamic(() => import('../../components/Layout'), { ssr: false });
 
 
 
