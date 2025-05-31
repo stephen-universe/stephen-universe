@@ -642,6 +642,11 @@ var config_default = defineConfig({
           }
         },
         fields: [
+          {
+            type: "object",
+            name: "projects",
+            label: "Projects",
+            fields: [
               {
                 type: "object",
                 name: "logofolio",
@@ -1072,6 +1077,8 @@ var config_default = defineConfig({
                 ]
               }
               // Add similar configurations for other projects
+            ]
+          }
         ]
       }
     ]

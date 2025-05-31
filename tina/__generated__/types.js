@@ -171,105 +171,108 @@ export const HomePartsFragmentDoc = gql`
 export const ProjectsPartsFragmentDoc = gql`
     fragment ProjectsParts on Projects {
   __typename
-  logofolio {
+  projects {
     __typename
-    meta {
+    logofolio {
       __typename
-      title
-      description
-      speed
-      url
-    }
-    project {
-      __typename
-      title
-      description
-      images {
+      meta {
         __typename
-        white
-        black
+        title
+        description
+        speed
+        url
       }
-      image
+      project {
+        __typename
+        title
+        description
+        images {
+          __typename
+          white
+          black
+        }
+        image
+      }
     }
-  }
-  anarose {
-    __typename
-    meta {
+    anarose {
       __typename
-      title
-      description
-      speed
-      url
+      meta {
+        __typename
+        title
+        description
+        speed
+        url
+      }
+      project {
+        __typename
+        title
+        description
+        image
+      }
     }
-    project {
+    queendomfarms {
       __typename
-      title
-      description
-      image
+      meta {
+        __typename
+        title
+        description
+        speed
+        url
+      }
+      project {
+        __typename
+        title
+        description
+        image
+      }
     }
-  }
-  queendomfarms {
-    __typename
-    meta {
+    epicfuture {
       __typename
-      title
-      description
-      speed
-      url
+      meta {
+        __typename
+        title
+        description
+        speed
+        url
+      }
+      project {
+        __typename
+        title
+        description
+        image
+      }
     }
-    project {
+    consolidatedconstructionsolutions {
       __typename
-      title
-      description
-      image
+      meta {
+        __typename
+        title
+        description
+        speed
+        url
+      }
+      project {
+        __typename
+        title
+        description
+        image
+      }
     }
-  }
-  epicfuture {
-    __typename
-    meta {
+    perfectlydifferent {
       __typename
-      title
-      description
-      speed
-      url
-    }
-    project {
-      __typename
-      title
-      description
-      image
-    }
-  }
-  consolidatedconstructionsolutions {
-    __typename
-    meta {
-      __typename
-      title
-      description
-      speed
-      url
-    }
-    project {
-      __typename
-      title
-      description
-      image
-    }
-  }
-  perfectlydifferent {
-    __typename
-    meta {
-      __typename
-      title
-      description
-      speed
-      url
-    }
-    project {
-      __typename
-      title
-      description
-      image
+      meta {
+        __typename
+        title
+        description
+        speed
+        url
+      }
+      project {
+        __typename
+        title
+        description
+        image
+      }
     }
   }
 }

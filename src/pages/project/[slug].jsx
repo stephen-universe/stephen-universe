@@ -389,7 +389,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const projectData = projectDetails[params.slug] || null;
+  const projectData = projectDetails.projects?.[params.slug] || null;
 
 if (!projectData) {
     return {

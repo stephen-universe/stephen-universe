@@ -1,5 +1,5 @@
 {
-  
+  "projects": {
     "logofolio": {
       "meta": {
         "title": "Logofolio",
@@ -365,4 +365,4 @@
       ]
     }
   }
-
+}
