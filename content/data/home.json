@@ -48,19 +48,19 @@
     "projects": [
       {
         "image1": "/Queendom-Farms-Home.jpg",
-        "url1": "/project/queendomFarms"
+        "url1": "/project/queendomfarms"
       },
       {
         "image2": "/CCS.png",
-        "url2": "/project/consolidatedConstructionSolutions"
+        "url2": "/project/consolidatedconstructionsolutions"
       },
       {
         "image3": "/Ana-Rose-home.jpg",
-        "url3": "/project/anaRose"
+        "url3": "/project/anarose"
       },
       {
         "image4": "/perfectly-different.png",
-        "url4": "/project/perfectlyDifferent"
+        "url4": "/project/perfectlydifferent"
       }
     ],
     "viewAllLink": {
