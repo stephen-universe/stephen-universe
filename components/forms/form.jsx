@@ -38,65 +38,63 @@ export class UserForm extends Component {
     this.setState({ [input]: e.target.value, submissionError: null });
   };
 
-  handleFinalSubmit = async () => {
+handleFinalSubmit = async () => {
   const { name, email, number, budget, service, message } = this.state;
   
   this.setState({ isSubmitting: true, submissionError: null });
 
   try {
-    // Prepare the data
+    // Prepare cleaned data
     const submissionData = {
-      name,
-      email,
-      number: number.replace(/\D/g, ''),
-      budget: budget.replace(/[^\d.]/g, ''),
+      name: name.trim(),
+      email: email.trim(),
+      number: number.replace(/\D/g, ''), // Keep only digits
+      budget: budget.replace(/[^\d.]/g, ''), // Keep numbers and decimal
       service,
-      message
+      message: message.trim()
     };
 
-    console.log('Submitting:', submissionData); // For debugging
+    // ===== (1) FIRST TRY: Next.js API Proxy =====
+    const response = await fetch('/api/submitForm', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(submissionData),
+    });
 
-    // First make a HEAD request to verify the endpoint
-    try {
-      const headResponse = await fetch(
-        'https://script.google.com/macros/s/AKfycbzm2jnxacBgiaDUGMw7SWdntLkwKwaIDrS5zrZiIwLm8GHbpgOKNutoQR5hja-AGHjs/exec',
-        { method: 'HEAD' }
-      );
-      console.log('HEAD request successful');
-    } catch (headError) {
-      console.error('HEAD request failed:', headError);
-      throw new Error('Unable to connect to the server. Please check your internet connection.');
-    }
-
-    // Then make the POST request
-    const response = await fetch(
-      'https://script.google.com/macros/s/AKfycbzm2jnxacBgiaDUGMw7SWdntLkwKwaIDrS5zrZiIwLm8GHbpgOKNutoQR5hja-AGHjs/exec',
-      {
-        method: 'POST',
-        headers: { 
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(submissionData),
-        mode: 'no-cors' // Only use this if you're sure about CORS configuration
-      }
-    );
-
+    // Handle API proxy response
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      const errorData = await response.json().catch(() => ({}));
+      throw new Error(errorData.error || "Server responded with an error");
     }
 
     const result = await response.json();
-    console.log('Response:', result);
-
+    
     if (!result.success) {
       throw new Error(result.error || "Submission failed");
     }
 
-    this.setState({ step: 4 }); // Success step
+    // ===== (2) FALLBACK: Direct to Google Script (if API proxy fails) =====
+    // (This is optional but useful for redundancy)
+    if (result.fallbackNeeded) {
+      console.warn("Falling back to direct Google Script submission");
+      const gscriptUrl = `https://script.google.com/macros/s/AKfycbzfYK-0aSrYRg5qdfZuBwm1zZWtUrV6Eo80HL2HgrF4KPfLPhgVm8aQZuzfA0addaU/exec?${new URLSearchParams(submissionData)}`;
+      const gscriptResponse = await fetch(gscriptUrl, { mode: 'no-cors' });
+      
+      if (!gscriptResponse.ok) {
+        throw new Error("Fallback submission also failed");
+      }
+    }
+
+    // Success!
+    this.setState({ step: 4 });
+
   } catch (error) {
     console.error("Submission error:", error);
     this.setState({
-      submissionError: error.message || "Failed to submit. Please try again.",
+      submissionError: 
+        error.message.includes('Failed to fetch') ? 
+          "Could not connect to the server. Please check your internet connection." :
+          error.message
     });
   } finally {
     this.setState({ isSubmitting: false });
