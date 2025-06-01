@@ -5,16 +5,12 @@ import Image from "next/image";
 export class UserForm extends Component {
   state = {
     step: 1,
-    fullName: "",
-    lastName: "",
+    name: "",
+    number: "",
     email: "",
     budget: "",
-    city: "",
-    number: "",
+    services: "",
     message: "",
-    option: "",
-    additionalOptions: "",
-
     isSubmitting: false,
     submissionError: null,
   };
@@ -33,47 +29,44 @@ export class UserForm extends Component {
     this.setState({ [input]: e.target.value });
   };
 
-  handleFinalSubmit = async () => {
-    this.setState({ isSubmitting: true, submissionError: null });
+handleFinalSubmit = () => {
+  const {
+    name,
+    email,
+    number,
+    budget,
+    services,
+    message,
+  } = this.state;
 
-    try {
-      const submissionData = {
-        fullName: this.state.fullName,
-        email: this.state.email,
-        budget: this.state.budget.replace(/[^\d.]/g, ""),
-        number: this.state.number.replace(/\D/g, ""),
-        additionalOptions: this.state.additionalOptions,
-        message: this.state.message,
-      };
+  this.setState({ isSubmitting: true, error: null });
 
-      console.log("Submitting:", submissionData);
+  fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      name,
+      email,
+      number,
+      budget,
+      services,
+      message,
+    }),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log('Success:', data);
+      this.setState({ step: 4 }); // ✅ Show thank-you
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      this.setState({ submissionError: error.message, isSubmitting: false });
+    });
+};
 
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbx9V7CRSdi6PDGrDfRLi__86Pxw7PeK7oGAMa2BYtqbwavvahXkCUlt6VPqz1hdeaOS/exec",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(submissionData),
-        }
-      );
 
-      const result = await response.json();
-      console.log("Response:", result);
-
-      if (!response.ok || !result.success) {
-        throw new Error(result.error || "Submission failed");
-      }
-
-      this.setState({ step: 4 });
-    } catch (error) {
-      console.error("submissionError:", error);
-      this.setState({
-        submissionError: error.message || "Failed to submit. Please try again.",
-      });
-    } finally {
-      this.setState({ isSubmitting: false });
-    }
-  };
 
   render() {
     const { step, isSubmitting, submissionError } = this.state;
@@ -122,12 +115,12 @@ export class UserForm extends Component {
                 onClick={() =>
                   this.setState({
                     step: 1,
-                    fullName: "",
+                    name: "",
                     email: "",
                     budget: "",
                     number: "",
                     message: "",
-                    additionalOptions: "",
+                    services: "",
                   })
                 }
               >
@@ -192,9 +185,9 @@ export class FormUserDetails extends Component {
                     className="input"
                     type="text"
                     placeholder="Enter Your Name"
-                    name="fullName"
-                    onChange={handleChange("fullName")}
-                    defaultValue={values.fullName}
+                    name="name"
+                    onChange={handleChange("name")}
+                    defaultValue={values.name}
                     margin="normal"
                   />
                 </div>
@@ -231,7 +224,7 @@ export class FormUserDetails extends Component {
                     className="input"
                     type="email"
                     placeholder="Enter Your Email"
-                    name="Email"
+                    name="email"
                     onChange={handleChange("email")}
                     defaultValue={values.email}
                     margin="normal"
@@ -241,69 +234,7 @@ export class FormUserDetails extends Component {
                 </div>
               </div>
 
-              <div className="d-none">
-                <div className="field">
-                  <label className="label">Budget (optional)</label>
-                  <div className="control">
-                    <input
-                      className="input"
-                      name="Budget"
-                      type="text"
-                      placeholder="$10,000.00"
-                      onChange={(e) => {
-                        const formattedValue = this.formatBudgetInput(
-                          e.target.value
-                        );
-                        this.props.handleChange("budget")({
-                          target: { value: formattedValue },
-                        });
-                      }}
-                      defaultValue={this.props.values.budget}
-                    />
-                  </div>
-                </div>
-
-                <div className="field">
-                  <label className="label">Project Type</label>
-                  <div className="control">
-                    <div
-                      className="radio"
-                      onChange={handleChange("additionalOptions")}
-                      defaultValue={values.additionalOptions}
-                    >
-                      <label htmlFor="services">Choose A Service:</label> <br />
-                      <select name="services" id="services">
-                        <option value="none">Select A Service</option>
-                        <option value="general">General Question</option>
-                        <option value="ux-design">UX Design</option>
-                        <option value="web-development">Web Development</option>
-                        <option value="corportate-identity/logo">
-                          Corporate Identity/Logo
-                        </option>
-                        <option value="graphic-design">Graphic Design</option>
-                        <option value="print-design">Print Design</option>
-                        <option value="typography">Typography</option>
-                        <option value="seo">Search Engine Optimization</option>
-                        <option value="marketing">Marketing</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="field">
-                  <label className="label">Message</label>
-                  <div className="control">
-                    <textarea
-                      className="textarea"
-                      name="Message"
-                      onChange={handleChange("message")}
-                      defaultValue={values.message}
-                      placeholder="Briefly describe details about your project needs & goals. I'm here to help!"
-                    ></textarea>
-                  </div>
-                </div>
-              </div>
-
+             
               <div className="field is-grouped is-grouped-centered">
                 <div className="control">
                   <button
@@ -404,14 +335,13 @@ export class FormPersonalDetails extends Component {
                 name="form-name"
                 value="Initialize Contact Form"
               />
-              <input type="hidden" name="bot-field" />
 
               <div className="field">
                 <label className="label">Budget</label>
                 <div className="control">
                   <input
                     className="input"
-                    name="Budget"
+                    name="budget"
                     type="text"
                     placeholder="$10,000.00"
                     onChange={(e) => {
@@ -432,24 +362,27 @@ export class FormPersonalDetails extends Component {
                 <div className="control">
                   <div
                     className="radio"
-                    onChange={handleChange("additionalOptions")}
-                    defaultValue={values.additionalOptions}
+                    onChange={handleChange("services")}
+                    defaultValue={values.services}
                   >
                     <label htmlFor="services">Choose A Service:</label> <br />
-                    <select name="services" id="services">
-                      <option value="none">Select A Service</option>
-                      <option value="ux-design">General Question</option>
-                      <option value="ux-design">UX Design</option>
-                      <option value="web-development">Web Development</option>
-                      <option value="corportate-identity/logo">
-                        Corporate Identity/Logo
-                      </option>
-                      <option value="graphic-design">Graphic Design</option>
-                      <option value="print-design">Print Design</option>
-                      <option value="typography">Typography</option>
-                      <option value="seo">Search Engine Optimization</option>
-                      <option value="marketing">Marketing</option>
-                    </select>
+                   <select
+  name="services"
+  id="services"
+  onChange={handleChange("services")}
+  value={values.services || "none"}
+>
+  <option value="none">Select A Service</option>
+  <option value="general">General Question</option>
+  <option value="ux-design">UX Design</option>
+  <option value="web-development">Web Development</option>
+  <option value="corporate-identity/logo">Corporate Identity/Logo</option>
+  <option value="graphic-design">Graphic Design</option>
+  <option value="print-design">Print Design</option>
+  <option value="typography">Typography</option>
+  <option value="seo">Search Engine Optimization</option>
+  <option value="marketing">Marketing</option>
+</select>
                   </div>
                 </div>
               </div>
@@ -459,7 +392,7 @@ export class FormPersonalDetails extends Component {
                 <div className="control">
                   <textarea
                     className="textarea"
-                    name="Message"
+                    name="message"
                     onChange={handleChange("message")}
                     defaultValue={values.message}
                     placeholder="Briefly describe any details 
@@ -543,7 +476,7 @@ export class Confirm extends Component {
 
   render() {
     const {
-      values: { fullName, email, number, budget, additionalOptions, message },
+      values: { name, email, number, budget, services, message },
       prevStep,
       isSubmitting,
       error,
@@ -559,9 +492,9 @@ export class Confirm extends Component {
               <input
                 className="input"
                 type="text"
-                name="fullName"
+                name="name"
                 placeholder="Enter Your Full Name"
-                value={fullName}
+                value={name}
                 readOnly
               />
             </div>
@@ -574,7 +507,7 @@ export class Confirm extends Component {
                 className="input"
                 type="email"
                 placeholder="Enter Your Email"
-                name="Email"
+                name="email"
                 value={email}
                 readOnly
               />
@@ -586,7 +519,7 @@ export class Confirm extends Component {
             <div className="control">
               <textarea
                 className="textarea"
-                name="Message"
+                name="message"
                 value={message}
                 readOnly
               ></textarea>
@@ -599,7 +532,7 @@ export class Confirm extends Component {
               <input
                 className="input"
                 type="text"
-                name="Budget"
+                name="budget"
                 value={budget}
                 readOnly
               />
@@ -611,7 +544,7 @@ export class Confirm extends Component {
             <div className="control">
               <input
                 className="input"
-                name="Number"
+                name="number"
                 type="number"
                 value={number}
                 readOnly
@@ -625,8 +558,8 @@ export class Confirm extends Component {
               <input
                 className="input"
                 type="text"
-                name="Option"
-                value={additionalOptions}
+                name="services"
+                value={services}
                 readOnly
               />
             </div>
@@ -640,13 +573,13 @@ export class Confirm extends Component {
                 <label className="label has-text-centered py-5">
                   Please Confirm
                 </label>
-
+<p className="is-size-6">
                 <div className="field is-horizontal">
                   <div className="field-label">
                     <label className="label">Name</label>
                   </div>
                   <div className="field-body">
-                    <div className="field">{fullName}</div>
+                    <div className="field">{name}</div>
                   </div>
                 </div>
 
@@ -661,7 +594,7 @@ export class Confirm extends Component {
 
                 <div className="field is-horizontal">
                   <div className="field-label">
-                    <label className="label">Phone</label>
+                    <label className="label">Number</label>
                   </div>
                   <div className="field-body">
                     <div className="field">{number}</div>
@@ -682,7 +615,7 @@ export class Confirm extends Component {
                     <label className="label">Service</label>
                   </div>
                   <div className="field-body">
-                    <div className="field">{additionalOptions}</div>
+                    <div className="field">{services}</div>
                   </div>
                 </div>
 
@@ -694,7 +627,7 @@ export class Confirm extends Component {
                     <div className="field">{message}</div>
                   </div>
                 </div>
-
+</p>
                 <div className="field is-grouped is-grouped-centered py-5">
                   <div className="control">
                     <button
