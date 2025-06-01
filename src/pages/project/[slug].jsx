@@ -1,10 +1,10 @@
-
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router"; // Changed from next/navigation
 import projectDetails from "../../../content/data/projects.json";
 
-export default function ProjectDetails({ projectData }) { // Changed props
+export default function ProjectDetails({ projectData }) {
+  // Changed props
   const router = useRouter();
   const { slug } = router.query; // Get slug from router
   const content = projectData?.project || []; // Use projectData from props
@@ -120,7 +120,9 @@ export default function ProjectDetails({ projectData }) { // Changed props
           }}
         >
           <div>
-            <h2 style={{ marginBottom: "1rem" }}>For A Better Viewing Experience</h2>
+            <h2 style={{ marginBottom: "1rem" }}>
+              For A Better Viewing Experience
+            </h2>
             <p>Please rotate your device to landscape mode.</p>
           </div>
         </div>
@@ -129,45 +131,17 @@ export default function ProjectDetails({ projectData }) { // Changed props
       {/* Back Button */}
       <button
         onClick={goBack}
-        style={{
-          position: "absolute",
-          zIndex: 20,
-          top: 20,
-          left: 20,
-          padding: "0.5rem 1rem",
-          background: "#111",
-          color: "#fff",
-          border: "none",
-          borderRadius: "6px",
-          cursor: "pointer",
-        }}
+        className="backButton"
+        aria-label="Back to previous page"
       >
-        ← Back
+        Back
       </button>
 
       {/* Navigation Arrows */}
       {currentSlide > 0 && (
         <button
           onClick={prevSlide}
-          style={{
-            position: "absolute",
-            zIndex: 15,
-            top: "50%",
-            left: "20px",
-            transform: "translateY(-50%)",
-            background: "rgba(0,0,0,0.1)",
-            color: "#e84834",
-            border: "none",
-            borderRadius: "50%",
-            width: "50px",
-            height: "50px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            cursor: "pointer",
-            fontSize: "24px",
-            boxShadow: "0 2px 10px rgba(0,0,0,0.2)",
-          }}
+          className="navArrow leftArrow"
           aria-label="Previous slide"
         >
           ←
@@ -177,25 +151,7 @@ export default function ProjectDetails({ projectData }) { // Changed props
       {currentSlide < content.length - 1 && (
         <button
           onClick={nextSlide}
-          style={{
-            position: "absolute",
-            zIndex: 15,
-            top: "50%",
-            right: "20px",
-            transform: "translateY(-50%)",
-            background: "rgba(0,0,0,0.1)",
-            color: "#e84834",
-            border: "none",
-            borderRadius: "50%",
-            width: "50px",
-            height: "50px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            cursor: "pointer",
-            fontSize: "24px",
-            boxShadow: "0 2px 10px rgba(0,0,0,0.2)",
-          }}
+          className="navArrow rightArrow"
           aria-label="Next slide"
         >
           →
@@ -222,6 +178,7 @@ export default function ProjectDetails({ projectData }) { // Changed props
           const isLogofolio = slug === "logofolio";
           const hasImages = isLogofolio && section.images;
           const hasSingleImage = !isLogofolio && section.image;
+          const isFirstSlide = i === 0 && !isLogofolio; // Only first slide and not logofolio
 
           return (
             <section
@@ -240,15 +197,98 @@ export default function ProjectDetails({ projectData }) { // Changed props
                 gap: "2rem",
               }}
             >
-              {/* Text Content */}
-              <div style={{ width: "20%", minWidth: "180px" }}>
-                <h2 style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>{section.title}</h2>
-                <p style={{ fontSize: "0.65rem", lineHeight: "1.5" }}>{section.description}</p>
+              {/* Text Content - width changes based on conditions */}
+              <div
+                style={{
+                  width: isFirstSlide ? "45%" : isLogofolio ? "20%" : "20%",
+                  minWidth: isFirstSlide ? "275px" : "180px",
+                }}
+              >
+                <h2
+                  style={{
+                    color: "#e84834",
+                    fontSize: "1.5rem",
+                    marginBottom: "1rem",
+                  }}
+                >
+                  {section.title}
+                </h2>
+                <p
+                  style={{
+                    color: "#040c28",
+                    fontSize: "0.8rem",
+                    lineHeight: "1.5",
+                  }}
+                >
+                  {section.description}
+                </p>
+
+                {/* Goals/Challenges/Solutions - only for first slide */}
+                {isFirstSlide &&
+                  (section.goals ||
+                    section.challenges ||
+                    section.solutions) && (
+                    <div style={{ fontSize: "0.7rem", color: "#7c7c7c" }}>
+                      {section.goals && (
+                        <>
+                          <p
+                            style={{
+                              fontSize: "0.75rem",
+                              color: "#040c28",
+                              display: "block",
+                              marginTop: "0.5rem",
+                            }}
+                          >
+                            Goals:
+                          </p>
+                          {section.goals}
+                        </>
+                      )}
+                      {section.challenges && (
+                        <>
+                          <p
+                            style={{
+                              fontSize: "0.75rem",
+                              color: "#040c28",
+                              display: "block",
+                              marginTop: "0.5rem",
+                            }}
+                          >
+                            Challenges:
+                          </p>
+                          {section.challenges}
+                        </>
+                      )}
+                      {section.solutions && (
+                        <>
+                          <p
+                            style={{
+                              fontSize: "0.75rem",
+                              color: "#040c28",
+                              display: "block",
+                              marginTop: "0.5rem",
+                            }}
+                          >
+                            Solutions:
+                          </p>
+                          {section.solutions}
+                        </>
+                      )}
+                    </div>
+                  )}
               </div>
 
               {/* Media Content */}
               {section.video ? (
-                <div style={{ width: "80%", height: "93vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
+                <div
+                  style={{
+                    width: isFirstSlide ? "45%" : "80%", // Adjusted for first slide
+                    height: "93vh",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
                   <video
                     controls
                     muted
@@ -271,7 +311,7 @@ export default function ProjectDetails({ projectData }) { // Changed props
               ) : hasSingleImage ? (
                 <div
                   style={{
-                    width: "80%",
+                    width: isFirstSlide ? "45%" : "80%", // Adjusted for first slide
                     height: "93vh",
                     display: "flex",
                     justifyContent: "center",
@@ -343,6 +383,7 @@ export default function ProjectDetails({ projectData }) { // Changed props
                 </>
               ) : null}
 
+              {/* Rest of your code remains the same */}
               {/* Instruction Overlay */}
               {i === 0 && showInstruction && (
                 <div
@@ -361,11 +402,11 @@ export default function ProjectDetails({ projectData }) { // Changed props
                 >
                   Click arrows or scroll horizontally →
                   <style>{`
-                    @keyframes fadeIn {
-                      0% { opacity: 0; }
-                      100% { opacity: 1; }
-                    }
-                  `}</style>
+            @keyframes fadeIn {
+              0% { opacity: 0; }
+              100% { opacity: 1; }
+            }
+          `}</style>
                 </div>
               )}
             </section>
@@ -382,7 +423,7 @@ export async function getStaticPaths() {
     params: { slug },
   }));
 
- return {
+  return {
     paths,
     fallback: false, // Consider 'blocking' if you add new projects later
   };
@@ -391,7 +432,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const projectData = projectDetails.projects?.[params.slug] || null;
 
-if (!projectData) {
+  if (!projectData) {
     return {
       notFound: true, // Returns 404 if project doesn't exist
     };
