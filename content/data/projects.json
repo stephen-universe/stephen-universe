@@ -85,7 +85,10 @@
        {
         "title": "Project Discovery",
         "description": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
-        "image": "/images/Ana-Rose-residential.png"
+        "image": "/images/Ana-Rose-residential.png",
+        "goals": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
+        "challenges": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
+        "solutions": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges."
       },
       {
         "title": "Client Collaboration",
@@ -119,8 +122,11 @@
       "project": [
         {
         "title": "Project Discovery",
-        "description": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
-        "image": "/images/Queendom-Farms-brief.jpg"
+        "description": "Queendon Farms is an urban flower and fruit farm based in Georgia, aiming to establish itself in an industry traditionally dominated by men. Founded by two women inspired and empowered by agriculture, they set out to create a strong and authentic brand identity of their own",
+        "image": "/images/Queendom-Farms-brief.jpg",
+        "goals": "* Become a household name | * Create a strong brand identity | * Establish a unique market position",
+        "challenges": "Establish a brand identity in an industry dominated by men",
+        "solutions": "Develop a brand identity that reflects the founders' values and mission, while appealing to a diverse audience"
       },
       {
         "title": "Concept Development",
@@ -205,7 +211,10 @@
         {
         "title": "Project Discovery",
         "description": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
-        "image": "/images/EpicFuture-bw.png"
+        "image": "/images/EpicFuture-bw.png",
+        "goals": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
+        "challenges": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
+        "solutions": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges."
       },
       {
         "title": "Concept Development",
@@ -245,7 +254,10 @@
           {
         "title": "Project Discovery",
         "description": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
-        "image": "/images/CCS-Imagery.png"
+        "image": "/images/CCS-Imagery.png",
+        "goals": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
+        "challenges": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
+        "solutions": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges."
       },
       {
         "title": "Design Execution",
@@ -285,7 +297,10 @@
          {
         "title": "Project Discovery",
         "description": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
-        "image": "/images/PerfectlyDifferent-screens.png"
+        "image": "/images/PerfectlyDifferent-screens.png",
+        "goals": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
+        "challenges": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
+        "solutions": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges."
       },
       {
         "title": "Concept Development",
