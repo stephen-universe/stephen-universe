@@ -9,68 +9,68 @@
       },
       "project": [
         {
-          "title": "Visionz & Vibez",
-          "description": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
           "images": {
             "white": "/images/logofolio/visionz-bw.png",
             "black": "/images/logofolio/visionz-color.png"
-          }
+          },
+          "title": "Visionz & Vibez",
+          "description": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges."
         },
         {
-          "title": "Ebony Gonsalves",
-          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy.",
           "images": {
             "white": "/images/logofolio/eg-bw.png",
             "black": "/images/logofolio/eg-color.png"
-          }
+          },
+          "title": "Ebony Gonsalves",
+          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy."
         },
         {
-          "title": "iSlay",
-          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
           "images": {
             "white": "/images/logofolio/islaybox-bw.png",
             "black": "/images/logofolio/islaybox-color.png"
-          }
+          },
+          "title": "iSlay",
+          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print."
         },
         {
-          "title": "Seasons",
-          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations.",
           "images": {
             "white": "/images/logofolio/seasons-bw.png",
             "black": "/images/logofolio/seasons-color.png"
-          }
+          },
+          "title": "Seasons",
+          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations."
         },
         {
-          "title": "Waggy Walks ATL",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
           "images": {
             "white": "/images/logofolio/waggy-bw.png",
             "black": "/images/logofolio/waggy-color.png"
-          }
+          },
+          "title": "Waggy Walks ATL",
+          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility."
         },
         {
-          "title": "All About You Designs",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
           "images": {
             "white": "/images/logofolio/aayd-bw.png",
             "black": "/images/logofolio/aayd-color.png"
-          }
+          },
+          "title": "All About You Designs",
+          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility."
         },
         {
-          "title": "AVX Studios",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
           "images": {
             "white": "/images/logofolio/AVX-Studios-white.png",
             "black": "/images/logofolio/AVX-Studios-black.png"
-          }
+          },
+          "title": "AVX Studios",
+          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility."
         },
         {
-          "title": "Patricia Nicolas",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
           "images": {
             "white": "/images/logofolio/PN-white.png",
             "black": "/images/logofolio/PN-black.png"
-          }
+          },
+          "title": "Patricia Nicolas",
+          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility."
         }
       ]
     },
@@ -83,32 +83,32 @@
       },
       "project": [
         {
+          "image": "/images/Ana-Rose-residential.png",
           "title": "Brief",
           "description": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
-          "image": "/images/Ana-Rose-residential.png",
-          "goals": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
+          "goals": "•\tRefresh the brand to feel professional, trustworthy, and scalable\n•\tLaunch a website with built-in scheduling and quote requests\n•\tSupport expansion into higher-value residential and commercial markets",
           "challenges": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
           "solutions": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges."
         },
         {
+          "image": "/images/Ana-Rose-booking.png",
           "title": "Client Collaboration",
-          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations.",
-          "image": "/images/Ana-Rose-booking.png"
+          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations."
         },
         {
+          "image": "/images/Ana-Rose-faqs.png",
           "title": "Concept Development",
-          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy.",
-          "image": "/images/Ana-Rose-faqs.png"
+          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy."
         },
         {
+          "image": "/images/Ana-Rose-modal-two.png",
           "title": "Design Execution",
-          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
-          "image": "/images/Ana-Rose-modal-two.png"
+          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print."
         },
         {
+          "image": "/images/Ana-Rose-reviews.png",
           "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/Ana-Rose-reviews.png"
+          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility."
         }
       ]
     },
@@ -121,82 +121,82 @@
       },
       "project": [
         {
+          "image": "/images/Queendom-Farms-Home.jpg",
           "title": "Brief",
           "description": "Queendon Farms is an urban flower and fruit farm based in Georgia, aiming to establish itself in an industry traditionally dominated by men. Founded by two women inspired and empowered by agriculture, they set out to create a strong and authentic brand identity of their own",
-          "image": "/images/Queendom-Farms-Home.jpg",
           "goals": "* Become a household name | * Create a strong brand identity | * Establish a unique market position",
           "challenges": "Establish a brand identity in an industry dominated by men",
           "solutions": "Develop a brand identity that reflects the founders' values and mission, while appealing to a diverse audience"
         },
         {
+          "image": "/images/Queendom-Farms-inspiration.jpg",
           "title": "Concept Development",
-          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy.",
-          "image": "/images/Queendom-Farms-inspiration.jpg"
+          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy."
         },
         {
+          "image": "/images/Queendom-Farms-persona.jpg",
           "title": "Design Execution",
-          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
-          "image": "/images/Queendom-Farms-persona.jpg"
+          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print."
         },
         {
+          "image": "/images/Queendom-Farms-user.jpg",
           "title": "Client Collaboration",
-          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations.",
-          "image": "/images/Queendom-Farms-user.jpg"
+          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations."
         },
         {
+          "image": "/images/Queendom-Farms-sketch.jpg",
           "title": "Design Execution",
-          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
-          "image": "/images/Queendom-Farms-sketch.jpg"
+          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print."
         },
         {
+          "image": "/images/Queendom-Farms-final.jpg",
           "title": "Client Collaboration",
-          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations.",
-          "image": "/images/Queendom-Farms-final.jpg"
+          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations."
         },
         {
+          "image": "/images/Queendom-Farms-formats.jpg",
           "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/Queendom-Farms-formats.jpg"
+          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility."
         },
         {
+          "image": "/images/Queendom-Farms-type.jpg",
           "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/Queendom-Farms-type.jpg"
+          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility."
         },
         {
+          "image": "/images/Queendom-Farms-guide.jpg",
           "title": "Concept Development",
-          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy.",
-          "image": "/images/Queendom-Farms-guide.jpg"
+          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy."
         },
         {
+          "image": "/images/Queendom-Farms-variants.jpg",
           "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/Queendom-Farms-variants.jpg"
+          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility."
         },
         {
+          "image": "/images/Queendom-Farms-product.jpg",
           "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/Queendom-Farms-product.jpg"
+          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility."
         },
         {
+          "image": "/images/Queendom-Farms-products.jpg",
           "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/Queendom-Farms-products.jpg"
+          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility."
         },
         {
+          "image": "/images/Queendom-Farms-package.jpg",
           "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/Queendom-Farms-package.jpg"
+          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility."
         },
         {
+          "image": "/images/Queendom-Farms-packaging.jpg",
           "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/Queendom-Farms-packaging.jpg"
+          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility."
         },
         {
+          "image": "/images/Queendom-Farms-Home.jpg",
           "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/Queendom-Farms-Home.jpg"
+          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility."
         }
       ]
     },
@@ -209,32 +209,32 @@
       },
       "project": [
         {
+          "image": "/images/EpicFuture-bw.png",
           "title": "Brief",
           "description": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
-          "image": "/images/EpicFuture-bw.png",
           "goals": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
           "challenges": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
           "solutions": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges."
         },
         {
+          "image": "/images/EpicFuture-home.png",
           "title": "Concept Development",
-          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy.",
-          "image": "/images/EpicFuture-home.png"
+          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy."
         },
         {
+          "image": "/images/EpicFuture-cities.png",
           "title": "Design Execution",
-          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
-          "image": "/images/EpicFuture-cities.png"
+          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print."
         },
         {
+          "image": "/images/EpicFuture-Eight.png",
           "title": "Client Collaboration",
-          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations.",
-          "image": "/images/EpicFuture-Eight.png"
+          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations."
         },
         {
+          "image": "/images/EpicFuture-styles.png",
           "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/EpicFuture-styles.png"
+          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility."
         },
         {
           "title": "Brand Application",
@@ -252,37 +252,37 @@
       },
       "project": [
         {
+          "image": "/images/CCS-Imagery.png",
           "title": "Brief",
           "description": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
-          "image": "/images/CCS-Imagery.png",
           "goals": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
           "challenges": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
           "solutions": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges."
         },
         {
+          "image": "/images/CCS-Logo.png",
           "title": "Design Execution",
-          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
-          "image": "/images/CCS-Logo.png"
+          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print."
         },
         {
+          "image": "/images/CCS-Identity_.png",
           "title": "Concept Development",
-          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy.",
-          "image": "/images/CCS-Identity_.png"
+          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy."
         },
         {
+          "image": "/images/CCS-kit.png",
           "title": "Client Collaboration",
-          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations.",
-          "image": "/images/CCS-kit.png"
+          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations."
         },
         {
+          "image": "/images/CCS-Mocks.png",
           "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/CCS-Mocks.png"
+          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility."
         },
         {
+          "image": "/images/CCS-website.png",
           "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/CCS-website.png"
+          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility."
         }
       ]
     },
@@ -295,87 +295,87 @@
       },
       "project": [
         {
+          "image": "/images/PerfectlyDifferent-screens.png",
           "title": "Brief",
           "description": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
-          "image": "/images/PerfectlyDifferent-screens.png",
           "goals": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
           "challenges": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
           "solutions": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges."
         },
         {
+          "image": "/images/PerfectlyDifferent-brief.png",
           "title": "Concept Development",
-          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy.",
-          "image": "/images/PerfectlyDifferent-brief.png"
+          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy."
         },
         {
+          "image": "/images/Perfectly-Different-quote.png",
           "title": "Design Execution",
-          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
-          "image": "/images/Perfectly-Different-quote.png"
+          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print."
         },
         {
+          "image": "/images/Perfectly-Different-requirements.png",
           "title": "Client Collaboration",
-          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations.",
-          "image": "/images/Perfectly-Different-requirements.png"
+          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations."
         },
         {
+          "image": "/images/Perfectly-Different-needs.png",
           "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/Perfectly-Different-needs.png"
+          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility."
         },
         {
+          "image": "/images/Perfectly-Different-research.png",
           "title": "Project Discovery",
-          "description": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
-          "image": "/images/Perfectly-Different-research.png"
+          "description": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges."
         },
         {
+          "image": "/images/Perfectly-Different-interviews.png",
           "title": "Concept Development",
-          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy.",
-          "image": "/images/Perfectly-Different-interviews.png"
+          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy."
         },
         {
+          "image": "/images/Perfectly-Different-user-needs.jpg",
           "title": "Design Execution",
-          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
-          "image": "/images/Perfectly-Different-user-needs.jpg"
+          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print."
         },
         {
+          "image": "/images/Perfectly-Different-user-type-1.png",
           "title": "Client Collaboration",
-          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations.",
-          "image": "/images/Perfectly-Different-user-type-1.png"
+          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations."
         },
         {
+          "image": "/images/Perfectly-Different-user-type-2.png",
           "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/Perfectly-Different-user-type-2.png"
+          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility."
         },
         {
+          "image": "/images/Perfectly-Different-scenarios.png",
           "title": "Design Execution",
-          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
-          "image": "/images/Perfectly-Different-scenarios.png"
+          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print."
         },
         {
+          "image": "/images/Perfectly-Different-compare.png",
           "title": "Client Collaboration",
-          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations.",
-          "image": "/images/Perfectly-Different-compare.png"
+          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations."
         },
         {
+          "image": "/images/Perfectly-Different-app-preview.png",
           "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/Perfectly-Different-app-preview.png"
+          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility."
         },
         {
+          "image": "/images/Perfectly-Different-app-layout.png",
           "title": "Project Discovery",
-          "description": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
-          "image": "/images/Perfectly-Different-app-layout.png"
+          "description": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges."
         },
         {
+          "image": "/images/Perfectly-Different-app-pages.png",
           "title": "Concept Development",
-          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy.",
-          "image": "/images/Perfectly-Different-app-pages.png"
+          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy."
         },
         {
+          "image": "/images/perfectly-different-thanks.png",
           "title": "Design Execution",
-          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
-          "image": "/images/perfectly-different-thanks.png"
+          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print."
         }
       ]
     }
