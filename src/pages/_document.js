@@ -4,7 +4,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
   render() {
-    const isProduction = process.env.NODE_ENV === 'production';
+    
     const GA_ID = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID;
     const FB_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID;
     const TWITTER_ID = process.env.NEXT_PUBLIC_TWITTER_PIXEL_ID;
