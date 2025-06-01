@@ -792,22 +792,22 @@ var config_default = defineConfig({
                         }
                       },
                       { type: "string",
-                        label: "Goals",
                         name: "goals",
+                        label: "Goals",
                         ui: { 
                           component: "textarea"
                         } 
                       },
-                      { type: "string",
-                        label: "Challenges",
+                      { type: "string",            
                         name: "challenges",
+                        label: "Challenges",
                         ui: { 
                           component: "textarea" } },
                         }
                       },
-                      { type: "string",
-                        label: "Solutions",
+                      { type: "string",                                        
                         name: "solutions",
+                        label: "Solutions",
                         ui: {
                           component: "textarea"
                         }
