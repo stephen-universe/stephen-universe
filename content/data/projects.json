@@ -257,32 +257,33 @@
         },
         {
           "image": "/images/CCS-Imagery.png",
-          "title": "Moodboard"
+          "title": "Moodboard",
+          "description": "A visual direction board reflecting the brand’s clean, professional aesthetic and construction industry roots."
         },
         {
           "image": "/images/CCS-Logo.png",
           "title": "Logo Formats",
-          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print."
+          "description": "Primary and alternate logo formats built for flexibility across digital, signage, and print applications."
         },
         {
           "image": "/images/CCS-Identity_.png",
           "title": "Company Colors & Typeface",
-          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy."
+          "description": "A business-forward color palette and sturdy typeface selected to convey trust, structure, and professionalism."
         },
         {
           "image": "/images/CCS-kit.png",
           "title": "Stationery Kit",
-          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations."
+          "description": "Branded stationery designs including letterhead, business cards, and job-site documents for a unified identity."
         },
         {
           "image": "/images/CCS-Mocks.png",
           "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility."
+          "description": "Mockups showcasing the logo applied to work shirts, company gear, and banners."
         },
         {
           "image": "/images/CCS-website.png",
           "title": "Web Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility."
+          "description": "A user-friendly website concept with scheduling, quote generation, and project showcase features."
         }
       ]
     },
