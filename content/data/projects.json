@@ -92,22 +92,22 @@
         },
         {
           "image": "/images/Ana-Rose-booking.png",
-          "title": "Client Collaboration",
+          "title": "Web Application (How-To-Guide)",
           "description": ""
         },
         {
-          "image": "/images/Ana-Rose-faqs.png",
-          "title": "Concept Development",
-          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy."
-        },
-        {
           "image": "/images/Ana-Rose-modal-two.png",
-          "title": "Design Execution",
+          "title": "Web Application (Service-Description)",
           "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print."
         },
         {
+          "image": "/images/Ana-Rose-faqs.png",
+          "title": "Web Application (Custom-Services)",
+          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy."
+        },
+        {
           "image": "/images/Ana-Rose-reviews.png",
-          "title": "Brand Application",
+          "title": "Web Application (Testimonials)",
           "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility."
         }
       ]
