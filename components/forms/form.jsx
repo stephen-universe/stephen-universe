@@ -39,43 +39,69 @@ export class UserForm extends Component {
   };
 
   handleFinalSubmit = async () => {
-    const { name, email, number, budget, service, message } = this.state;
-    
-    this.setState({ isSubmitting: true, submissionError: null });
+  const { name, email, number, budget, service, message } = this.state;
+  
+  this.setState({ isSubmitting: true, submissionError: null });
 
+  try {
+    // Prepare the data
+    const submissionData = {
+      name,
+      email,
+      number: number.replace(/\D/g, ''),
+      budget: budget.replace(/[^\d.]/g, ''),
+      service,
+      message
+    };
+
+    console.log('Submitting:', submissionData); // For debugging
+
+    // First make a HEAD request to verify the endpoint
     try {
-      const response = await fetch(
+      const headResponse = await fetch(
         'https://script.google.com/macros/s/AKfycbzm2jnxacBgiaDUGMw7SWdntLkwKwaIDrS5zrZiIwLm8GHbpgOKNutoQR5hja-AGHjs/exec',
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            name,
-            email,
-            number: number.replace(/\D/g, ''), // Store just digits
-            budget: budget.replace(/[^\d.]/g, ''), // Clean budget input
-            service,
-            message
-          }),
-        }
+        { method: 'HEAD' }
       );
-
-      const result = await response.json();
-      
-      if (!response.ok || !result.success) {
-        throw new Error(result.error || "Submission failed");
-      }
-
-      this.setState({ step: 4 }); // Success step
-    } catch (error) {
-      console.error("Submission error:", error);
-      this.setState({
-        submissionError: error.message || "Failed to submit. Please try again.",
-      });
-    } finally {
-      this.setState({ isSubmitting: false });
+      console.log('HEAD request successful');
+    } catch (headError) {
+      console.error('HEAD request failed:', headError);
+      throw new Error('Unable to connect to the server. Please check your internet connection.');
     }
-  };
+
+    // Then make the POST request
+    const response = await fetch(
+      'https://script.google.com/macros/s/AKfycbzm2jnxacBgiaDUGMw7SWdntLkwKwaIDrS5zrZiIwLm8GHbpgOKNutoQR5hja-AGHjs/exec',
+      {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(submissionData),
+        mode: 'no-cors' // Only use this if you're sure about CORS configuration
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const result = await response.json();
+    console.log('Response:', result);
+
+    if (!result.success) {
+      throw new Error(result.error || "Submission failed");
+    }
+
+    this.setState({ step: 4 }); // Success step
+  } catch (error) {
+    console.error("Submission error:", error);
+    this.setState({
+      submissionError: error.message || "Failed to submit. Please try again.",
+    });
+  } finally {
+    this.setState({ isSubmitting: false });
+  }
+};
 
   render() {
     const { step, isSubmitting, submissionError } = this.state;
