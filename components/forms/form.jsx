@@ -349,7 +349,7 @@ class FormPersonalDetails extends Component {
                   required
                 >
                       <option value="none">Select A Service</option>
-                      <option value="ux-design">General Question</option>
+                      <option value="general-question">General Question</option>
                       <option value="ux-design">UX Design</option>
                       <option value="web-development">Web Development</option>
                       <option value="corportate-identity/logo">
