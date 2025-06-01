@@ -9,7 +9,7 @@ export class UserForm extends Component {
     number: "",
     email: "",
     budget: "",
-    services: "",
+    service: "none", // Changed from 'services' to 'service' for consistency
     message: "",
     isSubmitting: false,
     submissionError: null,
@@ -17,56 +17,65 @@ export class UserForm extends Component {
 
   nextStep = () => {
     const { step } = this.state;
-    this.setState({ step: step + 1 });
+    // Validate before proceeding
+    if (step === 1 && (!this.state.name || !this.state.email || !this.state.number)) {
+      this.setState({ submissionError: "Please fill in all required fields" });
+      return;
+    }
+    if (step === 2 && !this.state.service) {
+      this.setState({ submissionError: "Please select a service" });
+      return;
+    }
+    this.setState({ step: step + 1, submissionError: null });
   };
 
   prevStep = () => {
     const { step } = this.state;
-    this.setState({ step: step - 1 });
+    this.setState({ step: step - 1, submissionError: null });
   };
 
   handleChange = (input) => (e) => {
-    this.setState({ [input]: e.target.value });
+    this.setState({ [input]: e.target.value, submissionError: null });
   };
 
-handleFinalSubmit = () => {
-  const {
-    name,
-    email,
-    number,
-    budget,
-    services,
-    message,
-  } = this.state;
+  handleFinalSubmit = async () => {
+    const { name, email, number, budget, service, message } = this.state;
+    
+    this.setState({ isSubmitting: true, submissionError: null });
 
-  this.setState({ isSubmitting: true, error: null });
+    try {
+      const response = await fetch(
+        'https://script.google.com/macros/s/AKfycbzm2jnxacBgiaDUGMw7SWdntLkwKwaIDrS5zrZiIwLm8GHbpgOKNutoQR5hja-AGHjs/exec',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name,
+            email,
+            number: number.replace(/\D/g, ''), // Store just digits
+            budget: budget.replace(/[^\d.]/g, ''), // Clean budget input
+            service,
+            message
+          }),
+        }
+      );
 
-  fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      name,
-      email,
-      number,
-      budget,
-      services,
-      message,
-    }),
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      console.log('Success:', data);
-      this.setState({ step: 4 }); // ✅ Show thank-you
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-      this.setState({ submissionError: error.message, isSubmitting: false });
-    });
-};
+      const result = await response.json();
+      
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || "Submission failed");
+      }
 
-
+      this.setState({ step: 4 }); // Success step
+    } catch (error) {
+      console.error("Submission error:", error);
+      this.setState({
+        submissionError: error.message || "Failed to submit. Please try again.",
+      });
+    } finally {
+      this.setState({ isSubmitting: false });
+    }
+  };
 
   render() {
     const { step, isSubmitting, submissionError } = this.state;
@@ -79,9 +88,9 @@ handleFinalSubmit = () => {
             nextStep={this.nextStep}
             handleChange={this.handleChange}
             values={values}
+            error={submissionError}
           />
         );
-
       case 2:
         return (
           <FormPersonalDetails
@@ -89,13 +98,12 @@ handleFinalSubmit = () => {
             prevStep={this.prevStep}
             handleChange={this.handleChange}
             values={values}
+            error={submissionError}
           />
         );
-
       case 3:
         return (
           <Confirm
-            nextStep={this.nextStep}
             prevStep={this.prevStep}
             handleFinalSubmit={this.handleFinalSubmit}
             isSubmitting={isSubmitting}
@@ -103,44 +111,23 @@ handleFinalSubmit = () => {
             values={values}
           />
         );
-
       case 4:
-        return (
-          <div className="section">
-            <div className="container has-text-centered">
-              <h1 className="title">Thank You!</h1>
-              <p>We've received your submission.</p>
-              <button
-                className="button is-link mt-5"
-                onClick={() =>
-                  this.setState({
-                    step: 1,
-                    name: "",
-                    email: "",
-                    budget: "",
-                    number: "",
-                    message: "",
-                    services: "",
-                  })
-                }
-              >
-                Start New Submission
-              </button>
-            </div>
-          </div>
-        );
-
+        return <SuccessPage resetForm={() => this.setState({
+          step: 1,
+          name: "",
+          number: "",
+          email: "",
+          budget: "",
+          service: "none",
+          message: ""
+        })} />;
       default:
         return <div>Form Error</div>;
     }
   }
 }
 
-export class FormUserDetails extends Component {
-  formatBudgetInput = (value) => {
-    return value.replace(/[^\d.,]/g, "");
-  };
-
+class FormUserDetails extends Component {
   formatPhoneInput = (value) => {
     const cleaned = value.replace(/\D/g, "");
     const match = cleaned.match(/^(\d{0,3})(\d{0,3})(\d{0,4})$/);
@@ -157,152 +144,123 @@ export class FormUserDetails extends Component {
   };
 
   render() {
-    const { values, handleChange } = this.props;
+    const { values, handleChange, error } = this.props;
     return (
-      <>
-        <div className="column is-8 ">
-          <br />
-
-          <h1 className="contact-title">Questions?</h1>
-          <h1 className="contact-subtitle">Let's Talk Design.</h1>
-          <h1 className="contact-p">I'd Love To Hear From You</h1>
-          <p className="" style={{ fontSize: 0.7 + "rem" }}>
-            Please Fill Out The Form Below
-          </p>
+      <div className="section">
+        <div className="columns">
+          <div className="column is-8">
+            <h1 className="contact-title">Questions?</h1>
+            <h1 className="contact-subtitle">Let's Talk Design.</h1>
+            <p className="contact-p">I'd Love To Hear From You</p>
+            <p style={{ fontSize: "0.7rem" }}>Please Fill Out The Form Below</p>
+          </div>
         </div>
-        <section className="section is-small">
-          <div className="columns">
-            <div className="column is-6 ">
-              <input
-                type="hidden"
-                name="form-name"
-                value="Initialize Contact Form"
-              />
-              <div className="field">
-                <label className="label">Name</label>
-                <div className="control">
-                  <input
-                    className="input"
-                    type="text"
-                    placeholder="Enter Your Name"
-                    name="name"
-                    onChange={handleChange("name")}
-                    defaultValue={values.name}
-                    margin="normal"
-                  />
-                </div>
-              </div>
-
-              <input type="hidden" name="bot-field" />
-
-              <div className="field">
-                <label className="label">Number</label>
-                <div className="control">
-                  <input
-                    className="input"
-                    type="tel"
-                    placeholder="(123) 456-7890"
-                    onChange={(e) => {
-                      const formattedValue = this.formatPhoneInput(
-                        e.target.value
-                      );
-                      this.props.handleChange("number")({
-                        target: { value: formattedValue },
-                      });
-                    }}
-                    defaultValue={this.props.values.number}
-                  />
-                  <input type="hidden" name="bot-field" />
-                  <span className="icon is-small is-left"></span>
-                </div>
-              </div>
-
-              <div className="field">
-                <label className="label">Email</label>
-                <div className="control">
-                  <input
-                    className="input"
-                    type="email"
-                    placeholder="Enter Your Email"
-                    name="email"
-                    onChange={handleChange("email")}
-                    defaultValue={values.email}
-                    margin="normal"
-                    fullWidth
-                  />
-                  <span className="icon is-small is-left"></span>
-                </div>
-              </div>
-
-             
-              <div className="field is-grouped is-grouped-centered">
-                <div className="control">
-                  <button
-                    className="button is-link"
-                    color="primary"
-                    variant="contained"
-                    onClick={this.continue}
-                  >
-                    Continue
-                  </button>
-                </div>
+        
+        <div className="columns">
+          <div className="column is-6">
+            <div className="field">
+              <label className="label">Name*</label>
+              <div className="control">
+                <input
+                  className="input"
+                  type="text"
+                  placeholder="Enter Your Name"
+                  value={values.name}
+                  onChange={handleChange("name")}
+                  required
+                />
               </div>
             </div>
-            <div className="column is-1"></div>
-            <div className="column is-1">
-              <div className="vertical-divider"></div>
-            </div>
-            <div className="column is-4 has-text-centered">
-              <Image 
-                src="/images/make-contact.png" 
-                alt="Contact illustration"
-                width={300}
-                height={200}
-              />
-              <p className="" style={{ color: "#FFF" }}>
-                <br />
-                Not Sure Where To Start.. <br />
-                I've Got You Covered. <br /> <br />
-                Check Out This Guide To Learn About New Design Techniques,
-                Trends, & More
-              </p>
-              <div className="mt-2">
-                <Link
-                  href="/"
-                  style={{
-                    color: "#FFF",
-                    fontFamily: "Nostromo-Black",
-                    textShadow:
-                      "-1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), 1px 1px 0 rgb(0, 0, 0)",
-                    textDecoration: "underline dashed",
-                    textDecorationColor: "#E84834",
-                    textDecorationThickness: "1.6px",
+
+            <div className="field">
+              <label className="label">Phone Number*</label>
+              <div className="control">
+                <input
+                  className="input"
+                  type="tel"
+                  placeholder="(123) 456-7890"
+                  value={values.number}
+                  onChange={(e) => {
+                    const formattedValue = this.formatPhoneInput(e.target.value);
+                    handleChange("number")({ target: { value: formattedValue } });
                   }}
-                >
-                  Style Guide
-                </Link>
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="field">
+              <label className="label">Email*</label>
+              <div className="control">
+                <input
+                  className="input"
+                  type="email"
+                  placeholder="Enter Your Email"
+                  value={values.email}
+                  onChange={handleChange("email")}
+                  required
+                />
+              </div>
+            </div>
+
+            {error && <div className="notification is-danger is-light">{error}</div>}
+
+            <div className="field is-grouped is-grouped-centered mt-5">
+              <div className="control">
+                <button className="button is-link" onClick={this.continue}>
+                  Continue
+                </button>
               </div>
             </div>
           </div>
-        </section>
-      </>
+
+          <div className="column is-1">
+            <div className="vertical-divider"></div>
+          </div>
+
+          <div className="column is-4 has-text-centered">
+            <Image 
+              src="/images/make-contact.png" 
+              alt="Contact illustration"
+              width={300}
+              height={200}
+            />
+            <p style={{ color: "#FFF", marginTop: "1rem" }}>
+              Not Sure Where To Start..<br />
+              I've Got You Covered.<br /><br />
+              Check Out This Guide To Learn About New Design Techniques,
+              Trends, & More
+            </p>
+            <div className="mt-2">
+              <Link href="/" className="styled-link">
+                Style Guide
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <style jsx>{`
+          .vertical-divider {
+            border-left: 1px solid #ddd;
+            height: 100%;
+            margin: 0 auto;
+          }
+          .styled-link {
+            color: #FFF;
+            font-family: "Nostromo-Black";
+            text-shadow: -1px -1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000;
+            text-decoration: underline dashed #E84834;
+            text-decoration-thickness: 1.6px;
+          }
+        `}</style>
+      </div>
     );
   }
 }
 
-export class FormPersonalDetails extends Component {
+class FormPersonalDetails extends Component {
   formatBudgetInput = (value) => {
     return value.replace(/[^\d.,]/g, "");
-  };
-
-  formatPhoneInput = (value) => {
-    const cleaned = value.replace(/\D/g, "");
-    const match = cleaned.match(/^(\d{0,3})(\d{0,3})(\d{0,4})$/);
-    return match
-      ? !match[2]
-        ? match[1]
-        : `(${match[1]}) ${match[2]}` + (match[3] ? `-${match[3]}` : "")
-      : value;
   };
 
   continue = (e) => {
@@ -316,353 +274,173 @@ export class FormPersonalDetails extends Component {
   };
 
   render() {
-    const { values, handleChange } = this.props;
+    const { values, handleChange, error } = this.props;
     return (
-      <>
-        <div className="column is-8 ">
-          <h1 className="contact-title">Questions?</h1>
-          <h1 className="contact-subtitle">Let's Talk Design.</h1>
-          <h1 className="contact-p">I'd Love To Hear From You</h1>
-          <p className="" style={{ fontSize: 0.7 + "rem" }}>
-            Please Fill Out The Form Below
-          </p>
+      <div className="section">
+        <div className="columns">
+          <div className="column is-8">
+            <h1 className="contact-title">Questions?</h1>
+            <h1 className="contact-subtitle">Let's Talk Design.</h1>
+            <p className="contact-p">I'd Love To Hear From You</p>
+            <p style={{ fontSize: "0.7rem" }}>Please Fill Out The Form Below</p>
+          </div>
         </div>
-        <section className="section is-small">
-          <div className="columns ">
-            <div className="column is-6 ">
-              <input
-                type="hidden"
-                name="form-name"
-                value="Initialize Contact Form"
-              />
-
-              <div className="field">
-                <label className="label">Budget</label>
-                <div className="control">
-                  <input
-                    className="input"
-                    name="budget"
-                    type="text"
-                    placeholder="$10,000.00"
-                    onChange={(e) => {
-                      const formattedValue = this.formatBudgetInput(
-                        e.target.value
-                      );
-                      this.props.handleChange("budget")({
-                        target: { value: formattedValue },
-                      });
-                    }}
-                    defaultValue={this.props.values.budget}
-                  />
-                </div>
-              </div>
-
-              <div className="field">
-                <label className="label">Project Type</label>
-                <div className="control">
-                  <div
-                    className="radio"
-                    onChange={handleChange("services")}
-                    defaultValue={values.services}
-                  >
-                    <label htmlFor="services">Choose A Service:</label> <br />
-                   <select
-  name="services"
-  id="services"
-  onChange={handleChange("services")}
-  value={values.services || "none"}
->
-  <option value="none">Select A Service</option>
-  <option value="general">General Question</option>
-  <option value="ux-design">UX Design</option>
-  <option value="web-development">Web Development</option>
-  <option value="corporate-identity/logo">Corporate Identity/Logo</option>
-  <option value="graphic-design">Graphic Design</option>
-  <option value="print-design">Print Design</option>
-  <option value="typography">Typography</option>
-  <option value="seo">Search Engine Optimization</option>
-  <option value="marketing">Marketing</option>
-</select>
-                  </div>
-                </div>
-              </div>
-
-              <div className="field">
-                <label className="label">Message</label>
-                <div className="control">
-                  <textarea
-                    className="textarea"
-                    name="message"
-                    onChange={handleChange("message")}
-                    defaultValue={values.message}
-                    placeholder="Briefly describe any details 
-                    about your project needs & goals.
-                    I'm here to help!"
-                  />
-                </div>
-              </div>
-
-              <div className="field is-grouped is-grouped-centered">
-                <div className="control">
-                  <button
-                    className="button is-link is-light"
-                    color="secondary"
-                    variant="contained"
-                    onClick={this.back}
-                  >
-                    Back
-                  </button>
-                </div>
-
-                <div className="control">
-                  <button
-                    className="button is-link"
-                    color="primary"
-                    variant="contained"
-                    onClick={this.continue}
-                  >
-                    Continue
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className="column is-1"></div>
-            <div className="column is-1">
-              <div className="vertical-divider"></div>
-            </div>
-            <div className="column is-4 has-text-centered">
-              <Image 
-                src="/images/make-contact.png" 
-                alt="Contact illustration"
-                width={300}
-                height={200}
-              />
-              <p className="" style={{ color: "#FFF" }}>
-                <br />
-                Not Sure Where To Start.. <br />
-                I've Got You Covered. <br /> <br />
-                Check Out This Guide To Learn About New Design Techniques,
-                Trends, & More
-              </p>
-              <div className="mt-2">
-                <Link
-                  href="/"
-                  style={{
-                    color: "#FFF",
-                    fontFamily: "Nostromo-Black",
-                    textShadow:
-                      "-1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), 1px 1px 0 rgb(0, 0, 0)",
-                    textDecoration: "underline dashed",
-                    textDecorationColor: "#E84834",
-                    textDecorationThickness: "1.6px",
+        
+        <div className="columns">
+          <div className="column is-6">
+            <div className="field">
+              <label className="label">Budget (USD)</label>
+              <div className="control">
+                <input
+                  className="input"
+                  type="text"
+                  placeholder="$10,000.00"
+                  value={values.budget}
+                  onChange={(e) => {
+                    const formattedValue = this.formatBudgetInput(e.target.value);
+                    handleChange("budget")({ target: { value: formattedValue } });
                   }}
+                />
+              </div>
+            </div>
+
+            <div className="field">
+              <label className="label">Service*</label>
+              <div className="control">
+                <select
+                  className="input"
+                  value={values.service}
+                  onChange={handleChange("service")}
+                  required
                 >
-                  Style Guide
-                </Link>
+                  <option value="none">Select A Service</option>
+                  <option value="graphic-design">Graphic Design</option>
+                  <option value="marketing">Marketing</option>
+                  <option value="web-design">Web Design</option>
+                  <option value="general-question">General Question</option>
+                </select>
+              </div>
+            </div>
+
+            <div className="field">
+              <label className="label">Message</label>
+              <div className="control">
+                <textarea
+                  className="textarea"
+                  placeholder="Briefly describe your project needs & goals"
+                  value={values.message}
+                  onChange={handleChange("message")}
+                  rows={4}
+                />
+              </div>
+            </div>
+
+            {error && <div className="notification is-danger is-light">{error}</div>}
+
+            <div className="field is-grouped is-grouped-centered mt-5">
+              <div className="control">
+                <button className="button is-link is-light" onClick={this.back}>
+                  Back
+                </button>
+              </div>
+              <div className="control">
+                <button className="button is-link" onClick={this.continue}>
+                  Continue
+                </button>
               </div>
             </div>
           </div>
-        </section>
-      </>
-    );
-  }
-}
 
-export class Confirm extends Component {
-  handleSubmit = (e) => {
-    e.preventDefault();
-    this.props.handleFinalSubmit();
-  };
-
-  render() {
-    const {
-      values: { name, email, number, budget, services, message },
-      prevStep,
-      isSubmitting,
-      error,
-    } = this.props;
-
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <input type="hidden" name="form-name" value="Contact Form v1" />
-        <div className="d-none">
-          <div className="field">
-            <label className="label">Name</label>
-            <div className="control">
-              <input
-                className="input"
-                type="text"
-                name="name"
-                placeholder="Enter Your Full Name"
-                value={name}
-                readOnly
-              />
-            </div>
+          <div className="column is-1">
+            <div className="vertical-divider"></div>
           </div>
 
-          <div className="field">
-            <label className="label">Email</label>
-            <div className="control">
-              <input
-                className="input"
-                type="email"
-                placeholder="Enter Your Email"
-                name="email"
-                value={email}
-                readOnly
-              />
-            </div>
-          </div>
-
-          <div className="field">
-            <label className="label">Message</label>
-            <div className="control">
-              <textarea
-                className="textarea"
-                name="message"
-                value={message}
-                readOnly
-              ></textarea>
-            </div>
-          </div>
-
-          <div className="field">
-            <label className="label">Budget</label>
-            <div className="control">
-              <input
-                className="input"
-                type="text"
-                name="budget"
-                value={budget}
-                readOnly
-              />
-            </div>
-          </div>
-
-          <div className="field">
-            <label className="label">Number</label>
-            <div className="control">
-              <input
-                className="input"
-                name="number"
-                type="number"
-                value={number}
-                readOnly
-              />
-            </div>
-          </div>
-
-          <div className="field">
-            <label className="label">Service</label>
-            <div className="control">
-              <input
-                className="input"
-                type="text"
-                name="services"
-                value={services}
-                readOnly
-              />
+          <div className="column is-4 has-text-centered">
+            <Image 
+              src="/images/make-contact.png" 
+              alt="Contact illustration"
+              width={300}
+              height={200}
+            />
+            <p style={{ color: "#FFF", marginTop: "1rem" }}>
+              Not Sure Where To Start..<br />
+              I've Got You Covered.<br /><br />
+              Check Out This Guide To Learn About New Design Techniques,
+              Trends, & More
+            </p>
+            <div className="mt-2">
+              <Link href="/" className="styled-link">
+                Style Guide
+              </Link>
             </div>
           </div>
         </div>
-
-        <section className="section">
-          <div className="columns is-centered">
-            <div className="column is-6">
-              <div className="container">
-                <label className="label has-text-centered py-5">
-                  Please Confirm
-                </label>
-<p className="is-size-6">
-                <div className="field is-horizontal">
-                  <div className="field-label">
-                    <label className="label">Name</label>
-                  </div>
-                  <div className="field-body">
-                    <div className="field">{name}</div>
-                  </div>
-                </div>
-
-                <div className="field is-horizontal">
-                  <div className="field-label">
-                    <label className="label">Email</label>
-                  </div>
-                  <div className="field-body">
-                    <div className="field">{email}</div>
-                  </div>
-                </div>
-
-                <div className="field is-horizontal">
-                  <div className="field-label">
-                    <label className="label">Number</label>
-                  </div>
-                  <div className="field-body">
-                    <div className="field">{number}</div>
-                  </div>
-                </div>
-
-                <div className="field is-horizontal">
-                  <div className="field-label">
-                    <label className="label">Budget</label>
-                  </div>
-                  <div className="field-body">
-                    <div className="field">{budget}</div>
-                  </div>
-                </div>
-
-                <div className="field is-horizontal">
-                  <div className="field-label">
-                    <label className="label">Service</label>
-                  </div>
-                  <div className="field-body">
-                    <div className="field">{services}</div>
-                  </div>
-                </div>
-
-                <div className="field is-horizontal">
-                  <div className="field-label">
-                    <label className="label">Message</label>
-                  </div>
-                  <div className="field-body">
-                    <div className="field">{message}</div>
-                  </div>
-                </div>
-</p>
-                <div className="field is-grouped is-grouped-centered py-5">
-                  <div className="control">
-                    <button
-                      className="button is-link is-light"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        prevStep();
-                      }}
-                      type="button"
-                    >
-                      Back
-                    </button>
-                  </div>
-
-                  <div className="control">
-                    <button
-                      className={`button is-link ${
-                        isSubmitting ? "is-loading" : ""
-                      }`}
-                      type="submit"
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? "Submitting..." : "Submit"}
-                    </button>
-                  </div>
-                </div>
-
-                {error && <div className="notification is-danger">{error}</div>}
-              </div>
-            </div>
-          </div>
-        </section>
-      </form>
+      </div>
     );
   }
 }
+
+class Confirm extends Component {
+  render() {
+    const { values, prevStep, handleFinalSubmit, isSubmitting, error } = this.props;
+    
+    return (
+      <div className="section">
+        <div className="columns is-centered">
+          <div className="column is-6">
+            <h1 className="title has-text-centered">Please Confirm Your Details</h1>
+            
+            <div className="box">
+              <div className="content">
+                <p><strong>Name:</strong> {values.name}</p>
+                <p><strong>Email:</strong> {values.email}</p>
+                <p><strong>Phone:</strong> {values.number}</p>
+                <p><strong>Budget:</strong> {values.budget ? `$${values.budget}` : 'Not specified'}</p>
+                <p><strong>Service:</strong> {values.service.replace('-', ' ')}</p>
+                {values.message && (
+                  <>
+                    <p><strong>Message:</strong></p>
+                    <p>{values.message}</p>
+                  </>
+                )}
+              </div>
+            </div>
+
+            {error && <div className="notification is-danger">{error}</div>}
+
+            <div className="field is-grouped is-grouped-centered mt-5">
+              <div className="control">
+                <button className="button is-link is-light" onClick={prevStep}>
+                  Back
+                </button>
+              </div>
+              <div className="control">
+                <button
+                  className={`button is-link ${isSubmitting ? "is-loading" : ""}`}
+                  onClick={handleFinalSubmit}
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Submitting..." : "Submit"}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+const SuccessPage = ({ resetForm }) => (
+  <div className="section">
+    <div className="container has-text-centered">
+      <h1 className="title">Thank You!</h1>
+      <p className="subtitle">We've received your submission and will contact you soon.</p>
+      <button className="button is-link mt-5" onClick={resetForm}>
+        Start New Submission
+      </button>
+    </div>
+  </div>
+);
 
 export default UserForm;
