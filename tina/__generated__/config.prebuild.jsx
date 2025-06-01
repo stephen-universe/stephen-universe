@@ -694,19 +694,6 @@ var config_default = defineConfig({
                     },
                     fields: [
                       {
-                        type: "string",
-                        name: "title",
-                        label: "Title"
-                      },
-                      {
-                        type: "string",
-                        name: "description",
-                        label: "Description",
-                        ui: {
-                          component: "textarea"
-                        }
-                      },
-                      {
                         type: "object",
                         name: "images",
                         label: "Images",
@@ -724,9 +711,17 @@ var config_default = defineConfig({
                         ]
                       },
                       {
-                        type: "image",
-                        name: "image",
-                        label: "Single Image"
+                        type: "string",
+                        name: "title",
+                        label: "Title"
+                      },
+                      {
+                        type: "string",
+                        name: "description",
+                        label: "Description",
+                        ui: {
+                          component: "textarea"
+                        }
                       }
                     ]
                   }
@@ -779,6 +774,11 @@ var config_default = defineConfig({
                     },
                     fields: [
                       {
+                        type: "image",
+                        name: "image",
+                        label: "Image"
+                      },
+                      {
                         type: "string",
                         name: "title",
                         label: "Title"
@@ -790,11 +790,6 @@ var config_default = defineConfig({
                         ui: {
                           component: "textarea"
                         }
-                      },
-                      {
-                        type: "image",
-                        name: "image",
-                        label: "Image"
                       }
                     ]
                   }
@@ -848,6 +843,11 @@ var config_default = defineConfig({
                     },
                     fields: [
                       {
+                        type: "image",
+                        name: "image",
+                        label: "Image"
+                      },
+                      {
                         type: "string",
                         name: "title",
                         label: "Title"
@@ -859,11 +859,6 @@ var config_default = defineConfig({
                         ui: {
                           component: "textarea"
                         }
-                      },
-                      {
-                        type: "image",
-                        name: "image",
-                        label: "Image"
                       }
                     ]
                   }
@@ -917,6 +912,11 @@ var config_default = defineConfig({
                     },
                     fields: [
                       {
+                        type: "image",
+                        name: "image",
+                        label: "Image"
+                      },
+                      {
                         type: "string",
                         name: "title",
                         label: "Title"
@@ -928,11 +928,6 @@ var config_default = defineConfig({
                         ui: {
                           component: "textarea"
                         }
-                      },
-                      {
-                        type: "image",
-                        name: "image",
-                        label: "Image"
                       },
                       {
                         type: "string",
@@ -991,6 +986,11 @@ var config_default = defineConfig({
                     },
                     fields: [
                       {
+                        type: "image",
+                        name: "image",
+                        label: "Image"
+                      },
+                      {
                         type: "string",
                         name: "title",
                         label: "Title"
@@ -1002,11 +1002,6 @@ var config_default = defineConfig({
                         ui: {
                           component: "textarea"
                         }
-                      },
-                      {
-                        type: "image",
-                        name: "image",
-                        label: "Image"
                       }
                     ]
                   }
@@ -1060,6 +1055,11 @@ var config_default = defineConfig({
                     },
                     fields: [
                       {
+                        type: "image",
+                        name: "image",
+                        label: "Image"
+                      },
+                      {
                         type: "string",
                         name: "title",
                         label: "Title"
@@ -1071,11 +1071,6 @@ var config_default = defineConfig({
                         ui: {
                           component: "textarea"
                         }
-                      },
-                      {
-                        type: "image",
-                        name: "image",
-                        label: "Image"
                       }
                     ]
                   }

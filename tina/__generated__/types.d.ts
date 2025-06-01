@@ -708,10 +708,9 @@ export type ProjectsProjectsLogofolioProjectImages = {
 
 export type ProjectsProjectsLogofolioProject = {
   __typename?: 'ProjectsProjectsLogofolioProject';
+  images?: Maybe<ProjectsProjectsLogofolioProjectImages>;
   title?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
-  images?: Maybe<ProjectsProjectsLogofolioProjectImages>;
-  image?: Maybe<Scalars['String']['output']>;
 };
 
 export type ProjectsProjectsLogofolio = {
@@ -730,9 +729,9 @@ export type ProjectsProjectsAnaroseMeta = {
 
 export type ProjectsProjectsAnaroseProject = {
   __typename?: 'ProjectsProjectsAnaroseProject';
+  image?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
-  image?: Maybe<Scalars['String']['output']>;
 };
 
 export type ProjectsProjectsAnarose = {
@@ -751,9 +750,9 @@ export type ProjectsProjectsQueendomfarmsMeta = {
 
 export type ProjectsProjectsQueendomfarmsProject = {
   __typename?: 'ProjectsProjectsQueendomfarmsProject';
+  image?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
-  image?: Maybe<Scalars['String']['output']>;
 };
 
 export type ProjectsProjectsQueendomfarms = {
@@ -772,9 +771,9 @@ export type ProjectsProjectsEpicfutureMeta = {
 
 export type ProjectsProjectsEpicfutureProject = {
   __typename?: 'ProjectsProjectsEpicfutureProject';
+  image?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
-  image?: Maybe<Scalars['String']['output']>;
   video?: Maybe<Scalars['String']['output']>;
 };
 
@@ -794,9 +793,9 @@ export type ProjectsProjectsConsolidatedconstructionsolutionsMeta = {
 
 export type ProjectsProjectsConsolidatedconstructionsolutionsProject = {
   __typename?: 'ProjectsProjectsConsolidatedconstructionsolutionsProject';
+  image?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
-  image?: Maybe<Scalars['String']['output']>;
 };
 
 export type ProjectsProjectsConsolidatedconstructionsolutions = {
@@ -815,9 +814,9 @@ export type ProjectsProjectsPerfectlydifferentMeta = {
 
 export type ProjectsProjectsPerfectlydifferentProject = {
   __typename?: 'ProjectsProjectsPerfectlydifferentProject';
+  image?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
-  image?: Maybe<Scalars['String']['output']>;
 };
 
 export type ProjectsProjectsPerfectlydifferent = {
@@ -857,10 +856,9 @@ export type ProjectsProjectsLogofolioProjectImagesFilter = {
 };
 
 export type ProjectsProjectsLogofolioProjectFilter = {
+  images?: InputMaybe<ProjectsProjectsLogofolioProjectImagesFilter>;
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
-  images?: InputMaybe<ProjectsProjectsLogofolioProjectImagesFilter>;
-  image?: InputMaybe<ImageFilter>;
 };
 
 export type ProjectsProjectsLogofolioFilter = {
@@ -876,9 +874,9 @@ export type ProjectsProjectsAnaroseMetaFilter = {
 };
 
 export type ProjectsProjectsAnaroseProjectFilter = {
+  image?: InputMaybe<ImageFilter>;
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
-  image?: InputMaybe<ImageFilter>;
 };
 
 export type ProjectsProjectsAnaroseFilter = {
@@ -894,9 +892,9 @@ export type ProjectsProjectsQueendomfarmsMetaFilter = {
 };
 
 export type ProjectsProjectsQueendomfarmsProjectFilter = {
+  image?: InputMaybe<ImageFilter>;
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
-  image?: InputMaybe<ImageFilter>;
 };
 
 export type ProjectsProjectsQueendomfarmsFilter = {
@@ -912,9 +910,9 @@ export type ProjectsProjectsEpicfutureMetaFilter = {
 };
 
 export type ProjectsProjectsEpicfutureProjectFilter = {
+  image?: InputMaybe<ImageFilter>;
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
-  image?: InputMaybe<ImageFilter>;
   video?: InputMaybe<StringFilter>;
 };
 
@@ -931,9 +929,9 @@ export type ProjectsProjectsConsolidatedconstructionsolutionsMetaFilter = {
 };
 
 export type ProjectsProjectsConsolidatedconstructionsolutionsProjectFilter = {
+  image?: InputMaybe<ImageFilter>;
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
-  image?: InputMaybe<ImageFilter>;
 };
 
 export type ProjectsProjectsConsolidatedconstructionsolutionsFilter = {
@@ -949,9 +947,9 @@ export type ProjectsProjectsPerfectlydifferentMetaFilter = {
 };
 
 export type ProjectsProjectsPerfectlydifferentProjectFilter = {
+  image?: InputMaybe<ImageFilter>;
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
-  image?: InputMaybe<ImageFilter>;
 };
 
 export type ProjectsProjectsPerfectlydifferentFilter = {
@@ -1296,10 +1294,9 @@ export type ProjectsProjectsLogofolioProjectImagesMutation = {
 };
 
 export type ProjectsProjectsLogofolioProjectMutation = {
+  images?: InputMaybe<ProjectsProjectsLogofolioProjectImagesMutation>;
   title?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
-  images?: InputMaybe<ProjectsProjectsLogofolioProjectImagesMutation>;
-  image?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type ProjectsProjectsLogofolioMutation = {
@@ -1315,9 +1312,9 @@ export type ProjectsProjectsAnaroseMetaMutation = {
 };
 
 export type ProjectsProjectsAnaroseProjectMutation = {
+  image?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
-  image?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type ProjectsProjectsAnaroseMutation = {
@@ -1333,9 +1330,9 @@ export type ProjectsProjectsQueendomfarmsMetaMutation = {
 };
 
 export type ProjectsProjectsQueendomfarmsProjectMutation = {
+  image?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
-  image?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type ProjectsProjectsQueendomfarmsMutation = {
@@ -1351,9 +1348,9 @@ export type ProjectsProjectsEpicfutureMetaMutation = {
 };
 
 export type ProjectsProjectsEpicfutureProjectMutation = {
+  image?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
-  image?: InputMaybe<Scalars['String']['input']>;
   video?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -1370,9 +1367,9 @@ export type ProjectsProjectsConsolidatedconstructionsolutionsMetaMutation = {
 };
 
 export type ProjectsProjectsConsolidatedconstructionsolutionsProjectMutation = {
+  image?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
-  image?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type ProjectsProjectsConsolidatedconstructionsolutionsMutation = {
@@ -1388,9 +1385,9 @@ export type ProjectsProjectsPerfectlydifferentMetaMutation = {
 };
 
 export type ProjectsProjectsPerfectlydifferentProjectMutation = {
+  image?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
-  image?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type ProjectsProjectsPerfectlydifferentMutation = {
@@ -1417,7 +1414,7 @@ export type NavigationPartsFragment = { __typename: 'Navigation', navigationLink
 
 export type HomePartsFragment = { __typename: 'Home', rotatingWords?: Array<string | null> | null, introLines?: { __typename: 'HomeIntroLines', line1?: string | null, line2?: string | null, line3?: string | null, line4?: string | null } | null, doorMessages?: { __typename: 'HomeDoorMessages', message1?: string | null, message2?: string | null, message3?: string | null } | null, coreSystems?: { __typename: 'HomeCoreSystems', title?: string | null, desc?: string | null, skills?: { __typename: 'HomeCoreSystemsSkills', skill1?: string | null, skill2?: string | null, skill3?: string | null, skill4?: string | null, skill5?: string | null } | null } | null, fieldSystems?: { __typename: 'HomeFieldSystems', title?: string | null, desc?: string | null, skills?: { __typename: 'HomeFieldSystemsSkills', skill1?: string | null, skill2?: string | null, skill3?: string | null, skill4?: string | null, skill5?: string | null } | null } | null, combinedStatement?: { __typename: 'HomeCombinedStatement', statement1?: string | null, statement2?: string | null } | null, projectSection?: { __typename: 'HomeProjectSection', title?: string | null, projects?: Array<{ __typename: 'HomeProjectSectionProjects', image1?: string | null, url1?: string | null, image2?: string | null, url2?: string | null, image3?: string | null, url3?: string | null, image4?: string | null, url4?: string | null } | null> | null, viewAllLink?: { __typename: 'HomeProjectSectionViewAllLink', text?: string | null, url?: string | null } | null } | null, quote?: { __typename: 'HomeQuote', lines?: { __typename: 'HomeQuoteLines', line?: string | null } | null, attribution?: { __typename: 'HomeQuoteAttribution', signature?: string | null, source?: string | null } | null } | null, timedQuote?: { __typename: 'HomeTimedQuote', quoteParts?: Array<{ __typename: 'HomeTimedQuoteQuoteParts', text?: string | null, delay?: number | null } | null> | null } | null, contact?: { __typename: 'HomeContact', link?: string | null, buttonText?: string | null } | null };
 
-export type ProjectsPartsFragment = { __typename: 'Projects', projects?: { __typename: 'ProjectsProjects', logofolio?: { __typename: 'ProjectsProjectsLogofolio', meta?: { __typename: 'ProjectsProjectsLogofolioMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsLogofolioProject', title?: string | null, description?: string | null, image?: string | null, images?: { __typename: 'ProjectsProjectsLogofolioProjectImages', white?: string | null, black?: string | null } | null } | null> | null } | null, anarose?: { __typename: 'ProjectsProjectsAnarose', meta?: { __typename: 'ProjectsProjectsAnaroseMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsAnaroseProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, queendomfarms?: { __typename: 'ProjectsProjectsQueendomfarms', meta?: { __typename: 'ProjectsProjectsQueendomfarmsMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsQueendomfarmsProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, epicfuture?: { __typename: 'ProjectsProjectsEpicfuture', meta?: { __typename: 'ProjectsProjectsEpicfutureMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsEpicfutureProject', title?: string | null, description?: string | null, image?: string | null, video?: string | null } | null> | null } | null, consolidatedconstructionsolutions?: { __typename: 'ProjectsProjectsConsolidatedconstructionsolutions', meta?: { __typename: 'ProjectsProjectsConsolidatedconstructionsolutionsMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsConsolidatedconstructionsolutionsProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, perfectlydifferent?: { __typename: 'ProjectsProjectsPerfectlydifferent', meta?: { __typename: 'ProjectsProjectsPerfectlydifferentMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsPerfectlydifferentProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null } | null };
+export type ProjectsPartsFragment = { __typename: 'Projects', projects?: { __typename: 'ProjectsProjects', logofolio?: { __typename: 'ProjectsProjectsLogofolio', meta?: { __typename: 'ProjectsProjectsLogofolioMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsLogofolioProject', title?: string | null, description?: string | null, images?: { __typename: 'ProjectsProjectsLogofolioProjectImages', white?: string | null, black?: string | null } | null } | null> | null } | null, anarose?: { __typename: 'ProjectsProjectsAnarose', meta?: { __typename: 'ProjectsProjectsAnaroseMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsAnaroseProject', image?: string | null, title?: string | null, description?: string | null } | null> | null } | null, queendomfarms?: { __typename: 'ProjectsProjectsQueendomfarms', meta?: { __typename: 'ProjectsProjectsQueendomfarmsMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsQueendomfarmsProject', image?: string | null, title?: string | null, description?: string | null } | null> | null } | null, epicfuture?: { __typename: 'ProjectsProjectsEpicfuture', meta?: { __typename: 'ProjectsProjectsEpicfutureMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsEpicfutureProject', image?: string | null, title?: string | null, description?: string | null, video?: string | null } | null> | null } | null, consolidatedconstructionsolutions?: { __typename: 'ProjectsProjectsConsolidatedconstructionsolutions', meta?: { __typename: 'ProjectsProjectsConsolidatedconstructionsolutionsMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsConsolidatedconstructionsolutionsProject', image?: string | null, title?: string | null, description?: string | null } | null> | null } | null, perfectlydifferent?: { __typename: 'ProjectsProjectsPerfectlydifferent', meta?: { __typename: 'ProjectsProjectsPerfectlydifferentMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsPerfectlydifferentProject', image?: string | null, title?: string | null, description?: string | null } | null> | null } | null } | null };
 
 export type SettingQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -1481,7 +1478,7 @@ export type ProjectsQueryVariables = Exact<{
 }>;
 
 
-export type ProjectsQuery = { __typename?: 'Query', projects: { __typename: 'Projects', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, projects?: { __typename: 'ProjectsProjects', logofolio?: { __typename: 'ProjectsProjectsLogofolio', meta?: { __typename: 'ProjectsProjectsLogofolioMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsLogofolioProject', title?: string | null, description?: string | null, image?: string | null, images?: { __typename: 'ProjectsProjectsLogofolioProjectImages', white?: string | null, black?: string | null } | null } | null> | null } | null, anarose?: { __typename: 'ProjectsProjectsAnarose', meta?: { __typename: 'ProjectsProjectsAnaroseMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsAnaroseProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, queendomfarms?: { __typename: 'ProjectsProjectsQueendomfarms', meta?: { __typename: 'ProjectsProjectsQueendomfarmsMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsQueendomfarmsProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, epicfuture?: { __typename: 'ProjectsProjectsEpicfuture', meta?: { __typename: 'ProjectsProjectsEpicfutureMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsEpicfutureProject', title?: string | null, description?: string | null, image?: string | null, video?: string | null } | null> | null } | null, consolidatedconstructionsolutions?: { __typename: 'ProjectsProjectsConsolidatedconstructionsolutions', meta?: { __typename: 'ProjectsProjectsConsolidatedconstructionsolutionsMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsConsolidatedconstructionsolutionsProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, perfectlydifferent?: { __typename: 'ProjectsProjectsPerfectlydifferent', meta?: { __typename: 'ProjectsProjectsPerfectlydifferentMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsPerfectlydifferentProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null } | null } };
+export type ProjectsQuery = { __typename?: 'Query', projects: { __typename: 'Projects', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, projects?: { __typename: 'ProjectsProjects', logofolio?: { __typename: 'ProjectsProjectsLogofolio', meta?: { __typename: 'ProjectsProjectsLogofolioMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsLogofolioProject', title?: string | null, description?: string | null, images?: { __typename: 'ProjectsProjectsLogofolioProjectImages', white?: string | null, black?: string | null } | null } | null> | null } | null, anarose?: { __typename: 'ProjectsProjectsAnarose', meta?: { __typename: 'ProjectsProjectsAnaroseMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsAnaroseProject', image?: string | null, title?: string | null, description?: string | null } | null> | null } | null, queendomfarms?: { __typename: 'ProjectsProjectsQueendomfarms', meta?: { __typename: 'ProjectsProjectsQueendomfarmsMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsQueendomfarmsProject', image?: string | null, title?: string | null, description?: string | null } | null> | null } | null, epicfuture?: { __typename: 'ProjectsProjectsEpicfuture', meta?: { __typename: 'ProjectsProjectsEpicfutureMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsEpicfutureProject', image?: string | null, title?: string | null, description?: string | null, video?: string | null } | null> | null } | null, consolidatedconstructionsolutions?: { __typename: 'ProjectsProjectsConsolidatedconstructionsolutions', meta?: { __typename: 'ProjectsProjectsConsolidatedconstructionsolutionsMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsConsolidatedconstructionsolutionsProject', image?: string | null, title?: string | null, description?: string | null } | null> | null } | null, perfectlydifferent?: { __typename: 'ProjectsProjectsPerfectlydifferent', meta?: { __typename: 'ProjectsProjectsPerfectlydifferentMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsPerfectlydifferentProject', image?: string | null, title?: string | null, description?: string | null } | null> | null } | null } | null } };
 
 export type ProjectsConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -1493,7 +1490,7 @@ export type ProjectsConnectionQueryVariables = Exact<{
 }>;
 
 
-export type ProjectsConnectionQuery = { __typename?: 'Query', projectsConnection: { __typename?: 'ProjectsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'ProjectsConnectionEdges', cursor: string, node?: { __typename: 'Projects', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, projects?: { __typename: 'ProjectsProjects', logofolio?: { __typename: 'ProjectsProjectsLogofolio', meta?: { __typename: 'ProjectsProjectsLogofolioMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsLogofolioProject', title?: string | null, description?: string | null, image?: string | null, images?: { __typename: 'ProjectsProjectsLogofolioProjectImages', white?: string | null, black?: string | null } | null } | null> | null } | null, anarose?: { __typename: 'ProjectsProjectsAnarose', meta?: { __typename: 'ProjectsProjectsAnaroseMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsAnaroseProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, queendomfarms?: { __typename: 'ProjectsProjectsQueendomfarms', meta?: { __typename: 'ProjectsProjectsQueendomfarmsMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsQueendomfarmsProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, epicfuture?: { __typename: 'ProjectsProjectsEpicfuture', meta?: { __typename: 'ProjectsProjectsEpicfutureMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsEpicfutureProject', title?: string | null, description?: string | null, image?: string | null, video?: string | null } | null> | null } | null, consolidatedconstructionsolutions?: { __typename: 'ProjectsProjectsConsolidatedconstructionsolutions', meta?: { __typename: 'ProjectsProjectsConsolidatedconstructionsolutionsMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsConsolidatedconstructionsolutionsProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null, perfectlydifferent?: { __typename: 'ProjectsProjectsPerfectlydifferent', meta?: { __typename: 'ProjectsProjectsPerfectlydifferentMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsPerfectlydifferentProject', title?: string | null, description?: string | null, image?: string | null } | null> | null } | null } | null } | null } | null> | null } };
+export type ProjectsConnectionQuery = { __typename?: 'Query', projectsConnection: { __typename?: 'ProjectsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'ProjectsConnectionEdges', cursor: string, node?: { __typename: 'Projects', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, projects?: { __typename: 'ProjectsProjects', logofolio?: { __typename: 'ProjectsProjectsLogofolio', meta?: { __typename: 'ProjectsProjectsLogofolioMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsLogofolioProject', title?: string | null, description?: string | null, images?: { __typename: 'ProjectsProjectsLogofolioProjectImages', white?: string | null, black?: string | null } | null } | null> | null } | null, anarose?: { __typename: 'ProjectsProjectsAnarose', meta?: { __typename: 'ProjectsProjectsAnaroseMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsAnaroseProject', image?: string | null, title?: string | null, description?: string | null } | null> | null } | null, queendomfarms?: { __typename: 'ProjectsProjectsQueendomfarms', meta?: { __typename: 'ProjectsProjectsQueendomfarmsMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsQueendomfarmsProject', image?: string | null, title?: string | null, description?: string | null } | null> | null } | null, epicfuture?: { __typename: 'ProjectsProjectsEpicfuture', meta?: { __typename: 'ProjectsProjectsEpicfutureMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsEpicfutureProject', image?: string | null, title?: string | null, description?: string | null, video?: string | null } | null> | null } | null, consolidatedconstructionsolutions?: { __typename: 'ProjectsProjectsConsolidatedconstructionsolutions', meta?: { __typename: 'ProjectsProjectsConsolidatedconstructionsolutionsMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsConsolidatedconstructionsolutionsProject', image?: string | null, title?: string | null, description?: string | null } | null> | null } | null, perfectlydifferent?: { __typename: 'ProjectsProjectsPerfectlydifferent', meta?: { __typename: 'ProjectsProjectsPerfectlydifferentMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsPerfectlydifferentProject', image?: string | null, title?: string | null, description?: string | null } | null> | null } | null } | null } | null } | null> | null } };
 
 export const SettingPartsFragmentDoc = gql`
     fragment SettingParts on Setting {
@@ -1674,14 +1671,13 @@ export const ProjectsPartsFragmentDoc = gql`
       }
       project {
         __typename
-        title
-        description
         images {
           __typename
           white
           black
         }
-        image
+        title
+        description
       }
     }
     anarose {
@@ -1695,9 +1691,9 @@ export const ProjectsPartsFragmentDoc = gql`
       }
       project {
         __typename
+        image
         title
         description
-        image
       }
     }
     queendomfarms {
@@ -1711,9 +1707,9 @@ export const ProjectsPartsFragmentDoc = gql`
       }
       project {
         __typename
+        image
         title
         description
-        image
       }
     }
     epicfuture {
@@ -1727,9 +1723,9 @@ export const ProjectsPartsFragmentDoc = gql`
       }
       project {
         __typename
+        image
         title
         description
-        image
         video
       }
     }
@@ -1744,9 +1740,9 @@ export const ProjectsPartsFragmentDoc = gql`
       }
       project {
         __typename
+        image
         title
         description
-        image
       }
     }
     perfectlydifferent {
@@ -1760,9 +1756,9 @@ export const ProjectsPartsFragmentDoc = gql`
       }
       project {
         __typename
+        image
         title
         description
-        image
       }
     }
   }

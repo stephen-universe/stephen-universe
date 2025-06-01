@@ -173,14 +173,13 @@ fragment ProjectsParts on Projects {
       }
       project {
         __typename
-        title
-        description
         images {
           __typename
           white
           black
         }
-        image
+        title
+        description
       }
     }
     anarose {
@@ -194,9 +193,9 @@ fragment ProjectsParts on Projects {
       }
       project {
         __typename
+        image
         title
         description
-        image
       }
     }
     queendomfarms {
@@ -210,9 +209,9 @@ fragment ProjectsParts on Projects {
       }
       project {
         __typename
+        image
         title
         description
-        image
       }
     }
     epicfuture {
@@ -226,9 +225,9 @@ fragment ProjectsParts on Projects {
       }
       project {
         __typename
+        image
         title
         description
-        image
         video
       }
     }
@@ -243,9 +242,9 @@ fragment ProjectsParts on Projects {
       }
       project {
         __typename
+        image
         title
         description
-        image
       }
     }
     perfectlydifferent {
@@ -259,9 +258,9 @@ fragment ProjectsParts on Projects {
       }
       project {
         __typename
+        image
         title
         description
-        image
       }
     }
   }

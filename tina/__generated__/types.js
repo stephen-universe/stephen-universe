@@ -184,14 +184,13 @@ export const ProjectsPartsFragmentDoc = gql`
       }
       project {
         __typename
-        title
-        description
         images {
           __typename
           white
           black
         }
-        image
+        title
+        description
       }
     }
     anarose {
@@ -205,9 +204,9 @@ export const ProjectsPartsFragmentDoc = gql`
       }
       project {
         __typename
+        image
         title
         description
-        image
       }
     }
     queendomfarms {
@@ -221,9 +220,9 @@ export const ProjectsPartsFragmentDoc = gql`
       }
       project {
         __typename
+        image
         title
         description
-        image
       }
     }
     epicfuture {
@@ -237,9 +236,9 @@ export const ProjectsPartsFragmentDoc = gql`
       }
       project {
         __typename
+        image
         title
         description
-        image
         video
       }
     }
@@ -254,9 +253,9 @@ export const ProjectsPartsFragmentDoc = gql`
       }
       project {
         __typename
+        image
         title
         description
-        image
       }
     }
     perfectlydifferent {
@@ -270,9 +269,9 @@ export const ProjectsPartsFragmentDoc = gql`
       }
       project {
         __typename
+        image
         title
         description
-        image
       }
     }
   }
