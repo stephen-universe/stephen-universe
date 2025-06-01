@@ -340,7 +340,7 @@ class FormPersonalDetails extends Component {
             </div>
 
             <div className="field">
-              <label className="label">Service*</label>
+             <label className="label">Choose A Service:</label> <br />
               <div className="control">
                 <select
                   className="input"
@@ -348,12 +348,19 @@ class FormPersonalDetails extends Component {
                   onChange={handleChange("service")}
                   required
                 >
-                  <option value="none">Select A Service</option>
-                  <option value="graphic-design">Graphic Design</option>
-                  <option value="marketing">Marketing</option>
-                  <option value="web-design">Web Design</option>
-                  <option value="general-question">General Question</option>
-                </select>
+                      <option value="none">Select A Service</option>
+                      <option value="ux-design">General Question</option>
+                      <option value="ux-design">UX Design</option>
+                      <option value="web-development">Web Development</option>
+                      <option value="corportate-identity/logo">
+                        Corporate Identity/Logo
+                      </option>
+                      <option value="graphic-design">Graphic Design</option>
+                      <option value="print-design">Print Design</option>
+                      <option value="typography">Typography</option>
+                      <option value="seo">Search Engine Optimization</option>
+                      <option value="marketing">Marketing</option>
+                    </select>
               </div>
             </div>
 
@@ -420,26 +427,25 @@ class Confirm extends Component {
     const { values, prevStep, handleFinalSubmit, isSubmitting, error } = this.props;
     
     return (
-      <div className="section">
+      <div className="section" >
         <div className="columns is-centered">
           <div className="column is-6">
-            <h1 className="title has-text-centered">Please Confirm Your Details</h1>
-            
-            <div className="box">
-              <div className="content">
-                <p><strong>Name:</strong> {values.name}</p>
-                <p><strong>Email:</strong> {values.email}</p>
-                <p><strong>Phone:</strong> {values.number}</p>
-                <p><strong>Budget:</strong> {values.budget ? `$${values.budget}` : 'Not specified'}</p>
-                <p><strong>Service:</strong> {values.service.replace('-', ' ')}</p>
-                {values.message && (
-                  <>
-                    <p><strong>Message:</strong></p>
-                    <p>{values.message}</p>
-                  </>
-                )}
+              <div className="contact-box">
+                <h1 className="title has-text-centered">Please Confirm Your Details</h1>
+                  <div className="content">
+                    <p><strong>Name:</strong> {values.name}</p>
+                    <p><strong>Email:</strong> {values.email}</p>
+                    <p><strong>Phone:</strong> {values.number}</p>
+                    <p><strong>Budget:</strong> {values.budget ? `$${values.budget}` : 'Not specified'}</p>
+                    <p><strong>Service:</strong> {values.service.replace('-', ' ')}</p>
+                    {values.message && (
+                      <>
+                        <p><strong>Message:</strong></p>
+                        <p>{values.message}</p>
+                      </>
+                    )}
+                  </div>
               </div>
-            </div>
 
             {error && <div className="notification is-danger">{error}</div>}
 
