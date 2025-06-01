@@ -1,19 +1,23 @@
 // tina/config.ts
 import { defineConfig } from "tinacms";
-var branch = process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || process.env.HEAD || "master";
+var branch =
+  process.env.GITHUB_BRANCH ||
+  process.env.VERCEL_GIT_COMMIT_REF ||
+  process.env.HEAD ||
+  "master";
 var config_default = defineConfig({
   branch,
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
   token: process.env.NEXT_PUBLIC_TINA_TOKEN,
   build: {
     outputFolder: "admin",
-    publicFolder: "public"
+    publicFolder: "public",
   },
   media: {
     tina: {
       publicFolder: "public",
-      mediaRoot: "images"
-    }
+      mediaRoot: "images",
+    },
   },
   schema: {
     collections: [
@@ -24,17 +28,17 @@ var config_default = defineConfig({
         path: "content/data",
         format: "json",
         match: {
-          include: "setting"
+          include: "setting",
         },
         ui: {
           allowedActions: {
             create: false,
-            delete: false
+            delete: false,
           },
           filename: {
             slugify: () => "setting",
-            readonly: true
-          }
+            readonly: true,
+          },
         },
         fields: [
           {
@@ -45,14 +49,14 @@ var config_default = defineConfig({
               {
                 type: "string",
                 name: "siteName",
-                label: "Site Name"
+                label: "Site Name",
               },
               {
                 type: "string",
                 name: "siteOwner",
-                label: "Site Owner"
-              }
-            ]
+                label: "Site Owner",
+              },
+            ],
           },
           {
             type: "object",
@@ -62,14 +66,14 @@ var config_default = defineConfig({
               {
                 type: "image",
                 name: "image",
-                label: "Preloader Image"
+                label: "Preloader Image",
               },
               {
                 type: "string",
                 name: "alt",
-                label: "Alt Text"
-              }
-            ]
+                label: "Alt Text",
+              },
+            ],
           },
           {
             type: "object",
@@ -79,14 +83,14 @@ var config_default = defineConfig({
               {
                 type: "image",
                 name: "image",
-                label: "Logo Image"
+                label: "Logo Image",
               },
               {
                 type: "string",
                 name: "alt",
-                label: "Alt Text"
-              }
-            ]
+                label: "Alt Text",
+              },
+            ],
           },
           {
             type: "object",
@@ -101,14 +105,14 @@ var config_default = defineConfig({
                   {
                     type: "string",
                     name: "title",
-                    label: "Title"
+                    label: "Title",
                   },
                   {
                     type: "string",
                     name: "link",
-                    label: "URL"
-                  }
-                ]
+                    label: "URL",
+                  },
+                ],
               },
               {
                 type: "object",
@@ -118,14 +122,14 @@ var config_default = defineConfig({
                   {
                     type: "string",
                     name: "title",
-                    label: "Title"
+                    label: "Title",
                   },
                   {
                     type: "string",
                     name: "link",
-                    label: "URL"
-                  }
-                ]
+                    label: "URL",
+                  },
+                ],
               },
               {
                 type: "object",
@@ -135,14 +139,14 @@ var config_default = defineConfig({
                   {
                     type: "string",
                     name: "title",
-                    label: "Title"
+                    label: "Title",
                   },
                   {
                     type: "string",
                     name: "link",
-                    label: "URL"
-                  }
-                ]
+                    label: "URL",
+                  },
+                ],
               },
               {
                 type: "object",
@@ -152,18 +156,18 @@ var config_default = defineConfig({
                   {
                     type: "string",
                     name: "title",
-                    label: "Title"
+                    label: "Title",
                   },
                   {
                     type: "string",
                     name: "link",
-                    label: "URL"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+                    label: "URL",
+                  },
+                ],
+              },
+            ],
+          },
+        ],
       },
       // Navigation Collection
       {
@@ -172,17 +176,17 @@ var config_default = defineConfig({
         path: "content/data",
         format: "json",
         match: {
-          include: "navigation"
+          include: "navigation",
         },
         ui: {
           allowedActions: {
             create: false,
-            delete: false
+            delete: false,
           },
           filename: {
             slugify: () => "navigation",
-            readonly: true
-          }
+            readonly: true,
+          },
         },
         fields: [
           {
@@ -192,14 +196,15 @@ var config_default = defineConfig({
             list: true,
             ui: {
               itemProps: (item) => ({
-                label: item?.heading?.mainText || item?.text || "Navigation Item"
-              })
+                label:
+                  item?.heading?.mainText || item?.text || "Navigation Item",
+              }),
             },
             fields: [
               {
                 type: "string",
                 name: "link",
-                label: "Link URL"
+                label: "Link URL",
               },
               {
                 type: "object",
@@ -209,23 +214,23 @@ var config_default = defineConfig({
                   {
                     type: "string",
                     name: "mainText",
-                    label: "Main Text"
+                    label: "Main Text",
                   },
                   {
                     type: "string",
                     name: "subText",
-                    label: "Sub Text"
-                  }
-                ]
+                    label: "Sub Text",
+                  },
+                ],
               },
               {
                 type: "string",
                 name: "text",
-                label: "Simple Text"
-              }
-            ]
+                label: "Simple Text",
+              },
+            ],
           },
-           {
+          {
             type: "object",
             name: "footerLinks",
             label: "Footer Links",
@@ -234,14 +239,14 @@ var config_default = defineConfig({
               {
                 type: "string",
                 name: "text",
-                label: "Link Text"
+                label: "Link Text",
               },
               {
                 type: "string",
                 name: "url",
-                label: "Link URL"
-              }
-            ]
+                label: "Link URL",
+              },
+            ],
           },
           {
             type: "object",
@@ -252,16 +257,16 @@ var config_default = defineConfig({
               {
                 type: "string",
                 name: "text1",
-                label: "Text Part 1"
+                label: "Text Part 1",
               },
               {
                 type: "string",
                 name: "text2",
-                label: "Text Part 2"
-              }
-            ]
-          }
-        ]
+                label: "Text Part 2",
+              },
+            ],
+          },
+        ],
       },
       // Content Collection
       {
@@ -270,17 +275,17 @@ var config_default = defineConfig({
         path: "content/data",
         format: "json",
         match: {
-          include: "home"
+          include: "home",
         },
         ui: {
           allowedActions: {
             create: false,
-            delete: false
+            delete: false,
           },
           filename: {
             slugify: () => "home",
-            readonly: true
-          }
+            readonly: true,
+          },
         },
         fields: [
           {
@@ -289,8 +294,8 @@ var config_default = defineConfig({
             label: "Rotating Words",
             list: true,
             ui: {
-              component: "tags"
-            }
+              component: "tags",
+            },
           },
           {
             type: "object",
@@ -300,24 +305,24 @@ var config_default = defineConfig({
               {
                 type: "string",
                 name: "line1",
-                label: "Line 1"
+                label: "Line 1",
               },
               {
                 type: "string",
                 name: "line2",
-                label: "Line 2"
+                label: "Line 2",
               },
               {
                 type: "string",
                 name: "line3",
-                label: "Line 3"
+                label: "Line 3",
               },
               {
                 type: "string",
                 name: "line4",
-                label: "Line 4"
-              }
-            ]
+                label: "Line 4",
+              },
+            ],
           },
           {
             type: "object",
@@ -327,19 +332,19 @@ var config_default = defineConfig({
               {
                 type: "string",
                 name: "message1",
-                label: "Message 1"
+                label: "Message 1",
               },
               {
                 type: "string",
                 name: "message2",
-                label: "Message 2"
+                label: "Message 2",
               },
               {
                 type: "string",
                 name: "message3",
-                label: "Message 3"
-              }
-            ]
+                label: "Message 3",
+              },
+            ],
           },
           {
             type: "object",
@@ -349,15 +354,15 @@ var config_default = defineConfig({
               {
                 type: "string",
                 name: "title",
-                label: "Title"
+                label: "Title",
               },
               {
                 type: "string",
                 name: "desc",
                 label: "Description",
                 ui: {
-                  component: "textarea"
-                }
+                  component: "textarea",
+                },
               },
               {
                 type: "object",
@@ -367,31 +372,31 @@ var config_default = defineConfig({
                   {
                     type: "string",
                     name: "skill1",
-                    label: "Skill 1"
+                    label: "Skill 1",
                   },
                   {
                     type: "string",
                     name: "skill2",
-                    label: "Skill 2"
+                    label: "Skill 2",
                   },
                   {
                     type: "string",
                     name: "skill3",
-                    label: "Skill 3"
+                    label: "Skill 3",
                   },
                   {
                     type: "string",
                     name: "skill4",
-                    label: "Skill 4"
+                    label: "Skill 4",
                   },
                   {
                     type: "string",
                     name: "skill5",
-                    label: "Skill 5"
-                  }
-                ]
-              }
-            ]
+                    label: "Skill 5",
+                  },
+                ],
+              },
+            ],
           },
           {
             type: "object",
@@ -401,15 +406,15 @@ var config_default = defineConfig({
               {
                 type: "string",
                 name: "title",
-                label: "Title"
+                label: "Title",
               },
               {
                 type: "string",
                 name: "desc",
                 label: "Description",
                 ui: {
-                  component: "textarea"
-                }
+                  component: "textarea",
+                },
               },
               {
                 type: "object",
@@ -419,31 +424,31 @@ var config_default = defineConfig({
                   {
                     type: "string",
                     name: "skill1",
-                    label: "Skill 1"
+                    label: "Skill 1",
                   },
                   {
                     type: "string",
                     name: "skill2",
-                    label: "Skill 2"
+                    label: "Skill 2",
                   },
                   {
                     type: "string",
                     name: "skill3",
-                    label: "Skill 3"
+                    label: "Skill 3",
                   },
                   {
                     type: "string",
                     name: "skill4",
-                    label: "Skill 4"
+                    label: "Skill 4",
                   },
                   {
                     type: "string",
                     name: "skill5",
-                    label: "Skill 5"
-                  }
-                ]
-              }
-            ]
+                    label: "Skill 5",
+                  },
+                ],
+              },
+            ],
           },
           {
             type: "object",
@@ -453,14 +458,14 @@ var config_default = defineConfig({
               {
                 type: "string",
                 name: "statement1",
-                label: "Statement 1"
+                label: "Statement 1",
               },
               {
                 type: "string",
                 name: "statement2",
-                label: "Statement 2"
-              }
-            ]
+                label: "Statement 2",
+              },
+            ],
           },
           {
             type: "object",
@@ -470,7 +475,7 @@ var config_default = defineConfig({
               {
                 type: "string",
                 name: "title",
-                label: "Title"
+                label: "Title",
               },
               {
                 type: "object",
@@ -481,44 +486,44 @@ var config_default = defineConfig({
                   {
                     type: "image",
                     name: "image1",
-                    label: "Image 1"
+                    label: "Image 1",
                   },
                   {
                     type: "string",
                     name: "url1",
-                    label: "URL 1"
+                    label: "URL 1",
                   },
                   {
                     type: "image",
                     name: "image2",
-                    label: "Image 2"
+                    label: "Image 2",
                   },
                   {
                     type: "string",
                     name: "url2",
-                    label: "URL 2"
+                    label: "URL 2",
                   },
                   {
                     type: "image",
                     name: "image3",
-                    label: "Image 3"
+                    label: "Image 3",
                   },
                   {
                     type: "string",
                     name: "url3",
-                    label: "URL 3"
+                    label: "URL 3",
                   },
                   {
                     type: "image",
                     name: "image4",
-                    label: "Image 4"
+                    label: "Image 4",
                   },
                   {
                     type: "string",
                     name: "url4",
-                    label: "URL 4"
-                  }
-                ]
+                    label: "URL 4",
+                  },
+                ],
               },
               {
                 type: "object",
@@ -528,16 +533,16 @@ var config_default = defineConfig({
                   {
                     type: "string",
                     name: "text",
-                    label: "Text"
+                    label: "Text",
                   },
                   {
                     type: "string",
                     name: "url",
-                    label: "URL"
-                  }
-                ]
-              }
-            ]
+                    label: "URL",
+                  },
+                ],
+              },
+            ],
           },
           {
             type: "object",
@@ -554,10 +559,10 @@ var config_default = defineConfig({
                     name: "line",
                     label: "Line",
                     ui: {
-                      component: "textarea"
-                    }
-                  }
-                ]
+                      component: "textarea",
+                    },
+                  },
+                ],
               },
               {
                 type: "object",
@@ -567,16 +572,16 @@ var config_default = defineConfig({
                   {
                     type: "string",
                     name: "signature",
-                    label: "Signature"
+                    label: "Signature",
                   },
                   {
                     type: "string",
                     name: "source",
-                    label: "Source"
-                  }
-                ]
-              }
-            ]
+                    label: "Source",
+                  },
+                ],
+              },
+            ],
           },
           {
             type: "object",
@@ -592,16 +597,16 @@ var config_default = defineConfig({
                   {
                     type: "string",
                     name: "text",
-                    label: "Text"
+                    label: "Text",
                   },
                   {
                     type: "number",
                     name: "delay",
-                    label: "Delay (ms)"
-                  }
-                ]
-              }
-            ]
+                    label: "Delay (ms)",
+                  },
+                ],
+              },
+            ],
           },
           {
             type: "object",
@@ -611,16 +616,16 @@ var config_default = defineConfig({
               {
                 type: "string",
                 name: "link",
-                label: "Link"
+                label: "Link",
               },
               {
                 type: "string",
                 name: "buttonText",
-                label: "Button Text"
-              }
-            ]
-          }
-        ]
+                label: "Button Text",
+              },
+            ],
+          },
+        ],
       },
       // Projects Collection
       {
@@ -629,17 +634,17 @@ var config_default = defineConfig({
         path: "content/data",
         format: "json",
         match: {
-          include: "projects"
+          include: "projects",
         },
         ui: {
           allowedActions: {
             create: false,
-            delete: false
+            delete: false,
           },
           filename: {
             slugify: () => "projects",
-            readonly: true
-          }
+            readonly: true,
+          },
         },
         fields: [
           {
@@ -660,27 +665,27 @@ var config_default = defineConfig({
                       {
                         type: "string",
                         name: "title",
-                        label: "Title"
+                        label: "Title",
                       },
                       {
                         type: "string",
                         name: "description",
                         label: "Description",
                         ui: {
-                          component: "textarea"
-                        }
+                          component: "textarea",
+                        },
                       },
                       {
                         type: "number",
                         name: "speed",
-                        label: "Speed"
+                        label: "Speed",
                       },
                       {
                         type: "string",
                         name: "url",
-                        label: "URL"
-                      }
-                    ]
+                        label: "URL",
+                      },
+                    ],
                   },
                   {
                     type: "object",
@@ -689,11 +694,11 @@ var config_default = defineConfig({
                     list: true,
                     ui: {
                       itemProps: (item) => ({
-                        label: item?.title || "New Project Item"
-                      })
+                        label: item?.title || "New Project Item",
+                      }),
                     },
                     fields: [
-                       {
+                      {
                         type: "object",
                         name: "images",
                         label: "Images",
@@ -701,31 +706,31 @@ var config_default = defineConfig({
                           {
                             type: "image",
                             name: "white",
-                            label: "White Version"
+                            label: "White Version",
                           },
                           {
                             type: "image",
                             name: "black",
-                            label: "Black Version"
-                          }
-                        ]
+                            label: "Black Version",
+                          },
+                        ],
                       },
                       {
                         type: "string",
                         name: "title",
-                        label: "Title"
+                        label: "Title",
                       },
                       {
                         type: "string",
                         name: "description",
                         label: "Description",
                         ui: {
-                          component: "textarea"
-                        }
-                      }
-                    ]
-                  }
-                ]
+                          component: "textarea",
+                        },
+                      },
+                    ],
+                  },
+                ],
               },
               {
                 type: "object",
@@ -740,27 +745,27 @@ var config_default = defineConfig({
                       {
                         type: "string",
                         name: "title",
-                        label: "Title"
+                        label: "Title",
                       },
                       {
                         type: "string",
                         name: "description",
                         label: "Description",
                         ui: {
-                          component: "textarea"
-                        }
+                          component: "textarea",
+                        },
                       },
                       {
                         type: "number",
                         name: "speed",
-                        label: "Speed"
+                        label: "Speed",
                       },
                       {
                         type: "string",
                         name: "url",
-                        label: "URL"
-                      }
-                    ]
+                        label: "URL",
+                      },
+                    ],
                   },
                   {
                     type: "object",
@@ -769,52 +774,56 @@ var config_default = defineConfig({
                     list: true,
                     ui: {
                       itemProps: (item) => ({
-                        label: item?.title || "New Project Item"
-                      })
+                        label: item?.title || "New Project Item",
+                      }),
                     },
                     fields: [
-                                            {
+                      {
                         type: "image",
                         name: "image",
-                        label: "Image"
+                        label: "Image",
                       },
                       {
                         type: "string",
                         name: "title",
-                        label: "Title"
+                        label: "Title",
                       },
                       {
                         type: "string",
                         name: "description",
                         label: "Description",
                         ui: {
-                          component: "textarea"
-                        }
+                          component: "textarea",
+                        },
                       },
-                      { type: "string",
+
+                      {
+                        type: "string",
                         name: "goals",
                         label: "Goals",
-                        ui: { 
-                          component: "textarea"
-                        } 
+                        ui: {
+                          component: "textarea",
+                        },
                       },
-                      { type: "string",            
+                      {
+                        type: "string",
                         name: "challenges",
                         label: "Challenges",
-                        ui: { 
-                          component: "textarea"
-                        }
+                        ui: {
+                          component: "textarea",
+                        },
                       },
-                      { type: "string",                                        
+                      {
+                        type: "string",
                         name: "solutions",
                         label: "Solutions",
                         ui: {
-                          component: "textarea"
-                        }
+                          component: "textarea",
+                        },
                       },
-                    ]
-                  }
-                ]
+                    ],
+                  },
+                ],
               },
               // Add similar configurations for other projects
               {
@@ -830,27 +839,27 @@ var config_default = defineConfig({
                       {
                         type: "string",
                         name: "title",
-                        label: "Title"
+                        label: "Title",
                       },
                       {
                         type: "string",
                         name: "description",
                         label: "Description",
                         ui: {
-                          component: "textarea"
-                        }
+                          component: "textarea",
+                        },
                       },
                       {
                         type: "number",
                         name: "speed",
-                        label: "Speed"
+                        label: "Speed",
                       },
                       {
                         type: "string",
                         name: "url",
-                        label: "URL"
-                      }
-                    ]
+                        label: "URL",
+                      },
+                    ],
                   },
                   {
                     type: "object",
@@ -859,52 +868,56 @@ var config_default = defineConfig({
                     list: true,
                     ui: {
                       itemProps: (item) => ({
-                        label: item?.title || "New Project Item"
-                      })
+                        label: item?.title || "New Project Item",
+                      }),
                     },
                     fields: [
                       {
                         type: "image",
                         name: "image",
-                        label: "Image"
+                        label: "Image",
                       },
                       {
                         type: "string",
                         name: "title",
-                        label: "Title"
+                        label: "Title",
                       },
                       {
                         type: "string",
                         name: "description",
                         label: "Description",
                         ui: {
-                          component: "textarea"
-                        }
+                          component: "textarea",
+                        },
                       },
-                      { type: "string",                        
+
+                      {
+                        type: "string",
                         name: "goals",
                         label: "Goals",
-                        ui: { 
-                          component: "textarea"
-                        } 
+                        ui: {
+                          component: "textarea",
+                        },
                       },
-                      { type: "string",
+                      {
+                        type: "string",
                         name: "challenges",
                         label: "Challenges",
-                        ui: { 
-                          component: "textarea"
-                        }
+                        ui: {
+                          component: "textarea",
+                        },
                       },
-                      { type: "string",
+                      {
+                        type: "string",
                         name: "solutions",
                         label: "Solutions",
                         ui: {
-                          component: "textarea"
-                        }
+                          component: "textarea",
+                        },
                       },
-                    ]
-                  }
-                ]
+                    ],
+                  },
+                ],
               },
               // Add similar configurations for other projects
               {
@@ -920,27 +933,27 @@ var config_default = defineConfig({
                       {
                         type: "string",
                         name: "title",
-                        label: "Title"
+                        label: "Title",
                       },
                       {
                         type: "string",
                         name: "description",
                         label: "Description",
                         ui: {
-                          component: "textarea"
-                        }
+                          component: "textarea",
+                        },
                       },
                       {
                         type: "number",
                         name: "speed",
-                        label: "Speed"
+                        label: "Speed",
                       },
                       {
                         type: "string",
                         name: "url",
-                        label: "URL"
-                      }
-                    ]
+                        label: "URL",
+                      },
+                    ],
                   },
                   {
                     type: "object",
@@ -949,57 +962,61 @@ var config_default = defineConfig({
                     list: true,
                     ui: {
                       itemProps: (item) => ({
-                        label: item?.title || "New Project Item"
-                      })
+                        label: item?.title || "New Project Item",
+                      }),
                     },
                     fields: [
                       {
                         type: "image",
                         name: "image",
-                        label: "Image"
+                        label: "Image",
                       },
                       {
                         type: "string",
                         name: "title",
-                        label: "Title"
+                        label: "Title",
                       },
                       {
                         type: "string",
                         name: "description",
                         label: "Description",
                         ui: {
-                          component: "textarea"
-                        }
+                          component: "textarea",
+                        },
                       },
-                      { type: "string",                        
+
+                      {
+                        type: "string",
                         name: "goals",
                         label: "Goals",
-                        ui: { 
-                          component: "textarea"
-                        } 
+                        ui: {
+                          component: "textarea",
+                        },
                       },
-                      { type: "string",
+                      {
+                        type: "string",
                         name: "challenges",
                         label: "Challenges",
-                        ui: { 
-                          component: "textarea"
-                        }
+                        ui: {
+                          component: "textarea",
+                        },
                       },
-                      { type: "string",
+                      {
+                        type: "string",
                         name: "solutions",
                         label: "Solutions",
                         ui: {
-                          component: "textarea"
-                        }
+                          component: "textarea",
+                        },
                       },
                       {
                         type: "string",
                         name: "video",
                         label: "Video",
-                      }
-                    ]
-                  }
-                ]
+                      },
+                    ],
+                  },
+                ],
               },
               // Add similar configurations for other projects
               {
@@ -1015,27 +1032,27 @@ var config_default = defineConfig({
                       {
                         type: "string",
                         name: "title",
-                        label: "Title"
+                        label: "Title",
                       },
                       {
                         type: "string",
                         name: "description",
                         label: "Description",
                         ui: {
-                          component: "textarea"
-                        }
+                          component: "textarea",
+                        },
                       },
                       {
                         type: "number",
                         name: "speed",
-                        label: "Speed"
+                        label: "Speed",
                       },
                       {
                         type: "string",
                         name: "url",
-                        label: "URL"
-                      }
-                    ]
+                        label: "URL",
+                      },
+                    ],
                   },
                   {
                     type: "object",
@@ -1044,52 +1061,56 @@ var config_default = defineConfig({
                     list: true,
                     ui: {
                       itemProps: (item) => ({
-                        label: item?.title || "New Project Item"
-                      })
+                        label: item?.title || "New Project Item",
+                      }),
                     },
                     fields: [
-                       {
+                      {
                         type: "image",
                         name: "image",
-                        label: "Image"
+                        label: "Image",
                       },
                       {
                         type: "string",
                         name: "title",
-                        label: "Title"
+                        label: "Title",
                       },
                       {
                         type: "string",
                         name: "description",
                         label: "Description",
                         ui: {
-                          component: "textarea"
-                        }
+                          component: "textarea",
+                        },
                       },
-                       { type: "string",                        
+
+                      {
+                        type: "string",
                         name: "goals",
                         label: "Goals",
-                        ui: { 
-                          component: "textarea"
-                        } 
+                        ui: {
+                          component: "textarea",
+                        },
                       },
-                      { type: "string",
+                      {
+                        type: "string",
                         name: "challenges",
                         label: "Challenges",
-                        ui: { 
-                          component: "textarea"
-                        }
+                        ui: {
+                          component: "textarea",
+                        },
                       },
-                      { type: "string",
+                      {
+                        type: "string",
                         name: "solutions",
                         label: "Solutions",
                         ui: {
-                          component: "textarea"
-                        }
+                          component: "textarea",
+                        },
                       },
-                    ]
-                  }
-                ]
+                    ],
+                  },
+                ],
               },
               // Add similar configurations for other projects
               {
@@ -1105,27 +1126,27 @@ var config_default = defineConfig({
                       {
                         type: "string",
                         name: "title",
-                        label: "Title"
+                        label: "Title",
                       },
                       {
                         type: "string",
                         name: "description",
                         label: "Description",
                         ui: {
-                          component: "textarea"
-                        }
+                          component: "textarea",
+                        },
                       },
                       {
                         type: "number",
                         name: "speed",
-                        label: "Speed"
+                        label: "Speed",
                       },
                       {
                         type: "string",
                         name: "url",
-                        label: "URL"
-                      }
-                    ]
+                        label: "URL",
+                      },
+                    ],
                   },
                   {
                     type: "object",
@@ -1134,62 +1155,64 @@ var config_default = defineConfig({
                     list: true,
                     ui: {
                       itemProps: (item) => ({
-                        label: item?.title || "New Project Item"
-                      })
+                        label: item?.title || "New Project Item",
+                      }),
                     },
                     fields: [
-                       {
+                      {
                         type: "image",
                         name: "image",
-                        label: "Image"
+                        label: "Image",
                       },
                       {
                         type: "string",
                         name: "title",
-                        label: "Title"
+                        label: "Title",
                       },
                       {
                         type: "string",
                         name: "description",
                         label: "Description",
                         ui: {
-                          component: "textarea"
-                        }
+                          component: "textarea",
+                        },
                       },
-                      { type: "string",                        
+
+                      {
+                        type: "string",
                         name: "goals",
                         label: "Goals",
-                        ui: { 
-                          component: "textarea"
-                        } 
+                        ui: {
+                          component: "textarea",
+                        },
                       },
-                      { type: "string",
+                      {
+                        type: "string",
                         name: "challenges",
                         label: "Challenges",
-                        ui: { 
-                          component: "textarea"
-                        }
+                        ui: {
+                          component: "textarea",
+                        },
                       },
-                      { type: "string",
+                      {
+                        type: "string",
                         name: "solutions",
                         label: "Solutions",
                         ui: {
-                          component: "textarea"
-                        }
+                          component: "textarea",
+                        },
                       },
-                    ]
+                    ],
                   },
-                ] 
-              }
+                ],
+              },
               // Add similar configurations for other projects
             ],
             create: true,
-          }
-        ]
-      }
-    ]
-  }
+          },
+        ],
+      },
+    ],
+  },
 });
-export {
-  config_default as default
-};
+export { config_default as default };
