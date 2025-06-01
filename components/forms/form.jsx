@@ -340,7 +340,7 @@ class FormPersonalDetails extends Component {
             </div>
 
             <div className="field">
-             <label className="label">Choose A Service:</label> <br />
+             <label className="label">Choose A Service:</label>
               <div className="control">
                 <select
                   className="input"
@@ -429,7 +429,7 @@ class Confirm extends Component {
     return (
       <div className="section" >
         <div className="columns is-centered">
-          <div className="column is-6">
+          <div className="column is-8">
               <div className="contact-box">
                 <h1 className="title has-text-centered">Please Confirm Your Details</h1>
                   <div className="content">
@@ -474,12 +474,16 @@ class Confirm extends Component {
 
 const SuccessPage = ({ resetForm }) => (
   <div className="section">
-    <div className="container has-text-centered">
+   <div className="columns is-centered">
+          <div className="column is-8">
+              <div className="contact-box has-text-centered">
       <h1 className="title">Thank You!</h1>
-      <p className="subtitle">We've received your submission and will contact you soon.</p>
+      <p style={{marginTop: "5rem", lineHeight: "1.5rem"}} className="subtitle">We've received your submission and will contact you soon.</p>
       <button className="button is-link mt-5" onClick={resetForm}>
         Start New Submission
       </button>
+      </div>
+      </div>
     </div>
   </div>
 );
