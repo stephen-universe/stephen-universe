@@ -196,6 +196,9 @@ fragment ProjectsParts on Projects {
         image
         title
         description
+        goals
+        challenges
+        solutions
       }
     }
     queendomfarms {
@@ -212,6 +215,9 @@ fragment ProjectsParts on Projects {
         image
         title
         description
+        goals
+        challenges
+        solutions
       }
     }
     epicfuture {
@@ -228,6 +234,9 @@ fragment ProjectsParts on Projects {
         image
         title
         description
+        goals
+        challenges
+        solutions
         video
       }
     }
@@ -245,6 +254,9 @@ fragment ProjectsParts on Projects {
         image
         title
         description
+        goals
+        challenges
+        solutions
       }
     }
     perfectlydifferent {
@@ -261,6 +273,9 @@ fragment ProjectsParts on Projects {
         image
         title
         description
+        goals
+        challenges
+        solutions
       }
     }
   }

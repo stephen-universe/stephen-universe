@@ -881,23 +881,23 @@ var config_default = defineConfig({
                           component: "textarea"
                         }
                       },
-                      { type: "string",
-                        label: "Goals",
+                      { type: "string",                        
                         name: "goals",
+                        label: "Goals",
                         ui: { 
                           component: "textarea"
                         } 
                       },
                       { type: "string",
-                        label: "Challenges",
                         name: "challenges",
+                        label: "Challenges",
                         ui: { 
                           component: "textarea"
                         }
                       },
                       { type: "string",
-                        label: "Solutions",
                         name: "solutions",
+                        label: "Solutions",
                         ui: {
                           component: "textarea"
                         }
@@ -971,23 +971,23 @@ var config_default = defineConfig({
                           component: "textarea"
                         }
                       },
-                      { type: "string",
-                        label: "Goals",
+                      { type: "string",                        
                         name: "goals",
+                        label: "Goals",
                         ui: { 
                           component: "textarea"
                         } 
                       },
                       { type: "string",
-                        label: "Challenges",
                         name: "challenges",
+                        label: "Challenges",
                         ui: { 
                           component: "textarea"
                         }
                       },
                       { type: "string",
-                        label: "Solutions",
                         name: "solutions",
+                        label: "Solutions",
                         ui: {
                           component: "textarea"
                         }
@@ -1066,23 +1066,23 @@ var config_default = defineConfig({
                           component: "textarea"
                         }
                       },
-                      { type: "string",
-                        label: "Goals",
+                       { type: "string",                        
                         name: "goals",
+                        label: "Goals",
                         ui: { 
                           component: "textarea"
                         } 
                       },
                       { type: "string",
-                        label: "Challenges",
                         name: "challenges",
+                        label: "Challenges",
                         ui: { 
                           component: "textarea"
                         }
                       },
                       { type: "string",
-                        label: "Solutions",
                         name: "solutions",
+                        label: "Solutions",
                         ui: {
                           component: "textarea"
                         }
@@ -1156,23 +1156,23 @@ var config_default = defineConfig({
                           component: "textarea"
                         }
                       },
-                      { type: "string",
-                        label: "Goals",
+                      { type: "string",                        
                         name: "goals",
+                        label: "Goals",
                         ui: { 
                           component: "textarea"
                         } 
                       },
                       { type: "string",
-                        label: "Challenges",
                         name: "challenges",
+                        label: "Challenges",
                         ui: { 
                           component: "textarea"
                         }
                       },
                       { type: "string",
-                        label: "Solutions",
                         name: "solutions",
+                        label: "Solutions",
                         ui: {
                           component: "textarea"
                         }

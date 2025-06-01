@@ -207,6 +207,9 @@ export const ProjectsPartsFragmentDoc = gql`
         image
         title
         description
+        goals
+        challenges
+        solutions
       }
     }
     queendomfarms {
@@ -223,6 +226,9 @@ export const ProjectsPartsFragmentDoc = gql`
         image
         title
         description
+        goals
+        challenges
+        solutions
       }
     }
     epicfuture {
@@ -239,6 +245,9 @@ export const ProjectsPartsFragmentDoc = gql`
         image
         title
         description
+        goals
+        challenges
+        solutions
         video
       }
     }
@@ -256,6 +265,9 @@ export const ProjectsPartsFragmentDoc = gql`
         image
         title
         description
+        goals
+        challenges
+        solutions
       }
     }
     perfectlydifferent {
@@ -272,6 +284,9 @@ export const ProjectsPartsFragmentDoc = gql`
         image
         title
         description
+        goals
+        challenges
+        solutions
       }
     }
   }
