@@ -802,7 +802,7 @@ var config_default = defineConfig({
                         name: "challenges",
                         label: "Challenges",
                         ui: { 
-                          component: "textarea" } },
+                          component: "textarea"
                         }
                       },
                       { type: "string",                                        
@@ -863,7 +863,7 @@ var config_default = defineConfig({
                       })
                     },
                     fields: [
-                                            {
+                      {
                         type: "image",
                         name: "image",
                         label: "Image"
@@ -892,7 +892,7 @@ var config_default = defineConfig({
                         label: "Challenges",
                         name: "challenges",
                         ui: { 
-                          component: "textarea" } },
+                          component: "textarea"
                         }
                       },
                       { type: "string",
@@ -982,7 +982,7 @@ var config_default = defineConfig({
                         label: "Challenges",
                         name: "challenges",
                         ui: { 
-                          component: "textarea" } },
+                          component: "textarea"
                         }
                       },
                       { type: "string",
@@ -1077,7 +1077,7 @@ var config_default = defineConfig({
                         label: "Challenges",
                         name: "challenges",
                         ui: { 
-                          component: "textarea" } },
+                          component: "textarea"
                         }
                       },
                       { type: "string",
@@ -1167,7 +1167,7 @@ var config_default = defineConfig({
                         label: "Challenges",
                         name: "challenges",
                         ui: { 
-                          component: "textarea" } },
+                          component: "textarea"
                         }
                       },
                       { type: "string",
