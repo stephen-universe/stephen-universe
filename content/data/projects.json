@@ -123,7 +123,10 @@
         {
           "title": "Brief",
           "description": "Queendon Farms is an urban flower and fruit farm based in Georgia, aiming to establish itself in an industry traditionally dominated by men. Founded by two women inspired and empowered by agriculture, they set out to create a strong and authentic brand identity of their own",
-          "image": "/images/Queendom-Farms-Home.jpg"
+          "image": "/images/Queendom-Farms-Home.jpg",
+          "goals": "* Become a household name | * Create a strong brand identity | * Establish a unique market position",
+          "challenges": "Establish a brand identity in an industry dominated by men",
+          "solutions": "Develop a brand identity that reflects the founders' values and mission, while appealing to a diverse audience"
         },
         {
           "title": "Concept Development",
