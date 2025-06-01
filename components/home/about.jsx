@@ -359,7 +359,7 @@ export default function About() {
             <p>{appData.doorMessages.message1}</p>
             <p>{appData.doorMessages.message2}</p>
             <Link href={appData.contact.link}>
-              <button className="mission-start is-primary is-rounded">
+              <button data-label="CTA start mission" className="mission-start is-primary is-rounded">
                 {appData.doorMessages.message3}
               </button>
             </Link>

@@ -61,7 +61,7 @@ export default function InitializeContact() {
                 </div>
               ))}
               <div className="column is-12-mobile is-12-tablet is-12-deskto has-text-centered">
-                <button className="button white is-link has-text-centered is-primary">
+                <button data-label="viewed more projects" className="button white is-link has-text-centered is-primary">
                   <Link href={appData.projectSection.viewAllLink.url}>
                     {appData.projectSection.viewAllLink.text}
                   </Link>

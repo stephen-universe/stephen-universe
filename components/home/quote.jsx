@@ -49,7 +49,7 @@ function CTA({ shouldAnimate }) {
       initial="hidden"
       animate={shouldAnimate ? "visible" : "hidden"}
     >
-      <Link href={appData.contact.link}>
+      <Link href={appData.contact.link} data-label="lets talk CTA button">
         <div className={`button mt-4 ${appData.contact.className}`}>
           {appData.contact.buttonText}
         </div>

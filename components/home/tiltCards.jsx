@@ -97,7 +97,7 @@ export const TiltCard = ({ title, subtitles, image, link }) => {
       <div className="image-container" style={{ width: "100%" }}>
         {link ? (
           <Link href={link} passHref legacyBehavior>
-            <a>
+            <a data-label="tilt card link">
               <img
                 src={image}
                 alt={title}

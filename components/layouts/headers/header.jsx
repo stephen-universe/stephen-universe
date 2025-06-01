@@ -56,6 +56,7 @@ const clickedMobileMenu = (e) => {
                       </Link>
 
                       <a
+                        data-label="opened mobile menu"
                         href="#"
                         id="mobile-menu"
                         className={
@@ -86,6 +87,7 @@ const clickedMobileMenu = (e) => {
                       </a>
                       <a
                         href="#"
+                        data-label="opened desktop menu"
                         id="desktop-menu"
                         className={
                           desktopMenu ? "menu-start open" : "menu-start"
@@ -165,13 +167,14 @@ const clickedMobileMenu = (e) => {
             <Link
               href={navData.navigationLinks[2].link}
               style={{ color: "#FFF" }}
+              data-label="clicked hire me link"
             >
               {navData.navigationLinks[2].text}
             </Link>
           </div>
         </div>
 
-        <a href="#" id="res-cross" onClick={(e) => clickedMobileMenu(e)}></a>
+        <a href="#" id="res-cross" data-label="closed menu on phone" onClick={(e) => clickedMobileMenu(e)}></a>
       </div>
     </>
   );

@@ -15,8 +15,8 @@ export default function Contact() {
   <section className="section">
       <form name="Contact Form v1"
           method="post" 
-          netlify-honeypot="bot-field" 
-          data-netlify="true" 
+          data-label="contact us form"
+          data-form-type="contact"
           onSubmit="submit"
           > 
         <div className="tile is-ancestor">

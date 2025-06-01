@@ -267,7 +267,7 @@ class FormUserDetails extends Component {
               Trends, & More
             </p>
             <div className="mt-2">
-              <Link href="/" className="styled-link">
+              <Link href="/" data-label="downloaded free starter content from page1" className="styled-link">
                 Style Guide
               </Link>
             </div>
@@ -411,7 +411,7 @@ class FormPersonalDetails extends Component {
               Trends, & More
             </p>
             <div className="mt-2">
-              <Link href="/" className="styled-link">
+              <Link href="/" data-label="downloaded free starter content from page2" className="styled-link">
                 Style Guide
               </Link>
             </div>

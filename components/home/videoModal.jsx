@@ -14,7 +14,7 @@ const VideoModal = () => {
 
   return (
     <div>
-      <button onClick={toggleModal} className="play-button">
+      <button data-label="pressed play on video" onClick={toggleModal} className="play-button">
         Play Video{" "}
       </button>
       {isOpen && (

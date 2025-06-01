@@ -53,7 +53,7 @@ function Title({ data, setSelectedProject, selectedProject }) {
             }}
           >
             <p className='description-title'>
-              <Link href={url}>{title}</Link>
+              <Link href={url} data-label={`clicked link to ${title}`} >{title}</Link>
             </p>
             <p className='description-p'>{description}</p>
           </div>

@@ -31,10 +31,10 @@ const CookieBanner = () => {
           </p>
         </div>
         <div style={styles.buttonGroup}>
-          <button onClick={handleAccept} style={{ ...styles.button, ...styles.accept }}>
+          <button data-label="accepted cookies" onClick={handleAccept} style={{ ...styles.button, ...styles.accept }}>
             Accept
           </button>
-          <button onClick={handleReject} style={{ ...styles.button, ...styles.reject }}>
+          <button data-label="denied cookies" onClick={handleReject} style={{ ...styles.button, ...styles.reject }}>
             Decline
           </button>
         </div>

@@ -153,6 +153,7 @@ export default function ProjectDetails({ projectData }) {
           onClick={nextSlide}
           className="navArrow rightArrow"
           aria-label="Next slide"
+          data-label="viewed next slide"
         >
           →
         </button>

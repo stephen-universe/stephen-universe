@@ -1,10 +1,13 @@
+import { useRouter } from "next/router"; // make sure to import router
 import React, { useEffect } from "react";
 import Head from "next/head";
 import appData from "@content/data/setting.json";
-import '../styles/scss/style.scss';
+import "../styles/scss/style.scss";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+
   useEffect(() => {
     const GA_ID = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID;
     const FB_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID;
@@ -13,15 +16,20 @@ function MyApp({ Component, pageProps }) {
     const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID;
 
     function hasConsent() {
-      return localStorage.getItem('cookies-accepted') === 'true';
+      return localStorage.getItem("cookies-accepted") === "true";
     }
 
     function loadScript({ src, async = true, textContent }) {
-      const s = document.createElement('script');
+      const s = document.createElement("script");
       if (src) s.src = src;
       if (textContent) s.text = textContent;
       s.async = async;
       document.body.appendChild(s);
+    }
+
+    function getCampaignFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get("utm_campaign") || params.get("campaign") || "none";
     }
 
     function loadTrackers() {
@@ -115,11 +123,152 @@ function MyApp({ Component, pageProps }) {
 
     if (hasConsent()) loadTrackers();
 
-    window.addEventListener('cookie-consent-given', () => {
-      localStorage.setItem('cookies-accepted', 'true');
+    window.addEventListener("cookie-consent-given", () => {
+      localStorage.setItem("cookies-accepted", "true");
       loadTrackers();
     });
-  }, []);
+
+    // Click tracking (general)
+    const handleClick = (e) => {
+      const target = e.target.closest("button, a");
+      if (!target) return;
+
+      const label =
+        target.getAttribute("data-label") ||
+        target.id ||
+        target.name ||
+        target.textContent?.trim() ||
+        target.href ||
+        "unknown_click";
+
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "click", {
+          event_category: "engagement",
+          event_label: label,
+        });
+        console.log(`GA4 tracked click: ${label}`);
+      }
+    };
+
+    // Scroll depth tracking
+    const scrollThresholds = [25, 50, 75, 100];
+    const firedScrollEvents = new Set();
+
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+      scrollThresholds.forEach((threshold) => {
+        if (scrollPercent >= threshold && !firedScrollEvents.has(threshold)) {
+          firedScrollEvents.add(threshold);
+          if (typeof window.gtag === "function") {
+            window.gtag("event", "scroll_depth", {
+              event_category: "engagement",
+              event_label: `${threshold}%`,
+              value: threshold,
+            });
+            console.log(`GA4 scroll depth: ${threshold}%`);
+          }
+        }
+      });
+    };
+
+    // Time on page tracking
+    const timeEvents = [
+      { seconds: 15, label: "15s_engaged" },
+      { seconds: 30, label: "30s" },
+      { seconds: 60, label: "60s" },
+      { seconds: 180, label: "3min" },
+    ];
+
+    timeEvents.forEach(({ seconds, label }) => {
+      setTimeout(() => {
+        if (typeof window.gtag === "function") {
+          window.gtag("event", "time_on_page", {
+            event_category: "engagement",
+            event_label: label,
+            value: seconds,
+          });
+          console.log(`GA4 time on page: ${label}`);
+        }
+      }, seconds * 1000);
+    });
+
+    // Route Change Tracking with enhanced labels
+    const handleRouteChange = (url) => {
+      if (typeof window.gtag === "function") {
+        const userRole = window.userRole || "guest"; // example: replace with your actual user data
+        window.gtag("event", "page_view", {
+          page_path: url,
+          page_location: window.location.href,
+          page_title: document.title,
+          user_role: userRole,
+          custom_campaign: getCampaignFromUrl(),
+        });
+        console.log(`GA4 route change: ${url}`);
+      }
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+
+    // Form Submission Tracking with enhanced labels
+    const handleFormSubmit = (e) => {
+      const form = e.target.closest("form");
+      if (!form) return;
+
+      const label = form.getAttribute("data-label") || form.name || form.id || "form_submission";
+      const formType = form.getAttribute("data-form-type") || "generic";
+      const page = window.location.pathname;
+
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "form_submit", {
+          event_category: "engagement",
+          event_label: label,
+          form_type: formType,
+          page_location: page,
+        });
+        console.log(`GA4 form submitted: ${label} on ${page}`);
+      }
+    };
+
+    document.addEventListener("submit", handleFormSubmit);
+
+    // Outbound Link Tracking with enhanced labels
+    const handleOutboundClick = (e) => {
+      const link = e.target.closest("a");
+      if (!link || !link.href) return;
+
+      const isOutbound = !link.href.includes(window.location.hostname);
+      if (isOutbound) {
+        const url = link.href;
+        const domain = new URL(url).hostname;
+        const linkText = link.textContent.trim() || "no_text";
+
+        if (typeof window.gtag === "function") {
+          window.gtag("event", "click", {
+            event_category: "outbound",
+            event_label: url,
+            outbound_domain: domain,
+            link_text: linkText,
+            transport_type: "beacon",
+          });
+          console.log(`GA4 outbound link: ${url}`);
+        }
+      }
+    };
+
+    document.addEventListener("click", handleOutboundClick);
+
+    // Add to cleanup
+    return () => {
+      document.removeEventListener("click", handleClick);
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("submit", handleFormSubmit);
+      document.removeEventListener("click", handleOutboundClick);
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
     <>
@@ -127,6 +276,7 @@ function MyApp({ Component, pageProps }) {
         <title>{appData.siteSettings.siteName}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
+
       <Component {...pageProps} />
     </>
   );
