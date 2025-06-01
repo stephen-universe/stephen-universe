@@ -39,68 +39,79 @@ export class UserForm extends Component {
   };
 
 handleFinalSubmit = async () => {
-  const { name, email, number, budget, service, message } = this.state;
-  
-  this.setState({ isSubmitting: true, submissionError: null });
+  this.setState({ 
+    isSubmitting: true, 
+    submissionError: null 
+  });
 
   try {
-    // Prepare cleaned data
+    // 1. Data Preparation with Validation
     const submissionData = {
-      name: name.trim(),
-      email: email.trim(),
-      number: number.replace(/\D/g, ''), // Keep only digits
-      budget: budget.replace(/[^\d.]/g, ''), // Keep numbers and decimal
-      service,
-      message: message.trim()
+      name: this.state.name.trim(),
+      email: this.state.email.trim(),
+      number: this.state.number.replace(/\D/g, ''),
+      budget: this.state.budget.replace(/[^\d.]/g, ''),
+      service: this.state.service,
+      message: this.state.message.trim()
     };
 
-    // ===== (1) FIRST TRY: Next.js API Proxy =====
-    const response = await fetch('/api/submitForm', {
+    // Basic validation
+    if (!submissionData.name || !submissionData.email) {
+      throw new Error('Name and email are required');
+    }
+
+    // 2. API Request with Timeout
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 10000); // 10s timeout
+
+    const response = await fetch('/api/submit-form', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify(submissionData),
+      signal: controller.signal
     });
 
-    // Handle API proxy response
+    clearTimeout(timeoutId);
+
+    // 3. Response Handling
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
-      throw new Error(errorData.error || "Server responded with an error");
+      throw new Error(
+        errorData.error || 
+        `Server error: ${response.status} ${response.statusText}`
+      );
     }
 
     const result = await response.json();
     
     if (!result.success) {
-      throw new Error(result.error || "Submission failed");
+      throw new Error(result.error || "Submission failed on server");
     }
 
-    // ===== (2) FALLBACK: Direct to Google Script (if API proxy fails) =====
-    // (This is optional but useful for redundancy)
-    if (result.fallbackNeeded) {
-      console.warn("Falling back to direct Google Script submission");
-      const gscriptUrl = `https://script.google.com/macros/s/AKfycbzfYK-0aSrYRg5qdfZuBwm1zZWtUrV6Eo80HL2HgrF4KPfLPhgVm8aQZuzfA0addaU/exec?${new URLSearchParams(submissionData)}`;
-      const gscriptResponse = await fetch(gscriptUrl, { mode: 'no-cors' });
-      
-      if (!gscriptResponse.ok) {
-        throw new Error("Fallback submission also failed");
-      }
-    }
-
-    // Success!
+    // 4. Success
     this.setState({ step: 4 });
 
   } catch (error) {
-    console.error("Submission error:", error);
+    const errorMessage = error.name === 'AbortError' 
+      ? 'Request timed out. Please try again.'
+      : error.message;
+
     this.setState({
-      submissionError: 
-        error.message.includes('Failed to fetch') ? 
-          "Could not connect to the server. Please check your internet connection." :
-          error.message
+      submissionError: `Submission failed: ${errorMessage}`
     });
+
+    console.error('Form submission error:', {
+      error: error.message,
+      stack: error.stack,
+      timestamp: new Date().toISOString()
+    });
+
   } finally {
     this.setState({ isSubmitting: false });
   }
 };
-
   render() {
     const { step, isSubmitting, submissionError } = this.state;
     const values = { ...this.state };

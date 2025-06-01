@@ -1,53 +1,51 @@
-// pages/api/submit-form.js
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzfYK-0aSrYRg5qdfZuBwm1zZWtUrV6Eo80HL2HgrF4KPfLPhgVm8aQZuzfA0addaU/exec';
 
+// pages/api/submit-form.js
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(405).json({ 
+      success: false,
+      error: 'Method not allowed' 
+    });
   }
 
   try {
     // Validate required fields
-    const { name, email, number } = req.body;
-    if (!name || !email || !number) {
-      return res.status(400).json({ error: 'Missing required fields' });
+    if (!req.body.name || !req.body.email) {
+      return res.status(400).json({
+        success: false,
+        error: 'Missing required fields: name and email are required'
+      });
     }
 
-    // Forward to Google Apps Script
-    const response = await fetch(GOOGLE_SCRIPT_URL, {
+    const googleResponse = await fetch(process.env.GOOGLE_SCRIPT_URL, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         ...req.body,
-        // Ensure clean data
-        number: req.body.number.replace(/\D/g, ''),
-        budget: req.body.budget?.replace(/[^\d.]/g, '') || '',
-      }),
+        timestamp: new Date().toISOString() // Add timestamp for debugging
+      })
     });
 
-    // Handle Google Script response
-    if (!response.ok) {
-      throw new Error(`Google Script error: ${response.statusText}`);
-    }
+    const googleData = await googleResponse.json();
 
-    const result = await response.json();
-    
-    if (!result.success) {
-      return res.status(400).json({ 
-        error: result.error || 'Submission failed',
-        fallbackNeeded: true 
+    if (!googleResponse.ok || !googleData.success) {
+      return res.status(400).json({
+        success: false,
+        error: googleData.error || 'Google Script rejected the submission',
+        details: googleData // Include full response for debugging
       });
     }
 
     return res.status(200).json({ success: true });
-    
+
   } catch (error) {
     console.error('API Route Error:', error);
-    return res.status(500).json({ 
-      error: error.message || 'Internal server error',
-      fallbackNeeded: true 
+    return res.status(500).json({
+      success: false,
+      error: 'Internal server error',
+      ...(process.env.NODE_ENV === 'development' && {
+        debug: error.message
+      })
     });
   }
 }
