@@ -790,7 +790,28 @@ var config_default = defineConfig({
                         ui: {
                           component: "textarea"
                         }
-                      }
+                      },
+                      { type: "string",
+                        label: "Goals",
+                        name: "goals",
+                        ui: { 
+                          component: "textarea"
+                        } 
+                      },
+                      { type: "string",
+                        label: "Challenges",
+                        name: "challenges",
+                        ui: { 
+                          component: "textarea" } },
+                        }
+                      },
+                      { type: "string",
+                        label: "Solutions",
+                        name: "solutions",
+                        ui: {
+                          component: "textarea"
+                        }
+                      },
                     ]
                   }
                 ]
@@ -859,7 +880,28 @@ var config_default = defineConfig({
                         ui: {
                           component: "textarea"
                         }
-                      }
+                      },
+                      { type: "string",
+                        label: "Goals",
+                        name: "goals",
+                        ui: { 
+                          component: "textarea"
+                        } 
+                      },
+                      { type: "string",
+                        label: "Challenges",
+                        name: "challenges",
+                        ui: { 
+                          component: "textarea" } },
+                        }
+                      },
+                      { type: "string",
+                        label: "Solutions",
+                        name: "solutions",
+                        ui: {
+                          component: "textarea"
+                        }
+                      },
                     ]
                   }
                 ]
@@ -925,6 +967,27 @@ var config_default = defineConfig({
                         type: "string",
                         name: "description",
                         label: "Description",
+                        ui: {
+                          component: "textarea"
+                        }
+                      },
+                      { type: "string",
+                        label: "Goals",
+                        name: "goals",
+                        ui: { 
+                          component: "textarea"
+                        } 
+                      },
+                      { type: "string",
+                        label: "Challenges",
+                        name: "challenges",
+                        ui: { 
+                          component: "textarea" } },
+                        }
+                      },
+                      { type: "string",
+                        label: "Solutions",
+                        name: "solutions",
                         ui: {
                           component: "textarea"
                         }
@@ -1002,7 +1065,28 @@ var config_default = defineConfig({
                         ui: {
                           component: "textarea"
                         }
-                      }
+                      },
+                      { type: "string",
+                        label: "Goals",
+                        name: "goals",
+                        ui: { 
+                          component: "textarea"
+                        } 
+                      },
+                      { type: "string",
+                        label: "Challenges",
+                        name: "challenges",
+                        ui: { 
+                          component: "textarea" } },
+                        }
+                      },
+                      { type: "string",
+                        label: "Solutions",
+                        name: "solutions",
+                        ui: {
+                          component: "textarea"
+                        }
+                      },
                     ]
                   }
                 ]
@@ -1071,7 +1155,28 @@ var config_default = defineConfig({
                         ui: {
                           component: "textarea"
                         }
-                      }
+                      },
+                      { type: "string",
+                        label: "Goals",
+                        name: "goals",
+                        ui: { 
+                          component: "textarea"
+                        } 
+                      },
+                      { type: "string",
+                        label: "Challenges",
+                        name: "challenges",
+                        ui: { 
+                          component: "textarea" } },
+                        }
+                      },
+                      { type: "string",
+                        label: "Solutions",
+                        name: "solutions",
+                        ui: {
+                          component: "textarea"
+                        }
+                      },
                     ]
                   },
                 ] 
