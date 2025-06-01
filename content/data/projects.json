@@ -306,72 +306,73 @@
         {
           "image": "/images/Perfectly-Different-quote.png",
           "title": "Moodboard",
-          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print."
+          "description": "A visual foundation capturing the inclusive, empowering, and human-centered spirit of the brand."
         },
         {
           "image": "/images/Perfectly-Different-requirements.png",
           "title": "Business Requirements",
-          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations."
+          "description": "Key structural and functional goals defined to support app development and user safety."
         },
         {
           "image": "/images/Perfectly-Different-needs.png",
           "title": "Business Needs",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility."
+          "description": "Core business objectives driving product design, marketing, and community engagement."
         },
         {
           "image": "/images/Perfectly-Different-research.png",
           "title": "Business Voice, Tone, & Personality",
-          "description": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges."
+          "description": "A brand voice developed to be empathetic, honest, and confidently inclusive."
         },
         {
           "image": "/images/Perfectly-Different-interviews.png",
           "title": "User Research",
-          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy."
+          "description": "Direct insights from real people with disabilities to inform product features and emotional design."
         },
         {
           "image": "/images/Perfectly-Different-user-needs.jpg",
           "title": "User Needs",
-          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print."
+          "description": "A concise list of user goals, pain points, and accessibility priorities that shaped the experience."
         },
         {
           "image": "/images/Perfectly-Different-user-type-1.png",
           "title": "User Persona",
-          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations."
+          "description": "A representative profile that reflects the motivations and daily challenges of a female user."
         },
         {
           "image": "/images/Perfectly-Different-user-type-2.png",
           "title": "User Persona",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility."
+          "description": "A detailed persona illustrating the emotional and functional needs of a male user."
         },
         {
           "image": "/images/Perfectly-Different-scenarios.png",
-          "title": "How Might We (Scenarios)",
-          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print."
+          "title": "Success Metrics",
+          "description": "Scenario-based prompts designed to explore how we might solve our technical goals and track its success in real-time."
         },
         {
           "image": "/images/Perfectly-Different-compare.png",
           "title": "Competitive Analysis",
-          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations."
-        },
-        {
-          "image": "/images/Perfectly-Different-app-preview.png",
-          "title": "Concept Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility."
-        },
-        {
-          "image": "/images/Perfectly-Different-app-layout.png",
-          "title": "Concept Application (Visual SiteMap)",
-          "description": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges."
-        },
-        {
-          "image": "/images/Perfectly-Different-app-pages.png",
-          "title": "Concept Application",
-          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy."
+          "description": "An evaluation of existing dating apps to identify market gaps and inclusive opportunities.",
+          "challenges": ""
         },
         {
           "image": "/images/PerfectlyDifferent-screens.png",
           "title": "Concept Application",
-          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print."
+          "description": "Initial UI concepts for onboarding and homepage experiences across platforms."
+        },
+        {
+          "image": "/images/Perfectly-Different-app-pages.png",
+          "title": "Concept Application",
+          "description": "Interactive screens highlighting accessible UX and user-friendly dating interactions."
+        },
+        {
+          "image": "/images/Perfectly-Different-app-preview.png",
+          "title": "Concept Application",
+          "description": "Additional layouts showcasing how inclusivity is embedded in every design detail."
+        },
+        {
+          "image": "/images/Perfectly-Different-app-layout.png",
+          "title": "Concept Application (Visual SiteMap)",
+          "description": "A top-down view of the app’s architecture to visualize user flow and functionality."
         }
       ]
     }
