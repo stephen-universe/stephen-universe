@@ -282,7 +282,8 @@
         {
           "title": "Brand Application",
           "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/CCS-website.png"
+          "image": "/images/CCS-website.png",
+          "link": "https://cnsldnsolutions.com"
         }
       ]
     },

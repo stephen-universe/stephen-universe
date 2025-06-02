@@ -224,6 +224,25 @@ export default function ProjectDetails({ projectData }) {
                   {section.description}
                 </p>
 
+                {/* Render link if it exists */}
+                {section.link && (
+                  <p style={{ marginTop: "0.5rem" }}>
+                    <a
+                      data-label="clicked project link for CCS"
+                      href={section.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        color: "#e84834",
+                        textDecoration: "underline",
+                        fontSize: "0.8rem",
+                      }}
+                    >
+                      Visit Site
+                    </a>
+                  </p>
+                )}
+
                 {/* Goals/Challenges/Solutions - only for first slide */}
                 {isFirstSlide &&
                   (section.goals ||
@@ -384,7 +403,6 @@ export default function ProjectDetails({ projectData }) {
                 </>
               ) : null}
 
-              {/* Rest of your code remains the same */}
               {/* Instruction Overlay */}
               {i === 0 && showInstruction && (
                 <div
@@ -403,11 +421,11 @@ export default function ProjectDetails({ projectData }) {
                 >
                   Click arrows or scroll horizontally →
                   <style>{`
-            @keyframes fadeIn {
-              0% { opacity: 0; }
-              100% { opacity: 1; }
-            }
-          `}</style>
+                    @keyframes fadeIn {
+                      0% { opacity: 0; }
+                      100% { opacity: 1; }
+                    }
+                  `}</style>
                 </div>
               )}
             </section>
@@ -431,17 +449,11 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const projectData = projectDetails.projects?.[params.slug] || null;
-
-  if (!projectData) {
-    return {
-      notFound: true, // Returns 404 if project doesn't exist
-    };
-  }
+  const projectData = projectDetails.projects[params.slug] || null;
 
   return {
     props: {
-      projectData, // Pass data directly as prop
+      projectData,
     },
   };
 }

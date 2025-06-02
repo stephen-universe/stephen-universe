@@ -814,6 +814,16 @@ var config_default = defineConfig({
                         ui: {
                           component: "textarea"
                         }
+                      },
+                      {
+                        type: "string",
+                        name: "link",
+                        label: "Link"
+                      },
+                      {
+                        type: "string",
+                        name: "video",
+                        label: "Video"
                       }
                     ]
                   }
@@ -907,6 +917,16 @@ var config_default = defineConfig({
                         ui: {
                           component: "textarea"
                         }
+                      },
+                      {
+                        type: "string",
+                        name: "link",
+                        label: "Link"
+                      },
+                      {
+                        type: "string",
+                        name: "video",
+                        label: "Video"
                       }
                     ]
                   }
@@ -1000,6 +1020,11 @@ var config_default = defineConfig({
                         ui: {
                           component: "textarea"
                         }
+                      },
+                      {
+                        type: "string",
+                        name: "link",
+                        label: "Link"
                       },
                       {
                         type: "string",
@@ -1098,6 +1123,16 @@ var config_default = defineConfig({
                         ui: {
                           component: "textarea"
                         }
+                      },
+                      {
+                        type: "string",
+                        name: "link",
+                        label: "Link"
+                      },
+                      {
+                        type: "string",
+                        name: "video",
+                        label: "Video"
                       }
                     ]
                   }
@@ -1191,6 +1226,16 @@ var config_default = defineConfig({
                         ui: {
                           component: "textarea"
                         }
+                      },
+                      {
+                        type: "string",
+                        name: "link",
+                        label: "Link"
+                      },
+                      {
+                        type: "string",
+                        name: "video",
+                        label: "Video"
                       }
                     ]
                   }

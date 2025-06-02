@@ -569,6 +569,8 @@ type ProjectsProjectsAnaroseProject {
   goals: String
   challenges: String
   solutions: String
+  link: String
+  video: String
 }
 
 type ProjectsProjectsAnarose {
@@ -590,6 +592,8 @@ type ProjectsProjectsQueendomfarmsProject {
   goals: String
   challenges: String
   solutions: String
+  link: String
+  video: String
 }
 
 type ProjectsProjectsQueendomfarms {
@@ -611,6 +615,7 @@ type ProjectsProjectsEpicfutureProject {
   goals: String
   challenges: String
   solutions: String
+  link: String
   video: String
 }
 
@@ -633,6 +638,8 @@ type ProjectsProjectsConsolidatedconstructionsolutionsProject {
   goals: String
   challenges: String
   solutions: String
+  link: String
+  video: String
 }
 
 type ProjectsProjectsConsolidatedconstructionsolutions {
@@ -654,6 +661,8 @@ type ProjectsProjectsPerfectlydifferentProject {
   goals: String
   challenges: String
   solutions: String
+  link: String
+  video: String
 }
 
 type ProjectsProjectsPerfectlydifferent {
@@ -714,6 +723,8 @@ input ProjectsProjectsAnaroseProjectFilter {
   goals: StringFilter
   challenges: StringFilter
   solutions: StringFilter
+  link: StringFilter
+  video: StringFilter
 }
 
 input ProjectsProjectsAnaroseFilter {
@@ -735,6 +746,8 @@ input ProjectsProjectsQueendomfarmsProjectFilter {
   goals: StringFilter
   challenges: StringFilter
   solutions: StringFilter
+  link: StringFilter
+  video: StringFilter
 }
 
 input ProjectsProjectsQueendomfarmsFilter {
@@ -756,6 +769,7 @@ input ProjectsProjectsEpicfutureProjectFilter {
   goals: StringFilter
   challenges: StringFilter
   solutions: StringFilter
+  link: StringFilter
   video: StringFilter
 }
 
@@ -778,6 +792,8 @@ input ProjectsProjectsConsolidatedconstructionsolutionsProjectFilter {
   goals: StringFilter
   challenges: StringFilter
   solutions: StringFilter
+  link: StringFilter
+  video: StringFilter
 }
 
 input ProjectsProjectsConsolidatedconstructionsolutionsFilter {
@@ -799,6 +815,8 @@ input ProjectsProjectsPerfectlydifferentProjectFilter {
   goals: StringFilter
   challenges: StringFilter
   solutions: StringFilter
+  link: StringFilter
+  video: StringFilter
 }
 
 input ProjectsProjectsPerfectlydifferentFilter {
@@ -1083,6 +1101,8 @@ input ProjectsProjectsAnaroseProjectMutation {
   goals: String
   challenges: String
   solutions: String
+  link: String
+  video: String
 }
 
 input ProjectsProjectsAnaroseMutation {
@@ -1104,6 +1124,8 @@ input ProjectsProjectsQueendomfarmsProjectMutation {
   goals: String
   challenges: String
   solutions: String
+  link: String
+  video: String
 }
 
 input ProjectsProjectsQueendomfarmsMutation {
@@ -1125,6 +1147,7 @@ input ProjectsProjectsEpicfutureProjectMutation {
   goals: String
   challenges: String
   solutions: String
+  link: String
   video: String
 }
 
@@ -1147,6 +1170,8 @@ input ProjectsProjectsConsolidatedconstructionsolutionsProjectMutation {
   goals: String
   challenges: String
   solutions: String
+  link: String
+  video: String
 }
 
 input ProjectsProjectsConsolidatedconstructionsolutionsMutation {
@@ -1168,6 +1193,8 @@ input ProjectsProjectsPerfectlydifferentProjectMutation {
   goals: String
   challenges: String
   solutions: String
+  link: String
+  video: String
 }
 
 input ProjectsProjectsPerfectlydifferentMutation {
