@@ -39,13 +39,12 @@ class ScrollButton extends React.Component {
   
   render() {
     return (
-      <img 
-        src="/images/scroll-btn.png" 
+      <button 
         style={{backgroundColor: 'transparent', boxShadow: 'none'}} 
         id='scrollTop' 
         className='scrollTopStick'
         onClick={this.scrollToTop}
-        alt="Scroll to top"
+        aria-label="Scroll to top"
       />
     );
   }
