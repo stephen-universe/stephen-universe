@@ -19,12 +19,28 @@
       "text": "Hire Me"
     }
   ],
-  "footerLinks": [
-    {
+  "footerLinks": {
+    "react": {
       "text": "React",
-      "url": "https://react.dev"
+      "url": "https://react.dev",
+      "className": "text-link"
+    },
+    "nextjs":{
+      "text": "Next.js",
+      "url": "https://nextjs.org",
+      "className": "text-link"
+    },
+    "framer":{
+      "text": "Framer Motion",
+      "url": "https://www.framer.com/motion/",
+      "className": "text-link"
+    },
+    "tina":{
+      "text": "TinaCMS",
+      "url": "https://www.tina.io",
+      "className": "text-link"
     }
-  ],
+  },
   "footerText": [
     {
       "text1": "Made with ❤ Using",
