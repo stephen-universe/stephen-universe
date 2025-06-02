@@ -206,20 +206,12 @@ export default function ProjectDetails({ projectData }) {
                 }}
               >
                 <h2
-                  style={{
-                    color: "#e84834",
-                    fontSize: "1.5rem",
-                    marginBottom: "1rem",
-                  }}
+                  className="portfolio-title"
                 >
                   {section.title}
                 </h2>
                 <p
-                  style={{
-                    color: "#040c28",
-                    fontSize: "0.8rem",
-                    lineHeight: "1.5",
-                  }}
+                  className='brief-description'
                 >
                   {section.description}
                 </p>
@@ -248,16 +240,11 @@ export default function ProjectDetails({ projectData }) {
                   (section.goals ||
                     section.challenges ||
                     section.solutions) && (
-                    <div style={{ fontSize: "0.7rem", color: "#7c7c7c" }}>
+                    <div className='brief-text'>
                       {section.goals && (
                         <>
                           <p
-                            style={{
-                              fontSize: "0.75rem",
-                              color: "#040c28",
-                              display: "block",
-                              marginTop: "0.5rem",
-                            }}
+                            className='brief-subtitle'
                           >
                             Goals:
                           </p>
@@ -267,12 +254,7 @@ export default function ProjectDetails({ projectData }) {
                       {section.challenges && (
                         <>
                           <p
-                            style={{
-                              fontSize: "0.75rem",
-                              color: "#040c28",
-                              display: "block",
-                              marginTop: "0.5rem",
-                            }}
+                            className='brief-subtitle'
                           >
                             Challenges:
                           </p>
@@ -281,13 +263,8 @@ export default function ProjectDetails({ projectData }) {
                       )}
                       {section.solutions && (
                         <>
-                          <p
-                            style={{
-                              fontSize: "0.75rem",
-                              color: "#040c28",
-                              display: "block",
-                              marginTop: "0.5rem",
-                            }}
+                         <p
+                            className='brief-subtitle'
                           >
                             Solutions:
                           </p>
