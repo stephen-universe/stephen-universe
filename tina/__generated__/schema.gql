@@ -233,9 +233,31 @@ type NavigationNavigationLinks {
   text: String
 }
 
-type NavigationFooterLinks {
+type NavigationFooterLinksReact {
   text: String
   url: String
+}
+
+type NavigationFooterLinksNextjs {
+  text: String
+  url: String
+}
+
+type NavigationFooterLinksFramer {
+  text: String
+  url: String
+}
+
+type NavigationFooterLinksTina {
+  text: String
+  url: String
+}
+
+type NavigationFooterLinks {
+  react: NavigationFooterLinksReact
+  nextjs: NavigationFooterLinksNextjs
+  framer: NavigationFooterLinksFramer
+  tina: NavigationFooterLinksTina
 }
 
 type NavigationFooterText {
@@ -245,7 +267,7 @@ type NavigationFooterText {
 
 type Navigation implements Node & Document {
   navigationLinks: [NavigationNavigationLinks]
-  footerLinks: [NavigationFooterLinks]
+  footerLinks: NavigationFooterLinks
   footerText: [NavigationFooterText]
   id: ID!
   _sys: SystemInfo!
@@ -263,9 +285,31 @@ input NavigationNavigationLinksFilter {
   text: StringFilter
 }
 
-input NavigationFooterLinksFilter {
+input NavigationFooterLinksReactFilter {
   text: StringFilter
   url: StringFilter
+}
+
+input NavigationFooterLinksNextjsFilter {
+  text: StringFilter
+  url: StringFilter
+}
+
+input NavigationFooterLinksFramerFilter {
+  text: StringFilter
+  url: StringFilter
+}
+
+input NavigationFooterLinksTinaFilter {
+  text: StringFilter
+  url: StringFilter
+}
+
+input NavigationFooterLinksFilter {
+  react: NavigationFooterLinksReactFilter
+  nextjs: NavigationFooterLinksNextjsFilter
+  framer: NavigationFooterLinksFramerFilter
+  tina: NavigationFooterLinksTinaFilter
 }
 
 input NavigationFooterTextFilter {
@@ -359,7 +403,10 @@ type HomeProjectSection {
 }
 
 type HomeQuoteLines {
-  line: String
+  line1: String
+  line2: String
+  line3: String
+  line4: String
 }
 
 type HomeQuoteAttribution {
@@ -372,13 +419,53 @@ type HomeQuote {
   attribution: HomeQuoteAttribution
 }
 
+type HomeTimedQuoteQuotePartsPart1 {
+  text1: String
+  delay1: Float
+}
+
+type HomeTimedQuoteQuotePartsPart2 {
+  text2: String
+  delay2: Float
+}
+
+type HomeTimedQuoteQuotePartsPart3 {
+  text3: String
+  delay3: Float
+}
+
+type HomeTimedQuoteQuotePartsPart4 {
+  text4: String
+  delay4: Float
+}
+
+type HomeTimedQuoteQuotePartsPart5 {
+  text5: String
+  delay5: Float
+}
+
+type HomeTimedQuoteQuotePartsPart6 {
+  text6: String
+  delay6: Float
+}
+
+type HomeTimedQuoteQuotePartsPart7 {
+  text7: String
+  delay7: Float
+}
+
 type HomeTimedQuoteQuoteParts {
-  text: String
-  delay: Float
+  part1: HomeTimedQuoteQuotePartsPart1
+  part2: HomeTimedQuoteQuotePartsPart2
+  part3: HomeTimedQuoteQuotePartsPart3
+  part4: HomeTimedQuoteQuotePartsPart4
+  part5: HomeTimedQuoteQuotePartsPart5
+  part6: HomeTimedQuoteQuotePartsPart6
+  part7: HomeTimedQuoteQuotePartsPart7
 }
 
 type HomeTimedQuote {
-  quoteParts: [HomeTimedQuoteQuoteParts]
+  quoteParts: HomeTimedQuoteQuoteParts
 }
 
 type HomeContact {
@@ -471,7 +558,10 @@ input HomeProjectSectionFilter {
 }
 
 input HomeQuoteLinesFilter {
-  line: StringFilter
+  line1: StringFilter
+  line2: StringFilter
+  line3: StringFilter
+  line4: StringFilter
 }
 
 input HomeQuoteAttributionFilter {
@@ -494,9 +584,49 @@ input NumberFilter {
   in: [Float]
 }
 
+input HomeTimedQuoteQuotePartsPart1Filter {
+  text1: StringFilter
+  delay1: NumberFilter
+}
+
+input HomeTimedQuoteQuotePartsPart2Filter {
+  text2: StringFilter
+  delay2: NumberFilter
+}
+
+input HomeTimedQuoteQuotePartsPart3Filter {
+  text3: StringFilter
+  delay3: NumberFilter
+}
+
+input HomeTimedQuoteQuotePartsPart4Filter {
+  text4: StringFilter
+  delay4: NumberFilter
+}
+
+input HomeTimedQuoteQuotePartsPart5Filter {
+  text5: StringFilter
+  delay5: NumberFilter
+}
+
+input HomeTimedQuoteQuotePartsPart6Filter {
+  text6: StringFilter
+  delay6: NumberFilter
+}
+
+input HomeTimedQuoteQuotePartsPart7Filter {
+  text7: StringFilter
+  delay7: NumberFilter
+}
+
 input HomeTimedQuoteQuotePartsFilter {
-  text: StringFilter
-  delay: NumberFilter
+  part1: HomeTimedQuoteQuotePartsPart1Filter
+  part2: HomeTimedQuoteQuotePartsPart2Filter
+  part3: HomeTimedQuoteQuotePartsPart3Filter
+  part4: HomeTimedQuoteQuotePartsPart4Filter
+  part5: HomeTimedQuoteQuotePartsPart5Filter
+  part6: HomeTimedQuoteQuotePartsPart6Filter
+  part7: HomeTimedQuoteQuotePartsPart7Filter
 }
 
 input HomeTimedQuoteFilter {
@@ -939,9 +1069,31 @@ input NavigationNavigationLinksMutation {
   text: String
 }
 
-input NavigationFooterLinksMutation {
+input NavigationFooterLinksReactMutation {
   text: String
   url: String
+}
+
+input NavigationFooterLinksNextjsMutation {
+  text: String
+  url: String
+}
+
+input NavigationFooterLinksFramerMutation {
+  text: String
+  url: String
+}
+
+input NavigationFooterLinksTinaMutation {
+  text: String
+  url: String
+}
+
+input NavigationFooterLinksMutation {
+  react: NavigationFooterLinksReactMutation
+  nextjs: NavigationFooterLinksNextjsMutation
+  framer: NavigationFooterLinksFramerMutation
+  tina: NavigationFooterLinksTinaMutation
 }
 
 input NavigationFooterTextMutation {
@@ -951,7 +1103,7 @@ input NavigationFooterTextMutation {
 
 input NavigationMutation {
   navigationLinks: [NavigationNavigationLinksMutation]
-  footerLinks: [NavigationFooterLinksMutation]
+  footerLinks: NavigationFooterLinksMutation
   footerText: [NavigationFooterTextMutation]
 }
 
@@ -1024,7 +1176,10 @@ input HomeProjectSectionMutation {
 }
 
 input HomeQuoteLinesMutation {
-  line: String
+  line1: String
+  line2: String
+  line3: String
+  line4: String
 }
 
 input HomeQuoteAttributionMutation {
@@ -1037,13 +1192,53 @@ input HomeQuoteMutation {
   attribution: HomeQuoteAttributionMutation
 }
 
+input HomeTimedQuoteQuotePartsPart1Mutation {
+  text1: String
+  delay1: Float
+}
+
+input HomeTimedQuoteQuotePartsPart2Mutation {
+  text2: String
+  delay2: Float
+}
+
+input HomeTimedQuoteQuotePartsPart3Mutation {
+  text3: String
+  delay3: Float
+}
+
+input HomeTimedQuoteQuotePartsPart4Mutation {
+  text4: String
+  delay4: Float
+}
+
+input HomeTimedQuoteQuotePartsPart5Mutation {
+  text5: String
+  delay5: Float
+}
+
+input HomeTimedQuoteQuotePartsPart6Mutation {
+  text6: String
+  delay6: Float
+}
+
+input HomeTimedQuoteQuotePartsPart7Mutation {
+  text7: String
+  delay7: Float
+}
+
 input HomeTimedQuoteQuotePartsMutation {
-  text: String
-  delay: Float
+  part1: HomeTimedQuoteQuotePartsPart1Mutation
+  part2: HomeTimedQuoteQuotePartsPart2Mutation
+  part3: HomeTimedQuoteQuotePartsPart3Mutation
+  part4: HomeTimedQuoteQuotePartsPart4Mutation
+  part5: HomeTimedQuoteQuotePartsPart5Mutation
+  part6: HomeTimedQuoteQuotePartsPart6Mutation
+  part7: HomeTimedQuoteQuotePartsPart7Mutation
 }
 
 input HomeTimedQuoteMutation {
-  quoteParts: [HomeTimedQuoteQuotePartsMutation]
+  quoteParts: HomeTimedQuoteQuotePartsMutation
 }
 
 input HomeContactMutation {

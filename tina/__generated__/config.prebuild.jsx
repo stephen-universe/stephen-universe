@@ -229,17 +229,42 @@ var config_default = defineConfig({
             type: "object",
             name: "footerLinks",
             label: "Footer Links",
-            list: true,
             fields: [
               {
-                type: "string",
-                name: "text",
-                label: "Link Text"
+                type: "object",
+                name: "react",
+                label: "React Link",
+                fields: [
+                  { type: "string", name: "text", label: "Text" },
+                  { type: "string", name: "url", label: "URL" }
+                ]
               },
               {
-                type: "string",
-                name: "url",
-                label: "Link URL"
+                type: "object",
+                name: "nextjs",
+                label: "Next.js Link",
+                fields: [
+                  { type: "string", name: "text", label: "Text" },
+                  { type: "string", name: "url", label: "URL" }
+                ]
+              },
+              {
+                type: "object",
+                name: "framer",
+                label: "Framer Motion Link",
+                fields: [
+                  { type: "string", name: "text", label: "Text" },
+                  { type: "string", name: "url", label: "URL" }
+                ]
+              },
+              {
+                type: "object",
+                name: "tina",
+                label: "TinaCMS Link",
+                fields: [
+                  { type: "string", name: "text", label: "Text" },
+                  { type: "string", name: "url", label: "URL" }
+                ]
               }
             ]
           },
@@ -252,12 +277,14 @@ var config_default = defineConfig({
               {
                 type: "string",
                 name: "text1",
-                label: "Text Part 1"
+                label: "First Line",
+                ui: { component: "textarea" }
               },
               {
                 type: "string",
                 name: "text2",
-                label: "Text Part 2"
+                label: "Second Line",
+                ui: { component: "textarea" }
               }
             ]
           }
@@ -551,11 +578,27 @@ var config_default = defineConfig({
                 fields: [
                   {
                     type: "string",
-                    name: "line",
-                    label: "Line",
-                    ui: {
-                      component: "textarea"
-                    }
+                    name: "line1",
+                    label: "Line 1",
+                    ui: { component: "textarea" }
+                  },
+                  {
+                    type: "string",
+                    name: "line2",
+                    label: "Line 2",
+                    ui: { component: "textarea" }
+                  },
+                  {
+                    type: "string",
+                    name: "line3",
+                    label: "Line 3",
+                    ui: { component: "textarea" }
+                  },
+                  {
+                    type: "string",
+                    name: "line4",
+                    label: "Line 4",
+                    ui: { component: "textarea" }
                   }
                 ]
               },
@@ -587,17 +630,69 @@ var config_default = defineConfig({
                 type: "object",
                 name: "quoteParts",
                 label: "Quote Parts",
-                list: true,
                 fields: [
                   {
-                    type: "string",
-                    name: "text",
-                    label: "Text"
+                    type: "object",
+                    name: "part1",
+                    label: "Part 1",
+                    fields: [
+                      { type: "string", name: "text1", label: "Text" },
+                      { type: "number", name: "delay1", label: "Delay (ms)" }
+                    ]
                   },
                   {
-                    type: "number",
-                    name: "delay",
-                    label: "Delay (ms)"
+                    type: "object",
+                    name: "part2",
+                    label: "Part 2",
+                    fields: [
+                      { type: "string", name: "text2", label: "Text" },
+                      { type: "number", name: "delay2", label: "Delay (ms)" }
+                    ]
+                  },
+                  {
+                    type: "object",
+                    name: "part3",
+                    label: "Part 3",
+                    fields: [
+                      { type: "string", name: "text3", label: "Text" },
+                      { type: "number", name: "delay3", label: "Delay (ms)" }
+                    ]
+                  },
+                  {
+                    type: "object",
+                    name: "part4",
+                    label: "Part 4",
+                    fields: [
+                      { type: "string", name: "text4", label: "Text" },
+                      { type: "number", name: "delay4", label: "Delay (ms)" }
+                    ]
+                  },
+                  {
+                    type: "object",
+                    name: "part5",
+                    label: "Part 5",
+                    fields: [
+                      { type: "string", name: "text5", label: "Text" },
+                      { type: "number", name: "delay5", label: "Delay (ms)" }
+                    ]
+                  },
+                  {
+                    type: "object",
+                    name: "part6",
+                    label: "Part 6",
+                    fields: [
+                      { type: "string", name: "text6", label: "Text" },
+                      { type: "number", name: "delay6", label: "Delay (ms)" }
+                    ]
+                  },
+                  {
+                    type: "object",
+                    name: "part7",
+                    label: "Part 7",
+                    fields: [
+                      { type: "string", name: "text7", label: "Text" },
+                      { type: "number", name: "delay7", label: "Delay (ms)" }
+                    ]
                   }
                 ]
               }

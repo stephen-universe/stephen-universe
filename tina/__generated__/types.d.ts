@@ -369,10 +369,36 @@ export type NavigationNavigationLinks = {
   text?: Maybe<Scalars['String']['output']>;
 };
 
-export type NavigationFooterLinks = {
-  __typename?: 'NavigationFooterLinks';
+export type NavigationFooterLinksReact = {
+  __typename?: 'NavigationFooterLinksReact';
   text?: Maybe<Scalars['String']['output']>;
   url?: Maybe<Scalars['String']['output']>;
+};
+
+export type NavigationFooterLinksNextjs = {
+  __typename?: 'NavigationFooterLinksNextjs';
+  text?: Maybe<Scalars['String']['output']>;
+  url?: Maybe<Scalars['String']['output']>;
+};
+
+export type NavigationFooterLinksFramer = {
+  __typename?: 'NavigationFooterLinksFramer';
+  text?: Maybe<Scalars['String']['output']>;
+  url?: Maybe<Scalars['String']['output']>;
+};
+
+export type NavigationFooterLinksTina = {
+  __typename?: 'NavigationFooterLinksTina';
+  text?: Maybe<Scalars['String']['output']>;
+  url?: Maybe<Scalars['String']['output']>;
+};
+
+export type NavigationFooterLinks = {
+  __typename?: 'NavigationFooterLinks';
+  react?: Maybe<NavigationFooterLinksReact>;
+  nextjs?: Maybe<NavigationFooterLinksNextjs>;
+  framer?: Maybe<NavigationFooterLinksFramer>;
+  tina?: Maybe<NavigationFooterLinksTina>;
 };
 
 export type NavigationFooterText = {
@@ -384,7 +410,7 @@ export type NavigationFooterText = {
 export type Navigation = Node & Document & {
   __typename?: 'Navigation';
   navigationLinks?: Maybe<Array<Maybe<NavigationNavigationLinks>>>;
-  footerLinks?: Maybe<Array<Maybe<NavigationFooterLinks>>>;
+  footerLinks?: Maybe<NavigationFooterLinks>;
   footerText?: Maybe<Array<Maybe<NavigationFooterText>>>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
@@ -402,9 +428,31 @@ export type NavigationNavigationLinksFilter = {
   text?: InputMaybe<StringFilter>;
 };
 
-export type NavigationFooterLinksFilter = {
+export type NavigationFooterLinksReactFilter = {
   text?: InputMaybe<StringFilter>;
   url?: InputMaybe<StringFilter>;
+};
+
+export type NavigationFooterLinksNextjsFilter = {
+  text?: InputMaybe<StringFilter>;
+  url?: InputMaybe<StringFilter>;
+};
+
+export type NavigationFooterLinksFramerFilter = {
+  text?: InputMaybe<StringFilter>;
+  url?: InputMaybe<StringFilter>;
+};
+
+export type NavigationFooterLinksTinaFilter = {
+  text?: InputMaybe<StringFilter>;
+  url?: InputMaybe<StringFilter>;
+};
+
+export type NavigationFooterLinksFilter = {
+  react?: InputMaybe<NavigationFooterLinksReactFilter>;
+  nextjs?: InputMaybe<NavigationFooterLinksNextjsFilter>;
+  framer?: InputMaybe<NavigationFooterLinksFramerFilter>;
+  tina?: InputMaybe<NavigationFooterLinksTinaFilter>;
 };
 
 export type NavigationFooterTextFilter = {
@@ -511,7 +559,10 @@ export type HomeProjectSection = {
 
 export type HomeQuoteLines = {
   __typename?: 'HomeQuoteLines';
-  line?: Maybe<Scalars['String']['output']>;
+  line1?: Maybe<Scalars['String']['output']>;
+  line2?: Maybe<Scalars['String']['output']>;
+  line3?: Maybe<Scalars['String']['output']>;
+  line4?: Maybe<Scalars['String']['output']>;
 };
 
 export type HomeQuoteAttribution = {
@@ -526,15 +577,62 @@ export type HomeQuote = {
   attribution?: Maybe<HomeQuoteAttribution>;
 };
 
+export type HomeTimedQuoteQuotePartsPart1 = {
+  __typename?: 'HomeTimedQuoteQuotePartsPart1';
+  text1?: Maybe<Scalars['String']['output']>;
+  delay1?: Maybe<Scalars['Float']['output']>;
+};
+
+export type HomeTimedQuoteQuotePartsPart2 = {
+  __typename?: 'HomeTimedQuoteQuotePartsPart2';
+  text2?: Maybe<Scalars['String']['output']>;
+  delay2?: Maybe<Scalars['Float']['output']>;
+};
+
+export type HomeTimedQuoteQuotePartsPart3 = {
+  __typename?: 'HomeTimedQuoteQuotePartsPart3';
+  text3?: Maybe<Scalars['String']['output']>;
+  delay3?: Maybe<Scalars['Float']['output']>;
+};
+
+export type HomeTimedQuoteQuotePartsPart4 = {
+  __typename?: 'HomeTimedQuoteQuotePartsPart4';
+  text4?: Maybe<Scalars['String']['output']>;
+  delay4?: Maybe<Scalars['Float']['output']>;
+};
+
+export type HomeTimedQuoteQuotePartsPart5 = {
+  __typename?: 'HomeTimedQuoteQuotePartsPart5';
+  text5?: Maybe<Scalars['String']['output']>;
+  delay5?: Maybe<Scalars['Float']['output']>;
+};
+
+export type HomeTimedQuoteQuotePartsPart6 = {
+  __typename?: 'HomeTimedQuoteQuotePartsPart6';
+  text6?: Maybe<Scalars['String']['output']>;
+  delay6?: Maybe<Scalars['Float']['output']>;
+};
+
+export type HomeTimedQuoteQuotePartsPart7 = {
+  __typename?: 'HomeTimedQuoteQuotePartsPart7';
+  text7?: Maybe<Scalars['String']['output']>;
+  delay7?: Maybe<Scalars['Float']['output']>;
+};
+
 export type HomeTimedQuoteQuoteParts = {
   __typename?: 'HomeTimedQuoteQuoteParts';
-  text?: Maybe<Scalars['String']['output']>;
-  delay?: Maybe<Scalars['Float']['output']>;
+  part1?: Maybe<HomeTimedQuoteQuotePartsPart1>;
+  part2?: Maybe<HomeTimedQuoteQuotePartsPart2>;
+  part3?: Maybe<HomeTimedQuoteQuotePartsPart3>;
+  part4?: Maybe<HomeTimedQuoteQuotePartsPart4>;
+  part5?: Maybe<HomeTimedQuoteQuotePartsPart5>;
+  part6?: Maybe<HomeTimedQuoteQuotePartsPart6>;
+  part7?: Maybe<HomeTimedQuoteQuotePartsPart7>;
 };
 
 export type HomeTimedQuote = {
   __typename?: 'HomeTimedQuote';
-  quoteParts?: Maybe<Array<Maybe<HomeTimedQuoteQuoteParts>>>;
+  quoteParts?: Maybe<HomeTimedQuoteQuoteParts>;
 };
 
 export type HomeContact = {
@@ -629,7 +727,10 @@ export type HomeProjectSectionFilter = {
 };
 
 export type HomeQuoteLinesFilter = {
-  line?: InputMaybe<StringFilter>;
+  line1?: InputMaybe<StringFilter>;
+  line2?: InputMaybe<StringFilter>;
+  line3?: InputMaybe<StringFilter>;
+  line4?: InputMaybe<StringFilter>;
 };
 
 export type HomeQuoteAttributionFilter = {
@@ -652,9 +753,49 @@ export type NumberFilter = {
   in?: InputMaybe<Array<InputMaybe<Scalars['Float']['input']>>>;
 };
 
+export type HomeTimedQuoteQuotePartsPart1Filter = {
+  text1?: InputMaybe<StringFilter>;
+  delay1?: InputMaybe<NumberFilter>;
+};
+
+export type HomeTimedQuoteQuotePartsPart2Filter = {
+  text2?: InputMaybe<StringFilter>;
+  delay2?: InputMaybe<NumberFilter>;
+};
+
+export type HomeTimedQuoteQuotePartsPart3Filter = {
+  text3?: InputMaybe<StringFilter>;
+  delay3?: InputMaybe<NumberFilter>;
+};
+
+export type HomeTimedQuoteQuotePartsPart4Filter = {
+  text4?: InputMaybe<StringFilter>;
+  delay4?: InputMaybe<NumberFilter>;
+};
+
+export type HomeTimedQuoteQuotePartsPart5Filter = {
+  text5?: InputMaybe<StringFilter>;
+  delay5?: InputMaybe<NumberFilter>;
+};
+
+export type HomeTimedQuoteQuotePartsPart6Filter = {
+  text6?: InputMaybe<StringFilter>;
+  delay6?: InputMaybe<NumberFilter>;
+};
+
+export type HomeTimedQuoteQuotePartsPart7Filter = {
+  text7?: InputMaybe<StringFilter>;
+  delay7?: InputMaybe<NumberFilter>;
+};
+
 export type HomeTimedQuoteQuotePartsFilter = {
-  text?: InputMaybe<StringFilter>;
-  delay?: InputMaybe<NumberFilter>;
+  part1?: InputMaybe<HomeTimedQuoteQuotePartsPart1Filter>;
+  part2?: InputMaybe<HomeTimedQuoteQuotePartsPart2Filter>;
+  part3?: InputMaybe<HomeTimedQuoteQuotePartsPart3Filter>;
+  part4?: InputMaybe<HomeTimedQuoteQuotePartsPart4Filter>;
+  part5?: InputMaybe<HomeTimedQuoteQuotePartsPart5Filter>;
+  part6?: InputMaybe<HomeTimedQuoteQuotePartsPart6Filter>;
+  part7?: InputMaybe<HomeTimedQuoteQuotePartsPart7Filter>;
 };
 
 export type HomeTimedQuoteFilter = {
@@ -1204,9 +1345,31 @@ export type NavigationNavigationLinksMutation = {
   text?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type NavigationFooterLinksMutation = {
+export type NavigationFooterLinksReactMutation = {
   text?: InputMaybe<Scalars['String']['input']>;
   url?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type NavigationFooterLinksNextjsMutation = {
+  text?: InputMaybe<Scalars['String']['input']>;
+  url?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type NavigationFooterLinksFramerMutation = {
+  text?: InputMaybe<Scalars['String']['input']>;
+  url?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type NavigationFooterLinksTinaMutation = {
+  text?: InputMaybe<Scalars['String']['input']>;
+  url?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type NavigationFooterLinksMutation = {
+  react?: InputMaybe<NavigationFooterLinksReactMutation>;
+  nextjs?: InputMaybe<NavigationFooterLinksNextjsMutation>;
+  framer?: InputMaybe<NavigationFooterLinksFramerMutation>;
+  tina?: InputMaybe<NavigationFooterLinksTinaMutation>;
 };
 
 export type NavigationFooterTextMutation = {
@@ -1216,7 +1379,7 @@ export type NavigationFooterTextMutation = {
 
 export type NavigationMutation = {
   navigationLinks?: InputMaybe<Array<InputMaybe<NavigationNavigationLinksMutation>>>;
-  footerLinks?: InputMaybe<Array<InputMaybe<NavigationFooterLinksMutation>>>;
+  footerLinks?: InputMaybe<NavigationFooterLinksMutation>;
   footerText?: InputMaybe<Array<InputMaybe<NavigationFooterTextMutation>>>;
 };
 
@@ -1289,7 +1452,10 @@ export type HomeProjectSectionMutation = {
 };
 
 export type HomeQuoteLinesMutation = {
-  line?: InputMaybe<Scalars['String']['input']>;
+  line1?: InputMaybe<Scalars['String']['input']>;
+  line2?: InputMaybe<Scalars['String']['input']>;
+  line3?: InputMaybe<Scalars['String']['input']>;
+  line4?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type HomeQuoteAttributionMutation = {
@@ -1302,13 +1468,53 @@ export type HomeQuoteMutation = {
   attribution?: InputMaybe<HomeQuoteAttributionMutation>;
 };
 
+export type HomeTimedQuoteQuotePartsPart1Mutation = {
+  text1?: InputMaybe<Scalars['String']['input']>;
+  delay1?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type HomeTimedQuoteQuotePartsPart2Mutation = {
+  text2?: InputMaybe<Scalars['String']['input']>;
+  delay2?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type HomeTimedQuoteQuotePartsPart3Mutation = {
+  text3?: InputMaybe<Scalars['String']['input']>;
+  delay3?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type HomeTimedQuoteQuotePartsPart4Mutation = {
+  text4?: InputMaybe<Scalars['String']['input']>;
+  delay4?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type HomeTimedQuoteQuotePartsPart5Mutation = {
+  text5?: InputMaybe<Scalars['String']['input']>;
+  delay5?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type HomeTimedQuoteQuotePartsPart6Mutation = {
+  text6?: InputMaybe<Scalars['String']['input']>;
+  delay6?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type HomeTimedQuoteQuotePartsPart7Mutation = {
+  text7?: InputMaybe<Scalars['String']['input']>;
+  delay7?: InputMaybe<Scalars['Float']['input']>;
+};
+
 export type HomeTimedQuoteQuotePartsMutation = {
-  text?: InputMaybe<Scalars['String']['input']>;
-  delay?: InputMaybe<Scalars['Float']['input']>;
+  part1?: InputMaybe<HomeTimedQuoteQuotePartsPart1Mutation>;
+  part2?: InputMaybe<HomeTimedQuoteQuotePartsPart2Mutation>;
+  part3?: InputMaybe<HomeTimedQuoteQuotePartsPart3Mutation>;
+  part4?: InputMaybe<HomeTimedQuoteQuotePartsPart4Mutation>;
+  part5?: InputMaybe<HomeTimedQuoteQuotePartsPart5Mutation>;
+  part6?: InputMaybe<HomeTimedQuoteQuotePartsPart6Mutation>;
+  part7?: InputMaybe<HomeTimedQuoteQuotePartsPart7Mutation>;
 };
 
 export type HomeTimedQuoteMutation = {
-  quoteParts?: InputMaybe<Array<InputMaybe<HomeTimedQuoteQuotePartsMutation>>>;
+  quoteParts?: InputMaybe<HomeTimedQuoteQuotePartsMutation>;
 };
 
 export type HomeContactMutation = {
@@ -1482,9 +1688,9 @@ export type ProjectsMutation = {
 
 export type SettingPartsFragment = { __typename: 'Setting', siteSettings?: { __typename: 'SettingSiteSettings', siteName?: string | null, siteOwner?: string | null } | null, preloader?: { __typename: 'SettingPreloader', image?: string | null, alt?: string | null } | null, companyLogo?: { __typename: 'SettingCompanyLogo', image?: string | null, alt?: string | null } | null, social?: { __typename: 'SettingSocial', fb?: { __typename: 'SettingSocialFb', title?: string | null, link?: string | null } | null, ig?: { __typename: 'SettingSocialIg', title?: string | null, link?: string | null } | null, github?: { __typename: 'SettingSocialGithub', title?: string | null, link?: string | null } | null, linkedin?: { __typename: 'SettingSocialLinkedin', title?: string | null, link?: string | null } | null } | null };
 
-export type NavigationPartsFragment = { __typename: 'Navigation', navigationLinks?: Array<{ __typename: 'NavigationNavigationLinks', link?: string | null, text?: string | null, heading?: { __typename: 'NavigationNavigationLinksHeading', mainText?: string | null, subText?: string | null } | null } | null> | null, footerLinks?: Array<{ __typename: 'NavigationFooterLinks', text?: string | null, url?: string | null } | null> | null, footerText?: Array<{ __typename: 'NavigationFooterText', text1?: string | null, text2?: string | null } | null> | null };
+export type NavigationPartsFragment = { __typename: 'Navigation', navigationLinks?: Array<{ __typename: 'NavigationNavigationLinks', link?: string | null, text?: string | null, heading?: { __typename: 'NavigationNavigationLinksHeading', mainText?: string | null, subText?: string | null } | null } | null> | null, footerLinks?: { __typename: 'NavigationFooterLinks', react?: { __typename: 'NavigationFooterLinksReact', text?: string | null, url?: string | null } | null, nextjs?: { __typename: 'NavigationFooterLinksNextjs', text?: string | null, url?: string | null } | null, framer?: { __typename: 'NavigationFooterLinksFramer', text?: string | null, url?: string | null } | null, tina?: { __typename: 'NavigationFooterLinksTina', text?: string | null, url?: string | null } | null } | null, footerText?: Array<{ __typename: 'NavigationFooterText', text1?: string | null, text2?: string | null } | null> | null };
 
-export type HomePartsFragment = { __typename: 'Home', rotatingWords?: Array<string | null> | null, introLines?: { __typename: 'HomeIntroLines', line1?: string | null, line2?: string | null, line3?: string | null, line4?: string | null } | null, doorMessages?: { __typename: 'HomeDoorMessages', message1?: string | null, message2?: string | null, message3?: string | null } | null, coreSystems?: { __typename: 'HomeCoreSystems', title?: string | null, desc?: string | null, skills?: { __typename: 'HomeCoreSystemsSkills', skill1?: string | null, skill2?: string | null, skill3?: string | null, skill4?: string | null, skill5?: string | null } | null } | null, fieldSystems?: { __typename: 'HomeFieldSystems', title?: string | null, desc?: string | null, skills?: { __typename: 'HomeFieldSystemsSkills', skill1?: string | null, skill2?: string | null, skill3?: string | null, skill4?: string | null, skill5?: string | null } | null } | null, combinedStatement?: { __typename: 'HomeCombinedStatement', statement1?: string | null, statement2?: string | null } | null, projectSection?: { __typename: 'HomeProjectSection', title?: string | null, projects?: Array<{ __typename: 'HomeProjectSectionProjects', image1?: string | null, url1?: string | null, image2?: string | null, url2?: string | null, image3?: string | null, url3?: string | null, image4?: string | null, url4?: string | null } | null> | null, viewAllLink?: { __typename: 'HomeProjectSectionViewAllLink', text?: string | null, url?: string | null } | null } | null, quote?: { __typename: 'HomeQuote', lines?: { __typename: 'HomeQuoteLines', line?: string | null } | null, attribution?: { __typename: 'HomeQuoteAttribution', signature?: string | null, source?: string | null } | null } | null, timedQuote?: { __typename: 'HomeTimedQuote', quoteParts?: Array<{ __typename: 'HomeTimedQuoteQuoteParts', text?: string | null, delay?: number | null } | null> | null } | null, contact?: { __typename: 'HomeContact', link?: string | null, buttonText?: string | null } | null };
+export type HomePartsFragment = { __typename: 'Home', rotatingWords?: Array<string | null> | null, introLines?: { __typename: 'HomeIntroLines', line1?: string | null, line2?: string | null, line3?: string | null, line4?: string | null } | null, doorMessages?: { __typename: 'HomeDoorMessages', message1?: string | null, message2?: string | null, message3?: string | null } | null, coreSystems?: { __typename: 'HomeCoreSystems', title?: string | null, desc?: string | null, skills?: { __typename: 'HomeCoreSystemsSkills', skill1?: string | null, skill2?: string | null, skill3?: string | null, skill4?: string | null, skill5?: string | null } | null } | null, fieldSystems?: { __typename: 'HomeFieldSystems', title?: string | null, desc?: string | null, skills?: { __typename: 'HomeFieldSystemsSkills', skill1?: string | null, skill2?: string | null, skill3?: string | null, skill4?: string | null, skill5?: string | null } | null } | null, combinedStatement?: { __typename: 'HomeCombinedStatement', statement1?: string | null, statement2?: string | null } | null, projectSection?: { __typename: 'HomeProjectSection', title?: string | null, projects?: Array<{ __typename: 'HomeProjectSectionProjects', image1?: string | null, url1?: string | null, image2?: string | null, url2?: string | null, image3?: string | null, url3?: string | null, image4?: string | null, url4?: string | null } | null> | null, viewAllLink?: { __typename: 'HomeProjectSectionViewAllLink', text?: string | null, url?: string | null } | null } | null, quote?: { __typename: 'HomeQuote', lines?: { __typename: 'HomeQuoteLines', line1?: string | null, line2?: string | null, line3?: string | null, line4?: string | null } | null, attribution?: { __typename: 'HomeQuoteAttribution', signature?: string | null, source?: string | null } | null } | null, timedQuote?: { __typename: 'HomeTimedQuote', quoteParts?: { __typename: 'HomeTimedQuoteQuoteParts', part1?: { __typename: 'HomeTimedQuoteQuotePartsPart1', text1?: string | null, delay1?: number | null } | null, part2?: { __typename: 'HomeTimedQuoteQuotePartsPart2', text2?: string | null, delay2?: number | null } | null, part3?: { __typename: 'HomeTimedQuoteQuotePartsPart3', text3?: string | null, delay3?: number | null } | null, part4?: { __typename: 'HomeTimedQuoteQuotePartsPart4', text4?: string | null, delay4?: number | null } | null, part5?: { __typename: 'HomeTimedQuoteQuotePartsPart5', text5?: string | null, delay5?: number | null } | null, part6?: { __typename: 'HomeTimedQuoteQuotePartsPart6', text6?: string | null, delay6?: number | null } | null, part7?: { __typename: 'HomeTimedQuoteQuotePartsPart7', text7?: string | null, delay7?: number | null } | null } | null } | null, contact?: { __typename: 'HomeContact', link?: string | null, buttonText?: string | null } | null };
 
 export type ProjectsPartsFragment = { __typename: 'Projects', projects?: { __typename: 'ProjectsProjects', logofolio?: { __typename: 'ProjectsProjectsLogofolio', meta?: { __typename: 'ProjectsProjectsLogofolioMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsLogofolioProject', title?: string | null, description?: string | null, images?: { __typename: 'ProjectsProjectsLogofolioProjectImages', white?: string | null, black?: string | null } | null } | null> | null } | null, anarose?: { __typename: 'ProjectsProjectsAnarose', meta?: { __typename: 'ProjectsProjectsAnaroseMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsAnaroseProject', image?: string | null, title?: string | null, description?: string | null, goals?: string | null, challenges?: string | null, solutions?: string | null, link?: string | null, video?: string | null } | null> | null } | null, queendomfarms?: { __typename: 'ProjectsProjectsQueendomfarms', meta?: { __typename: 'ProjectsProjectsQueendomfarmsMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsQueendomfarmsProject', image?: string | null, title?: string | null, description?: string | null, goals?: string | null, challenges?: string | null, solutions?: string | null, link?: string | null, video?: string | null } | null> | null } | null, epicfuture?: { __typename: 'ProjectsProjectsEpicfuture', meta?: { __typename: 'ProjectsProjectsEpicfutureMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsEpicfutureProject', image?: string | null, title?: string | null, description?: string | null, goals?: string | null, challenges?: string | null, solutions?: string | null, link?: string | null, video?: string | null } | null> | null } | null, consolidatedconstructionsolutions?: { __typename: 'ProjectsProjectsConsolidatedconstructionsolutions', meta?: { __typename: 'ProjectsProjectsConsolidatedconstructionsolutionsMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsConsolidatedconstructionsolutionsProject', image?: string | null, title?: string | null, description?: string | null, goals?: string | null, challenges?: string | null, solutions?: string | null, link?: string | null, video?: string | null } | null> | null } | null, perfectlydifferent?: { __typename: 'ProjectsProjectsPerfectlydifferent', meta?: { __typename: 'ProjectsProjectsPerfectlydifferentMeta', title?: string | null, description?: string | null, speed?: number | null, url?: string | null } | null, project?: Array<{ __typename: 'ProjectsProjectsPerfectlydifferentProject', image?: string | null, title?: string | null, description?: string | null, goals?: string | null, challenges?: string | null, solutions?: string | null, link?: string | null, video?: string | null } | null> | null } | null } | null };
 
@@ -1512,7 +1718,7 @@ export type NavigationQueryVariables = Exact<{
 }>;
 
 
-export type NavigationQuery = { __typename?: 'Query', navigation: { __typename: 'Navigation', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, navigationLinks?: Array<{ __typename: 'NavigationNavigationLinks', link?: string | null, text?: string | null, heading?: { __typename: 'NavigationNavigationLinksHeading', mainText?: string | null, subText?: string | null } | null } | null> | null, footerLinks?: Array<{ __typename: 'NavigationFooterLinks', text?: string | null, url?: string | null } | null> | null, footerText?: Array<{ __typename: 'NavigationFooterText', text1?: string | null, text2?: string | null } | null> | null } };
+export type NavigationQuery = { __typename?: 'Query', navigation: { __typename: 'Navigation', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, navigationLinks?: Array<{ __typename: 'NavigationNavigationLinks', link?: string | null, text?: string | null, heading?: { __typename: 'NavigationNavigationLinksHeading', mainText?: string | null, subText?: string | null } | null } | null> | null, footerLinks?: { __typename: 'NavigationFooterLinks', react?: { __typename: 'NavigationFooterLinksReact', text?: string | null, url?: string | null } | null, nextjs?: { __typename: 'NavigationFooterLinksNextjs', text?: string | null, url?: string | null } | null, framer?: { __typename: 'NavigationFooterLinksFramer', text?: string | null, url?: string | null } | null, tina?: { __typename: 'NavigationFooterLinksTina', text?: string | null, url?: string | null } | null } | null, footerText?: Array<{ __typename: 'NavigationFooterText', text1?: string | null, text2?: string | null } | null> | null } };
 
 export type NavigationConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -1524,14 +1730,14 @@ export type NavigationConnectionQueryVariables = Exact<{
 }>;
 
 
-export type NavigationConnectionQuery = { __typename?: 'Query', navigationConnection: { __typename?: 'NavigationConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'NavigationConnectionEdges', cursor: string, node?: { __typename: 'Navigation', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, navigationLinks?: Array<{ __typename: 'NavigationNavigationLinks', link?: string | null, text?: string | null, heading?: { __typename: 'NavigationNavigationLinksHeading', mainText?: string | null, subText?: string | null } | null } | null> | null, footerLinks?: Array<{ __typename: 'NavigationFooterLinks', text?: string | null, url?: string | null } | null> | null, footerText?: Array<{ __typename: 'NavigationFooterText', text1?: string | null, text2?: string | null } | null> | null } | null } | null> | null } };
+export type NavigationConnectionQuery = { __typename?: 'Query', navigationConnection: { __typename?: 'NavigationConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'NavigationConnectionEdges', cursor: string, node?: { __typename: 'Navigation', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, navigationLinks?: Array<{ __typename: 'NavigationNavigationLinks', link?: string | null, text?: string | null, heading?: { __typename: 'NavigationNavigationLinksHeading', mainText?: string | null, subText?: string | null } | null } | null> | null, footerLinks?: { __typename: 'NavigationFooterLinks', react?: { __typename: 'NavigationFooterLinksReact', text?: string | null, url?: string | null } | null, nextjs?: { __typename: 'NavigationFooterLinksNextjs', text?: string | null, url?: string | null } | null, framer?: { __typename: 'NavigationFooterLinksFramer', text?: string | null, url?: string | null } | null, tina?: { __typename: 'NavigationFooterLinksTina', text?: string | null, url?: string | null } | null } | null, footerText?: Array<{ __typename: 'NavigationFooterText', text1?: string | null, text2?: string | null } | null> | null } | null } | null> | null } };
 
 export type HomeQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type HomeQuery = { __typename?: 'Query', home: { __typename: 'Home', id: string, rotatingWords?: Array<string | null> | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, introLines?: { __typename: 'HomeIntroLines', line1?: string | null, line2?: string | null, line3?: string | null, line4?: string | null } | null, doorMessages?: { __typename: 'HomeDoorMessages', message1?: string | null, message2?: string | null, message3?: string | null } | null, coreSystems?: { __typename: 'HomeCoreSystems', title?: string | null, desc?: string | null, skills?: { __typename: 'HomeCoreSystemsSkills', skill1?: string | null, skill2?: string | null, skill3?: string | null, skill4?: string | null, skill5?: string | null } | null } | null, fieldSystems?: { __typename: 'HomeFieldSystems', title?: string | null, desc?: string | null, skills?: { __typename: 'HomeFieldSystemsSkills', skill1?: string | null, skill2?: string | null, skill3?: string | null, skill4?: string | null, skill5?: string | null } | null } | null, combinedStatement?: { __typename: 'HomeCombinedStatement', statement1?: string | null, statement2?: string | null } | null, projectSection?: { __typename: 'HomeProjectSection', title?: string | null, projects?: Array<{ __typename: 'HomeProjectSectionProjects', image1?: string | null, url1?: string | null, image2?: string | null, url2?: string | null, image3?: string | null, url3?: string | null, image4?: string | null, url4?: string | null } | null> | null, viewAllLink?: { __typename: 'HomeProjectSectionViewAllLink', text?: string | null, url?: string | null } | null } | null, quote?: { __typename: 'HomeQuote', lines?: { __typename: 'HomeQuoteLines', line?: string | null } | null, attribution?: { __typename: 'HomeQuoteAttribution', signature?: string | null, source?: string | null } | null } | null, timedQuote?: { __typename: 'HomeTimedQuote', quoteParts?: Array<{ __typename: 'HomeTimedQuoteQuoteParts', text?: string | null, delay?: number | null } | null> | null } | null, contact?: { __typename: 'HomeContact', link?: string | null, buttonText?: string | null } | null } };
+export type HomeQuery = { __typename?: 'Query', home: { __typename: 'Home', id: string, rotatingWords?: Array<string | null> | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, introLines?: { __typename: 'HomeIntroLines', line1?: string | null, line2?: string | null, line3?: string | null, line4?: string | null } | null, doorMessages?: { __typename: 'HomeDoorMessages', message1?: string | null, message2?: string | null, message3?: string | null } | null, coreSystems?: { __typename: 'HomeCoreSystems', title?: string | null, desc?: string | null, skills?: { __typename: 'HomeCoreSystemsSkills', skill1?: string | null, skill2?: string | null, skill3?: string | null, skill4?: string | null, skill5?: string | null } | null } | null, fieldSystems?: { __typename: 'HomeFieldSystems', title?: string | null, desc?: string | null, skills?: { __typename: 'HomeFieldSystemsSkills', skill1?: string | null, skill2?: string | null, skill3?: string | null, skill4?: string | null, skill5?: string | null } | null } | null, combinedStatement?: { __typename: 'HomeCombinedStatement', statement1?: string | null, statement2?: string | null } | null, projectSection?: { __typename: 'HomeProjectSection', title?: string | null, projects?: Array<{ __typename: 'HomeProjectSectionProjects', image1?: string | null, url1?: string | null, image2?: string | null, url2?: string | null, image3?: string | null, url3?: string | null, image4?: string | null, url4?: string | null } | null> | null, viewAllLink?: { __typename: 'HomeProjectSectionViewAllLink', text?: string | null, url?: string | null } | null } | null, quote?: { __typename: 'HomeQuote', lines?: { __typename: 'HomeQuoteLines', line1?: string | null, line2?: string | null, line3?: string | null, line4?: string | null } | null, attribution?: { __typename: 'HomeQuoteAttribution', signature?: string | null, source?: string | null } | null } | null, timedQuote?: { __typename: 'HomeTimedQuote', quoteParts?: { __typename: 'HomeTimedQuoteQuoteParts', part1?: { __typename: 'HomeTimedQuoteQuotePartsPart1', text1?: string | null, delay1?: number | null } | null, part2?: { __typename: 'HomeTimedQuoteQuotePartsPart2', text2?: string | null, delay2?: number | null } | null, part3?: { __typename: 'HomeTimedQuoteQuotePartsPart3', text3?: string | null, delay3?: number | null } | null, part4?: { __typename: 'HomeTimedQuoteQuotePartsPart4', text4?: string | null, delay4?: number | null } | null, part5?: { __typename: 'HomeTimedQuoteQuotePartsPart5', text5?: string | null, delay5?: number | null } | null, part6?: { __typename: 'HomeTimedQuoteQuotePartsPart6', text6?: string | null, delay6?: number | null } | null, part7?: { __typename: 'HomeTimedQuoteQuotePartsPart7', text7?: string | null, delay7?: number | null } | null } | null } | null, contact?: { __typename: 'HomeContact', link?: string | null, buttonText?: string | null } | null } };
 
 export type HomeConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -1543,7 +1749,7 @@ export type HomeConnectionQueryVariables = Exact<{
 }>;
 
 
-export type HomeConnectionQuery = { __typename?: 'Query', homeConnection: { __typename?: 'HomeConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'HomeConnectionEdges', cursor: string, node?: { __typename: 'Home', id: string, rotatingWords?: Array<string | null> | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, introLines?: { __typename: 'HomeIntroLines', line1?: string | null, line2?: string | null, line3?: string | null, line4?: string | null } | null, doorMessages?: { __typename: 'HomeDoorMessages', message1?: string | null, message2?: string | null, message3?: string | null } | null, coreSystems?: { __typename: 'HomeCoreSystems', title?: string | null, desc?: string | null, skills?: { __typename: 'HomeCoreSystemsSkills', skill1?: string | null, skill2?: string | null, skill3?: string | null, skill4?: string | null, skill5?: string | null } | null } | null, fieldSystems?: { __typename: 'HomeFieldSystems', title?: string | null, desc?: string | null, skills?: { __typename: 'HomeFieldSystemsSkills', skill1?: string | null, skill2?: string | null, skill3?: string | null, skill4?: string | null, skill5?: string | null } | null } | null, combinedStatement?: { __typename: 'HomeCombinedStatement', statement1?: string | null, statement2?: string | null } | null, projectSection?: { __typename: 'HomeProjectSection', title?: string | null, projects?: Array<{ __typename: 'HomeProjectSectionProjects', image1?: string | null, url1?: string | null, image2?: string | null, url2?: string | null, image3?: string | null, url3?: string | null, image4?: string | null, url4?: string | null } | null> | null, viewAllLink?: { __typename: 'HomeProjectSectionViewAllLink', text?: string | null, url?: string | null } | null } | null, quote?: { __typename: 'HomeQuote', lines?: { __typename: 'HomeQuoteLines', line?: string | null } | null, attribution?: { __typename: 'HomeQuoteAttribution', signature?: string | null, source?: string | null } | null } | null, timedQuote?: { __typename: 'HomeTimedQuote', quoteParts?: Array<{ __typename: 'HomeTimedQuoteQuoteParts', text?: string | null, delay?: number | null } | null> | null } | null, contact?: { __typename: 'HomeContact', link?: string | null, buttonText?: string | null } | null } | null } | null> | null } };
+export type HomeConnectionQuery = { __typename?: 'Query', homeConnection: { __typename?: 'HomeConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'HomeConnectionEdges', cursor: string, node?: { __typename: 'Home', id: string, rotatingWords?: Array<string | null> | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, introLines?: { __typename: 'HomeIntroLines', line1?: string | null, line2?: string | null, line3?: string | null, line4?: string | null } | null, doorMessages?: { __typename: 'HomeDoorMessages', message1?: string | null, message2?: string | null, message3?: string | null } | null, coreSystems?: { __typename: 'HomeCoreSystems', title?: string | null, desc?: string | null, skills?: { __typename: 'HomeCoreSystemsSkills', skill1?: string | null, skill2?: string | null, skill3?: string | null, skill4?: string | null, skill5?: string | null } | null } | null, fieldSystems?: { __typename: 'HomeFieldSystems', title?: string | null, desc?: string | null, skills?: { __typename: 'HomeFieldSystemsSkills', skill1?: string | null, skill2?: string | null, skill3?: string | null, skill4?: string | null, skill5?: string | null } | null } | null, combinedStatement?: { __typename: 'HomeCombinedStatement', statement1?: string | null, statement2?: string | null } | null, projectSection?: { __typename: 'HomeProjectSection', title?: string | null, projects?: Array<{ __typename: 'HomeProjectSectionProjects', image1?: string | null, url1?: string | null, image2?: string | null, url2?: string | null, image3?: string | null, url3?: string | null, image4?: string | null, url4?: string | null } | null> | null, viewAllLink?: { __typename: 'HomeProjectSectionViewAllLink', text?: string | null, url?: string | null } | null } | null, quote?: { __typename: 'HomeQuote', lines?: { __typename: 'HomeQuoteLines', line1?: string | null, line2?: string | null, line3?: string | null, line4?: string | null } | null, attribution?: { __typename: 'HomeQuoteAttribution', signature?: string | null, source?: string | null } | null } | null, timedQuote?: { __typename: 'HomeTimedQuote', quoteParts?: { __typename: 'HomeTimedQuoteQuoteParts', part1?: { __typename: 'HomeTimedQuoteQuotePartsPart1', text1?: string | null, delay1?: number | null } | null, part2?: { __typename: 'HomeTimedQuoteQuotePartsPart2', text2?: string | null, delay2?: number | null } | null, part3?: { __typename: 'HomeTimedQuoteQuotePartsPart3', text3?: string | null, delay3?: number | null } | null, part4?: { __typename: 'HomeTimedQuoteQuotePartsPart4', text4?: string | null, delay4?: number | null } | null, part5?: { __typename: 'HomeTimedQuoteQuotePartsPart5', text5?: string | null, delay5?: number | null } | null, part6?: { __typename: 'HomeTimedQuoteQuotePartsPart6', text6?: string | null, delay6?: number | null } | null, part7?: { __typename: 'HomeTimedQuoteQuotePartsPart7', text7?: string | null, delay7?: number | null } | null } | null } | null, contact?: { __typename: 'HomeContact', link?: string | null, buttonText?: string | null } | null } | null } | null> | null } };
 
 export type ProjectsQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -1622,8 +1828,26 @@ export const NavigationPartsFragmentDoc = gql`
   }
   footerLinks {
     __typename
-    text
-    url
+    react {
+      __typename
+      text
+      url
+    }
+    nextjs {
+      __typename
+      text
+      url
+    }
+    framer {
+      __typename
+      text
+      url
+    }
+    tina {
+      __typename
+      text
+      url
+    }
   }
   footerText {
     __typename
@@ -1704,7 +1928,10 @@ export const HomePartsFragmentDoc = gql`
     __typename
     lines {
       __typename
-      line
+      line1
+      line2
+      line3
+      line4
     }
     attribution {
       __typename
@@ -1716,8 +1943,41 @@ export const HomePartsFragmentDoc = gql`
     __typename
     quoteParts {
       __typename
-      text
-      delay
+      part1 {
+        __typename
+        text1
+        delay1
+      }
+      part2 {
+        __typename
+        text2
+        delay2
+      }
+      part3 {
+        __typename
+        text3
+        delay3
+      }
+      part4 {
+        __typename
+        text4
+        delay4
+      }
+      part5 {
+        __typename
+        text5
+        delay5
+      }
+      part6 {
+        __typename
+        text6
+        delay6
+      }
+      part7 {
+        __typename
+        text7
+        delay7
+      }
     }
   }
   contact {

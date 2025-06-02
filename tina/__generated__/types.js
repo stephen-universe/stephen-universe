@@ -63,8 +63,26 @@ export const NavigationPartsFragmentDoc = gql`
   }
   footerLinks {
     __typename
-    text
-    url
+    react {
+      __typename
+      text
+      url
+    }
+    nextjs {
+      __typename
+      text
+      url
+    }
+    framer {
+      __typename
+      text
+      url
+    }
+    tina {
+      __typename
+      text
+      url
+    }
   }
   footerText {
     __typename
@@ -145,7 +163,10 @@ export const HomePartsFragmentDoc = gql`
     __typename
     lines {
       __typename
-      line
+      line1
+      line2
+      line3
+      line4
     }
     attribution {
       __typename
@@ -157,8 +178,41 @@ export const HomePartsFragmentDoc = gql`
     __typename
     quoteParts {
       __typename
-      text
-      delay
+      part1 {
+        __typename
+        text1
+        delay1
+      }
+      part2 {
+        __typename
+        text2
+        delay2
+      }
+      part3 {
+        __typename
+        text3
+        delay3
+      }
+      part4 {
+        __typename
+        text4
+        delay4
+      }
+      part5 {
+        __typename
+        text5
+        delay5
+      }
+      part6 {
+        __typename
+        text6
+        delay6
+      }
+      part7 {
+        __typename
+        text7
+        delay7
+      }
     }
   }
   contact {
