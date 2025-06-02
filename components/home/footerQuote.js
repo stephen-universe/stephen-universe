@@ -1,5 +1,4 @@
-"use client"; // Required for Next.js 13+ when using client-side features
-
+"use client";
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import VideoModal from "./videoModal";
@@ -38,6 +37,11 @@ export default function FooterQuote() {
     },
   };
 
+  // Convert lines object to an array while preserving order
+  const linesArray = Object.keys(appData.quote.lines)
+    .sort()
+    .map(key => appData.quote.lines[key]);
+
   return (
     <motion.div
       ref={ref}
@@ -47,8 +51,8 @@ export default function FooterQuote() {
       initial="hidden"
       animate={controls}
     >
-      {appData.quote.lines.map((line, index) => (
-        <motion.div key={index} variants={lineVariants}>
+      {linesArray.map((line, index) => (
+        <motion.div key={`line-${index}`} variants={lineVariants}>
           {line}
           <br />
         </motion.div>

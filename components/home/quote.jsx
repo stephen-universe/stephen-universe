@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Link  from "next/link";
+import Link from "next/link";
 import appData from "../../content/data/home.json";
 
 const fadeVariant = {
@@ -15,22 +15,29 @@ const fadeVariant = {
 };
 
 export default function Quote({ shouldAnimate }) {
+  // Convert the quoteParts object into an array of parts
+  const quotePartsArray = Object.values(appData.timedQuote.quoteParts);
+  const totalParts = quotePartsArray.length;
+
   return (
     <div className="quote-p bold has-text-justified">
-      {appData.timedQuote.quoteParts.map((part, index) => {
-        const isSecondToLast = index === appData.timedQuote.quoteParts.length - 2;
-        const isLast = index === appData.timedQuote.quoteParts.length - 1;
+      {quotePartsArray.map((part, index) => {
+        const partNumber = index + 1;
+        const isSecondToLast = index === totalParts - 2;
+        const isLast = index === totalParts - 1;
 
         return (
           <motion.div
-            key={index}
-            custom={part[`delay${index + 1}`]}
+            key={`part-${partNumber}`}
+            custom={part[`delay${partNumber}`]}
             variants={fadeVariant}
             initial="hidden"
             animate={shouldAnimate ? "visible" : "hidden"}
-            className={`${isSecondToLast ? "has-text-right is-italic mt-4" : ""} ${isLast ? "has-text-right" : ""}`}
+            className={`${isSecondToLast ? "has-text-right is-italic mt-4" : ""} ${
+              isLast ? "has-text-right" : ""
+            }`}
           >
-            <span>{part[`text${index + 1}`]}</span>
+            <span>{part[`text${partNumber}`]}</span>
             <br />
           </motion.div>
         );
@@ -41,6 +48,7 @@ export default function Quote({ shouldAnimate }) {
   );
 }
 
+// CTA component remains the same
 function CTA({ shouldAnimate }) {
   return (
     <motion.div
