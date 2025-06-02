@@ -327,16 +327,16 @@
 }
 
 .my-process-text {
-  position: relative;
+position: relative;
   display: inline-block;
-  padding: 0.3rem 0.5rem;
-  background: $blue;
+  padding: 0.4rem .5rem;
+  background: #040c28;
   color: #fff;
   border-radius: 4px;
   cursor: default;
   overflow: hidden;
-  font-family: Nostromo-Medium;
-  transition: background 0.3s ease;
+  font-family: Nostromo-Bold;
+  transition: background .3s ease;
   z-index: 0;
 }
 
