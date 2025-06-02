@@ -283,7 +283,8 @@
         {
           "image": "/images/CCS-website.png",
           "title": "Web Application",
-          "description": "A user-friendly website concept with scheduling, quote generation, and project showcase features."
+          "description": "A user-friendly website concept with scheduling, quote generation, and project showcase features.",
+          "link": "https://cnsldsolutions.com"
         }
       ]
     },
@@ -351,8 +352,7 @@
         {
           "image": "/images/Perfectly-Different-compare.png",
           "title": "Competitive Analysis",
-          "description": "An evaluation of existing dating apps to identify market gaps and inclusive opportunities.",
-          "challenges": ""
+          "description": "An evaluation of existing dating apps to identify market gaps and inclusive opportunities."
         },
         {
           "image": "/images/PerfectlyDifferent-screens.png",
