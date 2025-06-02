@@ -67,12 +67,12 @@
     }
   },
   "quote": {
-    "lines": [
-      "But you, you're supposed to change.",
-      "You're never the same even moment to moment",
-      "You're allowed and expected to invent who you are.",
-      "What an incredible power -- the ability to 'grow up'."
-    ],
+    "lines": {
+      "line1": "But you, you're supposed to change.",
+      "line2": "You're never the same even moment to moment",
+      "line3": "You're allowed and expected to invent who you are.",
+      "line4": "What an incredible power -- the ability to 'grow up'."
+    },
     "attribution": {
       "signature": "--Rose Quartz",
       "source": "Steven Universe"
@@ -80,36 +80,36 @@
   },
 
   "timedQuote": {
-    "quoteParts": [
-      {
+    "quoteParts": {
+      "part1": {
         "text1": "When a Gem is made, it's for a reason.",
         "delay1": 200
       },
-      {
+      "part2":{
         "text2": "They burst out of the ground",
         "delay2": 2400
       },
-      {
+      "part3":{
         "text3": "already knowing what they're supposed to be,",
         "delay3": 4600
       },
-      {
+      "part4":{
         "text4": "And then...",
         "delay4": 6900
       },
-      {
+      "part5":{
         "text5": "That's what they are... Forever.",
         "delay5": 8400
       },
-      {
+      "part6":{
         "text6": "--Rose Quartz",
         "delay6": 10000
       },
-      {
+      "part7":{
         "text7": "Steven Universe",
         "delay7": 10000
       }
-    ]
+    }
   },
   "contact": {
     "link": "/contact",
