@@ -77,7 +77,7 @@
     "anarose": {
       "meta": {
         "title": "Ana Rose",
-        "description": "Developed the Future of UFC Sports Ecosystem despite not being a sports fan.",
+        "description": "A cohesive brand identity, website, and seamless online booking system designed to help this Dallas cleaning service grow its residential and commercial client base.",
         "speed": 0.5,
         "url": "/project/anarose"
       },
@@ -115,7 +115,7 @@
     "queendomfarms": {
       "meta": {
         "title": "Queendom Farms",
-        "description": "Defined the visual concept and design language for the Lincoln Zephyr 2022 but never seen it in real life.",
+        "description": "A strong visual brand and logo system created to authentically represent this women-led urban farm’s mission and audience.",
         "speed": 0.67,
         "url": "/project/queendomfarms"
       },
@@ -198,7 +198,7 @@
     "epicfuture": {
       "meta": {
         "title": "Epic Future",
-        "description": "I was just one person on a massive team that created an entire Royal Caribbean eco-system.",
+        "description": "A versatile entertainment brand developed with culturally inspired logos and apparel designs, establishing a bold presence across key U.S. cities.",
         "speed": 0.8,
         "url": "/project/epicfuture"
       },
@@ -206,11 +206,11 @@
         {
           "image": "/images/EpicFuture-home.png",
           "title": "Brief",
-          "description": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
+          "description": "Epic Future was born from a vision: to create a bold entertainment brand that could live beyond the stage—on apparel, in culture, and in city streets. Founded by a Haitian-born creative, the brand needed to feel global, yet deeply personal.",
           "goals": "•\tCreate a brand fit for apparel, jewelry, and media\n•\tDesign a bold “EFE” submark for lifestyle use\n•\tReflect Haitian heritage through color\n•\tLocalize visuals for LA, ATL, and NYC",
           "challenges": "•\tBalancing streetwear and luxury in one mark\n•\tHonoring culture without clichés\n•\tKeeping city visuals distinct but unified",
           "solutions": "•\tBuilt a dual-logo system: Epic Future + EFE\n•\tUsed a modernized Haitian color palette\n•\tDesigned landmark-based EFE visuals per city\n•\tDelivered a flexible, cross-market brand system",
-          "video": "/images/videos/EpicFuture-clip.mp4"
+          "video": ""
         },
         {
           "image": "/images/EpicFuture-bw.png",
@@ -242,7 +242,7 @@
     "consolidatedconstructionsolutions": {
       "meta": {
         "title": "Consolidated Construction",
-        "description": "Designed a 1M+ users product utilizing my best personal experience: sleeping.",
+        "description": "A professional corporate brand package and user-friendly website delivered to position this Houston construction firm for growth in residential and commercial markets.",
         "speed": 0.8,
         "url": "/project/consolidatedconstructionsolutions"
       },
@@ -290,7 +290,7 @@
     "perfectlydifferent": {
       "meta": {
         "title": "Perfectly Different",
-        "description": "Explored the Future of Fantasy Football while being in a country where football means a total different sport.",
+        "description": "An inclusive dating app concept designed with user research, personas, and UI prototypes to serve individuals with disabilities authentically and effectively.",
         "speed": 1.2,
         "url": "/project/perfectlydifferent"
       },
