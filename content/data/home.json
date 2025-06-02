@@ -1,22 +1,23 @@
 {
-  "rotatingWords": ["create", "design", "build"],
-  
+  "rotatingWords": [
+    "create",
+    "design",
+    "build"
+  ],
   "introLines": {
     "line1": "Hi",
     "line2": "My name is",
     "line3": "Stephen Warren",
     "line4": "A multi-disciplinary designer & developer."
   },
-
   "doorMessages": {
     "message1": "Take A Step",
     "message2": "Into My World",
     "message3": "Start Mission"
   },
-
   "coreSystems": {
     "title": "Core Systems",
-    "desc": "These are the main modules I bring on every mission — from creative launches to technical deep space dives.",
+    "desc": "From crafting iconic brands to mastering the art of digital strategy, I lean on these skills to fuel and ignite your brand’s voice — maximizing potential by turning actions into results:",
     "skills": {
       "skill1": "Graphic & Brand Design",
       "skill2": "Product Research & Design",
@@ -25,7 +26,6 @@
       "skill5": "Video Editing & Production"
     }
   },
-
   "fieldSystems": {
     "title": "Field Systems",
     "desc": "Specialized tools & skills deployed across terrain—strategic, technical, creative.",
@@ -37,12 +37,10 @@
       "skill5": "Motion Design & Prototyping"
     }
   },
-
   "combinedStatement": {
     "statement1": "And I",
     "statement2": "experiences!"
   },
-
   "projectSection": {
     "title": "Featured Projects",
     "projects": [
@@ -68,56 +66,26 @@
       "url": "/projects"
     }
   },
-
   "quote": {
-    "lines": [
-      "But you, you're supposed to change.",
-      "You're never the same even moment to moment",
-      "You're allowed and expected to invent who you are.",
-      "What an incredible power -- the ability to 'grow up'."
-    ],
+    "lines": {},
     "attribution": {
       "signature": "--Rose Quartz",
       "source": "Steven Universe"
     }
   },
-
   "timedQuote": {
     "quoteParts": [
-      {
-        "text1": "When a Gem is made, it's for a reason.",
-        "delay1": 200
-      },
-      {
-        "text2": "They burst out of the ground",
-        "delay2": 2400
-      },
-      {
-        "text3": "already knowing what they're supposed to be,",
-        "delay3": 4600
-      },
-      {
-        "text4": "And then...",
-        "delay4": 6900
-      },
-      {
-        "text5": "That's what they are... Forever.",
-        "delay5": 8400
-      },
-      {
-        "text6": "--Rose Quartz",
-        "delay6": 10000
-      },
-      {
-        "text7": "Steven Universe",
-        "delay7": 10000
-      }
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
     ]
   },
-
   "contact": {
     "link": "/contact",
-    "buttonText": "Let's Talk",
-    "className": "button mt-4"
+    "buttonText": "Let's Talk"
   }
 }
