@@ -149,7 +149,7 @@ function MyApp({ Component, pageProps }) {
         console.log(`GA4 tracked click: ${label}`);
       }
     };
-
+document.addEventListener("click", handleClick);
     // Scroll depth tracking
     const scrollThresholds = [25, 50, 75, 100];
     const firedScrollEvents = new Set();
