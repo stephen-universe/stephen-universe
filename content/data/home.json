@@ -28,13 +28,13 @@
   },
   "fieldSystems": {
     "title": "Field Systems",
-    "desc": "Specialized tools & skills deployed across terrain—strategic, technical, creative.",
+    "desc": "Through these specialized services, I turn ideas—big and small—into real-world experiences, built to captivate audiences and elevate brand recognition through sharp, tactical execution.",
     "skills": {
-      "skill1": "Creative Direction & Art Systems",
-      "skill2": "UI/UX & Design Systems",
-      "skill3": "Client-Facing Documentation",
-      "skill4": "Frontend Development",
-      "skill5": "Motion Design & Prototyping"
+      "skill1": "Creative Direction & Brand Strategy",
+      "skill2": "Product Management & Positioning",
+      "skill3": "Set Design & Experiential Staging",
+      "skill4": "Design Systems & Frontend Development",
+      "skill5": "Cinematography, Motion & Visual Storytelling"
     }
   },
   "combinedStatement": {
