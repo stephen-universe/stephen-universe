@@ -9,236 +9,232 @@
       },
       "project": [
         {
-          "title": "Visionz & Vibez",
-          "description": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
           "images": {
             "white": "/images/logofolio/visionz-bw.png",
             "black": "/images/logofolio/visionz-color.png"
-          }
+          },
+          "title": "Visionz & Vibez",
+          "description": "A modern photography brand capturing authentic moments with style and soul—tailored for events, portraits, and creative storytelling."
         },
         {
-          "title": "Ebony Gonsalves",
-          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy.",
           "images": {
             "white": "/images/logofolio/eg-bw.png",
             "black": "/images/logofolio/eg-color.png"
-          }
+          },
+          "title": "Ebony Gonsalves",
+          "description": "A personal beauty brand offering professional makeup services with a signature touch of glam, precision, and confidence."
         },
         {
-          "title": "iSlay",
-          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
           "images": {
             "white": "/images/logofolio/islaybox-bw.png",
             "black": "/images/logofolio/islaybox-color.png"
-          }
+          },
+          "title": "iSlay",
+          "description": "A beauty brand empowering self-expression through premium wigs, lashes, and hair products—where every look slays."
         },
         {
-          "title": "Seasons",
-          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations.",
           "images": {
             "white": "/images/logofolio/seasons-bw.png",
             "black": "/images/logofolio/seasons-color.png"
-          }
+          },
+          "title": "Seasons",
+          "description": "A culinary brand and restaurant serving upscale dishes infused with rich flavor profiles and creative use of global seasonings."
         },
         {
-          "title": "Waggy Walks ATL",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
           "images": {
             "white": "/images/logofolio/waggy-bw.png",
             "black": "/images/logofolio/waggy-color.png"
-          }
+          },
+          "title": "Waggy Walks ATL",
+          "description": "An Atlanta-based pet care brand offering walking, daycare, and sitting services for four-legged family members—with love and consistency."
         },
         {
-          "title": "All About You Designs",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
           "images": {
             "white": "/images/logofolio/aayd-bw.png",
             "black": "/images/logofolio/aayd-color.png"
-          }
+          },
+          "title": "All About You Designs",
+          "description": "A print brand that brings your homemade creations to life on custom tees, mugs, and more—designed by you, made by us."
         },
         {
-          "title": "AVX Studios",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
           "images": {
             "white": "/images/logofolio/AVX-Studios-white.png",
             "black": "/images/logofolio/AVX-Studios-black.png"
-          }
+          },
+          "title": "AVX Studios",
+          "description": "A creative agency specializing in branding, audio, and marketing design—helping brands grow through storytelling and sharp visual identity."
         },
         {
-          "title": "Patricia Nicolas",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
           "images": {
             "white": "/images/logofolio/PN-white.png",
             "black": "/images/logofolio/PN-black.png"
-          }
+          },
+          "title": "Patricia Nicolas",
+          "description": "A media brand delivering bold commentary and cultural insight on news, trends, and social issues from a sharp, unapologetic perspective."
         }
       ]
     },
     "anarose": {
       "meta": {
         "title": "Ana Rose",
-        "description": "Developed the Future of UFC Sports Ecosystem despite not being a sports fan.",
+        "description": "A cohesive brand identity, website, and seamless online booking system designed to help this Dallas cleaning service grow its residential and commercial client base.",
         "speed": 0.5,
         "url": "/project/anarose"
       },
       "project": [
         {
-          "title": "Brief",
-          "description": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
           "image": "/images/Ana-Rose-residential.png",
-          "goals": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
-          "challenges": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
-          "solutions": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges."
+          "title": "Brief",
+          "description": "Ana Rose is a Dallas-based cleaning service brand founded by a solo entrepreneur looking to grow beyond word-of-mouth referrals. Originally focused on small residential cleanings, Ana Rose aimed to elevate its brand, streamline operations, and expand into larger residential projects and commercial contracts. I partnered with the founder to design a cohesive brand identity, build a modern website, and develop an online booking experience tailored to her target clientele.",
+          "goals": "•\tRefresh the brand to feel professional, trustworthy, and scalable\n•\tLaunch a website with built-in scheduling and quote requests\n•\tSupport expansion into higher-value residential and commercial markets",
+          "challenges": "•\tNo existing brand identity or web presence\n•\tManual scheduling limited growth and responsiveness\n•\tNeeded to appeal to both home and business clients",
+          "solutions": "•\tDesigned a clean, modern logo and visual system\n•\tBuilt a responsive website with online booking and service breakdowns\n•\tCrafted messaging and design that bridges residential warmth with commercial credibility"
         },
         {
-          "title": "Client Collaboration",
-          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations.",
-          "image": "/images/Ana-Rose-booking.png"
+          "image": "/images/Ana-Rose-booking.png",
+          "title": "Web Application (How-To-Guide)",
+          "description": "A simple step-by-step guide that helps users easily navigate and book Ana Rose’s cleaning services online."
         },
         {
-          "title": "Concept Development",
-          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy.",
-          "image": "/images/Ana-Rose-faqs.png"
+          "image": "/images/Ana-Rose-modal-two.png",
+          "title": "Web Application (Service-Description)",
+          "description": "An overview of Ana Rose’s residential and commercial cleaning services with clear, client-focused descriptions."
         },
         {
-          "title": "Design Execution",
-          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
-          "image": "/images/Ana-Rose-modal-two.png"
+          "image": "/images/Ana-Rose-faqs.png",
+          "title": "Web Application (Custom-Services)",
+          "description": "A customizable service builder that lets users tailor cleaning packages to their specific home or business needs."
         },
         {
-          "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/Ana-Rose-reviews.png"
+          "image": "/images/Ana-Rose-reviews.png",
+          "title": "Web Application (Testimonials)",
+          "description": "A collection of real client testimonials that showcase trust, satisfaction, and proven cleaning results."
         }
       ]
     },
     "queendomfarms": {
       "meta": {
         "title": "Queendom Farms",
-        "description": "Defined the visual concept and design language for the Lincoln Zephyr 2022 but never seen it in real life.",
+        "description": "A strong visual brand and logo system created to authentically represent this women-led urban farm’s mission and audience.",
         "speed": 0.67,
         "url": "/project/queendomfarms"
       },
       "project": [
         {
-          "title": "Brief",
-          "description": "Queendon Farms is an urban flower and fruit farm based in Georgia, aiming to establish itself in an industry traditionally dominated by men. Founded by two women inspired and empowered by agriculture, they set out to create a strong and authentic brand identity of their own",
           "image": "/images/Queendom-Farms-Home.jpg",
-          "goals": "* Become a household name | * Create a strong brand identity | * Establish a unique market position",
-          "challenges": "Establish a brand identity in an industry dominated by men",
-          "solutions": "Develop a brand identity that reflects the founders' values and mission, while appealing to a diverse audience"
+          "title": "Brief",
+          "description": "Queendom Farms is an urban flower and fruit farm based in Georgia, aiming to establish itself in an industry traditionally dominated by men. Founded by two women inspired and empowered by agriculture, they set out to create a strong and authentic brand identity of their own",
+          "goals": "•\tEstablish a bold, authentic brand rooted in empowerment and agriculture\n•\tDifferentiate Queendom in a male-dominated farming industry\n•\tCreate a visual identity that reflects both strength and natural beauty",
+          "challenges": "•\tEntering a competitive space with limited existing brand recognition\n•\tBalancing femininity and authority in a traditionally rugged market\n•\tCommunicating values of sustainability, empowerment, and quality in a cohesive way",
+          "solutions": "•\tDeveloped a confident and earthy visual identity that honors both founders’ spirit and the land\n•\tCrafted brand language that celebrates women in agriculture without relying on stereotypes\n•\tBuilt a brand system that’s flexible across packaging, signage, digital, and farmers market presence"
         },
         {
-          "title": "Concept Development",
-          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy.",
-          "image": "/images/Queendom-Farms-inspiration.jpg"
+          "image": "/images/Queendom-Farms-inspiration.jpg",
+          "title": "Moodboard",
+          "description": "A visual collage capturing the brand’s essence—rooted in nature, empowerment, and modern femininity."
         },
         {
-          "title": "Design Execution",
-          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
-          "image": "/images/Queendom-Farms-persona.jpg"
+          "image": "/images/Queendom-Farms-persona.jpg",
+          "title": "User Persona",
+          "description": "A detailed profile outlining the brand’s target audience, needs, values, and buying behaviors."
         },
         {
-          "title": "Client Collaboration",
-          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations.",
-          "image": "/images/Queendom-Farms-user.jpg"
+          "image": "/images/Queendom-Farms-user.jpg",
+          "title": "User Persona",
+          "description": "A visual representation of Queendom Farms' ideal customer, crafted to guide brand decisions."
         },
         {
-          "title": "Design Execution",
-          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
-          "image": "/images/Queendom-Farms-sketch.jpg"
+          "image": "/images/Queendom-Farms-sketch.jpg",
+          "title": "Sketch & Prototypes",
+          "description": "Early logo sketches and digital prototypes exploring symbolism, balance, and brand voice."
         },
         {
-          "title": "Client Collaboration",
-          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations.",
-          "image": "/images/Queendom-Farms-final.jpg"
+          "image": "/images/Queendom-Farms-final.jpg",
+          "title": "Logo Concept",
+          "description": "The official Queendom Farms logo—a bold, elegant mark reflecting strength and authenticity."
         },
         {
+          "image": "/images/Queendom-Farms-formats.jpg",
+          "title": "Logo Formats",
+          "description": "Multiple logo file types and layouts for flexible use across packaging, web, and print."
+        },
+        {
+          "image": "/images/Queendom-Farms-type.jpg",
+          "title": "TypeFace",
+          "description": "A custom font pairing chosen for legibility and style, reinforcing the brand’s grounded tone."
+        },
+        {
+          "image": "/images/Queendom-Farms-guide.jpg",
+          "title": "Colors",
+          "description": "A warm, earthy color palette inspired by organic growth, soil, and harvest seasons."
+        },
+        {
+          "image": "/images/Queendom-Farms-variants.jpg",
+          "title": "Logo Variations",
+          "description": "Alternate logo versions optimized for light, dark, small-scale, and vertical applications."
+        },
+        {
+          "image": "/images/Queendom-Farms-product.jpg",
+          "title": "Moodboard",
+          "description": "An extended brand moodboard showing lifestyle inspiration, textures, and tone."
+        },
+        {
+          "image": "/images/Queendom-Farms-products.jpg",
           "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/Queendom-Farms-formats.jpg"
+          "description": "Real-world mockups of the Queendom Farms brand across packaging, merchandise, and social media."
         },
         {
+          "image": "/images/Queendom-Farms-package.jpg",
           "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/Queendom-Farms-type.jpg"
+          "description": "Real-world mockups of the Queendom Farms brand across packaging, merchandise, and social media."
         },
         {
-          "title": "Concept Development",
-          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy.",
-          "image": "/images/Queendom-Farms-guide.jpg"
-        },
-        {
+          "image": "/images/Queendom-Farms-packaging.jpg",
           "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/Queendom-Farms-variants.jpg"
-        },
-        {
-          "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/Queendom-Farms-product.jpg"
-        },
-        {
-          "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/Queendom-Farms-products.jpg"
-        },
-        {
-          "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/Queendom-Farms-package.jpg"
-        },
-        {
-          "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/Queendom-Farms-packaging.jpg"
-        },
-        {
-          "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/Queendom-Farms-Home.jpg"
+          "description": "Real-world mockups of the Queendom Farms brand across packaging, merchandise, and social media."
         }
       ]
     },
     "epicfuture": {
       "meta": {
         "title": "Epic Future",
-        "description": "I was just one person on a massive team that created an entire Royal Caribbean eco-system.",
+        "description": "A versatile entertainment brand developed with culturally inspired logos and apparel designs, establishing a bold presence across key U.S. cities.",
         "speed": 0.8,
         "url": "/project/epicfuture"
       },
       "project": [
         {
+          "image": "/images/EpicFuture-home.png",
           "title": "Brief",
-          "description": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
+          "description": "Epic Future was born from a vision: to create a bold entertainment brand that could live beyond the stage—on apparel, in culture, and in city streets. Founded by a Haitian-born creative, the brand needed to feel global, yet deeply personal.",
+          "goals": "•\tCreate a brand fit for apparel, jewelry, and media\n•\tDesign a bold “EFE” submark for lifestyle use\n•\tReflect Haitian heritage through color\n•\tLocalize visuals for LA, ATL, and NYC",
+          "challenges": "•\tBalancing streetwear and luxury in one mark\n•\tHonoring culture without clichés\n•\tKeeping city visuals distinct but unified",
+          "solutions": "•\tBuilt a dual-logo system: Epic Future + EFE\n•\tUsed a modernized Haitian color palette\n•\tDesigned landmark-based EFE visuals per city\n•\tDelivered a flexible, cross-market brand system",
+          "video": ""
+        },
+        {
           "image": "/images/EpicFuture-bw.png",
-          "goals": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
-          "challenges": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
-          "solutions": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges."
+          "title": "Logo Variant (Full)",
+          "description": "Clean black and white versions of the Epic Future logo showcasing its versatility across digital and physical formats."
         },
         {
-          "title": "Concept Development",
-          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy.",
-          "image": "/images/EpicFuture-home.png"
+          "image": "/images/EpicFuture-cities.png",
+          "title": "Logo Variant (City-Collab)",
+          "description": "Masked logo variants featuring iconic city landmarks to localize the Epic Future brand in key cultural hubs."
         },
         {
-          "title": "Design Execution",
-          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
-          "image": "/images/EpicFuture-cities.png"
+          "image": "/images/EpicFuture-Eight.png",
+          "title": "Logo Variant (Acronym)",
+          "description": "A dynamic EFE emblem using masked letterforms from each city variant and colored with the Haitian flag to honor heritage."
         },
         {
-          "title": "Client Collaboration",
-          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations.",
-          "image": "/images/EpicFuture-Eight.png"
+          "image": "/images/EpicFuture-styles.png",
+          "title": "Brand Application",
+          "description": "Branded t-shirt mockups displaying the Epic Future and EFE logos in fashion-forward streetwear contexts."
         },
         {
           "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/EpicFuture-styles.png"
-        },
-        {
-          "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
+          "description": "Video preview of a model wearing an EFE-marked hoodie, highlighting logo impact in motion and lifestyle branding.",
           "video": "/images/videos/EpicFuture-clip.mp4"
         }
       ]
@@ -246,137 +242,137 @@
     "consolidatedconstructionsolutions": {
       "meta": {
         "title": "Consolidated Construction",
-        "description": "Designed a 1M+ users product utilizing my best personal experience: sleeping.",
+        "description": "A professional corporate brand package and user-friendly website delivered to position this Houston construction firm for growth in residential and commercial markets.",
         "speed": 0.8,
         "url": "/project/consolidatedconstructionsolutions"
       },
       "project": [
         {
+          "image": "/images/CCS.png",
           "title": "Brief",
-          "description": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
+          "description": "Consolidated Construction Solutions is a Houston-based, family-driven firm offering architectural and construction services across both residential and commercial markets. Built on trust, craftsmanship, and professionalism, the brand needed a refined identity and online presence to reflect its values and support future growth.",
+          "goals": "•\tBuild a clean, trustworthy brand for residential and commercial clients\n•\tLaunch a website with scheduling, quote generation, and project showcase\n•\tCreate branded materials for on-site, digital, and social visibility",
+          "challenges": "•\tBalance a professional tone with family-oriented values\n•\tAppeal to a broad audience—from homeowners to commercial developers\n•\tDeliver a full brand system within a limited timeline and budget",
+          "solutions": "•\tDesigned a refined identity using warm, business-class color tones\n•\tDeveloped a responsive website with key client-facing features\n•\tDelivered a full branding package: stationery, apparel, magnets, and social templates"
+        },
+        {
           "image": "/images/CCS-Imagery.png",
-          "goals": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
-          "challenges": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
-          "solutions": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges."
+          "title": "Moodboard",
+          "description": "A visual direction board reflecting the brand’s clean, professional aesthetic and construction industry roots."
         },
         {
-          "title": "Design Execution",
-          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
-          "image": "/images/CCS-Logo.png"
+          "image": "/images/CCS-Logo.png",
+          "title": "Logo Formats",
+          "description": "Primary and alternate logo formats built for flexibility across digital, signage, and print applications."
         },
         {
-          "title": "Concept Development",
-          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy.",
-          "image": "/images/CCS-Identity_.png"
+          "image": "/images/CCS-Identity_.png",
+          "title": "Company Colors & Typeface",
+          "description": "A business-forward color palette and sturdy typeface selected to convey trust, structure, and professionalism."
         },
         {
-          "title": "Client Collaboration",
-          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations.",
-          "image": "/images/CCS-kit.png"
+          "image": "/images/CCS-kit.png",
+          "title": "Stationery Kit",
+          "description": "Branded stationery designs including letterhead, business cards, and job-site documents for a unified identity."
         },
         {
+          "image": "/images/CCS-Mocks.png",
           "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/CCS-Mocks.png"
+          "description": "Mockups showcasing the logo applied to work shirts, company gear, and banners."
         },
         {
-          "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
           "image": "/images/CCS-website.png",
-          "link": "https://cnsldnsolutions.com"
+          "title": "Web Application",
+          "description": "A user-friendly website concept with scheduling, quote generation, and project showcase features."
         }
       ]
     },
     "perfectlydifferent": {
       "meta": {
         "title": "Perfectly Different",
-        "description": "Explored the Future of Fantasy Football while being in a country where football means a total different sport.",
+        "description": "An inclusive dating app concept designed with user research, personas, and UI prototypes to serve individuals with disabilities authentically and effectively.",
         "speed": 1.2,
         "url": "/project/perfectlydifferent"
       },
       "project": [
         {
-          "title": "Brief",
-          "description": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
           "image": "/images/PerfectlyDifferent-screens.png",
-          "goals": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
-          "challenges": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
-          "solutions": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges."
+          "title": "Brief",
+          "description": "Perfectly Different is a dating app concept built for people with disabilities—created to foster real, human connection in a digital world often shaped by superficial standards. What started as a friend’s idea grew into a passion project focused on inclusion, empathy, and authentic interaction.",
+          "goals": "•\tCreate a safe, inclusive space for people with disabilities to connect\n•\tBuild awareness through media and storytelling\n•\tMonetize through sponsorships instead of user fees",
+          "challenges": "•\tMarketing to an audience often overlooked or misrepresented\n•\tDesigning a dating experience free from vanity-based interactions\n•\tBalancing accessibility, usability, and emotional sensitivity",
+          "solutions": "•\tConducted 1-on-1 interviews to define user needs and experiences\n•\tMapped requirements, business goals, and user personas\n•\tDesigned a UI prototype centered on meaningful, accessible interaction"
         },
         {
-          "title": "Concept Development",
-          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy.",
-          "image": "/images/PerfectlyDifferent-brief.png"
+          "image": "/images/Perfectly-Different-quote.png",
+          "title": "Moodboard",
+          "description": "A visual foundation capturing the inclusive, empowering, and human-centered spirit of the brand."
         },
         {
-          "title": "Design Execution",
-          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
-          "image": "/images/Perfectly-Different-quote.png"
+          "image": "/images/Perfectly-Different-requirements.png",
+          "title": "Business Requirements",
+          "description": "Key structural and functional goals defined to support app development and user safety."
         },
         {
-          "title": "Client Collaboration",
-          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations.",
-          "image": "/images/Perfectly-Different-requirements.png"
+          "image": "/images/Perfectly-Different-needs.png",
+          "title": "Business Needs",
+          "description": "Core business objectives driving product design, marketing, and community engagement."
         },
         {
-          "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/Perfectly-Different-needs.png"
+          "image": "/images/Perfectly-Different-research.png",
+          "title": "Business Voice, Tone, & Personality",
+          "description": "A brand voice developed to be empathetic, honest, and confidently inclusive."
         },
         {
-          "title": "Project Discovery",
-          "description": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
-          "image": "/images/Perfectly-Different-research.png"
+          "image": "/images/Perfectly-Different-interviews.png",
+          "title": "User Research",
+          "description": "Direct insights from real people with disabilities to inform product features and emotional design."
         },
         {
-          "title": "Concept Development",
-          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy.",
-          "image": "/images/Perfectly-Different-interviews.png"
+          "image": "/images/Perfectly-Different-user-needs.jpg",
+          "title": "User Needs",
+          "description": "A concise list of user goals, pain points, and accessibility priorities that shaped the experience."
         },
         {
-          "title": "Design Execution",
-          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
-          "image": "/images/Perfectly-Different-user-needs.jpg"
+          "image": "/images/Perfectly-Different-user-type-1.png",
+          "title": "User Persona",
+          "description": "A representative profile that reflects the motivations and daily challenges of a female user."
         },
         {
-          "title": "Client Collaboration",
-          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations.",
-          "image": "/images/Perfectly-Different-user-type-1.png"
+          "image": "/images/Perfectly-Different-user-type-2.png",
+          "title": "User Persona",
+          "description": "A detailed persona illustrating the emotional and functional needs of a male user."
         },
         {
-          "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/Perfectly-Different-user-type-2.png"
+          "image": "/images/Perfectly-Different-scenarios.png",
+          "title": "Success Metrics",
+          "description": "Scenario-based prompts designed to explore how we might solve our technical goals and track its success in real-time."
         },
         {
-          "title": "Design Execution",
-          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
-          "image": "/images/Perfectly-Different-scenarios.png"
+          "image": "/images/Perfectly-Different-compare.png",
+          "title": "Competitive Analysis",
+          "description": "An evaluation of existing dating apps to identify market gaps and inclusive opportunities.",
+          "challenges": ""
         },
         {
-          "title": "Client Collaboration",
-          "description": "Feedback loops and revision rounds helped refine each logo to align with business vision and audience expectations.",
-          "image": "/images/Perfectly-Different-compare.png"
+          "image": "/images/PerfectlyDifferent-screens.png",
+          "title": "Concept Application",
+          "description": "Initial UI concepts for onboarding and homepage experiences across platforms."
         },
         {
-          "title": "Brand Application",
-          "description": "Final logos were shown across mockups and brand collateral to demonstrate impact and real-world utility.",
-          "image": "/images/Perfectly-Different-app-preview.png"
+          "image": "/images/Perfectly-Different-app-pages.png",
+          "title": "Concept Application",
+          "description": "Interactive screens highlighting accessible UX and user-friendly dating interactions."
         },
         {
-          "title": "Project Discovery",
-          "description": "Before diving into visuals, I learned about each brand’s goals, market positioning, and existing identity challenges.",
-          "image": "/images/Perfectly-Different-app-layout.png"
+          "image": "/images/Perfectly-Different-app-preview.png",
+          "title": "Concept Application",
+          "description": "Additional layouts showcasing how inclusivity is embedded in every design detail."
         },
         {
-          "title": "Concept Development",
-          "description": "I explored visual metaphors and typography direction to create meaningful, flexible logo ideas rooted in strategy.",
-          "image": "/images/Perfectly-Different-app-pages.png"
-        },
-        {
-          "title": "Design Execution",
-          "description": "Using vector tools and grids, I crafted clean, scalable marks that hold up across all mediums—from digital to print.",
-          "image": "/images/perfectly-different-thanks.png"
+          "image": "/images/Perfectly-Different-app-layout.png",
+          "title": "Concept Application (Visual SiteMap)",
+          "description": "A top-down view of the app’s architecture to visualize user flow and functionality."
         }
       ]
     }
