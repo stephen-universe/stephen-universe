@@ -147,7 +147,7 @@ function MyApp({ Component, pageProps }) {
         });
       }
     };
-
+document.addEventListener("click", handleClick);
     // ... (keep all your other tracking functions, but add consent checks at the start)
     // For example, at the start of handleScroll, handleFormSubmit, etc. add:
     // if (!hasConsent("analytics")) return;
