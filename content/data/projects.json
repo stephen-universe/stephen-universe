@@ -73,7 +73,45 @@
           "description": "A media brand delivering bold commentary and cultural insight on news, trends, and social issues from a sharp, unapologetic perspective."
         }
       ]
-    },   
+    },
+    "anarose": {
+      "meta": {
+        "title": "Ana Rose",
+        "description": "A cohesive brand identity, website, and seamless online booking system designed to help this Dallas cleaning service grow its residential and commercial client base.",
+        "speed": 0.5,
+        "url": "/project/anarose"
+      },
+      "project": [
+        {
+          "image": "/images/Ana-Rose-residential.png",
+          "title": "Brief",
+          "description": "Ana Rose is a Dallas-based cleaning service brand founded by a solo entrepreneur looking to grow beyond word-of-mouth referrals. Originally focused on small residential cleanings, Ana Rose aimed to elevate its brand, streamline operations, and expand into larger residential projects and commercial contracts. I partnered with the founder to design a cohesive brand identity, build a modern website, and develop an online booking experience tailored to her target clientele.",
+          "goals": "•\tRefresh the brand to feel professional, trustworthy, and scalable\n•\tLaunch a website with built-in scheduling and quote requests\n•\tSupport expansion into higher-value residential and commercial markets",
+          "challenges": "•\tNo existing brand identity or web presence\n•\tManual scheduling limited growth and responsiveness\n•\tNeeded to appeal to both home and business clients",
+          "solutions": "•\tDesigned a clean, modern logo and visual system\n•\tBuilt a responsive website with online booking and service breakdowns\n•\tCrafted messaging and design that bridges residential warmth with commercial credibility"
+        },
+        {
+          "image": "/images/Ana-Rose-booking.png",
+          "title": "Web Application (How-To-Guide)",
+          "description": "A simple step-by-step guide that helps users easily navigate and book Ana Rose’s cleaning services online."
+        },
+        {
+          "image": "/images/Ana-Rose-modal-two.png",
+          "title": "Web Application (Service-Description)",
+          "description": "An overview of Ana Rose’s residential and commercial cleaning services with clear, client-focused descriptions."
+        },
+        {
+          "image": "/images/Ana-Rose-faqs.png",
+          "title": "Web Application (Custom-Services)",
+          "description": "A customizable service builder that lets users tailor cleaning packages to their specific home or business needs."
+        },
+        {
+          "image": "/images/Ana-Rose-reviews.png",
+          "title": "Web Application (Testimonials)",
+          "description": "A collection of real client testimonials that showcase trust, satisfaction, and proven cleaning results."
+        }
+      ]
+    },
     "queendomfarms": {
       "meta": {
         "title": "Queendom Farms",
@@ -93,12 +131,12 @@
         {
           "image": "/images/Queendom-Farms-inspiration.jpg",
           "title": "Moodboard",
-          "description": "A visual collage capturing the brand’s essence—rooted in nature, empowerment, and modern femininity."
+          "description": "A visual collage capturing the brand’s essence—rooted in nature, empowerment, and modern femininity.\n\n—\n\nThis moodboard set the foundation for Queendom Farms’ visual identity, blending organic textures, modern femininity, and themes of growth to visually align with the brand’s mission."
         },
         {
           "image": "/images/Queendom-Farms-persona.jpg",
           "title": "User Persona",
-          "description": "A detailed profile outlining the brand’s target audience, needs, values, and buying behaviors."
+          "description": "A detailed profile outlining the brand’s target audience, needs, values, and buying behaviors.\n\n—\n\nDeveloped through audience research, this persona defines key motivations, lifestyle choices, and purchasing habit. This ensures that the brand resonates authentically with its core audience."
         },
         {
           "image": "/images/Queendom-Farms-user.jpg",
@@ -157,7 +195,51 @@
         }
       ]
     },
-        "consolidatedconstructionsolutions": {
+    "epicfuture": {
+      "meta": {
+        "title": "Epic Future",
+        "description": "A versatile entertainment brand developed with culturally inspired logos and apparel designs, establishing a bold presence across key U.S. cities.",
+        "speed": 0.8,
+        "url": "/project/epicfuture"
+      },
+      "project": [
+        {
+          "image": "/images/EpicFuture-home.png",
+          "title": "Brief",
+          "description": "Epic Future was born from a vision: to create a bold entertainment brand that could live beyond the stage—on apparel, in culture, and in city streets. Founded by a Haitian-born creative, the brand needed to feel global, yet deeply personal.",
+          "goals": "•\tCreate a brand fit for apparel, jewelry, and media\n•\tDesign a bold “EFE” submark for lifestyle use\n•\tReflect Haitian heritage through color\n•\tLocalize visuals for LA, ATL, and NYC",
+          "challenges": "•\tBalancing streetwear and luxury in one mark\n•\tHonoring culture without clichés\n•\tKeeping city visuals distinct but unified",
+          "solutions": "•\tBuilt a dual-logo system: Epic Future + EFE\n•\tUsed a modernized Haitian color palette\n•\tDesigned landmark-based EFE visuals per city\n•\tDelivered a flexible, cross-market brand system",
+          "video": ""
+        },
+        {
+          "image": "/images/EpicFuture-bw.png",
+          "title": "Logo Variant (Full)",
+          "description": "Clean black and white versions of the Epic Future logo showcasing its versatility across digital and physical formats."
+        },
+        {
+          "image": "/images/EpicFuture-cities.png",
+          "title": "Logo Variant (City-Collab)",
+          "description": "Masked logo variants featuring iconic city landmarks to localize the Epic Future brand in key cultural hubs."
+        },
+        {
+          "image": "/images/EpicFuture-Eight.png",
+          "title": "Logo Variant (Acronym)",
+          "description": "A dynamic EFE emblem using masked letterforms from each city variant and colored with the Haitian flag to honor heritage."
+        },
+        {
+          "image": "/images/EpicFuture-styles.png",
+          "title": "Brand Application",
+          "description": "Branded t-shirt mockups displaying the Epic Future and EFE logos in fashion-forward streetwear contexts."
+        },
+        {
+          "title": "Brand Application",
+          "description": "Video preview of a model wearing an EFE-marked hoodie, highlighting logo impact in motion and lifestyle branding.",
+          "video": "/images/videos/EpicFuture-clip.mp4"
+        }
+      ]
+    },
+    "consolidatedconstructionsolutions": {
       "meta": {
         "title": "Consolidated Construction",
         "description": "A professional corporate brand package and user-friendly website delivered to position this Houston construction firm for growth in residential and commercial markets.",
@@ -203,88 +285,6 @@
           "title": "Web Application",
           "description": "A user-friendly website concept with scheduling, quote generation, and project showcase features.",
           "link": "https://cnsldconstruction.com"
-        }
-      ]
-    },
-    "epicfuture": {
-      "meta": {
-        "title": "Epic Future",
-        "description": "A versatile entertainment brand developed with culturally inspired logos and apparel designs, establishing a bold presence across key U.S. cities.",
-        "speed": 0.8,
-        "url": "/project/epicfuture"
-      },
-      "project": [
-        {
-          "image": "/images/EpicFuture-home.png",
-          "title": "Brief",
-          "description": "Epic Future was born from a vision: to create a bold entertainment brand that could live beyond the stage—on apparel, in culture, and in city streets. Founded by a Haitian-born creative, the brand needed to feel global, yet deeply personal.",
-          "goals": "•\tCreate a brand fit for apparel, jewelry, and media\n•\tDesign a bold “EFE” submark for lifestyle use\n•\tReflect Haitian heritage through color\n•\tLocalize visuals for LA, ATL, and NYC",
-          "challenges": "•\tBalancing streetwear and luxury in one mark\n•\tHonoring culture without clichés\n•\tKeeping city visuals distinct but unified",
-          "solutions": "•\tBuilt a dual-logo system: Epic Future + EFE\n•\tUsed a modernized Haitian color palette\n•\tDesigned landmark-based EFE visuals per city\n•\tDelivered a flexible, cross-market brand system",
-          "video": ""
-        },
-        {
-          "image": "/images/EpicFuture-bw.png",
-          "title": "Logo Variant (Full)",
-          "description": "Clean black and white versions of the Epic Future logo showcasing its versatility across digital and physical formats."
-        },
-        {
-          "image": "/images/EpicFuture-cities.png",
-          "title": "Logo Variant (City-Collab)",
-          "description": "Masked logo variants featuring iconic city landmarks to localize the Epic Future brand in key cultural hubs."
-        },
-        {
-          "image": "/images/EpicFuture-Eight.png",
-          "title": "Logo Variant (Acronym)",
-          "description": "A dynamic EFE emblem using masked letterforms from each city variant and colored with the Haitian flag to honor heritage."
-        },
-        {
-          "image": "/images/EpicFuture-styles.png",
-          "title": "Brand Application",
-          "description": "Branded t-shirt mockups displaying the Epic Future and EFE logos in fashion-forward streetwear contexts."
-        },
-        {
-          "title": "Brand Application",
-          "description": "Video preview of a model wearing an EFE-marked hoodie, highlighting logo impact in motion and lifestyle branding.",
-          "video": "/images/videos/EpicFuture-clip.mp4"
-        }
-      ]
-    },
-     "anarose": {
-      "meta": {
-        "title": "Ana Rose",
-        "description": "A cohesive brand identity, website, and seamless online booking system designed to help this Dallas cleaning service grow its residential and commercial client base.",
-        "speed": 0.5,
-        "url": "/project/anarose"
-      },
-      "project": [
-        {
-          "image": "/images/Ana-Rose-residential.png",
-          "title": "Brief",
-          "description": "Ana Rose is a Dallas-based cleaning service brand founded by a solo entrepreneur looking to grow beyond word-of-mouth referrals. Originally focused on small residential cleanings, Ana Rose aimed to elevate its brand, streamline operations, and expand into larger residential projects and commercial contracts. I partnered with the founder to design a cohesive brand identity, build a modern website, and develop an online booking experience tailored to her target clientele.",
-          "goals": "•\tRefresh the brand to feel professional, trustworthy, and scalable\n•\tLaunch a website with built-in scheduling and quote requests\n•\tSupport expansion into higher-value residential and commercial markets",
-          "challenges": "•\tNo existing brand identity or web presence\n•\tManual scheduling limited growth and responsiveness\n•\tNeeded to appeal to both home and business clients",
-          "solutions": "•\tDesigned a clean, modern logo and visual system\n•\tBuilt a responsive website with online booking and service breakdowns\n•\tCrafted messaging and design that bridges residential warmth with commercial credibility"
-        },
-        {
-          "image": "/images/Ana-Rose-booking.png",
-          "title": "Web Application (How-To-Guide)",
-          "description": "A simple step-by-step guide that helps users easily navigate and book Ana Rose’s cleaning services online."
-        },
-        {
-          "image": "/images/Ana-Rose-modal-two.png",
-          "title": "Web Application (Service-Description)",
-          "description": "An overview of Ana Rose’s residential and commercial cleaning services with clear, client-focused descriptions."
-        },
-        {
-          "image": "/images/Ana-Rose-faqs.png",
-          "title": "Web Application (Custom-Services)",
-          "description": "A customizable service builder that lets users tailor cleaning packages to their specific home or business needs."
-        },
-        {
-          "image": "/images/Ana-Rose-reviews.png",
-          "title": "Web Application (Testimonials)",
-          "description": "A collection of real client testimonials that showcase trust, satisfaction, and proven cleaning results."
         }
       ]
     },
