@@ -74,233 +74,6 @@
         }
       ]
     },
-    "anarose": {
-      "meta": {
-        "title": "Ana Rose",
-        "description": "A cohesive brand identity, website, and seamless online booking system designed to help this Dallas cleaning service grow its residential and commercial client base.",
-        "speed": 0.5,
-        "url": "/project/anarose"
-      },
-      "project": [
-        {
-          "image": "/images/Ana-Rose-residential.png",
-          "title": "Brief",
-          "description": "Ana Rose is a Dallas-based cleaning service brand founded by a solo entrepreneur looking to grow beyond word-of-mouth referrals. Originally focused on small residential cleanings, Ana Rose aimed to elevate its brand, streamline operations, and expand into larger residential projects and commercial contracts. I partnered with the founder to design a cohesive brand identity, build a modern website, and develop an online booking experience tailored to her target clientele.",
-          "goals": "•\tRefresh the brand to feel professional, trustworthy, and scalable\n•\tLaunch a website with built-in scheduling and quote requests\n•\tSupport expansion into higher-value residential and commercial markets",
-          "challenges": "•\tNo existing brand identity or web presence\n•\tManual scheduling limited growth and responsiveness\n•\tNeeded to appeal to both home and business clients",
-          "solutions": "•\tDesigned a clean, modern logo and visual system\n•\tBuilt a responsive website with online booking and service breakdowns\n•\tCrafted messaging and design that bridges residential warmth with commercial credibility"
-        },
-        {
-          "image": "/images/Ana-Rose-booking.png",
-          "title": "Web Application (How-To-Guide)",
-          "description": "A simple step-by-step guide that helps users easily navigate and book Ana Rose’s cleaning services online."
-        },
-        {
-          "image": "/images/Ana-Rose-modal-two.png",
-          "title": "Web Application (Service-Description)",
-          "description": "An overview of Ana Rose’s residential and commercial cleaning services with clear, client-focused descriptions."
-        },
-        {
-          "image": "/images/Ana-Rose-faqs.png",
-          "title": "Web Application (Custom-Services)",
-          "description": "A customizable service builder that lets users tailor cleaning packages to their specific home or business needs."
-        },
-        {
-          "image": "/images/Ana-Rose-reviews.png",
-          "title": "Web Application (Testimonials)",
-          "description": "A collection of real client testimonials that showcase trust, satisfaction, and proven cleaning results."
-        }
-      ]
-    },
-    "queendomfarms": {
-      "meta": {
-        "title": "Queendom Farms",
-        "description": "A strong visual brand and logo system created to authentically represent this women-led urban farm’s mission and audience.",
-        "speed": 0.67,
-        "url": "/project/queendomfarms"
-      },
-      "project": [
-        {
-          "image": "/images/Queendom-Farms-Home.jpg",
-          "title": "Brief",
-          "description": "Queendom Farms is an urban flower and fruit farm based in Georgia, aiming to establish itself in an industry traditionally dominated by men. Founded by two women inspired and empowered by agriculture, they set out to create a strong and authentic brand identity of their own",
-          "goals": "•\tEstablish a bold, authentic brand rooted in empowerment and agriculture\n•\tDifferentiate Queendom in a male-dominated farming industry\n•\tCreate a visual identity that reflects both strength and natural beauty",
-          "challenges": "•\tEntering a competitive space with limited existing brand recognition\n•\tBalancing femininity and authority in a traditionally rugged market\n•\tCommunicating values of sustainability, empowerment, and quality in a cohesive way",
-          "solutions": "•\tDeveloped a confident and earthy visual identity that honors both founders’ spirit and the land\n•\tCrafted brand language that celebrates women in agriculture without relying on stereotypes\n•\tBuilt a brand system that’s flexible across packaging, signage, digital, and farmers market presence"
-        },
-        {
-          "image": "/images/Queendom-Farms-inspiration.jpg",
-          "title": "Moodboard",
-          "description": "A visual collage capturing the brand’s essence—rooted in nature, empowerment, and modern femininity.\n\n—\n\nThis moodboard set the foundation for Queendom Farms’ visual identity, blending organic textures, modern femininity, and themes of growth to visually align with the brand’s mission."
-        },
-        {
-          "image": "/images/Queendom-Farms-persona.jpg",
-          "title": "User Persona",
-          "description": "A detailed profile outlining the brand’s target audience, needs, values, and buying behaviors.\n\n—\n\nDeveloped through audience research, this persona defines key motivations, lifestyle choices, and purchasing habit. This ensures that the brand resonates authentically with its core audience."
-        },
-        {
-          "image": "/images/Queendom-Farms-user.jpg",
-          "title": "User Persona",
-          "description": "A visual representation of Queendom Farms' ideal customer, crafted to guide brand decisions.\n\n—\n\nA composite visual of Queendom Farms’ ideal customer, helping guide tone, aesthetic, and messaging decisions from brand voice to UX flow."
-        },
-        {
-          "image": "/images/Queendom-Farms-sketch.jpg",
-          "title": "Sketch & Prototypes",
-          "description": "Early logo sketches and digital prototypes exploring symbolism, balance, and brand voice.\n\n—\n\nWith the initial sketches I wanted to explore symbols of strength and cultivation that evolved into digital prototypes that required being tested for its ingenuity, uniqueness, and scalability across real-world applications."
-        },
-        {
-          "image": "/images/Queendom-Farms-final.jpg",
-          "title": "Logo Concept",
-          "description": "The official Queendom Farms logo—a bold, elegant mark reflecting strength and authenticity.\n\n—\n\nThe final logo balances regal strength with organic elegance—capturing Queendom Farms’ essence as a bold, women-led agricultural brand."
-        },
-        {
-          "image": "/images/Queendom-Farms-formats.jpg",
-          "title": "Logo Formats",
-          "description": "Multiple logo file types and layouts for flexible use across packaging, web, and print.\n\n—\n\nDesigned for versatility, logo assets were delivered in various formats to ensure consistency across digital, print, and product-based branding."
-        },
-        {
-          "image": "/images/Queendom-Farms-type.jpg",
-          "title": "TypeFace",
-          "description": "A custom font pairing chosen for legibility and style, reinforcing the brand’s grounded tone.\n\n—\n\nThis clean yet grounded font pairing was selected for readability and warmth—supporting brand storytelling across packaging, signage, and digital platforms."
-        },
-        {
-          "image": "/images/Queendom-Farms-guide.jpg",
-          "title": "Colors",
-          "description": "A warm, earthy color palette inspired by organic growth, soil, and harvest seasons.\n\n—\n\nAn earthy, seasonal palette communicates authenticity and sustainability while enhancing recognition and emotional resonance with the target audience."
-        },
-        {
-          "image": "/images/Queendom-Farms-variants.jpg",
-          "title": "Logo Variations",
-          "description": "Alternate logo versions optimized for light, dark, small-scale, and vertical applications.\n\n—\n\nEach variation ensures brand consistency across all environments—whether on small-scale tags, dark-mode websites, or vertical packaging."
-        },
-        {
-          "image": "/images/Queendom-Farms-product.jpg",
-          "title": "Moodboard",
-          "description": "An extended brand moodboard showing lifestyle inspiration, textures, and tone.\n\n—\n\nThis extended board reinforces the brand’s visual direction, drawing from real textures, natural settings, and lifestyle cues to support design decisions."
-        },
-        {
-          "image": "/images/Queendom-Farms-products.jpg",
-          "title": "Brand Application",
-          "description": "Real-world mockups of the Queendom Farms brand across packaging, merchandise, and social media."
-        },
-        {
-          "image": "/images/Queendom-Farms-package.jpg",
-          "title": "Brand Application",
-          "description": "Real-world mockups of the Queendom Farms brand across packaging, merchandise, and social media."
-        },
-        {
-          "image": "/images/Queendom-Farms-packaging.jpg",
-          "title": "Brand Application",
-          "description": "Real-world mockups of the Queendom Farms brand across packaging, merchandise, and social media."
-        }
-      ]
-    },
-    "epicfuture": {
-      "meta": {
-        "title": "Epic Future",
-        "description": "A versatile entertainment brand developed with culturally inspired logos and apparel designs, establishing a bold presence across key U.S. cities.",
-        "speed": 0.8,
-        "url": "/project/epicfuture"
-      },
-      "project": [
-        {
-          "image": "/images/EpicFuture-home.png",
-          "title": "Brief",
-          "description": "Epic Future was born from a vision: to create a bold entertainment brand that could live beyond the stage—on apparel, in culture, and in city streets. Founded by a Haitian-born creative, the brand needed to feel global, yet deeply personal.",
-          "goals": "•\tCreate a brand fit for apparel, jewelry, and media\n•\tDesign a bold “EFE” submark for lifestyle use\n•\tReflect Haitian heritage through color\n•\tLocalize visuals for LA, ATL, and NYC",
-          "challenges": "•\tBalancing streetwear and luxury in one mark\n•\tHonoring culture without clichés\n•\tKeeping city visuals distinct but unified",
-          "solutions": "•\tBuilt a dual-logo system: Epic Future + EFE\n•\tUsed a modernized Haitian color palette\n•\tDesigned landmark-based EFE visuals per city\n•\tDelivered a flexible, cross-market brand system",
-          "video": ""
-        },
-        {
-          "image": "/images/1A0B810F-6900-4AE5-BD5C-A33E2F3CB51B.png",
-          "title": "Process"
-        },
-        {
-          "title": "User Persona"
-        },
-        {
-          "title": "User Persona"
-        },
-        {
-          "image": "/images/EpicFuture-bw.png",
-          "title": "Logo Variant (Full)",
-          "description": "Clean black and white versions of the Epic Future logo showcasing its versatility across digital and physical formats.\n\n—\n\nBy starting with a stripped-down version, we ensured the logo’s core identity could stand alone without color or effects—proving its clarity, scalability, and recognizability in any environment."
-        },
-        {
-          "image": "/images/EpicFuture-cities.png",
-          "title": "Logo Variant (City-Collab)",
-          "description": "Masked logo variants featuring iconic city landmarks to localize the Epic Future brand in key cultural hubs.\n\n—\n\nLocalizing the brand with city-inspired masks bridges cultural relevance with visual storytelling, allowing Epic Future to resonate authentically with diverse audiences while maintaining a cohesive identity system."
-        },
-        {
-          "image": "/images/EpicFuture-Eight.png",
-          "title": "Logo Variant (Acronym)",
-          "description": "A dynamic EFE emblem using masked letterforms from each city variant and colored with the Haitian flag to honor heritage.\n\n—\n\nThe choice to unify the acronym using masked fragments from different city variants and the Haitian flag was a deliberate cultural nod—celebrating heritage while reinforcing community, pride, and movement across borders."
-        },
-        {
-          "image": "/images/EpicFuture-styles.png",
-          "title": "Brand Application",
-          "description": "Branded t-shirt mockups displaying the Epic Future and EFE logos in fashion-forward streetwear contexts.\n\n—\n\nStreetwear served as the ideal medium to validate the logo’s visual weight and flexibility—transforming design into lifestyle and testing how well the identity holds up in real-world, trend-driven spaces."
-        },
-        {
-          "title": "Brand Application",
-          "description": "Video preview of a model wearing an EFE-marked hoodie, highlighting logo impact in motion and lifestyle branding.\n\n—\n\nThe video format was strategically used to demonstrate motion adaptability and emotional resonance, allowing the brand to be experienced as more than a static mark—one that lives and breathes through everyday expression.",
-          "video": "/images/videos/EpicFuture-clip.mp4"
-        }
-      ]
-    },
-    "consolidatedconstructionsolutions": {
-      "meta": {
-        "title": "Consolidated Construction",
-        "description": "A professional corporate brand package and user-friendly website delivered to position this Houston construction firm for growth in residential and commercial markets.",
-        "speed": 0.8,
-        "url": "/project/consolidatedconstructionsolutions"
-      },
-      "project": [
-        {
-          "image": "/images/CCS.png",
-          "title": "Brief",
-          "description": "Consolidated Construction Solutions is a Houston-based, family-driven firm offering architectural and construction services across both residential and commercial markets. Built on trust, craftsmanship, and professionalism, the brand needed a refined identity and online presence to reflect its values and support future growth.",
-          "goals": "•\tBuild a clean, trustworthy brand for residential and commercial clients\n•\tLaunch a website with scheduling, quote generation, and project showcase\n•\tCreate branded materials for on-site, digital, and social visibility",
-          "challenges": "•\tBalance a professional tone with family-oriented values\n•\tAppeal to a broad audience—from homeowners to commercial developers\n•\tDeliver a full brand system within a limited timeline and budget",
-          "solutions": "•\tDesigned a refined identity using warm, business-class color tones\n•\tDeveloped a responsive website with key client-facing features\n•\tDelivered a full branding package: stationery, apparel, magnets, and social templates"
-        },
-        {
-          "image": "/images/CCS-Imagery.png",
-          "title": "Moodboard",
-          "description": "A visual direction board reflecting the brand’s clean, professional aesthetic and construction industry roots.\n\n—\n\nCurated to evoke reliability and precision, the moodboard established a visual tone rooted in structure, professionalism, and the no-nonsense aesthetics of commercial and residential construction."
-        },
-        {
-          "title": "Sketch & Prototype"
-        },
-        {
-          "image": "/images/CCS-Logo.png",
-          "title": "Logo Formats",
-          "description": "Primary and alternate logo formats built for flexibility across digital, signage, and print applications.\n\n—\n\nThe selected mark balances corporate polish with industrial grit—optimized in multiple formats to ensure clarity and consistency across print, apparel, digital interfaces, and environmental branding."
-        },
-        {
-          "image": "/images/CCS-Identity_.png",
-          "title": "Company Colors & Typeface",
-          "description": "A business-forward color palette and sturdy typeface selected to convey trust, structure, and professionalism.\n\n—\n\nA deep navy and steel gray palette was paired with a strong, utilitarian typeface to visually reinforce the brand’s commitment to integrity, craftsmanship, and professionalism in the construction space."
-        },
-        {
-          "image": "/images/CCS-kit.png",
-          "title": "Stationery Kit",
-          "description": "Branded stationery designs including letterhead, business cards, and job-site documents for a unified identity.\n\n—\n\nBranded business materials were designed to carry the same sense of order and clarity, streamlining the company’s client touchpoints while maintaining a consistent visual identity on-site and in the office."
-        },
-        {
-          "image": "/images/CCS-Mocks.png",
-          "title": "Brand Application",
-          "description": "Mockups showcasing the logo applied to work shirts, company gear, and banners.\n\n—\n\nRealistic brand mockups were applied across high-impact surfaces—like crew uniforms and trucks—to showcase the brand’s cohesion in client-facing and operational contexts, increasing brand recognition on job sites."
-        },
-        {
-          "image": "/images/CCS-website.png",
-          "title": "Web Application",
-          "description": "A user-friendly website concept with scheduling, quote generation, and project showcase features.\n\n—\n\nDesigned with conversion and usability in mind, the site concept integrates intuitive quote requests, service explanations, and visual project showcases to improve trust, navigation, and lead generation.",
-          "link": "https://cnsldconstruction.com"
-        }
-      ]
-    },
     "perfectlydifferent": {
       "meta": {
         "title": "Perfectly Different",
@@ -386,6 +159,241 @@
           "image": "/images/Perfectly-Different-app-layout.png",
           "title": "Concept Application (Visual SiteMap)",
           "description": "A top-down view of the app’s architecture to visualize user flow and functionality."
+        }
+      ]
+    },
+    
+    "queendomfarms": {
+      "meta": {
+        "title": "Queendom Farms",
+        "description": "A strong visual brand and logo system created to authentically represent this women-led urban farm’s mission and audience.",
+        "speed": 0.67,
+        "url": "/project/queendomfarms"
+      },
+      "project": [
+        {
+          "image": "/images/Queendom-Farms-Home.jpg",
+          "title": "Brief",
+          "description": "Queendom Farms is an urban flower and fruit farm based in Georgia, aiming to establish itself in an industry traditionally dominated by men. Founded by two women inspired and empowered by agriculture, they set out to create a strong and authentic brand identity of their own",
+          "goals": "•\tEstablish a bold, authentic brand rooted in empowerment and agriculture\n•\tDifferentiate Queendom in a male-dominated farming industry\n•\tCreate a visual identity that reflects both strength and natural beauty",
+          "challenges": "•\tEntering a competitive space with limited existing brand recognition\n•\tBalancing femininity and authority in a traditionally rugged market\n•\tCommunicating values of sustainability, empowerment, and quality in a cohesive way",
+          "solutions": "•\tDeveloped a confident and earthy visual identity that honors both founders’ spirit and the land\n•\tCrafted brand language that celebrates women in agriculture without relying on stereotypes\n•\tBuilt a brand system that’s flexible across packaging, signage, digital, and farmers market presence"
+        },
+        {
+          "image": "/images/Queendom-Farms-inspiration.jpg",
+          "title": "Moodboard",
+          "description": "A visual collage capturing the brand’s essence—rooted in nature, empowerment, and modern femininity.\n\n—\n\nThis moodboard set the foundation for Queendom Farms’ visual identity, blending organic textures, modern femininity, and themes of growth to visually align with the brand’s mission."
+        },
+        {
+          "image": "/images/Queendom-Farms-persona.jpg",
+          "title": "User Persona",
+          "description": "A detailed profile outlining the brand’s target audience, needs, values, and buying behaviors.\n\n—\n\nDeveloped through audience research, this persona defines key motivations, lifestyle choices, and purchasing habit. This ensures that the brand resonates authentically with its core audience."
+        },
+        {
+          "image": "/images/Queendom-Farms-user.jpg",
+          "title": "User Persona",
+          "description": "A visual representation of Queendom Farms' ideal customer, crafted to guide brand decisions.\n\n—\n\nA composite visual of Queendom Farms’ ideal customer, helping guide tone, aesthetic, and messaging decisions from brand voice to UX flow."
+        },
+        {
+          "image": "/images/Queendom-Farms-sketch.jpg",
+          "title": "Sketch & Prototypes",
+          "description": "Early logo sketches and digital prototypes exploring symbolism, balance, and brand voice.\n\n—\n\nWith the initial sketches I wanted to explore symbols of strength and cultivation that evolved into digital prototypes that required being tested for its ingenuity, uniqueness, and scalability across real-world applications."
+        },
+        {
+          "image": "/images/Queendom-Farms-final.jpg",
+          "title": "Logo Concept",
+          "description": "The official Queendom Farms logo—a bold, elegant mark reflecting strength and authenticity.\n\n—\n\nThe final logo balances regal strength with organic elegance—capturing Queendom Farms’ essence as a bold, women-led agricultural brand."
+        },
+        {
+          "image": "/images/Queendom-Farms-formats.jpg",
+          "title": "Logo Formats",
+          "description": "Multiple logo file types and layouts for flexible use across packaging, web, and print.\n\n—\n\nDesigned for versatility, logo assets were delivered in various formats to ensure consistency across digital, print, and product-based branding."
+        },
+        {
+          "image": "/images/Queendom-Farms-type.jpg",
+          "title": "TypeFace",
+          "description": "A custom font pairing chosen for legibility and style, reinforcing the brand’s grounded tone.\n\n—\n\nThis clean yet grounded font pairing was selected for readability and warmth—supporting brand storytelling across packaging, signage, and digital platforms."
+        },
+        {
+          "image": "/images/Queendom-Farms-guide.jpg",
+          "title": "Colors",
+          "description": "A warm, earthy color palette inspired by organic growth, soil, and harvest seasons.\n\n—\n\nAn earthy, seasonal palette communicates authenticity and sustainability while enhancing recognition and emotional resonance with the target audience."
+        },
+        {
+          "image": "/images/Queendom-Farms-variants.jpg",
+          "title": "Logo Variations",
+          "description": "Alternate logo versions optimized for light, dark, small-scale, and vertical applications.\n\n—\n\nEach variation ensures brand consistency across all environments—whether on small-scale tags, dark-mode websites, or vertical packaging."
+        },
+        {
+          "image": "/images/Queendom-Farms-product.jpg",
+          "title": "Moodboard",
+          "description": "An extended brand moodboard showing lifestyle inspiration, textures, and tone.\n\n—\n\nThis extended board reinforces the brand’s visual direction, drawing from real textures, natural settings, and lifestyle cues to support design decisions."
+        },
+        {
+          "image": "/images/Queendom-Farms-products.jpg",
+          "title": "Brand Application",
+          "description": "Real-world mockups of the Queendom Farms brand across packaging, merchandise, and social media."
+        },
+        {
+          "image": "/images/Queendom-Farms-package.jpg",
+          "title": "Brand Application",
+          "description": "Real-world mockups of the Queendom Farms brand across packaging, merchandise, and social media."
+        },
+        {
+          "image": "/images/Queendom-Farms-packaging.jpg",
+          "title": "Brand Application",
+          "description": "Real-world mockups of the Queendom Farms brand across packaging, merchandise, and social media."
+        }
+      ]
+    },
+        "consolidatedconstructionsolutions": {
+      "meta": {
+        "title": "Consolidated Construction",
+        "description": "A professional corporate brand package and user-friendly website delivered to position this Houston construction firm for growth in residential and commercial markets.",
+        "speed": 0.8,
+        "url": "/project/consolidatedconstructionsolutions"
+      },
+      "project": [
+        {
+          "image": "/images/CCS.png",
+          "title": "Brief",
+          "description": "Consolidated Construction Solutions is a Houston-based, family-driven firm offering architectural and construction services across both residential and commercial markets. Built on trust, craftsmanship, and professionalism, the brand needed a refined identity and online presence to reflect its values and support future growth.",
+          "goals": "•\tBuild a clean, trustworthy brand for residential and commercial clients\n•\tLaunch a website with scheduling, quote generation, and project showcase\n•\tCreate branded materials for on-site, digital, and social visibility",
+          "challenges": "•\tBalance a professional tone with family-oriented values\n•\tAppeal to a broad audience—from homeowners to commercial developers\n•\tDeliver a full brand system within a limited timeline and budget",
+          "solutions": "•\tDesigned a refined identity using warm, business-class color tones\n•\tDeveloped a responsive website with key client-facing features\n•\tDelivered a full branding package: stationery, apparel, magnets, and social templates"
+        },
+        {
+          "image": "/images/CCS-Imagery.png",
+          "title": "Moodboard",
+          "description": "A visual direction board reflecting the brand’s clean, professional aesthetic and construction industry roots.\n\n—\n\nCurated to evoke reliability and precision, the moodboard established a visual tone rooted in structure, professionalism, and the no-nonsense aesthetics of commercial and residential construction."
+        },
+        {
+          "image": "/images/CCS-sketch.png",
+           "title": "Sketch & Prototype",
+          "description": "Primary and alternate logo formats built for flexibility across digital, signage, and print applications.\n\n—\n\nThe selected mark balances corporate polish with industrial grit—optimized in multiple formats to ensure clarity and consistency across print, apparel, digital interfaces, and environmental branding."
+        },
+        {
+          "image": "/images/CCS-prototypes.png",
+           "title": "Sketch & Prototype",
+          "description": "Primary and alternate logo formats built for flexibility across digital, signage, and print applications.\n\n—\n\nThe selected mark balances corporate polish with industrial grit—optimized in multiple formats to ensure clarity and consistency across print, apparel, digital interfaces, and environmental branding."
+        },
+        {
+          "image": "/images/CCS-Logo.png",
+          "title": "Logo Formats",
+          "description": "Primary and alternate logo formats built for flexibility across digital, signage, and print applications.\n\n—\n\nThe selected mark balances corporate polish with industrial grit—optimized in multiple formats to ensure clarity and consistency across print, apparel, digital interfaces, and environmental branding."
+        },
+        {
+          "image": "/images/CCS-Identity_.png",
+          "title": "Company Colors & Typeface",
+          "description": "A business-forward color palette and sturdy typeface selected to convey trust, structure, and professionalism.\n\n—\n\nA deep navy and steel gray palette was paired with a strong, utilitarian typeface to visually reinforce the brand’s commitment to integrity, craftsmanship, and professionalism in the construction space."
+        },
+        {
+          "image": "/images/CCS-kit.png",
+          "title": "Stationery Kit",
+          "description": "Branded stationery designs including letterhead, business cards, and job-site documents for a unified identity.\n\n—\n\nBranded business materials were designed to carry the same sense of order and clarity, streamlining the company’s client touchpoints while maintaining a consistent visual identity on-site and in the office."
+        },
+        {
+          "image": "/images/CCS-Mocks.png",
+          "title": "Brand Application",
+          "description": "Mockups showcasing the logo applied to work shirts, company gear, and banners.\n\n—\n\nRealistic brand mockups were applied across high-impact surfaces—like crew uniforms and trucks—to showcase the brand’s cohesion in client-facing and operational contexts, increasing brand recognition on job sites."
+        },
+        {
+          "image": "/images/CCS-website.png",
+          "title": "Web Application",
+          "description": "A user-friendly website concept with scheduling, quote generation, and project showcase features.\n\n—\n\nDesigned with conversion and usability in mind, the site concept integrates intuitive quote requests, service explanations, and visual project showcases to improve trust, navigation, and lead generation.",
+          "link": "https://cnsldconstruction.com"
+        }
+      ]
+    },
+    "epicfuture": {
+      "meta": {
+        "title": "Epic Future",
+        "description": "A versatile entertainment brand developed with culturally inspired logos and apparel designs, establishing a bold presence across key U.S. cities.",
+        "speed": 0.8,
+        "url": "/project/epicfuture"
+      },
+      "project": [
+        {
+          "image": "/images/EpicFuture-home.png",
+          "title": "Brief",
+          "description": "Epic Future was born from a vision: to create a bold entertainment brand that could live beyond the stage—on apparel, in culture, and in city streets. Founded by a Haitian-born creative, the brand needed to feel global, yet deeply personal.",
+          "goals": "•\tCreate a brand fit for apparel, jewelry, and media\n•\tDesign a bold “EFE” submark for lifestyle use\n•\tReflect Haitian heritage through color\n•\tLocalize visuals for LA, ATL, and NYC",
+          "challenges": "•\tBalancing streetwear and luxury in one mark\n•\tHonoring culture without clichés\n•\tKeeping city visuals distinct but unified",
+          "solutions": "•\tBuilt a dual-logo system: Epic Future + EFE\n•\tUsed a modernized Haitian color palette\n•\tDesigned landmark-based EFE visuals per city\n•\tDelivered a flexible, cross-market brand system",
+          "video": ""
+        },
+        {
+          "image": "/images/1A0B810F-6900-4AE5-BD5C-A33E2F3CB51B.png",
+          "title": "Process"
+        },
+        {
+          "title": "User Persona"
+        },
+        {
+          "title": "User Persona"
+        },
+        {
+          "image": "/images/EpicFuture-bw.png",
+          "title": "Logo Variant (Full)",
+          "description": "Clean black and white versions of the Epic Future logo showcasing its versatility across digital and physical formats.\n\n—\n\nBy starting with a stripped-down version, we ensured the logo’s core identity could stand alone without color or effects—proving its clarity, scalability, and recognizability in any environment."
+        },
+        {
+          "image": "/images/EpicFuture-cities.png",
+          "title": "Logo Variant (City-Collab)",
+          "description": "Masked logo variants featuring iconic city landmarks to localize the Epic Future brand in key cultural hubs.\n\n—\n\nLocalizing the brand with city-inspired masks bridges cultural relevance with visual storytelling, allowing Epic Future to resonate authentically with diverse audiences while maintaining a cohesive identity system."
+        },
+        {
+          "image": "/images/EpicFuture-Eight.png",
+          "title": "Logo Variant (Acronym)",
+          "description": "A dynamic EFE emblem using masked letterforms from each city variant and colored with the Haitian flag to honor heritage.\n\n—\n\nThe choice to unify the acronym using masked fragments from different city variants and the Haitian flag was a deliberate cultural nod—celebrating heritage while reinforcing community, pride, and movement across borders."
+        },
+        {
+          "image": "/images/EpicFuture-styles.png",
+          "title": "Brand Application",
+          "description": "Branded t-shirt mockups displaying the Epic Future and EFE logos in fashion-forward streetwear contexts.\n\n—\n\nStreetwear served as the ideal medium to validate the logo’s visual weight and flexibility—transforming design into lifestyle and testing how well the identity holds up in real-world, trend-driven spaces."
+        },
+        {
+          "title": "Brand Application",
+          "description": "Video preview of a model wearing an EFE-marked hoodie, highlighting logo impact in motion and lifestyle branding.\n\n—\n\nThe video format was strategically used to demonstrate motion adaptability and emotional resonance, allowing the brand to be experienced as more than a static mark—one that lives and breathes through everyday expression.",
+          "video": "/images/videos/EpicFuture-clip.mp4"
+        }
+      ]
+    },
+    "anarose": {
+      "meta": {
+        "title": "Ana Rose",
+        "description": "A cohesive brand identity, website, and seamless online booking system designed to help this Dallas cleaning service grow its residential and commercial client base.",
+        "speed": 0.5,
+        "url": "/project/anarose"
+      },
+      "project": [
+        {
+          "image": "/images/Ana-Rose-residential.png",
+          "title": "Brief",
+          "description": "Ana Rose is a Dallas-based cleaning service brand founded by a solo entrepreneur looking to grow beyond word-of-mouth referrals. Originally focused on small residential cleanings, Ana Rose aimed to elevate its brand, streamline operations, and expand into larger residential projects and commercial contracts. I partnered with the founder to design a cohesive brand identity, build a modern website, and develop an online booking experience tailored to her target clientele.",
+          "goals": "•\tRefresh the brand to feel professional, trustworthy, and scalable\n•\tLaunch a website with built-in scheduling and quote requests\n•\tSupport expansion into higher-value residential and commercial markets",
+          "challenges": "•\tNo existing brand identity or web presence\n•\tManual scheduling limited growth and responsiveness\n•\tNeeded to appeal to both home and business clients",
+          "solutions": "•\tDesigned a clean, modern logo and visual system\n•\tBuilt a responsive website with online booking and service breakdowns\n•\tCrafted messaging and design that bridges residential warmth with commercial credibility"
+        },
+        {
+          "image": "/images/Ana-Rose-booking.png",
+          "title": "Web Application (How-To-Guide)",
+          "description": "A simple step-by-step guide that helps users easily navigate and book Ana Rose’s cleaning services online."
+        },
+        {
+          "image": "/images/Ana-Rose-modal-two.png",
+          "title": "Web Application (Service-Description)",
+          "description": "An overview of Ana Rose’s residential and commercial cleaning services with clear, client-focused descriptions."
+        },
+        {
+          "image": "/images/Ana-Rose-faqs.png",
+          "title": "Web Application (Custom-Services)",
+          "description": "A customizable service builder that lets users tailor cleaning packages to their specific home or business needs."
+        },
+        {
+          "image": "/images/Ana-Rose-reviews.png",
+          "title": "Web Application (Testimonials)",
+          "description": "A collection of real client testimonials that showcase trust, satisfaction, and proven cleaning results."
         }
       ]
     }
