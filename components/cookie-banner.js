@@ -116,51 +116,65 @@ const CookieBanner = () => {
                 </p>
               </div>
               <label style={styles.toggleSwitch}>
-                <input 
-                  type="checkbox" 
-                  checked={true} 
-                  disabled 
-                  style={styles.toggleInput}
-                />
-                <span style={styles.toggleSlider} />
-              </label>
+  <input 
+    type="checkbox"
+    checked={consentPreferences.analytics}
+    onChange={() => togglePreference('analytics')}
+    style={styles.toggleInput}
+  />
+  <span style={{
+    ...styles.toggleSlider,
+    ...(consentPreferences.analytics ? styles.toggleSliderActive : {})
+  }}>
+    <span style={{
+      ...styles.toggleSliderBefore,
+      ...(consentPreferences.analytics ? styles.toggleSliderBeforeActive : {})
+    }} />
+  </span>
+</label>
             </div>
             
-            <div style={styles.preferenceItem}>
-              <div>
-                <h5 style={styles.preferenceTitle}>Analytics Cookies</h5>
-                <p style={styles.preferenceDescription}>
-                  Help us understand how visitors interact with our website.
-                </p>
-              </div>
-              <label style={styles.toggleSwitch}>
-                <input 
-                  type="checkbox" 
-                  checked={consentPreferences.analytics} 
-                  onChange={() => togglePreference('analytics')}
-                  style={styles.toggleInput}
-                />
-                <span style={styles.toggleSlider} />
-              </label>
-            </div>
-            
-            <div style={styles.preferenceItem}>
-              <div>
-                <h5 style={styles.preferenceTitle}>Marketing Cookies</h5>
-                <p style={styles.preferenceDescription}>
-                  Used to track visitors across websites for advertising purposes.
-                </p>
-              </div>
-              <label style={styles.toggleSwitch}>
-                <input 
-                  type="checkbox" 
-                  checked={consentPreferences.marketing} 
-                  onChange={() => togglePreference('marketing')}
-                  style={styles.toggleInput}
-                />
-                <span style={styles.toggleSlider} />
-              </label>
-            </div>
+             <div style={styles.preferenceItem}>
+        <div>
+          <h5 style={styles.preferenceTitle}>Analytics Cookies</h5>
+          <p style={styles.preferenceDescription}>
+            Help us understand how visitors interact with our website.
+          </p>
+        </div>
+        <label style={styles.switch}>
+          <input 
+            type="checkbox" 
+            checked={consentPreferences.analytics}
+            onChange={() => togglePreference('analytics')}
+            style={styles.switchInput}
+          />
+          <span style={{
+            ...styles.slider,
+            ...(consentPreferences.analytics ? styles.sliderActive : {})
+          }} />
+        </label>
+      </div>
+      
+      <div style={styles.preferenceItem}>
+        <div>
+          <h5 style={styles.preferenceTitle}>Marketing Cookies</h5>
+          <p style={styles.preferenceDescription}>
+            Used to track visitors across websites for advertising purposes.
+          </p>
+        </div>
+        <label style={styles.switch}>
+          <input 
+            type="checkbox" 
+            checked={consentPreferences.marketing}
+            onChange={() => togglePreference('marketing')}
+            style={styles.switchInput}
+          />
+          <span style={{
+            ...styles.slider,
+            ...(consentPreferences.marketing ? styles.sliderActive : {})
+          }} />
+        </label>
+      </div>
             
             <div style={styles.modalButtons}>
               <button 
@@ -300,6 +314,7 @@ const styles = {
     color: "#666",
     lineHeight: 1.5,
   },
+  // Toggle switch styles - use only one set (removed duplicates)
   toggleSwitch: {
     position: "relative",
     display: "inline-block",
@@ -327,9 +342,6 @@ const styles = {
   },
   toggleSliderActive: {
     backgroundColor: "#1a73e8",
-  },
-  toggleSliderFocus: {
-    boxShadow: "0 0 1px #1a73e8",
   },
   toggleSliderBefore: {
     position: "absolute",

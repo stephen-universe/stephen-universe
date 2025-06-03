@@ -4,7 +4,7 @@ import Head from "next/head";
 import appData from "@content/data/setting.json";
 import "../styles/scss/style.scss";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import CookieBanner from "../components/CookieBanner"; // Adjust path as needed
+import CookieBanner from "../../components/cookie-banner"; // Adjust path as needed
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
