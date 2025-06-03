@@ -49,7 +49,12 @@ function MyApp({ Component, pageProps }) {
           `,
         });
       }
-
+      const campaign = getCampaignFromUrl();
+        if (hasConsent("analytics") && GA_ID) {
+          window.gtag('config', GA_ID, {
+            campaign: campaign
+          });
+        }
       // Only load marketing if consented
       if (hasConsent("marketing")) {
         if (FB_ID) {
