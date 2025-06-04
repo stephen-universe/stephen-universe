@@ -74,7 +74,7 @@
         }
       ]
     },
-    "perfectlydifferent": {
+        "perfectlydifferent": {
       "meta": {
         "title": "Perfectly Different",
         "description": "An inclusive dating app concept designed with user research, personas, and UI prototypes to serve individuals with disabilities authentically and effectively.",
@@ -98,17 +98,17 @@
         {
           "image": "/images/Perfectly-Different-requirements.png",
           "title": "Business Requirements",
-          "description": "Key structural and functional goals defined to support app development and user safety.\n\n—\n\nWe defined clear objectives to ensure that every feature supports user safety, accessibility, and authentic connection—meeting real needs of an underserved audience."
+          "description": "Key structural and functional goals were defined to support app development and user safety.\n\n—\n\nWe defined clear objectives to ensure that every feature supports user safety, accessibility, and authentic connection to meet the real needs of an underserved audience."
         },
         {
           "image": "/images/Perfectly-Different-needs.png",
           "title": "Business Needs",
-          "description": "Core business objectives driving product design, marketing, and community engagement.\n\n—\n\nPrioritized functionality and accessibility standards to ensure the app offers intuitive, barrier-free navigation for users with a range of physical and cognitive abilities."
+          "description": "Core business objectives driving product design, marketing, and community engagement.\n\n—\n\nPrioritized functionality and accessibility standards to ensure the app offers intuitive, barrier-free spaces for users with various physical and cognitive requirements."
         },
         {
           "image": "/images/Perfectly-Different-research.png",
           "title": "Business Voice, Tone, & Personality",
-          "description": "A brand voice developed to be empathetic, honest, and confidently inclusive.\n\n—\n\nThe empathetic tone was intentionally chosen to reflect the brand’s mission—creating a space where users feel seen, heard, and respected from first interaction."
+          "description": "A brand voice developed to be empathetic, honest, and confidently inclusive.\n\n—\n\nThe empathetic tone was intentionally chosen to reflect the brand’s mission, which is sure to create a space where users feel seen, heard, and respected from first interaction."
         },
         {
           "image": "/images/Perfectly-Different-interviews.png",
@@ -133,12 +133,12 @@
         {
           "image": "/images/Perfectly-Different-scenarios.png",
           "title": "Success Metrics",
-          "description": "Scenario-based prompts designed to explore how we might solve our technical goals and track its success in real-time.\n\n—\n\nWe framed open-ended “How Might We” prompts to challenge assumptions and spark creative UX solutions grounded in real-world user struggles."
+          "description": "Scenario-based prompts were designed to explore how we might solve our technical goals and track their success in real-time.\n\n—\n\nWe framed open-ended “How Might We” prompts to challenge assumptions and spark creative UX solutions grounded in real-world user struggles that we could track through systems and metrics."
         },
         {
           "image": "/images/Perfectly-Different-compare.png",
           "title": "Competitive Analysis",
-          "description": "An evaluation of existing dating apps to identify market gaps and inclusive opportunities.\n\n—\n\nAnalyzing other dating platforms exposed gaps in accessibility and empathy—insights we used to position Perfectly Different as a true alternative."
+          "description": "An evaluation of existing dating apps to identify market gaps and inclusive opportunities.\n\n—\n\nAnalyzing other dating platforms exposed gaps in accessibility and empathy. We then used these insights to position Perfectly Different as a true alternative."
         },
         {
           "image": "/images/PerfectlyDifferent-screens.png",
@@ -162,7 +162,6 @@
         }
       ]
     },
-    
     "queendomfarms": {
       "meta": {
         "title": "Queendom Farms",
@@ -212,7 +211,7 @@
         {
           "image": "/images/Queendom-Farms-type.jpg",
           "title": "TypeFace",
-          "description": "A custom font pairing chosen for legibility and style, reinforcing the brand’s grounded tone.\n\n—\n\nThis clean yet grounded font pairing was selected for readability and warmth—supporting brand storytelling across packaging, signage, and digital platforms."
+          "description": "A custom font pairing chosen for legibility and style, reinforcing the brand’s grounded tone.\n\n—\n\nThis clean yet grounded font pairing was selected for readability and warmth that would go on to support brand storytelling across packaging, signage, and digital platforms."
         },
         {
           "image": "/images/Queendom-Farms-guide.jpg",
@@ -222,7 +221,7 @@
         {
           "image": "/images/Queendom-Farms-variants.jpg",
           "title": "Logo Variations",
-          "description": "Alternate logo versions optimized for light, dark, small-scale, and vertical applications.\n\n—\n\nEach variation ensures brand consistency across all environments—whether on small-scale tags, dark-mode websites, or vertical packaging."
+          "description": "Alternate logo versions optimized for light, dark, small-scale, and vertical applications.\n\n—\n\nEach variation ensures brand consistency across all environments. Whether on small-scale tags, dark-mode websites, or vertical packaging, we wanted to make sure all bases were covered for these underdogs and soon-to-be champions."
         },
         {
           "image": "/images/Queendom-Farms-product.jpg",
@@ -269,33 +268,33 @@
         },
         {
           "image": "/images/CCS-sketch.png",
-           "title": "Sketch & Prototype",
-          "description": ""
+          "title": "Sketch & Prototype",
+          "description": "Hand-drawn sketches were used to explore foundational imagery such as emblems, framing structures, and monogram concepts that aligned with the brand's emphasis on precision, strength, and reliability.\n\n--\n\nEarly sketching explored structural forms and bold shapes, which drew inspiration from elements that the client provided, using framing beams, shapes, and blueprint geometry. The goal was to create a visual foundation that felt solid, recognizable, and deeply tied to the industry."
         },
         {
           "image": "/images/CCS-prototypes.png",
-           "title": "Sketch & Prototype",
-          "description": ""
+          "title": "Sketch & Prototype",
+          "description": "Digitally rendered prototypes refined to meet the standards of clean linework, sharp edges, and scalable composition to test against real-world applications.\n\n--\n\nThe prototyping phase served as a stress test for the brand’s visual identity. Each variation was evaluated for legibility at multiple sizes, color contrast for field visibility, and visual harmony within layout constraints typical of construction signage and corporate collateral. This ensured the final mark wouldn’t just look good in isolation but in environments where the brand would live and operate. "
         },
         {
           "image": "/images/CCS-Logo.png",
           "title": "Logo Formats",
-          "description": "Primary and alternate logo formats built for flexibility across digital, signage, and print applications.\n\n—\n\nThe selected mark balances corporate polish with industrial grit—optimized in multiple formats to ensure clarity and consistency across print, apparel, digital interfaces, and environmental branding."
+          "description": "Primary and alternate logo formats built for flexibility across digital, signage, and print applications.\n\n—\n\nThe selected mark balances corporate polish with industrial grit, optimized in multiple formats to ensure clarity and consistency across print, apparel, digital interfaces, and environmental branding."
         },
         {
           "image": "/images/CCS-Identity_.png",
           "title": "Company Colors & Typeface",
-          "description": "A business-forward color palette and sturdy typeface selected to convey trust, structure, and professionalism.\n\n—\n\nA deep navy and steel gray palette was paired with a strong, utilitarian typeface to visually reinforce the brand’s commitment to integrity, craftsmanship, and professionalism in the construction space."
+          "description": "A business-forward color palette and sturdy typeface selected to convey trust, structure, and professionalism.\n\n—\n\nA canary yellow to capture attention, a chestnut brown to establish trust and reliability, and a steel gray palette was paired with a strong, utilitarian typeface to visually reinforce the brand’s commitment to integrity, craftsmanship, and professionalism in the construction space."
         },
         {
           "image": "/images/CCS-kit.png",
           "title": "Stationery Kit",
-          "description": "Branded stationery designs including letterhead, business cards, and job-site documents for a unified identity.\n\n—\n\nBranded business materials were designed to carry the same sense of order and clarity, streamlining the company’s client touchpoints while maintaining a consistent visual identity on-site and in the office."
+          "description": "Branded stationery designs including letterhead, business cards, and job-site documents for a unified identity.\n\n—\n\nBranded business materials were designed to carry the same sense of order and clarity, streamlining the company’s client touchpoints while maintaining an environmentally friendly business by using recycled paper to maintain a consistent visual identity on-site and in the office."
         },
         {
           "image": "/images/CCS-Mocks.png",
           "title": "Brand Application",
-          "description": "Mockups showcasing the logo applied to work shirts, company gear, and banners.\n\n—\n\nRealistic brand mockups were applied across high-impact surfaces—like crew uniforms and trucks—to showcase the brand’s cohesion in client-facing and operational contexts, increasing brand recognition on job sites."
+          "description": "Mockups showcasing the logo applied to work shirts, company gear, and banners.\n\n—\n\nRealistic brand mockups were applied across high-impact surfaces, like crew uniforms and banners, to showcase the brand’s cohesion in client-facing and operational contexts, increasing brand recognition on job sites."
         },
         {
           "image": "/images/CCS-website.png",
@@ -314,7 +313,7 @@
       },
       "project": [
         {
-          "image": "/images/EpicFuture-home.png",
+          "image": "/images/EpicFuture.png",
           "title": "Brief",
           "description": "Epic Future was born from a vision: to create a bold entertainment brand that could live beyond the stage—on apparel, in culture, and in city streets. Founded by a Haitian-born creative, the brand needed to feel global, yet deeply personal.",
           "goals": "•\tCreate a brand fit for apparel, jewelry, and media\n•\tDesign a bold “EFE” submark for lifestyle use\n•\tReflect Haitian heritage through color\n•\tLocalize visuals for LA, ATL, and NYC",
@@ -330,17 +329,17 @@
         {
           "image": "/images/EpicFuture-user-type-1.png",
           "title": "User Persona",
-          "description": "A detailed profile of the brand’s target audience, capturing their lifestyle, values, and cultural connections.\n\n—\n\nThis persona was crafted to ensure the brand resonates with its core audience—balancing streetwear aesthetics with cultural depth and emotional connection."
+          "description": "A detailed profile of the brand’s target audience, capturing their lifestyle, values, and cultural connections.\n\n—\n\nBrianna’s values pushed the brand to reflect more than visual style. It needed to carry purpose, inclusion, and a bold point of view. Her perspective influenced everything from logo adaptability to messaging tone, aligning the brand with a generation seeking meaning in self-expression."
         },
-          {
+        {
           "image": "/images/EpicFuture-user-type-2.png",
           "title": "User Persona",
-          "description": "A detailed profile of the brand’s target audience, capturing their lifestyle, values, and cultural connections.\n\n—\n\nThis persona was crafted to ensure the brand resonates with its core audience—balancing streetwear aesthetics with cultural depth and emotional connection."
+          "description": "A detailed persona capturing a trend-forward creative who values authenticity, cultural relevance, and local pride.\n\n--\n\nDesigning for Malik ensured the brand communicated with culturally fluent streetwear consumers who seek meaning in every design choice. His lens helped shape Epic Future into a movement, not just merchandise, rooted in identity, heritage, and credibility."
         },
         {
           "image": "/images/EpicFuture-bw.png",
           "title": "Logo Variant (Full)",
-          "description": "Clean black and white versions of the Epic Future logo showcasing its versatility across digital and physical formats.\n\n—\n\nBy starting with a stripped-down version, we ensured the logo’s core identity could stand alone without color or effects—proving its clarity, scalability, and recognizability in any environment."
+          "description": "Clean black and white versions of the Epic Future logo showcasing its versatility across digital and physical formats.\n\n—\n\nBy starting with a stripped-down version, we ensured the logo’s core identity could stand alone without color or effects, furthermore, proving its dominance, precision, and scalability in any environment."
         },
         {
           "image": "/images/EpicFuture-cities.png",
@@ -350,21 +349,21 @@
         {
           "image": "/images/EpicFuture-Eight.png",
           "title": "Logo Variant (Acronym)",
-          "description": "A dynamic EFE emblem using masked letterforms from each city variant and colored with the Haitian flag to honor heritage.\n\n—\n\nThe choice to unify the acronym using masked fragments from different city variants and the Haitian flag was a deliberate cultural nod—celebrating heritage while reinforcing community, pride, and movement across borders."
+          "description": "A dynamic EFE emblem using masked letterforms from each city variant and colored with the Haitian flag to honor heritage.\n\n—\n\nThe choice to unify the acronym using masked fragments from different city variants and the Haitian flag was a deliberate cultural nod to celebrate heritage while remembering to reinforce community, pride, and movement across borders."
         },
         {
           "image": "/images/EpicFuture-styles.png",
           "title": "Brand Application",
-          "description": "Branded t-shirt mockups displaying the Epic Future and EFE logos in fashion-forward streetwear contexts.\n\n—\n\nStreetwear served as the ideal medium to validate the logo’s visual weight and flexibility—transforming design into lifestyle and testing how well the identity holds up in real-world, trend-driven spaces."
+          "description": "Branded t-shirt mockups displaying the Epic Future and EFE logos in fashion-forward streetwear contexts.\n\n—\n\nStreetwear served as the ideal medium to validate the logo’s visual weight and flexibility, which serves the purpose to transform design into a lifestyle while also testing how well the identity holds up in real-world, trend-driven spaces."
         },
         {
           "title": "Brand Application",
-          "description": "Video preview of a model wearing an EFE-marked hoodie, highlighting logo impact in motion and lifestyle branding.\n\n—\n\nThe video format was strategically used to demonstrate motion adaptability and emotional resonance, allowing the brand to be experienced as more than a static mark—one that lives and breathes through everyday expression.",
+          "description": "Video preview of a model wearing an EFE-marked hoodie, highlighting logo impact in motion and lifestyle branding.\n\n—\n\nThe video format was strategically used to demonstrate motion adaptability and emotional resonance, allowing the brand to be experienced as more than a static mark, but one that lives and breathes through everyday expression.",
           "video": "/images/videos/EpicFuture-clip.mp4"
         }
       ]
     },
-    "anarose": {
+"anarose": {
       "meta": {
         "title": "Ana Rose",
         "description": "A cohesive brand identity, website, and seamless online booking system designed to help this Dallas cleaning service grow its residential and commercial client base.",
