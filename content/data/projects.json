@@ -74,41 +74,91 @@
         }
       ]
     },
-    "anarose": {
+    "perfectlydifferent": {
       "meta": {
-        "title": "Ana Rose",
-        "description": "A cohesive brand identity, website, and seamless online booking system designed to help this Dallas cleaning service grow its residential and commercial client base.",
-        "speed": 0.5,
-        "url": "/project/anarose"
+        "title": "Perfectly Different",
+        "description": "An inclusive dating app concept designed with user research, personas, and UI prototypes to serve individuals with disabilities authentically and effectively.",
+        "speed": 1.2,
+        "url": "/project/perfectlydifferent"
       },
       "project": [
         {
-          "image": "/images/Ana-Rose-residential.png",
+          "image": "/images/perfectly-different.png",
           "title": "Brief",
-          "description": "Ana Rose is a Dallas-based cleaning service brand founded by a solo entrepreneur looking to grow beyond word-of-mouth referrals. Originally focused on small residential cleanings, Ana Rose aimed to elevate its brand, streamline operations, and expand into larger residential projects and commercial contracts. I partnered with the founder to design a cohesive brand identity, build a modern website, and develop an online booking experience tailored to her target clientele.",
-          "goals": "•\tRefresh the brand to feel professional, trustworthy, and scalable\n•\tLaunch a website with built-in scheduling and quote requests\n•\tSupport expansion into higher-value residential and commercial markets",
-          "challenges": "•\tNo existing brand identity or web presence\n•\tManual scheduling limited growth and responsiveness\n•\tNeeded to appeal to both home and business clients",
-          "solutions": "•\tDesigned a clean, modern logo and visual system\n•\tBuilt a responsive website with online booking and service breakdowns\n•\tCrafted messaging and design that bridges residential warmth with commercial credibility"
+          "description": "Perfectly Different is a dating app concept built for people with disabilities—created to foster real, human connection in a digital world often shaped by superficial standards. What started as a friend’s idea grew into a passion project focused on inclusion, empathy, and authentic interaction.",
+          "goals": "•\tCreate a safe, inclusive space for people with disabilities to connect\n•\tBuild awareness through media and storytelling\n•\tMonetize through sponsorships instead of user fees",
+          "challenges": "•\tMarketing to an audience often overlooked or misrepresented\n•\tDesigning a dating experience free from vanity-based interactions\n•\tBalancing accessibility, usability, and emotional sensitivity",
+          "solutions": "•\tConducted 1-on-1 interviews to define user needs and experiences\n•\tMapped requirements, business goals, and user personas\n•\tDesigned a UI prototype centered on meaningful, accessible interaction"
         },
         {
-          "image": "/images/Ana-Rose-booking.png",
-          "title": "Web Application (How-To-Guide)",
-          "description": "A simple step-by-step guide that helps users easily navigate and book Ana Rose’s cleaning services online."
+          "image": "/images/Perfectly-Different-quote.png",
+          "title": "Moodboard",
+          "description": "A visual foundation capturing the inclusive, empowering, and human-centered spirit of the brand.\n\n—\n\nDesigned to evoke warmth and belonging, the moodboard sets an emotional foundation to inspire design choices that reflect inclusivity and empowerment."
         },
         {
-          "image": "/images/Ana-Rose-modal-two.png",
-          "title": "Web Application (Service-Description)",
-          "description": "An overview of Ana Rose’s residential and commercial cleaning services with clear, client-focused descriptions."
+          "image": "/images/Perfectly-Different-requirements.png",
+          "title": "Business Requirements",
+          "description": "Key structural and functional goals were defined to support app development and user safety.\n\n—\n\nWe defined clear objectives to ensure that every feature supports user safety, accessibility, and authentic connection to meet the real needs of an underserved audience."
         },
         {
-          "image": "/images/Ana-Rose-faqs.png",
-          "title": "Web Application (Custom-Services)",
-          "description": "A customizable service builder that lets users tailor cleaning packages to their specific home or business needs."
+          "image": "/images/Perfectly-Different-needs.png",
+          "title": "Business Needs",
+          "description": "Core business objectives driving product design, marketing, and community engagement.\n\n—\n\nPrioritized functionality and accessibility standards to ensure the app offers intuitive, barrier-free spaces for users with various physical and cognitive requirements."
         },
         {
-          "image": "/images/Ana-Rose-reviews.png",
-          "title": "Web Application (Testimonials)",
-          "description": "A collection of real client testimonials that showcase trust, satisfaction, and proven cleaning results."
+          "image": "/images/Perfectly-Different-research.png",
+          "title": "Business Voice, Tone, & Personality",
+          "description": "A brand voice developed to be empathetic, honest, and confidently inclusive.\n\n—\n\nThe empathetic tone was intentionally chosen to reflect the brand’s mission, which is sure to create a space where users feel seen, heard, and respected from first interaction."
+        },
+        {
+          "image": "/images/Perfectly-Different-interviews.png",
+          "title": "User Research",
+          "description": "Direct insights from real people with disabilities to inform product features and emotional design.\n\n—\n\nUser interviews revealed recurring themes of isolation and distrust in mainstream apps, which shaped our focus on transparency and adaptive features."
+        },
+        {
+          "image": "/images/Perfectly-Different-user-needs.jpg",
+          "title": "User Needs",
+          "description": "A concise list of user goals, pain points, and accessibility priorities that shaped the experience.\n\n—\n\nInsights from users emphasized the importance of control and comfort, guiding our decision to simplify interactions and provide customization where possible."
+        },
+        {
+          "image": "/images/Perfectly-Different-user-type-1.png",
+          "title": "User Persona",
+          "description": "A representative profile that reflects the motivations and daily challenges of a female user.\n\n—\n\nThis persona captures the desire for emotional safety and ease of communication, leading us to design features that build trust before engagement."
+        },
+        {
+          "image": "/images/Perfectly-Different-user-type-2.png",
+          "title": "User Persona",
+          "description": "A detailed persona illustrating the emotional and functional needs of a male user.\n\n—\n\nHis profile helped inform content that balances confidence with sensitivity, addressing frustrations with representation in current platforms."
+        },
+        {
+          "image": "/images/Perfectly-Different-scenarios.png",
+          "title": "Success Metrics",
+          "description": "Scenario-based prompts were designed to explore how we might solve our technical goals and track their success in real-time.\n\n—\n\nWe framed open-ended “How Might We” prompts to challenge assumptions and spark creative UX solutions grounded in real-world user struggles that we could track through systems and metrics."
+        },
+        {
+          "image": "/images/Perfectly-Different-compare.png",
+          "title": "Competitive Analysis",
+          "description": "An evaluation of existing dating apps to identify market gaps and inclusive opportunities.\n\n—\n\nAnalyzing other dating platforms exposed gaps in accessibility and empathy. We then used these insights to position Perfectly Different as a true alternative."
+        },
+        {
+          "image": "/images/PerfectlyDifferent-screens.png",
+          "title": "Concept Application",
+          "description": "Initial UI concepts for onboarding and homepage experiences across platforms."
+        },
+        {
+          "image": "/images/Perfectly-Different-app-pages.png",
+          "title": "Concept Application",
+          "description": "Interactive screens highlighting accessible UX and user-friendly dating interactions."
+        },
+        {
+          "image": "/images/Perfectly-Different-app-preview.png",
+          "title": "Concept Application",
+          "description": "Additional layouts showcasing how inclusivity is embedded in every design detail."
+        },
+        {
+          "image": "/images/Perfectly-Different-app-layout.png",
+          "title": "Concept Application (Visual SiteMap)",
+          "description": "A top-down view of the app’s architecture to visualize user flow and functionality."
         }
       ]
     },
@@ -195,65 +245,6 @@
         }
       ]
     },
-    "epicfuture": {
-      "meta": {
-        "title": "Epic Future",
-        "description": "A versatile entertainment brand developed with culturally inspired logos and apparel designs, establishing a bold presence across key U.S. cities.",
-        "speed": 0.8,
-        "url": "/project/epicfuture"
-      },
-      "project": [
-        {
-          "image": "/images/EpicFuture.png",
-          "title": "Brief",
-          "description": "Epic Future was born from a vision: to create a bold entertainment brand that could live beyond the stage—on apparel, in culture, and in city streets. Founded by a Haitian-born creative, the brand needed to feel global, yet deeply personal.",
-          "goals": "•\tCreate a brand fit for apparel, jewelry, and media.\n•\tDesign a bold “EFE” submark for lifestyle use.\n•\tReflect Haitian heritage through color.",
-          "challenges": "•\tBalancing streetwear and luxury in one mark.\n•\tHonoring culture without clichés.\n•\tKeeping city visuals distinct but unified.",
-          "solutions": "•\tBuilt a dual-logo system: Epic Future + EFE.\n•\tUsed a modernized Haitian color palette.\n•\tDesigned landmark-based EFE visuals per city.\n•\tDelivered a flexible, cross-market brand system.",
-          "video": ""
-        },
-        {
-          "image": "/images/EpicFuture-moodboard.png",
-          "title": "Moodboard",
-          "description": "A visual foundation capturing the brand’s essence—bold, modern, and culturally rooted.\n\n—\n\nThe moodboard was crafted to evoke a sense of movement and cultural pride, setting the tone for a brand that feels both contemporary and deeply connected to its roots."
-        },
-        {
-          "image": "/images/EpicFuture-user-type-1.png",
-          "title": "User Persona",
-          "description": "A detailed profile of the brand’s target audience, capturing their lifestyle, values, and cultural connections.\n\n—\n\nBrianna’s values pushed the brand to reflect more than visual style. It needed to carry purpose, inclusion, and a bold point of view. Her perspective influenced everything from logo adaptability to messaging tone, aligning the brand with a generation seeking meaning in self-expression."
-        },
-        {
-          "image": "/images/EpicFuture-user-type-2.png",
-          "title": "User Persona",
-          "description": "A detailed persona capturing a trend-forward creative who values authenticity, cultural relevance, and local pride.\n\n--\n\nDesigning for Malik ensured the brand communicated with culturally fluent streetwear consumers who seek meaning in every design choice. His lens helped shape Epic Future into a movement, not just merchandise, rooted in identity, heritage, and credibility."
-        },
-        {
-          "image": "/images/EpicFuture-bw.png",
-          "title": "Logo Variant (Full)",
-          "description": "Clean black and white versions of the Epic Future logo showcasing its versatility across digital and physical formats.\n\n—\n\nBy starting with a stripped-down version, we ensured the logo’s core identity could stand alone without color or effects, furthermore, proving its dominance, precision, and scalability in any environment."
-        },
-        {
-          "image": "/images/EpicFuture-cities.png",
-          "title": "Logo Variant (City-Collab)",
-          "description": "Masked logo variants featuring iconic city landmarks to localize the Epic Future brand in key cultural hubs.\n\n—\n\nLocalizing the brand with city-inspired masks bridges cultural relevance with visual storytelling, allowing Epic Future to resonate authentically with diverse audiences while maintaining a cohesive identity system."
-        },
-        {
-          "image": "/images/EpicFuture-Eight.png",
-          "title": "Logo Variant (Acronym)",
-          "description": "A dynamic EFE emblem using masked letterforms from each city variant and colored with the Haitian flag to honor heritage.\n\n—\n\nThe choice to unify the acronym using masked fragments from different city variants and the Haitian flag was a deliberate cultural nod to celebrate heritage while remembering to reinforce community, pride, and movement across borders."
-        },
-        {
-          "image": "/images/EpicFuture-styles.png",
-          "title": "Brand Application",
-          "description": "Branded t-shirt mockups displaying the Epic Future and EFE logos in fashion-forward streetwear contexts.\n\n—\n\nStreetwear served as the ideal medium to validate the logo’s visual weight and flexibility, which serves the purpose to transform design into a lifestyle while also testing how well the identity holds up in real-world, trend-driven spaces."
-        },
-        {
-          "title": "Brand Application",
-          "description": "Video preview of a model wearing an EFE-marked hoodie, highlighting logo impact in motion and lifestyle branding.\n\n—\n\nThe video format was strategically used to demonstrate motion adaptability and emotional resonance, allowing the brand to be experienced as more than a static mark, but one that lives and breathes through everyday expression.",
-          "video": "/images/videos/EpicFuture-clip.mp4"
-        }
-      ]
-    },
     "consolidatedconstructionsolutions": {
       "meta": {
         "title": "Consolidated Construction",
@@ -313,91 +304,100 @@
         }
       ]
     },
-    "perfectlydifferent": {
+     "epicfuture": {
       "meta": {
-        "title": "Perfectly Different",
-        "description": "An inclusive dating app concept designed with user research, personas, and UI prototypes to serve individuals with disabilities authentically and effectively.",
-        "speed": 1.2,
-        "url": "/project/perfectlydifferent"
+        "title": "Epic Future",
+        "description": "A versatile entertainment brand developed with culturally inspired logos and apparel designs, establishing a bold presence across key U.S. cities.",
+        "speed": 0.8,
+        "url": "/project/epicfuture"
       },
       "project": [
         {
-          "image": "/images/perfectly-different.png",
+          "image": "/images/EpicFuture.png",
           "title": "Brief",
-          "description": "Perfectly Different is a dating app concept built for people with disabilities—created to foster real, human connection in a digital world often shaped by superficial standards. What started as a friend’s idea grew into a passion project focused on inclusion, empathy, and authentic interaction.",
-          "goals": "•\tCreate a safe, inclusive space for people with disabilities to connect\n•\tBuild awareness through media and storytelling\n•\tMonetize through sponsorships instead of user fees",
-          "challenges": "•\tMarketing to an audience often overlooked or misrepresented\n•\tDesigning a dating experience free from vanity-based interactions\n•\tBalancing accessibility, usability, and emotional sensitivity",
-          "solutions": "•\tConducted 1-on-1 interviews to define user needs and experiences\n•\tMapped requirements, business goals, and user personas\n•\tDesigned a UI prototype centered on meaningful, accessible interaction"
+          "description": "Epic Future was born from a vision: to create a bold entertainment brand that could live beyond the stage—on apparel, in culture, and in city streets. Founded by a Haitian-born creative, the brand needed to feel global, yet deeply personal.",
+          "goals": "•\tCreate a brand fit for apparel, jewelry, and media.\n•\tDesign a bold “EFE” submark for lifestyle use.\n•\tReflect Haitian heritage through color.",
+          "challenges": "•\tBalancing streetwear and luxury in one mark.\n•\tHonoring culture without clichés.\n•\tKeeping city visuals distinct but unified.",
+          "solutions": "•\tBuilt a dual-logo system: Epic Future + EFE.\n•\tUsed a modernized Haitian color palette.\n•\tDesigned landmark-based EFE visuals per city.\n•\tDelivered a flexible, cross-market brand system.",
+          "video": ""
         },
         {
-          "image": "/images/Perfectly-Different-quote.png",
+          "image": "/images/EpicFuture-moodboard.png",
           "title": "Moodboard",
-          "description": "A visual foundation capturing the inclusive, empowering, and human-centered spirit of the brand.\n\n—\n\nDesigned to evoke warmth and belonging, the moodboard sets an emotional foundation to inspire design choices that reflect inclusivity and empowerment."
+          "description": "A visual foundation capturing the brand’s essence—bold, modern, and culturally rooted.\n\n—\n\nThe moodboard was crafted to evoke a sense of movement and cultural pride, setting the tone for a brand that feels both contemporary and deeply connected to its roots."
         },
         {
-          "image": "/images/Perfectly-Different-requirements.png",
-          "title": "Business Requirements",
-          "description": "Key structural and functional goals were defined to support app development and user safety.\n\n—\n\nWe defined clear objectives to ensure that every feature supports user safety, accessibility, and authentic connection to meet the real needs of an underserved audience."
-        },
-        {
-          "image": "/images/Perfectly-Different-needs.png",
-          "title": "Business Needs",
-          "description": "Core business objectives driving product design, marketing, and community engagement.\n\n—\n\nPrioritized functionality and accessibility standards to ensure the app offers intuitive, barrier-free spaces for users with various physical and cognitive requirements."
-        },
-        {
-          "image": "/images/Perfectly-Different-research.png",
-          "title": "Business Voice, Tone, & Personality",
-          "description": "A brand voice developed to be empathetic, honest, and confidently inclusive.\n\n—\n\nThe empathetic tone was intentionally chosen to reflect the brand’s mission, which is sure to create a space where users feel seen, heard, and respected from first interaction."
-        },
-        {
-          "image": "/images/Perfectly-Different-interviews.png",
-          "title": "User Research",
-          "description": "Direct insights from real people with disabilities to inform product features and emotional design.\n\n—\n\nUser interviews revealed recurring themes of isolation and distrust in mainstream apps, which shaped our focus on transparency and adaptive features."
-        },
-        {
-          "image": "/images/Perfectly-Different-user-needs.jpg",
-          "title": "User Needs",
-          "description": "A concise list of user goals, pain points, and accessibility priorities that shaped the experience.\n\n—\n\nInsights from users emphasized the importance of control and comfort, guiding our decision to simplify interactions and provide customization where possible."
-        },
-        {
-          "image": "/images/Perfectly-Different-user-type-1.png",
+          "image": "/images/EpicFuture-user-type-1.png",
           "title": "User Persona",
-          "description": "A representative profile that reflects the motivations and daily challenges of a female user.\n\n—\n\nThis persona captures the desire for emotional safety and ease of communication, leading us to design features that build trust before engagement."
+          "description": "A detailed profile of the brand’s target audience, capturing their lifestyle, values, and cultural connections.\n\n—\n\nBrianna’s values pushed the brand to reflect more than visual style. It needed to carry purpose, inclusion, and a bold point of view. Her perspective influenced everything from logo adaptability to messaging tone, aligning the brand with a generation seeking meaning in self-expression."
         },
         {
-          "image": "/images/Perfectly-Different-user-type-2.png",
+          "image": "/images/EpicFuture-user-type-2.png",
           "title": "User Persona",
-          "description": "A detailed persona illustrating the emotional and functional needs of a male user.\n\n—\n\nHis profile helped inform content that balances confidence with sensitivity, addressing frustrations with representation in current platforms."
+          "description": "A detailed persona capturing a trend-forward creative who values authenticity, cultural relevance, and local pride.\n\n--\n\nDesigning for Malik ensured the brand communicated with culturally fluent streetwear consumers who seek meaning in every design choice. His lens helped shape Epic Future into a movement, not just merchandise, rooted in identity, heritage, and credibility."
         },
         {
-          "image": "/images/Perfectly-Different-scenarios.png",
-          "title": "Success Metrics",
-          "description": "Scenario-based prompts were designed to explore how we might solve our technical goals and track their success in real-time.\n\n—\n\nWe framed open-ended “How Might We” prompts to challenge assumptions and spark creative UX solutions grounded in real-world user struggles that we could track through systems and metrics."
+          "image": "/images/EpicFuture-bw.png",
+          "title": "Logo Variant (Full)",
+          "description": "Clean black and white versions of the Epic Future logo showcasing its versatility across digital and physical formats.\n\n—\n\nBy starting with a stripped-down version, we ensured the logo’s core identity could stand alone without color or effects, furthermore, proving its dominance, precision, and scalability in any environment."
         },
         {
-          "image": "/images/Perfectly-Different-compare.png",
-          "title": "Competitive Analysis",
-          "description": "An evaluation of existing dating apps to identify market gaps and inclusive opportunities.\n\n—\n\nAnalyzing other dating platforms exposed gaps in accessibility and empathy. We then used these insights to position Perfectly Different as a true alternative."
+          "image": "/images/EpicFuture-cities.png",
+          "title": "Logo Variant (City-Collab)",
+          "description": "Masked logo variants featuring iconic city landmarks to localize the Epic Future brand in key cultural hubs.\n\n—\n\nLocalizing the brand with city-inspired masks bridges cultural relevance with visual storytelling, allowing Epic Future to resonate authentically with diverse audiences while maintaining a cohesive identity system."
         },
         {
-          "image": "/images/PerfectlyDifferent-screens.png",
-          "title": "Concept Application",
-          "description": "Initial UI concepts for onboarding and homepage experiences across platforms."
+          "image": "/images/EpicFuture-Eight.png",
+          "title": "Logo Variant (Acronym)",
+          "description": "A dynamic EFE emblem using masked letterforms from each city variant and colored with the Haitian flag to honor heritage.\n\n—\n\nThe choice to unify the acronym using masked fragments from different city variants and the Haitian flag was a deliberate cultural nod to celebrate heritage while remembering to reinforce community, pride, and movement across borders."
         },
         {
-          "image": "/images/Perfectly-Different-app-pages.png",
-          "title": "Concept Application",
-          "description": "Interactive screens highlighting accessible UX and user-friendly dating interactions."
+          "image": "/images/EpicFuture-styles.png",
+          "title": "Brand Application",
+          "description": "Branded t-shirt mockups displaying the Epic Future and EFE logos in fashion-forward streetwear contexts.\n\n—\n\nStreetwear served as the ideal medium to validate the logo’s visual weight and flexibility, which serves the purpose to transform design into a lifestyle while also testing how well the identity holds up in real-world, trend-driven spaces."
         },
         {
-          "image": "/images/Perfectly-Different-app-preview.png",
-          "title": "Concept Application",
-          "description": "Additional layouts showcasing how inclusivity is embedded in every design detail."
+          "title": "Brand Application",
+          "description": "Video preview of a model wearing an EFE-marked hoodie, highlighting logo impact in motion and lifestyle branding.\n\n—\n\nThe video format was strategically used to demonstrate motion adaptability and emotional resonance, allowing the brand to be experienced as more than a static mark, but one that lives and breathes through everyday expression.",
+          "video": "/images/videos/EpicFuture-clip.mp4"
+        }
+      ]
+    },
+     "anarose": {
+      "meta": {
+        "title": "Ana Rose",
+        "description": "A cohesive brand identity, website, and seamless online booking system designed to help this Dallas cleaning service grow its residential and commercial client base.",
+        "speed": 0.5,
+        "url": "/project/anarose"
+      },
+      "project": [
+        {
+          "image": "/images/Ana-Rose-residential.png",
+          "title": "Brief",
+          "description": "Ana Rose is a Dallas-based cleaning service brand founded by a solo entrepreneur looking to grow beyond word-of-mouth referrals. Originally focused on small residential cleanings, Ana Rose aimed to elevate its brand, streamline operations, and expand into larger residential projects and commercial contracts. I partnered with the founder to design a cohesive brand identity, build a modern website, and develop an online booking experience tailored to her target clientele.",
+          "goals": "•\tRefresh the brand to feel professional, trustworthy, and scalable\n•\tLaunch a website with built-in scheduling and quote requests\n•\tSupport expansion into higher-value residential and commercial markets",
+          "challenges": "•\tNo existing brand identity or web presence\n•\tManual scheduling limited growth and responsiveness\n•\tNeeded to appeal to both home and business clients",
+          "solutions": "•\tDesigned a clean, modern logo and visual system\n•\tBuilt a responsive website with online booking and service breakdowns\n•\tCrafted messaging and design that bridges residential warmth with commercial credibility"
         },
         {
-          "image": "/images/Perfectly-Different-app-layout.png",
-          "title": "Concept Application (Visual SiteMap)",
-          "description": "A top-down view of the app’s architecture to visualize user flow and functionality."
+          "image": "/images/Ana-Rose-booking.png",
+          "title": "Web Application (How-To-Guide)",
+          "description": "A simple step-by-step guide that helps users easily navigate and book Ana Rose’s cleaning services online."
+        },
+        {
+          "image": "/images/Ana-Rose-modal-two.png",
+          "title": "Web Application (Service-Description)",
+          "description": "An overview of Ana Rose’s residential and commercial cleaning services with clear, client-focused descriptions."
+        },
+        {
+          "image": "/images/Ana-Rose-faqs.png",
+          "title": "Web Application (Custom-Services)",
+          "description": "A customizable service builder that lets users tailor cleaning packages to their specific home or business needs."
+        },
+        {
+          "image": "/images/Ana-Rose-reviews.png",
+          "title": "Web Application (Testimonials)",
+          "description": "A collection of real client testimonials that showcase trust, satisfaction, and proven cleaning results."
         }
       ]
     }
