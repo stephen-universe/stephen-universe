@@ -8,7 +8,7 @@
     "line1": "Hi",
     "line2": "My name is",
     "line3": "Stephen Warren",
-    "line4": "A multi-disciplinary designer & developer."
+    "line4": "A brand designer & developer."
   },
   "doorMessages": {
     "message1": "Take A Step",
@@ -84,27 +84,27 @@
         "text1": "When a Gem is made, it's for a reason.",
         "delay1": 200
       },
-      "part2":{
+      "part2": {
         "text2": "They burst out of the ground",
         "delay2": 2400
       },
-      "part3":{
+      "part3": {
         "text3": "already knowing what they're supposed to be,",
         "delay3": 4600
       },
-      "part4":{
+      "part4": {
         "text4": "And then...",
         "delay4": 6900
       },
-      "part5":{
+      "part5": {
         "text5": "That's what they are... Forever.",
         "delay5": 8400
       },
-      "part6":{
+      "part6": {
         "text6": "--Rose Quartz",
         "delay6": 10000
       },
-      "part7":{
+      "part7": {
         "text7": "Steven Universe",
         "delay7": 10000
       }
